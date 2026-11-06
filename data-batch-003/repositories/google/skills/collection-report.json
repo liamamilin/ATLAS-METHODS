@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:14:34.399554+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 191,
+  "saved_skill_entries": 191,
+  "unique_entry_texts": 186,
+  "duplicate_entry_groups": 5,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "google/skills",
+      "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 191,
+      "saved_skill_entries": 191,
+      "saved_text_files": 1377,
+      "files_not_exported": 16,
+      "repository_manifest": "manifests/google/skills/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2.json"
+    }
+  ],
+  "errors": []
+}

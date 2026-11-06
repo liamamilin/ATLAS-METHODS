@@ -1222,6 +1222,26 @@
     ]
   },
   {
+    "entry_sha256": "03e485584cae50cb1d80074277f50495e39bbecaaa1d0d6f6f779c8ad7797d67",
+    "record_ids": [
+      "ddcc69948f1264a5bd9e",
+      "8bfe308623cb40ac12d1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop-help/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop-help/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "0419b07306beaf5fcdc0fde8c4f2ec96b48124c05805f01d75aa7b04df63c8ed",
     "record_ids": [
       "b42a4a210195c4125d20",
@@ -2444,6 +2464,26 @@
     ]
   },
   {
+    "entry_sha256": "0763b1b471348ef632245b75e99103fa45d7e38e5d250c7fb20d004b362ba403",
+    "record_ids": [
+      "fb79ce17452b1e279315",
+      "c23e07fb27f5cb4300d3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-clustering/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-clustering/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "076ae5c92419717e425c69337593cb97a754e8c9884ca3e5fb92c7dc37c837e8",
     "record_ids": [
       "60e1acc95893ed21e1a9",
@@ -3380,6 +3420,224 @@
     ]
   },
   {
+    "entry_sha256": "0aa11ca2c47f21e704a47928862edeb2fc88d17ef67d61d9ec8c782ba68ef339",
+    "record_ids": [
+      "1d8c9a83333519cfe2a5",
+      "8ebf21a1af57bdbd55e0",
+      "f7555122f8c93e7a0506",
+      "12cc2d2f22d6f9094df5",
+      "17f11bac71d71f1abf1e",
+      "f291f74063b8d8dbde1c",
+      "3052795660451e06658c",
+      "3af1733ae3a1c57ea9e5",
+      "d87c9368fcf1343c4b9b",
+      "50704217e1c70f32496f",
+      "01f7726a020de91e0cbd",
+      "0af653f95df86b96d7c9",
+      "36693094d868d8907552",
+      "db9817ed3db8217eca19",
+      "7d0ed8e9e20944d2da5b",
+      "044c09fe58961e5f1cb7",
+      "f14bd10d2402f0a56eb6",
+      "cc6ef99b1de0c0ef28dd",
+      "f5e891fa13e9bd158f8e",
+      "fa2161b401245ad33cf9",
+      "f3c7517fa36179a4b4ae",
+      "cc31fbf728c7b8ec8b0f",
+      "814e798f344bbc707e2f",
+      "d2d0edbd75cd0b47374d",
+      "b3db4840894ba6e163cf",
+      "a30632e57633a8476c10",
+      "72e090a53d0ca3375649",
+      "f860ec0db9072df27e95",
+      "0fd23425c115fc587e46",
+      "cf46761e350e24e376c2",
+      "28476aa0a277c61f4e37",
+      "e3eb93699d9ee4d54f7e",
+      "d8129006a216e69eb323",
+      "7d8edeebc8fda1ddce2d",
+      "3664ca5729d1f3d89d89"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/airflow/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/chart-generator/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/cloudwatch-logs/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-query/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-draft-release-tools/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-stars-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/hubspot-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/intercom-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/jira-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/linear-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/pagerduty-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/postgres-query/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/powerpoint-creator/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/raindrop-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/readwise-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/salesforce-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-pagerduty-incident-tools/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-query/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sqlite-query/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/todoist-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/vercel-production-deployment-tools/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workday-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workers-default/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-sync/.agents/skills/auth-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-webhook/.agents/skills/auth-guide/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "0aabef1304c2243feb36d1a743aa88cc7490a906b159d824a1d4284f0e613197",
     "record_ids": [
       "cfb757c38a187f17fac9",
@@ -4310,6 +4568,26 @@
     ]
   },
   {
+    "entry_sha256": "0d8fe56e57acc34e88631d0eb2d8aebd72bf106bb4b0e4d0a592f5a2341d7a78",
+    "record_ids": [
+      "b64b90455a3b694a8cc8",
+      "f848fe1c666ee6ebd183"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-agent-memory/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-agent-memory/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "0d901684b0a8c3cace3e942e85a3fe1502d31cfcab3bf5bd38bde0e6e723f3d9",
     "record_ids": [
       "a5879420b519013265bc",
@@ -5060,6 +5338,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/llm-application-dev-langchain-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "10d901f6ca6b7df7101eb3a5a44a04c761129f75cccb04b17ce3686e09571921",
+    "record_ids": [
+      "fa1a54fe3847a5c0cba1",
+      "39ac0905eeb3870556ab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/workflow/SKILL.md"
       }
     ]
   },
@@ -5942,6 +6240,26 @@
     ]
   },
   {
+    "entry_sha256": "139a4520d5954d5c0fcf3a9de53be5dea5afbc87fb3f651bf0c41e4740560745",
+    "record_ids": [
+      "249bbbc408f360f8edc3",
+      "f842a19a4bbe5cf90cc7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-semantic-cache/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-semantic-cache/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "13b66fec0571848be59ca480b6400429ed24663981ab8ef135a1d1830a400674",
     "record_ids": [
       "672b51732b898092fef1",
@@ -6426,6 +6744,32 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/astropy/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "16102a2925fe9f4c0102dd0af9b0e2cc0bf80df2eecfba1e91becae44876852f",
+    "record_ids": [
+      "b104a479472ce7ebddc3",
+      "a4b410aca3c5ce1bff98",
+      "9938e25da13102d77531"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop-file/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop-file/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "unslop/SKILL.md"
       }
     ]
   },
@@ -8556,6 +8900,26 @@
     ]
   },
   {
+    "entry_sha256": "1df77121b528f0f91194af6c8466cef8288b78c8300be9cbe0e08ffd33d03494",
+    "record_ids": [
+      "587753657d5419fe31a0",
+      "66907b6d721db94a15e3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-search/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-search/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "1dfb7e031147b838e068760c43719ce1ed823ea75aa2af141a5c6e48b8a8dd24",
     "record_ids": [
       "4962bbc56324bf28ffda",
@@ -10078,6 +10442,44 @@
     ]
   },
   {
+    "entry_sha256": "224f93fcecd3f8690f8cefb7d6ae7a65844cc08e3acd6a8818cfca2b3f292727",
+    "record_ids": [
+      "1047f0a84e09d026c4d5",
+      "7cecfc3468cd953a2b79",
+      "0555bd3357e8e993f08e",
+      "98e70432a1c9721ab216",
+      "eb869d6373007b8a1375"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/custom-blocks/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "224f9b6468810fb1163e7b5f13f603d5fac7242f5209d2db69a50dca1c9bd680",
     "record_ids": [
       "9e6e4005201df2a30a83",
@@ -10282,6 +10684,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/testng-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "22e78b9c7338a98004ce7ffe0d9fc238ed28e08a24e6f83b05de1a370df97179",
+    "record_ids": [
+      "a51ace8db1465c2c3a91",
+      "771fb4f9f91d267dbb24"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-create-my-team-handbook/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/create-my-team-handbook/SKILL.md"
       }
     ]
   },
@@ -11218,6 +11640,32 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/postman-newman-automation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "263e633e0fbe11a8a9f8d7f6c0afbb3f2e2ead6236c1f8820f218c64054bf312",
+    "record_ids": [
+      "324599b466dfca09cc7e",
+      "85288284a572320d615f",
+      "4de30e0b1e35484ab727"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/claude-code-notion-plugin",
+        "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+        "skill_path": "skills/notion/setup/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-setup/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/setup/SKILL.md"
       }
     ]
   },
@@ -13232,6 +13680,224 @@
     ]
   },
   {
+    "entry_sha256": "2d23c40d52086535ac3fb525d2e20f3a84081b089ee5be2bafa07cbbc8e00660",
+    "record_ids": [
+      "aaf1c458bcdf9a68f8df",
+      "50b53c5323fa698caced",
+      "fdd25df13679c1e9b0ea",
+      "a0c15fed2e6a9c5366ae",
+      "41193b6c095325c8a5bc",
+      "91e4beb07dea5ecf0c18",
+      "4dd13d8dea236ec3c1f7",
+      "5d6f133ff8e50efdc085",
+      "8824730509b2edaec852",
+      "837930e6429a02f002bd",
+      "62ad21618df0f3cf3233",
+      "3451d97186716782d55f",
+      "95b3191e63ee0770e8f8",
+      "2e7d92cc67d429f845c3",
+      "6c544ccb6ae30067514c",
+      "acb0329944b12645cd83",
+      "1efac8739854bea551b7",
+      "0718b0b853a0b45ce333",
+      "27196866088d4343d7de",
+      "50b186bb45d67bd9387f",
+      "331b880f7624487cb4cf",
+      "a46fdf4c1b1e881e6739",
+      "dcb61917c5d001539e7c",
+      "882f5ca1aff687622880",
+      "6832a803c026fb6bf441",
+      "f26256d8bece7f34f6a8",
+      "4bc87e87249ea6c28a22",
+      "254eee88df595f5c5c11",
+      "3721aeadc761a694d1d9",
+      "3020a38f61919fc0a419",
+      "5f0a03286368c496c6d2",
+      "dacc224198076ec290c2",
+      "5ce312d3071774513bd3",
+      "b8a65e51f97ffc7865a7",
+      "b5d3c71af6983efbd8bc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/airflow/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/chart-generator/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/cloudwatch-logs/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-query/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-draft-release-tools/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-stars-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/hubspot-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/intercom-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/jira-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/linear-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/pagerduty-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/postgres-query/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/powerpoint-creator/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/raindrop-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/readwise-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/salesforce-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-query/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sqlite-query/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/todoist-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/vercel-production-deployment-tools/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workday-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workers-default/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-sync/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-webhook/.agents/skills/sync/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "2d263cbbea6f555b0867425c8591403026c0052508dd0b7927558b43caaa5c0f",
     "record_ids": [
       "daeffd48861f6a8ca725",
@@ -13514,6 +14180,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/slideops/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2e40b00ca84e18b26e9a13898cecb07050d902b62ed488ec46bae7521b1771ad",
+    "record_ids": [
+      "2465b7079d0c01bfb71e",
+      "e89b480090a5dfca2eff"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-set-up-my-project/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/set-up-my-project/SKILL.md"
       }
     ]
   },
@@ -14392,6 +15078,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/thick-client/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "310a1e35de2c98bfbd16309468289f6d53dd4b9ad76a8e2c2ff5de0dd857e304",
+    "record_ids": [
+      "3f7ee1800dba4ea1bef3",
+      "0d315c2a2e3e1bcf6ebd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-agent-playbooks/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-agent-playbooks/SKILL.md"
       }
     ]
   },
@@ -15306,6 +16012,26 @@
     ]
   },
   {
+    "entry_sha256": "3415b14510b1b32a25a04233d2e81b2c8f4a923e4a40486f5b6fe5a4439afa54",
+    "record_ids": [
+      "b6401c026eaef6a44f1f",
+      "79c785dfbd9b0d29e985"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-auth/SKILL.md"
+      },
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/cloud/google-cloud-recipe-auth/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "3417eb22224ad048355fc86f36b1b0519b86709a11718fbc5ea2adc66d022ba0",
     "record_ids": [
       "4c6fe6f5add5741a04f3",
@@ -15874,6 +16600,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/cis-benchmarks/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "35cc3475d9cf5c31b9dd2dcc5cce801c58001cf1b6bbaa194256b686b6c80a2a",
+    "record_ids": [
+      "4d5bae3dcd34a5648306",
+      "b4939926357f4feea3ce"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-knowledge-capture/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/knowledge-capture/SKILL.md"
       }
     ]
   },
@@ -18654,6 +19400,38 @@
     ]
   },
   {
+    "entry_sha256": "3f250609bed188f459779dbf3188b9e9a4ea9c39f68e94a734516e2e4590534a",
+    "record_ids": [
+      "d799658dd1f7c5e0e799",
+      "205e6f8ebbc5b4d45af6",
+      "7cec7ca672b503ffeca6",
+      "589c0eb261fbcb252752"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": ".cursor/skills/unslop/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": ".windsurf/skills/unslop/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "3f26fe2d2a2ff091502513c68184b03a3a71a9a98774bc4f196951559e7d6f82",
     "record_ids": [
       "9704922a609924f6fa87",
@@ -21080,6 +21858,26 @@
     ]
   },
   {
+    "entry_sha256": "4737b25ac7ba7c8f227565a68e622a5b47a4fd00643718386d20ff52f3faf37c",
+    "record_ids": [
+      "0665801ef39ce34605f9",
+      "5d990b4ccbd934b1550b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "CosmoBlk/email-marketing-bible",
+        "commit_sha": "962648c1b147652244c4e4953e96c65421a79e70",
+        "skill_path": "SKILL.md"
+      },
+      {
+        "repository": "CosmoBlk/email-marketing-bible",
+        "commit_sha": "962648c1b147652244c4e4953e96c65421a79e70",
+        "skill_path": "skills/email-marketing-bible/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "473bf01f5efb3ffc3cc69c10a8878c8446a9be308f3a135f1617afa72f97c1d7",
     "record_ids": [
       "86e0f95182f397ce0a4f",
@@ -21980,6 +22778,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/amazon-alexa/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4abc9a1509251b6126ff4aa62d75cf473462576c3aa8ae1e709cd4de2504c1b0",
+    "record_ids": [
+      "5af7cf68dbd1afc00aea",
+      "e1df8debb990cb7eaeab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "github/awesome-copilot",
+        "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+        "skill_path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
+      },
+      {
+        "repository": "qdrant/skills",
+        "commit_sha": "9f55f6a7fb225932da70c6e7dcd671c7e9a8929a",
+        "skill_path": "skills/qdrant-scaling/scaling-data-volume/SKILL.md"
       }
     ]
   },
@@ -22998,6 +23816,26 @@
     ]
   },
   {
+    "entry_sha256": "4e8c58e24c71a42803ac211e8c03c5f6f22279960e66819c1ee14f984a4668be",
+    "record_ids": [
+      "2b9465f846241c10207b",
+      "110e89ae5abc26292d89"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "plugins/cloud/google-cloud-developer/skills/gcloud/SKILL.md"
+      },
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/cloud/gcloud/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "4e9c4b1987ddf68dafb42f1b30a7373ccf7b42cbb14348f6b97babda12171f43",
     "record_ids": [
       "45ab84309f8569eacea7",
@@ -23746,6 +24584,26 @@
     ]
   },
   {
+    "entry_sha256": "5122960cf7bab9730ec8682a1736cdbb798e053f42554ef33f0ab96ce49b78fd",
+    "record_ids": [
+      "000253e26d96df0c3209",
+      "5ee448fa27a0fcee4b3e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-docs-mcp/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-docs-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "5131dfce1507f36c4cd0a2de3d27d01e452ba9952461ee03a519251604147bd7",
     "record_ids": [
       "bf12478d774f1febe975",
@@ -24210,6 +25068,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/podman/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "52658f3b6633f09c4eb4b0496d819f2a723a5eef1a2c14007ffcfd302aef0cf0",
+    "record_ids": [
+      "0767942a6c284da9f550",
+      "7c982322f231fd5dbc55"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-redis-iris/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-redis-iris/SKILL.md"
       }
     ]
   },
@@ -25296,6 +26174,50 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/markstream-migration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5581f1baffd5702ffa38085823e4b6e764e6a439548256e2871fe0292702dc9e",
+    "record_ids": [
+      "480ec22550ccc5c83970",
+      "cd8be7cb9c58183c8796",
+      "dd221a9b7ccdcd74de3f",
+      "1d5c895e8f6082749b4e",
+      "05d6f10aedcc46435a3f",
+      "61b5d74b87464c2e7966"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/notion-as-code/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/notion-as-code/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/notion-as-code/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/notion-as-code/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/notion-as-code/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/notion-as-code/SKILL.md"
       }
     ]
   },
@@ -26886,6 +27808,26 @@
     ]
   },
   {
+    "entry_sha256": "5afe84e92740d4b42fe0918b0e13d83f3ba341aac53d930b55129b7a87e66de4",
+    "record_ids": [
+      "9d996075f5dcf2e05672",
+      "47850bacc911ea35bb41"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/workflow-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/workflow-validate/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "5b06e44cebf0722468afa2b5f659706def8faa37b63cb67e26a9c58096db11b8",
     "record_ids": [
       "49f11d2958cb5da4d717",
@@ -27442,6 +28384,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/performance-engineer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5cdc74084c8baa4c89890cd315da63c147c1972e1275382031de12132a2e59fb",
+    "record_ids": [
+      "378a20cc88de0662d2a9",
+      "40422db417260a771421"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "AgriciDaniel/claude-seo",
+        "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+        "skill_path": "extensions/dataforseo/skills/seo-dataforseo/SKILL.md"
+      },
+      {
+        "repository": "AgriciDaniel/claude-seo",
+        "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+        "skill_path": "skills/seo-dataforseo/SKILL.md"
       }
     ]
   },
@@ -36004,6 +36966,26 @@
     ]
   },
   {
+    "entry_sha256": "7ab1000e7a1548c4f82179ea1d5a57ced43851e6a924ac647cecd822015b81a7",
+    "record_ids": [
+      "05c9eecc0d9b5a67794f",
+      "3318ac9dc5e301ded5dc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-core/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-core/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "7abc791075bc43057db24f4e81c76bdd36fcd16275bb5c530246efa21d4c5488",
     "record_ids": [
       "e19974fbb58db2bdd735",
@@ -36234,6 +37216,224 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/monte-carlo-push-ingestion/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7afe0e2917a2990d5ebed83591cd36f90c15fc319a25f761d388275bbc9fc761",
+    "record_ids": [
+      "97ad494908d365d7196e",
+      "024c327fa9ca45572464",
+      "c3740312c1b801ecf724",
+      "bd93181a8d7d72cd89e5",
+      "8ad8de3b1b153f02a592",
+      "3975c318c59ad4735a14",
+      "f96080447bb6be039efe",
+      "455afbadecbbf9d39ce0",
+      "ffdab7f7c63e9034729d",
+      "80308c5aad7cef37e306",
+      "03a1598c47b293cad6fd",
+      "cb8a5361fd5bd7202239",
+      "6910ba837fb6ed66359e",
+      "5479dadb6b2d03a942cb",
+      "4813775241b07f896ed1",
+      "327c0fa1f2519e3ec32e",
+      "1b52223fb27c8a06d699",
+      "a0e3357d2ce0fd8606fc",
+      "fb0dbc894be035bc10ba",
+      "126b058bfcb866403284",
+      "402d42ae99f7c99e9917",
+      "f7108743deea03c7536d",
+      "a324e76b78fdbdef6c0e",
+      "e606f0c3f3c718319ddd",
+      "de6585546bf1341ef5ed",
+      "49904f2e29f6d90aca61",
+      "52299bf8becc3057b878",
+      "c6eaa980cc95935ab83d",
+      "e8079d2676f816ce475c",
+      "56660e472a6ae6f9366f",
+      "87ae08d14d5d7c1b471b",
+      "7968f44feba973f4f930",
+      "f80fc7f7a8ad4e041f95",
+      "6c34cffd705560c36a8c",
+      "b61c6ea8d1a0687976d5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/airflow/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/chart-generator/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/cloudwatch-logs/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-query/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-draft-release-tools/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-stars-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/hubspot-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/intercom-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/jira-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/linear-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/pagerduty-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/postgres-query/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/powerpoint-creator/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/raindrop-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/readwise-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/salesforce-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-query/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sqlite-query/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/todoist-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/vercel-production-deployment-tools/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workday-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workers-default/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-sync/.agents/skills/sync-validate/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-webhook/.agents/skills/sync-validate/SKILL.md"
       }
     ]
   },
@@ -37148,6 +38348,50 @@
     ]
   },
   {
+    "entry_sha256": "7ebe37b48416838d937d7bf704cf70f0ecdd3f4ce4a3df90cc9eacd517d96d4c",
+    "record_ids": [
+      "f7dd0901eee1ff305280",
+      "bfdeacacab2f3b1bc6c3",
+      "0b27e6d411f5af068a27",
+      "98e51f7eaf3cc96f0abc",
+      "1468938578e7224c9ad2",
+      "580b5a7a352447e0ee83"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/workflow/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/workflow/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "7ee7432f818bb664c15d5a4e8afd1410f39962f7960674465f23b8fdffbe6fd6",
     "record_ids": [
       "1beb5f709ec77f9cb0e4",
@@ -37548,6 +38792,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/agent-evaluation-reporting/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "801b2a3f6347fc021bb2f30d8ce685a485975f155a7cd2c67f2ccea8473285d1",
+    "record_ids": [
+      "8503988cda424fa53914",
+      "8aedbf5e0173261b345c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-observability/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-observability/SKILL.md"
       }
     ]
   },
@@ -38446,6 +39710,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/fixing-accessibility/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "834861e864c339dd81648cf78f468fcf56dd9bdfa60c984d84bc314ac39fb9d8",
+    "record_ids": [
+      "d3e0c99ef85f610174cf",
+      "4cddc28079db6268cb5f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop-review/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop-review/SKILL.md"
       }
     ]
   },
@@ -40602,6 +41886,26 @@
     ]
   },
   {
+    "entry_sha256": "8ad30fbcbaabfd0ad4f9d6abd38911b976dd2b6b793a7684cae71bd24cfc2af9",
+    "record_ids": [
+      "f2f84e0d8d8d3529ade3",
+      "bde449d047d50b1cdf23"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-build-my-engineering-wiki/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/build-my-engineering-wiki/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "8b153dbb0a132d53e64154f85e493b83070b6d94eeb1821d0406d55a13f28671",
     "record_ids": [
       "82e3f1849ca175388596",
@@ -40728,6 +42032,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/git-pr-workflows-pr-enhance/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8b44ec77a39e0ef0bb428ae6dc646d61edd9d0ceac749e7be8175108991cf8c1",
+    "record_ids": [
+      "d6779f6d2ae4321b6225",
+      "6413bde69bad879ad91e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "plugins/cloud/google-cloud-developer/skills/finding-google-skills/SKILL.md"
+      },
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/developers/finding-google-skills/SKILL.md"
       }
     ]
   },
@@ -42704,6 +44028,50 @@
     ]
   },
   {
+    "entry_sha256": "940e4714b851972a36bf4b8d5d8ae7ca2f4dfa093b34d41472ba951cc031a9dc",
+    "record_ids": [
+      "d9be191758cc530d88bd",
+      "4e644a88006c87100d92",
+      "245ff691c2684591eff4",
+      "766d10ea364b7eeaddc7",
+      "2b88419dfe038bcbb46d",
+      "16c747c548d1132e0b2c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/sync/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/sync/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "944cc84008578b7680d3074092acad6d2805b9f0e9980a6ad0e0bbc3329e66b1",
     "record_ids": [
       "63aa4c63a71fd43360ad",
@@ -43536,6 +44904,26 @@
     ]
   },
   {
+    "entry_sha256": "9781784bb3c2709e74e75df441d4bec6a1d55b588ac53b49221e293d192bb288",
+    "record_ids": [
+      "3f325c4e3c902ffc2655",
+      "6ee1d83d3d6c57da7365"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-context-gateway/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-context-gateway/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "9787643a3adb790e4c015f5df39e45e28ca40ef429e0d56512a5369b83034a09",
     "record_ids": [
       "bc850b92a8a2aa458670",
@@ -44170,6 +45558,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/weaviate-cookbooks/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "992e499c8897fca3de1f07838d7a01317d1300d22473a09d8ca5953bb169cf29",
+    "record_ids": [
+      "756eb4368ffe0ce501f0",
+      "37ef071d74c915d005d0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "github/awesome-copilot",
+        "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+        "skill_path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md"
+      },
+      {
+        "repository": "qdrant/skills",
+        "commit_sha": "9f55f6a7fb225932da70c6e7dcd671c7e9a8929a",
+        "skill_path": "skills/qdrant-scaling/scaling-query-volume/SKILL.md"
       }
     ]
   },
@@ -46296,6 +47704,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/dbos-python/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a0129a7abfc81360d0b442eef5ee1c60b174edea3e3144e48f97d47adf879563",
+    "record_ids": [
+      "ebb956ae8170b8b8dfb3",
+      "7aab5738d02d987552b8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-lens/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-lens/SKILL.md"
       }
     ]
   },
@@ -48870,6 +50298,26 @@
     ]
   },
   {
+    "entry_sha256": "a8870d933bb099c022078d242d8083a8506c39299cb6f2b8f60e5a25f5d6d92d",
+    "record_ids": [
+      "9a5eed10b168b8f4998f",
+      "419beff84870446a4d92"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-security/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-security/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "a88c1736f36d7da9c0ab903ccb28fb7fdc1b398f71a508f76c65b11509ef8fac",
     "record_ids": [
       "ba186f0bb60048296aa1",
@@ -50132,6 +51580,26 @@
     ]
   },
   {
+    "entry_sha256": "ac9047933c8185909677db2fd537104db7ff809b2c73392363f8bcbb496e3ae9",
+    "record_ids": [
+      "eeeb9823210e9977f6fd",
+      "20a496ca95da9e2b3c6c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-meeting-prep/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/meeting-prep/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "ac95a4b1d1d2faf794a7a7ebd827e2f41b6dc61e0733c17565a885c081766e5d",
     "record_ids": [
       "7241f7ca231b8cfaf1a6",
@@ -50480,6 +51948,50 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/ai-schema-generator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ada20d6b3dd34ca37be2bcc198f43dc9d7b141412c92e4a5f88b072220f39248",
+    "record_ids": [
+      "0321b905802f89ba4c4f",
+      "ef715e62a10113c546e9",
+      "f75ce9345509e70dd20d",
+      "f9a22a4d6281cb5d08cf",
+      "14cd3eb57cf90e2e5a40",
+      "557f60c80d7ad1eea489"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/custom-blocks/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/custom-blocks/SKILL.md"
       }
     ]
   },
@@ -51532,6 +53044,26 @@
     ]
   },
   {
+    "entry_sha256": "b17973415cefe34577d389da24ea0c430be0a3d372bfcf71e7610c36a8ce74af",
+    "record_ids": [
+      "3651e837dfb53b981387",
+      "fc4fd1daa8fc118cf643"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop-reasoning/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop-reasoning/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "b17ef146715766da54355e01ff3917b8bc580feb370a6aa84f9e411987624984",
     "record_ids": [
       "06771f22b6b25fcc7637",
@@ -51854,6 +53386,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/ui-update/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b2609b495d5d317cc858fd17db6e80c26f195207872ad8e68f886425ad30731a",
+    "record_ids": [
+      "796e56c2eed519f6935e",
+      "75ce0e8b2ef8f18924b0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-database-designer/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/database-designer/SKILL.md"
       }
     ]
   },
@@ -55280,6 +56832,50 @@
     ]
   },
   {
+    "entry_sha256": "bd85db856e794ae9703677ec256c271807cd5f6cfd59e591c3b23f0a13468d5c",
+    "record_ids": [
+      "09f2a65e4a1ad449705f",
+      "eab37fa12b9bc47c2ff2",
+      "cff08be7f85c177e88ac",
+      "d2b3ea670559a4ea5a71",
+      "e698ca68fd9f0bc1b5ab",
+      "1b4d8f705640c3b3282d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/connections/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/connections/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/connections/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/connections/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/connections/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/connections/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "bd9734970b4ea016eb7176216abc73c0d5f918e1b4aa8ce033c002ac1a1ab621",
     "record_ids": [
       "6033131eacc15ef2f860",
@@ -55998,6 +57594,224 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/logic-locate/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bf6c012053763754677137d749c0278c1bf1fa029eafd61ab3a03044b0589abe",
+    "record_ids": [
+      "0089d8d13f3f33e3e251",
+      "3f09f114990e1e4af7aa",
+      "d301b69cc304dc0fde43",
+      "364d664a9a57a4876f4b",
+      "8611aa8ba7351f09d8d4",
+      "29f31bee54ec552841ba",
+      "4953f78b03655911a7cf",
+      "2821b99b61b3dae77490",
+      "53d3a1b553b9787703b3",
+      "a971f628478d9ae7ba59",
+      "421563ed0099fa5b82e2",
+      "744573d42e6850d29fa1",
+      "1cfa8d4d855842ee40e5",
+      "023ae9e56eb47b378ab1",
+      "2ade96a8c7d7bde2df53",
+      "54cc8bffb377ca4bf323",
+      "a92e896fae825e9d310a",
+      "1f277e5da00eabd41d36",
+      "c47f7874d6c05e304fd8",
+      "8829c265238b3f75d2dc",
+      "954dab68b5e0e1acb9f2",
+      "e85dd46e356bab2b2185",
+      "70377d54efaabb809121",
+      "497a1cd5d2f0b3c3d68e",
+      "8ccfb62ffcb6e94a41c1",
+      "3b40d15f198d80ed9a15",
+      "b61a9039324ec3633909",
+      "f6e5da10d30756bc6b24",
+      "40b9dc14de28cd00044a",
+      "ab4d365c402275a49ae8",
+      "0d2bc7f33b10f7fc46db",
+      "d542ac791d1448d3dc6d",
+      "69fe82845ad11a8d9034",
+      "68b59323ceece9581c00",
+      "9c9699b239e3c69bc884"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/airflow/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/chart-generator/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/cloudwatch-logs/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-query/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-draft-release-tools/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-stars-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/hubspot-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/intercom-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/jira-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/linear-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/pagerduty-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/postgres-query/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/powerpoint-creator/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/raindrop-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/readwise-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/salesforce-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-query/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sqlite-query/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/todoist-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/vercel-production-deployment-tools/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workday-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workers-default/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-sync/.agents/skills/sync-debug/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-webhook/.agents/skills/sync-debug/SKILL.md"
       }
     ]
   },
@@ -57368,6 +59182,26 @@
     ]
   },
   {
+    "entry_sha256": "c3d991be534984082d6f6232b3cc213c9f94556ccee2657b527f95dc427be0a1",
+    "record_ids": [
+      "eb6fc68a3cfcdbc7ea22",
+      "3086108a8bba842fbdb4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "plugins/cloud/google-cloud-developer/skills/retrieving-developer-knowledge/SKILL.md"
+      },
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/developers/retrieving-developer-knowledge/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "c3e7befc53418b0f1b8200459c08b29b32d5d7faa5a143d777857393dba231ce",
     "record_ids": [
       "06ec321cdfd441454626",
@@ -57954,6 +59788,26 @@
     ]
   },
   {
+    "entry_sha256": "c653019c788afd5176dd31e4ed7fcd470947c54dcc66f41cdd1f9b74a9918d38",
+    "record_ids": [
+      "2951a8a2fef3cb74a7a3",
+      "ec15f10e96a8ef97e8db"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-plan-marketing-campaigns/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/plan-marketing-campaigns/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "c65716a218b51065b0be6377f61f0ea91c2585315daa89d75402d385f4bf9b67",
     "record_ids": [
       "3c71ff4eb6ef91e7e24e",
@@ -58054,6 +59908,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/meme-coin-audit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c69be154679ed24cb1545a233c3100b4d47ef574843fd37c10eee97ff69c2554",
+    "record_ids": [
+      "c693ee28d9d2ad220ffa",
+      "907fd83e034327b94f2e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-organize-my-semester/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/organize-my-semester/SKILL.md"
       }
     ]
   },
@@ -59724,6 +61598,50 @@
     ]
   },
   {
+    "entry_sha256": "cc477b953aafbee03bd763742bcdfb316e5e88b850cf520e031eae3035f21216",
+    "record_ids": [
+      "f45e16169ce9a89087ea",
+      "3d50f848bfaf2e42876b",
+      "6884518e5b4d00c6dd5b",
+      "1c18337b9a6ac7ed1148",
+      "bd9d425bcdcad2ec4491",
+      "bf7ac9ce55091815970a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/agents/skills/sketch/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/apps-default/.agents/skills/sketch/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/krillion-leaderboard/.agents/skills/sketch/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/perfect-meetings/.agents/skills/sketch/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/referral-tracker/.agents/skills/sketch/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "apps/templates/statsig-rollout/.agents/skills/sketch/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "cc80d66ff58891fd1b4fccc7a79b41db66445c83075df56cfd857bf4c2acd366",
     "record_ids": [
       "0ebaf88f48f4f7f68839",
@@ -60332,6 +62250,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/soc2-compliance/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ce8bb8ba0f9f5171630d7543489560f7c987860ddc11e9161f31743041e722f1",
+    "record_ids": [
+      "8259ac1ffc8d7e77d6a5",
+      "880c1b2b19074cac90bc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-research-documentation/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/research-documentation/SKILL.md"
       }
     ]
   },
@@ -68838,6 +70776,26 @@
     ]
   },
   {
+    "entry_sha256": "e9051167ed1eeae218515c5516dfc48a933ea4907a0bd3b6f1cbb4c7ef2ffb0e",
+    "record_ids": [
+      "20e4fd6cd9c8fe8dd833",
+      "7f1702a4a39287b58539"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/add-intent-router/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/add-intent-router/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "e906b387f0a985ca7a4f792afcc2d90a3721e2333227e91a898a79e71fa8bb63",
     "record_ids": [
       "d63fc7e6d8b7888cb2e9",
@@ -69406,6 +71364,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/churn-prevention/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "eac20df58f4a38210314100c68cc8564b8009d9ec38856a4beef3ebdf9e2c5b0",
+    "record_ids": [
+      "3bde7854b2da1771c17e",
+      "a3a90808ff8359dc999d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "plugins/unslop/skills/unslop-commit/SKILL.md"
+      },
+      {
+        "repository": "MohamedAbdallah-14/unslop",
+        "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+        "skill_path": "skills/unslop-commit/SKILL.md"
       }
     ]
   },
@@ -70932,6 +72910,26 @@
     ]
   },
   {
+    "entry_sha256": "ee6caf1b8c97884599d7e95a66b970b0417a7c18274cb627ef05077acaa1a7f5",
+    "record_ids": [
+      "9b516298a69dd89c35ec",
+      "c945c586edeb36370791"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "plugins/redis-development/skills/redis-connections/SKILL.md"
+      },
+      {
+        "repository": "redis/agent-skills",
+        "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+        "skill_path": "skills/redis-connections/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "ee76008dc6dab5af704bed967734e66708000cc28fec655cc36189dec03a61be",
     "record_ids": [
       "07b18f933e19193af310",
@@ -71240,6 +73238,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/tax-register/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ef93b26862358f2bd058fb68b471813d6f4f01a31e81bfb862d924e978ab7a83",
+    "record_ids": [
+      "d5d5ebdbad9eab4e66b8",
+      "75985a9fed4ab36529bc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-spec-to-implementation/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/spec-to-implementation/SKILL.md"
       }
     ]
   },
@@ -71864,6 +73882,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/game-development/pc-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f11408fdf9bbd312ac4ebdfcba7d5d32822668c8ecb85c032cf611ac73c9d087",
+    "record_ids": [
+      "4283b688f113974fca6f",
+      "6cbb6283088b813ae079"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "plugins/antigravity/skills/notion-weekly-project-digest/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "skills/mcp-clients/weekly-project-digest/SKILL.md"
       }
     ]
   },
@@ -73020,6 +75058,26 @@
     ]
   },
   {
+    "entry_sha256": "f59e5c2c9e89cd3563764225280f9a8f05ea1164efa9788fea5892f65b04df2c",
+    "record_ids": [
+      "0ab29ac63e1abce58f5d",
+      "dd4f17b25f6501ccd7c3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NVIDIA/skills",
+        "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+        "skill_path": "plugins/nvidia-skills/skills/nvidia-skill-finder/SKILL.md"
+      },
+      {
+        "repository": "NVIDIA/skills",
+        "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+        "skill_path": "skills/nvidia-skill-finder/SKILL.md"
+      }
+    ]
+  },
+  {
     "entry_sha256": "f5a16d277826a0b8c2cb153723b1caa8c214a0509265ade3eb516e1d2e0d1ef5",
     "record_ids": [
       "219dfea7b5d37b91cd14",
@@ -73484,6 +75542,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/hunt-grpc/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f761bbadb2bcb6717e0f5534cdd0ecf83e1a3c050a1fde7b91cb2c08cf0f1c20",
+    "record_ids": [
+      "aad44a0dc4108fe6a5ca",
+      "bbc9438bdecaed7e1e35"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/workflow-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/workflow-guide/SKILL.md"
       }
     ]
   },
@@ -73978,6 +76056,26 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/beautiful-prose/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f922dea42e381cad35279bf39432e2371abaf009255183e7340e4703f8ab5b61",
+    "record_ids": [
+      "bd9b0471bab669e336af",
+      "f070cdb0f6de625a04fd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "plugins/cloud/google-cloud-developer/skills/google-cloud-recipe-onboarding/SKILL.md"
+      },
+      {
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/cloud/google-cloud-recipe-onboarding/SKILL.md"
       }
     ]
   },
@@ -75070,6 +77168,224 @@
         "repository": "sickn33/agentic-awesome-skills",
         "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
         "skill_path": "skills/monte-carlo-validation-notebook/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fce417a9eeade27f4f4aa38e93d3458f2c9a032d21e42b4b4f9dc1ff884339b8",
+    "record_ids": [
+      "3f05c6431c07499dfbe7",
+      "90c19932bc728a2f4e30",
+      "e513df5346859de46f0f",
+      "84dec4d2e7f69ce3da7b",
+      "f8d567952013a31fbea1",
+      "10d8cdf1ed4123794f15",
+      "6e80777a4bfdafa326c4",
+      "38eac45d852b7add41df",
+      "c7b15af624b5b08cab7d",
+      "32c16f996708196d5e7f",
+      "d98eae1056d600e93093",
+      "f37d0415c28ae5675235",
+      "781c179a15eab2047253",
+      "afa0c95201b7d4737a53",
+      "78f0b087f989f8e5c7d1",
+      "a62307c819e073aeb971",
+      "6c0a3017968269f4ffd1",
+      "a76d5190ac93e68ecb34",
+      "c52626981f999ed28a90",
+      "ba4baac76cef67114631",
+      "70094a3ccf1f0ea2cafb",
+      "c7ac5d8ab3fb02aa93b8",
+      "95d34d2477646e08814b",
+      "4e30ce6ea4a03de6e262",
+      "d8c44f915b244715e35f",
+      "4e0b7087e16a04240c92",
+      "6462cc2f673ad338d896",
+      "4d01121fc51b3d1ed784",
+      "a8200112f6cdee1ed0b2",
+      "67c3cd315fb15a1d43de",
+      "87c7eddfc849bc03283c",
+      "d2061b9a006f6c4231ab",
+      "fe2e50a9ecb46fd8237a",
+      "66be8932c5d4c48f429b",
+      "51f50c34a39e5c3916bb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/airflow/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/chart-generator/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/cloudwatch-logs/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/custom/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/habit-tracker/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/org-chart/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/custom-blocks/whiteboard/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-query/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/duckdb-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-draft-release-tools/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-stars-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/github-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/hubspot-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/intercom-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/jira-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/linear-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/pagerduty-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/postgres-query/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/powerpoint-creator/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/raindrop-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/readwise-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/salesforce-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-pagerduty-incident-tools/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sentry-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-query/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/snowflake-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/sqlite-query/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/todoist-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/vercel-production-deployment-tools/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workday-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workers-default/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/workflows/workflow/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-sync/.agents/skills/sync-guide/SKILL.md"
+      },
+      {
+        "repository": "makenotion/notion-cookbook",
+        "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+        "skill_path": "workers/templates/zendesk-webhook/.agents/skills/sync-guide/SKILL.md"
       }
     ]
   },

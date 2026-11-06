@@ -1,0 +1,39 @@
+{
+  "repository": "SHADOWPR0/beautiful_prose",
+  "commit_sha": "3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ff590a08e8169371afd4ecf1808e84e5b75ee588",
+      "bytes": 170,
+      "source_url": "https://github.com/SHADOWPR0/beautiful_prose/blob/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/README.md",
+      "sha256": "9e429610a4817090617965005c5a6fadf25f3096b270a55191ab4cb40ba2eb39",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/beautiful_prose/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "07cfe82032427a2ffd8fc6df5f4e6f7cfe291215",
+      "bytes": 4909,
+      "source_url": "https://github.com/SHADOWPR0/beautiful_prose/blob/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/SKILL.md",
+      "sha256": "6764523b9da88d48080123ec9663365faedc9c40d7ef298e6cf5489a5b8492ea",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/beautiful_prose/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/SKILL.md"
+    },
+    {
+      "path": "references/test-cases.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6c6e79291ad9ec2188750883e530e7c7fbd9652a",
+      "bytes": 1313,
+      "source_url": "https://github.com/SHADOWPR0/beautiful_prose/blob/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/references/test-cases.md",
+      "sha256": "6c381870a6e602577e0903e0e8cc2a78c27085e4d6683ec2283f2fd46325531b",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/beautiful_prose/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0/references/test-cases.md"
+    }
+  ]
+}

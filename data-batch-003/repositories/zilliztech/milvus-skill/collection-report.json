@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:14:48.973342+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zilliztech/milvus-skill",
+      "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 11,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5.json"
+    }
+  ],
+  "errors": []
+}

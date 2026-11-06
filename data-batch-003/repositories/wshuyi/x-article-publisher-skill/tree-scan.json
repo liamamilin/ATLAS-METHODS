@@ -1,0 +1,8 @@
+{
+  "repository": "wshuyi/x-article-publisher-skill",
+  "commit_sha": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+  "tree_entries": 10,
+  "candidate_skill_paths": [
+    "skills/x-article-publisher/SKILL.md"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:15:25.476312+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Xquik-dev/x-twitter-scraper",
+      "commit_sha": "23c895e82461e0efdca6bfb62e543b0144ab5f96",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 337,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Xquik-dev/x-twitter-scraper/23c895e82461e0efdca6bfb62e543b0144ab5f96.json"
+    }
+  ],
+  "errors": []
+}

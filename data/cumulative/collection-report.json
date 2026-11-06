@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-06T10:00:40.556470+00:00",
-  "requested_sources": 30,
-  "completed_sources": 23,
-  "indexed_snapshots": 25,
+  "generated_at": "2026-11-06T10:18:18.585781+00:00",
+  "requested_sources": 54,
+  "completed_sources": 47,
+  "indexed_snapshots": 49,
   "partial_sources": 2,
   "partial_results": [
     {
@@ -61,11 +61,11 @@
   "failed_sources": 0,
   "no_skill_sources": 5,
   "pending_sources": 0,
-  "candidate_skill_files": 10914,
-  "saved_skill_entries": 10844,
-  "distinct_skill_paths": 10844,
-  "unique_entry_texts": 5046,
-  "duplicate_entry_groups": 2944,
+  "candidate_skill_files": 12156,
+  "saved_skill_entries": 12086,
+  "distinct_skill_paths": 12086,
+  "unique_entry_texts": 6035,
+  "duplicate_entry_groups": 3001,
   "sources": [
     {
       "repository": "anthropics/skills",
@@ -316,6 +316,246 @@
       "saved_text_files": 1171,
       "files_not_exported": 1,
       "repository_manifest": "../../data-batch-002/repositories/wshobson/agents/manifests/wshobson/agents/4bde3168b43c0655c4d00ea2726e631719908a6d.json"
+    },
+    {
+      "repository": "AgriciDaniel/claude-seo",
+      "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 35,
+      "saved_skill_entries": 35,
+      "saved_text_files": 464,
+      "files_not_exported": 3,
+      "repository_manifest": "../../data-batch-003/repositories/AgriciDaniel/claude-seo/manifests/AgriciDaniel/claude-seo/6be93f45064ffbadced572b5d5c95f55fd263af0.json"
+    },
+    {
+      "repository": "BrianRWagner/ai-marketing-claude-code-skills",
+      "commit_sha": "f36b34fc539a7a3b801839bfff2c26277fd7ec69",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 23,
+      "saved_skill_entries": 23,
+      "saved_text_files": 89,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/BrianRWagner/ai-marketing-claude-code-skills/manifests/BrianRWagner/ai-marketing-claude-code-skills/f36b34fc539a7a3b801839bfff2c26277fd7ec69.json"
+    },
+    {
+      "repository": "CosmoBlk/email-marketing-bible",
+      "commit_sha": "962648c1b147652244c4e4953e96c65421a79e70",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 42,
+      "files_not_exported": 1,
+      "repository_manifest": "../../data-batch-003/repositories/CosmoBlk/email-marketing-bible/manifests/CosmoBlk/email-marketing-bible/962648c1b147652244c4e4953e96c65421a79e70.json"
+    },
+    {
+      "repository": "MohamedAbdallah-14/unslop",
+      "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 473,
+      "files_not_exported": 10,
+      "repository_manifest": "../../data-batch-003/repositories/MohamedAbdallah-14/unslop/manifests/MohamedAbdallah-14/unslop/eaa3b92e0b54a29076df23ff6d846c5f81bed7b9.json"
+    },
+    {
+      "repository": "NVIDIA/skills",
+      "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 438,
+      "saved_skill_entries": 438,
+      "saved_text_files": 6411,
+      "files_not_exported": 9,
+      "repository_manifest": "../../data-batch-003/repositories/NVIDIA/skills/manifests/NVIDIA/skills/c24aea9a0b0bbe9bd16363682045fc9218b3cbef.json"
+    },
+    {
+      "repository": "SHADOWPR0/beautiful_prose",
+      "commit_sha": "3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/SHADOWPR0/beautiful_prose/manifests/SHADOWPR0/beautiful_prose/3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0.json"
+    },
+    {
+      "repository": "Xquik-dev/tweetclaw",
+      "commit_sha": "ae9ba593dc6ed383bb631c018b965e59f6c66ff3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 98,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/Xquik-dev/tweetclaw/manifests/Xquik-dev/tweetclaw/ae9ba593dc6ed383bb631c018b965e59f6c66ff3.json"
+    },
+    {
+      "repository": "Xquik-dev/x-twitter-scraper",
+      "commit_sha": "23c895e82461e0efdca6bfb62e543b0144ab5f96",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 337,
+      "files_not_exported": 2,
+      "repository_manifest": "../../data-batch-003/repositories/Xquik-dev/x-twitter-scraper/manifests/Xquik-dev/x-twitter-scraper/23c895e82461e0efdca6bfb62e543b0144ab5f96.json"
+    },
+    {
+      "repository": "appeeky/aso-skills",
+      "commit_sha": "3919d7c27402d92c7ef698f2016174b874ea189e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 40,
+      "saved_skill_entries": 40,
+      "saved_text_files": 103,
+      "files_not_exported": 2,
+      "repository_manifest": "../../data-batch-003/repositories/appeeky/aso-skills/manifests/appeeky/aso-skills/3919d7c27402d92c7ef698f2016174b874ea189e.json"
+    },
+    {
+      "repository": "blader/humanizer",
+      "commit_sha": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 14,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/blader/humanizer/manifests/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0.json"
+    },
+    {
+      "repository": "cloudflare/security-audit-skill",
+      "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 22,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/cloudflare/security-audit-skill/manifests/cloudflare/security-audit-skill/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8.json"
+    },
+    {
+      "repository": "cypress-io/ai-toolkit",
+      "commit_sha": "5258ece52a0010d268946e08606c98784c98f255",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 61,
+      "files_not_exported": 2,
+      "repository_manifest": "../../data-batch-003/repositories/cypress-io/ai-toolkit/manifests/cypress-io/ai-toolkit/5258ece52a0010d268946e08606c98784c98f255.json"
+    },
+    {
+      "repository": "deanpeters/Product-Manager-Skills",
+      "commit_sha": "cfcb697f14b8891d8b3ec43c16c3547df3e70e13",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 77,
+      "saved_skill_entries": 77,
+      "saved_text_files": 366,
+      "files_not_exported": 88,
+      "repository_manifest": "../../data-batch-003/repositories/deanpeters/Product-Manager-Skills/manifests/deanpeters/Product-Manager-Skills/cfcb697f14b8891d8b3ec43c16c3547df3e70e13.json"
+    },
+    {
+      "repository": "google/skills",
+      "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 191,
+      "saved_skill_entries": 191,
+      "saved_text_files": 1377,
+      "files_not_exported": 16,
+      "repository_manifest": "../../data-batch-003/repositories/google/skills/manifests/google/skills/c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2.json"
+    },
+    {
+      "repository": "makenotion/claude-code-notion-plugin",
+      "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 191,
+      "files_not_exported": 7,
+      "repository_manifest": "../../data-batch-003/repositories/makenotion/claude-code-notion-plugin/manifests/makenotion/claude-code-notion-plugin/016c74ffc568920a385186fb9d2d9d2801e0be09.json"
+    },
+    {
+      "repository": "makenotion/notion-cookbook",
+      "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 246,
+      "saved_skill_entries": 246,
+      "saved_text_files": 1410,
+      "files_not_exported": 133,
+      "repository_manifest": "../../data-batch-003/repositories/makenotion/notion-cookbook/manifests/makenotion/notion-cookbook/8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0.json"
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "commit_sha": "2a12295a7717569baa7be181b4cfebe3ca38a6bb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 69,
+      "saved_skill_entries": 69,
+      "saved_text_files": 153,
+      "files_not_exported": 5,
+      "repository_manifest": "../../data-batch-003/repositories/phuryn/pm-skills/manifests/phuryn/pm-skills/2a12295a7717569baa7be181b4cfebe3ca38a6bb.json"
+    },
+    {
+      "repository": "qdrant/skills",
+      "commit_sha": "9f55f6a7fb225932da70c6e7dcd671c7e9a8929a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 34,
+      "saved_skill_entries": 34,
+      "saved_text_files": 146,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/qdrant/skills/manifests/qdrant/skills/9f55f6a7fb225932da70c6e7dcd671c7e9a8929a.json"
+    },
+    {
+      "repository": "realkimbarrett/advertising-skills",
+      "commit_sha": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 20,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/realkimbarrett/advertising-skills/manifests/realkimbarrett/advertising-skills/45f4a4a1dabe24113193369b55b929b1de4ff04a.json"
+    },
+    {
+      "repository": "redis/agent-skills",
+      "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 200,
+      "files_not_exported": 3,
+      "repository_manifest": "../../data-batch-003/repositories/redis/agent-skills/manifests/redis/agent-skills/74708dab4b3f81a9845803c3f642a4f7d443af69.json"
+    },
+    {
+      "repository": "resend/resend-skills",
+      "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 82,
+      "files_not_exported": 1,
+      "repository_manifest": "../../data-batch-003/repositories/resend/resend-skills/manifests/resend/resend-skills/9cf29b7c1dcc0ec00a183e3c715fa7cde606e068.json"
+    },
+    {
+      "repository": "smixs/creative-director-skill",
+      "commit_sha": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 599,
+      "files_not_exported": 7,
+      "repository_manifest": "../../data-batch-003/repositories/smixs/creative-director-skill/manifests/smixs/creative-director-skill/ac06eb255371da35d1db0a146dbfcca8c8857543.json"
+    },
+    {
+      "repository": "wshuyi/x-article-publisher-skill",
+      "commit_sha": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 10,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/wshuyi/x-article-publisher-skill/manifests/wshuyi/x-article-publisher-skill/eb3197d1d8579556aea5018d5c0b141d55fc2df6.json"
+    },
+    {
+      "repository": "zilliztech/milvus-skill",
+      "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 11,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-003/repositories/zilliztech/milvus-skill/manifests/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5.json"
     }
   ],
   "errors": [],

@@ -1,0 +1,12 @@
+{
+  "repository": "cypress-io/ai-toolkit",
+  "commit_sha": "5258ece52a0010d268946e08606c98784c98f255",
+  "tree_entries": 63,
+  "candidate_skill_paths": [
+    "skills/cypress-author/SKILL.md",
+    "skills/cypress-cloud-cli/SKILL.md",
+    "skills/cypress-docs/SKILL.md",
+    "skills/cypress-explain/SKILL.md",
+    "skills/cypress-tap/SKILL.md"
+  ]
+}

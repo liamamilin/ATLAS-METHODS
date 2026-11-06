@@ -1,0 +1,30 @@
+{
+  "repository": "BrianRWagner/ai-marketing-claude-code-skills",
+  "commit_sha": "f36b34fc539a7a3b801839bfff2c26277fd7ec69",
+  "tree_entries": 89,
+  "candidate_skill_paths": [
+    "ai-discoverability-audit/SKILL.md",
+    "case-study-builder/SKILL.md",
+    "cold-outreach-sequence/SKILL.md",
+    "content-idea-generator/SKILL.md",
+    "daily-briefing-builder/SKILL.md",
+    "de-ai-ify/SKILL.md",
+    "go-mode/SKILL.md",
+    "homepage-audit/SKILL.md",
+    "last30days/SKILL.md",
+    "linkedin-authority-builder/SKILL.md",
+    "linkedin-profile-optimizer/SKILL.md",
+    "marketing-principles/SKILL.md",
+    "meeting-prep/SKILL.md",
+    "newsletter-creation-curation/SKILL.md",
+    "plan-my-day/SKILL.md",
+    "positioning-basics/SKILL.md",
+    "reddit-insights/SKILL.md",
+    "social-card-gen/SKILL.md",
+    "testimonial-collector/SKILL.md",
+    "tweet-draft-reviewer/SKILL.md",
+    "vault-cleanup-auditor/SKILL.md",
+    "voice-extractor/SKILL.md",
+    "youtube-summarizer/SKILL.md"
+  ]
+}

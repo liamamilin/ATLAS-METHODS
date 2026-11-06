@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:14:10.202529+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 5,
+  "saved_skill_entries": 5,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "resend/resend-skills",
+      "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 82,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/resend/resend-skills/9cf29b7c1dcc0ec00a183e3c715fa7cde606e068.json"
+    }
+  ],
+  "errors": []
+}

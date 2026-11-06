@@ -1,0 +1,8 @@
+{
+  "repository": "zilliztech/milvus-skill",
+  "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+  "tree_entries": 11,
+  "candidate_skill_paths": [
+    "SKILL.md"
+  ]
+}

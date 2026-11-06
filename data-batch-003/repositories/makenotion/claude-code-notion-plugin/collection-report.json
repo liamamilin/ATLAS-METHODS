@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:14:04.177283+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 12,
+  "saved_skill_entries": 12,
+  "unique_entry_texts": 12,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "makenotion/claude-code-notion-plugin",
+      "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 191,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/makenotion/claude-code-notion-plugin/016c74ffc568920a385186fb9d2d9d2801e0be09.json"
+    }
+  ],
+  "errors": []
+}

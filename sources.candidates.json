@@ -827,7 +827,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "canonical_repository": "cloudflare/security-audit-skill",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "coreyhaines31/marketingskills",
@@ -1149,7 +1155,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+      "canonical_repository": "realkimbarrett/advertising-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "deanpeters/Product-Manager-Skills",
@@ -1485,7 +1497,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "cfcb697f14b8891d8b3ec43c16c3547df3e70e13",
+      "canonical_repository": "deanpeters/Product-Manager-Skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "phuryn/pm-skills",
@@ -1954,7 +1972,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "2a12295a7717569baa7be181b4cfebe3ca38a6bb",
+      "canonical_repository": "phuryn/pm-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "makenotion/notion-cookbook",
@@ -1968,7 +1992,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+      "canonical_repository": "makenotion/notion-cookbook",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "makenotion/claude-code-notion-plugin",
@@ -1982,7 +2012,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+      "canonical_repository": "makenotion/claude-code-notion-plugin",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "resend/resend-skills",
@@ -2024,7 +2060,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068",
+      "canonical_repository": "resend/resend-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "redis/agent-skills",
@@ -2038,7 +2080,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+      "canonical_repository": "redis/agent-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "NVIDIA/skills",
@@ -2052,7 +2100,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+      "canonical_repository": "NVIDIA/skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "google/skills",
@@ -2192,7 +2246,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+      "canonical_repository": "google/skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "cypress-io/ai-toolkit",
@@ -2220,7 +2280,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "5258ece52a0010d268946e08606c98784c98f255",
+      "canonical_repository": "cypress-io/ai-toolkit",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "qdrant/skills",
@@ -2234,7 +2300,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "9f55f6a7fb225932da70c6e7dcd671c7e9a8929a",
+      "canonical_repository": "qdrant/skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "zilliztech/milvus-skill",
@@ -2248,7 +2320,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+      "canonical_repository": "zilliztech/milvus-skill",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "BrianRWagner/ai-marketing-claude-code-skills",
@@ -2262,7 +2340,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "f36b34fc539a7a3b801839bfff2c26277fd7ec69",
+      "canonical_repository": "BrianRWagner/ai-marketing-claude-code-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "AgriciDaniel/claude-seo",
@@ -2283,7 +2367,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+      "canonical_repository": "AgriciDaniel/claude-seo",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "wshuyi/x-article-publisher-skill",
@@ -2297,7 +2387,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+      "canonical_repository": "wshuyi/x-article-publisher-skill",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "CosmoBlk/email-marketing-bible",
@@ -2311,7 +2407,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "962648c1b147652244c4e4953e96c65421a79e70",
+      "canonical_repository": "CosmoBlk/email-marketing-bible",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "smixs/creative-director-skill",
@@ -2325,7 +2427,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+      "canonical_repository": "smixs/creative-director-skill",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "Xquik-dev/x-twitter-scraper",
@@ -2339,7 +2447,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "23c895e82461e0efdca6bfb62e543b0144ab5f96",
+      "canonical_repository": "Xquik-dev/x-twitter-scraper",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "Xquik-dev/tweetclaw",
@@ -2353,7 +2467,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "ae9ba593dc6ed383bb631c018b965e59f6c66ff3",
+      "canonical_repository": "Xquik-dev/tweetclaw",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "SHADOWPR0/beautiful_prose",
@@ -2367,7 +2487,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0",
+      "canonical_repository": "SHADOWPR0/beautiful_prose",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "blader/humanizer",
@@ -2388,7 +2514,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "canonical_repository": "blader/humanizer",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "MohamedAbdallah-14/unslop",
@@ -2402,7 +2534,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+      "canonical_repository": "MohamedAbdallah-14/unslop",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "appeeky/aso-skills",
@@ -2416,7 +2554,13 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "batch": "003",
+      "commit_sha": "3919d7c27402d92c7ef698f2016174b874ea189e",
+      "canonical_repository": "appeeky/aso-skills",
+      "fork": false,
+      "parent_repository": null,
+      "source_repository": null
     },
     {
       "repository": "degausai/wonda",
@@ -7799,6 +7943,11 @@
           "url": "https://github.com/bazel-contrib/bazel-gazelle/blob/2ddd36aa159de9ee97e24f726341177cd1f026a9/v2.md",
           "link_type": "github_search",
           "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/bazel-contrib/bazel-gazelle/blob/2ddd36aa159de9ee97e24f726341177cd1f026a9/v2.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
         }
       ],
       "state": "pending_next_batch"
@@ -7823,6 +7972,11 @@
           "url": "https://github.com/open-gitagent/opengap/blob/d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5/docs.md",
           "link_type": "github_search",
           "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/open-gitagent/opengap/blob/d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5/docs.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
         }
       ],
       "state": "pending_next_batch"
@@ -7835,9 +7989,38 @@
           "url": "https://github.com/coreyhaines31/makerskills/blob/0f20eaf6e4479ce03858ee09a56fe93e7440ed1b/FAQ.md",
           "link_type": "github_search",
           "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/coreyhaines31/makerskills/blob/0f20eaf6e4479ce03858ee09a56fe93e7440ed1b/FAQ.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
         }
       ],
       "state": "pending_next_batch"
+    },
+    {
+      "repository": "KiWi233333/JiwuChat",
+      "repository_url": "https://github.com/KiWi233333/JiwuChat",
+      "state": "pending_next_batch",
+      "discovered_via": [
+        {
+          "url": "https://github.com/KiWi233333/JiwuChat/blob/63458b9c34a29ef17a6e61873f63c587d82bfc6c/Run.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ]
+    },
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "repository_url": "https://github.com/go-musicfox/go-musicfox",
+      "state": "pending_next_batch",
+      "discovered_via": [
+        {
+          "url": "https://github.com/go-musicfox/go-musicfox/blob/12169a71098f8b8607bcf655eaddabf57ca14daf/SDLC.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:14:16.544376+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 28,
+  "saved_skill_entries": 28,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 14,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "redis/agent-skills",
+      "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 200,
+      "files_not_exported": 3,
+      "repository_manifest": "manifests/redis/agent-skills/74708dab4b3f81a9845803c3f642a4f7d443af69.json"
+    }
+  ],
+  "errors": []
+}

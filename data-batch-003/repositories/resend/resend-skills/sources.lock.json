@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "resend/resend-skills",
+      "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068"
+    }
+  ]
+}

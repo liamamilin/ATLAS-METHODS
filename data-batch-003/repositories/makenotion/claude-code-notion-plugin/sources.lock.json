@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "makenotion/claude-code-notion-plugin",
+      "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09"
+    }
+  ]
+}

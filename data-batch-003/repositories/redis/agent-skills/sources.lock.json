@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "redis/agent-skills",
+      "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69"
+    }
+  ]
+}

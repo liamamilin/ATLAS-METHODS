@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:15:30.670793+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Xquik-dev/tweetclaw",
+      "commit_sha": "ae9ba593dc6ed383bb631c018b965e59f6c66ff3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 98,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/Xquik-dev/tweetclaw/ae9ba593dc6ed383bb631c018b965e59f6c66ff3.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:15:50.972213+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 15,
+  "unique_entry_texts": 6,
+  "duplicate_entry_groups": 6,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "MohamedAbdallah-14/unslop",
+      "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 473,
+      "files_not_exported": 10,
+      "repository_manifest": "manifests/MohamedAbdallah-14/unslop/eaa3b92e0b54a29076df23ff6d846c5f81bed7b9.json"
+    }
+  ],
+  "errors": []
+}

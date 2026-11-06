@@ -1,0 +1,19 @@
+{
+  "repository": "makenotion/claude-code-notion-plugin",
+  "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+  "tree_entries": 198,
+  "candidate_skill_paths": [
+    "skills/notion/build-my-engineering-wiki/SKILL.md",
+    "skills/notion/create-my-team-handbook/SKILL.md",
+    "skills/notion/database-designer/SKILL.md",
+    "skills/notion/knowledge-capture/SKILL.md",
+    "skills/notion/meeting-intelligence/SKILL.md",
+    "skills/notion/organize-my-semester/SKILL.md",
+    "skills/notion/plan-marketing-campaigns/SKILL.md",
+    "skills/notion/research-documentation/SKILL.md",
+    "skills/notion/set-up-my-project/SKILL.md",
+    "skills/notion/setup/SKILL.md",
+    "skills/notion/spec-to-implementation/SKILL.md",
+    "skills/notion/weekly-project-digest/SKILL.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "repository": "Xquik-dev/x-twitter-scraper",
+  "commit_sha": "23c895e82461e0efdca6bfb62e543b0144ab5f96",
+  "tree_entries": 339,
+  "candidate_skill_paths": [
+    "skills/x-twitter-scraper/SKILL.md",
+    "skills/xquik-mcp/SKILL.md",
+    "skills/xquik-social-research/SKILL.md"
+  ]
+}

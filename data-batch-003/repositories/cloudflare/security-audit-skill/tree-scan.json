@@ -1,0 +1,8 @@
+{
+  "repository": "cloudflare/security-audit-skill",
+  "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+  "tree_entries": 22,
+  "candidate_skill_paths": [
+    "skills/security-audit/SKILL.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "resend/resend-skills",
+  "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068",
+  "tree_entries": 83,
+  "candidate_skill_paths": [
+    "skills/agent-email-inbox/SKILL.md",
+    "skills/email-best-practices/SKILL.md",
+    "skills/react-email/SKILL.md",
+    "skills/resend-cli/SKILL.md",
+    "skills/resend/SKILL.md"
+  ]
+}

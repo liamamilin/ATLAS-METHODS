@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "cypress-io/ai-toolkit",
+      "commit_sha": "5258ece52a0010d268946e08606c98784c98f255"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "repository": "MohamedAbdallah-14/unslop",
+  "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+  "tree_entries": 483,
+  "candidate_skill_paths": [
+    ".cursor/skills/unslop/SKILL.md",
+    ".windsurf/skills/unslop/SKILL.md",
+    "plugins/unslop/skills/unslop-commit/SKILL.md",
+    "plugins/unslop/skills/unslop-file/SKILL.md",
+    "plugins/unslop/skills/unslop-help/SKILL.md",
+    "plugins/unslop/skills/unslop-reasoning/SKILL.md",
+    "plugins/unslop/skills/unslop-review/SKILL.md",
+    "plugins/unslop/skills/unslop/SKILL.md",
+    "skills/unslop-commit/SKILL.md",
+    "skills/unslop-file/SKILL.md",
+    "skills/unslop-help/SKILL.md",
+    "skills/unslop-reasoning/SKILL.md",
+    "skills/unslop-review/SKILL.md",
+    "skills/unslop/SKILL.md",
+    "unslop/SKILL.md"
+  ]
+}

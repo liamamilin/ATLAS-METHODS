@@ -1,0 +1,127 @@
+{
+  "repository": "zilliztech/milvus-skill",
+  "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cb4e3332ac4bb4055ccea5626402e69294e3c13b",
+      "bytes": 51,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/.gitignore",
+      "sha256": "52ae7529e188ab9cf8eee17ef70ffd92013ca3da0412bfaea8054a909a46e66b",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "bytes": 11358,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "180d9b2eaf8df64a95a24b88015cb1fe4da4be0b",
+      "bytes": 1415,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/README.md",
+      "sha256": "e2a5eb2200c66f4f0fa31226da1a11cd9b6b8e400e16a7fc8ea26ec2faf13ed7",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6a8f51b543d8933ed762fb3e976a3bffe74059f8",
+      "bytes": 10424,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/SKILL.md",
+      "sha256": "7a3bbab5dcfc613f68302d72f02d7a7f56d9545e29e6acb2c7ac712335f939c0",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/SKILL.md"
+    },
+    {
+      "path": "references/collection.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ab2f1f7ef5b1257e3b8cc071fe70d503280db0dd",
+      "bytes": 2747,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/collection.md",
+      "sha256": "bf74bc2d0dcc4e93e779d3f2f5e34f2cf5e0d4e9af7d6c255c27b1355565bbce",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/collection.md"
+    },
+    {
+      "path": "references/database.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b4511d97247b19deac4fa04a802b0fa26aab4678",
+      "bytes": 680,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/database.md",
+      "sha256": "49cd0d8f117d4c728afd812253ffd5951a1f428a39f41b4bab494c793c7d2a70",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/database.md"
+    },
+    {
+      "path": "references/index.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "af493ce84ba783428410a1dd66ae31bed6a264a4",
+      "bytes": 2319,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/index.md",
+      "sha256": "14a83e3e63b6a90b594bfe0a7a9cac03a5732ef8a611286b4812a90fc515f2e2",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/index.md"
+    },
+    {
+      "path": "references/partition.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1c618c1a598174dd67c6bf2431f0f8310c918cf9",
+      "bytes": 1024,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/partition.md",
+      "sha256": "672af8004df0c409138ea6adab3d54802ce021ac2083d427a1e96dde1b37f69a",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/partition.md"
+    },
+    {
+      "path": "references/patterns.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bb9afba108a4cef0fe0081ce8190cc1e1ab3a33b",
+      "bytes": 5713,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/patterns.md",
+      "sha256": "c3595c1bae64c57d3feeb74ef0e874050ace677d1c3e7cdc4b3dfb5e80379306",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/patterns.md"
+    },
+    {
+      "path": "references/user-role.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3bfa3d8ee905a9af9e1394a25a00888404475605",
+      "bytes": 2532,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/user-role.md",
+      "sha256": "0395651c1f24aaa6f8c29a4fc368ff775c1a246cf0201446ceda5c60fb16bc39",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/user-role.md"
+    },
+    {
+      "path": "references/vector.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4b3b8e9c7193a505457eb794e66f6a5c3d4d7cb2",
+      "bytes": 7061,
+      "source_url": "https://github.com/zilliztech/milvus-skill/blob/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/vector.md",
+      "sha256": "ecb87708ea01d99c299b6772b64b254e5399444b6ce86ec4addf872a5fb25844",
+      "status": "saved",
+      "raw_path": "raw/zilliztech/milvus-skill/7553e6c2b5940aef0f4a1aacc40d956745af0ac5/references/vector.md"
+    }
+  ]
+}

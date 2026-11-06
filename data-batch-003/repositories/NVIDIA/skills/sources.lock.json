@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "NVIDIA/skills",
+      "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef"
+    }
+  ]
+}

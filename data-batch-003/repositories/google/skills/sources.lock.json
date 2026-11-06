@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "google/skills",
+      "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2"
+    }
+  ]
+}

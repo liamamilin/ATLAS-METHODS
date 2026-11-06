@@ -124,6 +124,126 @@
       "repository": "wshobson/agents",
       "commit_sha": "4bde3168b43c0655c4d00ea2726e631719908a6d",
       "collection_root": "../../data-batch-002/repositories/wshobson/agents"
+    },
+    {
+      "repository": "AgriciDaniel/claude-seo",
+      "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+      "collection_root": "../../data-batch-003/repositories/AgriciDaniel/claude-seo"
+    },
+    {
+      "repository": "BrianRWagner/ai-marketing-claude-code-skills",
+      "commit_sha": "f36b34fc539a7a3b801839bfff2c26277fd7ec69",
+      "collection_root": "../../data-batch-003/repositories/BrianRWagner/ai-marketing-claude-code-skills"
+    },
+    {
+      "repository": "CosmoBlk/email-marketing-bible",
+      "commit_sha": "962648c1b147652244c4e4953e96c65421a79e70",
+      "collection_root": "../../data-batch-003/repositories/CosmoBlk/email-marketing-bible"
+    },
+    {
+      "repository": "MohamedAbdallah-14/unslop",
+      "commit_sha": "eaa3b92e0b54a29076df23ff6d846c5f81bed7b9",
+      "collection_root": "../../data-batch-003/repositories/MohamedAbdallah-14/unslop"
+    },
+    {
+      "repository": "NVIDIA/skills",
+      "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+      "collection_root": "../../data-batch-003/repositories/NVIDIA/skills"
+    },
+    {
+      "repository": "SHADOWPR0/beautiful_prose",
+      "commit_sha": "3b8f98079eaf79a0013ccdbedbb332a5b0ba19e0",
+      "collection_root": "../../data-batch-003/repositories/SHADOWPR0/beautiful_prose"
+    },
+    {
+      "repository": "Xquik-dev/tweetclaw",
+      "commit_sha": "ae9ba593dc6ed383bb631c018b965e59f6c66ff3",
+      "collection_root": "../../data-batch-003/repositories/Xquik-dev/tweetclaw"
+    },
+    {
+      "repository": "Xquik-dev/x-twitter-scraper",
+      "commit_sha": "23c895e82461e0efdca6bfb62e543b0144ab5f96",
+      "collection_root": "../../data-batch-003/repositories/Xquik-dev/x-twitter-scraper"
+    },
+    {
+      "repository": "appeeky/aso-skills",
+      "commit_sha": "3919d7c27402d92c7ef698f2016174b874ea189e",
+      "collection_root": "../../data-batch-003/repositories/appeeky/aso-skills"
+    },
+    {
+      "repository": "blader/humanizer",
+      "commit_sha": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "collection_root": "../../data-batch-003/repositories/blader/humanizer"
+    },
+    {
+      "repository": "cloudflare/security-audit-skill",
+      "commit_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "collection_root": "../../data-batch-003/repositories/cloudflare/security-audit-skill"
+    },
+    {
+      "repository": "cypress-io/ai-toolkit",
+      "commit_sha": "5258ece52a0010d268946e08606c98784c98f255",
+      "collection_root": "../../data-batch-003/repositories/cypress-io/ai-toolkit"
+    },
+    {
+      "repository": "deanpeters/Product-Manager-Skills",
+      "commit_sha": "cfcb697f14b8891d8b3ec43c16c3547df3e70e13",
+      "collection_root": "../../data-batch-003/repositories/deanpeters/Product-Manager-Skills"
+    },
+    {
+      "repository": "google/skills",
+      "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+      "collection_root": "../../data-batch-003/repositories/google/skills"
+    },
+    {
+      "repository": "makenotion/claude-code-notion-plugin",
+      "commit_sha": "016c74ffc568920a385186fb9d2d9d2801e0be09",
+      "collection_root": "../../data-batch-003/repositories/makenotion/claude-code-notion-plugin"
+    },
+    {
+      "repository": "makenotion/notion-cookbook",
+      "commit_sha": "8a94d7faae9d21d908a18f4f4a3e9b30c561d3f0",
+      "collection_root": "../../data-batch-003/repositories/makenotion/notion-cookbook"
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "commit_sha": "2a12295a7717569baa7be181b4cfebe3ca38a6bb",
+      "collection_root": "../../data-batch-003/repositories/phuryn/pm-skills"
+    },
+    {
+      "repository": "qdrant/skills",
+      "commit_sha": "9f55f6a7fb225932da70c6e7dcd671c7e9a8929a",
+      "collection_root": "../../data-batch-003/repositories/qdrant/skills"
+    },
+    {
+      "repository": "realkimbarrett/advertising-skills",
+      "commit_sha": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+      "collection_root": "../../data-batch-003/repositories/realkimbarrett/advertising-skills"
+    },
+    {
+      "repository": "redis/agent-skills",
+      "commit_sha": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+      "collection_root": "../../data-batch-003/repositories/redis/agent-skills"
+    },
+    {
+      "repository": "resend/resend-skills",
+      "commit_sha": "9cf29b7c1dcc0ec00a183e3c715fa7cde606e068",
+      "collection_root": "../../data-batch-003/repositories/resend/resend-skills"
+    },
+    {
+      "repository": "smixs/creative-director-skill",
+      "commit_sha": "ac06eb255371da35d1db0a146dbfcca8c8857543",
+      "collection_root": "../../data-batch-003/repositories/smixs/creative-director-skill"
+    },
+    {
+      "repository": "wshuyi/x-article-publisher-skill",
+      "commit_sha": "eb3197d1d8579556aea5018d5c0b141d55fc2df6",
+      "collection_root": "../../data-batch-003/repositories/wshuyi/x-article-publisher-skill"
+    },
+    {
+      "repository": "zilliztech/milvus-skill",
+      "commit_sha": "7553e6c2b5940aef0f4a1aacc40d956745af0ac5",
+      "collection_root": "../../data-batch-003/repositories/zilliztech/milvus-skill"
     }
   ]
 }

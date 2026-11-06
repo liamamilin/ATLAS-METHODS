@@ -1,0 +1,19 @@
+{
+  "repository": "realkimbarrett/advertising-skills",
+  "commit_sha": "45f4a4a1dabe24113193369b55b929b1de4ff04a",
+  "tree_entries": 20,
+  "candidate_skill_paths": [
+    "skills/copy-chief/headline-matrix/SKILL.md",
+    "skills/copy-chief/mechanism-builder/SKILL.md",
+    "skills/copy-chief/objection-crusher/SKILL.md",
+    "skills/copy-chief/schwartz-awareness-mapper/SKILL.md",
+    "skills/foundations/avatar-extraction/SKILL.md",
+    "skills/foundations/offer-extraction/SKILL.md",
+    "skills/operator-os/ad-angle-multiplier/SKILL.md",
+    "skills/operator-os/conversion-path-builder/SKILL.md",
+    "skills/operator-os/performance-diagnosis/SKILL.md",
+    "skills/operator-os/scroll-stopping-creative/SKILL.md",
+    "skills/orchestrators/full-funnel-campaign-orchestrator/SKILL.md",
+    "skills/qa/generic-language-killer/SKILL.md"
+  ]
+}

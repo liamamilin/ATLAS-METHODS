@@ -1,0 +1,218 @@
+[
+  {
+    "repository": "cloudflare/security-audit-skill",
+    "canonical_repository": "cloudflare/security-audit-skill",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "realkimbarrett/advertising-skills",
+    "canonical_repository": "realkimbarrett/advertising-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "deanpeters/Product-Manager-Skills",
+    "canonical_repository": "deanpeters/Product-Manager-Skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "phuryn/pm-skills",
+    "canonical_repository": "phuryn/pm-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "makenotion/notion-cookbook",
+    "canonical_repository": "makenotion/notion-cookbook",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "makenotion/claude-code-notion-plugin",
+    "canonical_repository": "makenotion/claude-code-notion-plugin",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "resend/resend-skills",
+    "canonical_repository": "resend/resend-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "redis/agent-skills",
+    "canonical_repository": "redis/agent-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "NVIDIA/skills",
+    "canonical_repository": "NVIDIA/skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "google/skills",
+    "canonical_repository": "google/skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "cypress-io/ai-toolkit",
+    "canonical_repository": "cypress-io/ai-toolkit",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "qdrant/skills",
+    "canonical_repository": "qdrant/skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "zilliztech/milvus-skill",
+    "canonical_repository": "zilliztech/milvus-skill",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "BrianRWagner/ai-marketing-claude-code-skills",
+    "canonical_repository": "BrianRWagner/ai-marketing-claude-code-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "AgriciDaniel/claude-seo",
+    "canonical_repository": "AgriciDaniel/claude-seo",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "wshuyi/x-article-publisher-skill",
+    "canonical_repository": "wshuyi/x-article-publisher-skill",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "CosmoBlk/email-marketing-bible",
+    "canonical_repository": "CosmoBlk/email-marketing-bible",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "smixs/creative-director-skill",
+    "canonical_repository": "smixs/creative-director-skill",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "Xquik-dev/x-twitter-scraper",
+    "canonical_repository": "Xquik-dev/x-twitter-scraper",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "master"
+  },
+  {
+    "repository": "Xquik-dev/tweetclaw",
+    "canonical_repository": "Xquik-dev/tweetclaw",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "master"
+  },
+  {
+    "repository": "SHADOWPR0/beautiful_prose",
+    "canonical_repository": "SHADOWPR0/beautiful_prose",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "blader/humanizer",
+    "canonical_repository": "blader/humanizer",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "MohamedAbdallah-14/unslop",
+    "canonical_repository": "MohamedAbdallah-14/unslop",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "appeeky/aso-skills",
+    "canonical_repository": "appeeky/aso-skills",
+    "fork": false,
+    "parent_repository": null,
+    "source_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  }
+]

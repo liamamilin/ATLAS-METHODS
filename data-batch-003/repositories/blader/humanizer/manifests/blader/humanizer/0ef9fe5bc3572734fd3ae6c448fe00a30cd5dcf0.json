@@ -1,0 +1,160 @@
+{
+  "repository": "blader/humanizer",
+  "commit_sha": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "259312e97cc3b6d84fab8556945d51a002c24858",
+      "bytes": 521,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.claude-plugin/marketplace.json",
+      "sha256": "e539740285b660d2288a38b6d9b237396c6769828c671c46b9f91e760db6cc29",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f628822baadb3103e9da2c5d4fe23481e167e1bc",
+      "bytes": 448,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.claude-plugin/plugin.json",
+      "sha256": "7c7e020ce1f0eb9dcf888710cf7129ede8c3c862ae690ce6714763398f12c783",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a825c73bec4192a211326dd9b10ee5cffb386999",
+      "bytes": 388,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.cursor-plugin/plugin.json",
+      "sha256": "d1e0b50594cf4bbe57fd164b771b401713a91b76b5a213ebe8f4558bb2036546",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.cursor-plugin/plugin.json"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d12c9c099c65bfa6f7ea3a032766b802c5f3669f",
+      "bytes": 393,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "cb7e95de7606d07654024c8d47916796b307033e23ddb2b0a821a9bf89e999ef",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/new-pattern.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f154231ac3fb3b39aed0593df3fabb07d054fae7",
+      "bytes": 681,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/new-pattern.yml",
+      "sha256": "7436d578fa0056a09da5da6da950a03cb49f3ce27cf268ae295eb3d7ca19f604",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/new-pattern.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/rewrite-problem.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a83f9e829106e6fbcf9f4ee22f6b80fdd8b4b3ae",
+      "bytes": 1286,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/rewrite-problem.yml",
+      "sha256": "ecfe5e82c5b6d44683e0cb63cfad117dfdd16e30cc6f03510ef335414eea4947",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/ISSUE_TEMPLATE/rewrite-problem.yml"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3c5e8be5beb9ea61f35e8fa75ea4e88733220434",
+      "bytes": 815,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/workflows/validate.yml",
+      "sha256": "f2d6a8780fb0b3cf6fa7d2ffccd72d0fc8bee29b4e63ea0fd65924712c9055fd",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/.github/workflows/validate.yml"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5b170fd02364e3c088897a2b417c4226a533244e",
+      "bytes": 3439,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/AGENTS.md",
+      "sha256": "de84a449da400454df1225ddb1ced728c35bf0be7811b239e3370c7dbe1f4e69",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/AGENTS.md"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f84b9f4ad2c9bfcf2a3d38b258269033163f807c",
+      "bytes": 5922,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/CHANGELOG.md",
+      "sha256": "b3591fe203429f1a6bd2f713c79272e9a8e58a487843d0908d2bbe0700722afa",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "625297fb778f32eb39d3a5b97e3e3b611b7304d6",
+      "bytes": 1066,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/LICENSE",
+      "sha256": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f7d1508fcfb223697f69d25ebb844fcb7748373b",
+      "bytes": 12926,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/README.md",
+      "sha256": "500b53c0d29cd3219d160b5f9a109c0969f706aec74b49a4a081d2026ba48ec7",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "19fc634208e8cc6ae55d4ff287152583216fd244",
+      "bytes": 32348,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/SKILL.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16df2a8e1c788b20bfdf5d3c9a5fa863890fe7bc",
+      "bytes": 201,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/agents/openai.yaml",
+      "sha256": "9d87ff83149a04f86a372948b8ee35fa249de20923867bbc2a49304290aad736",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/agents/openai.yaml"
+    },
+    {
+      "path": "scripts/validate-package.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "9b20d72cecd28bb4589ca05039e8586f902e74b6",
+      "bytes": 5418,
+      "source_url": "https://github.com/blader/humanizer/blob/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/scripts/validate-package.py",
+      "sha256": "941bd99e52b2ba21449719bb7969607ac8117e3dc173d0c9dfe64fd274c65938",
+      "status": "saved",
+      "raw_path": "raw/blader/humanizer/0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0/scripts/validate-package.py"
+    }
+  ]
+}
