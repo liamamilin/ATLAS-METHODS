@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:01:06.502947+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 12,
+  "saved_skill_entries": 12,
+  "unique_entry_texts": 12,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "metalbear-co/skills",
+      "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 77,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/metalbear-co/skills/a5026f8013482a61b8beba78f0600d217bd76a46.json"
+    }
+  ],
+  "errors": []
+}

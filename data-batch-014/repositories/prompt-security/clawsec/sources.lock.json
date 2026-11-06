@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "prompt-security/clawsec",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43"
+    }
+  ]
+}

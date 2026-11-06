@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:02:12.750385+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 103,
+  "saved_skill_entries": 103,
+  "unique_entry_texts": 102,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "browser-act/skills",
+      "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 103,
+      "saved_skill_entries": 103,
+      "saved_text_files": 295,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/browser-act/skills/593316aa0f8ccd88bdf745c92b24a50641701973.json"
+    }
+  ],
+  "errors": []
+}

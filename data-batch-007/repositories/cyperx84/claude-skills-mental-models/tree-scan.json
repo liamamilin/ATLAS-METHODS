@@ -1,0 +1,8 @@
+{
+  "repository": "cyperx84/claude-skills-mental-models",
+  "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007",
+  "tree_entries": 38,
+  "candidate_skill_paths": [
+    "skills/mental-models/SKILL.md"
+  ]
+}

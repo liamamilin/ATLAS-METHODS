@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:02:19.355445+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "agiwhitelist/auteur",
+      "commit_sha": "9bca227df9877e60dc45d49783c8cbd885eccd9b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 37,
+      "files_not_exported": 12,
+      "repository_manifest": "manifests/agiwhitelist/auteur/9bca227df9877e60dc45d49783c8cbd885eccd9b.json"
+    }
+  ],
+  "errors": []
+}

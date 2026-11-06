@@ -1,0 +1,281 @@
+{
+  "repository": "nagameTW/formosa-humanizer",
+  "commit_sha": "4f7c1d9a3e955e97da9bb5aef6a53f052a604153",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "edffb335383a8c27bcd1068e275b1919e1996b93",
+      "bytes": 679,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.claude-plugin/marketplace.json",
+      "sha256": "a50717a6197f5ff7330bf2062682f10b437e31a67ffa3934035d221059746c59",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b3933116e2853daf32573dceeae72c1cd247b4b5",
+      "bytes": 644,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.claude-plugin/plugin.json",
+      "sha256": "83e79f1ef19811aea44d65c65b31d2e7274b7492d028227a1c2a07a1635f669a",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1a4823dd942d28ad894dd3f6d1edba6890d41fb0",
+      "bytes": 566,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.cursor-plugin/plugin.json",
+      "sha256": "711fbfa3becf3b2c379359f321e09bd348f608b7902778bc93cfaa0274ef5099",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.cursor-plugin/plugin.json"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d11ed7e92b7f28913d853f478d6a68f0e7c19c53",
+      "bytes": 173,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.gitattributes",
+      "sha256": "efb6f35fe3b47eb48d5f0f9f25128286affb8cedcc09e1988fd1e64a5c782dc5",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.gitattributes"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4e92d39d91cb5f332c1691abc3422e5ffeadadb7",
+      "bytes": 261,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "7e93a00ec534314a82d5ac3c596b4fd80208a4e05341be64fe416c888dd2459a",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/new-pattern.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b33643c23a7e6bdaec1d9d206504eeb85d04c9af",
+      "bytes": 680,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/new-pattern.yml",
+      "sha256": "4ef4a9dbf4688bb7575773db98f55df8e8d207c444d00f3b3bd47e5025421cd5",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/new-pattern.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/rewrite-problem.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c9f0ef47f45149095a5e10f13035fa08a389bf2d",
+      "bytes": 1317,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/rewrite-problem.yml",
+      "sha256": "94e181a4a9d45ef5c7b78b2fb7bd08cbcd911b27ad897b3db44c521dddeb4a25",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/ISSUE_TEMPLATE/rewrite-problem.yml"
+    },
+    {
+      "path": ".github/workflows/release-zip.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "56fb583e44310d38a15b020459ee920e8d5311df",
+      "bytes": 1168,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/workflows/release-zip.yml",
+      "sha256": "ca75c44e01d7334353272c9b85f23995449465e3988b2ca61898ca4782074fde",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/workflows/release-zip.yml"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3c5e8be5beb9ea61f35e8fa75ea4e88733220434",
+      "bytes": 815,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/workflows/validate.yml",
+      "sha256": "f2d6a8780fb0b3cf6fa7d2ffccd72d0fc8bee29b4e63ea0fd65924712c9055fd",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.github/workflows/validate.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cfd0c2a50c1062d2ecda98d95e46c26420cf7f5a",
+      "bytes": 53,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.gitignore",
+      "sha256": "dfbc0c7e490ea3efa7c0391c3fca3cf07911c1b71a17c564f5539b2d167f4480",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "76d3db37f266b4d35ef91252d54b567070546991",
+      "bytes": 4923,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/AGENTS.md",
+      "sha256": "9e60b112f28842c4668bd7824b50f6208b8b4433bdfb87ca3b1073de4d3a9a81",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/AGENTS.md"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "67dbd0410214b4e010a1b7a0894f11890f317118",
+      "bytes": 16965,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/CHANGELOG.md",
+      "sha256": "3215d8a621ea0d4db4d5dc663fea62d06e15ddc7e573d6a719051a8f37f2d8f6",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "024014155e001fae94dab55cf5bc69b9efbfeac5",
+      "bytes": 1065,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/LICENSE",
+      "sha256": "76cca458368da952781e0a868db5755ec7a06ecb41bded1849439e49adaae29b",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/LICENSE"
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "32ad08b7fba2a5804bd21db6e1c8d35722dce90d",
+      "bytes": 555,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/NOTICE",
+      "sha256": "252b6e7c53028bfe29eb00d43f2bbfb8480d0dca4fddddb938af8dc8a393ff6a",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/NOTICE"
+    },
+    {
+      "path": "PATTERNS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bd2cd4b26230f55881447a9753480c63afa29a7c",
+      "bytes": 20227,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/PATTERNS.md",
+      "sha256": "3dd9d737af68b7f13fc883cdbf1bf25461d64f1b022082184f1078dfc23f316a",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/PATTERNS.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6fd309fbcf5f52cec549cbfe49ac76a602c4f0aa",
+      "bytes": 8071,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/README.md",
+      "sha256": "52f7a3896b7ed7e62e78e262fa19207d13423532a3c5d9904e8be2e74a7f933d",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f02d3f10c3eb54848ee92975f17ba39e659b032e",
+      "bytes": 45752,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/SKILL.md",
+      "sha256": "ac10391650ad29048add7e4350ee27dadf96c45e32efa89ea89da2031cb432be",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/SKILL.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "172be71d75696877b5ac6b1ee6c708f7f1944442",
+      "bytes": 205,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/agents/openai.yaml",
+      "sha256": "8af2f46af78e3f75c5d93d25c67bc20d3dc409dd856b0efea326d1f0b39698c8",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/agents/openai.yaml"
+    },
+    {
+      "path": "docs/PROMOTION.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a71df0a8f230ecd15368959f207cdecf1b249f7a",
+      "bytes": 4156,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/PROMOTION.md",
+      "sha256": "1499baff69504788d30aef40371d5c3ee7a807086541a5d9437ed21f31d99311",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/PROMOTION.md"
+    },
+    {
+      "path": "docs/design.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8663216b0f22e2f8f517dd2e9922f0c3d1b63326",
+      "bytes": 3402,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/design.md",
+      "sha256": "716429ddc60b27f4d082f910b3a12d4273fbfcb5339a058fcd9672bbe73e7fcd",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/design.md"
+    },
+    {
+      "path": "docs/example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "db3fa4c463991698fc45e65a36e75d6586464b45",
+      "bytes": 3543,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/example.md",
+      "sha256": "97caa3566ad411c434eb1135714952cc9ead9c20a73b3f8809ba2acd9c9c354d",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/example.md"
+    },
+    {
+      "path": "docs/install.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c3ad9fb00df3be1b79ecdd7f36be0c98fd4ad20a",
+      "bytes": 1089,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/install.md",
+      "sha256": "3d9b814b5c74dc30df6a7bd243db696ee969b1336cc132d17e9ecb9d927e0c1d",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/install.md"
+    },
+    {
+      "path": "docs/usage.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d68cfa7af346019219cb34ed80db3af624bc89d",
+      "bytes": 703,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/usage.md",
+      "sha256": "cf7c41957c18df3b0fe7e1b57ad1b541a0bce37b9e2f0a9b3a22c12d56a3728b",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/docs/usage.md"
+    },
+    {
+      "path": "references/zh-cn-glossary.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3ee719007487898a763245b01972ab23343a22ef",
+      "bytes": 3496,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/references/zh-cn-glossary.md",
+      "sha256": "80f9f7542d3782b218cbcd1ef998a776919fff93219c8abaf2e816f7cccb6a7e",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/references/zh-cn-glossary.md"
+    },
+    {
+      "path": "scripts/validate-package.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "8300b9f7bce9ef807e82926b0b367f03c8a2b3fd",
+      "bytes": 5217,
+      "source_url": "https://github.com/nagameTW/formosa-humanizer/blob/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/scripts/validate-package.py",
+      "sha256": "ca4b938712607868b31d6c5665b4c16aeb664383416e43bd2c7cd452bc621817",
+      "status": "saved",
+      "raw_path": "raw/nagameTW/formosa-humanizer/4f7c1d9a3e955e97da9bb5aef6a53f052a604153/scripts/validate-package.py"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "plasma-ai/fractal",
+  "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722",
+  "tree_entries": 380,
+  "candidate_skill_paths": [
+    "fractal/_node/skills/fractal/SKILL.md",
+    "fractal/_node/skills/memory/SKILL.md",
+    "fractal/_node/skills/radio/SKILL.md",
+    "fractal/_node/skills/wiki/SKILL.md",
+    "fractal/skills/fractal/SKILL.md"
+  ]
+}

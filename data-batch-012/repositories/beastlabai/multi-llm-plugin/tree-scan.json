@@ -1,0 +1,9 @@
+{
+  "repository": "beastlabai/multi-llm-plugin",
+  "commit_sha": "98efffd133dc6e5e8370cecd8580571cfdc4b554",
+  "tree_entries": 2363,
+  "candidate_skill_paths": [
+    "packaging/codex/multi-llm/skills/multi-llm/SKILL.md",
+    "skills/multi-llm/SKILL.md"
+  ]
+}

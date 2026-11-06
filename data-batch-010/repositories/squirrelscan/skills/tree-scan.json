@@ -1,0 +1,9 @@
+{
+  "repository": "squirrelscan/skills",
+  "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+  "tree_entries": 29,
+  "candidate_skill_paths": [
+    "skills/audit-website/SKILL.md",
+    "skills/squirrelscan/SKILL.md"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "repository": "raintree-technology/hig-doctor",
+  "commit_sha": "a0f1e4ec3c5ada82e538710b54a344db63189d8b",
+  "tree_entries": 404,
+  "candidate_skill_paths": [
+    "plugin/skills/hig-doctor-audit/SKILL.md",
+    "skills/hig-components-content/SKILL.md",
+    "skills/hig-components-controls/SKILL.md",
+    "skills/hig-components-dialogs/SKILL.md",
+    "skills/hig-components-layout/SKILL.md",
+    "skills/hig-components-menus/SKILL.md",
+    "skills/hig-components-search/SKILL.md",
+    "skills/hig-components-status/SKILL.md",
+    "skills/hig-components-system/SKILL.md",
+    "skills/hig-foundations/SKILL.md",
+    "skills/hig-inputs/SKILL.md",
+    "skills/hig-patterns/SKILL.md",
+    "skills/hig-platforms/SKILL.md",
+    "skills/hig-project-context/SKILL.md",
+    "skills/hig-technologies/SKILL.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "CloudAI-X/threejs-skills",
+  "commit_sha": "0e181866f095b5f06d005133876e926515390d95",
+  "tree_entries": 15,
+  "candidate_skill_paths": [
+    "skills/threejs-animation/SKILL.md",
+    "skills/threejs-asset-pipeline/SKILL.md",
+    "skills/threejs-fundamentals/SKILL.md",
+    "skills/threejs-geometry/SKILL.md",
+    "skills/threejs-interaction/SKILL.md",
+    "skills/threejs-lighting/SKILL.md",
+    "skills/threejs-loaders/SKILL.md",
+    "skills/threejs-materials/SKILL.md",
+    "skills/threejs-performance/SKILL.md",
+    "skills/threejs-postprocessing/SKILL.md",
+    "skills/threejs-react-three-fiber/SKILL.md",
+    "skills/threejs-shaders/SKILL.md",
+    "skills/threejs-textures/SKILL.md"
+  ]
+}

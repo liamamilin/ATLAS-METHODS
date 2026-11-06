@@ -1,0 +1,15 @@
+{
+  "repository": "ehmo/platform-design-skills",
+  "commit_sha": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+  "tree_entries": 39,
+  "candidate_skill_paths": [
+    "skills/android/SKILL.md",
+    "skills/ios/SKILL.md",
+    "skills/ipados/SKILL.md",
+    "skills/macos/SKILL.md",
+    "skills/tvos/SKILL.md",
+    "skills/visionos/SKILL.md",
+    "skills/watchos/SKILL.md",
+    "skills/web/SKILL.md"
+  ]
+}

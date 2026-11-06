@@ -1,0 +1,93 @@
+[
+  {
+    "entry_sha256": "64a8b2a832af833cf86f47b6a944eb754033f0d998acd1a5593f1b7038224a1a",
+    "record_ids": [
+      "68c486218bf27e7852e2",
+      "12bf2966ea8630968f90",
+      "901e2564d33635168ef1",
+      "00a929ed26f8b28a8173",
+      "1a833504e5aaa12b1050",
+      "885ab9efe5efffe5ea60",
+      "1177ea46b287be824549"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "c58ad6272f39709c9e6f0a07f60da4e4180c045e57cc819fd1bb4fe5956a18f5",
+    "record_ids": [
+      "34b87c13d151407db37e",
+      "0b235e8774b2cf442f30",
+      "d7034b663376799a0b46",
+      "06f31977336f72c5be36",
+      "7c33fee6289724209c27",
+      "54f545f6865b0e214aad",
+      "43b5df967d81ff95d065"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "cbc059938c7a08aedccbe6d91dd55a11402a969c4ba4b55cf2d39b498f4bc1f0",
+    "record_ids": [
+      "6188f58947bb2a1691c1",
+      "2857bfe0528a4dd124e8",
+      "4158f827e0164bfa2178",
+      "47d86d1eb4cabcc02039",
+      "cc82eaafa05176591c6a",
+      "3edfb2ecdbc8f9ac8e5f",
+      "e5590c3d4f5536c2d098"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "e1d600ba1e313abe293ae84407cc9fade563f579085fdb9d88ddac440eb116a5",
+    "record_ids": [
+      "2fc3585be5910e17a132",
+      "fc7979ec4678432a0b2a",
+      "1d0cfcdabd10982075a0",
+      "2fc0edeef25160c89df5",
+      "da9047225384fc9e878a",
+      "623f9e2516534dfbc424",
+      "ee6052b862ecb10fc494"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "e297b831a229c1a0edec052d4285c8e7d37781151de6c9cf6b55439d19abc051",
+    "record_ids": [
+      "04c17cbff34339262051",
+      "1956c831cdd979e24b58",
+      "bd5db473efba313aeb89",
+      "e9cb2e07d477831a9b9e",
+      "35d78ef7a26bba56baf8",
+      "a97d1ebfb9656750012e",
+      "268234636ec608ddef8f"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "e74fafddc726d8fc330cbdd37f6e4561730d6b68f6d54f40693b5f189c8f1ea8",
+    "record_ids": [
+      "b682a89c60885660dc8e",
+      "2e45795e50973b8b45a0",
+      "26807921cd2b64d6aac1",
+      "779d6ff2ba4eb9f547b1",
+      "2bbf1985f6708f96a442",
+      "2b737a3895be6d36c2d0",
+      "0143ba5cbe9bc9ecf291"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "f8e111a14952cd5e77cd37f549f35baa628149a78f9187c313b583e582bac1ac",
+    "record_ids": [
+      "d2c2d898d5e9ac2dce20",
+      "dfcb4315ac9c64b47b29",
+      "e47db4417730c80a673b",
+      "f100df9406879a3718a6",
+      "e754808e8e12e7f9514d",
+      "21b5b4aa9c61bdafc9ea",
+      "50d5ea65e911a8a4a142"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

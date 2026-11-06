@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:44:27.284739+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 27,
+  "saved_skill_entries": 27,
+  "unique_entry_texts": 25,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "posteyai/skills",
+      "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 27,
+      "saved_skill_entries": 27,
+      "saved_text_files": 154,
+      "files_not_exported": 3,
+      "repository_manifest": "manifests/posteyai/skills/87e029a5836c2dd158fbb7d04938f3ccc62be149.json"
+    }
+  ],
+  "errors": []
+}

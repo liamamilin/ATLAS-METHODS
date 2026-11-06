@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "wrsmith108/varlock-claude-skill",
+      "commit_sha": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992"
+    }
+  ]
+}

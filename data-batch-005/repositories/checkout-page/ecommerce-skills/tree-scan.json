@@ -1,0 +1,27 @@
+{
+  "repository": "checkout-page/ecommerce-skills",
+  "commit_sha": "c12363338947f8072ef1b63451cbe080ee4a9ee1",
+  "tree_entries": 53,
+  "candidate_skill_paths": [
+    "parked/service-pricing/SKILL.md",
+    "skills/checkout-ux/SKILL.md",
+    "skills/digital-product-pricing/SKILL.md",
+    "skills/discounts/SKILL.md",
+    "skills/event-pricing/SKILL.md",
+    "skills/increase-aov/SKILL.md",
+    "skills/increase-conversion/SKILL.md",
+    "skills/increase-repeat-purchases/SKILL.md",
+    "skills/post-purchase/SKILL.md",
+    "skills/price-research/SKILL.md",
+    "skills/pricing/SKILL.md",
+    "skills/product-copy/SKILL.md",
+    "skills/product-page/SKILL.md",
+    "skills/product-visuals/SKILL.md",
+    "skills/promotions/SKILL.md",
+    "skills/raise-prices/SKILL.md",
+    "skills/referrals/SKILL.md",
+    "skills/reviews/SKILL.md",
+    "skills/store-audit/SKILL.md",
+    "skills/subscription-pricing/SKILL.md"
+  ]
+}

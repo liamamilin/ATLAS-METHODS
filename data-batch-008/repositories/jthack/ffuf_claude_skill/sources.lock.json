@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "jthack/ffuf_claude_skill",
+      "commit_sha": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d"
+    }
+  ]
+}

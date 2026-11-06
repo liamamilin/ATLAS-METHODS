@@ -1,0 +1,28 @@
+{
+  "repository": "dannwaneri/spec-writer",
+  "commit_sha": "bfdeaedea5a90b86a3db213caa49073a173bb49e",
+  "files": [
+    {
+      "path": "Readme",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b57f4bdf8fe520a275f6e6b9fdd85c0de4406bbe",
+      "bytes": 5827,
+      "source_url": "https://github.com/dannwaneri/spec-writer/blob/bfdeaedea5a90b86a3db213caa49073a173bb49e/Readme",
+      "sha256": "948c3bece7b5fcee8f06ce0b0759befe336efb4f1c1d5fa1eead6ca9326a50e8",
+      "status": "saved",
+      "raw_path": "raw/dannwaneri/spec-writer/bfdeaedea5a90b86a3db213caa49073a173bb49e/Readme"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9bf1ddb839368fae98e62cfb55cb250969570620",
+      "bytes": 8063,
+      "source_url": "https://github.com/dannwaneri/spec-writer/blob/bfdeaedea5a90b86a3db213caa49073a173bb49e/SKILL.md",
+      "sha256": "ccdbccce50d1c741c63b111b04da00e527dd3691dae720703a85c30835c346b0",
+      "status": "saved",
+      "raw_path": "raw/dannwaneri/spec-writer/bfdeaedea5a90b86a3db213caa49073a173bb49e/SKILL.md"
+    }
+  ]
+}

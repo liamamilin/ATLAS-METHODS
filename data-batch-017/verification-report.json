@@ -1,0 +1,214 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "f5cb9fe2c8dc6f52cb51362b8e923b2ef25c163fbb573ab68ecafaccaae6e92c",
+  "sources": [
+    {
+      "repository": "0xNyk/council-of-high-intelligence",
+      "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172",
+      "candidate_skill_entries": 2,
+      "skill_entries": 1,
+      "manifest_files": 68,
+      "statuses": {
+        "saved": 59,
+        "non_utf8_or_binary_not_exported": 8,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "ComposioHQ/awesome-claude-skills",
+      "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "candidate_skill_entries": 864,
+      "skill_entries": 864,
+      "manifest_files": 1142,
+      "statuses": {
+        "saved": 1086,
+        "non_utf8_or_binary_not_exported": 2,
+        "font_not_exported": 54
+      }
+    },
+    {
+      "repository": "KiWi233333/JiwuChat",
+      "commit_sha": "63458b9c34a29ef17a6e61873f63c587d82bfc6c",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 725,
+      "statuses": {
+        "saved": 594,
+        "non_utf8_or_binary_not_exported": 125,
+        "over_size_limit": 6
+      }
+    },
+    {
+      "repository": "OthmanAdi/planning-with-files",
+      "commit_sha": "8eef6dc6540dde5eef3fdc0ac487ad9c48ef3ba5",
+      "candidate_skill_entries": 18,
+      "skill_entries": 18,
+      "manifest_files": 790,
+      "statuses": {
+        "saved": 783,
+        "non_utf8_or_binary_not_exported": 4,
+        "over_size_limit": 3
+      }
+    },
+    {
+      "repository": "Vincentwei1021/video-shotcraft",
+      "commit_sha": "1266a3ec4831289c4d893d42dd5102723658039a",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 1218,
+      "statuses": {
+        "saved": 1047,
+        "over_size_limit": 6,
+        "non_utf8_or_binary_not_exported": 164,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "ayghri/i-have-adhd",
+      "commit_sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 74,
+      "statuses": {
+        "saved": 73,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "bazel-contrib/bazel-gazelle",
+      "commit_sha": "2ddd36aa159de9ee97e24f726341177cd1f026a9",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 2148,
+      "statuses": {
+        "saved": 2144,
+        "symlink_not_followed": 2,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "composio-community/awesome-codex-skills",
+      "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+      "candidate_skill_entries": 880,
+      "skill_entries": 880,
+      "manifest_files": 1101,
+      "statuses": {
+        "saved": 1045,
+        "font_not_exported": 54,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "coreyhaines31/makerskills",
+      "commit_sha": "0f20eaf6e4479ce03858ee09a56fe93e7440ed1b",
+      "candidate_skill_entries": 24,
+      "skill_entries": 24,
+      "manifest_files": 122,
+      "statuses": {
+        "saved": 122
+      }
+    },
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf",
+      "candidate_skill_entries": 37,
+      "skill_entries": 37,
+      "manifest_files": 5136,
+      "statuses": {
+        "saved": 5063,
+        "symlink_not_followed": 38,
+        "non_utf8_or_binary_not_exported": 27,
+        "over_size_limit": 2,
+        "font_not_exported": 6
+      }
+    },
+    {
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "candidate_skill_entries": 95,
+      "skill_entries": 95,
+      "manifest_files": 222,
+      "statuses": {
+        "saved": 220,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "iOfficeAI/OfficeCLI",
+      "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e",
+      "candidate_skill_entries": 12,
+      "skill_entries": 12,
+      "manifest_files": 1218,
+      "statuses": {
+        "saved": 1040,
+        "over_size_limit": 7,
+        "non_utf8_or_binary_not_exported": 171
+      }
+    },
+    {
+      "repository": "latent-spaces/brag",
+      "commit_sha": "669ab9286aa28b6c3ee30e75f181ee74319d012a",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 370,
+      "statuses": {
+        "symlink_not_followed": 6,
+        "saved": 70,
+        "over_size_limit": 13,
+        "non_utf8_or_binary_not_exported": 281
+      }
+    },
+    {
+      "repository": "nidhinjs/prompt-master",
+      "commit_sha": "49b3a72469b1e7287d66387004ccfcca90e5968a",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 5,
+      "statuses": {
+        "saved": 5
+      }
+    },
+    {
+      "repository": "open-gitagent/opengap",
+      "commit_sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5",
+      "candidate_skill_entries": 18,
+      "skill_entries": 18,
+      "manifest_files": 220,
+      "statuses": {
+        "saved": 204,
+        "non_utf8_or_binary_not_exported": 4,
+        "over_size_limit": 10,
+        "gitlink_not_exported": 2
+      }
+    },
+    {
+      "repository": "pengchujin/jzsub",
+      "commit_sha": "222a90265d2a8797ca258eb1a980cee0863a8311",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 28,
+      "statuses": {
+        "saved": 25,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 118551292,
+    "entries_with_license_candidates": 247,
+    "saved": 13580,
+    "non_utf8_or_binary_not_exported": 796,
+    "symlink_not_followed": 48,
+    "entries_without_license_candidates": 1713,
+    "font_not_exported": 114,
+    "over_size_limit": 47,
+    "gitlink_not_exported": 2
+  },
+  "verified_candidate_entries": 1960,
+  "verified_skill_entries": 1959,
+  "unique_entry_texts": 1104,
+  "duplicate_entry_groups": 855,
+  "entries_in_duplicate_groups": 1710,
+  "duplicate_entries_beyond_first": 855
+}

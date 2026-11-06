@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:15:20.879670+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 24,
+  "saved_skill_entries": 24,
+  "unique_entry_texts": 24,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "HeshamFS/materials-simulation-skills",
+      "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 24,
+      "saved_skill_entries": 24,
+      "saved_text_files": 412,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/HeshamFS/materials-simulation-skills/775055956bb8fa3838032c49a346e26d94d0d1f6.json"
+    }
+  ],
+  "errors": []
+}

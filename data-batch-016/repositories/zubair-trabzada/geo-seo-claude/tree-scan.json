@@ -1,0 +1,23 @@
+{
+  "repository": "zubair-trabzada/geo-seo-claude",
+  "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+  "tree_entries": 71,
+  "candidate_skill_paths": [
+    "geo/SKILL.md",
+    "skills/geo-audit/SKILL.md",
+    "skills/geo-brand-mentions/SKILL.md",
+    "skills/geo-citability/SKILL.md",
+    "skills/geo-compare/SKILL.md",
+    "skills/geo-content/SKILL.md",
+    "skills/geo-crawlers/SKILL.md",
+    "skills/geo-llmstxt/SKILL.md",
+    "skills/geo-platform-optimizer/SKILL.md",
+    "skills/geo-proposal/SKILL.md",
+    "skills/geo-prospect/SKILL.md",
+    "skills/geo-report-pdf/SKILL.md",
+    "skills/geo-report/SKILL.md",
+    "skills/geo-schema/SKILL.md",
+    "skills/geo-technical/SKILL.md",
+    "skills/geo-update/SKILL.md"
+  ]
+}

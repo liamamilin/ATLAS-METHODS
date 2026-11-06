@@ -1,0 +1,9 @@
+{
+  "repository": "voygr-tech/placecall",
+  "commit_sha": "1d9c85e7a6314107a51fcfba77ef98c57644cf14",
+  "tree_entries": 20,
+  "candidate_skill_paths": [
+    "claude-directory/skills/placecall/SKILL.md",
+    "skills/placecall/SKILL.md"
+  ]
+}

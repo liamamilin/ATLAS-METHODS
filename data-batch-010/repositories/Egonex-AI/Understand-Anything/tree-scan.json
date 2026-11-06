@@ -1,0 +1,16 @@
+{
+  "repository": "Egonex-AI/Understand-Anything",
+  "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+  "tree_entries": 521,
+  "candidate_skill_paths": [
+    "understand-anything-plugin/skills/understand-chat/SKILL.md",
+    "understand-anything-plugin/skills/understand-dashboard/SKILL.md",
+    "understand-anything-plugin/skills/understand-diff/SKILL.md",
+    "understand-anything-plugin/skills/understand-domain/SKILL.md",
+    "understand-anything-plugin/skills/understand-explain/SKILL.md",
+    "understand-anything-plugin/skills/understand-figma/SKILL.md",
+    "understand-anything-plugin/skills/understand-knowledge/SKILL.md",
+    "understand-anything-plugin/skills/understand-onboard/SKILL.md",
+    "understand-anything-plugin/skills/understand/SKILL.md"
+  ]
+}

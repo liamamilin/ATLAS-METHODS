@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:25:08.804735+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "danoszz/penthera",
+      "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 1004,
+      "files_not_exported": 47,
+      "repository_manifest": "manifests/danoszz/penthera/9b12fb9777ef67d4a50083bf8de2f0d565368661.json"
+    }
+  ],
+  "errors": []
+}

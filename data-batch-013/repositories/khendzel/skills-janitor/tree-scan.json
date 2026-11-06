@@ -1,0 +1,13 @@
+{
+  "repository": "khendzel/skills-janitor",
+  "commit_sha": "4b42f391fd537b791d1c09c7825be0bc641fd41c",
+  "tree_entries": 34,
+  "candidate_skill_paths": [
+    "skills/janitor-discover/SKILL.md",
+    "skills/janitor-fix/SKILL.md",
+    "skills/janitor-report/SKILL.md",
+    "skills/janitor-security/SKILL.md",
+    "skills/janitor-swipe/SKILL.md",
+    "skills/janitor-value/SKILL.md"
+  ]
+}

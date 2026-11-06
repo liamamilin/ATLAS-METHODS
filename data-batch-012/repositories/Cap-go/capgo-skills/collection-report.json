@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:08:35.979590+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 113,
+  "saved_skill_entries": 113,
+  "unique_entry_texts": 56,
+  "duplicate_entry_groups": 56,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Cap-go/capgo-skills",
+      "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 113,
+      "saved_skill_entries": 113,
+      "saved_text_files": 650,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/Cap-go/capgo-skills/e90bb5639130e34387f00bf0a95c6d47e4a2ebb8.json"
+    }
+  ],
+  "errors": []
+}

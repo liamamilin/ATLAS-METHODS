@@ -1,0 +1,9 @@
+{
+  "repository": "explorium-ai/vibeprospecting-plugin",
+  "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0",
+  "tree_entries": 32,
+  "candidate_skill_paths": [
+    "skills/vibe-prospecting-hubspot/SKILL.md",
+    "skills/vibe-prospecting/SKILL.md"
+  ]
+}

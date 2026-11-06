@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:23:59.850867+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "assafkip/claudemy",
+      "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 25,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70.json"
+    }
+  ],
+  "errors": []
+}

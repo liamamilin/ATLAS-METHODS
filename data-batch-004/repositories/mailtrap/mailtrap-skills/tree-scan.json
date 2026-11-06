@@ -1,0 +1,15 @@
+{
+  "repository": "mailtrap/mailtrap-skills",
+  "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766",
+  "tree_entries": 34,
+  "candidate_skill_paths": [
+    "skills/authorizing-api-requests/SKILL.md",
+    "skills/converting-email-templates/SKILL.md",
+    "skills/managing-contacts/SKILL.md",
+    "skills/receiving-emails/SKILL.md",
+    "skills/sending-emails/SKILL.md",
+    "skills/setting-up-sending-domain/SKILL.md",
+    "skills/testing-with-sandbox/SKILL.md",
+    "skills/using-email-templates/SKILL.md"
+  ]
+}

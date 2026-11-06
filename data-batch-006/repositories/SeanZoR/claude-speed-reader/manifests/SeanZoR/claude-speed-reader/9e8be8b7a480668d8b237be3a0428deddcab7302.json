@@ -1,0 +1,70 @@
+{
+  "repository": "SeanZoR/claude-speed-reader",
+  "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+  "files": [
+    {
+      "path": ".claude/commands/speed.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "687c26b58495bd95cdd8f2d53bdce0f3cc9a1ae0",
+      "bytes": 1241,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/commands/speed.md",
+      "sha256": "1f9cdb6f770941ac7a35096295862ea83cf51a4f1556d1a0995393c1d2fe05cd",
+      "status": "saved",
+      "raw_path": "raw/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/commands/speed.md"
+    },
+    {
+      "path": ".claude/skills/speed/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "68c17961abeae2f02cdfbd71a68ab01dab707ae0",
+      "bytes": 1028,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/skills/speed/SKILL.md",
+      "sha256": "a074171a9f1b5304771c72aca8d2836a44d63487c12635bb0b9ddd6e8407a177",
+      "status": "saved",
+      "raw_path": "raw/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/skills/speed/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/speed/data/reader.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d9a97e59da2f40ed93493e7ed4434697da4278f8",
+      "bytes": 14386,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/skills/speed/data/reader.html",
+      "sha256": "30b7c91690d27522698eed45936650aa7386e56c4836f97eb65a07831120e0c3",
+      "status": "saved",
+      "raw_path": "raw/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302/.claude/skills/speed/data/reader.html"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e93fdecf5093d0e8f90640b500a625eccedaac79",
+      "bytes": 1068,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/LICENSE",
+      "sha256": "f7334b153c9a56dee867c130365deec2c08ebc91fb4fd97d0e512f91e6c96354",
+      "status": "saved",
+      "raw_path": "raw/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4f83125a47b32cadeffce78fb28149c166fd04c9",
+      "bytes": 1783,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/README.md",
+      "sha256": "b0ede9949a6bd0d769488979c0fba89f04538088198d0b069e13c32522c9ce54",
+      "status": "saved",
+      "raw_path": "raw/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302/README.md"
+    },
+    {
+      "path": "demo.gif",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a4a7511dc04947cf7a51b8e888104bcadc0f0fa1",
+      "bytes": 2108357,
+      "source_url": "https://github.com/SeanZoR/claude-speed-reader/blob/9e8be8b7a480668d8b237be3a0428deddcab7302/demo.gif",
+      "status": "over_size_limit"
+    }
+  ]
+}

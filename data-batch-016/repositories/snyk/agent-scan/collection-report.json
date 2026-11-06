@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:25:14.746927+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 21,
+  "saved_skill_entries": 21,
+  "unique_entry_texts": 20,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "snyk/agent-scan",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 21,
+      "saved_skill_entries": 21,
+      "saved_text_files": 378,
+      "files_not_exported": 56,
+      "repository_manifest": "manifests/snyk/agent-scan/6b2a1f330348ab5898e2f1aefdd6c5be17e987b1.json"
+    }
+  ],
+  "errors": []
+}

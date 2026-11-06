@@ -1,0 +1,14 @@
+{
+  "repository": "szarkans/multi",
+  "commit_sha": "e5292e43bd1d2be4b44284f9f2e42d1d1049dcbf",
+  "tree_entries": 96,
+  "candidate_skill_paths": [
+    "skills/adhd/SKILL.md",
+    "skills/ask/SKILL.md",
+    "skills/check-if-done/SKILL.md",
+    "skills/code-review/SKILL.md",
+    "skills/rune/SKILL.md",
+    "skills/setup/SKILL.md",
+    "skills/skill/SKILL.md"
+  ]
+}

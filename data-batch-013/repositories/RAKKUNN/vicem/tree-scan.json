@@ -1,0 +1,8 @@
+{
+  "repository": "RAKKUNN/vicem",
+  "commit_sha": "47d5b2191dcfe61cbc1d8ec18033b430fb5ab113",
+  "tree_entries": 59,
+  "candidate_skill_paths": [
+    ".agents/skills/vicem/SKILL.md"
+  ]
+}

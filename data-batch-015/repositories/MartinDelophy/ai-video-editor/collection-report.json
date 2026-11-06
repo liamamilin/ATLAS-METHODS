@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:19:16.390878+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "MartinDelophy/ai-video-editor",
+      "commit_sha": "c8dbe02b64d2290e1c23bd54217adf09ad677f2d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 619,
+      "files_not_exported": 119,
+      "repository_manifest": "manifests/MartinDelophy/ai-video-editor/c8dbe02b64d2290e1c23bd54217adf09ad677f2d.json"
+    }
+  ],
+  "errors": []
+}

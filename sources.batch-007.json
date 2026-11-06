@@ -1,0 +1,365 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "Neeeophytee/finding-unknowns-skills",
+      "repository_url": "https://github.com/Neeeophytee/finding-unknowns-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/Neeeophytee/finding-unknowns-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1645",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc"
+    },
+    {
+      "repository": "kgraph57/mckinsey-style-visualization-skill",
+      "repository_url": "https://github.com/kgraph57/mckinsey-style-visualization-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/kgraph57/mckinsey-style-visualization-skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1646",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "2e7981a622232006c100e088ded89c72709895da"
+    },
+    {
+      "repository": "vaibhavarora14/job-application-agent",
+      "repository_url": "https://github.com/vaibhavarora14/job-application-agent",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/vaibhavarora14/job-application-agent",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1647",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "213f5061c7b2bb5362bd6876f7137cd5eac3f360"
+    },
+    {
+      "repository": "wgwtest/novel-writing",
+      "repository_url": "https://github.com/wgwtest/novel-writing",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/wgwtest/novel-writing",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1648",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "838729695148008d42c01bd7c3c0c1a5c15de830"
+    },
+    {
+      "repository": "cyperx84/claude-skills-mental-models",
+      "repository_url": "https://github.com/cyperx84/claude-skills-mental-models",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/cyperx84/claude-skills-mental-models",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1649",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007"
+    },
+    {
+      "repository": "manavmishra/ZeroSlop",
+      "repository_url": "https://github.com/manavmishra/ZeroSlop",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/manavmishra/ZeroSlop/blob/main/SKILL.md",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1650",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44"
+    },
+    {
+      "repository": "Atomic-Mail/atomic-mail-agentic",
+      "repository_url": "https://github.com/Atomic-Mail/atomic-mail-agentic",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/Atomic-Mail/atomic-mail-agentic/tree/main/integrations/skill/atomicmail",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1651",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91"
+    },
+    {
+      "repository": "forjd/better-writing",
+      "repository_url": "https://github.com/forjd/better-writing",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/forjd/better-writing",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1652",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "bbbfcb4898cd9b3bc97ee5643db143ee2990ea96"
+    },
+    {
+      "repository": "OneWave-AI/claude-skills",
+      "repository_url": "https://github.com/OneWave-AI/claude-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/OneWave-AI/claude-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1653",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056"
+    },
+    {
+      "repository": "GiaSip/giasip-skills",
+      "repository_url": "https://github.com/GiaSip/giasip-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/GiaSip/giasip-skills/tree/main/skills/giasip-research",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1654",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c"
+    },
+    {
+      "repository": "tronghieu/agent-skills",
+      "repository_url": "https://github.com/tronghieu/agent-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/tronghieu/agent-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1655",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d"
+    },
+    {
+      "repository": "dmoshehun-prog/learn-from-materials",
+      "repository_url": "https://github.com/dmoshehun-prog/learn-from-materials",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/dmoshehun-prog/learn-from-materials",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1656",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "f8849746d85c5ebe8556fdb8f388783ac7483c8b"
+    },
+    {
+      "repository": "chrisryugj/kordoc",
+      "repository_url": "https://github.com/chrisryugj/kordoc",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/chrisryugj/kordoc/tree/main/plugins/kordoc/skills/kordoc",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1657",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "9effd38c2a4248f62b5e894cc49d6fa5a949791a"
+    },
+    {
+      "repository": "bablobanov/hermes-agent-telegram-checklist",
+      "repository_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/bablobanov/hermes-agent-telegram-checklist",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1658",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375"
+    },
+    {
+      "repository": "siril9/presentation-skill",
+      "repository_url": "https://github.com/siril9/presentation-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/siril9/presentation-skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1659",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55"
+    },
+    {
+      "repository": "teableio/agent-skills",
+      "repository_url": "https://github.com/teableio/agent-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/teableio/agent-skills/tree/main/skills/teable-assistant-ops",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1660",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21"
+    },
+    {
+      "repository": "cbrock84/headcount",
+      "repository_url": "https://github.com/cbrock84/headcount",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/cbrock84/headcount",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1661",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "failed"
+    },
+    {
+      "repository": "luchasarie/bro-skill",
+      "repository_url": "https://github.com/luchasarie/bro-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/luchasarie/bro-skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1662",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "6c08e7ee5eb8ef8b9bf0588d400170654abc256b"
+    },
+    {
+      "repository": "radres/call-me",
+      "repository_url": "https://github.com/radres/call-me",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/radres/call-me/tree/main/skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1663",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41"
+    },
+    {
+      "repository": "ysskrishna/ai-agent-skills",
+      "repository_url": "https://github.com/ysskrishna/ai-agent-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/ysskrishna/ai-agent-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1664",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0"
+    },
+    {
+      "repository": "AugustusW/audio-tldr-skill",
+      "repository_url": "https://github.com/AugustusW/audio-tldr-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/AugustusW/audio-tldr-skill/tree/main/skills/audio-tldr",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1665",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "124d51678cb1ed95984b3eda687c5085300416d9"
+    },
+    {
+      "repository": "voygr-tech/placecall",
+      "repository_url": "https://github.com/voygr-tech/placecall",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/voygr-tech/placecall/tree/main/skills/placecall",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1666",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "1d9c85e7a6314107a51fcfba77ef98c57644cf14"
+    },
+    {
+      "repository": "arifszn/slide-wright",
+      "repository_url": "https://github.com/arifszn/slide-wright",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/arifszn/slide-wright",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1667",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "a751585b43353b6b9320a97106b59b9dea7ce817"
+    },
+    {
+      "repository": "MSG91/m91-skill",
+      "repository_url": "https://github.com/MSG91/m91-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/MSG91/m91-skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1668",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "6c552cab6fc9509373cad6a2d581dbab3b5b2a2d"
+    }
+  ]
+}

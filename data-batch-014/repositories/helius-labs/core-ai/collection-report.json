@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:15:47.894397+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 24,
+  "saved_skill_entries": 24,
+  "unique_entry_texts": 24,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "helius-labs/core-ai",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 24,
+      "saved_skill_entries": 24,
+      "saved_text_files": 571,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/helius-labs/core-ai/6f1fcec7e0ba46e0b0b54319f08b22796810d533.json"
+    }
+  ],
+  "errors": []
+}

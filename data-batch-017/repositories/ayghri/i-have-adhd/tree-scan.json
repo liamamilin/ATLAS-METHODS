@@ -1,0 +1,9 @@
+{
+  "repository": "ayghri/i-have-adhd",
+  "commit_sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+  "tree_entries": 74,
+  "candidate_skill_paths": [
+    ".cursor/skills/i-have-adhd/SKILL.md",
+    "skills/i-have-adhd/SKILL.md"
+  ]
+}

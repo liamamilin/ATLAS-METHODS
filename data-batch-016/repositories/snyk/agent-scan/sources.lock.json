@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "snyk/agent-scan",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:28:54.134659+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "bazel-contrib/bazel-gazelle",
+      "commit_sha": "2ddd36aa159de9ee97e24f726341177cd1f026a9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 2144,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/bazel-contrib/bazel-gazelle/2ddd36aa159de9ee97e24f726341177cd1f026a9.json"
+    }
+  ],
+  "errors": []
+}

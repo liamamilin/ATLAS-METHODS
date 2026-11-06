@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:08:43.226310+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "beastlabai/multi-llm-plugin",
+      "commit_sha": "98efffd133dc6e5e8370cecd8580571cfdc4b554",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 2357,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/beastlabai/multi-llm-plugin/98efffd133dc6e5e8370cecd8580571cfdc4b554.json"
+    }
+  ],
+  "errors": []
+}

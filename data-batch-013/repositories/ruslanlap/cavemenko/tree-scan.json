@@ -1,0 +1,12 @@
+{
+  "repository": "ruslanlap/cavemenko",
+  "commit_sha": "cb1d5f42774682ded8029c67c55ac62df95568dd",
+  "tree_entries": 46,
+  "candidate_skill_paths": [
+    "skills/cavemenko-commit/SKILL.md",
+    "skills/cavemenko-compress/SKILL.md",
+    "skills/cavemenko-review/SKILL.md",
+    "skills/cavemenko-translate/SKILL.md",
+    "skills/cavemenko/SKILL.md"
+  ]
+}

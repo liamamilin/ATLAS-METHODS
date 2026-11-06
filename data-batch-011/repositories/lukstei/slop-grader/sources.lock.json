@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "lukstei/slop-grader",
+      "commit_sha": "a0cdba4a14950cc943b387dfd30e7d3e308af683"
+    }
+  ]
+}

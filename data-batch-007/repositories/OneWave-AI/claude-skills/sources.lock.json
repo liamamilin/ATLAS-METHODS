@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "OneWave-AI/claude-skills",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056"
+    }
+  ]
+}

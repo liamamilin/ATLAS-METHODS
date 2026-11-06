@@ -1,0 +1,279 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "a8efdff7f1b72d194f22aba600983907ac437c0e45ec14b6433c6595237d3ebf",
+  "sources": [
+    {
+      "repository": "Atomic-Mail/atomic-mail-agentic",
+      "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 551,
+      "statuses": {
+        "saved": 540,
+        "non_utf8_or_binary_not_exported": 9,
+        "over_size_limit": 1,
+        "font_not_exported": 1
+      }
+    },
+    {
+      "repository": "AugustusW/audio-tldr-skill",
+      "commit_sha": "124d51678cb1ed95984b3eda687c5085300416d9",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 64,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 6,
+        "saved": 58
+      }
+    },
+    {
+      "repository": "GiaSip/giasip-skills",
+      "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 27,
+      "statuses": {
+        "saved": 26,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "MSG91/m91-skill",
+      "commit_sha": "6c552cab6fc9509373cad6a2d581dbab3b5b2a2d",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 6,
+      "statuses": {
+        "saved": 6
+      }
+    },
+    {
+      "repository": "Neeeophytee/finding-unknowns-skills",
+      "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 56,
+      "statuses": {
+        "saved": 55,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "OneWave-AI/claude-skills",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+      "candidate_skill_entries": 233,
+      "skill_entries": 233,
+      "manifest_files": 681,
+      "statuses": {
+        "saved": 672,
+        "non_utf8_or_binary_not_exported": 5,
+        "font_not_exported": 4
+      }
+    },
+    {
+      "repository": "arifszn/slide-wright",
+      "commit_sha": "a751585b43353b6b9320a97106b59b9dea7ce817",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 35,
+      "statuses": {
+        "saved": 35
+      }
+    },
+    {
+      "repository": "bablobanov/hermes-agent-telegram-checklist",
+      "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 14,
+      "statuses": {
+        "saved": 13,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "chrisryugj/kordoc",
+      "commit_sha": "9effd38c2a4248f62b5e894cc49d6fa5a949791a",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 1264,
+      "statuses": {
+        "saved": 1247,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 16
+      }
+    },
+    {
+      "repository": "cyperx84/claude-skills-mental-models",
+      "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 38,
+      "statuses": {
+        "saved": 38
+      }
+    },
+    {
+      "repository": "dmoshehun-prog/learn-from-materials",
+      "commit_sha": "f8849746d85c5ebe8556fdb8f388783ac7483c8b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 307,
+      "statuses": {
+        "saved": 282,
+        "non_utf8_or_binary_not_exported": 19,
+        "over_size_limit": 6
+      }
+    },
+    {
+      "repository": "forjd/better-writing",
+      "commit_sha": "bbbfcb4898cd9b3bc97ee5643db143ee2990ea96",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 117,
+      "statuses": {
+        "saved": 115,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "kgraph57/mckinsey-style-visualization-skill",
+      "commit_sha": "2e7981a622232006c100e088ded89c72709895da",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 508,
+      "statuses": {
+        "saved": 479,
+        "over_size_limit": 2,
+        "non_utf8_or_binary_not_exported": 27
+      }
+    },
+    {
+      "repository": "luchasarie/bro-skill",
+      "commit_sha": "6c08e7ee5eb8ef8b9bf0588d400170654abc256b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 9,
+      "statuses": {
+        "saved": 9
+      }
+    },
+    {
+      "repository": "manavmishra/ZeroSlop",
+      "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 933,
+      "statuses": {
+        "saved": 875,
+        "non_utf8_or_binary_not_exported": 58
+      }
+    },
+    {
+      "repository": "radres/call-me",
+      "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 61,
+      "statuses": {
+        "saved": 54,
+        "non_utf8_or_binary_not_exported": 6,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "siril9/presentation-skill",
+      "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 758,
+      "statuses": {
+        "saved": 599,
+        "non_utf8_or_binary_not_exported": 154,
+        "over_size_limit": 5
+      }
+    },
+    {
+      "repository": "teableio/agent-skills",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 55,
+      "statuses": {
+        "saved": 55
+      }
+    },
+    {
+      "repository": "tronghieu/agent-skills",
+      "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+      "candidate_skill_entries": 19,
+      "skill_entries": 19,
+      "manifest_files": 319,
+      "statuses": {
+        "saved": 300,
+        "non_utf8_or_binary_not_exported": 19
+      }
+    },
+    {
+      "repository": "vaibhavarora14/job-application-agent",
+      "commit_sha": "213f5061c7b2bb5362bd6876f7137cd5eac3f360",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 471,
+      "statuses": {
+        "saved": 454,
+        "non_utf8_or_binary_not_exported": 17
+      }
+    },
+    {
+      "repository": "voygr-tech/placecall",
+      "commit_sha": "1d9c85e7a6314107a51fcfba77ef98c57644cf14",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 20,
+      "statuses": {
+        "saved": 17,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    },
+    {
+      "repository": "wgwtest/novel-writing",
+      "commit_sha": "838729695148008d42c01bd7c3c0c1a5c15de830",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 37,
+      "statuses": {
+        "saved": 36,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "ysskrishna/ai-agent-skills",
+      "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0",
+      "candidate_skill_entries": 17,
+      "skill_entries": 17,
+      "manifest_files": 106,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 4,
+        "saved": 102
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 65020762,
+    "entries_with_license_candidates": 316,
+    "saved": 6067,
+    "non_utf8_or_binary_not_exported": 349,
+    "over_size_limit": 15,
+    "font_not_exported": 5,
+    "entries_without_license_candidates": 1,
+    "symlink_not_followed": 1
+  },
+  "verified_candidate_entries": 317,
+  "verified_skill_entries": 317,
+  "unique_entry_texts": 311,
+  "duplicate_entry_groups": 6,
+  "entries_in_duplicate_groups": 12,
+  "duplicate_entries_beyond_first": 6
+}

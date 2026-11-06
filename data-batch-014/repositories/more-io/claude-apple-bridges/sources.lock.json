@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "more-io/claude-apple-bridges",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c"
+    }
+  ]
+}

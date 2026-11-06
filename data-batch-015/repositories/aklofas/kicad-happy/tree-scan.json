@@ -1,0 +1,18 @@
+{
+  "repository": "aklofas/kicad-happy",
+  "commit_sha": "c451943f72d91a4a9fbf4aa48bda0f730011f6d8",
+  "tree_entries": 546,
+  "candidate_skill_paths": [
+    "skills/bom/SKILL.md",
+    "skills/datasheets/SKILL.md",
+    "skills/digikey/SKILL.md",
+    "skills/element14/SKILL.md",
+    "skills/emc/SKILL.md",
+    "skills/jlcpcb/SKILL.md",
+    "skills/kicad/SKILL.md",
+    "skills/lcsc/SKILL.md",
+    "skills/mouser/SKILL.md",
+    "skills/pcbway/SKILL.md",
+    "skills/spice/SKILL.md"
+  ]
+}

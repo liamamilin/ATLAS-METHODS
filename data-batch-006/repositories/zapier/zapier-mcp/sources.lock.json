@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "zapier/zapier-mcp",
+      "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649"
+    }
+  ]
+}

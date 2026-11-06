@@ -1,0 +1,20 @@
+{
+  "repository": "YannisKiefer/dark-psychology-skills",
+  "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+  "tree_entries": 22,
+  "candidate_skill_paths": [
+    "skills/client-archetypes/SKILL.md",
+    "skills/cold-outreach/SKILL.md",
+    "skills/dark-tactics-defense/SKILL.md",
+    "skills/deal-router/SKILL.md",
+    "skills/discovery-power/SKILL.md",
+    "skills/frame-control/SKILL.md",
+    "skills/objection-slayer/SKILL.md",
+    "skills/operator-mindset/SKILL.md",
+    "skills/price-anchor/SKILL.md",
+    "skills/reading-people/SKILL.md",
+    "skills/risk-reversal/SKILL.md",
+    "skills/trust-from-zero/SKILL.md",
+    "skills/walk-away-power/SKILL.md"
+  ]
+}

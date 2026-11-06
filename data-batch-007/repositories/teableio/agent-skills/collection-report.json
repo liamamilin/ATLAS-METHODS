@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:53:29.860152+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "teableio/agent-skills",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 55,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/teableio/agent-skills/df55d574006aea57ffc838ea37fb066136262c21.json"
+    }
+  ],
+  "errors": []
+}

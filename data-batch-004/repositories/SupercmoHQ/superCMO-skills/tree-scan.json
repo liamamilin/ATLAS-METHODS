@@ -1,0 +1,30 @@
+{
+  "repository": "SupercmoHQ/superCMO-skills",
+  "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+  "tree_entries": 208,
+  "candidate_skill_paths": [
+    "skills/adapting-formats/SKILL.md",
+    "skills/analyzing-brand/SKILL.md",
+    "skills/analyzing-own-ads/SKILL.md",
+    "skills/analyzing-products/SKILL.md",
+    "skills/cloning-video-ads/SKILL.md",
+    "skills/generating-ad-videos/SKILL.md",
+    "skills/generating-ai-actors/SKILL.md",
+    "skills/generating-audio/SKILL.md",
+    "skills/generating-cartoon-videos/SKILL.md",
+    "skills/generating-image-ads/SKILL.md",
+    "skills/generating-images/SKILL.md",
+    "skills/generating-product-photos/SKILL.md",
+    "skills/generating-storyboards/SKILL.md",
+    "skills/generating-ugc-videos/SKILL.md",
+    "skills/generating-videos/SKILL.md",
+    "skills/identifying-competitors/SKILL.md",
+    "skills/onboarding-user/SKILL.md",
+    "skills/planning-campaigns/SKILL.md",
+    "skills/researching-competitor-ads/SKILL.md",
+    "skills/supercmo-setup/SKILL.md",
+    "skills/writing-ad-copy/SKILL.md",
+    "skills/writing-video-prompts/SKILL.md",
+    "skills/writing-video-scripts/SKILL.md"
+  ]
+}

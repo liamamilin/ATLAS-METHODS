@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:01:54.148449+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 12,
+  "saved_skill_entries": 12,
+  "unique_entry_texts": 12,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Simon-He95/markstream-vue",
+      "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 2766,
+      "files_not_exported": 28,
+      "repository_manifest": "manifests/Simon-He95/markstream-vue/e16b6f24da0186a633ccb0e8368332487bb7eff4.json"
+    }
+  ],
+  "errors": []
+}

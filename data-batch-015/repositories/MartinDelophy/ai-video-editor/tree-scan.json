@@ -1,0 +1,10 @@
+{
+  "repository": "MartinDelophy/ai-video-editor",
+  "commit_sha": "c8dbe02b64d2290e1c23bd54217adf09ad677f2d",
+  "tree_entries": 738,
+  "candidate_skill_paths": [
+    "public/.well-known/agent-skills/edit-timeline-studio-browser/SKILL.md",
+    "skills/develop-timeline-studio-plugin/SKILL.md",
+    "skills/edit-timeline-studio/SKILL.md"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "thedotmack/claude-mem",
+      "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a"
+    }
+  ]
+}

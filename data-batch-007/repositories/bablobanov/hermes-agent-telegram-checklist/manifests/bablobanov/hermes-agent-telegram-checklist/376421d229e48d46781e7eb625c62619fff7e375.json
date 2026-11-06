@@ -1,0 +1,159 @@
+{
+  "repository": "bablobanov/hermes-agent-telegram-checklist",
+  "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c393c5d90cc2db4deb8535ca0e16bf1de9c5c00f",
+      "bytes": 174,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/.gitattributes",
+      "sha256": "ad5e683b0c02ee039a037d2b786663b3f45cdc02ccef66196bcf26d078ff2359",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/.gitattributes"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ba0147def834629fd050813bf3ed557ec45636a2",
+      "bytes": 1390,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/.github/workflows/ci.yml",
+      "sha256": "52b34a7b8455df26fd2bd74c2753d558614eb4ee50709999300dec97a840a528",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6f146658e13b2e7c8edd148991865e08dcd118b",
+      "bytes": 163,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/.gitignore",
+      "sha256": "45591647479ac2953a671de2804bf356f8c9b99c0bd3997f7458a6b2d18934e5",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/.gitignore"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bff0b1ca0cf0259f40ed6ca5d0d9ca329c2cd311",
+      "bytes": 2249,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/CHANGELOG.md",
+      "sha256": "e1c28e6d42bcce304c15e0e902804626a01883a551216d8fe5f3ce66d4259ba4",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/CHANGELOG.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5bcc0733d62e18ba1e9fa7c24b80b57e6c2a0e7c",
+      "bytes": 2035,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/CONTRIBUTING.md",
+      "sha256": "4d54260003c3400859f971ead94337ae3bc6f5198fe7e9d8b6e4f047e4a72018",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b782a071d09dc4c5844d7068ad6e5a1dd3fd0e35",
+      "bytes": 1071,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/LICENSE",
+      "sha256": "2e1c0d3f403cdf27d8121cfe0ead3bf4681e7664a3e12bc28aed09986cb0b52d",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d87a001adc67fe6117f54425253ced9f90855d7",
+      "bytes": 15154,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/README.md",
+      "sha256": "8ea434dbe2e0804c2217209e8a110cb1dbec91e965fe9fc282bd705faa92ef4d",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/README.md"
+    },
+    {
+      "path": "README.zh-Hans.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8bfed7f859a7c1fd6d173ce866db5206a17899ef",
+      "bytes": 15768,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/README.zh-Hans.md",
+      "sha256": "6ea71f1f36f648c53bc261da10197a15bba25fbc3e46573fe19d8073d61daab9",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/README.zh-Hans.md"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b24f4be7be250ea64a05e8b810b4c9996f1b39a9",
+      "bytes": 2723,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/SECURITY.md",
+      "sha256": "3752285d9515a807f4f0d0882d2463309085f0853fdec35746d443919f92c0ed",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/SECURITY.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c34192e52ec862201fd7d1f314df5d251337a414",
+      "bytes": 11909,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/SKILL.md",
+      "sha256": "8287175bed8f61ac07b6c3f2bc799b371034150c81b92d75792e9a373ed1e437",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/SKILL.md"
+    },
+    {
+      "path": "assets/hero.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "501b9ace6e873b231587ebbd36366b94f34b5f56",
+      "bytes": 1172862,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/assets/hero.png",
+      "sha256": "533d17112050d1522cfb01d504199e7462c1ace791ca1f85ab666356319d54f3",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "examples/quickstart.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0554d3ce9575d823cb6e5f35e2982943f48804e5",
+      "bytes": 3960,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/examples/quickstart.md",
+      "sha256": "13a0224e3ee52825c8a3968c95edab1aec4e7247279be8f01d8253e1c48851db",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/examples/quickstart.md"
+    },
+    {
+      "path": "telethon_checklist.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3a781ece7917503b6c206002c5f898b6d9ab5248",
+      "bytes": 44189,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/telethon_checklist.py",
+      "sha256": "9b9513e3eb6153ff2591ed4f3b4a1097ed39edd9d66fc050c7ae6acf0b18dd23",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/telethon_checklist.py"
+    },
+    {
+      "path": "test_telethon_checklist.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f50fd83fdb438d7d3ce442f9f527d1971d02bc2e",
+      "bytes": 69728,
+      "source_url": "https://github.com/bablobanov/hermes-agent-telegram-checklist/blob/376421d229e48d46781e7eb625c62619fff7e375/test_telethon_checklist.py",
+      "sha256": "17b3a4612b2b664a8e54c6e37f26005fa1905c32d08bf10c3da3398276f9fd58",
+      "status": "saved",
+      "raw_path": "raw/bablobanov/hermes-agent-telegram-checklist/376421d229e48d46781e7eb625c62619fff7e375/test_telethon_checklist.py"
+    }
+  ]
+}

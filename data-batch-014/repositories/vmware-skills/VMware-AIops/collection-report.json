@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:15:10.586183+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "vmware-skills/VMware-AIops",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 218,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/vmware-skills/VMware-AIops/26255efb48e1c57169dfabfae265b59744bf40e5.json"
+    }
+  ],
+  "errors": []
+}

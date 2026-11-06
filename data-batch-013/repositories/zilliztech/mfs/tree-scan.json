@@ -1,0 +1,11 @@
+{
+  "repository": "zilliztech/mfs",
+  "commit_sha": "78352894a0a826ee24db852411bf9a3c49884922",
+  "tree_entries": 586,
+  "candidate_skill_paths": [
+    "examples/deep-research-skill/deep-research/SKILL.md",
+    "examples/open-tag-skill/open-tag/SKILL.md",
+    "skills/mfs-find/SKILL.md",
+    "skills/mfs-ingest/SKILL.md"
+  ]
+}

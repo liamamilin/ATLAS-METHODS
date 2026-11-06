@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:13:12.560208+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ZeKaiNie/universal-examprep-skill",
+      "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 571,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/ZeKaiNie/universal-examprep-skill/e01d2f7647b0917172ae8ad5fb788b404e977cae.json"
+    }
+  ],
+  "errors": []
+}

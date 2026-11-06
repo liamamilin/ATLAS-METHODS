@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:45:36.863519+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zhuyansen/new-term-radar",
+      "commit_sha": "fe67ff1acab728141644a4a9741295469b4feee6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 68,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/zhuyansen/new-term-radar/fe67ff1acab728141644a4a9741295469b4feee6.json"
+    }
+  ],
+  "errors": []
+}

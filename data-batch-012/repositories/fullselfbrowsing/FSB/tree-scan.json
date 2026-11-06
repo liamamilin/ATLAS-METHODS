@@ -1,0 +1,10 @@
+{
+  "repository": "fullselfbrowsing/FSB",
+  "commit_sha": "3f9e7dea8621bbbb86d00c4b917abfd7598ef1a3",
+  "tree_entries": 8478,
+  "candidate_skill_paths": [
+    ".claude/skills/graphify/SKILL.md",
+    "plugins/grok-bot/skills/fsb/SKILL.md",
+    "skills/fsb/SKILL.md"
+  ]
+}

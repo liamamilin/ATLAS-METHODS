@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:45:30.405262+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Aboudjem/humanizer-skill",
+      "commit_sha": "a58df065367550b6ce40ff3f648335018d8e0589",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 95,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/Aboudjem/humanizer-skill/a58df065367550b6ce40ff3f648335018d8e0589.json"
+    }
+  ],
+  "errors": []
+}

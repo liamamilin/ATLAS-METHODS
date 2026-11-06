@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "mblode/agent-skills",
+      "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08"
+    }
+  ]
+}

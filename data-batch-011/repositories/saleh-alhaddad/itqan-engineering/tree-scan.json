@@ -1,0 +1,20 @@
+{
+  "repository": "saleh-alhaddad/itqan-engineering",
+  "commit_sha": "580dd46b04163a28d6a4cf89d4bc6bcf50531d45",
+  "tree_entries": 63,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/assess/SKILL.md",
+    "skills/blueprint/SKILL.md",
+    "skills/construct/SKILL.md",
+    "skills/define/SKILL.md",
+    "skills/design/SKILL.md",
+    "skills/discover/SKILL.md",
+    "skills/engineer/SKILL.md",
+    "skills/harden/SKILL.md",
+    "skills/inspect/SKILL.md",
+    "skills/learn/SKILL.md",
+    "skills/release/SKILL.md",
+    "skills/verify/SKILL.md"
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "repository": "zapier/zapier-mcp",
+  "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "01ef2f74202af4c587c09e913621beae36521989",
+      "bytes": 125,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/.gitignore",
+      "sha256": "cf610bda65f76fddf0a4a6ec952a548f7128d1918cc3eb665c7146a27f1af315",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e3dc67479718ee9e67175fecc896586d790614c",
+      "bytes": 5159,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/AGENTS.md",
+      "sha256": "a428fae47e4e03dec9f7a622ce8c80a264d6d4c117a44c087d082315f2789ed8",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/AGENTS.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "bytes": 11,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/CLAUDE.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "65fa2be181038e52bb42e369cf006f241b58bfa9",
+      "bytes": 747,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/CONTRIBUTING.md",
+      "sha256": "7d84741df7db04dbe35bd87bd727aa4344346fe44f3d4f00e019271a0e2f6616",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "315be69da1f9faecc5b48880994d8c9650670063",
+      "bytes": 1063,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/LICENSE",
+      "sha256": "61d40ca8613a8ab9663357c91a773f766ed226a20e0e51b4e061b53f394a156c",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "96b2a9e2365f99aff7cbff6da2333769bcd3fe1a",
+      "bytes": 3614,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/README.md",
+      "sha256": "c4d369332a53f9e0497fac5655e99dd40a2cb5415f20d60b1724d5d87898f2f8",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/README.md"
+    },
+    {
+      "path": "assets/mcp-apps-diagram.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eb5c7b9bf36af91bf7a67a3cac0e9d98634e2ed2",
+      "bytes": 1201569,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/assets/mcp-apps-diagram.png",
+      "sha256": "6416f873774bf00ab9d4039661cc0450636ca91764133b6222e4cba4f826bd5c",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/mcp-logo.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f74d7642379be1ec8166091dae5b66bbdc3bf5cd",
+      "bytes": 17098,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/assets/mcp-logo.png",
+      "sha256": "ac216636fb6bfaf1a9028d5710cc3af5374dea22de6bad40fdd9879c1af9ac53",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "gemini-extension.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eb16cddb605ea243897d88523438dd3054483b8f",
+      "bytes": 370,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/gemini-extension.json",
+      "sha256": "d96bdfae34a52d9566200b3faff67438e285ef2c67d3d1e343fc239b7bc99b8a",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/gemini-extension.json"
+    },
+    {
+      "path": "llms.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d39d61ccdba9197a24a25154eb26057f07c3037",
+      "bytes": 5441,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/llms.txt",
+      "sha256": "a3151626d2349c7ca90f57a6b60a9a3244aed45da9b90e7e30915b3641901395",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/llms.txt"
+    },
+    {
+      "path": "plugins/zapier/.antigravity-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "73e75d330714b7a587444144ee499e241f85146b",
+      "bytes": 979,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.antigravity-plugin/plugin.json",
+      "sha256": "b7c3c8dc0c248457688235a0f386f6d800d79efcb25b93b41b165c1b8e57e07b",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.antigravity-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/zapier/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ddc5b9026ff4ce2a52faaa90f73ba38a1aa53d14",
+      "bytes": 628,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.claude-plugin/plugin.json",
+      "sha256": "c7bb77ea2f7b1c677f31bd5a6821977e3dcbd00f7fa86025653622b26f3480a7",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/zapier/.codex-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f05988716895f77578b7b0b7fc0c554f6599e1a6",
+      "bytes": 1779,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.codex-plugin/plugin.json",
+      "sha256": "cdd3dc3d7122f9b5c2f266c99b4996cf641774e663bd90ad6fce69598492c868",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.codex-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/zapier/.cursor-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "20c037f9b4e83292c4391c1158328d7ed9419d90",
+      "bytes": 890,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.cursor-plugin/plugin.json",
+      "sha256": "f17e17133f005ffdbcbe08012eaaa0008cef058abd8ad064835a74d995969386",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.cursor-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/zapier/.github/plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "974a5c8ce00dce1c4e3ca3359cf362b7498683c7",
+      "bytes": 647,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.github/plugin/plugin.json",
+      "sha256": "c869787f3e4bfb91aaab38485de9162cc8087beadd16332f24ee97e397b632e1",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.github/plugin/plugin.json"
+    },
+    {
+      "path": "plugins/zapier/.mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6373d433dccc010b4a5123e17e03977d8f1cc7fe",
+      "bytes": 123,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.mcp.json",
+      "sha256": "8b8c86a59594a732600b39cd14589c416159086c496ac81341ebbc170e8ad587",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/.mcp.json"
+    },
+    {
+      "path": "plugins/zapier/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "49326689be8fa2de54dfe8e7650af448fa9458db",
+      "bytes": 2939,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/README.md",
+      "sha256": "8947b4a7eed7232f953279830fc948f7d8dc30d9997c35de4a03da2ba2c9a236",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/README.md"
+    },
+    {
+      "path": "plugins/zapier/agents/zapier-mcp.agent.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8614ae5b970bfd71a7bc08e0c93eccc63f383fa7",
+      "bytes": 4002,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/agents/zapier-mcp.agent.md",
+      "sha256": "bffb02a65dfe93ec12ab91ae6fd5f427f6a797a8d1eeb1f066b546e3ba405cda",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/agents/zapier-mcp.agent.md"
+    },
+    {
+      "path": "plugins/zapier/assets/icon.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b370449ace7c4edada079f0324d6946bd70b5571",
+      "bytes": 4916,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/assets/icon.svg",
+      "sha256": "27609bad28e21ed329448a3d95c6d2a2e185ec35ba9f06c00e4f5cc34724109c",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/assets/icon.svg"
+    },
+    {
+      "path": "plugins/zapier/assets/logo.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b370449ace7c4edada079f0324d6946bd70b5571",
+      "bytes": 4916,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/assets/logo.svg",
+      "sha256": "27609bad28e21ed329448a3d95c6d2a2e185ec35ba9f06c00e4f5cc34724109c",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/assets/logo.svg"
+    },
+    {
+      "path": "plugins/zapier/mcp_config.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb8fdf61dc7b27b2d4ea310c20e606982d472b01",
+      "bytes": 107,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/mcp_config.json",
+      "sha256": "9d28e969259179b4c7a75bea45d02ae92002e8ad1d77070d0f28e91c31f049fc",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/mcp_config.json"
+    },
+    {
+      "path": "plugins/zapier/rules/zapier-lifecycle.mdc",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "702fbfcfcc51912e7327a1037d82875966f6a4ff",
+      "bytes": 5309,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/rules/zapier-lifecycle.mdc",
+      "sha256": "b9084b79fb22becab81bad9cea1c4095c9dc20379b44923230afd0e92a2e683d",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/rules/zapier-lifecycle.mdc"
+    },
+    {
+      "path": "plugins/zapier/skills/zapier-demo/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1bda485002d9f1cab2d079ca957989a538e66c91",
+      "bytes": 10977,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-demo/SKILL.md",
+      "sha256": "11813724c0c99101a989a0d73add1aba1340cdcc1942c8d6e42aab8c58d4aa36",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-demo/SKILL.md"
+    },
+    {
+      "path": "plugins/zapier/skills/zapier-explore/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "12538fae155d70f27b696ad1142ecd943ae2050c",
+      "bytes": 16161,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-explore/SKILL.md",
+      "sha256": "f047ce82ae5bdf4342247f10d56a30dc82772828d6c271a637e6d5aca50fd573",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-explore/SKILL.md"
+    },
+    {
+      "path": "plugins/zapier/skills/zapier-onboard/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4b69531d538feac13a9c350ffc069c63527f8071",
+      "bytes": 11375,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-onboard/SKILL.md",
+      "sha256": "6670bf36edd766cc0fd40897c6e9e8848eba322941a3df110e316a2815d32fc0",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-onboard/SKILL.md"
+    },
+    {
+      "path": "plugins/zapier/skills/zapier-status/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ec4c6697074fa590cb0b2e579c06d321cc813dfc",
+      "bytes": 7334,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-status/SKILL.md",
+      "sha256": "9a1dd67ed0c041b320bfd6f8305efcaacb341608b907144c3363e6389f2ca2a6",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/plugins/zapier/skills/zapier-status/SKILL.md"
+    },
+    {
+      "path": "zapier-power/POWER.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e175c022e37ca0bb4b71783406284ed878dfa4eb",
+      "bytes": 4084,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/POWER.md",
+      "sha256": "2109f2be33c61c27b752410a3bbf39a9fcb93354835048ac25453e1e98bb6e99",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/POWER.md"
+    },
+    {
+      "path": "zapier-power/mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6373d433dccc010b4a5123e17e03977d8f1cc7fe",
+      "bytes": 123,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/mcp.json",
+      "sha256": "8b8c86a59594a732600b39cd14589c416159086c496ac81341ebbc170e8ad587",
+      "status": "saved",
+      "raw_path": "raw/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/mcp.json"
+    },
+    {
+      "path": "zapier-power/steering/zapier-demo.md",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "80d65f1a9be98f9b8fe43b8bf5c2fd9c42c8ef4e",
+      "bytes": 48,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/steering/zapier-demo.md",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": "zapier-power/steering/zapier-explore.md",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "4eaf1cc2078d323e85b2b0c65d438e5c08a0b9b8",
+      "bytes": 51,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/steering/zapier-explore.md",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": "zapier-power/steering/zapier-onboard.md",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "5384866ef23447504947d33e6cbfc2bb60dfa8c7",
+      "bytes": 51,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/steering/zapier-onboard.md",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": "zapier-power/steering/zapier-status.md",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1b5e05ff2e6dc756b77cb19ec32c1a32e6370b0e",
+      "bytes": 50,
+      "source_url": "https://github.com/zapier/zapier-mcp/blob/54a12277a12c60df51ec16cf4e4ef0b27b166649/zapier-power/steering/zapier-status.md",
+      "status": "symlink_not_followed"
+    }
+  ]
+}

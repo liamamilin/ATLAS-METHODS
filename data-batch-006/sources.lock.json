@@ -1,0 +1,119 @@
+{
+  "sources": [
+    {
+      "repository": "Charlie85270/Dorothy",
+      "commit_sha": "787568d5bba83b8ef35baa9ac29912d8eecc44cf",
+      "collection_root": "repositories/Charlie85270/Dorothy"
+    },
+    {
+      "repository": "Digidai/product-manager-skills",
+      "commit_sha": "ab7a40662c8455ece631834dee9670b3322f465b",
+      "collection_root": "repositories/Digidai/product-manager-skills"
+    },
+    {
+      "repository": "EveryInc/charlie-cfo-skill",
+      "commit_sha": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+      "collection_root": "repositories/EveryInc/charlie-cfo-skill"
+    },
+    {
+      "repository": "JimmySadek/video-fetcher-to-markdown",
+      "commit_sha": "c196ba48df72c064811adcb934104c3e6567858b",
+      "collection_root": "repositories/JimmySadek/video-fetcher-to-markdown"
+    },
+    {
+      "repository": "Linked-API/linkedin-skills",
+      "commit_sha": "1469f41eebe74a3a344c18b117899f06d6d94bd9",
+      "collection_root": "repositories/Linked-API/linkedin-skills"
+    },
+    {
+      "repository": "NeoLabHQ/context-engineering-kit",
+      "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+      "collection_root": "repositories/NeoLabHQ/context-engineering-kit"
+    },
+    {
+      "repository": "Paramchoudhary/ResumeSkills",
+      "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+      "collection_root": "repositories/Paramchoudhary/ResumeSkills"
+    },
+    {
+      "repository": "ReScienceLab/opc-skills",
+      "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+      "collection_root": "repositories/ReScienceLab/opc-skills"
+    },
+    {
+      "repository": "SeanZoR/claude-speed-reader",
+      "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+      "collection_root": "repositories/SeanZoR/claude-speed-reader"
+    },
+    {
+      "repository": "Sendmux/skills",
+      "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+      "collection_root": "repositories/Sendmux/skills"
+    },
+    {
+      "repository": "bevibing/tutor-skills",
+      "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+      "collection_root": "repositories/bevibing/tutor-skills"
+    },
+    {
+      "repository": "career-ops-hq/career-ops",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "collection_root": "repositories/career-ops-hq/career-ops"
+    },
+    {
+      "repository": "deusyu/translate-book",
+      "commit_sha": "8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229",
+      "collection_root": "repositories/deusyu/translate-book"
+    },
+    {
+      "repository": "mvanhorn/last30days-skill",
+      "commit_sha": "71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428",
+      "collection_root": "repositories/mvanhorn/last30days-skill"
+    },
+    {
+      "repository": "obra/superpowers-lab",
+      "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+      "collection_root": "repositories/obra/superpowers-lab"
+    },
+    {
+      "repository": "ognjengt/founder-skills",
+      "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+      "collection_root": "repositories/ognjengt/founder-skills"
+    },
+    {
+      "repository": "op7418/Youtube-clipper-skill",
+      "commit_sha": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+      "collection_root": "repositories/op7418/Youtube-clipper-skill"
+    },
+    {
+      "repository": "openaccountants/openaccountants",
+      "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+      "collection_root": "repositories/openaccountants/openaccountants"
+    },
+    {
+      "repository": "pattern-ai-labs/agentcall",
+      "commit_sha": "6f173169a92fa05099c493275705af494a1bb462",
+      "collection_root": "repositories/pattern-ai-labs/agentcall"
+    },
+    {
+      "repository": "tjboudreaux/cc-thinking-skills",
+      "commit_sha": "7b8fece345dfaa11773be7152ccd194589cb5437",
+      "collection_root": "repositories/tjboudreaux/cc-thinking-skills"
+    },
+    {
+      "repository": "wrsmith108/linear-claude-skill",
+      "commit_sha": "d61cd9ad05f1863a421d891d9319ec2405904488",
+      "collection_root": "repositories/wrsmith108/linear-claude-skill"
+    },
+    {
+      "repository": "xberg-io/xberg",
+      "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+      "collection_root": "repositories/xberg-io/xberg"
+    },
+    {
+      "repository": "zapier/zapier-mcp",
+      "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+      "collection_root": "repositories/zapier/zapier-mcp"
+    }
+  ]
+}

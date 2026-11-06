@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:44:59.326026+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "emotixco/claude-skills-founder",
+      "commit_sha": "ea6864c05c2f4a3666b9d6c14c550b20f35a04c9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 129,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/emotixco/claude-skills-founder/ea6864c05c2f4a3666b9d6c14c550b20f35a04c9.json"
+    }
+  ],
+  "errors": []
+}

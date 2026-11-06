@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:50:33.151998+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "career-ops-hq/career-ops",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 9,
+      "saved_text_files": 3061,
+      "files_not_exported": 122,
+      "repository_manifest": "manifests/career-ops-hq/career-ops/0aa6518c32447f63047c90e57aa74c1a900e1f79.json"
+    }
+  ],
+  "errors": []
+}

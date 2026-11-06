@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:11:46.096347+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 11,
+  "saved_skill_entries": 11,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 2,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "vshulcz/deja-vu",
+      "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 11,
+      "saved_skill_entries": 11,
+      "saved_text_files": 4234,
+      "files_not_exported": 17,
+      "repository_manifest": "manifests/vshulcz/deja-vu/acb6f9bb97729f89dfd869cce760545bbe9f161b.json"
+    }
+  ],
+  "errors": []
+}

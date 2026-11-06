@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:59:23.638618+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 15,
+  "unique_entry_texts": 7,
+  "duplicate_entry_groups": 2,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "uucz/moyu",
+      "commit_sha": "f276e3cc8a7fba8a71a6aa2180ffb991c138bbc3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 160,
+      "files_not_exported": 15,
+      "repository_manifest": "manifests/uucz/moyu/f276e3cc8a7fba8a71a6aa2180ffb991c138bbc3.json"
+    }
+  ],
+  "errors": []
+}

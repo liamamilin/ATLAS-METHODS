@@ -1,0 +1,17 @@
+{
+  "repository": "awrshift/agent-memory-kit",
+  "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e",
+  "tree_entries": 165,
+  "candidate_skill_paths": [
+    "plugins/memory-kit/skills/close-session/SKILL.md",
+    "plugins/memory-kit/skills/code-sync/SKILL.md",
+    "plugins/memory-kit/skills/document/SKILL.md",
+    "plugins/memory-kit/skills/memory-audit/SKILL.md",
+    "plugins/memory-kit/skills/qa-sweep/SKILL.md",
+    "plugins/memory-kit/skills/second-opinion/SKILL.md",
+    "plugins/memory-kit/skills/session-review/SKILL.md",
+    "plugins/memory-kit/skills/setup/SKILL.md",
+    "plugins/memory-kit/skills/system-audit/SKILL.md",
+    "plugins/memory-kit/skills/tour/SKILL.md"
+  ]
+}

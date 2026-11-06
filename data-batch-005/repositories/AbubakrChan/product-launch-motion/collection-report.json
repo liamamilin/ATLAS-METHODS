@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:44:12.058650+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "AbubakrChan/product-launch-motion",
+      "commit_sha": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 37,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/AbubakrChan/product-launch-motion/edbfb105382f21507bad895d8b5f6e0faa67487c.json"
+    }
+  ],
+  "errors": []
+}

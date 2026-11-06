@@ -1,0 +1,226 @@
+{
+  "repository": "ScrapeCreators/social-media-research-skills",
+  "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3824ef37b3072eb0cddc3762e7f490724c988fce",
+      "bytes": 712,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/.claude-plugin/marketplace.json",
+      "sha256": "9f6aa9be718c7f29d2588eb94a397ca76fd160e2192ec7b8d6d8c48fb2536dee",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0eb595ea7c4b3759c74d0aec2055b299cf1a0cfe",
+      "bytes": 436,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/.claude-plugin/plugin.json",
+      "sha256": "99c6ddbc6591f1b41dc45e2bdc655af0b2c2f1d205f15c59f515e564801b4940",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4a369170d2bbf113c5e537a938db1fb5a04a01af",
+      "bytes": 924,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/AGENTS.md",
+      "sha256": "94491907ee3b16e0bdc81aebefa32ec6ba469a137f8993158bd6e7fd3ec5c8ec",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/AGENTS.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e778bd61bffb8ca6aba045e241480fe6987433e5",
+      "bytes": 648,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/CLAUDE.md",
+      "sha256": "9cd08b0c5eb722dc8d9c84e9935738bd038a7323e6ef445f14a360102cc0e495",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/CLAUDE.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "684ffc4ae84ee9602f649aa1912c3a3c5ffaba71",
+      "bytes": 1071,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/LICENSE",
+      "sha256": "37a2301a00eef329530cc65ddb9f1c1085a2fbfb1bb748adb9eb6fa05bde4f9b",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e091165b832ec255f978aed55884ad2e34ac7f0c",
+      "bytes": 5775,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/README.md",
+      "sha256": "7a8e15e5b6fb2665d8f0194c1dbc85be91c6e1e03ec210979c03f7820ea2068f",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/README.md"
+    },
+    {
+      "path": "scripts/validate-skills.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "7e12b8bf74f5c9e104bb9948f51c81d2aaf345d3",
+      "bytes": 1535,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/scripts/validate-skills.py",
+      "sha256": "12c0ec18c4a74c5bb6ff8595128823f2bf439ee56393b56dca4db1219eaab5e7",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/scripts/validate-skills.py"
+    },
+    {
+      "path": "skills/ad-library-teardown/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2b680ffc8c995afa7fa62c56adf2d6b7dd07d72a",
+      "bytes": 3786,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/ad-library-teardown/SKILL.md",
+      "sha256": "93b67284b21ad9b5a1310a7d03c5c89dc79995165a277a3769698223232d5b0f",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/ad-library-teardown/SKILL.md"
+    },
+    {
+      "path": "skills/audience-research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1e5d9145c4d31612ebdad9db3f480e893a35d9e4",
+      "bytes": 2537,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/audience-research/SKILL.md",
+      "sha256": "3ced7d3268b80ac18073ffc69393635e02acb4bab23314e203dbdbac73d05477",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/audience-research/SKILL.md"
+    },
+    {
+      "path": "skills/comment-mining/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c32a33bfa986ec7a3830640e120343e445c09099",
+      "bytes": 4067,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/comment-mining/SKILL.md",
+      "sha256": "8fb6527e7e73c2db34c85d83161c39fe04d5dd6b860d8c88f2a654af87e14db2",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/comment-mining/SKILL.md"
+    },
+    {
+      "path": "skills/competitor-social-research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "feb772f254a60a331eac61d2e811a20aac28904a",
+      "bytes": 4221,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/competitor-social-research/SKILL.md",
+      "sha256": "3a5179df374d1fd11b244c4a874a75fb1e48cc22f4f91cde2f6fcddbfda60ce7",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/competitor-social-research/SKILL.md"
+    },
+    {
+      "path": "skills/content-repurposing/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d3326b1b5cbc9549167989b9ad24c2654b34fccc",
+      "bytes": 2253,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/content-repurposing/SKILL.md",
+      "sha256": "894468df8b2491f1d36556a8e9045975c03e37f2c928ce028712ff864a28f3d2",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/content-repurposing/SKILL.md"
+    },
+    {
+      "path": "skills/creator-profile-teardown/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e5b397978cd0d800a0cbb13c83fa87a3fc8f0e8b",
+      "bytes": 2200,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/creator-profile-teardown/SKILL.md",
+      "sha256": "8bb24dbb8ae59fd4017a6dd78f399caead9c62a205a343e9b4b4706fb4869914",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/creator-profile-teardown/SKILL.md"
+    },
+    {
+      "path": "skills/influencer-prospecting/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "449336fc9ddf89e901288897f1b9986ab4561a46",
+      "bytes": 2527,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/influencer-prospecting/SKILL.md",
+      "sha256": "670e840f96ef5f13c8b1d479b10fc8bd3c24033f2b2d5bf78924d10f5d60f1b3",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/influencer-prospecting/SKILL.md"
+    },
+    {
+      "path": "skills/outlier-post-finder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "976bf4bdc8ee3b23394fc4f4857a224dc15a635b",
+      "bytes": 6140,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/outlier-post-finder/SKILL.md",
+      "sha256": "c648fbe9dda692cc7c034ca8b193e3b129ba4db45f8ff992f463206610d80bfa",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/outlier-post-finder/SKILL.md"
+    },
+    {
+      "path": "skills/product-demand-research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cd2da8ee055a0c63b3d0eed4742c0aaff9ec5cf2",
+      "bytes": 2542,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/product-demand-research/SKILL.md",
+      "sha256": "88d57b03fa5200686bd436d5658847f776d33edc365442d36260f8a8be109eaf",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/product-demand-research/SKILL.md"
+    },
+    {
+      "path": "skills/scrapecreators-api/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "baf8e5dff908b234b9b8c2fbf87b6286a76c5be2",
+      "bytes": 16054,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/scrapecreators-api/SKILL.md",
+      "sha256": "016154fe955fe3a41e83e8e00af82adf2ba34e47eeadf6f121b43f2ccacea418",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/scrapecreators-api/SKILL.md"
+    },
+    {
+      "path": "skills/social-listening-brief/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "24248acc3729a5ec7c4bdd455e4c438fa2124694",
+      "bytes": 2583,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/social-listening-brief/SKILL.md",
+      "sha256": "c41b897c1b5bf6ac86aee5350e3a833da74d9928a8d31fb62a4f694daf72c64e",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/social-listening-brief/SKILL.md"
+    },
+    {
+      "path": "skills/transcript-intelligence/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4597d2e391a842ef185ebb9becace4ecd6cd7ea2",
+      "bytes": 3771,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/transcript-intelligence/SKILL.md",
+      "sha256": "599e19d53de3496785329626f76486ce751b491ac8cd762ee98afa8c25f0594c",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/transcript-intelligence/SKILL.md"
+    },
+    {
+      "path": "skills/trend-discovery/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ac53552427e687e046c3ad9cb068171a18f2079e",
+      "bytes": 3157,
+      "source_url": "https://github.com/ScrapeCreators/social-media-research-skills/blob/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/trend-discovery/SKILL.md",
+      "sha256": "b22f5d14d01b27a7777c5d1637e8d61d71aceab1294144cc774d18a84eef702a",
+      "status": "saved",
+      "raw_path": "raw/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2/skills/trend-discovery/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "repository": "kklimuk/docx-cli",
+  "commit_sha": "e830c0cd5aac888cf4b749d278db6e71003ab5d9",
+  "tree_entries": 691,
+  "candidate_skill_paths": [
+    ".claude/skills/commit/SKILL.md",
+    ".claude/skills/security-review/SKILL.md",
+    ".claude/skills/weak-agent-test/SKILL.md",
+    "skills/docx-cli/SKILL.md"
+  ]
+}

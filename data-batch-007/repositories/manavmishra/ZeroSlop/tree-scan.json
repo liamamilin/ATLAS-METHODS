@@ -1,0 +1,10 @@
+{
+  "repository": "manavmishra/ZeroSlop",
+  "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+  "tree_entries": 933,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "distribution/plugins/zero-slop/skills/zero-slop/SKILL.md",
+    "skills/zero-slop/SKILL.md"
+  ]
+}

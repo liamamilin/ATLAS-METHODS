@@ -1,0 +1,20 @@
+{
+  "repository": "fishzjp/qa-skills",
+  "commit_sha": "34b08d6e4a7a2e72da0f01759b161b46d6776054",
+  "tree_entries": 108,
+  "candidate_skill_paths": [
+    "skills/api-testing/SKILL.md",
+    "skills/automated-e2e-testing/SKILL.md",
+    "skills/bug-analysis/SKILL.md",
+    "skills/core/SKILL.md",
+    "skills/exploratory-testing/SKILL.md",
+    "skills/qa-memory/SKILL.md",
+    "skills/qa/SKILL.md",
+    "skills/regression-testing/SKILL.md",
+    "skills/requirement-analysis/SKILL.md",
+    "skills/test-case-review/SKILL.md",
+    "skills/test-case-writing/SKILL.md",
+    "skills/test-reliability/SKILL.md",
+    "skills/test-strategy/SKILL.md"
+  ]
+}

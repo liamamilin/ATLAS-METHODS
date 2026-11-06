@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:02:00.911449+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 35,
+  "saved_skill_entries": 35,
+  "unique_entry_texts": 35,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "eduardo-sl/go-agent-skills",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 35,
+      "saved_skill_entries": 35,
+      "saved_text_files": 162,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/eduardo-sl/go-agent-skills/e25b517bbd0c11db35f75a83a14f18848c1abdb0.json"
+    }
+  ],
+  "errors": []
+}

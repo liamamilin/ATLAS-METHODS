@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "chrono-meta/forge-harness",
+      "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c"
+    }
+  ]
+}

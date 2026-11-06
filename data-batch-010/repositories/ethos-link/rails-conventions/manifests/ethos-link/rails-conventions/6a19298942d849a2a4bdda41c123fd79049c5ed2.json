@@ -1,0 +1,303 @@
+{
+  "repository": "ethos-link/rails-conventions",
+  "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c13f99117e366fd54b4c097b67ca34dfb1fb8ba1",
+      "bytes": 1056,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/LICENSE.txt",
+      "sha256": "75486ea0af9309140ca6e2c401d7e67bea8f4892344e5707f6394dc5e83dfc44",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/LICENSE.txt"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d1f083a5e61de5e295c26e3acb02312363baa3d",
+      "bytes": 4293,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/README.md",
+      "sha256": "877252d06a6678ed9ee1edd65799a3347c7930241bce80a07a614ea564dbeb96",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1d283c61d275d1ea486e76cba79d5362ba941c31",
+      "bytes": 17132,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/SKILL.md",
+      "sha256": "2e247b52956811b6b3700376ae4aa5c82f1ba94d7de04111d270bf11854040a2",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/SKILL.md"
+    },
+    {
+      "path": "STYLE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c541faf9281c428909e329e261a8f745ced1e0c2",
+      "bytes": 9841,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/STYLE.md",
+      "sha256": "afaf2be6a42a0f4acbb38dd72b231764013fca698b3c1a6213702f8c3e25c8c8",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/STYLE.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aea537de2ea0959d2f1f6d34db155687594a9cdb",
+      "bytes": 239,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/agents/openai.yaml",
+      "sha256": "ef7624f0f5a1471857a1ceb3726050bbcef2247f7f74c6ccd6da4f6d7d2dbf32",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/agents/openai.yaml"
+    },
+    {
+      "path": "references/01-baseline-rails-8.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3482fc12e42b111c78300b033e267d7d4c07216d",
+      "bytes": 2683,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/01-baseline-rails-8.md",
+      "sha256": "4ec872e6ffb91bc4724a2677182553524afdd754b56f1b8178db3a2194957421",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/01-baseline-rails-8.md"
+    },
+    {
+      "path": "references/02-naming-and-structure.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5f02574a3ee7e87e71d0f87f21db8ffb5e7362c",
+      "bytes": 8962,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/02-naming-and-structure.md",
+      "sha256": "ff3fdda689d35b796bd6221c58ec6fe10ab5417265478f21ba86fc00cc297b8d",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/02-naming-and-structure.md"
+    },
+    {
+      "path": "references/03-models-and-data.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "378118c79a74d65234378dde7356a323c4abe076",
+      "bytes": 10800,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/03-models-and-data.md",
+      "sha256": "73a939514ee52a8e51f62b78da9b1b8ae882fac8a9b7a9dec95cd6475fb7ec9d",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/03-models-and-data.md"
+    },
+    {
+      "path": "references/03a-active-record-postgresql.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "091cf9aca2f07c02cac07398a3ca4c1c9af47e36",
+      "bytes": 3367,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/03a-active-record-postgresql.md",
+      "sha256": "cae8007c4553151e80c88ec9545a051812cb769d09af3a24bcbb30bdcd468286",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/03a-active-record-postgresql.md"
+    },
+    {
+      "path": "references/04-controllers-and-params.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e95d5e57e8c69a4b2afbdf3185ee9bf3516993da",
+      "bytes": 5905,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/04-controllers-and-params.md",
+      "sha256": "857b0ff73c69d408db2eb0dd7e1de7c8bed76fc652e96d4f4cf22fe7198d69db",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/04-controllers-and-params.md"
+    },
+    {
+      "path": "references/05-routes-rest-and-resources.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f63621a907dac0439ffada5605943f8a3b6b88c5",
+      "bytes": 3333,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/05-routes-rest-and-resources.md",
+      "sha256": "0e77a6790faa3c72aa442320956c290f2c825a80aac5d577e0cde37ffb225f24",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/05-routes-rest-and-resources.md"
+    },
+    {
+      "path": "references/06-hotwire-turbo-stimulus.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "00568db67a45b802f1e062dee9acd50d213f0c6e",
+      "bytes": 6933,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/06-hotwire-turbo-stimulus.md",
+      "sha256": "4fe5f9547bac3b5c7b15db448c586f015967d074939805a66671d0f5874587fb",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/06-hotwire-turbo-stimulus.md"
+    },
+    {
+      "path": "references/07-background-jobs-overview.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "237be79d83fb38b80e58869216f2c109581798a3",
+      "bytes": 8815,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07-background-jobs-overview.md",
+      "sha256": "5eef91c0a26c7b3f0a7030283c8841b6dbfbecbea11b012c0b6d061a08469ea8",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07-background-jobs-overview.md"
+    },
+    {
+      "path": "references/07a-background-jobs-good_job.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1133b38e4388ed718cabd934f18f0d4ba2451225",
+      "bytes": 1416,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07a-background-jobs-good_job.md",
+      "sha256": "571c2ae18447e42f7b4ffca81e86e725b0fc8b2c8a05f1a21ad6cda8fef3de39",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07a-background-jobs-good_job.md"
+    },
+    {
+      "path": "references/07b-background-jobs-solid_queue.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7bbc466366b2dd9f3898f7ea90f88e80669048e7",
+      "bytes": 2058,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07b-background-jobs-solid_queue.md",
+      "sha256": "41e022a367ad33b667ae2d43fa417bdb1219689319979adb0499efd536d24b5f",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/07b-background-jobs-solid_queue.md"
+    },
+    {
+      "path": "references/08-performance-caching-and-db.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ba100eda2cef1b4611e32aab7eef2e14a99354a7",
+      "bytes": 2971,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/08-performance-caching-and-db.md",
+      "sha256": "71732db21c199cdb3d87fa68b031c49fb2873ea74b3557d465a097c31c9ad96e",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/08-performance-caching-and-db.md"
+    },
+    {
+      "path": "references/09-security-checklist.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1167844e699dafe91d0849b3aa7ab310340174fd",
+      "bytes": 6456,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/09-security-checklist.md",
+      "sha256": "2ab973e080b623508d1e6ca8f1aff95ab454da5f0ae123b8145e5bc974c5cfe7",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/09-security-checklist.md"
+    },
+    {
+      "path": "references/10-testing-strategy.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5ade6d79670bb4feb55b9ed431da48ccd117f0e",
+      "bytes": 16449,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/10-testing-strategy.md",
+      "sha256": "c0c42d66310c00530e5d442382da4b39a7ef447555303389ca7c40b6d3acc01a",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/10-testing-strategy.md"
+    },
+    {
+      "path": "references/11-api-mode-and-serialization.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "40d339c19c8208f3e3dd3f7c4e1a72d416c436bd",
+      "bytes": 1624,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/11-api-mode-and-serialization.md",
+      "sha256": "fb5e52910b39b00a0f9e871ef44cad885f0bcfb9db3c2a2d6d07c04b8fbac5a5",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/11-api-mode-and-serialization.md"
+    },
+    {
+      "path": "references/12-37signals-inspired-profile.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "53cf554241bca4eeaccfbdc1fc517b3fac1319c4",
+      "bytes": 1853,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/12-37signals-inspired-profile.md",
+      "sha256": "7da5af4d5c93cc90bb85faecb032aa3ed165d3dbb56cd231d85291cd77c1167e",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/12-37signals-inspired-profile.md"
+    },
+    {
+      "path": "references/13-code-quality-gates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2ed17c9cc685b7e0bb9747bc5e76e2270226f630",
+      "bytes": 7346,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/13-code-quality-gates.md",
+      "sha256": "be9dc2c5d7eed7b292c1d7993f151776f367e3fd3190eb0053563a19a12ad749",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/13-code-quality-gates.md"
+    },
+    {
+      "path": "references/14-webhooks.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ed2bca6f5bcdc605db2e246ee791f453e9a4d6b9",
+      "bytes": 3858,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/14-webhooks.md",
+      "sha256": "1c54c22fa64e4b97d4124ad3b5fd0c86dea29f0051855a029b7e5b7d6341590a",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/14-webhooks.md"
+    },
+    {
+      "path": "references/15-maintenance-and-documentation.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "85a1a581a34e403d2037ddaf160ea2d7d4c9a034",
+      "bytes": 4273,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/15-maintenance-and-documentation.md",
+      "sha256": "aee07445c4ba269aece14395ce63acbc05ad8cf134ae77049538c4a24f7b28e7",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/15-maintenance-and-documentation.md"
+    },
+    {
+      "path": "references/16-mailers.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "629ccfeb928121ab47c565729d867ddc2daf5dc6",
+      "bytes": 3095,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/16-mailers.md",
+      "sha256": "51b9acc28028a8e29f28c37b1ba27005d37e3de5dedd248fe34d7b77e690b917",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/16-mailers.md"
+    },
+    {
+      "path": "references/17-debugging-and-verification.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e55985facdf28f5a588aedf4e25798676496e4e",
+      "bytes": 3648,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/17-debugging-and-verification.md",
+      "sha256": "5b5e08c7e6af495f40e5abf082953f4dcbfa3d7f77eb52f2c5baf41099b212d9",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/17-debugging-and-verification.md"
+    },
+    {
+      "path": "references/18-skill-evaluation.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "23bfc6ced80e4b81cb22f4199c5947b168960384",
+      "bytes": 3957,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/18-skill-evaluation.md",
+      "sha256": "18e33a7847c1d0860b3eac9180904e750779beb78fd99a6e97e037752e2390cf",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/references/18-skill-evaluation.md"
+    },
+    {
+      "path": "scripts/validate_skill.rb",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6585deab4c9b2145a286d31006a2172e733951c9",
+      "bytes": 2544,
+      "source_url": "https://github.com/ethos-link/rails-conventions/blob/6a19298942d849a2a4bdda41c123fd79049c5ed2/scripts/validate_skill.rb",
+      "sha256": "ba55bd0d6ad7a1edc9423341231e20d26314dbaa625454ab7a9fb93596cef3b6",
+      "status": "saved",
+      "raw_path": "raw/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2/scripts/validate_skill.rb"
+    }
+  ]
+}

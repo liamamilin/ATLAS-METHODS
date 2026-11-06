@@ -1,0 +1,12 @@
+{
+  "repository": "swaylq/humanize-chinese",
+  "commit_sha": "6510ca720b91919a12fa2e828b5ec959deb11db4",
+  "tree_entries": 138,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/deai-rewrite/SKILL.md",
+    "skills/declaude-cn/SKILL.md",
+    "skills/proofread-cn/SKILL.md",
+    "skills/write-cn/SKILL.md"
+  ]
+}

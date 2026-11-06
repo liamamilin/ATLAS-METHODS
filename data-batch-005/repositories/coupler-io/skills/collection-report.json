@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:45:19.062169+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 106,
+  "saved_skill_entries": 106,
+  "unique_entry_texts": 106,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "coupler-io/skills",
+      "commit_sha": "d25f3b33c62682049577af3e2e96e3efcdf7867b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 106,
+      "saved_skill_entries": 106,
+      "saved_text_files": 129,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/coupler-io/skills/d25f3b33c62682049577af3e2e96e3efcdf7867b.json"
+    }
+  ],
+  "errors": []
+}

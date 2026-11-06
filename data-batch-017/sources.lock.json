@@ -1,0 +1,84 @@
+{
+  "sources": [
+    {
+      "repository": "0xNyk/council-of-high-intelligence",
+      "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172",
+      "collection_root": "repositories/0xNyk/council-of-high-intelligence"
+    },
+    {
+      "repository": "ComposioHQ/awesome-claude-skills",
+      "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "collection_root": "repositories/ComposioHQ/awesome-claude-skills"
+    },
+    {
+      "repository": "KiWi233333/JiwuChat",
+      "commit_sha": "63458b9c34a29ef17a6e61873f63c587d82bfc6c",
+      "collection_root": "repositories/KiWi233333/JiwuChat"
+    },
+    {
+      "repository": "OthmanAdi/planning-with-files",
+      "commit_sha": "8eef6dc6540dde5eef3fdc0ac487ad9c48ef3ba5",
+      "collection_root": "repositories/OthmanAdi/planning-with-files"
+    },
+    {
+      "repository": "Vincentwei1021/video-shotcraft",
+      "commit_sha": "1266a3ec4831289c4d893d42dd5102723658039a",
+      "collection_root": "repositories/Vincentwei1021/video-shotcraft"
+    },
+    {
+      "repository": "ayghri/i-have-adhd",
+      "commit_sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+      "collection_root": "repositories/ayghri/i-have-adhd"
+    },
+    {
+      "repository": "bazel-contrib/bazel-gazelle",
+      "commit_sha": "2ddd36aa159de9ee97e24f726341177cd1f026a9",
+      "collection_root": "repositories/bazel-contrib/bazel-gazelle"
+    },
+    {
+      "repository": "composio-community/awesome-codex-skills",
+      "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+      "collection_root": "repositories/composio-community/awesome-codex-skills"
+    },
+    {
+      "repository": "coreyhaines31/makerskills",
+      "commit_sha": "0f20eaf6e4479ce03858ee09a56fe93e7440ed1b",
+      "collection_root": "repositories/coreyhaines31/makerskills"
+    },
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf",
+      "collection_root": "repositories/go-musicfox/go-musicfox"
+    },
+    {
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "collection_root": "repositories/googleworkspace/cli"
+    },
+    {
+      "repository": "iOfficeAI/OfficeCLI",
+      "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e",
+      "collection_root": "repositories/iOfficeAI/OfficeCLI"
+    },
+    {
+      "repository": "latent-spaces/brag",
+      "commit_sha": "669ab9286aa28b6c3ee30e75f181ee74319d012a",
+      "collection_root": "repositories/latent-spaces/brag"
+    },
+    {
+      "repository": "nidhinjs/prompt-master",
+      "commit_sha": "49b3a72469b1e7287d66387004ccfcca90e5968a",
+      "collection_root": "repositories/nidhinjs/prompt-master"
+    },
+    {
+      "repository": "open-gitagent/opengap",
+      "commit_sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5",
+      "collection_root": "repositories/open-gitagent/opengap"
+    },
+    {
+      "repository": "pengchujin/jzsub",
+      "commit_sha": "222a90265d2a8797ca258eb1a980cee0863a8311",
+      "collection_root": "repositories/pengchujin/jzsub"
+    }
+  ]
+}

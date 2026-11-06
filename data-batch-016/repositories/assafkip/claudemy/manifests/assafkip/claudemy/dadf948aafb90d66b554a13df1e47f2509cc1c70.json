@@ -1,0 +1,320 @@
+{
+  "repository": "assafkip/claudemy",
+  "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+  "files": [
+    {
+      "path": ".claude-plugin/icon.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fdf75a01f0ec0886d619a003aede863197896874",
+      "bytes": 32713,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/.claude-plugin/icon.png",
+      "sha256": "7c8b00b1e1cb1de5ab2cb6f6221db7a60bec3c08825e94e669a6af364cc95bdf",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e60b874ad7103955ac52939e5531bafa3549365f",
+      "bytes": 395,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/.claude-plugin/marketplace.json",
+      "sha256": "5189189d6fa8dc47b90e4cc46e0d02b41c7917de04916b105443a19dab76e237",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1a5c98d7fd1e8e6550738c5e74cda48991afe722",
+      "bytes": 1203,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/.claude-plugin/plugin.json",
+      "sha256": "669e7ec90579e9c99941858d003a70aa2e517387df0e4dae7858edf6d48ac825",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".github/social-preview.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6f806b858df8518bd7ed7178aa827992395f5940",
+      "bytes": 41459,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/.github/social-preview.png",
+      "sha256": "c0eb3bb6c9d2f464731d75b6136eb0efd486317f055e44c0a014aaaeec04b759",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "312fe716eb9ba2f3e21859b1b8063988a2a80fd3",
+      "bytes": 39,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/.gitignore",
+      "sha256": "fc8d4598b974090fdb1508f21b3e722acb2f8d11926c9aca03cef1bdde37b5b3",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ebe94bd95589bc2aa63a73250b1eefc138abb1a5",
+      "bytes": 1069,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/LICENSE",
+      "sha256": "262b47ee1fffc7da0a8429053341df3758a58bd0bf6d71d6bd91460ea08b2248",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "96779cd7a04053e2c146b677ee678045794fb50a",
+      "bytes": 5790,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/README.md",
+      "sha256": "ca70d61db61b5b92930eb259cd49bc5088220c15f01e3b157e86de5d50793329",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/README.md"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/.nojekyll"
+    },
+    {
+      "path": "docs/blog/citation-checker.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8612f747bc31e96b24d94c2f2cdcfa579371a88f",
+      "bytes": 13410,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/blog/citation-checker.html",
+      "sha256": "abea0e3a570dbacb8e353c14ee7d9f887458388532f8b32b0844c09f408527fd",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/blog/citation-checker.html"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "acc396d532883b7cfc2a3f3b58ea47e77c167eec",
+      "bytes": 15449,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/index.html",
+      "sha256": "0a1c1762a2529c3122dd837c639fddfeb9c8831aec18ac4620749b40d447b41f",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/index.html"
+    },
+    {
+      "path": "docs/media/claudemy-demo-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b32d69d0871d1a94cf86056cccf33362e55cb928",
+      "bytes": 28637,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/media/claudemy-demo-poster.jpg",
+      "sha256": "f75f9c085bfc816ab9640945db5c2840f7e2249af7c275dcac5be516dabec679",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/media/claudemy-demo.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b3517af381b615380e5c3a92cf70910a7ad91364",
+      "bytes": 3828343,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/media/claudemy-demo.mp4",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "docs/privacy.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5896ff4b51184ed9eaff7b470005072f1c8d7347",
+      "bytes": 3996,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/privacy.html",
+      "sha256": "b1f015bce7978c0112e03870130019b8293dfd6fbccdc44161707fd317e753d6",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/privacy.html"
+    },
+    {
+      "path": "docs/robots.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7b536dcd818319310e07200cfeff3937ae90ca9e",
+      "bytes": 81,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/robots.txt",
+      "sha256": "5cea9749d14a4995730c8158bf513e7356771db43dd4e3459eafb3b74693c5e4",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/robots.txt"
+    },
+    {
+      "path": "docs/sitemap.xml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3222008ed27110ec3966f3c1a2248ad179d9fec9",
+      "bytes": 418,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/sitemap.xml",
+      "sha256": "2809dacf28feb98c64813d7f7b9fcc2d0f915890f696a3be2cfd1bd1f2171561",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/docs/sitemap.xml"
+    },
+    {
+      "path": "hooks/export_elevenlabs_key.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "68d1784109c3ad2752a8c33546ebb8be537dbf02",
+      "bytes": 1923,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/hooks/export_elevenlabs_key.py",
+      "sha256": "1212ab7706fe0c27f240cbbbcc88362da8aa19dd14bc31e3d24a2f7e5cef12d8",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/hooks/export_elevenlabs_key.py"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "829ea42d998947aba04eba5bf47624fa3ac64f34",
+      "bytes": 415,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/hooks/hooks.json",
+      "sha256": "c38eb3c86df9cb83c6129bba02cabf56e3204a7fe64c18416b7a6a60eadbb380",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/hooks/hooks.json"
+    },
+    {
+      "path": "llms.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a89906280d8803442966fd04837634471eb926a5",
+      "bytes": 2083,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/llms.txt",
+      "sha256": "f6178a8be7c693b8438a71a8c5da3ee2bfb82a7e729c56e57534e73f8e9ec69a",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/llms.txt"
+    },
+    {
+      "path": "skills/claudemy/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "668fb5a78393b26d49158aaa541c47c5ef4fe822",
+      "bytes": 9712,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/SKILL.md",
+      "sha256": "49251c4aa514d34dcc9cde9435a08edd0e0997867b3c620d488d8fb66974863f",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/SKILL.md"
+    },
+    {
+      "path": "skills/claudemy/references/lesson-design.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e24f075f863dc352dd012177f832f4aa8e0a1c7f",
+      "bytes": 1154,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/lesson-design.md",
+      "sha256": "5492cd5b80c0ebc5375a1d805ef95efacf9fbd2b6e347befe9d3bae47ea1222c",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/lesson-design.md"
+    },
+    {
+      "path": "skills/claudemy/references/lesson-example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3027875f325278eb4b64011f0213cdff7fa6815",
+      "bytes": 3122,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/lesson-example.md",
+      "sha256": "4d22360fd8f07800733da1a17ce64ea4593922ef926c1c0449f51a1ae8c1feba",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/lesson-example.md"
+    },
+    {
+      "path": "skills/claudemy/references/map-brief.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "55a50775aa5881dd238d025c1ea1fe1328b653bd",
+      "bytes": 1872,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/map-brief.md",
+      "sha256": "08baa23fd1ff5cf73060e494ff87b0431510c4d54bceb16a9025edffc2fdc5a7",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/map-brief.md"
+    },
+    {
+      "path": "skills/claudemy/references/reader-brief.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ddc11cf00e5495b26b4854d3335b9313097389b4",
+      "bytes": 2394,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/reader-brief.md",
+      "sha256": "c378243fcf0b154b78c121a6cca6778eecb9f35a4723a5537e2b964c740dd469",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/reader-brief.md"
+    },
+    {
+      "path": "skills/claudemy/references/writer-brief.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7a6f360cd1a0441ddc5bb901e5169e03c4868ddd",
+      "bytes": 3068,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/writer-brief.md",
+      "sha256": "ee5358fb90e4e9c20c4f9fabdce0699ac5399f86c24c72317e54b1114cb6e129",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/references/writer-brief.md"
+    },
+    {
+      "path": "skills/claudemy/scripts/check_lessons.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cfbdaedd16e11c75ce637c83616343dd0a5c6142",
+      "bytes": 5970,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/check_lessons.py",
+      "sha256": "e52b918ccaf9ebce24630a633bf885949711edf875fdd008ae179d15072445ce",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/check_lessons.py"
+    },
+    {
+      "path": "skills/claudemy/scripts/package_class.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7032d6fa4e7492d1da27cb1a459780a22bc3cc7f",
+      "bytes": 3227,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/package_class.py",
+      "sha256": "dc0b6777d2f416c40b3faff7cffe9d6e7be2c5c1fb739362695c94ea9edde15e",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/package_class.py"
+    },
+    {
+      "path": "skills/claudemy/scripts/render_audio.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "946afe5b0f5c42171b4c0926b08cea5143187f34",
+      "bytes": 5375,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/render_audio.py",
+      "sha256": "b0f9bb033cf450864233a6992e8514be5e196cc564132cf02cad095efab28de4",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/render_audio.py"
+    },
+    {
+      "path": "skills/claudemy/scripts/scrape.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2a27ce5dc51eeb5a345567272b79a35e6898f602",
+      "bytes": 18673,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/scrape.py",
+      "sha256": "04d89e621be1df6f47cf2888e428601f0bbc0be897b1b7ee8e2062a8e41f8caa",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/skills/claudemy/scripts/scrape.py"
+    },
+    {
+      "path": "tests/test_scripts.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2e79fdb4d55dd2fd9b69cc4b9ab3a6f5660542ed",
+      "bytes": 33159,
+      "source_url": "https://github.com/assafkip/claudemy/blob/dadf948aafb90d66b554a13df1e47f2509cc1c70/tests/test_scripts.py",
+      "sha256": "9c8bd43ba0bc0baee31c80a0f413977ddb2b6d584728db12acf923981fcfc9b0",
+      "status": "saved",
+      "raw_path": "raw/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70/tests/test_scripts.py"
+    }
+  ]
+}

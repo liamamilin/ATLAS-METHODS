@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:41:54.497704+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 48,
+  "saved_skill_entries": 48,
+  "unique_entry_texts": 48,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "nowork-studio/notfair-plugin",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 48,
+      "saved_skill_entries": 48,
+      "saved_text_files": 288,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/nowork-studio/notfair-plugin/ed835f273dce03a451c13fa0cb67305ae58ecb05.json"
+    }
+  ],
+  "errors": []
+}

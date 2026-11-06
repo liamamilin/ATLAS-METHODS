@@ -1,0 +1,12 @@
+{
+  "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+  "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+  "tree_entries": 168,
+  "candidate_skill_paths": [
+    "capafy-staging/.claude/skills/claude-real-video/SKILL.md",
+    "personal-skill-backup/SKILL.md",
+    "plugins/claude-real-video/skills/claude-real-video/SKILL.md",
+    "skills/claude-real-video-for-agents/SKILL.md",
+    "skills/claude-real-video/SKILL.md"
+  ]
+}

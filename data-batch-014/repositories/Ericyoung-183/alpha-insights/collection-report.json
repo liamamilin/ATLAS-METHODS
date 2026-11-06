@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:15:28.113091+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Ericyoung-183/alpha-insights",
+      "commit_sha": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 82,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Ericyoung-183/alpha-insights/30c1e874f1de74bdcd488f1158c03c92c808be55.json"
+    }
+  ],
+  "errors": []
+}

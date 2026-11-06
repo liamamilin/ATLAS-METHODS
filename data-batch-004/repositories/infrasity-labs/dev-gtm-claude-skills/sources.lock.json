@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a"
+    }
+  ]
+}

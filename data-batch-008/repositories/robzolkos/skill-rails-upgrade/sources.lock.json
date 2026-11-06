@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "robzolkos/skill-rails-upgrade",
+      "commit_sha": "d9a3432b19efa898692c4cff16e4c74b700dcf93"
+    }
+  ]
+}

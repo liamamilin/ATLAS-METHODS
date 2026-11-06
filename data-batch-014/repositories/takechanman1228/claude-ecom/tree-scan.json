@@ -1,0 +1,8 @@
+{
+  "repository": "takechanman1228/claude-ecom",
+  "commit_sha": "7ddf7ffb823fd7ab6015e699d01cdc436739eb2b",
+  "tree_entries": 51,
+  "candidate_skill_paths": [
+    "skills/ecom/SKILL.md"
+  ]
+}

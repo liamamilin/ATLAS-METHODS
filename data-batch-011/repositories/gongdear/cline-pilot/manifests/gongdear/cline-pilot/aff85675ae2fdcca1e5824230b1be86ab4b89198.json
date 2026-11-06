@@ -1,0 +1,138 @@
+{
+  "repository": "gongdear/cline-pilot",
+  "commit_sha": "aff85675ae2fdcca1e5824230b1be86ab4b89198",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e6b2ca1cdfe05a585fbac8630c6ea23dd33ae016",
+      "bytes": 468,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/.gitignore",
+      "sha256": "002c858b3fa04b448d286476482532af4ed4f49934690ef1b63c1e6fa11f7d26",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5669ed5ab7732e3a7d974af467902918497a6a89",
+      "bytes": 1065,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/LICENSE",
+      "sha256": "0f2e7fa639908432b324f482c30b586cc12b3063355c4c467b13d8e7f11b24e5",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "42e3cb7ff7dcb87a995f8bdfb38b5b465dcf8e68",
+      "bytes": 6992,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/README.md",
+      "sha256": "0e9ed11a73f3389e4156bf47db4453d6c3ff1ff12ddf6ce2a20b59369dc3b2d7",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/README.md"
+    },
+    {
+      "path": "README.zh.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e57813120b4c44c1f35a1f069f62a43fe8f051a",
+      "bytes": 6447,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/README.zh.md",
+      "sha256": "7c6598b4fb98cedfc384de5a6a3b6965a52c8279f6fd03ecbecc41edbe8f6bf4",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/README.zh.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "85ff2d23f9d92e58329b2112e8f100e36ccb7a5c",
+      "bytes": 33269,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/SKILL.md",
+      "sha256": "ce592f3233f6dd2e575247810062a72e9e96415c460bfb63a1142a496722d2bc",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/SKILL.md"
+    },
+    {
+      "path": "assets/global-memory-bank-prompt.en.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8ce9bc3b5e5f9863f010eccbccbc0f6a1dbc5f88",
+      "bytes": 2576,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/assets/global-memory-bank-prompt.en.md",
+      "sha256": "4c1520b87d6ac002e3cd1d89190d1d13f4702edf2deb95de32a255fd6bdd0cd1",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/assets/global-memory-bank-prompt.en.md"
+    },
+    {
+      "path": "assets/global-memory-bank-prompt.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "95e22c89943887e9d9674ba504ba822982517907",
+      "bytes": 2072,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/assets/global-memory-bank-prompt.md",
+      "sha256": "692121372420ca77a5d298f40bdc1474a8e49e6fb615c656e1c5d181bd3c9dbe",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/assets/global-memory-bank-prompt.md"
+    },
+    {
+      "path": "references/cold-start.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "118bd5bf7dd78da74e10d19f5e7b0dffa5d8cafd",
+      "bytes": 4655,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/cold-start.md",
+      "sha256": "de7a3f50683ce3ce430b4c0311b8573c49f78c79f4675b7bfb39eb0533e9a92d",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/cold-start.md"
+    },
+    {
+      "path": "references/decision-log.example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "021946fb09473931d088174540c9e42b1f9fc37a",
+      "bytes": 566,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/decision-log.example.md",
+      "sha256": "51e28a436bb0c0b0bf6e461cd3cdba1c9916bd3dfc088a61f31279ade1c3db7c",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/decision-log.example.md"
+    },
+    {
+      "path": "references/local-config.example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6582bcf0ed501a7fea6a2212f3902ecb1ff669b",
+      "bytes": 1263,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/local-config.example.md",
+      "sha256": "23650f2666e38c3b8f9cfa3ab2cde97010fe43ddc9df2d9623488938eea06f9f",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/local-config.example.md"
+    },
+    {
+      "path": "references/project-profiles.example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a68d43a264e8e725394084cd4a10786f00110523",
+      "bytes": 736,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/project-profiles.example.md",
+      "sha256": "2981b8b4ba42677b449c504bb76b59104eaa9957bad8e28e70963d8e2fa32470",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/references/project-profiles.example.md"
+    },
+    {
+      "path": "scripts/session_report.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "80193464913383982d65de6ccffba0f56e02c791",
+      "bytes": 5559,
+      "source_url": "https://github.com/gongdear/cline-pilot/blob/aff85675ae2fdcca1e5824230b1be86ab4b89198/scripts/session_report.py",
+      "sha256": "45da26418b72a316d42c3dd40ea21b2548b2057be890fb66e4228c6204752dd3",
+      "status": "saved",
+      "raw_path": "raw/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198/scripts/session_report.py"
+    }
+  ]
+}

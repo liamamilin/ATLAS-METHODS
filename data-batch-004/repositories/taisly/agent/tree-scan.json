@@ -1,0 +1,8 @@
+{
+  "repository": "taisly/agent",
+  "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef",
+  "tree_entries": 40,
+  "candidate_skill_paths": [
+    "SKILL.md"
+  ]
+}

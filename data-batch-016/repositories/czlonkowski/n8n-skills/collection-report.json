@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:25:00.299889+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 15,
+  "unique_entry_texts": 15,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "czlonkowski/n8n-skills",
+      "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 186,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/czlonkowski/n8n-skills/e037563e101749e630e6688d121d04529fe6ee7b.json"
+    }
+  ],
+  "errors": []
+}

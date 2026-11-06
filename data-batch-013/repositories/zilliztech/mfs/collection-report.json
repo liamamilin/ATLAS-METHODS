@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:10:27.973274+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zilliztech/mfs",
+      "commit_sha": "78352894a0a826ee24db852411bf9a3c49884922",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 585,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/zilliztech/mfs/78352894a0a826ee24db852411bf9a3c49884922.json"
+    }
+  ],
+  "errors": []
+}

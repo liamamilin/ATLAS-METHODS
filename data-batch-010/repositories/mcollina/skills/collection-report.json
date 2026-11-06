@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:00:35.531733+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 11,
+  "saved_skill_entries": 11,
+  "unique_entry_texts": 11,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "mcollina/skills",
+      "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 11,
+      "saved_skill_entries": 11,
+      "saved_text_files": 125,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/mcollina/skills/c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7.json"
+    }
+  ],
+  "errors": []
+}

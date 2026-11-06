@@ -1,0 +1,3212 @@
+[
+  {
+    "entry_sha256": "065f75ce9e59074c81618cda58f88156bf4c14712d0af3b8f2d0b2569c9a009c",
+    "record_ids": [
+      "6bb05b36a0304a230926",
+      "d6ef70d4d67c45e12a68"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-app-intents/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-intents/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0675206fdfb6d9dca43c1dcb5fbead7dca595e38383e1e0031a2d361351b65f0",
+    "record_ids": [
+      "3a09eacc1e2ba6505412",
+      "fc17419b85a2be830301"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v5-to-v6/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrade-v5-to-v6/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "080f297b0f67c52348d2abae87b820336919b1475c6c403faa8de54eb465fcc1",
+    "record_ids": [
+      "f69c73ed932ad5363c23",
+      "1b7a74b7fb2af211e0a4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/capacitor-testing/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-testing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "08d4713c01df108ef9843e0dee8e5867151aac67dcc4347ccf063cd6da3d87d4",
+    "record_ids": [
+      "d383847af00b8f83323f",
+      "e5f27b1f1fe35b66fd12",
+      "c17227e75cdcc9e789b2",
+      "bb5f877d3fd20857f0b9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-observability/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-observability/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-observability/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-observability/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "08e62c593e61ab8a90178a27176504db55ac0f3f4c64b749ce1acc19464fd9b2",
+    "record_ids": [
+      "c282754cfdabd62dd05a",
+      "b5f8468ea89a4e0db41f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-offline-first/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-offline-first/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "09628af1da6b4cf0919e5a6424e8562644bb0d415387e98313c0c05058e8a07a",
+    "record_ids": [
+      "066d05f639fb4d0f3d96",
+      "f7f24bd743e37151fcf8",
+      "c357e2a293ffe1f422c4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-slide/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-slide/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-slide/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0a3141fca9ad3bc519b59d56b21a98d3685ed1cb213b976c57ddfa1e69c39051",
+    "record_ids": [
+      "e5e2f81889a9d515b14f",
+      "c3d6b20889c941c3e1d3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-spm-support/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-spm-support/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0db4f9d5999521c3543620ed9ae6c649068024707bf44cc3c1ba306de53f708a",
+    "record_ids": [
+      "b7de88dea2106f0b7b03",
+      "10f52db400d1f96c6a6b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v8-to-v9/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrade-v8-to-v9/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0e2bbe6b9208d9e0d3bc5cfcbe12d29f98b85f34e7a9d85217e282aad16f8285",
+    "record_ids": [
+      "f3801faf9e08bc501e32",
+      "87e791f59b896aecfa58"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/charter/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/T-delegation-and-work-orders/charter/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1184a2556dd57646c6e5202dea92629bfc4b6a8d7d95b5a55b4b63120404e45e",
+    "record_ids": [
+      "69d0c15ec19e138538c7",
+      "777bb544ac53a28c3b0b",
+      "93806c115c2dd135bbfa"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-mobile/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-mobile/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-mobile/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "152560032fb47dec7a9f50f93983cae2d4bf7fa61fbf316681b040c025561324",
+    "record_ids": [
+      "3ca9a8ff8c4b52c925a1",
+      "5a85483321829b8d0164"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "image-editing/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/image-editing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "15a09e4cd9fb1f0a22b02c2ef424c0395fa1aa9a5cda09490b144ead7cf1f130",
+    "record_ids": [
+      "a335665622bb921d0f0c",
+      "826dccc3d2cb10ead371",
+      "1eaeb76ba8f1df309065"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-skill-creation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-skill-creation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-skill-creation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "17aee818660b89aab8813286855afd2a6f6602ace4552f32762cadb95fe8fe3c",
+    "record_ids": [
+      "f8776281f448a767d929",
+      "f3e8ac0a60857f421de1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/less-is-more/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/less-is-more/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "18b2c723e468aea8ea0288e9c3ccff6bfb73ae452bbc6f036e9c146aef7ba7bd",
+    "record_ids": [
+      "1b4c3c25404280bd02fb",
+      "37fae4386017aebccbba"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "analytics/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/analytics/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "19a8efdfb388133b92aa4e1d52b792aa69cc028b1aea06b7166b1cecaaab6a0d",
+    "record_ids": [
+      "4e80451694e7be0b914b",
+      "23ec234001adfc26f3f0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/capawesome-live-update-migration/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capawesome-live-update-migration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1bc800ec370c4801be4e60f6994fb67c04f92a5db4ce9a3c0335aa5ffd4ac01c",
+    "record_ids": [
+      "6e784ab0c8db538b5c68",
+      "c98faa3243f4523fd48c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/ios-android-logs/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/ios-android-logs/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1f5d7bb7c4ea3c45e14a4ab8b51b2f8d2ec1de0bfcf8ea5c43158aab94e9b427",
+    "record_ids": [
+      "17b8780689633f2fc0f6",
+      "93701d68629f578652f4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "payments-with-dodo/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/payments-with-dodo/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "201267c6b31bd8da18e2468e06fca15be96f8a5023c735020a6f7df145f336fe",
+    "record_ids": [
+      "008eea2fa62c6f6fb1cc",
+      "ab9afcf7d63b5ae47df4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-core/skills/capacitor-plugins/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugins/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "21625435e85f25b19d0cecff03eb5df5c1c72d84c6e7f935deea2ae5f9c9237d",
+    "record_ids": [
+      "a5b0f40e2b1d7b02fcfb",
+      "26018dc88f523801615e",
+      "2cb54d51847475dbc82f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-voice/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-voice/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-voice/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "229b01386abee68313582d78770bb909decede1c7802ac02560c0b454294c1b5",
+    "record_ids": [
+      "83df8b25a6754aa09811",
+      "639d5734c673c351880c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-cli-usage/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-cli-usage/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "260d52b6da4f65e89d497fea0f1e142dd13f2511dcaa07b99844c5b60b68ae36",
+    "record_ids": [
+      "64e99f30dd71ea7e2084",
+      "718b1dc4d3a696390288"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "demo-video/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/demo-video/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2948904b13359f3104fd548db25bffff4e70b524d3a23889bcf243b1f961194c",
+    "record_ids": [
+      "fd7390c7ae9fb8298a05",
+      "045fb8765bb0ccdd51e3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v7-to-v8/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrade-v7-to-v8/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "294f7655b5a7996ce6d9cb8902447251e48fc1b4f7ccd9ecfecf452314de9823",
+    "record_ids": [
+      "073e831ee02cf24eeb9f",
+      "27b7fa0cd3979e457029",
+      "622973e7781c06d3a418"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-uiscene-migration/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-uiscene-migration/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-uiscene-migration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "295b9a774082278dfcd9c56538e1de9991de8d6e1f0cd3c09f267afae69bc94f",
+    "record_ids": [
+      "658986e655fd52ed1c25",
+      "46cd2ea48c8288c1b031",
+      "33e8afd6c16642316e1b",
+      "86b503507ede684fe5d4",
+      "c65760b1c5b5342a5880"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-debug/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-debug/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-debug/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-debug/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-debug/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2a012ac17d5147a1e48386a31a070263461a23312ef26afe9082a373af2fbc09",
+    "record_ids": [
+      "ba2ab47f7e5d8871f35d",
+      "59edf09197c4296e3f59"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-release-workflows/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-release-workflows/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2a462ae3ef40814fe0186f855b5155de974012809421119a57cdc2cdb0fae8c7",
+    "record_ids": [
+      "12de7e7f6991072a7c8d",
+      "399c17b3de95575a5628"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/shellscript-coder/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/M-build-and-rollout/shellscript-coder/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2aa8e2eb5efb98f9aa02b33ffd06b7c3fcb0c10ee9148964c58b955e1bca2766",
+    "record_ids": [
+      "33d9c47766442361edbf",
+      "a6e76178b5b49faecdc4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/sqlite-to-fast-sql/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/sqlite-to-fast-sql/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2c900041035f4cad71d956dfa011d6657afac01246a8f97b4bc13779cf051b14",
+    "record_ids": [
+      "3a60c8106504dbed0895",
+      "050fa9c5955e42e41ee8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/taste-evals/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "taste-evals/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2dd604178e045a1df0f3d44a8c61374cde015830b530e418b7376f9bb9f465a2",
+    "record_ids": [
+      "6f91d0940ca1bcfca3b1",
+      "73d552dd7f8fec6943d3",
+      "af1ab28974f955f1c6b9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-dev-workflow/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-dev-workflow/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-dev-workflow/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "310293f9076fa98b80341b44898ffba59065fd1e4aa8c70e89c11735e0b81f3b",
+    "record_ids": [
+      "08ea83288ccc20e22e45",
+      "f33aee1e745d528bf071"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-organization-management/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-organization-management/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "33781b1a624e9ba499c2897d33a840dcac98b3e47e9132a32b40f3eae1dc3292",
+    "record_ids": [
+      "5710d79e256c1153a6b4",
+      "a751e2ee5f617620410c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-deep-linking/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-deep-linking/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3420ca8a1b7b16d1d592a440941671f4c294287b6e8215cda0d972e6088d99a3",
+    "record_ids": [
+      "eb9cb7be4efe07c015ff",
+      "19b3c9456e4b3de499a1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-core/skills/capacitor-best-practices/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-best-practices/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3569291b1ee1f3b40ef9dfb0a64843e10c4b02f3117ec58add3161206ff724a0",
+    "record_ids": [
+      "8012a96c9dd83dc195cc",
+      "8a6f79ae5421f5a1cc7e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/capacitor-ios-security-hardening/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-ios-security-hardening/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "37f04e78b33fa116a48d51e2bdc09ddb9ff0c883181fc24ae1751e3bf572bf9c",
+    "record_ids": [
+      "abd6bf7a1995a9fbb92e",
+      "f1e0eea1ccf429201736"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "agent-instructions/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/agent-instructions/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "38298651fee3f3f27baa9b5fb98c0e219f3f0c4c7331c245cede4bde85dc9dda",
+    "record_ids": [
+      "c274306de7f6a37ca887",
+      "fdf96deec02f4fc34a1a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/agentic-walkthrough/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/agentic-walkthrough/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "39a2c1005960135bae5cf837b9007fb826f6a7a6c14fd48b035cd58b4eda6e46",
+    "record_ids": [
+      "23ff9e9d32dd0d0be3b1",
+      "d161f53f6d48d34b3127"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-keyboard/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-keyboard/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3f9708f16854b0b683ddcee40aeed42c41018903e588e7d55f9b5f175686f8ad",
+    "record_ids": [
+      "153dc1e09a4a0f507c43",
+      "c2964e2759b6736af887"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-push-notifications/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-push-notifications/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "430fe5c9786e2bdc9aef264974b935b6bb9ea7db3fb242dc83710e390d0ed048",
+    "record_ids": [
+      "b13fc9966936bcef05e7",
+      "0c0f509a9904da4810d1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "fundraising/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/fundraising/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4758f8b2b3081647ce14e42feb966e3ba182a00eceeb15c878fafabea05a9c04",
+    "record_ids": [
+      "81250b8bc18e19e22eb5",
+      "086355006c060cca7650",
+      "bc7fb06e63fd099b9ac0",
+      "04681832d2100f155e6b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-explanation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-explanation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-explanation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-explanation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4c86ac45222a25612641fefcaca97f894dc42b6feb6bce00cb11a571871300c4",
+    "record_ids": [
+      "cc98fac0ff7012d8a5f0",
+      "b0c16f7b1ebaa34454e8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/search-ready/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "search-ready/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4dca64d1391d0ceebc19702d2cb2c652eb4d30fecea4b1fca3d59d4d52adbdd1",
+    "record_ids": [
+      "0622229eeeb39ec15dad",
+      "a2a8f1ab4e638e599695"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v6-to-v7/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrade-v6-to-v7/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "508f39baabbc63fe87d0d1bbcc6814034b5820aadde0d82b77fff6f8de3748aa",
+    "record_ids": [
+      "4390e6e103855667b886",
+      "4aa2c3a66ad98ff68e04"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/capacitor-accessibility/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-accessibility/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5362d3893dedac4c94233e293c3ad13505137d8eab0c803a178794f825f8ed53",
+    "record_ids": [
+      "53f2bc4a0564e2660351",
+      "1dc8fd658f659206f77d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-ui/skills/ionic-design/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/ionic-design/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5a45c3e3a52e4ecfa7bb19e159c90682bafb5ade1756a0e7d8a903517c1e2ef8",
+    "record_ids": [
+      "78c27e5e2ad1f76e0ebd",
+      "ea8804b70da82f8a7981"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrades/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrades/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "644673c917e91b1cf6e50b6c6977c612aeb6536414cd41106b2511d6bdbfbc8d",
+    "record_ids": [
+      "77e9c2d7725311196a77",
+      "e345ac077c69a7a51321",
+      "5218cb07befdd4531639",
+      "a1e6cda3aa1a20cf4607"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-design/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-design/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-design/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-design/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6b2008471cc01116fea77ab8a418b5ef4a5f0835aa09e9f6c040839832553884",
+    "record_ids": [
+      "673568497d9edba58751",
+      "687d0aa7ac4e9c84f183"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/skill-creator/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "skill-creator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6db2a54f8a7580672ab6adad10771ca455a3c0c1abd1437003d6913887284d5a",
+    "record_ids": [
+      "15f5fb9bba7f16ccfe7d",
+      "33702fc4ceb6bf45c79c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/user-insights/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "user-insights/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6e6063af2f5d51b513e9ac6ee4c5969a45e1a48816bf251976a36a07d1345c41",
+    "record_ids": [
+      "05c0b57717bfd5c69cb4",
+      "555f3e97c3c40d3c4eb5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/capacitor-performance/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-performance/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7004aa1dbdd7f9392ea79f1d3b6a22eb4afdb338edcdadd0af5477c405f978f7",
+    "record_ids": [
+      "e7c799faee4d0feacb81",
+      "07fb7eb66eb3847da106"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v4-to-v5/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrade-v4-to-v5/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7092de7cdb2c93f593b5a2e7a1f6a026e5f66b56eefa8e9510e62b3542e3a567",
+    "record_ids": [
+      "1675f987884b61405227",
+      "5ac394b2c8260d4ce5d0",
+      "eef895431ef3f5b2486b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-docs/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-docs/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-docs/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "75de96efe3da4108e799828fe30d40997adf1c3af0126da95a906cc1c7785cf7",
+    "record_ids": [
+      "18ed3c11d9d12effdb5f",
+      "f0796bdeb493ee05123f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugin/skills/rate-limit/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "rate-limit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "763ad00fc5ade2bf28b083e5cd11d9ffbf7e18df327078ba70d0373b445cd464",
+    "record_ids": [
+      "ae07ab052c6a423b4629",
+      "28cf0562d852bf9f240a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/ionic-enterprise-sdk-migration/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/ionic-enterprise-sdk-migration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "78da9f6222bf3ee00f3121a64979af1b322e54e0e743f22ea4ae4ef1acdb4ac2",
+    "record_ids": [
+      "76f38c9f16bdc38d9de5",
+      "434baef0a1c9790c9488"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/product-launch/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "product-launch/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "792fb37bb2497c584d85c08f095b48dd33e516cd4afd74e27b4841f75891da21",
+    "record_ids": [
+      "18c9aad0b585d345cb69",
+      "bcbef751236c33289482"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/ui-copy/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "ui-copy/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7a657826e09f63f495046a8bbe4105a186339753a226e0d4d25867df15584fbc",
+    "record_ids": [
+      "a0ede54b98dbe8408ea0",
+      "13d5642eed4ea801af4b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/skill-authoring/skills/skill-creator/fixtures/broken-skill/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/skill-creator/fixtures/broken-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7b35ceeda402d962e8e14d9a54bae8c5e1d3c86f3e8447b8218076da7a2a742b",
+    "record_ids": [
+      "c24a6eecdfc9dbd662f3",
+      "dbf85c9962556b5ec771",
+      "ad9f0b688a9bf69ce515",
+      "b780685e1b43b37dff3c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-scholar/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-scholar/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-scholar/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-scholar/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7bb30b64ddc0e35452b621e87000d525b278ba5b540b4f61e4331033e9251f38",
+    "record_ids": [
+      "53e532ba9b7dd1910c64",
+      "08dbb7647256319506ec"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/product-experiments/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "product-experiments/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7bfb279b5f56e6b66af30eafbd01c238b025d4a586c11bde02bf869f31eff41d",
+    "record_ids": [
+      "96503f0b310785770d5d",
+      "8ea3f9db85491376e6a9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "humanize/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/humanize/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7e2d705a1fad4aa10cdd86f5cf3e0c1cbd91b5bbd95c8c87f90b047eaf3cc197",
+    "record_ids": [
+      "69085f839b95b6fecb79",
+      "3e18ea9ab5e2f3c90fa0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/ts-coder/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/M-build-and-rollout/ts-coder/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7fa7a71643a0085c0f1efe1b0e6f55c232192ea089d225ba5790a6ff2fa06aec",
+    "record_ids": [
+      "4d8c0e5f233b5726de12",
+      "21c676e99fbf4acbc5ab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/test-writer/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/test-writer/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7ff5f6c9b753e48a989a8311b8258684bb1b95623307602fd0a8ec44a109784c",
+    "record_ids": [
+      "1e8a8759d7888e9d4f14",
+      "2075717c4b82284f3a20",
+      "7a7e55a5eb5ab58a70ae",
+      "d6af70b210f80dbfc0e5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-search/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-search/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-search/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-search/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "803236e1b4534d60e4b1f345f6dfee38177fa23e2e0fa7d2e84c11eff0999ec1",
+    "record_ids": [
+      "ba5fae7a45b5c59bbef5",
+      "2288985c72b4bc312e78"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-live-updates/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-live-updates/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "83ae5b4772fde390e327174544a642dcc4a8c2919303f17afbce17c666874572",
+    "record_ids": [
+      "05a57f6b02eae83643af",
+      "c2fffe3a6d55e9e204f3",
+      "f9621df47d9b2bb865aa",
+      "255eeda1a9b152f9f963",
+      "20d0bcb24abd50e113fc",
+      "8349606f9379931d1bd1",
+      "1412dcd848b2dc1120df",
+      "63c9afcaa642420310c0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".agents/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".github/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".kiro/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".opencode/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-antigravity/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-cli/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-cursor/skills/scrapingbee-cli-guard/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-kiro/skills/scrapingbee-cli-guard/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "87800e5c14cab1a603e84e113581c5c471b7ba52740649814b8005584808bfd4",
+    "record_ids": [
+      "a21169f3aba25c7fd356",
+      "40b20819d2875f89f7ac"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/ionic-appflow-migration/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/ionic-appflow-migration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "89fde52b03b436f4ee04030c8f378b78077c8d98c7ff2b2d52549559fe5c687f",
+    "record_ids": [
+      "5fab8d89fe7299d32e0d",
+      "dbaabbc49af6bb758e1f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/product-spec/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "product-spec/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8b745a898ca64b9bfd60a30ac5a7f5ec2f6558cc63bf242d95de5e32c65b4b96",
+    "record_ids": [
+      "1c18d05f9f0c831af164",
+      "62fe4ccd073b43822f4c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/webapp-to-capacitor/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/webapp-to-capacitor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8de1237ec8e33d5a4c97743839c58da1f8fa2c19be71ef912521bf22c5491e82",
+    "record_ids": [
+      "784a78615263a3545d3d",
+      "a9385c0ee7412df0de1e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/capacitor-security/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-security/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8df806dc002aaf4cc8b5bc411567e19b51dbc72e3d042e36d06e6d2453eaab88",
+    "record_ids": [
+      "ecfa5453fb4372c9da55",
+      "2f9685cbfb03b87f640d",
+      "06c22d62d4b29ed6b35b",
+      "27050d027e2f4c9b07c5",
+      "7a9df027424d1da2f120"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-qa/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-qa/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-qa/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-qa/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-qa/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9192a070ffac53cad15115ffb92f95e3f3c4bb79ba12dbe0ade4d889b526725a",
+    "record_ids": [
+      "c997d74705b9e156eccf",
+      "002fb8ae36a002b0431c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/skill-authoring/skills/skill-creator/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/skill-creator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "92f17e65acf4afdf2eb5b2c08c66663cbf6993dae70b770a7d5787d6e9eece07",
+    "record_ids": [
+      "fa91a17afdba4c1ccc54",
+      "e979cf71cce918a5abd3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "ai-product-development/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/ai-product-development/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "971308e100855deb5479db092182d24e22ed7e8e58dc6a5895e41582d4691490",
+    "record_ids": [
+      "28b53bdb72076341c1e4",
+      "9d33f277858af8fe23d2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-deployment/skills/capacitor-apple-review-preflight/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-apple-review-preflight/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9842f175f7bed98142c4fe1c542c6b07d3b13a2cf2d40bc47a6e85afd0a96252",
+    "record_ids": [
+      "516948974ce65a067376",
+      "36e5ccfcd1d6fcd3dcca",
+      "324e628396c96cc5032d",
+      "88017507f6b540f8f441",
+      "849d05937812bf9c559d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-architecture/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-architecture/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-architecture/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-architecture/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-architecture/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "98995542e2272746e7ce876ada0e63e1f4d607584420ad7f2e5bbf5f29de17d6",
+    "record_ids": [
+      "163157afaae937b39c25",
+      "341f0194113d540043c8",
+      "1a1fdb60242c934e4db5",
+      "31f58a5224fa4195dd87"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-security/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-security/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-security/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-security/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "98ac2681b6ec7b8e630124c3399c1fe38e9e856613ec1a8c7130cb055c74e1b3",
+    "record_ids": [
+      "563cfadc5a1c3def878d",
+      "ee8ac3ebc119f013fc02",
+      "06427e306b54e6fe0d06"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-image/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-image/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-image/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9965e913b16925e37b0c95423de858fbef94eafc67c386e67736870a2e6ce4d4",
+    "record_ids": [
+      "e737dd4bca00dec31846",
+      "1d0df97d9c5c1f483938",
+      "452b3e92153acc2dabcd",
+      "17633c4e14df378156d2",
+      "e8289ca7e5a60aaa28ec",
+      "6cd870549e29a1d13315",
+      "87bb7822c49d4da9030a",
+      "cd0f69a9d7c665a1f5ae"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".agents/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".github/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".kiro/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": ".opencode/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-antigravity/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-cli/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-cursor/skills/scrapingbee-cli/SKILL.md"
+      },
+      {
+        "repository": "ScrapingBee/scrapingbee-cli",
+        "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+        "skill_path": "plugins/scrapingbee-kiro/skills/scrapingbee-cli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9fa4510bb0480be061c886a232fb871d5909077d9a9501b66eeaaf7b04e572dd",
+    "record_ids": [
+      "9c02a655459366fa79e4",
+      "de5399f5a2ea7a141abf"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/e2e-environment-preflight/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/e2e/skills/e2e-environment-preflight/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a24b98f4c0b53046b3b95e4a6fe517adb56e9c959ca831f8b4017c2227fa7cf0",
+    "record_ids": [
+      "5a2820ec5e18f16fa614",
+      "9d91898ca87e26ebed9a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "auth-implementation/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/auth-implementation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a4719b0f29a4f9753f3adfb41bdd265786b4aa21cefae51387027c228f28a56b",
+    "record_ids": [
+      "89ce82ee80d6573bb356",
+      "56d6a1350486e8d20fcb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v7-to-v8/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrade-v7-to-v8/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a569f610ca16ccb3bb15d4a4112e7e41c0e63bed9df92c4fb428bf393ada917a",
+    "record_ids": [
+      "1514f68d2b38c78df361",
+      "01beae58d94c3fb795ec",
+      "9053da457f84072f6389",
+      "9fad2767fb39501766a1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-pdf/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-pdf/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-pdf/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-pdf/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "aa59875f97c63327e90019c62c7bbbb1cdee5e99f3f55a62354612a870b66be6",
+    "record_ids": [
+      "8f6f4786d847cc30472a",
+      "6339a947c604a5f5a4c6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "performance-diagnosis/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/performance-diagnosis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ab18996d0cde065b59db65ebcef90ed3de4db9b5bc677bb32c0c52c2a37f0a35",
+    "record_ids": [
+      "2535489a1fe06293c3f1",
+      "45634947ac25df06840e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-ui/skills/capacitor-ios-resizability/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-ios-resizability/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ae695b1aff8b05e6c76714cd009682a0d2bc24480075f5954ef8a848588579f1",
+    "record_ids": [
+      "bb2e70a500ed1437c7d5",
+      "d37d974d050d158cac08"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/rust-coder/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/M-build-and-rollout/rust-coder/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b1791618ec54c18fb3479d0f882758c1f4f8889f1c9ec005744fc9e9013b987b",
+    "record_ids": [
+      "fee7fc29046666cc10aa",
+      "925a54f81c55777da455"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/framework-to-capacitor/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/framework-to-capacitor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b1d1813e3efee5a1d00cdd94f49904417702b6a98ecefeb9ac9363bdb85015dc",
+    "record_ids": [
+      "478475099b0fc8f6b888",
+      "4f9f33860740bbdf4e1d",
+      "35f3f433fbff96290a8a",
+      "bff402e7c40f36e8708b",
+      "766f4e6ef93d7fe8d17f",
+      "0301ba9fd56eebb76648"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-scm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-scm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-scm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-scm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-scm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-scm/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b1e38fc756d21eb0e123847ebb010c87a1bf66628337196301892f0537aad816",
+    "record_ids": [
+      "ee90903793986fb97c84",
+      "3483e296db00476b5fd6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-deployment/skills/capacitor-ci-cd/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-ci-cd/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b21ef3eda928a490ff8a7bdcbd60b7b0e8744be0a5ce14021fa10834fa8c8d07",
+    "record_ids": [
+      "fe7fc5b12debf37daf01",
+      "73a4a01072b526e353f3",
+      "290c753b752171142f18",
+      "2781191035391674953f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-recap/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-recap/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-recap/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-recap/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b2907fbdd13c6094906ad35fb8b512dfb1c689c7347b889b122559b6cab063e7",
+    "record_ids": [
+      "82dea69a679ee4b191a0",
+      "0eef6354da0147d8d17e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/cocoapods-to-spm/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/cocoapods-to-spm/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b2b707d1590b2d60a257b697015cc98d4ec654ebadff3c87a41177b575f22694",
+    "record_ids": [
+      "35fc18bf428f3244d2bb",
+      "f2938f329eb7233e7eff",
+      "e0d37d2c81e82c8ec13c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-backend/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-backend/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-backend/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b4215cd239608024ef51ee69709a0908ac7da22fb59218b70118e5a7d05fb76a",
+    "record_ids": [
+      "3234d2f2be13c0f0383d",
+      "300a554a9d7d4df8be16",
+      "1b2ad6983d6869ea8ff3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-coordination/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-coordination/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-coordination/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b8d1be165e391a7014b5eed5ea62616bc798df4166f7369e464b8f5571abca14",
+    "record_ids": [
+      "6026db6577e132c9e954",
+      "244c474fbceacc6f7f37"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrades/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrades/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b9192766daa52f88429f03650de3444b46fd5639692df0db4a98f8c6310941a5",
+    "record_ids": [
+      "bdc3bf2f7a5d4b61bbb7",
+      "33baf8affa5bc36e324e",
+      "e9ff9de16473cc50e9be"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-orchestration/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-orchestration/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-orchestration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b9da1e345730ab89fdcb494e4dc922ed3a73f00c89727fe797bb6873be4c2f2a",
+    "record_ids": [
+      "d123773aff5fc87d6a6e",
+      "29812df7ef46b151aa46"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-native-builds/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-native-builds/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ba11e7be20120107b36eb9f7f9763adb0f14d193b80699e06b21417f65969653",
+    "record_ids": [
+      "040149f46fc791213c22",
+      "9a4adf1805b50724a125"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "landing-page/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/landing-page/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c0b58d0162ab2d0a79dee07c76ed5b6f0a71d647af535ec9340e9c8b6b43b26e",
+    "record_ids": [
+      "0fb6d7dec2aa7d85689c",
+      "9e62e78c7fd220b32ea5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-upgrades/skills/capacitor-app-upgrade-v6-to-v7/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-upgrade-v6-to-v7/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c0d8122c7a76dfeb4fc7d1fc6208dd10a22cb38f3ea033ef44814ee1240d8737",
+    "record_ids": [
+      "4aac88d949a915e6dd60",
+      "e2cf53de6b7bcee76d8c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/python-coder/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/M-build-and-rollout/python-coder/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c0f7497d91f1fbc7761f91e1106b79507d1f20cd15a1a766afb3098822dc24f7",
+    "record_ids": [
+      "55eff20c7501d5f20c95",
+      "f148f8f3988f78a07f0b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/app-growth/skills/subscription-app-revenue/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/subscription-app-revenue/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c1e87f3c339ed99ba8ebc50fcb6d1542f60c397b4968cb2ef94d60d8b9655786",
+    "record_ids": [
+      "5dcd2a9946722670466e",
+      "2e47361c5fa17dc061d7",
+      "eb1cdd36b5f7edf6356e",
+      "9be8ae302315ec20ec75",
+      "54d8d81fe58fe2d2c05e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-market/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-market/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-market/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-market/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-market/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c496badf5208142f7fdcc0cc56e188b7ad94c0bb175e9c35689b1c465561b707",
+    "record_ids": [
+      "28d42def9af964d4312e",
+      "05f1fbc74652b0cdbdb4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v5-to-v6/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrade-v5-to-v6/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c894d601505c6a446b6914de375d819b08dcb4dcfe3068a1a956c991cca6a6ef",
+    "record_ids": [
+      "afc9107092eaadb22766",
+      "b8f01aa3a27131912b69"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "cold-outreach/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/cold-outreach/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cb4227d7cdbd86f160b106e9f0d8e0499a27d0e927b00660d285f9b48baadde0",
+    "record_ids": [
+      "8aaa53ea793aa23a9618",
+      "57f50bd98a07c07bed54"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "changelog/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugin/skills/changelog/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cb47111216db4c0479fbff4eaed443605bf7b763c5e50c6457678f461dfe2f9b",
+    "record_ids": [
+      "9faeb31e3424c414163e",
+      "262f9550c4c08f559ccd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-quality/skills/debugging-capacitor/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/debugging-capacitor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ced8b8f78e65f569f571e306ce4ce70662bad338f604a3c05a3af34504eef1b0",
+    "record_ids": [
+      "85533864947d7be0f5c3",
+      "9920bfbd0eceeb3dba29",
+      "eeb86b395956af211fac"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-db/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-db/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-db/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d058976d659e01881703a3460abece9da8327c377635093c69b59773f6f432a8",
+    "record_ids": [
+      "7169c83a140bdf84633d",
+      "80f4bf4e037946156c3e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "credit-metering/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/credit-metering/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d30218b43efa5b00f4cfd9d4c4fef0a0f6daa0a6357f6de3de2221be4fc549ef",
+    "record_ids": [
+      "37130d47c34e70e08995",
+      "3a8ccc2a972ed12c1126"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-ui/skills/tailwind-capacitor/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/tailwind-capacitor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d57952cf7516c92f2ad36cf6b426ee8c0900e8a66fad19e4ac2b3c2bdc45521a",
+    "record_ids": [
+      "e507aaeee5a4b2ea5c45",
+      "430441b9e4fcc4397b6d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugin/skills/remove-ai-slop/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "remove-ai-slop/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d5a185567f358ac0a934e42d1d76ee2ce253bfd3bad6d71f40380ac2b8c9056b",
+    "record_ids": [
+      "c4465f166044e0c30458",
+      "f6f19a8ed57af03c3090",
+      "fa9283acb72d7b5c7aae",
+      "553a6448be76a4468deb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-academic-writing/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-academic-writing/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-academic-writing/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-academic-writing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d6d46205853dba8c6e5d7dc1a1b19d47a9454e32d27e4f8a64deef59718278e0",
+    "record_ids": [
+      "c704380739284452c340",
+      "5e22b0cbe4a937235aa4",
+      "b01c25d11a3af5c001db",
+      "ec418e97f071533b5aa0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-translation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-translation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-translation/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-translation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d711cf53dc091ccb112fd070bdae6e23f11b908c782d5981b2892411160b746e",
+    "record_ids": [
+      "a38177d27c2367c4c33c",
+      "a7a96cfb6deaa7babfe8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-ui/skills/konsta-ui/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/konsta-ui/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d877a2c2a1373c43a9118ccb8d64105f70269006f1480a5d38b1b86b33493b8c",
+    "record_ids": [
+      "783059cf96d2684628fe",
+      "700e038569da1c62ae5f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/e2e-red-triage/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/e2e/skills/e2e-red-triage/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "da29e2f0962f4d2856fc316083bb1c6a72faa31eed532aada40d99daa6b73f09",
+    "record_ids": [
+      "b42d44deff1d54c347c4",
+      "b31667c6a573a9508f77"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-ui/skills/safe-area-handling/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/safe-area-handling/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "da762a1b7e28ea46289b3a4bd0b5ec4823ced2279b488a7c72c2b133f1b9fd6a",
+    "record_ids": [
+      "3114bfffd556a1434cd3",
+      "9a7e179ea5826442cd91"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "ai-cost-audit/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/ai-cost-audit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "da8b72d11c7f77b7a448a0fa964a303ec5f189d3520d210640cf07a966671947",
+    "record_ids": [
+      "c98dfec047240fd6043f",
+      "31780030814660b413fc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-core/skills/capacitor-mcp/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dacce3f6c385cfda32d64afde606fbc095c2e63ce5f570e51acf3d8023bd7b2e",
+    "record_ids": [
+      "631f0cdc67e1f15b7985",
+      "2b557ef3699f7b389a28"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/first-principles-review/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/first-principles-review/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "db7c8a4073a6aed1ff661e50c892391519169c3a2e06294bdc36b276816c9006",
+    "record_ids": [
+      "e64bc8b15a67617aeaba",
+      "aabfffbc5638bc1028f3",
+      "c43b84ad60918865d376",
+      "a1a1cb53ba084177ec6d",
+      "9779888be6ca942361d8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-hwp/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/research/skills/oma-hwp/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-hwp/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-hwp/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-hwp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dc3cd62b83cad10475b489c24bee003d16fc69aa93c9c3beff284ef0c150d2db",
+    "record_ids": [
+      "8f9c48b60f1604f9aef3",
+      "20482c4b1099cf4d170b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-deployment/skills/capacitor-app-store/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-app-store/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dc428b48c03676698880d016c12120487170a98982e844786ead2d2ac254fff0",
+    "record_ids": [
+      "c1a7aaba1a0da7444aa5",
+      "e5fb598bbedb536d0efc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-cloud/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-cloud/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e0728c16ce3f56fd2e9d8c886ffc6fd74770b41f88855b21718083081959d8fc",
+    "record_ids": [
+      "61b349e0505e942da254",
+      "f0b4229ec391f67e2beb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "mobile-first/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/mobile-first/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e0959fece3006069a72b66e44550c42bc9299ae559cf58640084a3b844c14241",
+    "record_ids": [
+      "ac15a96f3d99e6350be1",
+      "528ba69687fb5d5ca33f",
+      "53667aac524bdf78ab4f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "decision-doc/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/decision-doc/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "workspace/distribution/pending/decision-doc/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e1b8a981d965ad12c277575913350424a8bc1829b98c2464cfe20bab8115889f",
+    "record_ids": [
+      "be2cfa2dd06b85b6548a",
+      "38e561585d64abfa441a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v8-to-v9/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrade-v8-to-v9/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e342c97c0c0133660dc6432def376d73234dbbc1b1eaa9d1873fbee6618b06cd",
+    "record_ids": [
+      "e0fa8eb443413cad1b53",
+      "478ab701237ca0321ad8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capgo-cloud/skills/capgo-release-management/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capgo-release-management/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e345a992a40d7bd2d745dda76f952e0d33fb60b4e78495573e2cebba3c14ab77",
+    "record_ids": [
+      "0e6066061c5f7a17cfb7",
+      "5a3478d447dd9985dd47"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-features/skills/capacitor-splash-screen/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-splash-screen/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e45e88fa72b59a2156d1a9f71a7a4282b985e2c8ec2e09c4da17ccd815f4d26e",
+    "record_ids": [
+      "4807f51a089dcad262e1",
+      "0cc3cce0501c0a134999",
+      "a164baab1af2c6844491",
+      "1c998c74c2feecad5873"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-frontend/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-frontend/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-frontend/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-frontend/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e48b1c9b5bd6e72c097bfeb090f51c4d0452b22eedc87b51b010486e8a1a94d1",
+    "record_ids": [
+      "4a8f4c47e787381a76ef",
+      "26592d421f81fce3823f",
+      "a1f2d9df62873f5c6ca4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-tf-infra/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-tf-infra/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-tf-infra/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e7f23332ab3143d0145e7e7255c217ceb8460a36ce1e90becd0de9f11e8709fe",
+    "record_ids": [
+      "af227aae3b83efe439a3",
+      "0459a0191b04ca72f793"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "deploy-check/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugin/skills/deploy-check/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e867bff8c9dcbfd13b31af0abc03864f0e5450b00cacec61a5a463641b80bfa6",
+    "record_ids": [
+      "c2228f084f1ccd92300f",
+      "1d9987761e93f1482ec3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "gal-a/qikly",
+        "commit_sha": "548ec98ecb3937b8d71b49b6450030aaa2e37f8b",
+        "skill_path": ".claude/skills/qikly/SKILL.md"
+      },
+      {
+        "repository": "gal-a/qikly",
+        "commit_sha": "548ec98ecb3937b8d71b49b6450030aaa2e37f8b",
+        "skill_path": "src/qikly/skills/qikly/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e949e717fb9422c670d072f278505eb86d5a2f5e9f4553d4deb41978e8827cef",
+    "record_ids": [
+      "031dcc66cec2e957506a",
+      "57833c63e3edb275cb1b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-plugin-dev/skills/capacitor-plugin-upgrade-v4-to-v5/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/capacitor-plugin-upgrade-v4-to-v5/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "edf23b7032e0c81efee7e7a297e3def255451f11b411d58c406c86b7fbb209f4",
+    "record_ids": [
+      "0072d302f2f031b4d9f0",
+      "4a61820fe4731c427508"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "plugins/sno-station-standalone/skills/owner-intent-audit/SKILL.md"
+      },
+      {
+        "repository": "sno-ai/sno-station-skills",
+        "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+        "skill_path": "skills/J-peer-review-and-audit/owner-intent-audit/skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ee29a4330f3a869efc3676d63f34c36d9696b011e56a60ff9f454a2278b18c2e",
+    "record_ids": [
+      "218a0f31343f7dad9c9e",
+      "c3ba0dda24d6e737fbdf"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "plugins/capacitor-app-migrations/skills/cordova-to-capacitor/SKILL.md"
+      },
+      {
+        "repository": "Cap-go/capgo-skills",
+        "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+        "skill_path": "skills/cordova-to-capacitor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ee776ce1d3a20cc5dd2ef59261074824a8916f008000c54538c8d26bb07ab2bb",
+    "record_ids": [
+      "b3834957715182baac07",
+      "9e97e1670d4c0f8fc403",
+      "6d5c050d1c61dfcd3a8c",
+      "f69c0c0b56011d9cf4cc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/security/skills/oma-refactor/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-refactor/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-refactor/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-refactor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ef06759434a5e2401275ca453216d2491b23c5313244bd567a89f0b399612362",
+    "record_ids": [
+      "69d38f313f9d24c23238",
+      "b6710b6496adb74d1ec2",
+      "4390e771e65565f109cc",
+      "8363a3c5b08fac3a5008"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/directory/skills/oma-video/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-video/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-video/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-video/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f2887417a35eadb2f3c35bf410dd895a839a3eff72cdc540284a17552ccb1d63",
+    "record_ids": [
+      "327e97d7c106c5966b29",
+      "5eb62367cac933644e6a",
+      "bae8540edefa73e50af9",
+      "5f61a44cdbe8d00ee209"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-brainstorm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-brainstorm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-brainstorm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-brainstorm/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f28f6ed602c26832c3ca5330caffaf17db0101cac80b26473f195c002d248680",
+    "record_ids": [
+      "de499b2f8353c8494391",
+      "768316ff7aea2894e8c5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/supabase/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "supabase/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f36aab137c1fdaf0370011775cff87fad296567ede9b3d8f2e482b48a9b7de18",
+    "record_ids": [
+      "6a17dd81a4005df6f8fd",
+      "41703adbff5e15a897d9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "fact-check/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/fact-check/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f3e821dfc5423e925eb5db64653baff6f0867c33316c8aacf8f930d65a70e697",
+    "record_ids": [
+      "e992016da5f2b96132ec",
+      "d02d1a43052b9fcb3947",
+      "927b9afdc644f58a9d5e",
+      "91d0fa1756153aa0bc26"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".claude-plugin/domains/frontend/skills/oma-pm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "codex-plugin/skills/oma-pm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "pi-package/skills/oma-pm/SKILL.md"
+      },
+      {
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": "skills/oma-pm/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f7494c35789ef3d971fa12241a6d671ca628c00afaa36502944d6ccb33a4c695",
+    "record_ids": [
+      "7b863dbd5724f99e39f8",
+      "cfdc013b560100113fbb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "email-with-resend/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/email-with-resend/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f7cce89704151abf550b9be5594bef886575e88634020e8d4e5a0677125ae336",
+    "record_ids": [
+      "edf29d5feab13f25b16e",
+      "77c7a0c76fbc38bdeac1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/readme/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "readme/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f7d2de031648e1548ff8139ad0eef4ca7e9ff6b0d67305395bc19b2df72d963a",
+    "record_ids": [
+      "a53e1776cc6e999ecd65",
+      "fd5af6292b1ffbc850c0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugin/skills/who-to-sell-to/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "who-to-sell-to/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ff6996de2a94a8e36fd476939da15d22ee741a1c6c020cbba29603b8149256ed",
+    "record_ids": [
+      "c1ffd0ff9df9e5a26799",
+      "a58dbb74108e55a4cf6b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "plugins-labs/skills/social-sharing/SKILL.md"
+      },
+      {
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "social-sharing/SKILL.md"
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "entry_sha256": "2e14efd7ace2cfe48893363c3b7a30b7380504134b29e8c06872a2cfbaa97ef4",
+    "record_ids": [
+      "9a616ebd550181c19a89",
+      "f9bc4b242f439707eb2c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "snyk/agent-scan",
+        "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+        "skill_path": "tests/mcp_servers/.test-client-invalid/skills/test-skill/SKILL.md"
+      },
+      {
+        "repository": "snyk/agent-scan",
+        "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+        "skill_path": "tests/mcp_servers/.test-client/skills/test-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6eae3e13441895c53209c2e665840da180859283c3ff0bd515ea651ebf3a5e9a",
+    "record_ids": [
+      "73086ceacffb1f5c5722",
+      "19805b254c9b1bc592d4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "danoszz/penthera",
+        "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+        "skill_path": "plugin/skills/penthera/SKILL.md"
+      },
+      {
+        "repository": "danoszz/penthera",
+        "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+        "skill_path": "skills/penthera/SKILL.md"
+      }
+    ]
+  }
+]

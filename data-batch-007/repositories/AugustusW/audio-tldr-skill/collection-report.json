@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:53:54.449818+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "AugustusW/audio-tldr-skill",
+      "commit_sha": "124d51678cb1ed95984b3eda687c5085300416d9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 58,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/AugustusW/audio-tldr-skill/124d51678cb1ed95984b3eda687c5085300416d9.json"
+    }
+  ],
+  "errors": []
+}

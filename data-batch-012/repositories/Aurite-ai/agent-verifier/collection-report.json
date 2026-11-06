@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:08:19.835175+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 5,
+  "saved_skill_entries": 5,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Aurite-ai/agent-verifier",
+      "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 37,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Aurite-ai/agent-verifier/e7c783a02cc565616d33357572a4f87ef39f1cd7.json"
+    }
+  ],
+  "errors": []
+}

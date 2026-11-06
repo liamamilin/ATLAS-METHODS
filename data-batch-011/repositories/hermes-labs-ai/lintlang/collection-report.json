@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:04:48.862634+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 7,
+  "saved_skill_entries": 7,
+  "unique_entry_texts": 7,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "hermes-labs-ai/lintlang",
+      "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 182,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/hermes-labs-ai/lintlang/d0729b6ec84e68bafb8b329a171e2252a8ff8ecb.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,39 @@
+{
+  "repository": "BehiSecc/VibeSec-Skill",
+  "commit_sha": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "bytes": 11357,
+      "source_url": "https://github.com/BehiSecc/VibeSec-Skill/blob/0590993b35ad51961f65a4d01cf1196dfead05bb/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "status": "saved",
+      "raw_path": "raw/BehiSecc/VibeSec-Skill/0590993b35ad51961f65a4d01cf1196dfead05bb/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "67c816e8e199bd2c07148c470ec7510e41da98d3",
+      "bytes": 4310,
+      "source_url": "https://github.com/BehiSecc/VibeSec-Skill/blob/0590993b35ad51961f65a4d01cf1196dfead05bb/README.md",
+      "sha256": "4939b89250cf8aa98ff26c14bde07efaf605013beadad09683de73fdd58b8a83",
+      "status": "saved",
+      "raw_path": "raw/BehiSecc/VibeSec-Skill/0590993b35ad51961f65a4d01cf1196dfead05bb/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8aee9831a311edd5d055771c31149e6b73bd7ddd",
+      "bytes": 24779,
+      "source_url": "https://github.com/BehiSecc/VibeSec-Skill/blob/0590993b35ad51961f65a4d01cf1196dfead05bb/SKILL.md",
+      "sha256": "d83cd2d3002a7d77cf4ee395d82059f925429dcd584f9c02ea55f0dee7ca94da",
+      "status": "saved",
+      "raw_path": "raw/BehiSecc/VibeSec-Skill/0590993b35ad51961f65a4d01cf1196dfead05bb/SKILL.md"
+    }
+  ]
+}

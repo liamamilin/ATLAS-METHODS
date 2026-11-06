@@ -1,0 +1,278 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "8b83ad8a86c999f12d4e358bfd8e3e617a6173b37f5fb4c6b6008d6fc5fd24d4",
+  "sources": [
+    {
+      "repository": "777genius/agent-notifications",
+      "commit_sha": "53d8f2c528b86147fbda599385f7f2b8ef3fae20",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 2057,
+      "statuses": {
+        "saved": 2030,
+        "non_utf8_or_binary_not_exported": 25,
+        "symlink_not_followed": 2
+      }
+    },
+    {
+      "repository": "Koloyaaa/foreign-academic-translator-skill",
+      "commit_sha": "6683b4df355095e10c83a6e332519f9bff882a75",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 699,
+      "statuses": {
+        "saved": 690,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "MetcalfSolutions/Satori",
+      "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 163,
+      "statuses": {
+        "saved": 155,
+        "symlink_not_followed": 4,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "QingYunA/answer-me-with-html",
+      "commit_sha": "053619b917c6bf2e17eae5496d05eb08e10fe889",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 381,
+      "statuses": {
+        "saved": 371,
+        "non_utf8_or_binary_not_exported": 10
+      }
+    },
+    {
+      "repository": "VoDaiLocz/kilo-kit-mcp",
+      "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+      "candidate_skill_entries": 180,
+      "skill_entries": 180,
+      "manifest_files": 958,
+      "statuses": {
+        "saved": 892,
+        "non_utf8_or_binary_not_exported": 12,
+        "font_not_exported": 54
+      }
+    },
+    {
+      "repository": "antonbabenko/terraform-skill",
+      "commit_sha": "9c1e92d962a5407c227e5566416e962a2f057240",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 32,
+      "statuses": {
+        "saved": 31,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "coderabbitai/skills",
+      "commit_sha": "778c35a36e0afd2549c3fba86ec6e64afe649df3",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 53,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 4,
+        "saved": 49
+      }
+    },
+    {
+      "repository": "conorluddy/ios-simulator-skill",
+      "commit_sha": "30d2ea43ef88d353f4de560e7b7f132e05c502ab",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 100,
+      "statuses": {
+        "saved": 100
+      }
+    },
+    {
+      "repository": "duyunzhoudyz/dyz-gongwen-skills",
+      "commit_sha": "9111fbf1370ba0e2a116c3ef6e70e11f0168257b",
+      "candidate_skill_entries": 22,
+      "skill_entries": 22,
+      "manifest_files": 5617,
+      "statuses": {
+        "saved": 5478,
+        "non_utf8_or_binary_not_exported": 135,
+        "over_size_limit": 4
+      }
+    },
+    {
+      "repository": "hedralab/eskill",
+      "commit_sha": "cbc3c7d62c5bcd27112c9e2d09a8b8744f913983",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 44,
+      "statuses": {
+        "saved": 44
+      }
+    },
+    {
+      "repository": "ibelick/ui-skills",
+      "commit_sha": "00db7d656719c399c091f3ea138c6f42a7fa4d98",
+      "candidate_skill_entries": 9,
+      "skill_entries": 9,
+      "manifest_files": 322,
+      "statuses": {
+        "saved": 311,
+        "non_utf8_or_binary_not_exported": 10,
+        "font_not_exported": 1
+      }
+    },
+    {
+      "repository": "jthack/ffuf_claude_skill",
+      "commit_sha": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 5,
+      "statuses": {
+        "saved": 5
+      }
+    },
+    {
+      "repository": "kklimuk/docx-cli",
+      "commit_sha": "e830c0cd5aac888cf4b749d278db6e71003ab5d9",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 691,
+      "statuses": {
+        "saved": 645,
+        "non_utf8_or_binary_not_exported": 46
+      }
+    },
+    {
+      "repository": "kochetkov-ma/claude-brewcode",
+      "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+      "candidate_skill_entries": 55,
+      "skill_entries": 55,
+      "manifest_files": 1497,
+      "statuses": {
+        "symlink_not_followed": 18,
+        "saved": 1441,
+        "non_utf8_or_binary_not_exported": 32,
+        "over_size_limit": 6
+      }
+    },
+    {
+      "repository": "lackeyjb/playwright-skill",
+      "commit_sha": "dd47a6a023e249eb1b36e9e943eab89d0900865d",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 24,
+      "statuses": {
+        "saved": 24
+      }
+    },
+    {
+      "repository": "pachca/openapi",
+      "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+      "candidate_skill_entries": 19,
+      "skill_entries": 19,
+      "manifest_files": 2079,
+      "statuses": {
+        "saved": 1958,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 116,
+        "font_not_exported": 2,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "ramzesenok/iOS-Accessibility-Audit-Skill",
+      "commit_sha": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 8,
+      "statuses": {
+        "saved": 8
+      }
+    },
+    {
+      "repository": "robzolkos/skill-rails-upgrade",
+      "commit_sha": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 2,
+      "statuses": {
+        "saved": 2
+      }
+    },
+    {
+      "repository": "salemalem/npmscan-mcp-plugin",
+      "commit_sha": "efd8dd03e380c50f10829707913b9a293914c12c",
+      "candidate_skill_entries": 5,
+      "skill_entries": 5,
+      "manifest_files": 94,
+      "statuses": {
+        "saved": 90,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "sanjay3290/ai-skills",
+      "commit_sha": "c84255839a1bfaa06d681aa528f9b50d70002afb",
+      "candidate_skill_entries": 25,
+      "skill_entries": 25,
+      "manifest_files": 152,
+      "statuses": {
+        "saved": 152
+      }
+    },
+    {
+      "repository": "truongduy2611/app-store-preflight-skills",
+      "commit_sha": "cfd9c73577300f9310ca892fefd38fbe1abd73cb",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 30,
+      "statuses": {
+        "saved": 30
+      }
+    },
+    {
+      "repository": "woniu9524/open-web-bridge",
+      "commit_sha": "27c9ebe62c338edc851dc01bef73465712be2006",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 68,
+      "statuses": {
+        "saved": 64,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "zxkane/aws-skills",
+      "commit_sha": "68530c6f296ccd2f5e99c79782f3e0fbf962c51a",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 65,
+      "statuses": {
+        "saved": 59,
+        "symlink_not_followed": 6
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 168719106,
+    "entries_with_license_candidates": 345,
+    "saved": 14629,
+    "non_utf8_or_binary_not_exported": 412,
+    "symlink_not_followed": 31,
+    "font_not_exported": 57,
+    "over_size_limit": 12,
+    "entries_without_license_candidates": 3
+  },
+  "verified_candidate_entries": 348,
+  "verified_skill_entries": 348,
+  "unique_entry_texts": 313,
+  "duplicate_entry_groups": 32,
+  "entries_in_duplicate_groups": 67,
+  "duplicate_entries_beyond_first": 35
+}

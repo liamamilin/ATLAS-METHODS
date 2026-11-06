@@ -1,0 +1,28 @@
+{
+  "repository": "snyk/agent-scan",
+  "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+  "tree_entries": 434,
+  "candidate_skill_paths": [
+    "tests/canary_specs/canary_test_supported_agents/test_projects/proj/.claude/skills/canary-project-skill/SKILL.md",
+    "tests/mcp_servers/.test-client-invalid/skills/invalid-skill/SKILL.md",
+    "tests/mcp_servers/.test-client-invalid/skills/test-skill/SKILL.md",
+    "tests/mcp_servers/.test-client/skills/test-skill/SKILL.md",
+    "tests/skills/algorithmic-art/SKILL.md",
+    "tests/skills/brand-guidelines/SKILL.md",
+    "tests/skills/canvas-design/SKILL.md",
+    "tests/skills/doc-coauthoring/SKILL.md",
+    "tests/skills/docx/SKILL.md",
+    "tests/skills/frontend-design/SKILL.md",
+    "tests/skills/internal-comms/SKILL.md",
+    "tests/skills/malicious-skill/SKILL.md",
+    "tests/skills/mcp-builder/SKILL.md",
+    "tests/skills/pdf/SKILL.md",
+    "tests/skills/pptx/SKILL.md",
+    "tests/skills/skill-creator/SKILL.md",
+    "tests/skills/slack-gif-creator/SKILL.md",
+    "tests/skills/theme-factory/SKILL.md",
+    "tests/skills/web-artifacts-builder/SKILL.md",
+    "tests/skills/webapp-testing/SKILL.md",
+    "tests/skills/xlsx/SKILL.md"
+  ]
+}

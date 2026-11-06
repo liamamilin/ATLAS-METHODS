@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "pachca/openapi",
+      "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8"
+    }
+  ]
+}

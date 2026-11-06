@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "bablobanov/hermes-agent-telegram-checklist",
+      "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+  "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+  "tree_entries": 79,
+  "candidate_skill_paths": [
+    "skills/attribute-creation/SKILL.md",
+    "skills/context-item-creation/SKILL.md",
+    "skills/conversation-review/SKILL.md",
+    "skills/domain-creation/SKILL.md",
+    "skills/entity-creation/SKILL.md",
+    "skills/filtering/SKILL.md",
+    "skills/metric-creation/SKILL.md",
+    "skills/model-exploration/SKILL.md",
+    "skills/query-debugging/SKILL.md",
+    "skills/query/SKILL.md",
+    "skills/relation-creation/SKILL.md",
+    "skills/validation/SKILL.md",
+    "skills/workspace-branch/SKILL.md"
+  ]
+}

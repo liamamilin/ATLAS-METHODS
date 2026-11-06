@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:07.037518+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "wgwtest/novel-writing",
+      "commit_sha": "838729695148008d42c01bd7c3c0c1a5c15de830",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 36,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/wgwtest/novel-writing/838729695148008d42c01bd7c3c0c1a5c15de830.json"
+    }
+  ],
+  "errors": []
+}

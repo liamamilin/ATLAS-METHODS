@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:42:10.975746+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 185,
+  "saved_skill_entries": 185,
+  "unique_entry_texts": 185,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 185,
+      "saved_skill_entries": 185,
+      "saved_text_files": 2112,
+      "files_not_exported": 154,
+      "repository_manifest": "manifests/gooseworks-ai/goose-skills/1add09bd8e0d057e91e25c96b9282498e2fcb2a2.json"
+    }
+  ],
+  "errors": []
+}

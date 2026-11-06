@@ -1,0 +1,22 @@
+{
+  "repository": "ognjengt/founder-skills",
+  "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+  "tree_entries": 46,
+  "candidate_skill_paths": [
+    "skills/brand-copywriter/SKILL.md",
+    "skills/competitor-intel/SKILL.md",
+    "skills/cro-optimization/SKILL.md",
+    "skills/go-to-market-plan/SKILL.md",
+    "skills/lead-magnet-generator/SKILL.md",
+    "skills/linkedin-writer/SKILL.md",
+    "skills/marketing-ideas/SKILL.md",
+    "skills/outreach-specialist/SKILL.md",
+    "skills/prd-generator/SKILL.md",
+    "skills/pricing-strategist/SKILL.md",
+    "skills/product-hunt-launch-plan/SKILL.md",
+    "skills/sop-creator/SKILL.md",
+    "skills/strategic-planning/SKILL.md",
+    "skills/viral-hook-creator/SKILL.md",
+    "skills/x-writer/SKILL.md"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "JayPokale/Chisle",
+      "commit_sha": "1b3203fe394ee84ca143a1e8636fafa8e9e1f906",
+      "collection_root": "repositories/JayPokale/Chisle"
+    },
+    {
+      "repository": "Panniantong/Agent-Reach",
+      "commit_sha": "47898829204ad27521d8a1719e3aeca3b8a3e0ca",
+      "collection_root": "repositories/Panniantong/Agent-Reach"
+    },
+    {
+      "repository": "Qiuner/birdview",
+      "commit_sha": "32b7a77f99639a5e79dfc4cc123bf98f8b889b52",
+      "collection_root": "repositories/Qiuner/birdview"
+    },
+    {
+      "repository": "RAKKUNN/vicem",
+      "commit_sha": "47d5b2191dcfe61cbc1d8ec18033b430fb5ab113",
+      "collection_root": "repositories/RAKKUNN/vicem"
+    },
+    {
+      "repository": "Tubo2333/obsidian-knowledge-brain",
+      "commit_sha": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+      "collection_root": "repositories/Tubo2333/obsidian-knowledge-brain"
+    },
+    {
+      "repository": "amirkiarafiei/subagent-cli-skills",
+      "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+      "collection_root": "repositories/amirkiarafiei/subagent-cli-skills"
+    },
+    {
+      "repository": "archcore-ai/archcore",
+      "commit_sha": "e47d597ceddcb3fafcd1f270165fabe6976e6161",
+      "collection_root": "repositories/archcore-ai/archcore"
+    },
+    {
+      "repository": "awrshift/agent-memory-kit",
+      "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e",
+      "collection_root": "repositories/awrshift/agent-memory-kit"
+    },
+    {
+      "repository": "chrono-meta/forge-harness",
+      "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+      "collection_root": "repositories/chrono-meta/forge-harness"
+    },
+    {
+      "repository": "dankofly/perfectify",
+      "commit_sha": "8c4b8f11008df36896ebb4de610d7ad2b52fe68c",
+      "collection_root": "repositories/dankofly/perfectify"
+    },
+    {
+      "repository": "k-kolomeitsev/data-structure-protocol",
+      "commit_sha": "d3da6d96776b5de8748fb416f34d2297ba29f9a0",
+      "collection_root": "repositories/k-kolomeitsev/data-structure-protocol"
+    },
+    {
+      "repository": "khendzel/skills-janitor",
+      "commit_sha": "4b42f391fd537b791d1c09c7825be0bc641fd41c",
+      "collection_root": "repositories/khendzel/skills-janitor"
+    },
+    {
+      "repository": "ohad6k/emulo",
+      "commit_sha": "5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe",
+      "collection_root": "repositories/ohad6k/emulo"
+    },
+    {
+      "repository": "oliver-zehentleitner/keep-the-why",
+      "commit_sha": "e640a3d2c8dc8eb57cbab8c40562e3e8e7d551eb",
+      "collection_root": "repositories/oliver-zehentleitner/keep-the-why"
+    },
+    {
+      "repository": "orziz/odai",
+      "commit_sha": "ce7a999843ca42ecd84778561cb0ac7642c5648e",
+      "collection_root": "repositories/orziz/odai"
+    },
+    {
+      "repository": "rebelytics/one-skill-to-rule-them-all",
+      "commit_sha": "f86755764373f96a50401762f31f22077127b999",
+      "collection_root": "repositories/rebelytics/one-skill-to-rule-them-all"
+    },
+    {
+      "repository": "ruslanlap/cavemenko",
+      "commit_sha": "cb1d5f42774682ded8029c67c55ac62df95568dd",
+      "collection_root": "repositories/ruslanlap/cavemenko"
+    },
+    {
+      "repository": "sametbrr/llm-wiki-manager",
+      "commit_sha": "28ad2850354a5e9aa1fd3798dade5ba9a35b371a",
+      "collection_root": "repositories/sametbrr/llm-wiki-manager"
+    },
+    {
+      "repository": "stjbrown/agent-knowledge",
+      "commit_sha": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+      "collection_root": "repositories/stjbrown/agent-knowledge"
+    },
+    {
+      "repository": "swiftlysingh/excalidraw-cli",
+      "commit_sha": "913349475eb7200f458ae3a046a12669fa044bed",
+      "collection_root": "repositories/swiftlysingh/excalidraw-cli"
+    },
+    {
+      "repository": "thedotmack/claude-mem",
+      "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+      "collection_root": "repositories/thedotmack/claude-mem"
+    },
+    {
+      "repository": "thousandflowers/skillreaper",
+      "commit_sha": "1cfd85dce3ac922df37ff4c86f281ae3f695c8d8",
+      "collection_root": "repositories/thousandflowers/skillreaper"
+    },
+    {
+      "repository": "vshulcz/deja-vu",
+      "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+      "collection_root": "repositories/vshulcz/deja-vu"
+    },
+    {
+      "repository": "zilliztech/mfs",
+      "commit_sha": "78352894a0a826ee24db852411bf9a3c49884922",
+      "collection_root": "repositories/zilliztech/mfs"
+    }
+  ]
+}

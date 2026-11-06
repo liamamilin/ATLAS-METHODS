@@ -1,0 +1,26 @@
+{
+  "repository": "shalintripathi/saas-marketing-agents",
+  "commit_sha": "bddf39add29f331723bdcbea1a69ec2c6876d66e",
+  "tree_entries": 278,
+  "candidate_skill_paths": [
+    "plugins/saas-marketing/skills/abm-ops/SKILL.md",
+    "plugins/saas-marketing/skills/catalyst-orchestrator/SKILL.md",
+    "plugins/saas-marketing/skills/client-operations/SKILL.md",
+    "plugins/saas-marketing/skills/comms-ops/SKILL.md",
+    "plugins/saas-marketing/skills/content-marketing/SKILL.md",
+    "plugins/saas-marketing/skills/design-ops/SKILL.md",
+    "plugins/saas-marketing/skills/developer-marketing-ops/SKILL.md",
+    "plugins/saas-marketing/skills/email-marketing-ops/SKILL.md",
+    "plugins/saas-marketing/skills/events-ops/SKILL.md",
+    "plugins/saas-marketing/skills/growth-ops/SKILL.md",
+    "plugins/saas-marketing/skills/marketing-analytics/SKILL.md",
+    "plugins/saas-marketing/skills/marketing-project-mgmt/SKILL.md",
+    "plugins/saas-marketing/skills/paid-media-ops/SKILL.md",
+    "plugins/saas-marketing/skills/partnerships-ops/SKILL.md",
+    "plugins/saas-marketing/skills/product-marketing-ops/SKILL.md",
+    "plugins/saas-marketing/skills/saas-marketing-suite/SKILL.md",
+    "plugins/saas-marketing/skills/sales-enablement/SKILL.md",
+    "plugins/saas-marketing/skills/seo-growth/SKILL.md",
+    "plugins/saas-marketing/skills/social-media-ops/SKILL.md"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:45:06.603790+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 39,
+  "saved_skill_entries": 39,
+  "unique_entry_texts": 39,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "karero/croftweaver",
+      "commit_sha": "26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 39,
+      "saved_skill_entries": 39,
+      "saved_text_files": 928,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/karero/croftweaver/26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2.json"
+    }
+  ],
+  "errors": []
+}

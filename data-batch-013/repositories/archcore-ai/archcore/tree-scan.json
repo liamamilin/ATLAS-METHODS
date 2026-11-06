@@ -1,0 +1,11 @@
+{
+  "repository": "archcore-ai/archcore",
+  "commit_sha": "e47d597ceddcb3fafcd1f270165fabe6976e6161",
+  "tree_entries": 95,
+  "candidate_skill_paths": [
+    "plugins/archcore/skills/document/SKILL.md",
+    "plugins/archcore/skills/init/SKILL.md",
+    "plugins/archcore/skills/plan/SKILL.md",
+    "plugins/archcore/skills/review/SKILL.md"
+  ]
+}

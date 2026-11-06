@@ -1,0 +1,528 @@
+[
+  {
+    "entry_sha256": "0b67fb34380e7cae23bdd9957d796f21a323e00f002a8c1cb6cedbd2b143f13b",
+    "record_ids": [
+      "a769530e035731293490",
+      "60339bba65eaf674e75a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/mental-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/mental-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "20ce7f0d35890ea81dc84863f9829d84e1d28fb855e3da1f3f86fe113db2e8ca",
+    "record_ids": [
+      "19dd754a31f19818922c",
+      "95db1671d127ec39b242"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/occupational-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/occupational-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "328953e6e4a21f8a38e979f9729818721af387724b799cb7cc96e072d0012d2f",
+    "record_ids": [
+      "46c3c338912b3c30de4f",
+      "ee7e909abea1cf5162be"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/qzcli/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/qzcli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "367364c625fa554efc98fe26d6a443fa3763def3cfa49b275ce1e976f9947295",
+    "record_ids": [
+      "568c3e9b837705dabc51",
+      "44f3f97edbe8408228b2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/sleep-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/sleep-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "37c68a153d8a73f08cf98663b965bce3ea8eef0e1d0186744d417ca9a83baaf9",
+    "record_ids": [
+      "23aee039147666c0e0b2",
+      "a76a5459077bba66eaae"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/tcm-constitution-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/tcm-constitution-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "483c4e837aad1ba4950cc222aa9c4186e86142195471fbddc23ab3f765be9885",
+    "record_ids": [
+      "74e58940edbf37b5b81e",
+      "5219b13ab60aa351ed8f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/weightloss-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/weightloss-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4c69bc650a67d1688f44c909c49be98ffe74ea427b3859edb3c3357ec5730136",
+    "record_ids": [
+      "0667fb6567e4736e0146",
+      "d3e0a19291d452d38ef0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/figure-description/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/figure-description/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "58a317dbd74e9ecb7183d0113be85a80cfd23e65b0fb4da3b17b139aded7c972",
+    "record_ids": [
+      "cd628deb7cccbc049d00",
+      "a6182041f122b1730aff"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/nutrition-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/nutrition-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5937a21544c0db5d0dd576bf1486f3fa3def7ffecb3cadcda60a1b8aad085ebe",
+    "record_ids": [
+      "6ef986add9368835fba1",
+      "49fc7ef5c0f1b27478e8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/rehabilitation-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/rehabilitation-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "66fa3bc8b2b8e4d1974d4a4cb0c07b00442539dcb96dd42ee3e14cf964dbeb9a",
+    "record_ids": [
+      "82599a4b1407ef354967",
+      "27473ced8d9aba913fc1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/emergency-card/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/emergency-card/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6d4a8ad982e9032863db41cc7d3bdda563cfc20f5597458a46d45de7a5e6e3ad",
+    "record_ids": [
+      "095c5fbf252574afbd2c",
+      "03f758564e32ec4c6898"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/skin-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/skin-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7683f58c4ad6465b4c4dd4f360876b12b0132777ca4ba40c1e48b777f4b40bb9",
+    "record_ids": [
+      "97e8802c2b0802540a87",
+      "fac51a456adcb1a08a20"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/jurisdiction-format/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/jurisdiction-format/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "798ea3dbb178ea6272bb18507937bad79422b8f51e74d734502254cb42f6a424",
+    "record_ids": [
+      "26e852928ea9a8fb3da1",
+      "42c05dc4ecd43304cbfe"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/travel-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/travel-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8793fb26c522de4c44a64b68df81e5d12718a99866c639658261cea680bd58b2",
+    "record_ids": [
+      "0e29699d17451115c1a3",
+      "92976f19d322ad2a70df"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/prior-art-search/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/prior-art-search/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8833b4569435077554d51ac59f79c8b4ceca64b777f129b1e8eaa328be9bb9a2",
+    "record_ids": [
+      "d504eae6d79a8d5029a9",
+      "2d25a8aee828a8927227"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/embodiment-description/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/embodiment-description/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "97c6a3a08a2a487d8a6ecaf829e51ed21ce60d8561b84919b477cb029481149b",
+    "record_ids": [
+      "5e0692e03d6b91e39279",
+      "3570213aa63e3f7d097e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/goal-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/goal-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9d31e32d2a63cf2f27a843e171c652327596c3f9e911c265660618d4ba27c48e",
+    "record_ids": [
+      "488f554e609d708e83a0",
+      "aed6dc486d374155f424"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/system-profile/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/system-profile/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b6c9dcbd2cf8de1c87c1be4be9186308b72de4c57ce4e66479ed1ff67208bcfd",
+    "record_ids": [
+      "8eb559b00247f20188e3",
+      "b0e90dcb047bb83ad590"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/ai-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/ai-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c4ca61917b36239aa8fa099dd50809ae0f0bd6edfe4d56b6fbf258f0ae278590",
+    "record_ids": [
+      "d57915d619fea1b52b12",
+      "67aee700be80b1ffb7c1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/oral-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/oral-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cabf9ca7e81e7b5b5b4886802b184ee553050fc4f7a2f79e5cb85fbe10ae279a",
+    "record_ids": [
+      "fb5477510f12b22293cf",
+      "29fcbbd1f04d8d11e18f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/food-database-query/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/food-database-query/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cb354b50f7fa62bd14a404028f0ee6e94bf9471b5d3e8b70699f445f6c812005",
+    "record_ids": [
+      "4221ec1e9f8e94493bfd",
+      "e27d3635fe42ce5241c2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/health-trend-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/health-trend-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cd3dc0458ac11cece8e13c6a72b0e98ece4203f12f6627e1171a54428c4a7400",
+    "record_ids": [
+      "39b8c9ac1cef7d7385e4",
+      "a30a25bbdfe8356ed801"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/sexual-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/sexual-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d6e812f6c76fda1bd2cbb480b08ad0ef1ac8302f1fd10ab94654c2528b89b072",
+    "record_ids": [
+      "0ecee3b708b2bbdb0801",
+      "19a400f399d7c2c8ff95",
+      "2e6baca25c23df20521c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "frmoretto/clarity-gate",
+        "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+        "skill_path": ".codex/skills/clarity-gate/SKILL.md"
+      },
+      {
+        "repository": "frmoretto/clarity-gate",
+        "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+        "skill_path": ".github/skills/clarity-gate/SKILL.md"
+      },
+      {
+        "repository": "frmoretto/clarity-gate",
+        "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+        "skill_path": "skills/clarity-gate/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dc80dcd0ae2d340a729708ce067544e74763ec8880bef2e8de64461ff891b74d",
+    "record_ids": [
+      "2808e07c265a6cdd9371",
+      "d84620c09f32d10f3a37"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/family-health-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/family-health-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "df8f5738809dbbc3ae5a3a6ac5953b6e46221af1e66c421a718d7b0d0b5132b7",
+    "record_ids": [
+      "31e286adfc6837ab74da",
+      "ef57c58e6a3728f0a697"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": ".claude/skills/fitness-analyzer/SKILL.md"
+      },
+      {
+        "repository": "huifer/WellAlly-health",
+        "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+        "skill_path": "skills/fitness-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ffb5f3ccf61c45d90c41901c251263f945c67baba0f91cb300cc1d53dcd63d01",
+    "record_ids": [
+      "761a8788184b7b54ce7c",
+      "6b53a3e8d004322c78b7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/web-debug-search/SKILL.md"
+      },
+      {
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/web-debug-search/SKILL.md"
+      }
+    ]
+  }
+]

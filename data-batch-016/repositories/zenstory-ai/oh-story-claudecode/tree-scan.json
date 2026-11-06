@@ -1,0 +1,21 @@
+{
+  "repository": "zenstory-ai/oh-story-claudecode",
+  "commit_sha": "d4a7766d35876a4ac01ad3beb4b4f2002de78f04",
+  "tree_entries": 848,
+  "candidate_skill_paths": [
+    "skills/browser-cdp/SKILL.md",
+    "skills/story-cover/SKILL.md",
+    "skills/story-deslop/SKILL.md",
+    "skills/story-import/SKILL.md",
+    "skills/story-long-analyze/SKILL.md",
+    "skills/story-long-scan/SKILL.md",
+    "skills/story-long-write/SKILL.md",
+    "skills/story-publish/SKILL.md",
+    "skills/story-review/SKILL.md",
+    "skills/story-setup/SKILL.md",
+    "skills/story-short-analyze/SKILL.md",
+    "skills/story-short-scan/SKILL.md",
+    "skills/story-short-write/SKILL.md",
+    "skills/story/SKILL.md"
+  ]
+}

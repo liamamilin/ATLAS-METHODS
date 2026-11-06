@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:59:12.185538+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 13,
+  "saved_skill_entries": 13,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "CloudAI-X/threejs-skills",
+      "commit_sha": "0e181866f095b5f06d005133876e926515390d95",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 15,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95.json"
+    }
+  ],
+  "errors": []
+}

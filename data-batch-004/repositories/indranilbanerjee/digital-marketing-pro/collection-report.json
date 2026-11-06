@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:41:27.680554+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 164,
+  "saved_skill_entries": 164,
+  "unique_entry_texts": 164,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "indranilbanerjee/digital-marketing-pro",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 164,
+      "saved_skill_entries": 164,
+      "saved_text_files": 788,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/indranilbanerjee/digital-marketing-pro/cc45ca06eaf48abde3bb60fb79d31c41229c58db.json"
+    }
+  ],
+  "errors": []
+}

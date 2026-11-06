@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:20:07.828490+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "eatmoreduck/boss-zhipin-scraper",
+      "commit_sha": "7913419b6b53e45ee621da7dab066a350ef7b060",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 24,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060.json"
+    }
+  ],
+  "errors": []
+}

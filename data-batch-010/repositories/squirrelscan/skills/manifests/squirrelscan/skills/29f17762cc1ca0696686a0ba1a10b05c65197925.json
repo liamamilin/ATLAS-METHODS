@@ -1,0 +1,323 @@
+{
+  "repository": "squirrelscan/skills",
+  "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "39d30150119da1a78c1752ba4e7b8837e8898fdc",
+      "bytes": 1067,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.claude-plugin/marketplace.json",
+      "sha256": "5f50465d5982f1153617efaf44ad84a660c3391f663aa6464d6f3a3aadc740d5",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "358017219ce2a5d491c5da8f68a25026065577af",
+      "bytes": 710,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.claude-plugin/plugin.json",
+      "sha256": "8afd4d68b6bed0b7feffa05099e6b2a24e2320cf1227a076a423d63f88760650",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".cursor-plugin/mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b2638d449f119a23161ff118cafeb742a418b1fa",
+      "bytes": 124,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.cursor-plugin/mcp.json",
+      "sha256": "941aa78bedec96f8247da1e74a5a4f6f2087bb1360b12789b1d190e8beecedca",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.cursor-plugin/mcp.json"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a5d2d5574553b53450bdc87a9dcf03575532a853",
+      "bytes": 682,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.cursor-plugin/plugin.json",
+      "sha256": "83016dbf38eff9cd53eade352b1666245876b3483569c8148d37846f1f876bf9",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.cursor-plugin/plugin.json"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b91d7730d8ec2c583f4eea37a4eb79a00f648a7a",
+      "bytes": 318,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.github/workflows/check.yml",
+      "sha256": "bbb6a4029b2ce549b501d4d05c7c78b2939ae52905c438f9308e26eec5dd9a58",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.github/workflows/check.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "07c9abee1cb99e0bebd608928a80157bc7182db4",
+      "bytes": 248,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.gitignore",
+      "sha256": "fddab214d4e9415829facd50118dcb43dccf80042acaf8174ee77830f3925afa",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.gitignore"
+    },
+    {
+      "path": ".mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b2638d449f119a23161ff118cafeb742a418b1fa",
+      "bytes": 124,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/.mcp.json",
+      "sha256": "941aa78bedec96f8247da1e74a5a4f6f2087bb1360b12789b1d190e8beecedca",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/.mcp.json"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e8caf059671df4f59ccca1b48b70ebc789f83a53",
+      "bytes": 1069,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/LICENSE",
+      "sha256": "09b3405b605f592cf1d8f055b5b73dfb6816791a470aeb8870166d0b9785a8ee",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/LICENSE"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7b8bec9ba14d55d45fd10fe17589f86e856ebfe5",
+      "bytes": 1359,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/Makefile",
+      "sha256": "387aee7aaa843717eaaf2690bab6120f67cdfdeef714b797f15681dac8a4d4ea",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/Makefile"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dca6c98dbebb2515efa78336d789015dfa0a5681",
+      "bytes": 11138,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/README.md",
+      "sha256": "8f14c819609386e2c92a65c77c3e78bfea89e3204fdffb1fe283fe8b3a75adfd",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/README.md"
+    },
+    {
+      "path": "manifest.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6fe1d040ac726ce6e4f6e6a090dc30bba498a4a4",
+      "bytes": 2154,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/manifest.json",
+      "sha256": "2844cc1b19ea59fe1d85260e18447d40a82d4b7598822e5dc3659a481dfaffb9",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/manifest.json"
+    },
+    {
+      "path": "mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "36191a78ad5195a249b30424836ff400900e3137",
+      "bytes": 207,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/mcp.json",
+      "sha256": "9dd9c98bb6247c1033ae9e2b683464b01f8c65332b60bda4b7e8ad2244e635d2",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/mcp.json"
+    },
+    {
+      "path": "plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6f7ec2804527eca7ec3a69d6efb9afee3ef66ab6",
+      "bytes": 1832,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/plugin.json",
+      "sha256": "e7129c094d7b2c568b255d296cab59562e36c36a76d91ed5de4798025fce837f",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/plugin.json"
+    },
+    {
+      "path": "plugins/squirrelscan-channel/.claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "446e72936a33c63880ddfecbff165a22089b9c89",
+      "bytes": 815,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/.claude-plugin/plugin.json",
+      "sha256": "00fc0511d1041c99bd4bfd473cf58610863bbab4365055f2c52b9f7cef4d4ddb",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/squirrelscan-channel/.mcp.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "529346cdcc807a4073f6e7751b0e3d0a4a124749",
+      "bytes": 109,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/.mcp.json",
+      "sha256": "4a79aee7b7abf7e1a6b131d3edf9c4c4378fa267e7fc3ab4d1b44e072ed5642e",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/.mcp.json"
+    },
+    {
+      "path": "plugins/squirrelscan-channel/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "27c629d98c5d78247fe26c8de36fdc8094e0163a",
+      "bytes": 2765,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/README.md",
+      "sha256": "79e5be4b4d89a2bdd82082fe83f7ef425634d16e649f42f0d2e5447f2ad6df07",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/plugins/squirrelscan-channel/README.md"
+    },
+    {
+      "path": "scripts/check-skills.ts",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "229d7bde5d1d733f142c3bb016a4fc85297534eb",
+      "bytes": 10846,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/scripts/check-skills.ts",
+      "sha256": "9aa30b2c13ccb6f4e80db7466e115232b7ab10890f2ea928bb7d3b2aa50a870f",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/scripts/check-skills.ts"
+    },
+    {
+      "path": "scripts/manifest.ts",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d69ce3d4ffcc64e23ad7b38a373754cb06b1d95c",
+      "bytes": 4498,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/scripts/manifest.ts",
+      "sha256": "bb5816725dabe6b8f3547078badfd2dc2a9a7e064765dce71edeb9f7ddb6cc05",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/scripts/manifest.ts"
+    },
+    {
+      "path": "skills/audit-website/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "63f7e036e485dd7c98233eba55e888782c001f98",
+      "bytes": 1152,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/README.md",
+      "sha256": "d1861f0933872da5d42d77794c7305a1b46b64c86c320fb8a7b721c7155c3fc9",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/README.md"
+    },
+    {
+      "path": "skills/audit-website/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "be550f8221203e710a044d2132f55f5ed37cbfe2",
+      "bytes": 6829,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/SKILL.md",
+      "sha256": "b5e1b50fc0ceb6de4d1bc7774810bfd75d97230743209d47d5818831cf49edae",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/SKILL.md"
+    },
+    {
+      "path": "skills/audit-website/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f05e22e2de37ada322e1c8ff2a731e00b8a489b4",
+      "bytes": 229,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/agents/openai.yaml",
+      "sha256": "128361e8b4f7f25812492c31136c2b7327720b9f3e140a1c7770d805d885fad6",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/agents/openai.yaml"
+    },
+    {
+      "path": "skills/audit-website/assets/icon-large.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0131108f4e39963820b98662b21898016834b178",
+      "bytes": 2763,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/assets/icon-large.png",
+      "sha256": "5a5ccd84f57b8a030caf51cc7e57b1b412996ad7db837303a2473f6e4313073c",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "skills/audit-website/assets/icon-small.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e9556ad64a025d1356525a6d322e2e74dc6ede14",
+      "bytes": 1721,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/assets/icon-small.svg",
+      "sha256": "ea7f6275693d96577383d550f97eda5e5fdd70da51b7f770dabf84bb72b7759d",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/assets/icon-small.svg"
+    },
+    {
+      "path": "skills/audit-website/references/OUTPUT-FORMAT.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "53eaf8222fe9c6065d118c6a8e492b245530db85",
+      "bytes": 9126,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/references/OUTPUT-FORMAT.md",
+      "sha256": "a59e875cc5450a2f66d980c10b24ffd9be30020197e15c54b06aa155b1be8f5f",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/audit-website/references/OUTPUT-FORMAT.md"
+    },
+    {
+      "path": "skills/squirrelscan/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb66254c76a82ffa09e30be83adc00d8495e3b0a",
+      "bytes": 49825,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/SKILL.md",
+      "sha256": "c06b52202b720d7094b574159c01ec8d1bb070278482285f6181d20ddabf86e3",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/SKILL.md"
+    },
+    {
+      "path": "skills/squirrelscan/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ce329adba99ef5f0cb7e9225aaeb7b2a3c2f88f3",
+      "bytes": 230,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/agents/openai.yaml",
+      "sha256": "612093ecaadae16633b4c11aefbf6c5dfd373e98bc59a5ce0417ee784a8a18e2",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/agents/openai.yaml"
+    },
+    {
+      "path": "skills/squirrelscan/assets/icon-large.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0131108f4e39963820b98662b21898016834b178",
+      "bytes": 2763,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/assets/icon-large.png",
+      "sha256": "5a5ccd84f57b8a030caf51cc7e57b1b412996ad7db837303a2473f6e4313073c",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "skills/squirrelscan/assets/icon-small.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e9556ad64a025d1356525a6d322e2e74dc6ede14",
+      "bytes": 1721,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/assets/icon-small.svg",
+      "sha256": "ea7f6275693d96577383d550f97eda5e5fdd70da51b7f770dabf84bb72b7759d",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/assets/icon-small.svg"
+    },
+    {
+      "path": "skills/squirrelscan/references/entity-map-fixes.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cf8ae238fbf56db2d7e31613e353da9b84447dbf",
+      "bytes": 9062,
+      "source_url": "https://github.com/squirrelscan/skills/blob/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/references/entity-map-fixes.md",
+      "sha256": "6081d206b927996294b93bd827135bcc41e98f831791811b5788806f9b01e47b",
+      "status": "saved",
+      "raw_path": "raw/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925/skills/squirrelscan/references/entity-map-fixes.md"
+    }
+  ]
+}

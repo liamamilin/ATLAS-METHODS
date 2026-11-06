@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:11.406962+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "cyperx84/claude-skills-mental-models",
+      "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 38,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/cyperx84/claude-skills-mental-models/4f7d092995ea01d4f9295052b8d96b506e00a007.json"
+    }
+  ],
+  "errors": []
+}

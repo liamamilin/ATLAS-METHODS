@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "Continuum-AI-Corp/OrcaReplay",
+      "commit_sha": "a9178ca26af95cfd3231b8eb2da4ae11dbbd0a84",
+      "collection_root": "repositories/Continuum-AI-Corp/OrcaReplay"
+    },
+    {
+      "repository": "UiPath/coder_eval",
+      "commit_sha": "bc45225fe4b836ae9376a66fc5864f5b49e6851f",
+      "collection_root": "repositories/UiPath/coder_eval"
+    },
+    {
+      "repository": "allxsmith/bestax",
+      "commit_sha": "dacd0ca4870f91e24308a2963a88276a447be21b",
+      "collection_root": "repositories/allxsmith/bestax"
+    },
+    {
+      "repository": "d1vai/d1v-cli",
+      "commit_sha": "7781db31cea568107984f98800a8640862bb2c13",
+      "collection_root": "repositories/d1vai/d1v-cli"
+    },
+    {
+      "repository": "dannwaneri/spec-writer",
+      "commit_sha": "bfdeaedea5a90b86a3db213caa49073a173bb49e",
+      "collection_root": "repositories/dannwaneri/spec-writer"
+    },
+    {
+      "repository": "exadel-inc/agentic-readiness-assessment",
+      "commit_sha": "ea984d78133871c5014ddcbdabc8532058f3f6a2",
+      "collection_root": "repositories/exadel-inc/agentic-readiness-assessment"
+    },
+    {
+      "repository": "fishzjp/qa-skills",
+      "commit_sha": "34b08d6e4a7a2e72da0f01759b161b46d6776054",
+      "collection_root": "repositories/fishzjp/qa-skills"
+    },
+    {
+      "repository": "fujibee/agmsg",
+      "commit_sha": "c47f40aaceb7b524ed7ea34de6c833823fdd28c0",
+      "collection_root": "repositories/fujibee/agmsg"
+    },
+    {
+      "repository": "gongdear/cline-pilot",
+      "commit_sha": "aff85675ae2fdcca1e5824230b1be86ab4b89198",
+      "collection_root": "repositories/gongdear/cline-pilot"
+    },
+    {
+      "repository": "hasuwini77/3d-logo-skill",
+      "commit_sha": "d999724b52ad6836edda6c3dd9d058884b76bf2f",
+      "collection_root": "repositories/hasuwini77/3d-logo-skill"
+    },
+    {
+      "repository": "hermes-labs-ai/lintlang",
+      "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb",
+      "collection_root": "repositories/hermes-labs-ai/lintlang"
+    },
+    {
+      "repository": "hermes-labs-ai/little-canary",
+      "commit_sha": "7045f31882048c58e6b5ea42642b351b5c37a7a1",
+      "collection_root": "repositories/hermes-labs-ai/little-canary"
+    },
+    {
+      "repository": "kensaurus/skills",
+      "commit_sha": "c617b8caf90d63fb0950dc1c848b78b148fd414b",
+      "collection_root": "repositories/kensaurus/skills"
+    },
+    {
+      "repository": "kulchankas/paranoid",
+      "commit_sha": "b5bbdcead155ae9c2dae8a1f393f122e36306c88",
+      "collection_root": "repositories/kulchankas/paranoid"
+    },
+    {
+      "repository": "lindblomstefan/skills-library",
+      "commit_sha": "8a1db1246d7ddaf2eced1f98f3c8d81c6b882a9e",
+      "collection_root": "repositories/lindblomstefan/skills-library"
+    },
+    {
+      "repository": "lukstei/slop-grader",
+      "commit_sha": "a0cdba4a14950cc943b387dfd30e7d3e308af683",
+      "collection_root": "repositories/lukstei/slop-grader"
+    },
+    {
+      "repository": "marvkr/better-design",
+      "commit_sha": "175e7ba49bcf83857abc32933686b5aa3abb197e",
+      "collection_root": "repositories/marvkr/better-design"
+    },
+    {
+      "repository": "ollygarden/opentelemetry-agent-skills",
+      "commit_sha": "3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68",
+      "collection_root": "repositories/ollygarden/opentelemetry-agent-skills"
+    },
+    {
+      "repository": "rainmanjam/poka-yoke",
+      "commit_sha": "726a575e3d48d07d908abfcbb192cae09671fff2",
+      "collection_root": "repositories/rainmanjam/poka-yoke"
+    },
+    {
+      "repository": "saleh-alhaddad/itqan-engineering",
+      "commit_sha": "580dd46b04163a28d6a4cf89d4bc6bcf50531d45",
+      "collection_root": "repositories/saleh-alhaddad/itqan-engineering"
+    },
+    {
+      "repository": "scarletkc/agents",
+      "commit_sha": "8e149b335e963954e9c4bafba00eedbd7de060ed",
+      "collection_root": "repositories/scarletkc/agents"
+    },
+    {
+      "repository": "szarkans/multi",
+      "commit_sha": "e5292e43bd1d2be4b44284f9f2e42d1d1049dcbf",
+      "collection_root": "repositories/szarkans/multi"
+    },
+    {
+      "repository": "tt-a1i/archify",
+      "commit_sha": "a4065941f12be7967436261d9934784e381d423c",
+      "collection_root": "repositories/tt-a1i/archify"
+    },
+    {
+      "repository": "unbrowse-ai/unbrowse",
+      "commit_sha": "41db2a37092aa704d65fc4a8027e1e3733c258d0",
+      "collection_root": "repositories/unbrowse-ai/unbrowse"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "repository": "HeshamFS/materials-simulation-skills",
+  "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+  "tree_entries": 414,
+  "candidate_skill_paths": [
+    "skills/core-numerical/convergence-study/SKILL.md",
+    "skills/core-numerical/differentiation-schemes/SKILL.md",
+    "skills/core-numerical/linear-solvers/SKILL.md",
+    "skills/core-numerical/mesh-generation/SKILL.md",
+    "skills/core-numerical/nonlinear-solvers/SKILL.md",
+    "skills/core-numerical/numerical-integration/SKILL.md",
+    "skills/core-numerical/numerical-stability/SKILL.md",
+    "skills/core-numerical/time-stepping/SKILL.md",
+    "skills/data-management/fair-simulation-packager/SKILL.md",
+    "skills/hpc-deployment/hpc-runtime-doctor/SKILL.md",
+    "skills/hpc-deployment/slurm-job-script-generator/SKILL.md",
+    "skills/meta/skill-evaluator/SKILL.md",
+    "skills/ontology/ontology-explorer/SKILL.md",
+    "skills/ontology/ontology-mapper/SKILL.md",
+    "skills/ontology/ontology-validator/SKILL.md",
+    "skills/robustness/simulation-failure-triage/SKILL.md",
+    "skills/simulation-workflow/md-analysis-planner/SKILL.md",
+    "skills/simulation-workflow/parameter-optimization/SKILL.md",
+    "skills/simulation-workflow/performance-profiling/SKILL.md",
+    "skills/simulation-workflow/post-processing/SKILL.md",
+    "skills/simulation-workflow/simulation-orchestrator/SKILL.md",
+    "skills/simulation-workflow/simulation-validator/SKILL.md",
+    "skills/simulation-workflow/workflow-engine-mapper/SKILL.md",
+    "skills/verification-validation/benchmark-and-mms-planner/SKILL.md"
+  ]
+}

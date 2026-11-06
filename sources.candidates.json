@@ -2574,7 +2574,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a",
+      "batch": "004"
     },
     {
       "repository": "gitroomhq/postiz-agent",
@@ -2588,7 +2590,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+      "batch": "004"
     },
     {
       "repository": "heygen-com/hyperframes",
@@ -2602,7 +2606,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7",
+      "batch": "004"
     },
     {
       "repository": "taisly/agent",
@@ -2616,7 +2622,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef",
+      "batch": "004"
     },
     {
       "repository": "indranilbanerjee/digital-marketing-pro",
@@ -2630,7 +2638,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+      "batch": "004"
     },
     {
       "repository": "infrasity-labs/dev-gtm-claude-skills",
@@ -2644,7 +2654,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+      "batch": "004"
     },
     {
       "repository": "nowork-studio/notfair-plugin",
@@ -2658,7 +2670,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05",
+      "batch": "004"
     },
     {
       "repository": "aaron-he-zhu/aaron-marketing-skills",
@@ -2672,7 +2686,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9c8815c728c550cf551b82e1c6e1a307c5eae61f",
+      "batch": "004"
     },
     {
       "repository": "gooseworks-ai/goose-skills",
@@ -2686,7 +2702,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+      "batch": "004"
     },
     {
       "repository": "sergebulaev/linkedin-skills",
@@ -2707,7 +2725,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+      "batch": "004"
     },
     {
       "repository": "Vladimir-Human/humanizer-ru",
@@ -2721,7 +2741,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3",
+      "batch": "004"
     },
     {
       "repository": "Bomx/distribb-skill",
@@ -2735,7 +2757,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "01bbede516a8963bff5731bbda412f0e2a364188",
+      "batch": "004"
     },
     {
       "repository": "citlyze/citlyze-skills",
@@ -2749,7 +2773,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+      "batch": "004"
     },
     {
       "repository": "AIDevGTM/gtm-cofounder",
@@ -2763,7 +2789,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e",
+      "batch": "004"
     },
     {
       "repository": "mailtrap/mailtrap-skills",
@@ -2777,7 +2805,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766",
+      "batch": "004"
     },
     {
       "repository": "YannisKiefer/dark-psychology-skills",
@@ -2791,7 +2821,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+      "batch": "004"
     },
     {
       "repository": "SupercmoHQ/superCMO-skills",
@@ -2805,7 +2837,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+      "batch": "004"
     },
     {
       "repository": "sandbaseai/sandbase-skills",
@@ -2819,7 +2853,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+      "batch": "004"
     },
     {
       "repository": "Nanako0129/sepia",
@@ -2833,7 +2869,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+      "batch": "004"
     },
     {
       "repository": "ScrapeCreators/social-media-research-skills",
@@ -2847,7 +2885,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+      "batch": "004"
     },
     {
       "repository": "ilyautov/humanizer-ru",
@@ -2861,7 +2901,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626",
+      "batch": "004"
     },
     {
       "repository": "vanshyadav1408/Omentir",
@@ -2875,7 +2917,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "238517f827581b884f9ab860815a255905867f6f",
+      "batch": "004"
     },
     {
       "repository": "socai-io/jev-social",
@@ -2889,7 +2933,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2f02e6f4c60943e679993634ad1017b0c97efff5",
+      "batch": "004"
     },
     {
       "repository": "explorium-ai/vibeprospecting-plugin",
@@ -2903,7 +2949,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0",
+      "batch": "004"
     },
     {
       "repository": "nagameTW/formosa-humanizer",
@@ -2917,7 +2965,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4f7c1d9a3e955e97da9bb5aef6a53f052a604153",
+      "batch": "005"
     },
     {
       "repository": "Upload-Post/upload-post-skill",
@@ -2931,7 +2981,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "539cdbdec9525cde8865bed549e907312d180162",
+      "batch": "005"
     },
     {
       "repository": "AbubakrChan/product-launch-motion",
@@ -2945,7 +2997,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+      "batch": "005"
     },
     {
       "repository": "yuwen-cool/yuwen-publish-precheck",
@@ -2959,7 +3013,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b9efdc6bc1938b40ad1c556fba65c562fc182be0",
+      "batch": "005"
     },
     {
       "repository": "publora/skills",
@@ -2973,7 +3029,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+      "batch": "005"
     },
     {
       "repository": "posteyai/skills",
@@ -2987,7 +3045,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+      "batch": "005"
     },
     {
       "repository": "Hyacehila/humanizer-zh-next",
@@ -3001,7 +3061,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd",
+      "batch": "005"
     },
     {
       "repository": "open-salesblink/skill",
@@ -3015,7 +3077,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "35a7391802693e970e3e055193363f5a99bb337c",
+      "batch": "005"
     },
     {
       "repository": "dreammis/social-auto-upload",
@@ -3148,7 +3212,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3847fff01f5434a8a32829833163cd6723cabc59",
+      "batch": "005"
     },
     {
       "repository": "checkout-page/ecommerce-skills",
@@ -3162,7 +3228,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c12363338947f8072ef1b63451cbe080ee4a9ee1",
+      "batch": "005"
     },
     {
       "repository": "shalintripathi/saas-marketing-agents",
@@ -3176,7 +3244,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bddf39add29f331723bdcbea1a69ec2c6876d66e",
+      "batch": "005"
     },
     {
       "repository": "emotixco/claude-skills-founder",
@@ -3190,7 +3260,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ea6864c05c2f4a3666b9d6c14c550b20f35a04c9",
+      "batch": "005"
     },
     {
       "repository": "karero/croftweaver",
@@ -3204,7 +3276,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2",
+      "batch": "005"
     },
     {
       "repository": "apify/awesome-skills",
@@ -3218,7 +3292,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "485f6c0d47e3a05269fe735f15e7aeeb7a98d78e",
+      "batch": "005"
     },
     {
       "repository": "coupler-io/skills",
@@ -3232,7 +3308,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d25f3b33c62682049577af3e2e96e3efcdf7867b",
+      "batch": "005"
     },
     {
       "repository": "arcmira/mcp",
@@ -3246,7 +3324,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f1fe83efbb8baa437d3c3403f4d7f586c3b2e4d4",
+      "batch": "005"
     },
     {
       "repository": "Aboudjem/humanizer-skill",
@@ -3260,7 +3340,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a58df065367550b6ce40ff3f648335018d8e0589",
+      "batch": "005"
     },
     {
       "repository": "zhuyansen/new-term-radar",
@@ -3274,7 +3356,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "fe67ff1acab728141644a4a9741295469b4feee6",
+      "batch": "005"
     },
     {
       "repository": "PSPDFKit-labs/nutrient-agent-skill",
@@ -3288,7 +3372,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "09c3251cb65bf167a72875793a39df68b1115479",
+      "batch": "005"
     },
     {
       "repository": "op7418/NanoBanana-PPT-Skills",
@@ -3302,7 +3388,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+      "batch": "005"
     },
     {
       "repository": "zarazhangrui/frontend-slides",
@@ -3316,7 +3404,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+      "batch": "005"
     },
     {
       "repository": "sujunmin/agy-ppt",
@@ -3330,7 +3420,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b0b7712c88172f8126edaa3dc9c48a5bceb99991",
+      "batch": "005"
     },
     {
       "repository": "gokapso/agent-skills",
@@ -3358,7 +3450,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd",
+      "batch": "005"
     },
     {
       "repository": "PleasePrompto/notebooklm-skill",
@@ -3372,7 +3466,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c80722d3f27d65e06b6579add201bf69b99101d0",
+      "batch": "005"
     },
     {
       "repository": "obra/superpowers-lab",
@@ -3386,7 +3482,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+      "batch": "006"
     },
     {
       "repository": "obra/superpowers",
@@ -3505,7 +3603,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+      "batch": "006"
     },
     {
       "repository": "ognjengt/founder-skills",
@@ -3519,7 +3619,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+      "batch": "006"
     },
     {
       "repository": "EveryInc/charlie-cfo-skill",
@@ -3533,7 +3635,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+      "batch": "006"
     },
     {
       "repository": "openaccountants/openaccountants",
@@ -3547,7 +3651,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+      "batch": "006"
     },
     {
       "repository": "wrsmith108/linear-claude-skill",
@@ -3561,7 +3667,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d61cd9ad05f1863a421d891d9319ec2405904488",
+      "batch": "006"
     },
     {
       "repository": "hanfang/claude-memory-skill",
@@ -3575,7 +3683,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "c290e3eea033aede1617efdb5b7ad2f58ee0b415",
+      "batch": "006"
     },
     {
       "repository": "xberg-io/xberg",
@@ -3589,7 +3699,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+      "batch": "006"
     },
     {
       "repository": "Paramchoudhary/ResumeSkills",
@@ -3603,7 +3715,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+      "batch": "006"
     },
     {
       "repository": "bevibing/tutor-skills",
@@ -3617,7 +3731,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+      "batch": "006"
     },
     {
       "repository": "NeoLabHQ/context-engineering-kit",
@@ -3680,7 +3796,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+      "batch": "006"
     },
     {
       "repository": "ReScienceLab/opc-skills",
@@ -3694,7 +3812,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+      "batch": "006"
     },
     {
       "repository": "SeanZoR/claude-speed-reader",
@@ -3708,7 +3828,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+      "batch": "006"
     },
     {
       "repository": "Charlie85270/Dorothy",
@@ -3722,7 +3844,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "787568d5bba83b8ef35baa9ac29912d8eecc44cf",
+      "batch": "006"
     },
     {
       "repository": "Digidai/product-manager-skills",
@@ -3736,7 +3860,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ab7a40662c8455ece631834dee9670b3322f465b",
+      "batch": "006"
     },
     {
       "repository": "deusyu/translate-book",
@@ -3750,7 +3876,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229",
+      "batch": "006"
     },
     {
       "repository": "mvanhorn/last30days-skill",
@@ -3771,7 +3899,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428",
+      "batch": "006"
     },
     {
       "repository": "career-ops-hq/career-ops",
@@ -3785,7 +3915,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "batch": "006"
     },
     {
       "repository": "Linked-API/linkedin-skills",
@@ -3799,7 +3931,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1469f41eebe74a3a344c18b117899f06d6d94bd9",
+      "batch": "006"
     },
     {
       "repository": "pattern-ai-labs/agentcall",
@@ -3813,7 +3947,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6f173169a92fa05099c493275705af494a1bb462",
+      "batch": "006"
     },
     {
       "repository": "Sendmux/skills",
@@ -3827,7 +3963,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+      "batch": "006"
     },
     {
       "repository": "tjboudreaux/cc-thinking-skills",
@@ -3841,7 +3979,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7b8fece345dfaa11773be7152ccd194589cb5437",
+      "batch": "006"
     },
     {
       "repository": "JimmySadek/video-fetcher-to-markdown",
@@ -3855,7 +3995,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c196ba48df72c064811adcb934104c3e6567858b",
+      "batch": "006"
     },
     {
       "repository": "zapier/zapier-mcp",
@@ -3869,7 +4011,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+      "batch": "006"
     },
     {
       "repository": "Neeeophytee/finding-unknowns-skills",
@@ -3883,7 +4027,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc",
+      "batch": "007"
     },
     {
       "repository": "kgraph57/mckinsey-style-visualization-skill",
@@ -3897,7 +4043,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2e7981a622232006c100e088ded89c72709895da",
+      "batch": "007"
     },
     {
       "repository": "vaibhavarora14/job-application-agent",
@@ -3911,7 +4059,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "213f5061c7b2bb5362bd6876f7137cd5eac3f360",
+      "batch": "007"
     },
     {
       "repository": "wgwtest/novel-writing",
@@ -3925,7 +4075,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "838729695148008d42c01bd7c3c0c1a5c15de830",
+      "batch": "007"
     },
     {
       "repository": "cyperx84/claude-skills-mental-models",
@@ -3939,7 +4091,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007",
+      "batch": "007"
     },
     {
       "repository": "manavmishra/ZeroSlop",
@@ -3953,7 +4107,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+      "batch": "007"
     },
     {
       "repository": "Atomic-Mail/atomic-mail-agentic",
@@ -3967,7 +4123,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91",
+      "batch": "007"
     },
     {
       "repository": "forjd/better-writing",
@@ -3981,7 +4139,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bbbfcb4898cd9b3bc97ee5643db143ee2990ea96",
+      "batch": "007"
     },
     {
       "repository": "OneWave-AI/claude-skills",
@@ -3995,7 +4155,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+      "batch": "007"
     },
     {
       "repository": "GiaSip/giasip-skills",
@@ -4009,7 +4171,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c",
+      "batch": "007"
     },
     {
       "repository": "tronghieu/agent-skills",
@@ -4023,7 +4187,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+      "batch": "007"
     },
     {
       "repository": "dmoshehun-prog/learn-from-materials",
@@ -4037,7 +4203,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f8849746d85c5ebe8556fdb8f388783ac7483c8b",
+      "batch": "007"
     },
     {
       "repository": "chrisryugj/kordoc",
@@ -4051,7 +4219,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9effd38c2a4248f62b5e894cc49d6fa5a949791a",
+      "batch": "007"
     },
     {
       "repository": "bablobanov/hermes-agent-telegram-checklist",
@@ -4065,7 +4235,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375",
+      "batch": "007"
     },
     {
       "repository": "siril9/presentation-skill",
@@ -4079,7 +4251,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+      "batch": "007"
     },
     {
       "repository": "teableio/agent-skills",
@@ -4093,7 +4267,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21",
+      "batch": "007"
     },
     {
       "repository": "cbrock84/headcount",
@@ -4107,7 +4283,8 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "failed",
+      "batch": "007"
     },
     {
       "repository": "luchasarie/bro-skill",
@@ -4121,7 +4298,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6c08e7ee5eb8ef8b9bf0588d400170654abc256b",
+      "batch": "007"
     },
     {
       "repository": "radres/call-me",
@@ -4135,7 +4314,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+      "batch": "007"
     },
     {
       "repository": "ysskrishna/ai-agent-skills",
@@ -4149,7 +4330,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0",
+      "batch": "007"
     },
     {
       "repository": "AugustusW/audio-tldr-skill",
@@ -4163,7 +4346,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "124d51678cb1ed95984b3eda687c5085300416d9",
+      "batch": "007"
     },
     {
       "repository": "voygr-tech/placecall",
@@ -4177,7 +4362,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1d9c85e7a6314107a51fcfba77ef98c57644cf14",
+      "batch": "007"
     },
     {
       "repository": "arifszn/slide-wright",
@@ -4191,7 +4378,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a751585b43353b6b9320a97106b59b9dea7ce817",
+      "batch": "007"
     },
     {
       "repository": "MSG91/m91-skill",
@@ -4205,7 +4394,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6c552cab6fc9509373cad6a2d581dbab3b5b2a2d",
+      "batch": "007"
     },
     {
       "repository": "kklimuk/docx-cli",
@@ -4219,7 +4410,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e830c0cd5aac888cf4b749d278db6e71003ab5d9",
+      "batch": "008"
     },
     {
       "repository": "777genius/agent-notifications",
@@ -4233,7 +4426,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "53d8f2c528b86147fbda599385f7f2b8ef3fae20",
+      "batch": "008"
     },
     {
       "repository": "kochetkov-ma/claude-brewcode",
@@ -4247,7 +4442,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+      "batch": "008"
     },
     {
       "repository": "MetcalfSolutions/Satori",
@@ -4261,7 +4458,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+      "batch": "008"
     },
     {
       "repository": "pachca/openapi",
@@ -4275,7 +4474,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+      "batch": "008"
     },
     {
       "repository": "QingYunA/answer-me-with-html",
@@ -4289,7 +4490,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "053619b917c6bf2e17eae5496d05eb08e10fe889",
+      "batch": "008"
     },
     {
       "repository": "Koloyaaa/foreign-academic-translator-skill",
@@ -4303,7 +4506,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6683b4df355095e10c83a6e332519f9bff882a75",
+      "batch": "008"
     },
     {
       "repository": "duyunzhoudyz/dyz-gongwen-skills",
@@ -4317,7 +4522,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9111fbf1370ba0e2a116c3ef6e70e11f0168257b",
+      "batch": "008"
     },
     {
       "repository": "VoDaiLocz/kilo-kit-mcp",
@@ -4331,7 +4538,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+      "batch": "008"
     },
     {
       "repository": "hedralab/eskill",
@@ -4345,7 +4554,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cbc3c7d62c5bcd27112c9e2d09a8b8744f913983",
+      "batch": "008"
     },
     {
       "repository": "robzolkos/skill-rails-upgrade",
@@ -4359,7 +4570,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+      "batch": "008"
     },
     {
       "repository": "antonbabenko/terraform-skill",
@@ -4373,7 +4586,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9c1e92d962a5407c227e5566416e962a2f057240",
+      "batch": "008"
     },
     {
       "repository": "zxkane/aws-skills",
@@ -4387,7 +4602,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "68530c6f296ccd2f5e99c79782f3e0fbf962c51a",
+      "batch": "008"
     },
     {
       "repository": "rootlyhq/rootly-mcp-server",
@@ -4408,7 +4625,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "44926940d3866dab7d6cafbf04e8fc20aff6b7e0",
+      "batch": "008"
     },
     {
       "repository": "conorluddy/ios-simulator-skill",
@@ -4427,7 +4646,9 @@
           "query": "SKILL.md"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "30d2ea43ef88d353f4de560e7b7f132e05c502ab",
+      "batch": "008"
     },
     {
       "repository": "ramzesenok/iOS-Accessibility-Audit-Skill",
@@ -4441,7 +4662,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+      "batch": "008"
     },
     {
       "repository": "truongduy2611/app-store-preflight-skills",
@@ -4455,7 +4678,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cfd9c73577300f9310ca892fefd38fbe1abd73cb",
+      "batch": "008"
     },
     {
       "repository": "coderabbitai/skills",
@@ -4469,7 +4694,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "778c35a36e0afd2549c3fba86ec6e64afe649df3",
+      "batch": "008"
     },
     {
       "repository": "salemalem/npmscan-mcp-plugin",
@@ -4483,7 +4710,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "efd8dd03e380c50f10829707913b9a293914c12c",
+      "batch": "008"
     },
     {
       "repository": "sanjay3290/ai-skills",
@@ -4511,7 +4740,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c84255839a1bfaa06d681aa528f9b50d70002afb",
+      "batch": "008"
     },
     {
       "repository": "jthack/ffuf_claude_skill",
@@ -4525,7 +4756,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+      "batch": "008"
     },
     {
       "repository": "lackeyjb/playwright-skill",
@@ -4539,7 +4772,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "dd47a6a023e249eb1b36e9e943eab89d0900865d",
+      "batch": "008"
     },
     {
       "repository": "woniu9524/open-web-bridge",
@@ -4553,7 +4788,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "27c9ebe62c338edc851dc01bef73465712be2006",
+      "batch": "008"
     },
     {
       "repository": "ibelick/ui-skills",
@@ -4567,7 +4804,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "00db7d656719c399c091f3ea138c6f42a7fa4d98",
+      "batch": "008"
     },
     {
       "repository": "muthuishere/hand-drawn-diagrams",
@@ -4581,7 +4820,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c8ffd6c3febbc0e745ab6691ea81c8703a9829c8",
+      "batch": "009"
     },
     {
       "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
@@ -4602,7 +4843,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+      "batch": "009"
     },
     {
       "repository": "ehmo/platform-design-skills",
@@ -4616,7 +4859,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "dc2be825d8b439caea78e9eaa8fb3ac23b0ff3e9",
+      "batch": "009"
     },
     {
       "repository": "Kayforkind/reimagine-it",
@@ -4630,7 +4875,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e8c93788bd76d5a3276fb8cc0b0f59379c40c076",
+      "batch": "009"
     },
     {
       "repository": "scarletkc/vexor",
@@ -4644,7 +4891,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "eae0d6d85af8cbcce5dfd6dd4aa94d25f2c50776",
+      "batch": "009"
     },
     {
       "repository": "fvadicamo/dev-agent-skills",
@@ -4658,7 +4907,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8e710c57b4aa34fec63752ccf04a47adb4a8be65",
+      "batch": "009"
     },
     {
       "repository": "omkamal/pypict-claude-skill",
@@ -4672,7 +4923,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+      "batch": "009"
     },
     {
       "repository": "alinaqi/maggy",
@@ -4686,7 +4939,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "55aabe2493627e1de9cd09459d555181d66f3111",
+      "batch": "009"
     },
     {
       "repository": "ZhangHanDong/makepad-skills",
@@ -4700,7 +4955,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6e16c8d5beefcb410d57e83a799014beb2957977",
+      "batch": "009"
     },
     {
       "repository": "massimodeluisa/recursive-decomposition-skill",
@@ -4714,7 +4971,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e0a8b0418a1e40e3ae774ad1d06834db2696ee26",
+      "batch": "009"
     },
     {
       "repository": "AvdLee/SwiftUI-Agent-Skill",
@@ -4728,7 +4987,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "62bd760f005093d1e2e4de5db156e456a5f96400",
+      "batch": "009"
     },
     {
       "repository": "efremidze/swift-patterns-skill",
@@ -4742,7 +5003,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2e9b66b0470a324cf3a6898549279e622aa7df71",
+      "batch": "009"
     },
     {
       "repository": "wendylabsinc/claude-skills",
@@ -4756,7 +5019,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "934e0a5d179be1a7f6836b9e7c60b0bce1908ab8",
+      "batch": "009"
     },
     {
       "repository": "rorkai/app-store-connect-cli-skills",
@@ -4770,7 +5035,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7de1ef7cc831f62d205dfa589063f3831f66391b",
+      "batch": "009"
     },
     {
       "repository": "rameerez/claude-code-startup-skills",
@@ -4784,7 +5051,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "410f81f83e4ac309032eab3d3265353f97ea665f",
+      "batch": "009"
     },
     {
       "repository": "zscole/model-hierarchy-skill",
@@ -4798,7 +5067,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+      "batch": "009"
     },
     {
       "repository": "CloudAI-X/threejs-skills",
@@ -4812,7 +5083,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0e181866f095b5f06d005133876e926515390d95",
+      "batch": "009"
     },
     {
       "repository": "Leonxlnx/taste-skill",
@@ -4852,7 +5125,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "178d1cb537604279d7b54500c4823a6db42b9de6",
+      "batch": "009"
     },
     {
       "repository": "uucz/moyu",
@@ -4866,7 +5141,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f276e3cc8a7fba8a71a6aa2180ffb991c138bbc3",
+      "batch": "009"
     },
     {
       "repository": "mattpocock/skills",
@@ -4894,7 +5171,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+      "batch": "009"
     },
     {
       "repository": "wrsmith108/varlock-claude-skill",
@@ -4908,7 +5187,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+      "batch": "009"
     },
     {
       "repository": "yusufkaraaslan/Skill_Seekers",
@@ -4929,7 +5210,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5b5d8dfca263fa76e6daae9f292890b311ef36aa",
+      "batch": "009"
     },
     {
       "repository": "NoizAI/skills",
@@ -4943,7 +5226,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "779f30af588ebf4dd17fc0acaa590ae147a0d3f5",
+      "batch": "009"
     },
     {
       "repository": "Kevin7Qi/codex-collab",
@@ -4957,7 +5242,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1212a0e0447f93b25f934e5e485c5f40fae16ed8",
+      "batch": "009"
     },
     {
       "repository": "ethos-link/rails-conventions",
@@ -4971,7 +5258,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2",
+      "batch": "010"
     },
     {
       "repository": "mcollina/skills",
@@ -4985,7 +5274,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "batch": "010"
     },
     {
       "repository": "Egonex-AI/Understand-Anything",
@@ -4999,7 +5290,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+      "batch": "010"
     },
     {
       "repository": "hqhq1025/skill-optimizer",
@@ -5013,7 +5306,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+      "batch": "010"
     },
     {
       "repository": "foryourhealth111-pixel/Vibe-Skills",
@@ -5027,7 +5322,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+      "batch": "010"
     },
     {
       "repository": "metalbear-co/skills",
@@ -5041,7 +5338,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+      "batch": "010"
     },
     {
       "repository": "dembrandt/dembrandt-skills",
@@ -5055,7 +5354,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+      "batch": "010"
     },
     {
       "repository": "GanyuanRan/Aegis",
@@ -5069,7 +5370,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+      "batch": "010"
     },
     {
       "repository": "baskduf/FableCodex",
@@ -5083,7 +5386,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "406faa1981ffe8a3b6b44e770bc2fc2ee189c8d0",
+      "batch": "010"
     },
     {
       "repository": "csthink/dashmotion",
@@ -5097,7 +5402,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+      "batch": "010"
     },
     {
       "repository": "plasma-ai/fractal",
@@ -5111,7 +5418,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722",
+      "batch": "010"
     },
     {
       "repository": "reliefeai/browser-relay",
@@ -5125,7 +5434,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "973434bc6b339dd56d831b1ebd089a8465850844",
+      "batch": "010"
     },
     {
       "repository": "squirrelscan/skills",
@@ -5139,7 +5450,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+      "batch": "010"
     },
     {
       "repository": "Simon-He95/markstream-vue",
@@ -5153,7 +5466,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+      "batch": "010"
     },
     {
       "repository": "eduardo-sl/go-agent-skills",
@@ -5167,7 +5482,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0",
+      "batch": "010"
     },
     {
       "repository": "drogers0/gh-image",
@@ -5181,7 +5498,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ca57d96dd4ac72bae5c8264a244116bd17f96ce8",
+      "batch": "010"
     },
     {
       "repository": "browser-act/skills",
@@ -5202,7 +5521,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "batch": "010"
     },
     {
       "repository": "agiwhitelist/auteur",
@@ -5216,7 +5537,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9bca227df9877e60dc45d49783c8cbd885eccd9b",
+      "batch": "010"
     },
     {
       "repository": "JasonColapietro/suede-creator-skills",
@@ -5230,7 +5553,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9406183696bfe56c4c399febf2091aeb93f280a3",
+      "batch": "010"
     },
     {
       "repository": "superdesigndev/superdesign-skill",
@@ -5244,7 +5569,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+      "batch": "010"
     },
     {
       "repository": "krisyangdev/motionboard",
@@ -5258,7 +5585,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4e1b437b18cf920992c191d983e42b26654e6406",
+      "batch": "010"
     },
     {
       "repository": "Maksim-Burtsev/simple-man",
@@ -5272,7 +5601,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+      "batch": "010"
     },
     {
       "repository": "aeonfun/aeon",
@@ -5286,7 +5617,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+      "batch": "010"
     },
     {
       "repository": "KhazP/vibe-coding-prompt-template",
@@ -5300,7 +5633,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+      "batch": "010"
     },
     {
       "repository": "lindblomstefan/skills-library",
@@ -5314,7 +5649,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8a1db1246d7ddaf2eced1f98f3c8d81c6b882a9e",
+      "batch": "011"
     },
     {
       "repository": "rainmanjam/poka-yoke",
@@ -5328,7 +5665,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "726a575e3d48d07d908abfcbb192cae09671fff2",
+      "batch": "011"
     },
     {
       "repository": "scarletkc/agents",
@@ -5342,7 +5681,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8e149b335e963954e9c4bafba00eedbd7de060ed",
+      "batch": "011"
     },
     {
       "repository": "dannwaneri/spec-writer",
@@ -5356,7 +5697,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bfdeaedea5a90b86a3db213caa49073a173bb49e",
+      "batch": "011"
     },
     {
       "repository": "Continuum-AI-Corp/OrcaReplay",
@@ -5370,7 +5713,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a9178ca26af95cfd3231b8eb2da4ae11dbbd0a84",
+      "batch": "011"
     },
     {
       "repository": "tt-a1i/archify",
@@ -5391,7 +5736,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a4065941f12be7967436261d9934784e381d423c",
+      "batch": "011"
     },
     {
       "repository": "d1vai/d1v-cli",
@@ -5405,7 +5752,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7781db31cea568107984f98800a8640862bb2c13",
+      "batch": "011"
     },
     {
       "repository": "kensaurus/skills",
@@ -5419,7 +5768,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c617b8caf90d63fb0950dc1c848b78b148fd414b",
+      "batch": "011"
     },
     {
       "repository": "saleh-alhaddad/itqan-engineering",
@@ -5433,7 +5784,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "580dd46b04163a28d6a4cf89d4bc6bcf50531d45",
+      "batch": "011"
     },
     {
       "repository": "hermes-labs-ai/lintlang",
@@ -5447,7 +5800,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb",
+      "batch": "011"
     },
     {
       "repository": "fishzjp/qa-skills",
@@ -5461,7 +5816,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "34b08d6e4a7a2e72da0f01759b161b46d6776054",
+      "batch": "011"
     },
     {
       "repository": "UiPath/coder_eval",
@@ -5482,7 +5839,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "bc45225fe4b836ae9376a66fc5864f5b49e6851f",
+      "batch": "011"
     },
     {
       "repository": "lukstei/slop-grader",
@@ -5496,7 +5855,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a0cdba4a14950cc943b387dfd30e7d3e308af683",
+      "batch": "011"
     },
     {
       "repository": "unbrowse-ai/unbrowse",
@@ -5510,7 +5871,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "41db2a37092aa704d65fc4a8027e1e3733c258d0",
+      "batch": "011"
     },
     {
       "repository": "fujibee/agmsg",
@@ -5524,7 +5887,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c47f40aaceb7b524ed7ea34de6c833823fdd28c0",
+      "batch": "011"
     },
     {
       "repository": "exadel-inc/agentic-readiness-assessment",
@@ -5538,7 +5903,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ea984d78133871c5014ddcbdabc8532058f3f6a2",
+      "batch": "011"
     },
     {
       "repository": "hasuwini77/3d-logo-skill",
@@ -5552,7 +5919,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "d999724b52ad6836edda6c3dd9d058884b76bf2f",
+      "batch": "011"
     },
     {
       "repository": "ollygarden/opentelemetry-agent-skills",
@@ -5566,7 +5935,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68",
+      "batch": "011"
     },
     {
       "repository": "szarkans/multi",
@@ -5580,7 +5951,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e5292e43bd1d2be4b44284f9f2e42d1d1049dcbf",
+      "batch": "011"
     },
     {
       "repository": "gongdear/cline-pilot",
@@ -5594,7 +5967,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "aff85675ae2fdcca1e5824230b1be86ab4b89198",
+      "batch": "011"
     },
     {
       "repository": "hermes-labs-ai/little-canary",
@@ -5608,7 +5983,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7045f31882048c58e6b5ea42642b351b5c37a7a1",
+      "batch": "011"
     },
     {
       "repository": "allxsmith/bestax",
@@ -5622,7 +5999,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "dacd0ca4870f91e24308a2963a88276a447be21b",
+      "batch": "011"
     },
     {
       "repository": "marvkr/better-design",
@@ -5636,7 +6015,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "175e7ba49bcf83857abc32933686b5aa3abb197e",
+      "batch": "011"
     },
     {
       "repository": "kulchankas/paranoid",
@@ -5650,7 +6031,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "b5bbdcead155ae9c2dae8a1f393f122e36306c88",
+      "batch": "011"
     },
     {
       "repository": "gal-a/qikly",
@@ -5664,7 +6047,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "548ec98ecb3937b8d71b49b6450030aaa2e37f8b",
+      "batch": "012"
     },
     {
       "repository": "supercorp-ai/supercov",
@@ -5678,7 +6063,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "35a51f61a25f1230d1a5fe68c16851c03fc8b72f",
+      "batch": "012"
     },
     {
       "repository": "prisma/skills",
@@ -5692,7 +6079,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+      "batch": "012"
     },
     {
       "repository": "edonadei/caliper",
@@ -5706,7 +6095,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f",
+      "batch": "012"
     },
     {
       "repository": "tushaarmehtaa/tushar-skills",
@@ -5720,7 +6111,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+      "batch": "012"
     },
     {
       "repository": "oil-oil/oil-ui",
@@ -5734,7 +6127,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128",
+      "batch": "012"
     },
     {
       "repository": "skymanbp/cc-tree",
@@ -5748,7 +6143,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a9ff371b5d0f5c095d5cfdc67b839b4a16384af2",
+      "batch": "012"
     },
     {
       "repository": "moxno/privacyscrubber-mcp",
@@ -5762,7 +6159,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "52e0805708bfd4aa3dcd6d918b0eda6bcec06f74",
+      "batch": "012"
     },
     {
       "repository": "sno-ai/sno-station-skills",
@@ -5776,7 +6175,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+      "batch": "012"
     },
     {
       "repository": "rlaope/oh-my-hermes",
@@ -5790,7 +6191,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+      "batch": "012"
     },
     {
       "repository": "fullselfbrowsing/FSB",
@@ -5804,7 +6207,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3f9e7dea8621bbbb86d00c4b917abfd7598ef1a3",
+      "batch": "012"
     },
     {
       "repository": "first-fluke/oh-my-agent",
@@ -5818,7 +6223,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+      "batch": "012"
     },
     {
       "repository": "Aurite-ai/agent-verifier",
@@ -5832,7 +6239,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+      "batch": "012"
     },
     {
       "repository": "finom/vovk",
@@ -5846,7 +6255,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+      "batch": "012"
     },
     {
       "repository": "Cap-go/capgo-skills",
@@ -5860,7 +6271,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+      "batch": "012"
     },
     {
       "repository": "beastlabai/multi-llm-plugin",
@@ -5874,7 +6287,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "98efffd133dc6e5e8370cecd8580571cfdc4b554",
+      "batch": "012"
     },
     {
       "repository": "EricJujianZou/rederive",
@@ -5888,7 +6303,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7f43edc0ee0e098e98f77b01187027238aba77c8",
+      "batch": "012"
     },
     {
       "repository": "laolaoshiren/claude-code-skills-zh",
@@ -5902,7 +6319,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4521b155d36e50fd7a103a46e3a24d48241508af",
+      "batch": "012"
     },
     {
       "repository": "GAURAV-1313/codecall",
@@ -5916,7 +6335,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "997bf332aada9288e81b0ec77cbd2b052553b372",
+      "batch": "012"
     },
     {
       "repository": "9929y/mesh-gradient-generation",
@@ -5930,7 +6351,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a251ed465d486401f19e02a939154090c1aea5af",
+      "batch": "012"
     },
     {
       "repository": "mobbin/skills",
@@ -5951,7 +6374,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "79124d92763f6e85107386227a96bbc40479710e",
+      "batch": "012"
     },
     {
       "repository": "celo-org/celopedia-skills",
@@ -5965,7 +6390,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3cc63acd5eeb77d87277028450686bbad7f9881c",
+      "batch": "012"
     },
     {
       "repository": "ScrapingBee/scrapingbee-cli",
@@ -5979,7 +6406,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+      "batch": "012"
     },
     {
       "repository": "0design/unslop-skill",
@@ -5993,7 +6422,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3fcf0042e27c6df76aea069bee32e58c4f6576a3",
+      "batch": "012"
     },
     {
       "repository": "swiftlysingh/excalidraw-cli",
@@ -6007,7 +6438,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "913349475eb7200f458ae3a046a12669fa044bed",
+      "batch": "013"
     },
     {
       "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
@@ -6096,7 +6529,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d3da6d96776b5de8748fb416f34d2297ba29f9a0",
+      "batch": "013"
     },
     {
       "repository": "awrshift/agent-memory-kit",
@@ -6110,7 +6545,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e",
+      "batch": "013"
     },
     {
       "repository": "sametbrr/llm-wiki-manager",
@@ -6124,7 +6561,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "28ad2850354a5e9aa1fd3798dade5ba9a35b371a",
+      "batch": "013"
     },
     {
       "repository": "dankofly/perfectify",
@@ -6138,7 +6577,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8c4b8f11008df36896ebb4de610d7ad2b52fe68c",
+      "batch": "013"
     },
     {
       "repository": "Panniantong/Agent-Reach",
@@ -6152,7 +6593,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "47898829204ad27521d8a1719e3aeca3b8a3e0ca",
+      "batch": "013"
     },
     {
       "repository": "zilliztech/mfs",
@@ -6166,7 +6609,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "78352894a0a826ee24db852411bf9a3c49884922",
+      "batch": "013"
     },
     {
       "repository": "ohad6k/emulo",
@@ -6180,7 +6625,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe",
+      "batch": "013"
     },
     {
       "repository": "Tubo2333/obsidian-knowledge-brain",
@@ -6194,7 +6641,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+      "batch": "013"
     },
     {
       "repository": "stjbrown/agent-knowledge",
@@ -6208,7 +6657,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+      "batch": "013"
     },
     {
       "repository": "khendzel/skills-janitor",
@@ -6222,7 +6673,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4b42f391fd537b791d1c09c7825be0bc641fd41c",
+      "batch": "013"
     },
     {
       "repository": "oliver-zehentleitner/keep-the-why",
@@ -6236,7 +6689,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e640a3d2c8dc8eb57cbab8c40562e3e8e7d551eb",
+      "batch": "013"
     },
     {
       "repository": "chrono-meta/forge-harness",
@@ -6250,7 +6705,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+      "batch": "013"
     },
     {
       "repository": "thousandflowers/skillreaper",
@@ -6264,7 +6721,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1cfd85dce3ac922df37ff4c86f281ae3f695c8d8",
+      "batch": "013"
     },
     {
       "repository": "orziz/odai",
@@ -6278,7 +6737,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ce7a999843ca42ecd84778561cb0ac7642c5648e",
+      "batch": "013"
     },
     {
       "repository": "thedotmack/claude-mem",
@@ -6292,7 +6753,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+      "batch": "013"
     },
     {
       "repository": "vshulcz/deja-vu",
@@ -6306,7 +6769,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+      "batch": "013"
     },
     {
       "repository": "ruslanlap/cavemenko",
@@ -6320,7 +6785,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cb1d5f42774682ded8029c67c55ac62df95568dd",
+      "batch": "013"
     },
     {
       "repository": "RAKKUNN/vicem",
@@ -6334,7 +6801,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "47d5b2191dcfe61cbc1d8ec18033b430fb5ab113",
+      "batch": "013"
     },
     {
       "repository": "amirkiarafiei/subagent-cli-skills",
@@ -6348,7 +6817,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+      "batch": "013"
     },
     {
       "repository": "rebelytics/one-skill-to-rule-them-all",
@@ -6362,7 +6833,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f86755764373f96a50401762f31f22077127b999",
+      "batch": "013"
     },
     {
       "repository": "archcore-ai/archcore",
@@ -6376,7 +6849,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e47d597ceddcb3fafcd1f270165fabe6976e6161",
+      "batch": "013"
     },
     {
       "repository": "Qiuner/birdview",
@@ -6390,7 +6865,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "32b7a77f99639a5e79dfc4cc123bf98f8b889b52",
+      "batch": "013"
     },
     {
       "repository": "JayPokale/Chisle",
@@ -6404,7 +6881,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1b3203fe394ee84ca143a1e8636fafa8e9e1f906",
+      "batch": "013"
     },
     {
       "repository": "tinqiao-oss/engramory",
@@ -6418,7 +6897,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e84b50924b7017259737d57309fc55839225ffc0",
+      "batch": "014"
     },
     {
       "repository": "ZeKaiNie/universal-examprep-skill",
@@ -6432,7 +6913,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+      "batch": "014"
     },
     {
       "repository": "shouldnotappearcalm/a-share-skill",
@@ -6446,7 +6929,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8874bd1c46813ddb188aa293e6f9ae34f016ba4d",
+      "batch": "014"
     },
     {
       "repository": "transloadit/skills",
@@ -6460,7 +6945,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+      "batch": "014"
     },
     {
       "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
@@ -6474,7 +6961,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+      "batch": "014"
     },
     {
       "repository": "raintree-technology/hig-doctor",
@@ -6488,7 +6977,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a0f1e4ec3c5ada82e538710b54a344db63189d8b",
+      "batch": "014"
     },
     {
       "repository": "K-Dense-AI/scientific-agent-skills",
@@ -6523,7 +7014,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "264d00a719dd8ab88ad396cc27ebf55dbb6e1b72",
+      "batch": "014"
     },
     {
       "repository": "SHADOWPR0/security-bluebook-builder",
@@ -6537,7 +7030,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+      "batch": "014"
     },
     {
       "repository": "huifer/WellAlly-health",
@@ -6551,7 +7046,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+      "batch": "014"
     },
     {
       "repository": "frmoretto/clarity-gate",
@@ -6565,7 +7062,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+      "batch": "014"
     },
     {
       "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
@@ -6579,7 +7078,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "batch": "014"
     },
     {
       "repository": "Orchestra-Research/AI-Research-SKILLs",
@@ -6619,7 +7120,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+      "batch": "014"
     },
     {
       "repository": "more-io/claude-apple-bridges",
@@ -6633,7 +7136,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+      "batch": "014"
     },
     {
       "repository": "hanhuark/mechanical-engineering-research-skill",
@@ -6647,7 +7152,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+      "batch": "014"
     },
     {
       "repository": "prompt-security/clawsec",
@@ -6661,7 +7168,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+      "batch": "014"
     },
     {
       "repository": "BehiSecc/VibeSec-Skill",
@@ -6675,7 +7184,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+      "batch": "014"
     },
     {
       "repository": "lawve-ai/awesome-legal-skills",
@@ -6689,7 +7200,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+      "batch": "014"
     },
     {
       "repository": "vmware-skills/VMware-AIops",
@@ -6703,7 +7216,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5",
+      "batch": "014"
     },
     {
       "repository": "video-db/skills",
@@ -6717,7 +7232,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f985577fba97705ed937cc707c3a67e35f23faf5",
+      "batch": "014"
     },
     {
       "repository": "HeshamFS/materials-simulation-skills",
@@ -6731,7 +7248,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+      "batch": "014"
     },
     {
       "repository": "Ericyoung-183/alpha-insights",
@@ -6745,7 +7264,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+      "batch": "014"
     },
     {
       "repository": "takechanman1228/claude-ecom",
@@ -6759,7 +7280,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7ddf7ffb823fd7ab6015e699d01cdc436739eb2b",
+      "batch": "014"
     },
     {
       "repository": "talkstream/ru-text",
@@ -6773,7 +7296,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+      "batch": "014"
     },
     {
       "repository": "helius-labs/core-ai",
@@ -6787,7 +7312,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+      "batch": "014"
     },
     {
       "repository": "meodai/skill.color-expert",
@@ -6801,7 +7328,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5bf7c7704d56bccc6aeea38c36bcf449abe56a6c",
+      "batch": "015"
     },
     {
       "repository": "aklofas/kicad-happy",
@@ -6815,7 +7344,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c451943f72d91a4a9fbf4aa48bda0f730011f6d8",
+      "batch": "015"
     },
     {
       "repository": "bitwize-music-studio/claude-ai-music-skills",
@@ -6829,7 +7360,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "597d928fb2c8316ee13159771405813174aa01de",
+      "batch": "015"
     },
     {
       "repository": "Alisa0808/vibe-creating-skill",
@@ -6843,7 +7376,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a599301980a66eb47ddac5c15e41081b74a2759d",
+      "batch": "015"
     },
     {
       "repository": "HUANGCHIHHUNGLeo/claude-real-video",
@@ -6857,7 +7392,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+      "batch": "015"
     },
     {
       "repository": "Optim-Agent/optim-agent",
@@ -6871,7 +7408,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "39e5f94b5e19d041a9175407ac0ea41c101d100e",
+      "batch": "015"
     },
     {
       "repository": "Orkas-AI/Orkas-VideoStudio",
@@ -6885,7 +7424,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "a51674eecca7d47fb245c51ed060537d4422b134",
+      "batch": "015"
     },
     {
       "repository": "perso-ai/perso-dubbing-plugin",
@@ -6899,7 +7440,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "84b2baa6f472aa88a1aaa7a0d68c7378bffe889c",
+      "batch": "015"
     },
     {
       "repository": "GarethManning/education-agent-skills",
@@ -6941,7 +7484,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "135d6275e7db0657d70b147f46d3191c5430677d",
+      "batch": "015"
     },
     {
       "repository": "ZeroPointRepo/youtube-skills",
@@ -6955,7 +7500,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "4f7994b94e7d5e250c3b51102d609992e04d5d0d",
+      "batch": "015"
     },
     {
       "repository": "morluto/rea",
@@ -6969,7 +7516,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "f3d6f45315b854406a9066cf9ce3ccfdf1ad390d",
+      "batch": "015"
     },
     {
       "repository": "apitube/news-api-skills",
@@ -6983,7 +7532,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cb09497e885e8ea9846dbc1277680493ae9add8d",
+      "batch": "015"
     },
     {
       "repository": "zincio/skills",
@@ -6997,7 +7548,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7a83b68cb4737eb30540d4cb732e9fc0a0376ada",
+      "batch": "015"
     },
     {
       "repository": "swaylq/humanize-chinese",
@@ -7011,7 +7564,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6510ca720b91919a12fa2e828b5ec959deb11db4",
+      "batch": "015"
     },
     {
       "repository": "renezander030/capcut-cli",
@@ -7025,7 +7580,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0f58b834a1188bd810cbf5325ac8cb6480134123",
+      "batch": "015"
     },
     {
       "repository": "MartinDelophy/ai-video-editor",
@@ -7039,7 +7596,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c8dbe02b64d2290e1c23bd54217adf09ad677f2d",
+      "batch": "015"
     },
     {
       "repository": "Tencent/AI-Infra-Guard",
@@ -7053,7 +7612,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74",
+      "batch": "015"
     },
     {
       "repository": "ilyautov/small-business-ru",
@@ -7067,7 +7628,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "43ad4add8a4d242332d1e6753339771bbeb26401",
+      "batch": "015"
     },
     {
       "repository": "eatmoreduck/boss-zhipin-scraper",
@@ -7081,7 +7644,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7913419b6b53e45ee621da7dab066a350ef7b060",
+      "batch": "015"
     },
     {
       "repository": "AceDataCloud/Skills",
@@ -7095,7 +7660,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+      "batch": "015"
     },
     {
       "repository": "yang0/handraw-style",
@@ -7109,7 +7676,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "11d3915a8c30fd4d5223e188ae9fc3ad23743505",
+      "batch": "015"
     },
     {
       "repository": "OptimNow/cloud-finops-skills",
@@ -7123,7 +7692,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e5bc157eafb39ef2b79294b2bcd7ae1c1a520f2e",
+      "batch": "015"
     },
     {
       "repository": "elithril/blender-kiln",
@@ -7137,7 +7708,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "e9a421467dd95d0de71d45b3d331f8efa4b80f26",
+      "batch": "015"
     },
     {
       "repository": "wiltodelta/remove-ai-watermarks",
@@ -7151,7 +7724,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3168d878461eed072bf86c237b219611261cf85f",
+      "batch": "015"
     },
     {
       "repository": "hyperb1iss/unifly",
@@ -7165,7 +7740,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e3afcff46179bea528d6e9189cbf9d65a1cd96cc",
+      "batch": "016"
     },
     {
       "repository": "MetaMask/agent-skills",
@@ -7179,7 +7756,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e87ac501d24648ba05cd86811d97915035eb30df",
+      "batch": "016"
     },
     {
       "repository": "assafkip/claudemy",
@@ -7193,7 +7772,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+      "batch": "016"
     },
     {
       "repository": "verdikta/verdikta-applications",
@@ -7207,7 +7788,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ef426f7a47ffc7d929a9dbbf54aecdafda185ec7",
+      "batch": "016"
     },
     {
       "repository": "nexscope-ai/eCommerce-Skills",
@@ -7221,7 +7804,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+      "batch": "016"
     },
     {
       "repository": "jgsystemsconsulting/jgs-se-knowledge-packs",
@@ -7235,7 +7820,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3bf1e1338acf4cb83e9339ce535228635165f288",
+      "batch": "016"
     },
     {
       "repository": "KalarisLabs/research-agent-skills",
@@ -7249,7 +7836,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+      "batch": "016"
     },
     {
       "repository": "federicodeponte/opendraft",
@@ -7263,7 +7852,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "39b21f74b3f52c34d5d771c508c8ad80f965d35f",
+      "batch": "016"
     },
     {
       "repository": "antvis/AVA",
@@ -7277,7 +7868,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8f20bffc82fa5787da5eb9463bb5c26cf6eee96f",
+      "batch": "016"
     },
     {
       "repository": "Kinprove/genealogy-research-recipes",
@@ -7291,7 +7884,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "ecfeca598253aaab3474e247aa0a78b7848d98b4",
+      "batch": "016"
     },
     {
       "repository": "ChatCut-Inc/agent-plugin",
@@ -7312,7 +7907,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8",
+      "batch": "016"
     },
     {
       "repository": "czlonkowski/n8n-skills",
@@ -7368,7 +7965,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+      "batch": "016"
     },
     {
       "repository": "danoszz/penthera",
@@ -7382,7 +7981,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+      "batch": "016"
     },
     {
       "repository": "snyk/agent-scan",
@@ -7396,7 +7997,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+      "batch": "016"
     },
     {
       "repository": "mblode/agent-skills",
@@ -7410,7 +8013,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+      "batch": "016"
     },
     {
       "repository": "VoltAgent/awesome-agent-skills",
@@ -7625,7 +8230,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "batch": "016"
     },
     {
       "repository": "wheresryan22/anatomy",
@@ -7639,7 +8246,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+      "batch": "016"
     },
     {
       "repository": "Bhanunamikaze/Agentic-SEO-Skill",
@@ -7653,7 +8262,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "445c46c268d947fac25c4b57d38aaf723129fe62",
+      "batch": "016"
     },
     {
       "repository": "devanasolver/ai-seo-toolkit",
@@ -7667,7 +8278,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "4f5cf4f01fb368f85ad5c6b243fb9cbb2fdbc68f",
+      "batch": "016"
     },
     {
       "repository": "zubair-trabzada/geo-seo-claude",
@@ -7681,7 +8294,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+      "batch": "016"
     },
     {
       "repository": "kepano/obsidian-skills",
@@ -7695,7 +8310,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "batch": "016"
     },
     {
       "repository": "teng-lin/notebooklm-py",
@@ -7709,7 +8326,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "7c5857a5be8c3cf465caf0878098a6358a92261f",
+      "batch": "016"
     },
     {
       "repository": "virgiliojr94/book-to-skill",
@@ -7723,7 +8342,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "e7bb659d3261491c8b28793dcb9102fa64a46c22",
+      "batch": "016"
     },
     {
       "repository": "zenstory-ai/oh-story-claudecode",
@@ -7737,7 +8358,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d4a7766d35876a4ac01ad3beb4b4f2002de78f04",
+      "batch": "016"
     },
     {
       "repository": "0xNyk/council-of-high-intelligence",
@@ -7751,7 +8374,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "partial_text_snapshot",
+      "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172",
+      "batch": "017"
     },
     {
       "repository": "ayghri/i-have-adhd",
@@ -7765,7 +8390,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6",
+      "batch": "017"
     },
     {
       "repository": "nidhinjs/prompt-master",
@@ -7779,7 +8406,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "49b3a72469b1e7287d66387004ccfcca90e5968a",
+      "batch": "017"
     },
     {
       "repository": "OthmanAdi/planning-with-files",
@@ -7793,7 +8422,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "8eef6dc6540dde5eef3fdc0ac487ad9c48ef3ba5",
+      "batch": "017"
     },
     {
       "repository": "latent-spaces/brag",
@@ -7807,7 +8438,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "669ab9286aa28b6c3ee30e75f181ee74319d012a",
+      "batch": "017"
     },
     {
       "repository": "Vincentwei1021/video-shotcraft",
@@ -7821,7 +8454,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "1266a3ec4831289c4d893d42dd5102723658039a",
+      "batch": "017"
     },
     {
       "repository": "googleworkspace/cli",
@@ -7835,7 +8470,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "batch": "017"
     },
     {
       "repository": "iOfficeAI/OfficeCLI",
@@ -7849,7 +8486,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e",
+      "batch": "017"
     },
     {
       "repository": "composio-community/awesome-codex-skills",
@@ -7863,7 +8502,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+      "batch": "017"
     },
     {
       "repository": "ComposioHQ/awesome-claude-skills",
@@ -7877,7 +8518,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "batch": "017"
     },
     {
       "repository": "hesreallyhim/awesome-claude-code",
@@ -7891,7 +8534,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "31b517448cf9e7bf537ca3400549a5b27aa88ec6",
+      "batch": "017"
     },
     {
       "repository": "travisvn/awesome-claude-skills",
@@ -7905,7 +8550,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "1da55aa810f206d3fe2005e7e3989b15a275d942",
+      "batch": "017"
     },
     {
       "repository": "VoltAgent/awesome-codex-subagents",
@@ -7919,7 +8566,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "9abe3279a0aa4ee518381af800ca1062398f5433",
+      "batch": "017"
     },
     {
       "repository": "VoltAgent/awesome-openclaw-skills",
@@ -7933,7 +8582,9 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "no_skill_files",
+      "commit_sha": "5492fcd98f7c52c69e1b2fa58790faf4fc90ce13",
+      "batch": "017"
     },
     {
       "repository": "bazel-contrib/bazel-gazelle",
@@ -7950,7 +8601,9 @@
           "query": "agent skills SKILL.md"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "2ddd36aa159de9ee97e24f726341177cd1f026a9",
+      "batch": "017"
     },
     {
       "repository": "pengchujin/jzsub",
@@ -7962,7 +8615,9 @@
           "query": "SKILL.md"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "222a90265d2a8797ca258eb1a980cee0863a8311",
+      "batch": "017"
     },
     {
       "repository": "open-gitagent/opengap",
@@ -7979,7 +8634,9 @@
           "query": "agent skills SKILL.md"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5",
+      "batch": "017"
     },
     {
       "repository": "coreyhaines31/makerskills",
@@ -7996,31 +8653,37 @@
           "query": "agent skills SKILL.md"
         }
       ],
-      "state": "pending_next_batch"
+      "state": "text_snapshot_collected",
+      "commit_sha": "0f20eaf6e4479ce03858ee09a56fe93e7440ed1b",
+      "batch": "017"
     },
     {
       "repository": "KiWi233333/JiwuChat",
       "repository_url": "https://github.com/KiWi233333/JiwuChat",
-      "state": "pending_next_batch",
+      "state": "text_snapshot_collected",
       "discovered_via": [
         {
           "url": "https://github.com/KiWi233333/JiwuChat/blob/63458b9c34a29ef17a6e61873f63c587d82bfc6c/Run.md",
           "link_type": "github_search",
           "query": "agent skills SKILL.md"
         }
-      ]
+      ],
+      "commit_sha": "63458b9c34a29ef17a6e61873f63c587d82bfc6c",
+      "batch": "017"
     },
     {
       "repository": "go-musicfox/go-musicfox",
       "repository_url": "https://github.com/go-musicfox/go-musicfox",
-      "state": "pending_next_batch",
+      "state": "text_snapshot_collected",
       "discovered_via": [
         {
           "url": "https://github.com/go-musicfox/go-musicfox/blob/12169a71098f8b8607bcf655eaddabf57ca14daf/SDLC.md",
           "link_type": "github_search",
           "query": "agent skills SKILL.md"
         }
-      ]
+      ],
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf",
+      "batch": "017"
     }
   ]
 }

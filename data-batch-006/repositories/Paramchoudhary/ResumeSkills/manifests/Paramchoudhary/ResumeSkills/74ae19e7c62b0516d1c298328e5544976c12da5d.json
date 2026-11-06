@@ -1,0 +1,810 @@
+{
+  "repository": "Paramchoudhary/ResumeSkills",
+  "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+  "files": [
+    {
+      "path": ".agent/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agent/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agent/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".agents/skills/executive-resume-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d7abc628999edcb25b033571a713b8643708c76",
+      "bytes": 9214,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/executive-resume-writer/SKILL.md",
+      "sha256": "74fc63ac5b836f3bf994a3100c03eb2f3f4a9d67e64cbb0df6e973e06e9d95c0",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/executive-resume-writer/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/interview-prep-generator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2c4c659d71e92bb914135bf7b11201281190c383",
+      "bytes": 12055,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/interview-prep-generator/SKILL.md",
+      "sha256": "1c543ab0eb226b0e404fcbd4495e7322ae129c5cb940b248ae58656fd2e240d6",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/interview-prep-generator/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/job-description-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1993a690165675ec127b484f8219a58b500987e5",
+      "bytes": 14426,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/job-description-analyzer/SKILL.md",
+      "sha256": "9898051a4a54ddeb82115778e4dfe24dbf226a6457dcb7be6c94bddca15479d5",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/job-description-analyzer/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/linkedin-profile-optimizer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bf268f2168e0445eae1fd1de3c2b87fbd29d92fc",
+      "bytes": 10171,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/linkedin-profile-optimizer/SKILL.md",
+      "sha256": "3fffcd58f30fe045bcdf7e776417dfccb3061efd3ad15ec537b7e8c285547862",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/linkedin-profile-optimizer/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/offer-comparison-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "054d6eeecf8d84d838af135b6cf8add3da7501b4",
+      "bytes": 9350,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/offer-comparison-analyzer/SKILL.md",
+      "sha256": "3265a7bb36a9b8ffb986f5e5dec6de88578f45b28da0be493d4e86ce366cf95d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/offer-comparison-analyzer/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/portfolio-case-study-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "33eb631a3bffb9de8d9f2514d18c899f4ff33a9c",
+      "bytes": 8977,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/portfolio-case-study-writer/SKILL.md",
+      "sha256": "b6b17fe94dd87ec68f3818bbfef3ce855a499dba7f1cbb1bb44aa920a9b0f84d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/portfolio-case-study-writer/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/reference-list-builder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "318004ed5e49676bee3e4db3d7263d42dccd15e2",
+      "bytes": 8376,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/reference-list-builder/SKILL.md",
+      "sha256": "ef4d0794277724c9476ae4d728a5192d975b64b6b01250cfa0d229839d99349a",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.agents/skills/reference-list-builder/SKILL.md"
+    },
+    {
+      "path": ".claude-plugin/config.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a155bbf39fec06453ff706acd55587529ef42fab",
+      "bytes": 6561,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude-plugin/config.json",
+      "sha256": "d30edb4f181128e1501dd1589aa29391885fd49329d94bc5f4012fc72a43877e",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude-plugin/config.json"
+    },
+    {
+      "path": ".claude/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".claude/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.claude/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".codex/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.codex/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".cursor/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.cursor/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".gemini/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.gemini/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".opencode/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.opencode/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/executive-resume-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "55d8781b019cc50d015dc9510d9a879cc74418ce",
+      "bytes": 44,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/executive-resume-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/interview-prep-generator",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d081ce81ea9aa7743bdc027e55686ed73308710e",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/interview-prep-generator",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/job-description-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "1941f399b35ddaf2aa1890bfd965fa1ef47b899c",
+      "bytes": 45,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/job-description-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/linkedin-profile-optimizer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "37c00e00461f6b81d42e353d6f2f6b2f216706c5",
+      "bytes": 47,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/linkedin-profile-optimizer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/offer-comparison-analyzer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "98245bf14e583551b0f34364ea4ec7e1c265af1d",
+      "bytes": 46,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/offer-comparison-analyzer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/portfolio-case-study-writer",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "d535b1f4c14d71df9fe5589d3bbd8650a5f4b159",
+      "bytes": 48,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/portfolio-case-study-writer",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": ".windsurf/skills/reference-list-builder",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "25c479bfe1498f8dce117366aa7cad97e55dee2a",
+      "bytes": 43,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/.windsurf/skills/reference-list-builder",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5dacc7c1ca945fddbdc0b2bdd13520140202b8f7",
+      "bytes": 2956,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/CONTRIBUTING.md",
+      "sha256": "5523afc6b8f2e5a7709215e4efc3385ffb2f05cad5ff1a0dad87472af7325b06",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16aa7efa7945c9bf1cf6fb047a02782520e565c4",
+      "bytes": 1070,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/LICENSE",
+      "sha256": "779da7ca4855d53a7800c744fef206c6265ace2e1eefef8ab608a0ccfb6d751d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "36ff95adc98fac4ee62f85fa4813f8f15d0cea5b",
+      "bytes": 8631,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/README.md",
+      "sha256": "28decc2f1d9d1dde75bbb6693db28988f23e0886065012b0f3d348c9b1d74852",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/README.md"
+    },
+    {
+      "path": "skills/academic-cv-builder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "73d9a63a714db4066b3676463ee8c246b8ef7ccd",
+      "bytes": 9591,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/academic-cv-builder/SKILL.md",
+      "sha256": "7b15396ae8c284e5cb090d543c8009279269c922f944b2b535089cae0726bd23",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/academic-cv-builder/SKILL.md"
+    },
+    {
+      "path": "skills/application-form-filler/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a85799e5f25f46c945d6738967e57fc97d669b38",
+      "bytes": 8084,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/application-form-filler/SKILL.md",
+      "sha256": "c5804ccbc6e34d05edd59a86f3246259a73f96f1fcd7ba253fd9e48c1ddca8d8",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/application-form-filler/SKILL.md"
+    },
+    {
+      "path": "skills/career-changer-translator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d88abdb37172701968329cb78b095294dcf44455",
+      "bytes": 10477,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/career-changer-translator/SKILL.md",
+      "sha256": "d1b6d39a9031ef2c4b493c6cccf6227144621729f059044173b658200455eecc",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/career-changer-translator/SKILL.md"
+    },
+    {
+      "path": "skills/cold-email-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f18792242ebe1b47659339ed4b2b090b9fa83b4",
+      "bytes": 7560,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/cold-email-writer/SKILL.md",
+      "sha256": "b8b576b5e917b68083efc8772db765843caef125dd5d9444b533ca23b9ad574b",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/cold-email-writer/SKILL.md"
+    },
+    {
+      "path": "skills/cover-letter-generator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6c6ecea2cbc86cf4595c186b82f8ed7266151715",
+      "bytes": 9183,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/cover-letter-generator/SKILL.md",
+      "sha256": "1b84e3d487f982700ab69fab1cf945fa785bf4a4266e8946e47401b1fe5ebc6c",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/cover-letter-generator/SKILL.md"
+    },
+    {
+      "path": "skills/creative-portfolio-resume/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8ad5c1333e8261444065daf87d81a5e3ffc92de6",
+      "bytes": 7907,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/creative-portfolio-resume/SKILL.md",
+      "sha256": "71301ed4cc3a4c4b026619d606762b72ac2724888884a711936e7ea85c4a54f5",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/creative-portfolio-resume/SKILL.md"
+    },
+    {
+      "path": "skills/executive-resume-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d7abc628999edcb25b033571a713b8643708c76",
+      "bytes": 9214,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/executive-resume-writer/SKILL.md",
+      "sha256": "74fc63ac5b836f3bf994a3100c03eb2f3f4a9d67e64cbb0df6e973e06e9d95c0",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/executive-resume-writer/SKILL.md"
+    },
+    {
+      "path": "skills/interview-prep-generator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2c4c659d71e92bb914135bf7b11201281190c383",
+      "bytes": 12055,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/interview-prep-generator/SKILL.md",
+      "sha256": "1c543ab0eb226b0e404fcbd4495e7322ae129c5cb940b248ae58656fd2e240d6",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/interview-prep-generator/SKILL.md"
+    },
+    {
+      "path": "skills/job-description-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1993a690165675ec127b484f8219a58b500987e5",
+      "bytes": 14426,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/job-description-analyzer/SKILL.md",
+      "sha256": "9898051a4a54ddeb82115778e4dfe24dbf226a6457dcb7be6c94bddca15479d5",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/job-description-analyzer/SKILL.md"
+    },
+    {
+      "path": "skills/linkedin-profile-optimizer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bf268f2168e0445eae1fd1de3c2b87fbd29d92fc",
+      "bytes": 10171,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/linkedin-profile-optimizer/SKILL.md",
+      "sha256": "3fffcd58f30fe045bcdf7e776417dfccb3061efd3ad15ec537b7e8c285547862",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/linkedin-profile-optimizer/SKILL.md"
+    },
+    {
+      "path": "skills/offer-comparison-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "054d6eeecf8d84d838af135b6cf8add3da7501b4",
+      "bytes": 9350,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/offer-comparison-analyzer/SKILL.md",
+      "sha256": "3265a7bb36a9b8ffb986f5e5dec6de88578f45b28da0be493d4e86ce366cf95d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/offer-comparison-analyzer/SKILL.md"
+    },
+    {
+      "path": "skills/portfolio-case-study-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "33eb631a3bffb9de8d9f2514d18c899f4ff33a9c",
+      "bytes": 8977,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/portfolio-case-study-writer/SKILL.md",
+      "sha256": "b6b17fe94dd87ec68f3818bbfef3ce855a499dba7f1cbb1bb44aa920a9b0f84d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/portfolio-case-study-writer/SKILL.md"
+    },
+    {
+      "path": "skills/reference-list-builder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "318004ed5e49676bee3e4db3d7263d42dccd15e2",
+      "bytes": 8376,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/reference-list-builder/SKILL.md",
+      "sha256": "ef4d0794277724c9476ae4d728a5192d975b64b6b01250cfa0d229839d99349a",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/reference-list-builder/SKILL.md"
+    },
+    {
+      "path": "skills/resume-ats-optimizer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3557e2145701ba3850d2c60b4f27ed0dcb7a8b06",
+      "bytes": 9171,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-ats-optimizer/SKILL.md",
+      "sha256": "03ad07d45afa209a41f8a0acdfc4286bc61ededd8371ced5242b5caf97d86702",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-ats-optimizer/SKILL.md"
+    },
+    {
+      "path": "skills/resume-bullet-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ee1140fd79fe23170f226518ae12f6a2855c94be",
+      "bytes": 14305,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-bullet-writer/SKILL.md",
+      "sha256": "49ea6a533a72112cc4935c40924830d13979b86321e593892a45244fef0a14fb",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-bullet-writer/SKILL.md"
+    },
+    {
+      "path": "skills/resume-formatter/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ae66b4dbe96bef5d0f5a9b01f8349e0a5489b53d",
+      "bytes": 8537,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-formatter/SKILL.md",
+      "sha256": "387522dc9a48ea948fc44c73189fce0676dc12b694186d4d44957ae02bd6becf",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-formatter/SKILL.md"
+    },
+    {
+      "path": "skills/resume-quantifier/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7e6152b5f62de7ecc43d53a14c6ab9ca8b15d1f0",
+      "bytes": 8453,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-quantifier/SKILL.md",
+      "sha256": "6cdf56f990ff1f67154ea99c256654d35eeb5048f13af76da396dcb3b9d2d68d",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-quantifier/SKILL.md"
+    },
+    {
+      "path": "skills/resume-section-builder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "54ffcf7e10da9d87794e1815169694c26d3ca597",
+      "bytes": 9540,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-section-builder/SKILL.md",
+      "sha256": "63e9972a7b1b4a184f7f4e7a992f17c3590a0da19a4389631bdbbeb3b94dd68b",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-section-builder/SKILL.md"
+    },
+    {
+      "path": "skills/resume-tailor/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "87d31a68e1865ebb17929d2e7f08de0962f99b2e",
+      "bytes": 9371,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-tailor/SKILL.md",
+      "sha256": "96853a389e2043cd3cc46667b89576cd3755bbef2c72ebeafc486230609b0981",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-tailor/SKILL.md"
+    },
+    {
+      "path": "skills/resume-version-manager/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "32940f4d875e4284a14366e911a76d089cfcb625",
+      "bytes": 8461,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-version-manager/SKILL.md",
+      "sha256": "ddf1acc97694e7710c9091dc547942a424f16601b2c8b35ce1c317f3b19b94f7",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/resume-version-manager/SKILL.md"
+    },
+    {
+      "path": "skills/salary-negotiation-prep/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2c43fdd6836bb43b5d770577bc2d877aabdd489e",
+      "bytes": 10693,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/salary-negotiation-prep/SKILL.md",
+      "sha256": "efac612f8ab539a7946f77e6b0c6d820713283c309eee6daf36e3ed7a27a7088",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/salary-negotiation-prep/SKILL.md"
+    },
+    {
+      "path": "skills/tech-resume-optimizer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3258f20bd0bf565d38af6964e32add1353b54728",
+      "bytes": 10556,
+      "source_url": "https://github.com/Paramchoudhary/ResumeSkills/blob/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/tech-resume-optimizer/SKILL.md",
+      "sha256": "38cbc83d7d143ec3432be19e8179c5992b55b20765c478f575b0200ed357339a",
+      "status": "saved",
+      "raw_path": "raw/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d/skills/tech-resume-optimizer/SKILL.md"
+    }
+  ]
+}

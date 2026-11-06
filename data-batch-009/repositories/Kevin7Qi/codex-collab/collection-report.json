@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:59:56.606621+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Kevin7Qi/codex-collab",
+      "commit_sha": "1212a0e0447f93b25f934e5e485c5f40fae16ed8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 102,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Kevin7Qi/codex-collab/1212a0e0447f93b25f934e5e485c5f40fae16ed8.json"
+    }
+  ],
+  "errors": []
+}

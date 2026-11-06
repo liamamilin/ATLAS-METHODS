@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:11:36.605038+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 44,
+  "saved_skill_entries": 42,
+  "unique_entry_texts": 38,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "thedotmack/claude-mem",
+      "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 44,
+      "saved_skill_entries": 42,
+      "saved_text_files": 2963,
+      "files_not_exported": 68,
+      "repository_manifest": "manifests/thedotmack/claude-mem/4f88958cf01fe8d2af916047af9b405a0375196a.json"
+    }
+  ],
+  "errors": []
+}

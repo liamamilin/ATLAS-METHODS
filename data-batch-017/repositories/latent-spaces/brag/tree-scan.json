@@ -1,0 +1,9 @@
+{
+  "repository": "latent-spaces/brag",
+  "commit_sha": "669ab9286aa28b6c3ee30e75f181ee74319d012a",
+  "tree_entries": 370,
+  "candidate_skill_paths": [
+    "skills/brag-slim/SKILL.md",
+    "skills/brag/SKILL.md"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:28:14.649204+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 12,
+  "saved_skill_entries": 12,
+  "unique_entry_texts": 11,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "iOfficeAI/OfficeCLI",
+      "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 1040,
+      "files_not_exported": 178,
+      "repository_manifest": "manifests/iOfficeAI/OfficeCLI/c56512c8c7b76fe284f09940e4cd492470099d3e.json"
+    }
+  ],
+  "errors": []
+}

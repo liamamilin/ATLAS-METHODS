@@ -1,0 +1,204 @@
+{
+  "repository": "Hyacehila/humanizer-zh-next",
+  "commit_sha": "0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd",
+  "files": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1231e9251236b91936e7b3b41dc62e60e2ad9840",
+      "bytes": 432,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/.github/workflows/validate.yml",
+      "sha256": "718b0ddbf5d653b489f2e5e193aff04e0b8f4f14ba56062df11346c31f4fecaf",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/.github/workflows/validate.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fa440dd23b3b1e8d1bbaa530f9e6cc6060de7342",
+      "bytes": 275,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/.gitignore",
+      "sha256": "d8361d463c7740a0867ff5c2ab257ddcd730e7dd7ec9c70ea9c4ae8ba1367a6c",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "db8f93bda06456f8ef98c57136491e50815f2931",
+      "bytes": 1087,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/LICENSE",
+      "sha256": "ee22b9630ed75f4b473a80c344685aa652f8d24f34ad88860e90d4eff094b4b1",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "954c1490b8b78cb2cb9fc349e91971c97e0110ac",
+      "bytes": 11189,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/README.md",
+      "sha256": "418bd22302f40dac9b3b26d8907a1a17d3de346d23eb0a3564c3554aa8173244",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fe895ce0e4ba91c6fe4a96a9d1d4f8e9c2c32092",
+      "bytes": 44052,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/SKILL.md",
+      "sha256": "0dd3a3bb59e333fec3699ec78d1e05c82ceb80ef947938833768a1e4c6361339",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/SKILL.md"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "483038ae09793888cee8d9f6ac4679c25eff7e94",
+      "bytes": 4834,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/THIRD_PARTY_NOTICES.md",
+      "sha256": "6d8a8e313dacfc25c4487fcde016b00e898272bf134885a79a68b6cd0d38a88b",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "path": "docs/upstream-sources.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "15fdc51eb620be90f1d4129ddf12931e05785267",
+      "bytes": 7159,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/docs/upstream-sources.md",
+      "sha256": "a6f8baf657e1c7b6c8aa5d2b39834938c9a038215df57453fcb6ba6404bbaf24",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/docs/upstream-sources.md"
+    },
+    {
+      "path": "docs/upstreams.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c962b7b84ba4d5d1a6a3d600ecb051a29967660f",
+      "bytes": 5808,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/docs/upstreams.json",
+      "sha256": "a97279a2b846c105974bfda536c72e55b51ed30727a6b9cd151b4a4dc53cf01e",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/docs/upstreams.json"
+    },
+    {
+      "path": "references/academic-writing.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3b9d45847d819bbed6ddbdd73264ae70bd55bdc",
+      "bytes": 11291,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/academic-writing.md",
+      "sha256": "fb0dd126d09f716ce8dae1e4e6d0808424ab647494acc001875e246d914346aa",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/academic-writing.md"
+    },
+    {
+      "path": "references/commercial-editing.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3e5a6cae153d2b84338eff886f138835421c23d4",
+      "bytes": 3641,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/commercial-editing.md",
+      "sha256": "de8351b3d1dd580a66dd548540c8e846b8e3f7fc101ae0e554300ab120683a52",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/commercial-editing.md"
+    },
+    {
+      "path": "references/grant-proposals.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "848b61e1447b07236c3a4ce4226e677dcec61202",
+      "bytes": 4203,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/grant-proposals.md",
+      "sha256": "108626a3b2ffa223e541f777eeee1b656ca403852a9e4bf512e127c595db6b7a",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/references/grant-proposals.md"
+    },
+    {
+      "path": "scripts/check_structure.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c41cc4974f5383cd0c3f011dd07348219e07a937",
+      "bytes": 9737,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/scripts/check_structure.py",
+      "sha256": "cf1a54b589b844b56b32f1570987088ad051d4f9aa9b9b7cf410cc966d5573c8",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/scripts/check_structure.py"
+    },
+    {
+      "path": "scripts/validate_package.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f054670f6967f4cf6dabbb05c7d74ee86c3285a",
+      "bytes": 5916,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/scripts/validate_package.py",
+      "sha256": "e1a869c809c37d14e2b962b249bc594da017ec0d0f65879798e2f34cd236fd54",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/scripts/validate_package.py"
+    },
+    {
+      "path": "tests/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "18496031552ae792592f64e229549ea26a9b4df4",
+      "bytes": 3155,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/README.md",
+      "sha256": "3aee5d8245733ce1e67dc3970900e028468f5f782b7c2a737e9d7894acf4b1d9",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/README.md"
+    },
+    {
+      "path": "tests/VALIDATION.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0c29602c490c3dda87262f0e3087e128ccf663dd",
+      "bytes": 3556,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/VALIDATION.md",
+      "sha256": "de531af259affdff327c503305bb8cd157a160380b2288519c650d950a0ac92f",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/VALIDATION.md"
+    },
+    {
+      "path": "tests/behavior-cases.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "652caa0acc95f22f55115b7b49d84d990778cae8",
+      "bytes": 13210,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/behavior-cases.json",
+      "sha256": "42d5c66c06ad4f6ec24584a1f0dcd49fe891b487e4dd00a90fcde0ea76fc865f",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/behavior-cases.json"
+    },
+    {
+      "path": "tests/fixtures/structure.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1829cd4e5bff5e06798501d39dd2b5d0057319c1",
+      "bytes": 711,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/fixtures/structure.md",
+      "sha256": "faeaee23fe3736cbcbff5ab2689620ee2b31780e022eda274654690124aa58f9",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/fixtures/structure.md"
+    },
+    {
+      "path": "tests/test_structure.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9c13070edc375b6e521cd55c8bfc11e5a7b7c94b",
+      "bytes": 6338,
+      "source_url": "https://github.com/Hyacehila/humanizer-zh-next/blob/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/test_structure.py",
+      "sha256": "5bdcd61aa24f33800a4016ac5b5f6cf38b69cdc41fae399bb7ec0c71c73ed712",
+      "status": "saved",
+      "raw_path": "raw/Hyacehila/humanizer-zh-next/0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd/tests/test_structure.py"
+    }
+  ]
+}

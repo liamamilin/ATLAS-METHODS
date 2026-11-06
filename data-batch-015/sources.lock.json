@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "AceDataCloud/Skills",
+      "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+      "collection_root": "repositories/AceDataCloud/Skills"
+    },
+    {
+      "repository": "Alisa0808/vibe-creating-skill",
+      "commit_sha": "a599301980a66eb47ddac5c15e41081b74a2759d",
+      "collection_root": "repositories/Alisa0808/vibe-creating-skill"
+    },
+    {
+      "repository": "GarethManning/education-agent-skills",
+      "commit_sha": "135d6275e7db0657d70b147f46d3191c5430677d",
+      "collection_root": "repositories/GarethManning/education-agent-skills"
+    },
+    {
+      "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+      "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+      "collection_root": "repositories/HUANGCHIHHUNGLeo/claude-real-video"
+    },
+    {
+      "repository": "MartinDelophy/ai-video-editor",
+      "commit_sha": "c8dbe02b64d2290e1c23bd54217adf09ad677f2d",
+      "collection_root": "repositories/MartinDelophy/ai-video-editor"
+    },
+    {
+      "repository": "Optim-Agent/optim-agent",
+      "commit_sha": "39e5f94b5e19d041a9175407ac0ea41c101d100e",
+      "collection_root": "repositories/Optim-Agent/optim-agent"
+    },
+    {
+      "repository": "OptimNow/cloud-finops-skills",
+      "commit_sha": "e5bc157eafb39ef2b79294b2bcd7ae1c1a520f2e",
+      "collection_root": "repositories/OptimNow/cloud-finops-skills"
+    },
+    {
+      "repository": "Orkas-AI/Orkas-VideoStudio",
+      "commit_sha": "a51674eecca7d47fb245c51ed060537d4422b134",
+      "collection_root": "repositories/Orkas-AI/Orkas-VideoStudio"
+    },
+    {
+      "repository": "Tencent/AI-Infra-Guard",
+      "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74",
+      "collection_root": "repositories/Tencent/AI-Infra-Guard"
+    },
+    {
+      "repository": "ZeroPointRepo/youtube-skills",
+      "commit_sha": "4f7994b94e7d5e250c3b51102d609992e04d5d0d",
+      "collection_root": "repositories/ZeroPointRepo/youtube-skills"
+    },
+    {
+      "repository": "aklofas/kicad-happy",
+      "commit_sha": "c451943f72d91a4a9fbf4aa48bda0f730011f6d8",
+      "collection_root": "repositories/aklofas/kicad-happy"
+    },
+    {
+      "repository": "apitube/news-api-skills",
+      "commit_sha": "cb09497e885e8ea9846dbc1277680493ae9add8d",
+      "collection_root": "repositories/apitube/news-api-skills"
+    },
+    {
+      "repository": "bitwize-music-studio/claude-ai-music-skills",
+      "commit_sha": "597d928fb2c8316ee13159771405813174aa01de",
+      "collection_root": "repositories/bitwize-music-studio/claude-ai-music-skills"
+    },
+    {
+      "repository": "eatmoreduck/boss-zhipin-scraper",
+      "commit_sha": "7913419b6b53e45ee621da7dab066a350ef7b060",
+      "collection_root": "repositories/eatmoreduck/boss-zhipin-scraper"
+    },
+    {
+      "repository": "elithril/blender-kiln",
+      "commit_sha": "e9a421467dd95d0de71d45b3d331f8efa4b80f26",
+      "collection_root": "repositories/elithril/blender-kiln"
+    },
+    {
+      "repository": "ilyautov/small-business-ru",
+      "commit_sha": "43ad4add8a4d242332d1e6753339771bbeb26401",
+      "collection_root": "repositories/ilyautov/small-business-ru"
+    },
+    {
+      "repository": "meodai/skill.color-expert",
+      "commit_sha": "5bf7c7704d56bccc6aeea38c36bcf449abe56a6c",
+      "collection_root": "repositories/meodai/skill.color-expert"
+    },
+    {
+      "repository": "morluto/rea",
+      "commit_sha": "f3d6f45315b854406a9066cf9ce3ccfdf1ad390d",
+      "collection_root": "repositories/morluto/rea"
+    },
+    {
+      "repository": "perso-ai/perso-dubbing-plugin",
+      "commit_sha": "84b2baa6f472aa88a1aaa7a0d68c7378bffe889c",
+      "collection_root": "repositories/perso-ai/perso-dubbing-plugin"
+    },
+    {
+      "repository": "renezander030/capcut-cli",
+      "commit_sha": "0f58b834a1188bd810cbf5325ac8cb6480134123",
+      "collection_root": "repositories/renezander030/capcut-cli"
+    },
+    {
+      "repository": "swaylq/humanize-chinese",
+      "commit_sha": "6510ca720b91919a12fa2e828b5ec959deb11db4",
+      "collection_root": "repositories/swaylq/humanize-chinese"
+    },
+    {
+      "repository": "wiltodelta/remove-ai-watermarks",
+      "commit_sha": "3168d878461eed072bf86c237b219611261cf85f",
+      "collection_root": "repositories/wiltodelta/remove-ai-watermarks"
+    },
+    {
+      "repository": "yang0/handraw-style",
+      "commit_sha": "11d3915a8c30fd4d5223e188ae9fc3ad23743505",
+      "collection_root": "repositories/yang0/handraw-style"
+    },
+    {
+      "repository": "zincio/skills",
+      "commit_sha": "7a83b68cb4737eb30540d4cb732e9fc0a0376ada",
+      "collection_root": "repositories/zincio/skills"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "repository": "luchasarie/bro-skill",
+  "commit_sha": "6c08e7ee5eb8ef8b9bf0588d400170654abc256b",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "37f94b76710b2cda2de53781d0ae34101481dc23",
+      "bytes": 1076,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/LICENSE",
+      "sha256": "d8fb8acb7a55ecffe2addab2634ebde374621eec5f7c2e065a4d5b740d474611",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa550fbcec8fe2bc272f1c24a60e23e424739bed",
+      "bytes": 6376,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/README.md",
+      "sha256": "bcff5a2844841b7c4884c0d2e63068cc18be590024736541f82facbff27548b2",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a8f3612c104758174d728c1bce7548b99f5d0fd6",
+      "bytes": 2279,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/SKILL.md",
+      "sha256": "b02ef759532a050b382c37b8f66f434c3d4d2f955852c70a694e4645558643be",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/SKILL.md"
+    },
+    {
+      "path": "examples/consultant-speak.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "621a3fb59cea01ece2d6229444aefef4899a7ab5",
+      "bytes": 509,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/consultant-speak.md",
+      "sha256": "ec73480f1d9b04d0985cdd7553bcc75c9d75f79d9ba26202716bdf12ff31517e",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/consultant-speak.md"
+    },
+    {
+      "path": "examples/git-panic.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5255856aa314509609c5cb32b6ed17a715da77e9",
+      "bytes": 1334,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/git-panic.md",
+      "sha256": "d2a9ae1d288d0ea4f4d4e11e0099062a122d1c4372fdf3b0c93565d114319b4c",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/git-panic.md"
+    },
+    {
+      "path": "examples/kubernetes.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "31bd6ba36cd424d9095ce65996ea7a3e27dd738b",
+      "bytes": 873,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/kubernetes.md",
+      "sha256": "23e10e8d0a18f42c4b6ebd11e3255c83107f389af576262403674a7a59858bbc",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/kubernetes.md"
+    },
+    {
+      "path": "examples/pt-br.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4fa53ba65420434f69d8ba8e9c97f53e11daf35c",
+      "bytes": 760,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/pt-br.md",
+      "sha256": "f0b5b87080a3413b5d0ca96e4257fdb005be598eb697fb43f96e4785941e60fd",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/pt-br.md"
+    },
+    {
+      "path": "examples/software-architecture.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c698518bd2af05e8bbe8695928d294dd30d57c8",
+      "bytes": 503,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/software-architecture.md",
+      "sha256": "20e12e84277f1179fd803b47829754c55a06b4aeb578adf3cca9fc8848eea1fd",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/examples/software-architecture.md"
+    },
+    {
+      "path": "install.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "66b586c4a2b0c857ed94fe63e578a38a15dd8485",
+      "bytes": 4737,
+      "source_url": "https://github.com/luchasarie/bro-skill/blob/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/install.sh",
+      "sha256": "2c898a2a70a1bf1695cc74abc916f876d5c610cbd038294b9b308bacb038f99d",
+      "status": "saved",
+      "raw_path": "raw/luchasarie/bro-skill/6c08e7ee5eb8ef8b9bf0588d400170654abc256b/install.sh"
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "repository": "pengchujin/jzsub",
+  "commit_sha": "222a90265d2a8797ca258eb1a980cee0863a8311",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ece1b484c2974514f3ccab917a62ae795bdcc033",
+      "bytes": 260,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/.gitignore",
+      "sha256": "92d4a68333b3d998536398573a5887299058040c085ec92ab6ece64f2313f1ca",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4cec4ee355a54271d06034fb661cffd14432e6d6",
+      "bytes": 1067,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/LICENSE",
+      "sha256": "cb77d791da468f1ac31ff4ad9176ffa8833de3c4b91efc1d6e0a259da37e8c29",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e2e93f8c9565522bea9a23c642ebac65385fa2cd",
+      "bytes": 6576,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/README.md",
+      "sha256": "5770b9016b10cc748f7fcf915eeca925f282a4c3ddb4f1c2bd8d0910638d3163",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/README.md"
+    },
+    {
+      "path": "TODO.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5159339fdfe2d1b856c52444cb40062d30925423",
+      "bytes": 1875,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/TODO.md",
+      "sha256": "308e1245663faa319e676f5a9659dd81ca10cd488d5210d6e2a1e9e63b9c03f3",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/TODO.md"
+    },
+    {
+      "path": "docs/assets/codex-usage.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "13a5812fec365a3f9d5425afe85d6605a91e2347",
+      "bytes": 3218,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/codex-usage.svg",
+      "sha256": "8ab658d96bd0a8e87590a6bd9d379fc35dc3b5996d023268204b7dcd0370be81",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/codex-usage.svg"
+    },
+    {
+      "path": "docs/assets/examples/before-after.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d87b0b090fc8373e0513a5d810e21a6fb0a80425",
+      "bytes": 101569,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/examples/before-after.jpg",
+      "sha256": "7865238763c684b2d58e71f32b3c708151c7cc043488ee21155a300c2d0d1fdb",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/assets/examples/cover.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "850fcc0d2172a5846d1fac46550c2b26dec4a4d7",
+      "bytes": 62342,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/examples/cover.jpg",
+      "sha256": "f2854d3e22f63a4920691cf76eda6f8339b1f58555f465bfc89f82ff3a07b348",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/assets/examples/portrait-before-after.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "baed43d2c3a1d9eed52c195ad8cfc321a4b90cdd",
+      "bytes": 218266,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/examples/portrait-before-after.jpg",
+      "sha256": "149a338e7ed6aa23741e3a66ee696845a80019c01f8c303a042d4ed5f6b32210",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/assets/hero-skill-cover-name.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0877fa822e6ef8301bcc41e9c8385110ce368468",
+      "bytes": 7018,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/hero-skill-cover-name.svg",
+      "sha256": "0a9fb0fe6ede4d6e84096ba98420e207906206706f6c0a6afbcbfdcc64fed057",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/hero-skill-cover-name.svg"
+    },
+    {
+      "path": "docs/assets/platforms/bilibili.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "12e09e200e812410cb2bd0ef1b36a4d69c0f4cc4",
+      "bytes": 1396,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/bilibili.svg",
+      "sha256": "b765d3899f1d4ffa4b9be5fb6f4ef41b3d9c5e6905f174c29e92b43409483d24",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/bilibili.svg"
+    },
+    {
+      "path": "docs/assets/platforms/dailymotion.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "62c39ebd15ff00bef10de2bab4aff978bc263db7",
+      "bytes": 1468,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/dailymotion.svg",
+      "sha256": "11d7f454fcd3030d6dddd0528606c9f698079e6136236a9c13d6d969aa94e1cd",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/dailymotion.svg"
+    },
+    {
+      "path": "docs/assets/platforms/tiktok.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2306cfd7144d4aec51b5bfd5e1e7527f283912c7",
+      "bytes": 722,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/tiktok.svg",
+      "sha256": "c8220f70f08688fd250c96d369a9041d6f9cfa5fef7d87b9cbd5da4987d804bb",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/tiktok.svg"
+    },
+    {
+      "path": "docs/assets/platforms/twitch.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "991cbb6ab949b5e0b55aa2712c35bc28bd9d58eb",
+      "bytes": 307,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/twitch.svg",
+      "sha256": "9d0d871053b782a01d4ee1790281419fd3e9463dd2176d814fd80b810337ad81",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/twitch.svg"
+    },
+    {
+      "path": "docs/assets/platforms/vimeo.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "24bbce7f7d5136f2a49a70bf448c9f85930eba80",
+      "bytes": 712,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/vimeo.svg",
+      "sha256": "9ad7a69de623fc3cd7a87eb9961202eaca86bb1e32abeadceac713b0811f58d3",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/vimeo.svg"
+    },
+    {
+      "path": "docs/assets/platforms/youtube.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9306b8e655b259e983326d3eabbae1f9ec9364ed",
+      "bytes": 474,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/youtube.svg",
+      "sha256": "7f5156448b9c1b65156e34e4443f0eff8b85f5afa783fc8a8d09f49380fed424",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/docs/assets/platforms/youtube.svg"
+    },
+    {
+      "path": "skills/jzsub/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "476bceec66ef0301959ee89ba17ec2e2c82f086e",
+      "bytes": 8121,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/SKILL.md",
+      "sha256": "a5b2ebb65b816e2c97c224f7e8499d18732aeb026ad8c8f5d645008459747283",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/SKILL.md"
+    },
+    {
+      "path": "skills/jzsub/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6bf69c313bbc9a49c6f15d3a240152393462a45b",
+      "bytes": 515,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/agents/openai.yaml",
+      "sha256": "9a2415ee00a74f9112859940d9728663e0ee41b9e37cf2b0845abc04fedd2602",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/agents/openai.yaml"
+    },
+    {
+      "path": "skills/jzsub/references/chrome-auth.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4914bd95dbc3b0d8409eed589a89f15e7288a0f1",
+      "bytes": 3091,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/chrome-auth.md",
+      "sha256": "85594d6457111f50fae73748570d9db6709698627c1489e3297fd5eb321af554",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/chrome-auth.md"
+    },
+    {
+      "path": "skills/jzsub/references/platform-notes.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "353f63784671043b6aeb63807d9fead96312bdf6",
+      "bytes": 4388,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/platform-notes.md",
+      "sha256": "8994a852e0e7aa395676221d444cdadb775efd922be2393cc41b87a0d7d09fc6",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/platform-notes.md"
+    },
+    {
+      "path": "skills/jzsub/references/translation-contract.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "698ed99cd220882ba88a9f17fcca20057da2c495",
+      "bytes": 1955,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/translation-contract.md",
+      "sha256": "6090ca08494cd9952a1fdbdc9f2fa8da3db9beec366f926f4cec01efd7c1352d",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/references/translation-contract.md"
+    },
+    {
+      "path": "skills/jzsub/scripts/burn_subtitles.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "f5a97f9202be11bf55585eb138cd467a4954290a",
+      "bytes": 24931,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/burn_subtitles.py",
+      "sha256": "601d468ee659a3a3f4f41af7e092ac83cc182f657c57132ee9db5cda359b5880",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/burn_subtitles.py"
+    },
+    {
+      "path": "skills/jzsub/scripts/fetch_video.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "89bfdc0b407e602f3f4cdac75a798fbb7f9f3a8e",
+      "bytes": 78536,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/fetch_video.py",
+      "sha256": "b8b8e1442c53ab56b574d82d084a5324f917ba3ba8b0a35fc0338ddafad7d3cb",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/fetch_video.py"
+    },
+    {
+      "path": "skills/jzsub/scripts/subtitle_pipeline.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "2e1feb387ff35f3d71eb73e9053a96eef04567ab",
+      "bytes": 52555,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/subtitle_pipeline.py",
+      "sha256": "38770aa4d5015ca36879cf06a2d19d3b9f2c689a5a0cfb818f68805da6f1bd86",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/subtitle_pipeline.py"
+    },
+    {
+      "path": "skills/jzsub/scripts/verify_delivery.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "3167ac04a90d3993bcad6ee835762d5d7cf482c3",
+      "bytes": 7602,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/verify_delivery.py",
+      "sha256": "7076f0474b25ffa60b3ec2ad1be185913479bb94b736ff2e1b2ca971a002f218",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/scripts/verify_delivery.py"
+    },
+    {
+      "path": "skills/jzsub/tests/test_burn_subtitles.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "abf92972e4435a5f017961c7d9d1501ce9decfe3",
+      "bytes": 7165,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_burn_subtitles.py",
+      "sha256": "88f244ea8f0eb62e2dc4f72a376102e6ac225d4ec47d273f4cc1e22145f9f20a",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_burn_subtitles.py"
+    },
+    {
+      "path": "skills/jzsub/tests/test_subtitle_pipeline.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "918f0b4fe8430372beb194f006fff43bc50982bb",
+      "bytes": 30572,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_subtitle_pipeline.py",
+      "sha256": "a99816ff74fbcc95e48da9ed0776fcd447706937a0e73c9c0238862e3b11ae53",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_subtitle_pipeline.py"
+    },
+    {
+      "path": "skills/jzsub/tests/test_verify_delivery.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6821de9321bb406d5eddc99557dc7aefad6ff5e0",
+      "bytes": 10007,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_verify_delivery.py",
+      "sha256": "04daa507c0aa1b4faeaad0783be7d1d7b96112955def0a2e0bd0cfb0400d5312",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/skills/jzsub/tests/test_verify_delivery.py"
+    },
+    {
+      "path": "tests/test_readme_assets.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "48d522cd2b485125dc275545c671a51dd2a4c75c",
+      "bytes": 904,
+      "source_url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/tests/test_readme_assets.py",
+      "sha256": "14b126699bbfd1db9e930d25d0b12505a26f0d3af86cf38c0951b8422008f49e",
+      "status": "saved",
+      "raw_path": "raw/pengchujin/jzsub/222a90265d2a8797ca258eb1a980cee0863a8311/tests/test_readme_assets.py"
+    }
+  ]
+}

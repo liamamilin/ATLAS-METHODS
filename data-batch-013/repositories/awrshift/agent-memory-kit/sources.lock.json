@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "awrshift/agent-memory-kit",
+      "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e"
+    }
+  ]
+}

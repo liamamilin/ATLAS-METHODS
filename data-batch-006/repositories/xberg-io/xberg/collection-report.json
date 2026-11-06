@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:48:51.527103+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 75,
+  "saved_skill_entries": 75,
+  "unique_entry_texts": 33,
+  "duplicate_entry_groups": 7,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "xberg-io/xberg",
+      "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 75,
+      "saved_skill_entries": 75,
+      "saved_text_files": 10473,
+      "files_not_exported": 254,
+      "repository_manifest": "manifests/xberg-io/xberg/da0c2048bb30907ce692b0bceac284d0c62fe430.json"
+    }
+  ],
+  "errors": []
+}

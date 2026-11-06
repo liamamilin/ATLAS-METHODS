@@ -1,0 +1,18 @@
+{
+  "repository": "vshulcz/deja-vu",
+  "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+  "tree_entries": 4251,
+  "candidate_skill_paths": [
+    "antigravity-plugin/skills/deja-history/SKILL.md",
+    "claude-plugin/skills/deja-history/SKILL.md",
+    "claude-plugin/skills/deja-reflect/SKILL.md",
+    "codebuddy-plugin/skills/deja-history/SKILL.md",
+    "codex-plugin/skills/deja-history/SKILL.md",
+    "cursor-plugin/skills/deja-history/SKILL.md",
+    "devin-plugin/skills/deja-history/SKILL.md",
+    "extensions/grok/skills/deja-history/SKILL.md",
+    "extensions/kimi/skills/deja-history/SKILL.md",
+    "skills/deja-reflect/SKILL.md",
+    "skills/deja-search/SKILL.md"
+  ]
+}

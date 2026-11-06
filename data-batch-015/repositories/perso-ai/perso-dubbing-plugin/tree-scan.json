@@ -1,0 +1,10 @@
+{
+  "repository": "perso-ai/perso-dubbing-plugin",
+  "commit_sha": "84b2baa6f472aa88a1aaa7a0d68c7378bffe889c",
+  "tree_entries": 134,
+  "candidate_skill_paths": [
+    "skills/clip/SKILL.md",
+    "skills/dubbing/SKILL.md",
+    "skills/srt/SKILL.md"
+  ]
+}

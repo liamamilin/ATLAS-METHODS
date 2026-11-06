@@ -1,0 +1,11 @@
+{
+  "repository": "Charlie85270/Dorothy",
+  "commit_sha": "787568d5bba83b8ef35baa9ac29912d8eecc44cf",
+  "tree_entries": 1017,
+  "candidate_skill_paths": [
+    ".agents/skills/component-refactoring/SKILL.md",
+    ".agents/skills/vercel-react-best-practices/SKILL.md",
+    ".agents/skills/web-design-guidelines/SKILL.md",
+    "skills/world-builder/SKILL.md"
+  ]
+}

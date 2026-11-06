@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf"
+    }
+  ]
+}

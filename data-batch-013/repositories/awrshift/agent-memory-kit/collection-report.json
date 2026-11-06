@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:10:09.200531+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 10,
+  "saved_skill_entries": 10,
+  "unique_entry_texts": 10,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "awrshift/agent-memory-kit",
+      "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 149,
+      "files_not_exported": 16,
+      "repository_manifest": "manifests/awrshift/agent-memory-kit/c74602aef15c102459f7a0c9368306126231bf5e.json"
+    }
+  ],
+  "errors": []
+}

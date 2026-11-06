@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:01:17.886977+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 23,
+  "saved_skill_entries": 23,
+  "unique_entry_texts": 23,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "GanyuanRan/Aegis",
+      "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 23,
+      "saved_skill_entries": 23,
+      "saved_text_files": 571,
+      "files_not_exported": 3,
+      "repository_manifest": "manifests/GanyuanRan/Aegis/952b150a16b9cf9c702022ea779bcc6750b0d48d.json"
+    }
+  ],
+  "errors": []
+}

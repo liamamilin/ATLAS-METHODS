@@ -1,0 +1,171 @@
+{
+  "repository": "CloudAI-X/threejs-skills",
+  "commit_sha": "0e181866f095b5f06d005133876e926515390d95",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a8252c8e6798c6867144edbfb5bbd8df80743d00",
+      "bytes": 1066,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/LICENSE",
+      "sha256": "d26f12fa1a0e03fd5aa4d3cbf05262a9f1c684672d0864abac78b3bbb12b268c",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a20a35bbb9c4d2cff145b55df2f8fc15d0d550c9",
+      "bytes": 5302,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/README.md",
+      "sha256": "e068ef3b64df1fbfd82e4f078f868abc3a3d011520e86e40c5eda3707086d6ad",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/README.md"
+    },
+    {
+      "path": "skills/threejs-animation/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "88fed204523e82cebf2953b9c14944001d43cc31",
+      "bytes": 21367,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-animation/SKILL.md",
+      "sha256": "0ab1b79cb977a1b5b03b247f9ef677acc76c3ee80d42904afb1b66838a19c481",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-animation/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-asset-pipeline/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9515e85dac0dd16a3d8fac9b00263af8c217517f",
+      "bytes": 18013,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-asset-pipeline/SKILL.md",
+      "sha256": "25ca0a26ce01a1151c6757757569ef7bea56bc1af77b216c386c136060e5952d",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-asset-pipeline/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-fundamentals/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "85c223750c222dc91edd2c08383a6b3f7e7b85fe",
+      "bytes": 23598,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-fundamentals/SKILL.md",
+      "sha256": "cb6a0db8f05bb7d8196cad0ca6ae245e2baec53da4675e1b94be4fa735ed8a09",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-fundamentals/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-geometry/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c1f17b11aa345f94face1ec7033c45b560dc8b2",
+      "bytes": 25372,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-geometry/SKILL.md",
+      "sha256": "c29c1568cb56e902999b6a50316cd5079c53ee620138148897d269e9716e8da7",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-geometry/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-interaction/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bdd56b384eb0df0cc883057dd456136ec2c5d768",
+      "bytes": 22313,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-interaction/SKILL.md",
+      "sha256": "46f60f3235aa11f2b89320cc2fb5b0adc167f3e8f0c717ba60ad1b006b41621f",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-interaction/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-lighting/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "49370e6e1c9a73096e3089c78246b826fb572cdf",
+      "bytes": 23467,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-lighting/SKILL.md",
+      "sha256": "f12faf79625a7f42952124a5456d338e8399a65e16326c1a6a3239aa8e5ce489",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-lighting/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-loaders/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ce7100526666340c37a3996e5e3ab3ff7cb7893e",
+      "bytes": 22165,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-loaders/SKILL.md",
+      "sha256": "ddf6ed2d7dfc809ce722482541fe88af7d349cd8066a4617fabaea865a2a831d",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-loaders/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-materials/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "550a83cd4febc2ee458962deb0da4d67da3b9d13",
+      "bytes": 26722,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-materials/SKILL.md",
+      "sha256": "7d17cefac80196f3dd5068e2042e66244073925d24a55b7ca77534d594c5bc81",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-materials/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-performance/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fcc6a5f992030449736b2a83702a4f79229e9ff2",
+      "bytes": 25315,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-performance/SKILL.md",
+      "sha256": "dacbf6a43ed280bdfcda2ce9fcf7a3f0ae54c25ed264e62f6e9a0117d6534285",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-performance/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-postprocessing/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e45adb56a967090d3a83a13e1e6b8b2a824cd28",
+      "bytes": 27097,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-postprocessing/SKILL.md",
+      "sha256": "0063f5f544215748ed666d878f1d69112094e662792228445a3ab9a56d209fb1",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-postprocessing/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-react-three-fiber/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "75fdf7ec3a2e67bbe7541863790058d68e20d5cd",
+      "bytes": 30002,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-react-three-fiber/SKILL.md",
+      "sha256": "07c0f09516dce50c91c3d23c5baca83c35d161e1abe3d8460782aba56e9476fa",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-react-three-fiber/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-shaders/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6659866c82ce64cf8b3d8d739aef4b1e25556d1c",
+      "bytes": 26503,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-shaders/SKILL.md",
+      "sha256": "8dc55ed6cc348abaad60851ae9f3f5ebcc6e3027dd7f7a55acc1832c73f11bca",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-shaders/SKILL.md"
+    },
+    {
+      "path": "skills/threejs-textures/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dd12ee9f94300c6674bae586288e5d7c030b8ef0",
+      "bytes": 22589,
+      "source_url": "https://github.com/CloudAI-X/threejs-skills/blob/0e181866f095b5f06d005133876e926515390d95/skills/threejs-textures/SKILL.md",
+      "sha256": "43b4fde95cf9fe42b05f38fe6a6c6d5f36eb062cb15b3fd21a0eed376a5d1d9b",
+      "status": "saved",
+      "raw_path": "raw/CloudAI-X/threejs-skills/0e181866f095b5f06d005133876e926515390d95/skills/threejs-textures/SKILL.md"
+    }
+  ]
+}

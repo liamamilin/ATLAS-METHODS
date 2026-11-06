@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:53:25.071140+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "siril9/presentation-skill",
+      "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 599,
+      "files_not_exported": 159,
+      "repository_manifest": "manifests/siril9/presentation-skill/efd899c5ddf866af2ce0001c4c9340af775d4d55.json"
+    }
+  ],
+  "errors": []
+}

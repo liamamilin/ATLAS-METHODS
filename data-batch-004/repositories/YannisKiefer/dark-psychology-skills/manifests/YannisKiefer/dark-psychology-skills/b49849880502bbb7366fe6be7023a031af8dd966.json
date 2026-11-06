@@ -1,0 +1,247 @@
+{
+  "repository": "YannisKiefer/dark-psychology-skills",
+  "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+  "files": [
+    {
+      "path": ".github/workflows/lint.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a4c46cde29e1854756db07d16bfc449fbfd35dbb",
+      "bytes": 185,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/.github/workflows/lint.yml",
+      "sha256": "82277b16711fb8fc669adc9f3cbbc4f29197b7f9253d93fc52b3c5ea803fc415",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/.github/workflows/lint.yml"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "20702a0ed937c56aa6ba053b1edb59cbedfebc3d",
+      "bytes": 978,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/CONTRIBUTING.md",
+      "sha256": "c7f614581d7f13dc7ffe7c18d6dbef697c6de3d7aaaad66fad1ae39679914aba",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/CONTRIBUTING.md"
+    },
+    {
+      "path": "EXAMPLES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "930affbf46cba441eb84b4b2cbbe0b31293fc48c",
+      "bytes": 1899,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/EXAMPLES.md",
+      "sha256": "2f4ea3773a2fd80729f5b1708c1ef791c870d77508541f5152933751f153f83f",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/EXAMPLES.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "610e9a78978aaab7490fa3e10b599ac7d2c63e72",
+      "bytes": 1070,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/LICENSE",
+      "sha256": "8a35caae732912294ed5c4460ace23764de3477dfcd91f293073b964452e3999",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb7ab3a77b80551b87cc4fa66d5a567947bba064",
+      "bytes": 3242,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/README.md",
+      "sha256": "f49ed36e738ee0f57f82dc6ceb668721228c2b583557025dfb307c75f6efb74f",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/README.md"
+    },
+    {
+      "path": "SOURCES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7651324bfb9027c968bc712a3e6230e84b23cca5",
+      "bytes": 3638,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/SOURCES.md",
+      "sha256": "9f9ec9b7fc5b2a5ef38325824c8ea3b045b1d1463ec9210f74141b246d67ef71",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/SOURCES.md"
+    },
+    {
+      "path": "assets/banner.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4b6fc8b79456fbf9342ea4727ad8dbeac6caaeaa",
+      "bytes": 101495,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/assets/banner.jpg",
+      "sha256": "9539a5db06d47a03a49b03f8a88db02e09f97f24041010b21100fd6114a1a090",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/banner.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e5bfee8ee0d92e2d168ccad0670335542b341d9d",
+      "bytes": 3634,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/assets/banner.svg",
+      "sha256": "6f99998c9f21b6a7d66507bd74b88d3fd17d161794e9cd17569144aa29935471",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/assets/banner.svg"
+    },
+    {
+      "path": "scripts/lint.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a8818165289972561e160fff8842da0fa708b690",
+      "bytes": 1722,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/scripts/lint.py",
+      "sha256": "a61e1de7f278e5d0d3396633bd1851b2425f9107344d4c64ba810dea717309c0",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/scripts/lint.py"
+    },
+    {
+      "path": "skills/client-archetypes/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2a2160c4c63bbf8e1d204a9ad33b7a30b8c8be18",
+      "bytes": 1722,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/client-archetypes/SKILL.md",
+      "sha256": "5795776e4fd65069b2ae181110503636dfb90ed0dd6ba7919ea3fb1b4bfa344e",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/client-archetypes/SKILL.md"
+    },
+    {
+      "path": "skills/cold-outreach/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b5d209b461aac46f0b2d160ed16c249609ecc385",
+      "bytes": 1683,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/cold-outreach/SKILL.md",
+      "sha256": "d22e912071260c4e320765b9460464c25c2c101a02ac1ce72c0364f393a6566e",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/cold-outreach/SKILL.md"
+    },
+    {
+      "path": "skills/dark-tactics-defense/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "10c73a1b1a52106cad0879abcef4bf081295446c",
+      "bytes": 1753,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/dark-tactics-defense/SKILL.md",
+      "sha256": "e14126ef284f5a20eb6ca49f41eb180878b694604f0eb30f621a6133dfb2dd0f",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/dark-tactics-defense/SKILL.md"
+    },
+    {
+      "path": "skills/deal-router/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c17b67f23206cb2c40b366911f409f682d4753a2",
+      "bytes": 1981,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/deal-router/SKILL.md",
+      "sha256": "b8f4e11441bf6e5bcbaee0d8921aa5ac771d2ee096497bf3a5504fb2bbc38c1c",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/deal-router/SKILL.md"
+    },
+    {
+      "path": "skills/discovery-power/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "96cf88b0beb922c59fa110b4fcaf1c465c6bead2",
+      "bytes": 1661,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/discovery-power/SKILL.md",
+      "sha256": "2f0f3ff4ef7d52148db925cac6ce2335510b92c8bd816067ccce8d01a127f06a",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/discovery-power/SKILL.md"
+    },
+    {
+      "path": "skills/frame-control/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5a445c3b4a5903f04224774118f1227bd12d94cd",
+      "bytes": 1395,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/frame-control/SKILL.md",
+      "sha256": "690d571156ecaf2da2b5703fe9d23521ebf2c1e71b5327df7b5f66e132e1738c",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/frame-control/SKILL.md"
+    },
+    {
+      "path": "skills/objection-slayer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d4e8f20a83a5d1b70c24f355649e89773e8dc551",
+      "bytes": 1598,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/objection-slayer/SKILL.md",
+      "sha256": "de815053466c7dcb352097f2ac2b1a70471fffefc4391bbc77d8f516b67f6121",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/objection-slayer/SKILL.md"
+    },
+    {
+      "path": "skills/operator-mindset/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1245d8e88de6d456135240308d0be4679c42def6",
+      "bytes": 1385,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/operator-mindset/SKILL.md",
+      "sha256": "720ae31ecc4ba36901c03d80b295427e1a39e5106315733f15f8f3a12215e030",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/operator-mindset/SKILL.md"
+    },
+    {
+      "path": "skills/price-anchor/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0ca09e33384c5ac91423db376233de5052a5496a",
+      "bytes": 1416,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/price-anchor/SKILL.md",
+      "sha256": "6e41854d2a22cb5ae6a4535447113deae4d90d967f6ab32072c6587739abc52a",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/price-anchor/SKILL.md"
+    },
+    {
+      "path": "skills/reading-people/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9317cad810a491ca79728994749d14df3be8dbd1",
+      "bytes": 1788,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/reading-people/SKILL.md",
+      "sha256": "96bbf59c8ebeeb87f960086e8aca6927dda9ebacdbb07d4ae7fa6ec7ebfffe27",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/reading-people/SKILL.md"
+    },
+    {
+      "path": "skills/risk-reversal/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5dd7421e2b45175e70bd56111b6ce1a95f50f60",
+      "bytes": 1387,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/risk-reversal/SKILL.md",
+      "sha256": "d637c1f7c3119fe46791025dd6cdcd67524f4eeed052922f102d88d61db0e79f",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/risk-reversal/SKILL.md"
+    },
+    {
+      "path": "skills/trust-from-zero/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "25ec188ca8b857f7eeb3e9640e19fa1be0117a94",
+      "bytes": 1439,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/trust-from-zero/SKILL.md",
+      "sha256": "0551a4f2cf38f97cd70123313bb35f9ed8ca7f6f34049fcb56f4b0378ab2663e",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/trust-from-zero/SKILL.md"
+    },
+    {
+      "path": "skills/walk-away-power/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bd8b2062ade38bf6d314aa341c7ebd1337853f6f",
+      "bytes": 1484,
+      "source_url": "https://github.com/YannisKiefer/dark-psychology-skills/blob/b49849880502bbb7366fe6be7023a031af8dd966/skills/walk-away-power/SKILL.md",
+      "sha256": "9679ace21fc51d64029194840e74cd9f623cdb90f7adedf01f5a98f4e445013c",
+      "status": "saved",
+      "raw_path": "raw/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966/skills/walk-away-power/SKILL.md"
+    }
+  ]
+}

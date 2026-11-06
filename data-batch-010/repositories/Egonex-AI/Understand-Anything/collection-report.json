@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:00:46.175375+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Egonex-AI/Understand-Anything",
+      "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 499,
+      "files_not_exported": 22,
+      "repository_manifest": "manifests/Egonex-AI/Understand-Anything/98d6dca712407b8cbf0bca21b539c197e5a7825c.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,72 @@
+{
+  "repository": "apitube/news-api-skills",
+  "commit_sha": "cb09497e885e8ea9846dbc1277680493ae9add8d",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "928b2c07424c5554628cac5665782144ad2d5f24",
+      "bytes": 528,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/.claude-plugin/marketplace.json",
+      "sha256": "a3a016ac0f7afde0d419e310984fd44b5ba1351c1b5d8308b7553a46fb4f3e3c",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "68b4732efdfff509c395e306edb7b1858475f43c",
+      "bytes": 62,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/.gitignore",
+      "sha256": "69b4a07e34b5abfb1f95a0839cca88111dc11605209ab66f75083c20fe818d54",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "db2fe8650e21da111fd69bedc1df891f702a67eb",
+      "bytes": 1710,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/AGENTS.md",
+      "sha256": "036a396d1d0303122be4cbb3536fd3289a4a5b3bbf0ca634921d6bded5255be1",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/AGENTS.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "397c880ced20faf02e45075bd1574c2745894a94",
+      "bytes": 1064,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/LICENSE",
+      "sha256": "6a8b11828d59e2a40972279a86900dc05349588f3782ef1c41f5cacba1f2b7ba",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2ce015cd071df6469a41660186bef9b6f3856af7",
+      "bytes": 4725,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/README.md",
+      "sha256": "36918a887782619fca0cd5ce1879ad3d9b7cef5d3ea6ed18623c428f83d583da",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/README.md"
+    },
+    {
+      "path": "skills/apitube-news-api/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4e786e50e2ab598b7781c5278ebd2e141460e902",
+      "bytes": 21624,
+      "source_url": "https://github.com/apitube/news-api-skills/blob/cb09497e885e8ea9846dbc1277680493ae9add8d/skills/apitube-news-api/SKILL.md",
+      "sha256": "eab309c9722f14498f691874d1d0ad91910c04c712aef0eb7a06eddda280dc53",
+      "status": "saved",
+      "raw_path": "raw/apitube/news-api-skills/cb09497e885e8ea9846dbc1277680493ae9add8d/skills/apitube-news-api/SKILL.md"
+    }
+  ]
+}

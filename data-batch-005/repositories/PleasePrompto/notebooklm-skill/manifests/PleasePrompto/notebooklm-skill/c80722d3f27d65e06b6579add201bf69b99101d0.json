@@ -1,0 +1,236 @@
+{
+  "repository": "PleasePrompto/notebooklm-skill",
+  "commit_sha": "c80722d3f27d65e06b6579add201bf69b99101d0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "4d7e1c368c6d4a5ea6286e29e37691013fd3c8d9",
+      "bytes": 723,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/.gitignore",
+      "sha256": "a36cd64c569dcc96ce1c63745f2b371bde906a2c03cdf89ccbf23e31a3239d8d",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/.gitignore"
+    },
+    {
+      "path": "AUTHENTICATION.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "5d9de88aa9409489e2e9226e1bb6227b7578e7f9",
+      "bytes": 5729,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/AUTHENTICATION.md",
+      "sha256": "2b1dbabbe732d011203debf38ed4af41bfb518d30c43bece928dfd45daa6e350",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/AUTHENTICATION.md"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "a60278e69ed1a480fbcb6640a0e2aef47263e657",
+      "bytes": 1774,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/CHANGELOG.md",
+      "sha256": "04c7d84879cd07d7ac2012fb190ea3587bf91515e1af7b8a57ea00a11ddf03c2",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "5b2d7518e7a19e425741c0c556ac2122ca5298a6",
+      "bytes": 1072,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/LICENSE",
+      "sha256": "0ad77d6e05eea79c29fbadce21fb7ed7aad883acde73f4a2c5fef77c9536cd07",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "68211ea834963d1ca6affbbb66471391f33a7522",
+      "bytes": 16116,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/README.md",
+      "sha256": "913d5fa27ba37cb3623a9ca417de5698f884a3db758fde2d474e41d8740d97de",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "2be7e1615889f128c87c6938ca2c4f262f861a9a",
+      "bytes": 9442,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/SKILL.md",
+      "sha256": "8fcfe1aa04523483c1d1a5aa10835bc796228d2de9a66460a767bf2d6ed7432e",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/SKILL.md"
+    },
+    {
+      "path": "images/example_notebookchat.png",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "5a7316fd4dbb96b1bfbfd000cb8ad3df61514ae7",
+      "bytes": 137552,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/images/example_notebookchat.png",
+      "sha256": "c31d39e839c4326fd7a492d1d9ca076512ec81765addb5266ad1e4a35b15ad8b",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "references/api_reference.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "a0ce65ee2ec1fb548b45d1dc48a16949bb3c67db",
+      "bytes": 7630,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/references/api_reference.md",
+      "sha256": "bb4b57b7f39f213961be77fedf83fd5a8ebe30746a6d212e5c36ac1d64bb8eac",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/references/api_reference.md"
+    },
+    {
+      "path": "references/troubleshooting.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "992aeb7c4328cb2d2bffd4588dd8faf45eef14a2",
+      "bytes": 8994,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/references/troubleshooting.md",
+      "sha256": "b32709f82c66564ed5c1948f37f80a7d7b3f49a250e10ffb37e579733a4a0b45",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/references/troubleshooting.md"
+    },
+    {
+      "path": "references/usage_patterns.md",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "ad517e9d22f6221894421a100d496f856f1e3082",
+      "bytes": 9574,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/references/usage_patterns.md",
+      "sha256": "be990a67326e1f1612e7a00cca6a6a2263593dd7a623a137194b87f55446a650",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/references/usage_patterns.md"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "6e380086a11cb3f6c7c9dd7b17c2d5cfd0d4fa24",
+      "bytes": 325,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/requirements.txt",
+      "sha256": "001076a8c9bc206a8dc6556f5bcb5fcb1864494cca2bdf698160b001923a8aa1",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/requirements.txt"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "e77fffc911bcad8c099766aa6f8942a3f44b04aa",
+      "bytes": 2627,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/__init__.py",
+      "sha256": "b8ccc9d7d23f336fb570f946bd015367a73cc27d5eef7f5fc2eb74f1503a9e46",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/__init__.py"
+    },
+    {
+      "path": "scripts/ask_question.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "aa47e4bf75fd0dcc65dc8c75198bcf04235cc979",
+      "bytes": 8196,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/ask_question.py",
+      "sha256": "29ee6d8744783ef81bf09145ad64bfa1f7f7aff217b0de1ba21e0f4c80bda1b6",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/ask_question.py"
+    },
+    {
+      "path": "scripts/auth_manager.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "54c8b3bc1b1234dc85ec3309a22d1c5f470f414f",
+      "bytes": 11544,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/auth_manager.py",
+      "sha256": "2494af0da219bad907b097d26f663eb2557ee5f1db25b8a926d8945b1c1e9d30",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/auth_manager.py"
+    },
+    {
+      "path": "scripts/browser_session.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "b121af83cf2e31e7da23bbb79617d2c04ddd4393",
+      "bytes": 8725,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/browser_session.py",
+      "sha256": "6c2de8e83be0e2843b27d502744978f45c563cb8334f109938ac557e27f78496",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/browser_session.py"
+    },
+    {
+      "path": "scripts/browser_utils.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "60a121085d1cd155f128f4777aed91e7928093fa",
+      "bytes": 3525,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/browser_utils.py",
+      "sha256": "98172e3e02e42348093ec6e9ddfa754ba3fa2603ad2d188fc9838ca27e44a39a",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/browser_utils.py"
+    },
+    {
+      "path": "scripts/cleanup_manager.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "c4a8fc2abcaa0fcdee82b9f5a501ab026648e743",
+      "bytes": 9777,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/cleanup_manager.py",
+      "sha256": "0a85a8d0164eb3ae7aa15356af814a28717cfc1000a43f0291a2a1946401d7e0",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/cleanup_manager.py"
+    },
+    {
+      "path": "scripts/config.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "4486b55e3a99b208f3ef80b179292a7ee8b79776",
+      "bytes": 1228,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/config.py",
+      "sha256": "e614bb83a1b2fa230a9848b6480e6ff62fd3d7e37aee4349f40298e7e582b65b",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/config.py"
+    },
+    {
+      "path": "scripts/notebook_manager.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "e10e156d16478e1ce3de5d36f26240e9d421daf7",
+      "bytes": 13843,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/notebook_manager.py",
+      "sha256": "759384d94eabab346e9c4da73ee968d68277498d8ec19d261554a63ec3ac0238",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/notebook_manager.py"
+    },
+    {
+      "path": "scripts/run.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "7c47a92e6d9c684ee74c9f1db2977b1fb1d001a8",
+      "bytes": 2967,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/run.py",
+      "sha256": "7f81301b8dde236a5a15a01f4db9530e5cd90bd2bcc1d7b0eb13bc58da81d79f",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/run.py"
+    },
+    {
+      "path": "scripts/setup_environment.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "a4167d07c411079926491feda0fd07d6dc2f9099",
+      "bytes": 7168,
+      "source_url": "https://github.com/PleasePrompto/notebooklm-skill/blob/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/setup_environment.py",
+      "sha256": "895c9055577e8e0bad8801681ad9becd9ff6b6bb72107b6b359c1cf8512f0ac0",
+      "status": "saved",
+      "raw_path": "raw/PleasePrompto/notebooklm-skill/c80722d3f27d65e06b6579add201bf69b99101d0/scripts/setup_environment.py"
+    }
+  ]
+}

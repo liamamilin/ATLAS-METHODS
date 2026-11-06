@@ -1,0 +1,9 @@
+{
+  "repository": "Linked-API/linkedin-skills",
+  "commit_sha": "1469f41eebe74a3a344c18b117899f06d6d94bd9",
+  "tree_entries": 60,
+  "candidate_skill_paths": [
+    "linkedin-growth/SKILL.md",
+    "linkedin/SKILL.md"
+  ]
+}

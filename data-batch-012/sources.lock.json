@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "0design/unslop-skill",
+      "commit_sha": "3fcf0042e27c6df76aea069bee32e58c4f6576a3",
+      "collection_root": "repositories/0design/unslop-skill"
+    },
+    {
+      "repository": "9929y/mesh-gradient-generation",
+      "commit_sha": "a251ed465d486401f19e02a939154090c1aea5af",
+      "collection_root": "repositories/9929y/mesh-gradient-generation"
+    },
+    {
+      "repository": "Aurite-ai/agent-verifier",
+      "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+      "collection_root": "repositories/Aurite-ai/agent-verifier"
+    },
+    {
+      "repository": "Cap-go/capgo-skills",
+      "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+      "collection_root": "repositories/Cap-go/capgo-skills"
+    },
+    {
+      "repository": "EricJujianZou/rederive",
+      "commit_sha": "7f43edc0ee0e098e98f77b01187027238aba77c8",
+      "collection_root": "repositories/EricJujianZou/rederive"
+    },
+    {
+      "repository": "GAURAV-1313/codecall",
+      "commit_sha": "997bf332aada9288e81b0ec77cbd2b052553b372",
+      "collection_root": "repositories/GAURAV-1313/codecall"
+    },
+    {
+      "repository": "ScrapingBee/scrapingbee-cli",
+      "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+      "collection_root": "repositories/ScrapingBee/scrapingbee-cli"
+    },
+    {
+      "repository": "beastlabai/multi-llm-plugin",
+      "commit_sha": "98efffd133dc6e5e8370cecd8580571cfdc4b554",
+      "collection_root": "repositories/beastlabai/multi-llm-plugin"
+    },
+    {
+      "repository": "celo-org/celopedia-skills",
+      "commit_sha": "3cc63acd5eeb77d87277028450686bbad7f9881c",
+      "collection_root": "repositories/celo-org/celopedia-skills"
+    },
+    {
+      "repository": "edonadei/caliper",
+      "commit_sha": "aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f",
+      "collection_root": "repositories/edonadei/caliper"
+    },
+    {
+      "repository": "finom/vovk",
+      "commit_sha": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+      "collection_root": "repositories/finom/vovk"
+    },
+    {
+      "repository": "first-fluke/oh-my-agent",
+      "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+      "collection_root": "repositories/first-fluke/oh-my-agent"
+    },
+    {
+      "repository": "fullselfbrowsing/FSB",
+      "commit_sha": "3f9e7dea8621bbbb86d00c4b917abfd7598ef1a3",
+      "collection_root": "repositories/fullselfbrowsing/FSB"
+    },
+    {
+      "repository": "gal-a/qikly",
+      "commit_sha": "548ec98ecb3937b8d71b49b6450030aaa2e37f8b",
+      "collection_root": "repositories/gal-a/qikly"
+    },
+    {
+      "repository": "laolaoshiren/claude-code-skills-zh",
+      "commit_sha": "4521b155d36e50fd7a103a46e3a24d48241508af",
+      "collection_root": "repositories/laolaoshiren/claude-code-skills-zh"
+    },
+    {
+      "repository": "mobbin/skills",
+      "commit_sha": "79124d92763f6e85107386227a96bbc40479710e",
+      "collection_root": "repositories/mobbin/skills"
+    },
+    {
+      "repository": "moxno/privacyscrubber-mcp",
+      "commit_sha": "52e0805708bfd4aa3dcd6d918b0eda6bcec06f74",
+      "collection_root": "repositories/moxno/privacyscrubber-mcp"
+    },
+    {
+      "repository": "oil-oil/oil-ui",
+      "commit_sha": "0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128",
+      "collection_root": "repositories/oil-oil/oil-ui"
+    },
+    {
+      "repository": "prisma/skills",
+      "commit_sha": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+      "collection_root": "repositories/prisma/skills"
+    },
+    {
+      "repository": "rlaope/oh-my-hermes",
+      "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+      "collection_root": "repositories/rlaope/oh-my-hermes"
+    },
+    {
+      "repository": "skymanbp/cc-tree",
+      "commit_sha": "a9ff371b5d0f5c095d5cfdc67b839b4a16384af2",
+      "collection_root": "repositories/skymanbp/cc-tree"
+    },
+    {
+      "repository": "sno-ai/sno-station-skills",
+      "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+      "collection_root": "repositories/sno-ai/sno-station-skills"
+    },
+    {
+      "repository": "supercorp-ai/supercov",
+      "commit_sha": "35a51f61a25f1230d1a5fe68c16851c03fc8b72f",
+      "collection_root": "repositories/supercorp-ai/supercov"
+    },
+    {
+      "repository": "tushaarmehtaa/tushar-skills",
+      "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+      "collection_root": "repositories/tushaarmehtaa/tushar-skills"
+    }
+  ]
+}

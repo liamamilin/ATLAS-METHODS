@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:18:30.864149+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zincio/skills",
+      "commit_sha": "7a83b68cb4737eb30540d4cb732e9fc0a0376ada",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 32,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/zincio/skills/7a83b68cb4737eb30540d4cb732e9fc0a0376ada.json"
+    }
+  ],
+  "errors": []
+}

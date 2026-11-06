@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:26.210130+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Atomic-Mail/atomic-mail-agentic",
+      "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 540,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/Atomic-Mail/atomic-mail-agentic/89e66c6c73553f3c665ac73e006debeb994acb91.json"
+    }
+  ],
+  "errors": []
+}

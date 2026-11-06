@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:14:04.007917+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "frmoretto/clarity-gate",
+      "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 44,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/frmoretto/clarity-gate/88eaf21b0e38c95959429a1a5f9b4cec72f01a43.json"
+    }
+  ],
+  "errors": []
+}

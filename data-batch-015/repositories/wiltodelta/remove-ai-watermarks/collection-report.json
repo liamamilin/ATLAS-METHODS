@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:23:09.583546+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "wiltodelta/remove-ai-watermarks",
+      "commit_sha": "3168d878461eed072bf86c237b219611261cf85f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 455,
+      "files_not_exported": 307,
+      "repository_manifest": "manifests/wiltodelta/remove-ai-watermarks/3168d878461eed072bf86c237b219611261cf85f.json"
+    }
+  ],
+  "errors": []
+}

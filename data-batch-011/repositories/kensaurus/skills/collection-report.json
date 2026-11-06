@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:04:37.115737+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 173,
+  "saved_skill_entries": 173,
+  "unique_entry_texts": 173,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "kensaurus/skills",
+      "commit_sha": "c617b8caf90d63fb0950dc1c848b78b148fd414b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 173,
+      "saved_skill_entries": 173,
+      "saved_text_files": 541,
+      "files_not_exported": 33,
+      "repository_manifest": "manifests/kensaurus/skills/c617b8caf90d63fb0950dc1c848b78b148fd414b.json"
+    }
+  ],
+  "errors": []
+}

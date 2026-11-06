@@ -1,0 +1,13 @@
+{
+  "repository": "zxkane/aws-skills",
+  "commit_sha": "68530c6f296ccd2f5e99c79782f3e0fbf962c51a",
+  "tree_entries": 65,
+  "candidate_skill_paths": [
+    "plugins/aws-agentic-ai/skills/aws-agentic-ai/SKILL.md",
+    "plugins/aws-common/skills/aws-mcp-setup/SKILL.md",
+    "plugins/aws-cost-ops/skills/aws-cost-operations/SKILL.md",
+    "plugins/aws-iac/skills/aws-cdk-development/SKILL.md",
+    "plugins/aws-iac/skills/aws-sst-development/SKILL.md",
+    "plugins/serverless-eda/skills/aws-serverless-eda/SKILL.md"
+  ]
+}

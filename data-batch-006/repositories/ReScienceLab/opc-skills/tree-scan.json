@@ -1,0 +1,20 @@
+{
+  "repository": "ReScienceLab/opc-skills",
+  "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+  "tree_entries": 215,
+  "candidate_skill_paths": [
+    ".agents/skills/seo-geo/SKILL.md",
+    ".factory/skills/add-new-opc-skill/SKILL.md",
+    "skills/archive/SKILL.md",
+    "skills/banner-creator/SKILL.md",
+    "skills/domain-hunter/SKILL.md",
+    "skills/logo-creator/SKILL.md",
+    "skills/nanobanana/SKILL.md",
+    "skills/producthunt/SKILL.md",
+    "skills/reddit/SKILL.md",
+    "skills/requesthunt/SKILL.md",
+    "skills/seo-geo/SKILL.md",
+    "skills/twitter/SKILL.md",
+    "template/SKILL.md"
+  ]
+}

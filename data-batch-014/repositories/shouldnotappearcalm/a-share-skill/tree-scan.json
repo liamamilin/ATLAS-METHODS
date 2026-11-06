@@ -1,0 +1,14 @@
+{
+  "repository": "shouldnotappearcalm/a-share-skill",
+  "commit_sha": "8874bd1c46813ddb188aa293e6f9ae34f016ba4d",
+  "tree_entries": 89,
+  "candidate_skill_paths": [
+    "a-share-data/SKILL.md",
+    "a-share-paper-trading/SKILL.md",
+    "a-share-strategy-allmarket-multi-swing-defensive/SKILL.md",
+    "a-share-strategy-mainboard-multi-swing-defensive/SKILL.md",
+    "macd-second-golden-cross/SKILL.md",
+    "macd-trend-resonance-stock-picker/SKILL.md",
+    "tuige-shortline-trading/SKILL.md"
+  ]
+}

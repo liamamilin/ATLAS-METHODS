@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "helius-labs/core-ai",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533"
+    }
+  ]
+}

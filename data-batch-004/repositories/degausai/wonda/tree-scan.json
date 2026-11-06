@@ -1,0 +1,8 @@
+{
+  "repository": "degausai/wonda",
+  "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a",
+  "tree_entries": 47,
+  "candidate_skill_paths": [
+    "skills/wonda-cli/SKILL.md"
+  ]
+}

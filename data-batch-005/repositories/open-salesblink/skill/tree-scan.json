@@ -1,0 +1,8 @@
+{
+  "repository": "open-salesblink/skill",
+  "commit_sha": "35a7391802693e970e3e055193363f5a99bb337c",
+  "tree_entries": 59,
+  "candidate_skill_paths": [
+    "skills/cold-email-salesblink/SKILL.md"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "allxsmith/bestax",
+  "commit_sha": "dacd0ca4870f91e24308a2963a88276a447be21b",
+  "tree_entries": 2730,
+  "candidate_skill_paths": [
+    "skills/bestax-custom-component/SKILL.md",
+    "skills/bestax-form/SKILL.md",
+    "skills/bestax-icons/SKILL.md",
+    "skills/bestax-layout-scaffold/SKILL.md",
+    "skills/bestax-migrate/SKILL.md",
+    "skills/bestax-optimize/SKILL.md",
+    "skills/bestax-theming/SKILL.md"
+  ]
+}

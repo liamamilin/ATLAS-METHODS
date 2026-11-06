@@ -1,0 +1,290 @@
+{
+  "repository": "eatmoreduck/boss-zhipin-scraper",
+  "commit_sha": "7913419b6b53e45ee621da7dab066a350ef7b060",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "196ee0c654091091ef5f3762c33718bfec9532a7",
+      "bytes": 1968,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "sha256": "3dba196bec505deee73ae49c5150884d79fe6c8161d6c4250dcdaece5a342e02",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "55564b7c08c09300694f6f31b4e5e03e967d6a4b",
+      "bytes": 1321,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "sha256": "48705a911cf4f75b444757754860e5de90f57ea34fc43d464db6d47bf539f70b",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/feature_request.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/question.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b49861764eb62c68d4f3e9b858cf45e33026fdef",
+      "bytes": 1177,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/question.yml",
+      "sha256": "fff9581c35b7dcad2037be8f49ad3418fdeca518f2a490e5756ec77b19814ed1",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/ISSUE_TEMPLATE/question.yml"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "56737a60499a5b8742fe5b02e8c27e4b4b86b635",
+      "bytes": 1748,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/ci.yml",
+      "sha256": "146f1d78fc5359c7214c392290bfe95efdb0a67d1a54191feae119536a368be6",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".github/workflows/make-release.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5b92c722cc0f4f3dd3e0cb7107bbd21ad1f10fbc",
+      "bytes": 3783,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/make-release.yml",
+      "sha256": "19ccf0890e3a31051735190470f45072b70866482d5b36ae38ef7002b2cf24a3",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/make-release.yml"
+    },
+    {
+      "path": ".github/workflows/pullfrog.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3ba170d946791806fb115a362342a0bae9ddebc3",
+      "bytes": 3444,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/pullfrog.yml",
+      "sha256": "281a93602f37b9c910e1b4a67f19f589ab11b228f882aea48735f44147b5b4c1",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/pullfrog.yml"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8474f0defaaf2fc56091cf6a93b44dac9815546a",
+      "bytes": 6125,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/release.yml",
+      "sha256": "d110b020f7adf421d35913762d59b63ff373b7e2f100c9b3fa8993875cd760b3",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.github/workflows/release.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "76786a6004e1b5d81f541053fbeab45e49c29f4e",
+      "bytes": 678,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/.gitignore",
+      "sha256": "558ef8700c28289b29ef167246d4b280b58e44ad6054dfc3253fb6ef449839bb",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "33d5725c01b4f77a9eef9d2c842423a286e8b243",
+      "bytes": 8547,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/AGENTS.md",
+      "sha256": "56721e1d7cff9d3f5bd662cc3e29c3baeb0f3e0e9327749c4e1af609e5e79050",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/AGENTS.md"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7261a2585ce1082bc39eeaaa6e56fa657e9a2cb0",
+      "bytes": 16344,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/CHANGELOG.md",
+      "sha256": "7d5f8d269b5aed850e550c7c9aea554ddf631e4715498c5e976960aae84c7af1",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/CHANGELOG.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a913e7ea6ceecf30b025b0b0234e50a9216f1fe9",
+      "bytes": 4663,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/CONTRIBUTING.md",
+      "sha256": "c487df3ea5885cee79f86c0d1695f85d59676cf6be9089515bb282fad67fb8d5",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b082e88fc465f0d40f1ad6ddbac7282cad5fc6e5",
+      "bytes": 1068,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/LICENSE",
+      "sha256": "f48cc447f5cc8a2f76770567defc0e1f9a61e2f234a8fa5c417e451fa382d0e6",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/LICENSE"
+    },
+    {
+      "path": "README.en.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e3461017a6cde530fbaac659f53cec82202a4d79",
+      "bytes": 25270,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/README.en.md",
+      "sha256": "8f5dffc851bba9cd0cf5a6578ad7d738b7b0366fd9e9e5f9ff96cc5d37976d32",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/README.en.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "226a85a61186ec15aded4cb297ea7122309ae3ea",
+      "bytes": 23051,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/README.md",
+      "sha256": "cdffd5f0ab4f92f7b91730939b5eba337e7c758cce5ebcf702839e4fa6bb8b18",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bc2bbc7df6abc358cc1de27b54645d616f7e6f2a",
+      "bytes": 15513,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/SKILL.md",
+      "sha256": "90eeb3776d260ebd22916a237d01992faac57cd857b77292882feaa957a53d6c",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/SKILL.md"
+    },
+    {
+      "path": "assets/reward-qr.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eec9cdc5060982973be6378b723c0a3beeb7c56c",
+      "bytes": 293744,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/assets/reward-qr.png",
+      "sha256": "15520396b4b992e5cd38242af344d8b5567693a413677715bfd10132e64d2a44",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "cover.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16feedfe8c5e459f4eac5a78cc27b4c7a0748390",
+      "bytes": 1863502,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/cover.png",
+      "sha256": "09b1478b5903d69da03869ec1cad7b70d9ced1df33a6a66fc4377705b8074d23",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "data/city_codes.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "09ca40b9247851014ecd5cda3d728d24303e514e",
+      "bytes": 10280,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/data/city_codes.json",
+      "sha256": "ea3cc88f9520244e2659df77b1496312f2c713e3c1126ad1a81566490fcfdd5f",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/data/city_codes.json"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "033678154263bdcaa2fd62afbac972a896d78de2",
+      "bytes": 1071,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/pyproject.toml",
+      "sha256": "6e7d2796ba518d7c95acb8edf7dbbf6c9e3f05de34388d466e485f9767cabe2e",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/pyproject.toml"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d0da45a1bc568cfe4de5e468d0f9e4fe35c2e26",
+      "bytes": 55,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/requirements.txt",
+      "sha256": "24795b92bb3b6c788cf6375477807f77c765c4d3c517899b663decbc13094e83",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/requirements.txt"
+    },
+    {
+      "path": "scripts/boss_cdp_raw.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d3c357f6a858e443a479bbefbfaa4fc7009b1530",
+      "bytes": 125746,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/boss_cdp_raw.py",
+      "sha256": "92ab3102cbd88bb7b6f1d4a727c879b67b352c49008fe193ae0f5076d3abe9a4",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/boss_cdp_raw.py"
+    },
+    {
+      "path": "scripts/job_summary.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0f8209723e460d16ce36a205ca63b584dea9f2b6",
+      "bytes": 16708,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/job_summary.py",
+      "sha256": "5d3efcf4a253725074f027ad12a32ee10701cae1cf96f8a5e6ee6fe4ec9dbee8",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/job_summary.py"
+    },
+    {
+      "path": "scripts/package-skill.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "56aea53fd9814217a613a9f680cc4144349d2899",
+      "bytes": 3968,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/package-skill.sh",
+      "sha256": "e98e034ed781ccec164fd665ce3c596423b9778a9675931d9bbcd2421c695a6d",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/scripts/package-skill.sh"
+    },
+    {
+      "path": "tests/test_chrome_setup.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "775403d2a36316dee405bc44b2baa379ee0c35cf",
+      "bytes": 111461,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/tests/test_chrome_setup.py",
+      "sha256": "814ba695cabe2f70e8a38a44b662fe0a9ff50a5afcc9c95972474b82ba0de7e7",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/tests/test_chrome_setup.py"
+    },
+    {
+      "path": "tests/test_job_summary.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5102ff833bfc40c8a26d8ea8306f955bd8ecb165",
+      "bytes": 19207,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/tests/test_job_summary.py",
+      "sha256": "04e2165431cfc0578eea2fc1f2b2bc0929d0503a9305f8e4fc3594140f63ccf9",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/tests/test_job_summary.py"
+    },
+    {
+      "path": "uv.lock",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4697b29253555f9312e58d7d501fff19f3e71990",
+      "bytes": 37275,
+      "source_url": "https://github.com/eatmoreduck/boss-zhipin-scraper/blob/7913419b6b53e45ee621da7dab066a350ef7b060/uv.lock",
+      "sha256": "5b3f3e7eec1c6615337b8dbde34e94285f53d1d584cbb1029b1eece91187243e",
+      "status": "saved",
+      "raw_path": "raw/eatmoreduck/boss-zhipin-scraper/7913419b6b53e45ee621da7dab066a350ef7b060/uv.lock"
+    }
+  ]
+}

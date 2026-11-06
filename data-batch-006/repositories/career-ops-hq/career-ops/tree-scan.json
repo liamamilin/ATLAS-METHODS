@@ -1,0 +1,22 @@
+{
+  "repository": "career-ops-hq/career-ops",
+  "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+  "tree_entries": 3183,
+  "candidate_skill_paths": [
+    ".agents/skills/career-ops/SKILL.md",
+    ".antigravitycli/skills/career-ops/SKILL.md",
+    ".claude/skills/career-ops/SKILL.md",
+    ".grok/skills/career-ops/SKILL.md",
+    ".kimi/skills/career-ops/SKILL.md",
+    ".opencode/skills/career-ops/SKILL.md",
+    ".qwen/skills/career-ops/SKILL.md",
+    "antigravity-directory/skills/career-ops/SKILL.md",
+    "claude-directory/skills/career-ops/SKILL.md",
+    "cursor-directory/skills/career-ops/SKILL.md",
+    "openai-directory/skills/career-ops/SKILL.md",
+    "plugins/apify/skill.md",
+    "plugins/gmail/skill.md",
+    "plugins/h1b-sponsor/skill.md",
+    "plugins/notion/skill.md"
+  ]
+}

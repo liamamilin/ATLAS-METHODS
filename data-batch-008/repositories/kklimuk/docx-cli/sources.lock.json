@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "kklimuk/docx-cli",
+      "commit_sha": "e830c0cd5aac888cf4b749d278db6e71003ab5d9"
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "degausai/wonda",
+      "repository_url": "https://github.com/degausai/wonda",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/degausai/wonda",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1542",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a"
+    },
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "repository_url": "https://github.com/gitroomhq/postiz-agent",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/gitroomhq/postiz-agent",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1543",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e"
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "repository_url": "https://github.com/heygen-com/hyperframes",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1544",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7"
+    },
+    {
+      "repository": "taisly/agent",
+      "repository_url": "https://github.com/taisly/agent",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/taisly/agent",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1545",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef"
+    },
+    {
+      "repository": "indranilbanerjee/digital-marketing-pro",
+      "repository_url": "https://github.com/indranilbanerjee/digital-marketing-pro",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/indranilbanerjee/digital-marketing-pro",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1546",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db"
+    },
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "repository_url": "https://github.com/infrasity-labs/dev-gtm-claude-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/infrasity-labs/dev-gtm-claude-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1547",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a"
+    },
+    {
+      "repository": "nowork-studio/notfair-plugin",
+      "repository_url": "https://github.com/nowork-studio/notfair-plugin",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/nowork-studio/notfair-plugin",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1548",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05"
+    },
+    {
+      "repository": "aaron-he-zhu/aaron-marketing-skills",
+      "repository_url": "https://github.com/aaron-he-zhu/aaron-marketing-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/aaron-he-zhu/aaron-marketing-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1549",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "9c8815c728c550cf551b82e1c6e1a307c5eae61f"
+    },
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "repository_url": "https://github.com/gooseworks-ai/goose-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/gooseworks-ai/goose-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1550",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2"
+    },
+    {
+      "repository": "sergebulaev/linkedin-skills",
+      "repository_url": "https://github.com/sergebulaev/linkedin-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/sergebulaev/linkedin-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1551",
+          "link_type": "direct_github"
+        },
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/sergebulaev/linkedin-skills",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L82",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41"
+    },
+    {
+      "repository": "Vladimir-Human/humanizer-ru",
+      "repository_url": "https://github.com/Vladimir-Human/humanizer-ru",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/Vladimir-Human/humanizer-ru",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1552",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3"
+    },
+    {
+      "repository": "Bomx/distribb-skill",
+      "repository_url": "https://github.com/Bomx/distribb-skill",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/Bomx/distribb-skill",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1553",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "01bbede516a8963bff5731bbda412f0e2a364188"
+    },
+    {
+      "repository": "citlyze/citlyze-skills",
+      "repository_url": "https://github.com/citlyze/citlyze-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/citlyze/citlyze-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1554",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c"
+    },
+    {
+      "repository": "AIDevGTM/gtm-cofounder",
+      "repository_url": "https://github.com/AIDevGTM/gtm-cofounder",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/AIDevGTM/gtm-cofounder",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1555",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e"
+    },
+    {
+      "repository": "mailtrap/mailtrap-skills",
+      "repository_url": "https://github.com/mailtrap/mailtrap-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/mailtrap/mailtrap-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1556",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766"
+    },
+    {
+      "repository": "YannisKiefer/dark-psychology-skills",
+      "repository_url": "https://github.com/YannisKiefer/dark-psychology-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/YannisKiefer/dark-psychology-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1557",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966"
+    },
+    {
+      "repository": "SupercmoHQ/superCMO-skills",
+      "repository_url": "https://github.com/SupercmoHQ/superCMO-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/SupercmoHQ/superCMO-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1558",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab"
+    },
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "repository_url": "https://github.com/sandbaseai/sandbase-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/sandbaseai/sandbase-skills/tree/main/research/multi-source-search",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1559",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729"
+    },
+    {
+      "repository": "Nanako0129/sepia",
+      "repository_url": "https://github.com/Nanako0129/sepia",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/Nanako0129/sepia",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1560",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8"
+    },
+    {
+      "repository": "ScrapeCreators/social-media-research-skills",
+      "repository_url": "https://github.com/ScrapeCreators/social-media-research-skills",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/ScrapeCreators/social-media-research-skills",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1561",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2"
+    },
+    {
+      "repository": "ilyautov/humanizer-ru",
+      "repository_url": "https://github.com/ilyautov/humanizer-ru",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/ilyautov/humanizer-ru/tree/main/skills/humanizer-ru",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1562",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626"
+    },
+    {
+      "repository": "vanshyadav1408/Omentir",
+      "repository_url": "https://github.com/vanshyadav1408/Omentir",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/vanshyadav1408/Omentir/tree/main/plugins/omentir/skills/linkedin-outreach",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1563",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "238517f827581b884f9ab860815a255905867f6f"
+    },
+    {
+      "repository": "socai-io/jev-social",
+      "repository_url": "https://github.com/socai-io/jev-social",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/socai-io/jev-social/tree/v0.1.10/skills/jev-social",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1564",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "2f02e6f4c60943e679993634ad1017b0c97efff5"
+    },
+    {
+      "repository": "explorium-ai/vibeprospecting-plugin",
+      "repository_url": "https://github.com/explorium-ai/vibeprospecting-plugin",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/explorium-ai/vibeprospecting-plugin/tree/main/skills/vibe-prospecting",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1565",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:13:31.652646+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 13,
+  "saved_skill_entries": 13,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+      "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 59,
+      "files_not_exported": 20,
+      "repository_manifest": "manifests/honeydew-ai/honeydew-ai-coding-agents-plugins/5a4fd5df27729940dc9e33a93cffb2b9bf788855.json"
+    }
+  ],
+  "errors": []
+}

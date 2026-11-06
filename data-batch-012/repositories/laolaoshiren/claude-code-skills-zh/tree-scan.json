@@ -1,0 +1,27 @@
+{
+  "repository": "laolaoshiren/claude-code-skills-zh",
+  "commit_sha": "4521b155d36e50fd7a103a46e3a24d48241508af",
+  "tree_entries": 50,
+  "candidate_skill_paths": [
+    "skills/api-tester/SKILL.md",
+    "skills/changelog-gen/SKILL.md",
+    "skills/db-migrator/SKILL.md",
+    "skills/dep-auditor/SKILL.md",
+    "skills/ds-mapper/SKILL.md",
+    "skills/env-manager/SKILL.md",
+    "skills/error-translator/SKILL.md",
+    "skills/eslint-fix/SKILL.md",
+    "skills/git-workflow/SKILL.md",
+    "skills/github-actions-gen/SKILL.md",
+    "skills/i18n-helper/SKILL.md",
+    "skills/log-analyzer/SKILL.md",
+    "skills/perf-profiler/SKILL.md",
+    "skills/refactor-advisor/SKILL.md",
+    "skills/security-audit/SKILL.md",
+    "skills/skill-curator/SKILL.md",
+    "skills/test-generator/SKILL.md",
+    "skills/zh-code-reviewer/SKILL.md",
+    "skills/zh-docgen/SKILL.md",
+    "skills/zh-readme/SKILL.md"
+  ]
+}

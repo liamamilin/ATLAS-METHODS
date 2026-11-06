@@ -1,0 +1,11 @@
+{
+  "repository": "frmoretto/clarity-gate",
+  "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+  "tree_entries": 44,
+  "candidate_skill_paths": [
+    ".claude/skills/clarity-gate/SKILL.md",
+    ".codex/skills/clarity-gate/SKILL.md",
+    ".github/skills/clarity-gate/SKILL.md",
+    "skills/clarity-gate/SKILL.md"
+  ]
+}

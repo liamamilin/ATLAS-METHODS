@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:46:37.401869+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 15,
+  "unique_entry_texts": 15,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ognjengt/founder-skills",
+      "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 45,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/ognjengt/founder-skills/a45931cad934dc6243a68f905485467935a4ad9a.json"
+    }
+  ],
+  "errors": []
+}

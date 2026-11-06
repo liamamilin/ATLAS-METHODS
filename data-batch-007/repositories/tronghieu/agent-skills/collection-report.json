@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:49.339866+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 19,
+  "saved_skill_entries": 19,
+  "unique_entry_texts": 19,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tronghieu/agent-skills",
+      "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 300,
+      "files_not_exported": 19,
+      "repository_manifest": "manifests/tronghieu/agent-skills/831d1ae5c686a81b10f9c5b9cca04a7b8b97303d.json"
+    }
+  ],
+  "errors": []
+}

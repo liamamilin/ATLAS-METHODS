@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:50:49.949002+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 22,
+  "saved_skill_entries": 22,
+  "unique_entry_texts": 11,
+  "duplicate_entry_groups": 11,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Sendmux/skills",
+      "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 625,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/Sendmux/skills/edc201aa0608a795f0aeddc14be25b6a641d57e8.json"
+    }
+  ],
+  "errors": []
+}

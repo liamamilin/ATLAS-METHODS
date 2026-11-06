@@ -1,0 +1,21 @@
+{
+  "repository": "Neeeophytee/finding-unknowns-skills",
+  "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc",
+  "tree_entries": 56,
+  "candidate_skill_paths": [
+    "skills/agent-interface-design/SKILL.md",
+    "skills/assumption-test/SKILL.md",
+    "skills/blindspot-pass/SKILL.md",
+    "skills/brainstorm-prototypes/SKILL.md",
+    "skills/change-quiz/SKILL.md",
+    "skills/context-audit/SKILL.md",
+    "skills/implementation-notes/SKILL.md",
+    "skills/implementation-plan/SKILL.md",
+    "skills/interview-me/SKILL.md",
+    "skills/pitch-packager/SKILL.md",
+    "skills/progressive-disclosure/SKILL.md",
+    "skills/reference-hunt/SKILL.md",
+    "skills/regression-proof/SKILL.md",
+    "skills/test-blindspots/SKILL.md"
+  ]
+}

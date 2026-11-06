@@ -1,0 +1,116 @@
+{
+  "repository": "zscole/model-hierarchy-skill",
+  "commit_sha": "9095f8303847a60de9f564659e561f3f6fd0cdc4",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "95cd4157521b914b8d90e812f09b2f271d622068",
+      "bytes": 347,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/.gitignore",
+      "sha256": "6822667dac3aac2c9e608e068069e15b2efeceb9f746de783f42cf8dbcc17cec",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c035caa01e033572a762ee52e08262028e5dc342",
+      "bytes": 1065,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/LICENSE",
+      "sha256": "cf510876136bcdeaa8d15841591e215cc815109a85bb3502123c89cf5529a6d3",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b623993e6fef085f2e30aee4ea582d266d2cf42a",
+      "bytes": 2247,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/README.md",
+      "sha256": "411cb87167eb067a070369a76f45286fce083ec34743c6ae68c9743096c803d0",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c42e982ff635a9a865bb6582056b7d4d43053ba4",
+      "bytes": 9152,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/SKILL.md",
+      "sha256": "0880bd220bd104002c47a328ffba0c1ad3c4a3133e9d896cd518dd1903ee6872",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/SKILL.md"
+    },
+    {
+      "path": "examples/claude-code.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "61cead4eca70e9db21295d9e71c05e627998fdeb",
+      "bytes": 1857,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/examples/claude-code.md",
+      "sha256": "167aa583d6e3ed397c7f5146ac0b5576856fc3ddb81406f93a5dc54d704a31e6",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/examples/claude-code.md"
+    },
+    {
+      "path": "examples/openclaw.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8401503584441708a800798a1d17232e29bef318",
+      "bytes": 1174,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/examples/openclaw.md",
+      "sha256": "d3251efe99ddf865541f200a6a37d436230b81502057b222cbcabb20b7fe4bbd",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/examples/openclaw.md"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "791955ee8333e49ce6872c0be5227a94ed0f7252",
+      "bytes": 552,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/pyproject.toml",
+      "sha256": "ae9f0bfcd5ad1f8687405ed8fb6c0462cbf441868d144b58dc46f5aad51ff96b",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/pyproject.toml"
+    },
+    {
+      "path": "tests/conftest.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "78231aa54e2b0daec89171fff7de9f8e7f0a9714",
+      "bytes": 278,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/conftest.py",
+      "sha256": "fdaa34c242f00ae92f11af3108ba48858bdf92c6f63018b7f1d4e547aa21bccb",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/conftest.py"
+    },
+    {
+      "path": "tests/scenarios.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3f353e9eb2cd52873a92f17a2696c4ef7a9200e",
+      "bytes": 5150,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/scenarios.json",
+      "sha256": "b4b32f660d9554005a11dc0f4f5ba3a0c99754a49ca52a95d2429fff67ba5cae",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/scenarios.json"
+    },
+    {
+      "path": "tests/test_classification.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3852bfbd073738a1c48b646ea7f23242e96b18f",
+      "bytes": 10207,
+      "source_url": "https://github.com/zscole/model-hierarchy-skill/blob/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/test_classification.py",
+      "sha256": "72d270c6cd18f4678cfa949ddcbbd35a225568782c1c3b8bc55603de1231b1c9",
+      "status": "saved",
+      "raw_path": "raw/zscole/model-hierarchy-skill/9095f8303847a60de9f564659e561f3f6fd0cdc4/tests/test_classification.py"
+    }
+  ]
+}

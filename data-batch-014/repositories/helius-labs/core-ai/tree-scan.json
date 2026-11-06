@@ -1,0 +1,31 @@
+{
+  "repository": "helius-labs/core-ai",
+  "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+  "tree_entries": 572,
+  "candidate_skill_paths": [
+    ".agents/skills/helius-dflow/SKILL.md",
+    ".agents/skills/helius-jupiter/SKILL.md",
+    ".agents/skills/helius-okx/SKILL.md",
+    ".agents/skills/helius-phantom/SKILL.md",
+    ".agents/skills/helius/SKILL.md",
+    ".agents/skills/svm/SKILL.md",
+    "helius-cursor/skills/build/SKILL.md",
+    "helius-cursor/skills/dflow/SKILL.md",
+    "helius-cursor/skills/jupiter/SKILL.md",
+    "helius-cursor/skills/okx/SKILL.md",
+    "helius-cursor/skills/phantom/SKILL.md",
+    "helius-cursor/skills/svm/SKILL.md",
+    "helius-plugin/skills/build/SKILL.md",
+    "helius-plugin/skills/dflow/SKILL.md",
+    "helius-plugin/skills/jupiter/SKILL.md",
+    "helius-plugin/skills/okx/SKILL.md",
+    "helius-plugin/skills/phantom/SKILL.md",
+    "helius-plugin/skills/svm/SKILL.md",
+    "helius-skills/helius-dflow/SKILL.md",
+    "helius-skills/helius-jupiter/SKILL.md",
+    "helius-skills/helius-okx/SKILL.md",
+    "helius-skills/helius-phantom/SKILL.md",
+    "helius-skills/helius/SKILL.md",
+    "helius-skills/svm/SKILL.md"
+  ]
+}

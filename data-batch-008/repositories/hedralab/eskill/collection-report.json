@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:57.646497+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "hedralab/eskill",
+      "commit_sha": "cbc3c7d62c5bcd27112c9e2d09a8b8744f913983",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 44,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/hedralab/eskill/cbc3c7d62c5bcd27112c9e2d09a8b8744f913983.json"
+    }
+  ],
+  "errors": []
+}

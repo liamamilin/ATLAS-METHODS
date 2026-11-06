@@ -1,0 +1,13 @@
+{
+  "repository": "danoszz/penthera",
+  "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+  "tree_entries": 1051,
+  "candidate_skill_paths": [
+    "docs/commands/skill.md",
+    "plugin/skills/penthera/SKILL.md",
+    "skills/penthera/SKILL.md",
+    "tests/fixtures/agents/clean/skills/release-notes/SKILL.md",
+    "tests/fixtures/agents/malicious/skills/helper/SKILL.md",
+    "tests/fixtures/aibom/app/.claude/skills/triage/SKILL.md"
+  ]
+}

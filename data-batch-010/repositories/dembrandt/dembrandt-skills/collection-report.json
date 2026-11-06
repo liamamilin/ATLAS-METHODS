@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:01:11.789554+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 45,
+  "saved_skill_entries": 45,
+  "unique_entry_texts": 45,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "dembrandt/dembrandt-skills",
+      "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 45,
+      "saved_skill_entries": 45,
+      "saved_text_files": 56,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/dembrandt/dembrandt-skills/8f78f13f74a2356326d0c3c21bc63e5624e6a457.json"
+    }
+  ],
+  "errors": []
+}

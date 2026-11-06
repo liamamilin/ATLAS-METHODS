@@ -1,0 +1,11 @@
+{
+  "repository": "mobbin/skills",
+  "commit_sha": "79124d92763f6e85107386227a96bbc40479710e",
+  "tree_entries": 38,
+  "candidate_skill_paths": [
+    "skills/best-practices/SKILL.md",
+    "skills/plain-writing/SKILL.md",
+    "skills/redesign-screen/SKILL.md",
+    "skills/search/SKILL.md"
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-11-06T10:51:10.542613+00:00",
+  "requested_sources": 24,
+  "completed_sources": 22,
+  "indexed_snapshots": 23,
+  "partial_sources": 1,
+  "partial_results": [
+    {
+      "repository": "career-ops-hq/career-ops",
+      "output_directory": "data-batch-006/repositories/career-ops-hq/career-ops",
+      "state": "partial_text_snapshot",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T10:50:21.954850+00:00",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "command": [
+        "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+        "collect_skills.py",
+        "--sources",
+        "sources.batch-006.json",
+        "--only",
+        "career-ops-hq/career-ops",
+        "--out",
+        "data-batch-006/repositories/career-ops-hq/career-ops"
+      ],
+      "exit_code": 1,
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 9,
+      "unexported_entry_reasons": {
+        "symlink_not_followed": 6
+      },
+      "errors": [],
+      "finished_at": "2026-11-06T10:50:33.157864+00:00"
+    }
+  ],
+  "failed_sources": 0,
+  "no_skill_sources": 1,
+  "pending_sources": 0,
+  "candidate_skill_files": 2679,
+  "saved_skill_entries": 2673,
+  "distinct_skill_paths": 2673,
+  "unique_entry_texts": 2377,
+  "duplicate_entry_groups": 232,
+  "sources": [
+    {
+      "repository": "Charlie85270/Dorothy",
+      "commit_sha": "787568d5bba83b8ef35baa9ac29912d8eecc44cf",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 603,
+      "files_not_exported": 414,
+      "repository_manifest": "repositories/Charlie85270/Dorothy/manifests/Charlie85270/Dorothy/787568d5bba83b8ef35baa9ac29912d8eecc44cf.json"
+    },
+    {
+      "repository": "Digidai/product-manager-skills",
+      "commit_sha": "ab7a40662c8455ece631834dee9670b3322f465b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 46,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/Digidai/product-manager-skills/manifests/Digidai/product-manager-skills/ab7a40662c8455ece631834dee9670b3322f465b.json"
+    },
+    {
+      "repository": "EveryInc/charlie-cfo-skill",
+      "commit_sha": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 5,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/EveryInc/charlie-cfo-skill/manifests/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb.json"
+    },
+    {
+      "repository": "JimmySadek/video-fetcher-to-markdown",
+      "commit_sha": "c196ba48df72c064811adcb934104c3e6567858b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 20,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/JimmySadek/video-fetcher-to-markdown/manifests/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b.json"
+    },
+    {
+      "repository": "Linked-API/linkedin-skills",
+      "commit_sha": "1469f41eebe74a3a344c18b117899f06d6d94bd9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 60,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/Linked-API/linkedin-skills/manifests/Linked-API/linkedin-skills/1469f41eebe74a3a344c18b117899f06d6d94bd9.json"
+    },
+    {
+      "repository": "NeoLabHQ/context-engineering-kit",
+      "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 204,
+      "saved_skill_entries": 204,
+      "saved_text_files": 509,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/NeoLabHQ/context-engineering-kit/manifests/NeoLabHQ/context-engineering-kit/23e2428e809d77717f8acc9659c374a3a1fcb93e.json"
+    },
+    {
+      "repository": "Paramchoudhary/ResumeSkills",
+      "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 29,
+      "saved_skill_entries": 29,
+      "saved_text_files": 33,
+      "files_not_exported": 49,
+      "repository_manifest": "repositories/Paramchoudhary/ResumeSkills/manifests/Paramchoudhary/ResumeSkills/74ae19e7c62b0516d1c298328e5544976c12da5d.json"
+    },
+    {
+      "repository": "ReScienceLab/opc-skills",
+      "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 173,
+      "files_not_exported": 42,
+      "repository_manifest": "repositories/ReScienceLab/opc-skills/manifests/ReScienceLab/opc-skills/4a2ab3639bd9d14e4184721f2d7eac9c1729cc97.json"
+    },
+    {
+      "repository": "SeanZoR/claude-speed-reader",
+      "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 5,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/SeanZoR/claude-speed-reader/manifests/SeanZoR/claude-speed-reader/9e8be8b7a480668d8b237be3a0428deddcab7302.json"
+    },
+    {
+      "repository": "Sendmux/skills",
+      "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 625,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/Sendmux/skills/manifests/Sendmux/skills/edc201aa0608a795f0aeddc14be25b6a641d57e8.json"
+    },
+    {
+      "repository": "bevibing/tutor-skills",
+      "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 13,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/bevibing/tutor-skills/manifests/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05.json"
+    },
+    {
+      "repository": "career-ops-hq/career-ops",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "state": "partial_text_snapshot",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 9,
+      "saved_text_files": 3061,
+      "files_not_exported": 122,
+      "repository_manifest": "repositories/career-ops-hq/career-ops/manifests/career-ops-hq/career-ops/0aa6518c32447f63047c90e57aa74c1a900e1f79.json"
+    },
+    {
+      "repository": "deusyu/translate-book",
+      "commit_sha": "8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 42,
+      "files_not_exported": 5,
+      "repository_manifest": "repositories/deusyu/translate-book/manifests/deusyu/translate-book/8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229.json"
+    },
+    {
+      "repository": "mvanhorn/last30days-skill",
+      "commit_sha": "71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 610,
+      "files_not_exported": 7,
+      "repository_manifest": "repositories/mvanhorn/last30days-skill/manifests/mvanhorn/last30days-skill/71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428.json"
+    },
+    {
+      "repository": "obra/superpowers-lab",
+      "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 15,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/obra/superpowers-lab/manifests/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86.json"
+    },
+    {
+      "repository": "ognjengt/founder-skills",
+      "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 45,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/ognjengt/founder-skills/manifests/ognjengt/founder-skills/a45931cad934dc6243a68f905485467935a4ad9a.json"
+    },
+    {
+      "repository": "op7418/Youtube-clipper-skill",
+      "commit_sha": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 24,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/op7418/Youtube-clipper-skill/manifests/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129.json"
+    },
+    {
+      "repository": "openaccountants/openaccountants",
+      "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2253,
+      "saved_skill_entries": 2253,
+      "saved_text_files": 19537,
+      "files_not_exported": 4796,
+      "repository_manifest": "repositories/openaccountants/openaccountants/manifests/openaccountants/openaccountants/93c747880c47cfa6c27ec826c3d9967e2112643f.json"
+    },
+    {
+      "repository": "pattern-ai-labs/agentcall",
+      "commit_sha": "6f173169a92fa05099c493275705af494a1bb462",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 69,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/pattern-ai-labs/agentcall/manifests/pattern-ai-labs/agentcall/6f173169a92fa05099c493275705af494a1bb462.json"
+    },
+    {
+      "repository": "tjboudreaux/cc-thinking-skills",
+      "commit_sha": "7b8fece345dfaa11773be7152ccd194589cb5437",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 376,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/tjboudreaux/cc-thinking-skills/manifests/tjboudreaux/cc-thinking-skills/7b8fece345dfaa11773be7152ccd194589cb5437.json"
+    },
+    {
+      "repository": "wrsmith108/linear-claude-skill",
+      "commit_sha": "d61cd9ad05f1863a421d891d9319ec2405904488",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 62,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/wrsmith108/linear-claude-skill/manifests/wrsmith108/linear-claude-skill/d61cd9ad05f1863a421d891d9319ec2405904488.json"
+    },
+    {
+      "repository": "xberg-io/xberg",
+      "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 75,
+      "saved_skill_entries": 75,
+      "saved_text_files": 10473,
+      "files_not_exported": 254,
+      "repository_manifest": "repositories/xberg-io/xberg/manifests/xberg-io/xberg/da0c2048bb30907ce692b0bceac284d0c62fe430.json"
+    },
+    {
+      "repository": "zapier/zapier-mcp",
+      "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 26,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/zapier/zapier-mcp/manifests/zapier/zapier-mcp/54a12277a12c60df51ec16cf4e4ef0b27b166649.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "hanfang/claude-memory-skill",
+      "output_directory": "data-batch-006/repositories/hanfang/claude-memory-skill",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T10:48:28.981815+00:00",
+      "commit_sha": "c290e3eea033aede1617efdb5b7ad2f58ee0b415",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T10:48:32.931394+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 260
+}

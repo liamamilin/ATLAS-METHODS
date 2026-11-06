@@ -1,0 +1,32 @@
+{
+  "repository": "amirkiarafiei/subagent-cli-skills",
+  "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+  "tree_entries": 85,
+  "candidate_skill_paths": [
+    "_skill_template/SKILL.md",
+    "skills/antigravity-cli/SKILL.md",
+    "skills/claude-code/SKILL.md",
+    "skills/cline-cli/SKILL.md",
+    "skills/codex-cli/SKILL.md",
+    "skills/copilot-cli/SKILL.md",
+    "skills/cursor-cli/SKILL.md",
+    "skills/deepagents-code/SKILL.md",
+    "skills/devin-cli/SKILL.md",
+    "skills/gemini-cli/SKILL.md",
+    "skills/goose-cli/SKILL.md",
+    "skills/grok-cli/SKILL.md",
+    "skills/hermes-agent/SKILL.md",
+    "skills/junie-cli/SKILL.md",
+    "skills/kilocode-cli/SKILL.md",
+    "skills/kimi-code/SKILL.md",
+    "skills/kiro-cli/SKILL.md",
+    "skills/mistral-vibe/SKILL.md",
+    "skills/oh-my-pi/SKILL.md",
+    "skills/openclaw-cli/SKILL.md",
+    "skills/opencode-cli/SKILL.md",
+    "skills/openhands-cli/SKILL.md",
+    "skills/pi-cli/SKILL.md",
+    "skills/qoder-cli/SKILL.md",
+    "skills/qwen-code/SKILL.md"
+  ]
+}

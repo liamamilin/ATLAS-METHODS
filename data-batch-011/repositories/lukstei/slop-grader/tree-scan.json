@@ -1,0 +1,9 @@
+{
+  "repository": "lukstei/slop-grader",
+  "commit_sha": "a0cdba4a14950cc943b387dfd30e7d3e308af683",
+  "tree_entries": 58,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/create-slop-grader-rules/SKILL.md"
+  ]
+}

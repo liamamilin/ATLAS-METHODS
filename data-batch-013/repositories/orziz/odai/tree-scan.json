@@ -1,0 +1,11 @@
+{
+  "repository": "orziz/odai",
+  "commit_sha": "ce7a999843ca42ecd84778561cb0ac7642c5648e",
+  "tree_entries": 381,
+  "candidate_skill_paths": [
+    "skills/odai-orchestration/SKILL.md",
+    "skills/odai/SKILL.md",
+    "skills/renwei/SKILL.md",
+    "skills/ribao/SKILL.md"
+  ]
+}

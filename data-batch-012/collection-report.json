@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-11-06T11:09:23.449090+00:00",
+  "requested_sources": 24,
+  "completed_sources": 24,
+  "indexed_snapshots": 24,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 824,
+  "saved_skill_entries": 824,
+  "distinct_skill_paths": 824,
+  "unique_entry_texts": 611,
+  "duplicate_entry_groups": 138,
+  "sources": [
+    {
+      "repository": "0design/unslop-skill",
+      "commit_sha": "3fcf0042e27c6df76aea069bee32e58c4f6576a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 153,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/0design/unslop-skill/manifests/0design/unslop-skill/3fcf0042e27c6df76aea069bee32e58c4f6576a3.json"
+    },
+    {
+      "repository": "9929y/mesh-gradient-generation",
+      "commit_sha": "a251ed465d486401f19e02a939154090c1aea5af",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 19,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/9929y/mesh-gradient-generation/manifests/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af.json"
+    },
+    {
+      "repository": "Aurite-ai/agent-verifier",
+      "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 37,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Aurite-ai/agent-verifier/manifests/Aurite-ai/agent-verifier/e7c783a02cc565616d33357572a4f87ef39f1cd7.json"
+    },
+    {
+      "repository": "Cap-go/capgo-skills",
+      "commit_sha": "e90bb5639130e34387f00bf0a95c6d47e4a2ebb8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 113,
+      "saved_skill_entries": 113,
+      "saved_text_files": 650,
+      "files_not_exported": 11,
+      "repository_manifest": "repositories/Cap-go/capgo-skills/manifests/Cap-go/capgo-skills/e90bb5639130e34387f00bf0a95c6d47e4a2ebb8.json"
+    },
+    {
+      "repository": "EricJujianZou/rederive",
+      "commit_sha": "7f43edc0ee0e098e98f77b01187027238aba77c8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 9,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/EricJujianZou/rederive/manifests/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8.json"
+    },
+    {
+      "repository": "GAURAV-1313/codecall",
+      "commit_sha": "997bf332aada9288e81b0ec77cbd2b052553b372",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 93,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/GAURAV-1313/codecall/manifests/GAURAV-1313/codecall/997bf332aada9288e81b0ec77cbd2b052553b372.json"
+    },
+    {
+      "repository": "ScrapingBee/scrapingbee-cli",
+      "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 391,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/ScrapingBee/scrapingbee-cli/manifests/ScrapingBee/scrapingbee-cli/6faed902c5d786fcb5eb1e8a57c49563b0a591e9.json"
+    },
+    {
+      "repository": "beastlabai/multi-llm-plugin",
+      "commit_sha": "98efffd133dc6e5e8370cecd8580571cfdc4b554",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 2357,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/beastlabai/multi-llm-plugin/manifests/beastlabai/multi-llm-plugin/98efffd133dc6e5e8370cecd8580571cfdc4b554.json"
+    },
+    {
+      "repository": "celo-org/celopedia-skills",
+      "commit_sha": "3cc63acd5eeb77d87277028450686bbad7f9881c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 64,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/celo-org/celopedia-skills/manifests/celo-org/celopedia-skills/3cc63acd5eeb77d87277028450686bbad7f9881c.json"
+    },
+    {
+      "repository": "edonadei/caliper",
+      "commit_sha": "aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 201,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/edonadei/caliper/manifests/edonadei/caliper/aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f.json"
+    },
+    {
+      "repository": "finom/vovk",
+      "commit_sha": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 1160,
+      "files_not_exported": 125,
+      "repository_manifest": "repositories/finom/vovk/manifests/finom/vovk/0f3c4a2a3388273ccf5cab5a5af41b34f2b91666.json"
+    },
+    {
+      "repository": "first-fluke/oh-my-agent",
+      "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 216,
+      "saved_skill_entries": 216,
+      "saved_text_files": 6892,
+      "files_not_exported": 193,
+      "repository_manifest": "repositories/first-fluke/oh-my-agent/manifests/first-fluke/oh-my-agent/73a27ed52cfb892d0727c34109d55a59b42e0869.json"
+    },
+    {
+      "repository": "fullselfbrowsing/FSB",
+      "commit_sha": "3f9e7dea8621bbbb86d00c4b917abfd7598ef1a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 8413,
+      "files_not_exported": 65,
+      "repository_manifest": "repositories/fullselfbrowsing/FSB/manifests/fullselfbrowsing/FSB/3f9e7dea8621bbbb86d00c4b917abfd7598ef1a3.json"
+    },
+    {
+      "repository": "gal-a/qikly",
+      "commit_sha": "548ec98ecb3937b8d71b49b6450030aaa2e37f8b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 328,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/gal-a/qikly/manifests/gal-a/qikly/548ec98ecb3937b8d71b49b6450030aaa2e37f8b.json"
+    },
+    {
+      "repository": "laolaoshiren/claude-code-skills-zh",
+      "commit_sha": "4521b155d36e50fd7a103a46e3a24d48241508af",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 50,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/laolaoshiren/claude-code-skills-zh/manifests/laolaoshiren/claude-code-skills-zh/4521b155d36e50fd7a103a46e3a24d48241508af.json"
+    },
+    {
+      "repository": "mobbin/skills",
+      "commit_sha": "79124d92763f6e85107386227a96bbc40479710e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 37,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/mobbin/skills/manifests/mobbin/skills/79124d92763f6e85107386227a96bbc40479710e.json"
+    },
+    {
+      "repository": "moxno/privacyscrubber-mcp",
+      "commit_sha": "52e0805708bfd4aa3dcd6d918b0eda6bcec06f74",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 48,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/moxno/privacyscrubber-mcp/manifests/moxno/privacyscrubber-mcp/52e0805708bfd4aa3dcd6d918b0eda6bcec06f74.json"
+    },
+    {
+      "repository": "oil-oil/oil-ui",
+      "commit_sha": "0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 46,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/oil-oil/oil-ui/manifests/oil-oil/oil-ui/0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128.json"
+    },
+    {
+      "repository": "prisma/skills",
+      "commit_sha": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 78,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/prisma/skills/manifests/prisma/skills/8ea289b730c2e89f7ff1f518af128b113d842a92.json"
+    },
+    {
+      "repository": "rlaope/oh-my-hermes",
+      "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 279,
+      "saved_skill_entries": 279,
+      "saved_text_files": 3783,
+      "files_not_exported": 54,
+      "repository_manifest": "repositories/rlaope/oh-my-hermes/manifests/rlaope/oh-my-hermes/68768989d56706f444574a70af1e5484c673b11c.json"
+    },
+    {
+      "repository": "skymanbp/cc-tree",
+      "commit_sha": "a9ff371b5d0f5c095d5cfdc67b839b4a16384af2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 50,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/skymanbp/cc-tree/manifests/skymanbp/cc-tree/a9ff371b5d0f5c095d5cfdc67b839b4a16384af2.json"
+    },
+    {
+      "repository": "sno-ai/sno-station-skills",
+      "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 50,
+      "saved_skill_entries": 50,
+      "saved_text_files": 409,
+      "files_not_exported": 10,
+      "repository_manifest": "repositories/sno-ai/sno-station-skills/manifests/sno-ai/sno-station-skills/1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a.json"
+    },
+    {
+      "repository": "supercorp-ai/supercov",
+      "commit_sha": "35a51f61a25f1230d1a5fe68c16851c03fc8b72f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 864,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/supercorp-ai/supercov/manifests/supercorp-ai/supercov/35a51f61a25f1230d1a5fe68c16851c03fc8b72f.json"
+    },
+    {
+      "repository": "tushaarmehtaa/tushar-skills",
+      "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 69,
+      "saved_skill_entries": 69,
+      "saved_text_files": 850,
+      "files_not_exported": 69,
+      "repository_manifest": "repositories/tushaarmehtaa/tushar-skills/manifests/tushaarmehtaa/tushar-skills/8c24e61a2718f44f36648a92e1f7cc03aaf33b2f.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 117
+}

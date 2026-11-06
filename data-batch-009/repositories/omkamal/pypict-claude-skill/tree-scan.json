@@ -1,0 +1,8 @@
+{
+  "repository": "omkamal/pypict-claude-skill",
+  "commit_sha": "fbda212bca79dfa7611be12527b102c89cc8faeb",
+  "tree_entries": 27,
+  "candidate_skill_paths": [
+    "SKILL.md"
+  ]
+}

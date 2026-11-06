@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:07:10.445895+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 8,
+  "saved_skill_entries": 8,
+  "unique_entry_texts": 8,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "edonadei/caliper",
+      "commit_sha": "aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 201,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/edonadei/caliper/aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f.json"
+    }
+  ],
+  "errors": []
+}

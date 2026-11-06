@@ -1,0 +1,33 @@
+{
+  "repository": "rorkai/app-store-connect-cli-skills",
+  "commit_sha": "7de1ef7cc831f62d205dfa589063f3831f66391b",
+  "tree_entries": 47,
+  "candidate_skill_paths": [
+    "skills/asc-ad-hoc-distribution/SKILL.md",
+    "skills/asc-analytics-reports/SKILL.md",
+    "skills/asc-app-create-ui/SKILL.md",
+    "skills/asc-apple-ads/SKILL.md",
+    "skills/asc-aso-audit/SKILL.md",
+    "skills/asc-build-lifecycle/SKILL.md",
+    "skills/asc-cli-usage/SKILL.md",
+    "skills/asc-crash-triage/SKILL.md",
+    "skills/asc-id-resolver/SKILL.md",
+    "skills/asc-in-app-events/SKILL.md",
+    "skills/asc-localize-metadata/SKILL.md",
+    "skills/asc-metadata-sync/SKILL.md",
+    "skills/asc-notarization/SKILL.md",
+    "skills/asc-ppp-pricing/SKILL.md",
+    "skills/asc-release-flow/SKILL.md",
+    "skills/asc-revenuecat-catalog-sync/SKILL.md",
+    "skills/asc-screenshot-resize/SKILL.md",
+    "skills/asc-shots-pipeline/SKILL.md",
+    "skills/asc-signing-setup/SKILL.md",
+    "skills/asc-submission-health/SKILL.md",
+    "skills/asc-subscription-localization/SKILL.md",
+    "skills/asc-testflight-orchestration/SKILL.md",
+    "skills/asc-wall-submit/SKILL.md",
+    "skills/asc-whats-new-writer/SKILL.md",
+    "skills/asc-workflow/SKILL.md",
+    "skills/asc-xcode-build/SKILL.md"
+  ]
+}

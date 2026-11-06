@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:42:56.033794+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 246,
+  "saved_skill_entries": 246,
+  "unique_entry_texts": 245,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 246,
+      "saved_skill_entries": 246,
+      "saved_text_files": 922,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/sandbaseai/sandbase-skills/cbab58188611e626ccaf54ac346b437d12ea4729.json"
+    }
+  ],
+  "errors": []
+}

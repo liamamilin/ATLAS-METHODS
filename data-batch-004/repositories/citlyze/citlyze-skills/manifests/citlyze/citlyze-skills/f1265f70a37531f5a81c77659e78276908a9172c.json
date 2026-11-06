@@ -1,0 +1,94 @@
+{
+  "repository": "citlyze/citlyze-skills",
+  "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b16aef39e701521c3a181b425ce5c8e293c516c7",
+      "bytes": 54,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/.gitignore",
+      "sha256": "541df0f2f534e756336094113c3ca65febe699bcc545eb35818f806b7ff49028",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "955f344715f4528a98f64dd63d8b4e20ecf421ca",
+      "bytes": 1064,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/LICENSE",
+      "sha256": "0488af20df1c8319c7cf2ca64ba905ba8ed39e2c63b07d497b1839ab09052b1b",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16bb41eb03fe50ee9fa3f971e51775dc6f2c2229",
+      "bytes": 3230,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/README.md",
+      "sha256": "c683edcc26f582d694f195096daa589ad3c8535379e0e72ee2dcc2015789408f",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/README.md"
+    },
+    {
+      "path": "skills/aeo-page-audit/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b9e44615dfa5220aca667cc33a409eab5e80462b",
+      "bytes": 3564,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/skills/aeo-page-audit/SKILL.md",
+      "sha256": "4cda1258932f4b6940a64fcb5ab38dcce0cfd79e68670cefeaddb272e195d728",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/skills/aeo-page-audit/SKILL.md"
+    },
+    {
+      "path": "skills/citlyze-action-plan/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1458c37c9cfa3445c8ad8313365cee47dc6aa2e9",
+      "bytes": 2568,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-action-plan/SKILL.md",
+      "sha256": "bc9b9ecbe0ad449f3ecdf2b9c24550b12f4e856325f263c4ac1960d901235959",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-action-plan/SKILL.md"
+    },
+    {
+      "path": "skills/citlyze-citation-gap/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dd9d3d1ab9554b9d6f0079393e33e4a7c2b8d865",
+      "bytes": 2983,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-citation-gap/SKILL.md",
+      "sha256": "86b4055261291229e79d3903b43ed1833445033d4ee95cda359fa20251d0fce4",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-citation-gap/SKILL.md"
+    },
+    {
+      "path": "skills/citlyze-prompt-audit/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "71ddea37c88b8182d4b5118fd9928b5e4ae56ec6",
+      "bytes": 2667,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-prompt-audit/SKILL.md",
+      "sha256": "4c181b7e643294e0df8ff33823990f98ce82df8e461dd3a92d3cfbdbbca26c23",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-prompt-audit/SKILL.md"
+    },
+    {
+      "path": "skills/citlyze-visibility-report/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "59fb776fb7b93f223f0d7c1ec55e5bc33622b4d2",
+      "bytes": 3165,
+      "source_url": "https://github.com/citlyze/citlyze-skills/blob/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-visibility-report/SKILL.md",
+      "sha256": "40d2825e6618a36d0eeb6f615538786978f70d3b031c992a3438e37ca410e234",
+      "status": "saved",
+      "raw_path": "raw/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c/skills/citlyze-visibility-report/SKILL.md"
+    }
+  ]
+}

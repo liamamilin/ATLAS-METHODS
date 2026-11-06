@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:02.552630+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 55,
+  "saved_skill_entries": 55,
+  "unique_entry_texts": 45,
+  "duplicate_entry_groups": 10,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "kochetkov-ma/claude-brewcode",
+      "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 55,
+      "saved_skill_entries": 55,
+      "saved_text_files": 1441,
+      "files_not_exported": 56,
+      "repository_manifest": "manifests/kochetkov-ma/claude-brewcode/9ddf5c045b576a3b6493b37dc1743fa3015b5a22.json"
+    }
+  ],
+  "errors": []
+}

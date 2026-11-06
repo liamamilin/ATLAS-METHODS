@@ -1,0 +1,21 @@
+{
+  "repository": "Orkas-AI/Orkas-VideoStudio",
+  "commit_sha": "a51674eecca7d47fb245c51ed060537d4422b134",
+  "tree_entries": 154,
+  "candidate_skill_paths": [
+    "packages/skills/composition-design-review/SKILL.md",
+    "packages/skills/design-system-importer/SKILL.md",
+    "packages/skills/frontend-design/SKILL.md",
+    "packages/skills/gate-control/SKILL.md",
+    "packages/skills/orchestration/SKILL.md",
+    "packages/skills/stage-assemble/SKILL.md",
+    "packages/skills/stage-compose/SKILL.md",
+    "packages/skills/stage-consistency/SKILL.md",
+    "packages/skills/stage-decide/SKILL.md",
+    "packages/skills/stage-edit/SKILL.md",
+    "packages/skills/stage-generate/SKILL.md",
+    "packages/skills/stage-plan/SKILL.md",
+    "packages/skills/video-craft/SKILL.md",
+    "packages/skills/video-router/SKILL.md"
+  ]
+}

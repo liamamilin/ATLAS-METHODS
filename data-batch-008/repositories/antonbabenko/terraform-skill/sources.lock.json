@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "antonbabenko/terraform-skill",
+      "commit_sha": "9c1e92d962a5407c227e5566416e962a2f057240"
+    }
+  ]
+}

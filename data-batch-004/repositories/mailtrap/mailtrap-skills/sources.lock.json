@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "mailtrap/mailtrap-skills",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766"
+    }
+  ]
+}

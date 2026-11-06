@@ -1,0 +1,42 @@
+[
+  {
+    "entry_sha256": "0ffedb6572d9625014f77bf7d722f8b9967f572291c89a2cb7716e55c0ba68cb",
+    "record_ids": [
+      "750fc638d3d34dd85696",
+      "0f169346e2739a58538d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+        "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+        "skill_path": "plugins/claude-real-video/skills/claude-real-video/SKILL.md"
+      },
+      {
+        "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+        "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+        "skill_path": "skills/claude-real-video/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f6dea9b6f7eaacb381e10ce1fd5322a0de93180df4268b1c37169a02324d4ffe",
+    "record_ids": [
+      "84d9e4406fe8b13ee1e7",
+      "fa9a3f3e61533d397b0a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Tencent/AI-Infra-Guard",
+        "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74",
+        "skill_path": "Research/pikit/demos/samples/demo_skill/SKILL.md"
+      },
+      {
+        "repository": "Tencent/AI-Infra-Guard",
+        "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74",
+        "skill_path": "Research/pikit/pikit/carriers/SKILL.md"
+      }
+    ]
+  }
+]

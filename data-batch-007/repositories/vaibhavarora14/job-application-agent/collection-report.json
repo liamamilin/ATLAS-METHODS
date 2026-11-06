@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:02.482632+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "vaibhavarora14/job-application-agent",
+      "commit_sha": "213f5061c7b2bb5362bd6876f7137cd5eac3f360",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 454,
+      "files_not_exported": 17,
+      "repository_manifest": "manifests/vaibhavarora14/job-application-agent/213f5061c7b2bb5362bd6876f7137cd5eac3f360.json"
+    }
+  ],
+  "errors": []
+}

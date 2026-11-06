@@ -1,0 +1,10 @@
+[
+  {
+    "entry_sha256": "e867bff8c9dcbfd13b31af0abc03864f0e5450b00cacec61a5a463641b80bfa6",
+    "record_ids": [
+      "c2228f084f1ccd92300f",
+      "1d9987761e93f1482ec3"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

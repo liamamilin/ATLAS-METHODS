@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:07.933217+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "MetcalfSolutions/Satori",
+      "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 155,
+      "files_not_exported": 8,
+      "repository_manifest": "manifests/MetcalfSolutions/Satori/6db45752624c6620a4a7b784686d1025b7d9654d.json"
+    }
+  ],
+  "errors": []
+}

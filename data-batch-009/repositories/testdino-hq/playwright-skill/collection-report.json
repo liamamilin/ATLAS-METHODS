@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:59:17.506549+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 8,
+  "saved_skill_entries": 8,
+  "unique_entry_texts": 8,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "testdino-hq/playwright-skill",
+      "commit_sha": "178d1cb537604279d7b54500c4823a6db42b9de6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 89,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/testdino-hq/playwright-skill/178d1cb537604279d7b54500c4823a6db42b9de6.json"
+    }
+  ],
+  "errors": []
+}

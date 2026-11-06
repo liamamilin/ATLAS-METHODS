@@ -1,0 +1,13 @@
+{
+  "repository": "video-db/skills",
+  "commit_sha": "f985577fba97705ed937cc707c3a67e35f23faf5",
+  "tree_entries": 39,
+  "candidate_skill_paths": [
+    "python/SKILL.md",
+    "skills/video-clips/SKILL.md",
+    "skills/video-edit/SKILL.md",
+    "skills/video-live/SKILL.md",
+    "skills/video-search/SKILL.md",
+    "skills/video-subtitles/SKILL.md"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-11-06T11:15:48.108576+00:00",
+  "requested_sources": 24,
+  "completed_sources": 24,
+  "indexed_snapshots": 24,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 679,
+  "saved_skill_entries": 679,
+  "distinct_skill_paths": 679,
+  "unique_entry_texts": 652,
+  "duplicate_entry_groups": 26,
+  "sources": [
+    {
+      "repository": "BehiSecc/VibeSec-Skill",
+      "commit_sha": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/BehiSecc/VibeSec-Skill/manifests/BehiSecc/VibeSec-Skill/0590993b35ad51961f65a4d01cf1196dfead05bb.json"
+    },
+    {
+      "repository": "Ericyoung-183/alpha-insights",
+      "commit_sha": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 82,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Ericyoung-183/alpha-insights/manifests/Ericyoung-183/alpha-insights/30c1e874f1de74bdcd488f1158c03c92c808be55.json"
+    },
+    {
+      "repository": "HeshamFS/materials-simulation-skills",
+      "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 24,
+      "saved_skill_entries": 24,
+      "saved_text_files": 412,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/HeshamFS/materials-simulation-skills/manifests/HeshamFS/materials-simulation-skills/775055956bb8fa3838032c49a346e26d94d0d1f6.json"
+    },
+    {
+      "repository": "NotMyself/claude-win11-speckit-update-skill",
+      "commit_sha": "264d00a719dd8ab88ad396cc27ebf55dbb6e1b72",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 248,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/NotMyself/claude-win11-speckit-update-skill/manifests/NotMyself/claude-win11-speckit-update-skill/264d00a719dd8ab88ad396cc27ebf55dbb6e1b72.json"
+    },
+    {
+      "repository": "SHADOWPR0/security-bluebook-builder",
+      "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/SHADOWPR0/security-bluebook-builder/manifests/SHADOWPR0/security-bluebook-builder/fc2492951a319880a7b8c69175d2693b9bb7b7aa.json"
+    },
+    {
+      "repository": "ZeKaiNie/universal-examprep-skill",
+      "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 571,
+      "files_not_exported": 11,
+      "repository_manifest": "repositories/ZeKaiNie/universal-examprep-skill/manifests/ZeKaiNie/universal-examprep-skill/e01d2f7647b0917172ae8ad5fb788b404e977cae.json"
+    },
+    {
+      "repository": "frmoretto/clarity-gate",
+      "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 44,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/frmoretto/clarity-gate/manifests/frmoretto/clarity-gate/88eaf21b0e38c95959429a1a5f9b4cec72f01a43.json"
+    },
+    {
+      "repository": "hanhuark/mechanical-engineering-research-skill",
+      "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 127,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/hanhuark/mechanical-engineering-research-skill/manifests/hanhuark/mechanical-engineering-research-skill/7b6c32d4e67b3a7896903b2d37cb2ddafc395b65.json"
+    },
+    {
+      "repository": "helius-labs/core-ai",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 24,
+      "saved_skill_entries": 24,
+      "saved_text_files": 571,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/helius-labs/core-ai/manifests/helius-labs/core-ai/6f1fcec7e0ba46e0b0b54319f08b22796810d533.json"
+    },
+    {
+      "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+      "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 59,
+      "files_not_exported": 20,
+      "repository_manifest": "repositories/honeydew-ai/honeydew-ai-coding-agents-plugins/manifests/honeydew-ai/honeydew-ai-coding-agents-plugins/5a4fd5df27729940dc9e33a93cffb2b9bf788855.json"
+    },
+    {
+      "repository": "huifer/WellAlly-health",
+      "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 37,
+      "saved_skill_entries": 37,
+      "saved_text_files": 395,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/huifer/WellAlly-health/manifests/huifer/WellAlly-health/f604350c8448194ee7791495c1b3b84e1895c30b.json"
+    },
+    {
+      "repository": "komal-SkyNET/claude-skill-homeassistant",
+      "commit_sha": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 10,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/komal-SkyNET/claude-skill-homeassistant/manifests/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4.json"
+    },
+    {
+      "repository": "lawve-ai/awesome-legal-skills",
+      "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 281,
+      "saved_skill_entries": 281,
+      "saved_text_files": 3141,
+      "files_not_exported": 48,
+      "repository_manifest": "repositories/lawve-ai/awesome-legal-skills/manifests/lawve-ai/awesome-legal-skills/f9f28cdccbeb98bbdde010042ea9f525ca427c72.json"
+    },
+    {
+      "repository": "more-io/claude-apple-bridges",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 22,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/more-io/claude-apple-bridges/manifests/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c.json"
+    },
+    {
+      "repository": "prompt-security/clawsec",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 514,
+      "files_not_exported": 33,
+      "repository_manifest": "repositories/prompt-security/clawsec/manifests/prompt-security/clawsec/e46beec4f559e15c57d250023298391253e9ce43.json"
+    },
+    {
+      "repository": "raintree-technology/hig-doctor",
+      "commit_sha": "a0f1e4ec3c5ada82e538710b54a344db63189d8b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 389,
+      "files_not_exported": 15,
+      "repository_manifest": "repositories/raintree-technology/hig-doctor/manifests/raintree-technology/hig-doctor/a0f1e4ec3c5ada82e538710b54a344db63189d8b.json"
+    },
+    {
+      "repository": "shouldnotappearcalm/a-share-skill",
+      "commit_sha": "8874bd1c46813ddb188aa293e6f9ae34f016ba4d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 89,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/shouldnotappearcalm/a-share-skill/manifests/shouldnotappearcalm/a-share-skill/8874bd1c46813ddb188aa293e6f9ae34f016ba4d.json"
+    },
+    {
+      "repository": "takechanman1228/claude-ecom",
+      "commit_sha": "7ddf7ffb823fd7ab6015e699d01cdc436739eb2b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 49,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/takechanman1228/claude-ecom/manifests/takechanman1228/claude-ecom/7ddf7ffb823fd7ab6015e699d01cdc436739eb2b.json"
+    },
+    {
+      "repository": "talkstream/ru-text",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 149,
+      "files_not_exported": 12,
+      "repository_manifest": "repositories/talkstream/ru-text/manifests/talkstream/ru-text/e398aec9e6f02d1bf28ae5a79a118e2404d52e90.json"
+    },
+    {
+      "repository": "tinqiao-oss/engramory",
+      "commit_sha": "e84b50924b7017259737d57309fc55839225ffc0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 74,
+      "files_not_exported": 27,
+      "repository_manifest": "repositories/tinqiao-oss/engramory/manifests/tinqiao-oss/engramory/e84b50924b7017259737d57309fc55839225ffc0.json"
+    },
+    {
+      "repository": "transloadit/skills",
+      "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 116,
+      "files_not_exported": 11,
+      "repository_manifest": "repositories/transloadit/skills/manifests/transloadit/skills/f627757b56f4212fef968a3efdfb514ad19a304c.json"
+    },
+    {
+      "repository": "video-db/skills",
+      "commit_sha": "f985577fba97705ed937cc707c3a67e35f23faf5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 38,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/video-db/skills/manifests/video-db/skills/f985577fba97705ed937cc707c3a67e35f23faf5.json"
+    },
+    {
+      "repository": "vmware-skills/VMware-AIops",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 218,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/vmware-skills/VMware-AIops/manifests/vmware-skills/VMware-AIops/26255efb48e1c57169dfabfae265b59744bf40e5.json"
+    },
+    {
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 197,
+      "saved_skill_entries": 197,
+      "saved_text_files": 753,
+      "files_not_exported": 14,
+      "repository_manifest": "repositories/wanshuiyin/Auto-claude-code-research-in-sleep/manifests/wanshuiyin/Auto-claude-code-research-in-sleep/2901234ad2954cd2388ced8d3aed2ed9de42803a.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 69
+}

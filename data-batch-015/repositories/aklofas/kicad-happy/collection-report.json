@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:16:24.987728+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 11,
+  "saved_skill_entries": 11,
+  "unique_entry_texts": 11,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "aklofas/kicad-happy",
+      "commit_sha": "c451943f72d91a4a9fbf4aa48bda0f730011f6d8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 11,
+      "saved_skill_entries": 11,
+      "saved_text_files": 535,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/aklofas/kicad-happy/c451943f72d91a4a9fbf4aa48bda0f730011f6d8.json"
+    }
+  ],
+  "errors": []
+}

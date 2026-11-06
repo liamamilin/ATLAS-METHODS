@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-11-06T11:26:18.360222+00:00",
+  "requested_sources": 24,
+  "completed_sources": 22,
+  "indexed_snapshots": 23,
+  "partial_sources": 1,
+  "partial_results": [
+    {
+      "repository": "ChatCut-Inc/agent-plugin",
+      "output_directory": "data-batch-016/repositories/ChatCut-Inc/agent-plugin",
+      "state": "partial_text_snapshot",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T11:24:48.604415+00:00",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8",
+      "command": [
+        "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+        "collect_skills.py",
+        "--sources",
+        "sources.batch-016.json",
+        "--only",
+        "ChatCut-Inc/agent-plugin",
+        "--out",
+        "data-batch-016/repositories/ChatCut-Inc/agent-plugin"
+      ],
+      "exit_code": 1,
+      "candidate_skill_files": 126,
+      "saved_skill_entries": 108,
+      "unexported_entry_reasons": {
+        "symlink_not_followed": 18
+      },
+      "errors": [],
+      "finished_at": "2026-11-06T11:24:53.878869+00:00"
+    }
+  ],
+  "failed_sources": 0,
+  "no_skill_sources": 1,
+  "pending_sources": 0,
+  "candidate_skill_files": 772,
+  "saved_skill_entries": 754,
+  "distinct_skill_paths": 754,
+  "unique_entry_texts": 752,
+  "duplicate_entry_groups": 2,
+  "sources": [
+    {
+      "repository": "Bhanunamikaze/Agentic-SEO-Skill",
+      "commit_sha": "445c46c268d947fac25c4b57d38aaf723129fe62",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 186,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Bhanunamikaze/Agentic-SEO-Skill/manifests/Bhanunamikaze/Agentic-SEO-Skill/445c46c268d947fac25c4b57d38aaf723129fe62.json"
+    },
+    {
+      "repository": "ChatCut-Inc/agent-plugin",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8",
+      "state": "partial_text_snapshot",
+      "candidate_skill_files": 126,
+      "saved_skill_entries": 108,
+      "saved_text_files": 257,
+      "files_not_exported": 129,
+      "repository_manifest": "repositories/ChatCut-Inc/agent-plugin/manifests/ChatCut-Inc/agent-plugin/5b93f3afca456dc1dd1da01661ea3825846f83a8.json"
+    },
+    {
+      "repository": "KalarisLabs/research-agent-skills",
+      "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 281,
+      "saved_skill_entries": 281,
+      "saved_text_files": 3177,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/KalarisLabs/research-agent-skills/manifests/KalarisLabs/research-agent-skills/fa023d6d166562a8de118f59bb73647c0e444b8c.json"
+    },
+    {
+      "repository": "Kinprove/genealogy-research-recipes",
+      "commit_sha": "ecfeca598253aaab3474e247aa0a78b7848d98b4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 286,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Kinprove/genealogy-research-recipes/manifests/Kinprove/genealogy-research-recipes/ecfeca598253aaab3474e247aa0a78b7848d98b4.json"
+    },
+    {
+      "repository": "MetaMask/agent-skills",
+      "commit_sha": "e87ac501d24648ba05cd86811d97915035eb30df",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 68,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/MetaMask/agent-skills/manifests/MetaMask/agent-skills/e87ac501d24648ba05cd86811d97915035eb30df.json"
+    },
+    {
+      "repository": "antvis/AVA",
+      "commit_sha": "8f20bffc82fa5787da5eb9463bb5c26cf6eee96f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 508,
+      "files_not_exported": 25,
+      "repository_manifest": "repositories/antvis/AVA/manifests/antvis/AVA/8f20bffc82fa5787da5eb9463bb5c26cf6eee96f.json"
+    },
+    {
+      "repository": "assafkip/claudemy",
+      "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 25,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/assafkip/claudemy/manifests/assafkip/claudemy/dadf948aafb90d66b554a13df1e47f2509cc1c70.json"
+    },
+    {
+      "repository": "czlonkowski/n8n-skills",
+      "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 186,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/czlonkowski/n8n-skills/manifests/czlonkowski/n8n-skills/e037563e101749e630e6688d121d04529fe6ee7b.json"
+    },
+    {
+      "repository": "danoszz/penthera",
+      "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 1004,
+      "files_not_exported": 47,
+      "repository_manifest": "repositories/danoszz/penthera/manifests/danoszz/penthera/9b12fb9777ef67d4a50083bf8de2f0d565368661.json"
+    },
+    {
+      "repository": "federicodeponte/opendraft",
+      "commit_sha": "39b21f74b3f52c34d5d771c508c8ad80f965d35f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 265,
+      "files_not_exported": 20,
+      "repository_manifest": "repositories/federicodeponte/opendraft/manifests/federicodeponte/opendraft/39b21f74b3f52c34d5d771c508c8ad80f965d35f.json"
+    },
+    {
+      "repository": "hyperb1iss/unifly",
+      "commit_sha": "e3afcff46179bea528d6e9189cbf9d65a1cd96cc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 523,
+      "files_not_exported": 34,
+      "repository_manifest": "repositories/hyperb1iss/unifly/manifests/hyperb1iss/unifly/e3afcff46179bea528d6e9189cbf9d65a1cd96cc.json"
+    },
+    {
+      "repository": "jgsystemsconsulting/jgs-se-knowledge-packs",
+      "commit_sha": "3bf1e1338acf4cb83e9339ce535228635165f288",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 83,
+      "saved_skill_entries": 83,
+      "saved_text_files": 1296,
+      "files_not_exported": 12,
+      "repository_manifest": "repositories/jgsystemsconsulting/jgs-se-knowledge-packs/manifests/jgsystemsconsulting/jgs-se-knowledge-packs/3bf1e1338acf4cb83e9339ce535228635165f288.json"
+    },
+    {
+      "repository": "kepano/obsidian-skills",
+      "commit_sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 15,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/kepano/obsidian-skills/manifests/kepano/obsidian-skills/3ccff5338ea700537839b21900aa5358a0402c98.json"
+    },
+    {
+      "repository": "mblode/agent-skills",
+      "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 556,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/mblode/agent-skills/manifests/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08.json"
+    },
+    {
+      "repository": "nexscope-ai/eCommerce-Skills",
+      "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 162,
+      "saved_skill_entries": 162,
+      "saved_text_files": 211,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/nexscope-ai/eCommerce-Skills/manifests/nexscope-ai/eCommerce-Skills/ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e.json"
+    },
+    {
+      "repository": "op7418/guizang-social-card-skill",
+      "commit_sha": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 41,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/op7418/guizang-social-card-skill/manifests/op7418/guizang-social-card-skill/64d02d435fb092d3b403455a875e842fc8f29b8b.json"
+    },
+    {
+      "repository": "snyk/agent-scan",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 21,
+      "saved_skill_entries": 21,
+      "saved_text_files": 378,
+      "files_not_exported": 56,
+      "repository_manifest": "repositories/snyk/agent-scan/manifests/snyk/agent-scan/6b2a1f330348ab5898e2f1aefdd6c5be17e987b1.json"
+    },
+    {
+      "repository": "teng-lin/notebooklm-py",
+      "commit_sha": "7c5857a5be8c3cf465caf0878098a6358a92261f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 2223,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/teng-lin/notebooklm-py/manifests/teng-lin/notebooklm-py/7c5857a5be8c3cf465caf0878098a6358a92261f.json"
+    },
+    {
+      "repository": "verdikta/verdikta-applications",
+      "commit_sha": "ef426f7a47ffc7d929a9dbbf54aecdafda185ec7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 907,
+      "files_not_exported": 11,
+      "repository_manifest": "repositories/verdikta/verdikta-applications/manifests/verdikta/verdikta-applications/ef426f7a47ffc7d929a9dbbf54aecdafda185ec7.json"
+    },
+    {
+      "repository": "virgiliojr94/book-to-skill",
+      "commit_sha": "e7bb659d3261491c8b28793dcb9102fa64a46c22",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 134,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/virgiliojr94/book-to-skill/manifests/virgiliojr94/book-to-skill/e7bb659d3261491c8b28793dcb9102fa64a46c22.json"
+    },
+    {
+      "repository": "wheresryan22/anatomy",
+      "commit_sha": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 155,
+      "files_not_exported": 18,
+      "repository_manifest": "repositories/wheresryan22/anatomy/manifests/wheresryan22/anatomy/1482e8469b0a9e0d8cc18ea2740a01423d29ae80.json"
+    },
+    {
+      "repository": "zenstory-ai/oh-story-claudecode",
+      "commit_sha": "d4a7766d35876a4ac01ad3beb4b4f2002de78f04",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 824,
+      "files_not_exported": 24,
+      "repository_manifest": "repositories/zenstory-ai/oh-story-claudecode/manifests/zenstory-ai/oh-story-claudecode/d4a7766d35876a4ac01ad3beb4b4f2002de78f04.json"
+    },
+    {
+      "repository": "zubair-trabzada/geo-seo-claude",
+      "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 70,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/zubair-trabzada/geo-seo-claude/manifests/zubair-trabzada/geo-seo-claude/989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "devanasolver/ai-seo-toolkit",
+      "output_directory": "data-batch-016/repositories/devanasolver/ai-seo-toolkit",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T11:25:39.458029+00:00",
+      "commit_sha": "4f5cf4f01fb368f85ad5c6b243fb9cbb2fdbc68f",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T11:25:44.045401+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 21
+}

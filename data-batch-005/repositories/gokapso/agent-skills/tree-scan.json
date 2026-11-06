@@ -1,0 +1,11 @@
+{
+  "repository": "gokapso/agent-skills",
+  "commit_sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd",
+  "tree_entries": 173,
+  "candidate_skill_paths": [
+    "skills/automate-whatsapp/SKILL.md",
+    "skills/integrate-whatsapp-calling/SKILL.md",
+    "skills/integrate-whatsapp/SKILL.md",
+    "skills/observe-whatsapp/SKILL.md"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:59:32.463636+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 818,
+  "saved_skill_entries": 818,
+  "unique_entry_texts": 818,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+      "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 818,
+      "saved_skill_entries": 818,
+      "saved_text_files": 4531,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/mukul975/Anthropic-Cybersecurity-Skills/54a798831d2266a3ca61ce68a7acb80b81160d57.json"
+    }
+  ],
+  "errors": []
+}

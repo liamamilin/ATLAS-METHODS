@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:05:52.845079+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "gongdear/cline-pilot",
+      "commit_sha": "aff85675ae2fdcca1e5824230b1be86ab4b89198",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 12,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198.json"
+    }
+  ],
+  "errors": []
+}

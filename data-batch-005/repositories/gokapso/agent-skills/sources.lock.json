@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "gokapso/agent-skills",
+      "commit_sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd"
+    }
+  ]
+}

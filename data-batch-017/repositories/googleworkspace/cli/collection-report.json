@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:27:51.989625+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 95,
+  "saved_skill_entries": 95,
+  "unique_entry_texts": 95,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 95,
+      "saved_skill_entries": 95,
+      "saved_text_files": 220,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/googleworkspace/cli/cd3697e07eb520056dcf142d0c7439bbb9ba32e9.json"
+    }
+  ],
+  "errors": []
+}

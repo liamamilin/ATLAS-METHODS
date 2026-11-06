@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:53:40.958678+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "radres/call-me",
+      "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 54,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/radres/call-me/b1bb4fde0f7b064c18de96b9ebc44a71893e8a41.json"
+    }
+  ],
+  "errors": []
+}

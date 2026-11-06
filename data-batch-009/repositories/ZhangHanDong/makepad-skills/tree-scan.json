@@ -1,0 +1,21 @@
+{
+  "repository": "ZhangHanDong/makepad-skills",
+  "commit_sha": "6e16c8d5beefcb410d57e83a799014beb2957977",
+  "tree_entries": 40,
+  "candidate_skill_paths": [
+    "skills/makepad-2.0-animation/SKILL.md",
+    "skills/makepad-2.0-app-structure/SKILL.md",
+    "skills/makepad-2.0-design-judgment/SKILL.md",
+    "skills/makepad-2.0-dsl/SKILL.md",
+    "skills/makepad-2.0-events/SKILL.md",
+    "skills/makepad-2.0-layout/SKILL.md",
+    "skills/makepad-2.0-migration/SKILL.md",
+    "skills/makepad-2.0-performance/SKILL.md",
+    "skills/makepad-2.0-shaders/SKILL.md",
+    "skills/makepad-2.0-splash/SKILL.md",
+    "skills/makepad-2.0-theme/SKILL.md",
+    "skills/makepad-2.0-troubleshooting/SKILL.md",
+    "skills/makepad-2.0-vector/SKILL.md",
+    "skills/makepad-2.0-widgets/SKILL.md"
+  ]
+}

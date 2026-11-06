@@ -1,0 +1,228 @@
+[
+  {
+    "entry_sha256": "1b5620995faf5b6625757864306b1a762c1eca01bd1f45432e744e6f3c194666",
+    "record_ids": [
+      "97a7eba343965644ac4b",
+      "d9787ae6fa11f8ce7ee0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/instagram-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/instagram-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "243cb608f987106c691a424b2dc2f19c100b4d539f1b2b9fb940f4a9cb60bf8d",
+    "record_ids": [
+      "1a330e15505d801b03da",
+      "1f14f69fb3462bf6d012"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/threads-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/threads-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2b3e2f6bc2692a0e5e333153b11d755d6d7e8ba19e3d6faf1428c0b17e495a77",
+    "record_ids": [
+      "5352b0de6fe62dd56618",
+      "57b4c4b94df9b839837e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/telegram-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/telegram-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "310c10a65621e09486e7af547bf6bc6766cf9d4c9cc206cd6a037c8ba4df005d",
+    "record_ids": [
+      "33c7821f71defcafefa6",
+      "716a3bf29c7fca7f0090"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/linkedin-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/linkedin-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6612d0d0e92b924fc384d7ff92b0bb9aee2875aff70fc4880ec5da7255cdb54f",
+    "record_ids": [
+      "1a0236a11f4dff23e238",
+      "0c0ac912e167eb084b9d",
+      "65de4275b9d854d2b209"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "posteyai/skills",
+        "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+        "skill_path": "tests/fixtures/cross-skill-links/clean/skills/beta/SKILL.md"
+      },
+      {
+        "repository": "posteyai/skills",
+        "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+        "skill_path": "tests/fixtures/cross-skill-links/leak-backtick/skills/beta/SKILL.md"
+      },
+      {
+        "repository": "posteyai/skills",
+        "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+        "skill_path": "tests/fixtures/cross-skill-links/leak-link/skills/beta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "67116823d666ddf2a3beb6913d77a1885c26591a730f7cd410cb67ed785c9049",
+    "record_ids": [
+      "07fac898120fe69e3301",
+      "29ec48ad3d332a3661ca"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/linkedin-analytics/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/linkedin-analytics/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "78b77369ecf0a57a54e91a27e0739b2dae59517c17ec66bd4a18a1e122fb9901",
+    "record_ids": [
+      "9bc699b292ad61ef0001",
+      "891018eff1757d2b1cb0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/tiktok-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/tiktok-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "79241b52619c6d8c4b3a3b56bc181dcc3878e554ea5e4cef764cdf4d4e7b5d0b",
+    "record_ids": [
+      "e54336556d40d4189d17",
+      "445591803abcd58a5048"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/social-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/social-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "832994fe1dfcce2aa7ceca9a1b7b708eca94becef242713999855f4e946cf4d5",
+    "record_ids": [
+      "0ccc3d6d9cbfc7282adb",
+      "e35294f7b57d9328bcf3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "zarazhangrui/frontend-slides",
+        "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+        "skill_path": "SKILL.md"
+      },
+      {
+        "repository": "zarazhangrui/frontend-slides",
+        "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+        "skill_path": "plugins/frontend-slides/skills/frontend-slides/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ac61442002da4bf51c0a394066518299d59a54308933e11bc66a22c018a37149",
+    "record_ids": [
+      "c46733ab51753918d043",
+      "28287101514e09729b0a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/x-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/x-post/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "af92ab6e7a6c6ea360bb5c6907bd0b1b094ecf1997bbb42f08b2c159d769c438",
+    "record_ids": [
+      "443796130be9aedf93a9",
+      "71ccb3326299855c811d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": ".codex-marketplace/publora-skills/skills/bluesky-post/SKILL.md"
+      },
+      {
+        "repository": "publora/skills",
+        "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+        "skill_path": "skills/bluesky-post/SKILL.md"
+      }
+    ]
+  }
+]

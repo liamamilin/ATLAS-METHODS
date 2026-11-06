@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "ethos-link/rails-conventions",
+      "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2"
+    }
+  ]
+}

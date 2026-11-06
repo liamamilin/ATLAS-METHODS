@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:24:36.354598+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "federicodeponte/opendraft",
+      "commit_sha": "39b21f74b3f52c34d5d771c508c8ad80f965d35f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 265,
+      "files_not_exported": 20,
+      "repository_manifest": "manifests/federicodeponte/opendraft/39b21f74b3f52c34d5d771c508c8ad80f965d35f.json"
+    }
+  ],
+  "errors": []
+}

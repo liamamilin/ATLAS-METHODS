@@ -1,0 +1,27 @@
+{
+  "repository": "rainmanjam/poka-yoke",
+  "commit_sha": "726a575e3d48d07d908abfcbb192cae09671fff2",
+  "tree_entries": 2224,
+  "candidate_skill_paths": [
+    "benchmarks/controls/clean-code/skills/audit/SKILL.md",
+    "benchmarks/controls/clean-code/skills/authz/SKILL.md",
+    "benchmarks/controls/clean-code/skills/clean-code/SKILL.md",
+    "benchmarks/controls/clean-code/skills/design/SKILL.md",
+    "benchmarks/controls/clean-code/skills/retro/SKILL.md",
+    "benchmarks/controls/clean-code/skills/ux/SKILL.md",
+    "benchmarks/controls/defensive/skills/audit/SKILL.md",
+    "benchmarks/controls/defensive/skills/defensive/SKILL.md",
+    "benchmarks/controls/defensive/skills/design/SKILL.md",
+    "plugins/poka-yoke/skills/agent-guardrails/SKILL.md",
+    "plugins/poka-yoke/skills/audit/SKILL.md",
+    "plugins/poka-yoke/skills/authz/SKILL.md",
+    "plugins/poka-yoke/skills/data/SKILL.md",
+    "plugins/poka-yoke/skills/design/SKILL.md",
+    "plugins/poka-yoke/skills/guardrails/SKILL.md",
+    "plugins/poka-yoke/skills/llm/SKILL.md",
+    "plugins/poka-yoke/skills/ops/SKILL.md",
+    "plugins/poka-yoke/skills/poka-yoke/SKILL.md",
+    "plugins/poka-yoke/skills/retro/SKILL.md",
+    "plugins/poka-yoke/skills/ux/SKILL.md"
+  ]
+}

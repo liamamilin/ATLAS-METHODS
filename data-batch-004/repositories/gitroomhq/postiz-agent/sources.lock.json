@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e"
+    }
+  ]
+}

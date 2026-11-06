@@ -1,0 +1,19 @@
+{
+  "repository": "iOfficeAI/OfficeCLI",
+  "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e",
+  "tree_entries": 1218,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/morph-ppt-3d/SKILL.md",
+    "skills/morph-ppt/SKILL.md",
+    "skills/officecli-academic-paper/SKILL.md",
+    "skills/officecli-data-dashboard/SKILL.md",
+    "skills/officecli-docx/SKILL.md",
+    "skills/officecli-financial-model/SKILL.md",
+    "skills/officecli-pitch-deck/SKILL.md",
+    "skills/officecli-pptx/SKILL.md",
+    "skills/officecli-word-form/SKILL.md",
+    "skills/officecli-xlsx/SKILL.md",
+    "skills/officecli/SKILL.md"
+  ]
+}

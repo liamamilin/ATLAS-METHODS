@@ -1,0 +1,9 @@
+{
+  "repository": "thousandflowers/skillreaper",
+  "commit_sha": "1cfd85dce3ac922df37ff4c86f281ae3f695c8d8",
+  "tree_entries": 164,
+  "candidate_skill_paths": [
+    "plugins/skillreaper/skills/gap/SKILL.md",
+    "plugins/skillreaper/skills/reap/SKILL.md"
+  ]
+}

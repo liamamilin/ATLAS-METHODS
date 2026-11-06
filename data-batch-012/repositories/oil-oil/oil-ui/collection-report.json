@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:07:21.831274+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "oil-oil/oil-ui",
+      "commit_sha": "0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 46,
+      "files_not_exported": 8,
+      "repository_manifest": "manifests/oil-oil/oil-ui/0d64a00f3a5c45bf7a30d35bded9b7c0fdff2128.json"
+    }
+  ],
+  "errors": []
+}

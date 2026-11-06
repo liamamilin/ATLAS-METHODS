@@ -1,0 +1,22 @@
+{
+  "repository": "finom/vovk",
+  "commit_sha": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+  "tree_entries": 1285,
+  "candidate_skill_paths": [
+    "skills/base/SKILL.md",
+    "skills/bundle/SKILL.md",
+    "skills/config/SKILL.md",
+    "skills/decorators/SKILL.md",
+    "skills/init/SKILL.md",
+    "skills/jsonlines/SKILL.md",
+    "skills/mixins/SKILL.md",
+    "skills/multitenant/SKILL.md",
+    "skills/openapi/SKILL.md",
+    "skills/procedure/SKILL.md",
+    "skills/python/SKILL.md",
+    "skills/rpc/SKILL.md",
+    "skills/rust/SKILL.md",
+    "skills/segment/SKILL.md",
+    "skills/tools/SKILL.md"
+  ]
+}

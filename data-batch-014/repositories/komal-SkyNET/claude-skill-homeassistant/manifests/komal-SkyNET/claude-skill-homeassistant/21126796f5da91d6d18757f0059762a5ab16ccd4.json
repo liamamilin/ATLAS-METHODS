@@ -1,0 +1,126 @@
+{
+  "repository": "komal-SkyNET/claude-skill-homeassistant",
+  "commit_sha": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fdffa2ad6ef5e53916f0671b936edab11f1b35e3",
+      "bytes": 625,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/.claude-plugin/marketplace.json",
+      "sha256": "e75c6e3479612d49c7b6e23e50a7aa787d7c77034c3e0dbde811f49e9cea5d24",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8cfd195c572b119448fd39399436835822b25149",
+      "bytes": 571,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/.claude-plugin/plugin.json",
+      "sha256": "59edbf2fac766d5ae7e8ae682a5d08c5db2c5600d60fcbd0b4dd10ac8ffc0096",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "25e017fb8fac88470776216216b6e811642a1817",
+      "bytes": 847,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/.github/FUNDING.yml",
+      "sha256": "31f328a6de40c7ffaa79e2b0199d86e401c107c0bdef095fea000fae6222c8f6",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/.github/FUNDING.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e43b0f988953ae3a84b00331d0ccf5f7d51cb3cf",
+      "bytes": 10,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/.gitignore",
+      "sha256": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cc5ce90701aea32ce7177860ac77338cb5de5ec1",
+      "bytes": 1097,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/LICENSE",
+      "sha256": "b440c463a4e4ebee2765a9bd7af6efc0edf673e9c3f6fb8e3a94e9baed986e7c",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e27012b93e85fe893a76bbed940a2a7268883c3b",
+      "bytes": 14773,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/README.md",
+      "sha256": "7b455d2d8e964106747dd57aa15c4955011379ec8e9de4aef01ac7da8bb8fa42",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/README.md"
+    },
+    {
+      "path": "release.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "260fa8abae5ce949d030ee455a52387a0f8b7efc",
+      "bytes": 3199,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/release.txt",
+      "sha256": "8912a48e8344323ffe7f346505695f76f4c9d6b170e7f572267650f631304b28",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/release.txt"
+    },
+    {
+      "path": "skills/home-assistant-manager/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1411a1236cb85597c2301291fdcc30b84ba8ec55",
+      "bytes": 7172,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/SKILL.md",
+      "sha256": "9c571d72391a45b49967a1caa01a92de06ae063f7a89d955e3adedb5c59721f0",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/SKILL.md"
+    },
+    {
+      "path": "skills/home-assistant-manager/dashboard.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "971be9ccb020c565a4113a6091005320c2ed4de3",
+      "bytes": 374124,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/dashboard.png",
+      "sha256": "91ead04ce828e5905ae430e80996013403c0083ee56713755a53ce636719dd63",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "skills/home-assistant-manager/reference/automations.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9a139588512d0b52718eaed2ec50c5f921d268e0",
+      "bytes": 3667,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/reference/automations.md",
+      "sha256": "95a85a0860efa69ae636dce8e63f6692e57d3830f94a94573f7b47afc7d08e81",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/reference/automations.md"
+    },
+    {
+      "path": "skills/home-assistant-manager/reference/dashboards.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29c82f3f219af6d7bf817c72ef225f5a1e2a3269",
+      "bytes": 5889,
+      "source_url": "https://github.com/komal-SkyNET/claude-skill-homeassistant/blob/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/reference/dashboards.md",
+      "sha256": "2a6657f94cb6a50c099990cca49360b1158dda9f9fa110951f9ed6ee4509b9c0",
+      "status": "saved",
+      "raw_path": "raw/komal-SkyNET/claude-skill-homeassistant/21126796f5da91d6d18757f0059762a5ab16ccd4/skills/home-assistant-manager/reference/dashboards.md"
+    }
+  ]
+}

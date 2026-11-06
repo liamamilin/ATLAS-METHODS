@@ -1,0 +1,286 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "3747a990960b055400219cd9cd56874c2eceb79f0c931dd8f49900cd86dd9726",
+  "sources": [
+    {
+      "repository": "Bhanunamikaze/Agentic-SEO-Skill",
+      "commit_sha": "445c46c268d947fac25c4b57d38aaf723129fe62",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 188,
+      "statuses": {
+        "saved": 186,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "ChatCut-Inc/agent-plugin",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8",
+      "candidate_skill_entries": 126,
+      "skill_entries": 108,
+      "manifest_files": 386,
+      "statuses": {
+        "saved": 257,
+        "symlink_not_followed": 127,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "KalarisLabs/research-agent-skills",
+      "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+      "candidate_skill_entries": 281,
+      "skill_entries": 281,
+      "manifest_files": 3186,
+      "statuses": {
+        "saved": 3177,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "Kinprove/genealogy-research-recipes",
+      "commit_sha": "ecfeca598253aaab3474e247aa0a78b7848d98b4",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 288,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 2,
+        "saved": 286
+      }
+    },
+    {
+      "repository": "MetaMask/agent-skills",
+      "commit_sha": "e87ac501d24648ba05cd86811d97915035eb30df",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 68,
+      "statuses": {
+        "saved": 68
+      }
+    },
+    {
+      "repository": "antvis/AVA",
+      "commit_sha": "8f20bffc82fa5787da5eb9463bb5c26cf6eee96f",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 533,
+      "statuses": {
+        "saved": 508,
+        "non_utf8_or_binary_not_exported": 24,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "assafkip/claudemy",
+      "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 29,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 3,
+        "saved": 25,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "czlonkowski/n8n-skills",
+      "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+      "candidate_skill_entries": 15,
+      "skill_entries": 15,
+      "manifest_files": 187,
+      "statuses": {
+        "saved": 186,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "danoszz/penthera",
+      "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 1051,
+      "statuses": {
+        "saved": 1004,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 44,
+        "over_size_limit": 1,
+        "font_not_exported": 1
+      }
+    },
+    {
+      "repository": "federicodeponte/opendraft",
+      "commit_sha": "39b21f74b3f52c34d5d771c508c8ad80f965d35f",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 285,
+      "statuses": {
+        "saved": 265,
+        "non_utf8_or_binary_not_exported": 9,
+        "over_size_limit": 2,
+        "font_not_exported": 9
+      }
+    },
+    {
+      "repository": "hyperb1iss/unifly",
+      "commit_sha": "e3afcff46179bea528d6e9189cbf9d65a1cd96cc",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 557,
+      "statuses": {
+        "saved": 523,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 33
+      }
+    },
+    {
+      "repository": "jgsystemsconsulting/jgs-se-knowledge-packs",
+      "commit_sha": "3bf1e1338acf4cb83e9339ce535228635165f288",
+      "candidate_skill_entries": 83,
+      "skill_entries": 83,
+      "manifest_files": 1308,
+      "statuses": {
+        "saved": 1296,
+        "non_utf8_or_binary_not_exported": 4,
+        "font_not_exported": 8
+      }
+    },
+    {
+      "repository": "kepano/obsidian-skills",
+      "commit_sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 15,
+      "statuses": {
+        "saved": 15
+      }
+    },
+    {
+      "repository": "mblode/agent-skills",
+      "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+      "candidate_skill_entries": 28,
+      "skill_entries": 28,
+      "manifest_files": 556,
+      "statuses": {
+        "saved": 556
+      }
+    },
+    {
+      "repository": "nexscope-ai/eCommerce-Skills",
+      "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+      "candidate_skill_entries": 162,
+      "skill_entries": 162,
+      "manifest_files": 212,
+      "statuses": {
+        "saved": 211,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "op7418/guizang-social-card-skill",
+      "commit_sha": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 50,
+      "statuses": {
+        "saved": 41,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "snyk/agent-scan",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+      "candidate_skill_entries": 21,
+      "skill_entries": 21,
+      "manifest_files": 434,
+      "statuses": {
+        "saved": 378,
+        "non_utf8_or_binary_not_exported": 2,
+        "font_not_exported": 54
+      }
+    },
+    {
+      "repository": "teng-lin/notebooklm-py",
+      "commit_sha": "7c5857a5be8c3cf465caf0878098a6358a92261f",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 2227,
+      "statuses": {
+        "saved": 2223,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "verdikta/verdikta-applications",
+      "commit_sha": "ef426f7a47ffc7d929a9dbbf54aecdafda185ec7",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 918,
+      "statuses": {
+        "saved": 907,
+        "non_utf8_or_binary_not_exported": 11
+      }
+    },
+    {
+      "repository": "virgiliojr94/book-to-skill",
+      "commit_sha": "e7bb659d3261491c8b28793dcb9102fa64a46c22",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 142,
+      "statuses": {
+        "saved": 134,
+        "non_utf8_or_binary_not_exported": 8
+      }
+    },
+    {
+      "repository": "wheresryan22/anatomy",
+      "commit_sha": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 173,
+      "statuses": {
+        "saved": 155,
+        "non_utf8_or_binary_not_exported": 15,
+        "over_size_limit": 3
+      }
+    },
+    {
+      "repository": "zenstory-ai/oh-story-claudecode",
+      "commit_sha": "d4a7766d35876a4ac01ad3beb4b4f2002de78f04",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 848,
+      "statuses": {
+        "saved": 824,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 22,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "zubair-trabzada/geo-seo-claude",
+      "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+      "candidate_skill_entries": 16,
+      "skill_entries": 16,
+      "manifest_files": 71,
+      "statuses": {
+        "saved": 70,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 244343750,
+    "entries_with_license_candidates": 772,
+    "saved": 13295,
+    "non_utf8_or_binary_not_exported": 206,
+    "symlink_not_followed": 130,
+    "over_size_limit": 9,
+    "font_not_exported": 72
+  },
+  "verified_candidate_entries": 772,
+  "verified_skill_entries": 754,
+  "unique_entry_texts": 752,
+  "duplicate_entry_groups": 2,
+  "entries_in_duplicate_groups": 4,
+  "duplicate_entries_beyond_first": 2
+}

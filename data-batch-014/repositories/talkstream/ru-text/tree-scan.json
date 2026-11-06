@@ -1,0 +1,11 @@
+{
+  "repository": "talkstream/ru-text",
+  "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+  "tree_entries": 161,
+  "candidate_skill_paths": [
+    "skills/ru-check/SKILL.md",
+    "skills/ru-score/SKILL.md",
+    "skills/ru-text/SKILL.md",
+    "tools/testdata/corpus/SKILL.md"
+  ]
+}

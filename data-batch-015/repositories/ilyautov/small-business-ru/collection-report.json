@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:20:01.604498+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 34,
+  "saved_skill_entries": 34,
+  "unique_entry_texts": 34,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ilyautov/small-business-ru",
+      "commit_sha": "43ad4add8a4d242332d1e6753339771bbeb26401",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 34,
+      "saved_skill_entries": 34,
+      "saved_text_files": 151,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/ilyautov/small-business-ru/43ad4add8a4d242332d1e6753339771bbeb26401.json"
+    }
+  ],
+  "errors": []
+}

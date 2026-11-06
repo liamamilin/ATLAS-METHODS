@@ -1,0 +1,281 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "080636e30e8c2d1d7427a7d0fc6dd36dce8e2dde781238c8ee167159e28c7924",
+  "sources": [
+    {
+      "repository": "Charlie85270/Dorothy",
+      "commit_sha": "787568d5bba83b8ef35baa9ac29912d8eecc44cf",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 1017,
+      "statuses": {
+        "saved": 603,
+        "symlink_not_followed": 9,
+        "non_utf8_or_binary_not_exported": 395,
+        "over_size_limit": 10
+      }
+    },
+    {
+      "repository": "Digidai/product-manager-skills",
+      "commit_sha": "ab7a40662c8455ece631834dee9670b3322f465b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 46,
+      "statuses": {
+        "saved": 46
+      }
+    },
+    {
+      "repository": "EveryInc/charlie-cfo-skill",
+      "commit_sha": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 5,
+      "statuses": {
+        "saved": 5
+      }
+    },
+    {
+      "repository": "JimmySadek/video-fetcher-to-markdown",
+      "commit_sha": "c196ba48df72c064811adcb934104c3e6567858b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 21,
+      "statuses": {
+        "saved": 20,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "Linked-API/linkedin-skills",
+      "commit_sha": "1469f41eebe74a3a344c18b117899f06d6d94bd9",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 60,
+      "statuses": {
+        "saved": 60
+      }
+    },
+    {
+      "repository": "NeoLabHQ/context-engineering-kit",
+      "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+      "candidate_skill_entries": 204,
+      "skill_entries": 204,
+      "manifest_files": 513,
+      "statuses": {
+        "saved": 509,
+        "non_utf8_or_binary_not_exported": 3,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "Paramchoudhary/ResumeSkills",
+      "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+      "candidate_skill_entries": 29,
+      "skill_entries": 29,
+      "manifest_files": 82,
+      "statuses": {
+        "symlink_not_followed": 49,
+        "saved": 33
+      }
+    },
+    {
+      "repository": "ReScienceLab/opc-skills",
+      "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 215,
+      "statuses": {
+        "saved": 173,
+        "non_utf8_or_binary_not_exported": 42
+      }
+    },
+    {
+      "repository": "SeanZoR/claude-speed-reader",
+      "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 6,
+      "statuses": {
+        "saved": 5,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "Sendmux/skills",
+      "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+      "candidate_skill_entries": 22,
+      "skill_entries": 22,
+      "manifest_files": 625,
+      "statuses": {
+        "saved": 625
+      }
+    },
+    {
+      "repository": "bevibing/tutor-skills",
+      "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 13,
+      "statuses": {
+        "saved": 13
+      }
+    },
+    {
+      "repository": "career-ops-hq/career-ops",
+      "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+      "candidate_skill_entries": 15,
+      "skill_entries": 9,
+      "manifest_files": 3183,
+      "statuses": {
+        "saved": 3061,
+        "symlink_not_followed": 6,
+        "non_utf8_or_binary_not_exported": 108,
+        "over_size_limit": 1,
+        "font_not_exported": 7
+      }
+    },
+    {
+      "repository": "deusyu/translate-book",
+      "commit_sha": "8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 42,
+        "non_utf8_or_binary_not_exported": 4,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "mvanhorn/last30days-skill",
+      "commit_sha": "71dc2a1529f23dfe7b0d0e3b3e11d4a7e8afd428",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 617,
+      "statuses": {
+        "saved": 610,
+        "over_size_limit": 7
+      }
+    },
+    {
+      "repository": "obra/superpowers-lab",
+      "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 15,
+      "statuses": {
+        "saved": 15
+      }
+    },
+    {
+      "repository": "ognjengt/founder-skills",
+      "commit_sha": "a45931cad934dc6243a68f905485467935a4ad9a",
+      "candidate_skill_entries": 15,
+      "skill_entries": 15,
+      "manifest_files": 46,
+      "statuses": {
+        "saved": 45,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "op7418/Youtube-clipper-skill",
+      "commit_sha": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 24,
+      "statuses": {
+        "saved": 24
+      }
+    },
+    {
+      "repository": "openaccountants/openaccountants",
+      "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+      "candidate_skill_entries": 2253,
+      "skill_entries": 2253,
+      "manifest_files": 24333,
+      "statuses": {
+        "saved": 19537,
+        "symlink_not_followed": 1,
+        "over_size_limit": 148,
+        "non_utf8_or_binary_not_exported": 4647
+      }
+    },
+    {
+      "repository": "pattern-ai-labs/agentcall",
+      "commit_sha": "6f173169a92fa05099c493275705af494a1bb462",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 69,
+      "statuses": {
+        "saved": 69
+      }
+    },
+    {
+      "repository": "tjboudreaux/cc-thinking-skills",
+      "commit_sha": "7b8fece345dfaa11773be7152ccd194589cb5437",
+      "candidate_skill_entries": 28,
+      "skill_entries": 28,
+      "manifest_files": 377,
+      "statuses": {
+        "saved": 376,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "wrsmith108/linear-claude-skill",
+      "commit_sha": "d61cd9ad05f1863a421d891d9319ec2405904488",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 62,
+      "statuses": {
+        "saved": 62
+      }
+    },
+    {
+      "repository": "xberg-io/xberg",
+      "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+      "candidate_skill_entries": 75,
+      "skill_entries": 75,
+      "manifest_files": 10727,
+      "statuses": {
+        "saved": 10473,
+        "over_size_limit": 5,
+        "non_utf8_or_binary_not_exported": 179,
+        "font_not_exported": 6,
+        "symlink_not_followed": 63,
+        "gitlink_not_exported": 1
+      }
+    },
+    {
+      "repository": "zapier/zapier-mcp",
+      "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 32,
+      "statuses": {
+        "saved": 26,
+        "non_utf8_or_binary_not_exported": 2,
+        "symlink_not_followed": 4
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 1222342070,
+    "entries_with_license_candidates": 2679,
+    "saved": 36432,
+    "symlink_not_followed": 132,
+    "non_utf8_or_binary_not_exported": 5383,
+    "over_size_limit": 174,
+    "font_not_exported": 13,
+    "gitlink_not_exported": 1
+  },
+  "verified_candidate_entries": 2679,
+  "verified_skill_entries": 2673,
+  "unique_entry_texts": 2377,
+  "duplicate_entry_groups": 232,
+  "entries_in_duplicate_groups": 528,
+  "duplicate_entries_beyond_first": 296
+}

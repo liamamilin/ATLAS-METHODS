@@ -1,0 +1,20 @@
+{
+  "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+  "commit_sha": "b7d5353e0130feb8c5574ef1251f8a1db1873ccb",
+  "tree_entries": 706,
+  "candidate_skill_paths": [
+    ".claude/skills/banner-design/SKILL.md",
+    ".claude/skills/brand/SKILL.md",
+    ".claude/skills/design-system/SKILL.md",
+    ".claude/skills/design/SKILL.md",
+    ".claude/skills/slides/SKILL.md",
+    ".claude/skills/ui-styling/SKILL.md",
+    ".claude/skills/ui-ux-pro-max/SKILL.md",
+    "cli/assets/skills/banner-design/SKILL.md",
+    "cli/assets/skills/brand/SKILL.md",
+    "cli/assets/skills/design-system/SKILL.md",
+    "cli/assets/skills/design/SKILL.md",
+    "cli/assets/skills/slides/SKILL.md",
+    "cli/assets/skills/ui-styling/SKILL.md"
+  ]
+}

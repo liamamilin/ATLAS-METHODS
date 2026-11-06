@@ -1,0 +1,9 @@
+{
+  "repository": "chrisryugj/kordoc",
+  "commit_sha": "9effd38c2a4248f62b5e894cc49d6fa5a949791a",
+  "tree_entries": 1264,
+  "candidate_skill_paths": [
+    ".claude/skills/gongmunseo/SKILL.md",
+    "plugins/kordoc/skills/kordoc/SKILL.md"
+  ]
+}

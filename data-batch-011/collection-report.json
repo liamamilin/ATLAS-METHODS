@@ -1,0 +1,291 @@
+{
+  "generated_at": "2026-11-06T11:06:27.502691+00:00",
+  "requested_sources": 24,
+  "completed_sources": 23,
+  "indexed_snapshots": 24,
+  "partial_sources": 1,
+  "partial_results": [
+    {
+      "repository": "hasuwini77/3d-logo-skill",
+      "output_directory": "data-batch-011/repositories/hasuwini77/3d-logo-skill",
+      "state": "partial_text_snapshot",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T11:05:27.589116+00:00",
+      "commit_sha": "d999724b52ad6836edda6c3dd9d058884b76bf2f",
+      "command": [
+        "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+        "collect_skills.py",
+        "--sources",
+        "sources.batch-011.json",
+        "--only",
+        "hasuwini77/3d-logo-skill",
+        "--out",
+        "data-batch-011/repositories/hasuwini77/3d-logo-skill"
+      ],
+      "exit_code": 1,
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 1,
+      "unexported_entry_reasons": {
+        "symlink_not_followed": 1
+      },
+      "errors": [],
+      "finished_at": "2026-11-06T11:05:36.540747+00:00"
+    }
+  ],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 314,
+  "saved_skill_entries": 313,
+  "distinct_skill_paths": 313,
+  "unique_entry_texts": 300,
+  "duplicate_entry_groups": 2,
+  "sources": [
+    {
+      "repository": "Continuum-AI-Corp/OrcaReplay",
+      "commit_sha": "a9178ca26af95cfd3231b8eb2da4ae11dbbd0a84",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 508,
+      "files_not_exported": 24,
+      "repository_manifest": "repositories/Continuum-AI-Corp/OrcaReplay/manifests/Continuum-AI-Corp/OrcaReplay/a9178ca26af95cfd3231b8eb2da4ae11dbbd0a84.json"
+    },
+    {
+      "repository": "UiPath/coder_eval",
+      "commit_sha": "bc45225fe4b836ae9376a66fc5864f5b49e6851f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 935,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/UiPath/coder_eval/manifests/UiPath/coder_eval/bc45225fe4b836ae9376a66fc5864f5b49e6851f.json"
+    },
+    {
+      "repository": "allxsmith/bestax",
+      "commit_sha": "dacd0ca4870f91e24308a2963a88276a447be21b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 2465,
+      "files_not_exported": 265,
+      "repository_manifest": "repositories/allxsmith/bestax/manifests/allxsmith/bestax/dacd0ca4870f91e24308a2963a88276a447be21b.json"
+    },
+    {
+      "repository": "d1vai/d1v-cli",
+      "commit_sha": "7781db31cea568107984f98800a8640862bb2c13",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 165,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/d1vai/d1v-cli/manifests/d1vai/d1v-cli/7781db31cea568107984f98800a8640862bb2c13.json"
+    },
+    {
+      "repository": "dannwaneri/spec-writer",
+      "commit_sha": "bfdeaedea5a90b86a3db213caa49073a173bb49e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 2,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/dannwaneri/spec-writer/manifests/dannwaneri/spec-writer/bfdeaedea5a90b86a3db213caa49073a173bb49e.json"
+    },
+    {
+      "repository": "exadel-inc/agentic-readiness-assessment",
+      "commit_sha": "ea984d78133871c5014ddcbdabc8532058f3f6a2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 51,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/exadel-inc/agentic-readiness-assessment/manifests/exadel-inc/agentic-readiness-assessment/ea984d78133871c5014ddcbdabc8532058f3f6a2.json"
+    },
+    {
+      "repository": "fishzjp/qa-skills",
+      "commit_sha": "34b08d6e4a7a2e72da0f01759b161b46d6776054",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 103,
+      "files_not_exported": 5,
+      "repository_manifest": "repositories/fishzjp/qa-skills/manifests/fishzjp/qa-skills/34b08d6e4a7a2e72da0f01759b161b46d6776054.json"
+    },
+    {
+      "repository": "fujibee/agmsg",
+      "commit_sha": "c47f40aaceb7b524ed7ea34de6c833823fdd28c0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 890,
+      "files_not_exported": 83,
+      "repository_manifest": "repositories/fujibee/agmsg/manifests/fujibee/agmsg/c47f40aaceb7b524ed7ea34de6c833823fdd28c0.json"
+    },
+    {
+      "repository": "gongdear/cline-pilot",
+      "commit_sha": "aff85675ae2fdcca1e5824230b1be86ab4b89198",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 12,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/gongdear/cline-pilot/manifests/gongdear/cline-pilot/aff85675ae2fdcca1e5824230b1be86ab4b89198.json"
+    },
+    {
+      "repository": "hasuwini77/3d-logo-skill",
+      "commit_sha": "d999724b52ad6836edda6c3dd9d058884b76bf2f",
+      "state": "partial_text_snapshot",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 1,
+      "saved_text_files": 55,
+      "files_not_exported": 24,
+      "repository_manifest": "repositories/hasuwini77/3d-logo-skill/manifests/hasuwini77/3d-logo-skill/d999724b52ad6836edda6c3dd9d058884b76bf2f.json"
+    },
+    {
+      "repository": "hermes-labs-ai/lintlang",
+      "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 182,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/hermes-labs-ai/lintlang/manifests/hermes-labs-ai/lintlang/d0729b6ec84e68bafb8b329a171e2252a8ff8ecb.json"
+    },
+    {
+      "repository": "hermes-labs-ai/little-canary",
+      "commit_sha": "7045f31882048c58e6b5ea42642b351b5c37a7a1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 186,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/hermes-labs-ai/little-canary/manifests/hermes-labs-ai/little-canary/7045f31882048c58e6b5ea42642b351b5c37a7a1.json"
+    },
+    {
+      "repository": "kensaurus/skills",
+      "commit_sha": "c617b8caf90d63fb0950dc1c848b78b148fd414b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 173,
+      "saved_skill_entries": 173,
+      "saved_text_files": 541,
+      "files_not_exported": 33,
+      "repository_manifest": "repositories/kensaurus/skills/manifests/kensaurus/skills/c617b8caf90d63fb0950dc1c848b78b148fd414b.json"
+    },
+    {
+      "repository": "kulchankas/paranoid",
+      "commit_sha": "b5bbdcead155ae9c2dae8a1f393f122e36306c88",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 251,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/kulchankas/paranoid/manifests/kulchankas/paranoid/b5bbdcead155ae9c2dae8a1f393f122e36306c88.json"
+    },
+    {
+      "repository": "lindblomstefan/skills-library",
+      "commit_sha": "8a1db1246d7ddaf2eced1f98f3c8d81c6b882a9e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 264,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/lindblomstefan/skills-library/manifests/lindblomstefan/skills-library/8a1db1246d7ddaf2eced1f98f3c8d81c6b882a9e.json"
+    },
+    {
+      "repository": "lukstei/slop-grader",
+      "commit_sha": "a0cdba4a14950cc943b387dfd30e7d3e308af683",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 55,
+      "files_not_exported": 3,
+      "repository_manifest": "repositories/lukstei/slop-grader/manifests/lukstei/slop-grader/a0cdba4a14950cc943b387dfd30e7d3e308af683.json"
+    },
+    {
+      "repository": "marvkr/better-design",
+      "commit_sha": "175e7ba49bcf83857abc32933686b5aa3abb197e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 6354,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/marvkr/better-design/manifests/marvkr/better-design/175e7ba49bcf83857abc32933686b5aa3abb197e.json"
+    },
+    {
+      "repository": "ollygarden/opentelemetry-agent-skills",
+      "commit_sha": "3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 834,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/ollygarden/opentelemetry-agent-skills/manifests/ollygarden/opentelemetry-agent-skills/3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68.json"
+    },
+    {
+      "repository": "rainmanjam/poka-yoke",
+      "commit_sha": "726a575e3d48d07d908abfcbb192cae09671fff2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 2207,
+      "files_not_exported": 17,
+      "repository_manifest": "repositories/rainmanjam/poka-yoke/manifests/rainmanjam/poka-yoke/726a575e3d48d07d908abfcbb192cae09671fff2.json"
+    },
+    {
+      "repository": "saleh-alhaddad/itqan-engineering",
+      "commit_sha": "580dd46b04163a28d6a4cf89d4bc6bcf50531d45",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 63,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/saleh-alhaddad/itqan-engineering/manifests/saleh-alhaddad/itqan-engineering/580dd46b04163a28d6a4cf89d4bc6bcf50531d45.json"
+    },
+    {
+      "repository": "scarletkc/agents",
+      "commit_sha": "8e149b335e963954e9c4bafba00eedbd7de060ed",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 54,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/scarletkc/agents/manifests/scarletkc/agents/8e149b335e963954e9c4bafba00eedbd7de060ed.json"
+    },
+    {
+      "repository": "szarkans/multi",
+      "commit_sha": "e5292e43bd1d2be4b44284f9f2e42d1d1049dcbf",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 96,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/szarkans/multi/manifests/szarkans/multi/e5292e43bd1d2be4b44284f9f2e42d1d1049dcbf.json"
+    },
+    {
+      "repository": "tt-a1i/archify",
+      "commit_sha": "a4065941f12be7967436261d9934784e381d423c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 1025,
+      "files_not_exported": 164,
+      "repository_manifest": "repositories/tt-a1i/archify/manifests/tt-a1i/archify/a4065941f12be7967436261d9934784e381d423c.json"
+    },
+    {
+      "repository": "unbrowse-ai/unbrowse",
+      "commit_sha": "41db2a37092aa704d65fc4a8027e1e3733c258d0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 273,
+      "files_not_exported": 3,
+      "repository_manifest": "repositories/unbrowse-ai/unbrowse/manifests/unbrowse-ai/unbrowse/41db2a37092aa704d65fc4a8027e1e3733c258d0.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 141
+}

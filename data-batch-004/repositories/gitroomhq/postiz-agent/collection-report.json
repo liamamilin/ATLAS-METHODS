@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:40:42.705363+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 67,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/gitroomhq/postiz-agent/01ab1fe17efa30d12de7758b961e8776d34dba4e.json"
+    }
+  ],
+  "errors": []
+}

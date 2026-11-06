@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "talkstream/ru-text",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90"
+    }
+  ]
+}

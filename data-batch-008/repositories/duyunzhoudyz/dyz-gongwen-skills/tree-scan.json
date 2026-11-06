@@ -1,0 +1,29 @@
+{
+  "repository": "duyunzhoudyz/dyz-gongwen-skills",
+  "commit_sha": "9111fbf1370ba0e2a116c3ef6e70e11f0168257b",
+  "tree_entries": 5617,
+  "candidate_skill_paths": [
+    "skills/gongwen-brief/SKILL.md",
+    "skills/gongwen-data/SKILL.md",
+    "skills/gongwen-direct/SKILL.md",
+    "skills/gongwen-draft/SKILL.md",
+    "skills/gongwen-format/SKILL.md",
+    "skills/gongwen-grassroots/SKILL.md",
+    "skills/gongwen-hospital/SKILL.md",
+    "skills/gongwen-humanize/SKILL.md",
+    "skills/gongwen-implement/SKILL.md",
+    "skills/gongwen-k12/SKILL.md",
+    "skills/gongwen-minutes/SKILL.md",
+    "skills/gongwen-party/SKILL.md",
+    "skills/gongwen-polish/SKILL.md",
+    "skills/gongwen-profile/SKILL.md",
+    "skills/gongwen-rectify/SKILL.md",
+    "skills/gongwen-report/SKILL.md",
+    "skills/gongwen-review/SKILL.md",
+    "skills/gongwen-soe/SKILL.md",
+    "skills/gongwen-speech/SKILL.md",
+    "skills/gongwen-title/SKILL.md",
+    "skills/gongwen-university/SKILL.md",
+    "skills/gongwen/SKILL.md"
+  ]
+}

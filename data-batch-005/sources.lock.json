@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "Aboudjem/humanizer-skill",
+      "commit_sha": "a58df065367550b6ce40ff3f648335018d8e0589",
+      "collection_root": "repositories/Aboudjem/humanizer-skill"
+    },
+    {
+      "repository": "AbubakrChan/product-launch-motion",
+      "commit_sha": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+      "collection_root": "repositories/AbubakrChan/product-launch-motion"
+    },
+    {
+      "repository": "Hyacehila/humanizer-zh-next",
+      "commit_sha": "0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd",
+      "collection_root": "repositories/Hyacehila/humanizer-zh-next"
+    },
+    {
+      "repository": "PSPDFKit-labs/nutrient-agent-skill",
+      "commit_sha": "09c3251cb65bf167a72875793a39df68b1115479",
+      "collection_root": "repositories/PSPDFKit-labs/nutrient-agent-skill"
+    },
+    {
+      "repository": "PleasePrompto/notebooklm-skill",
+      "commit_sha": "c80722d3f27d65e06b6579add201bf69b99101d0",
+      "collection_root": "repositories/PleasePrompto/notebooklm-skill"
+    },
+    {
+      "repository": "Upload-Post/upload-post-skill",
+      "commit_sha": "539cdbdec9525cde8865bed549e907312d180162",
+      "collection_root": "repositories/Upload-Post/upload-post-skill"
+    },
+    {
+      "repository": "apify/awesome-skills",
+      "commit_sha": "485f6c0d47e3a05269fe735f15e7aeeb7a98d78e",
+      "collection_root": "repositories/apify/awesome-skills"
+    },
+    {
+      "repository": "arcmira/mcp",
+      "commit_sha": "f1fe83efbb8baa437d3c3403f4d7f586c3b2e4d4",
+      "collection_root": "repositories/arcmira/mcp"
+    },
+    {
+      "repository": "checkout-page/ecommerce-skills",
+      "commit_sha": "c12363338947f8072ef1b63451cbe080ee4a9ee1",
+      "collection_root": "repositories/checkout-page/ecommerce-skills"
+    },
+    {
+      "repository": "coupler-io/skills",
+      "commit_sha": "d25f3b33c62682049577af3e2e96e3efcdf7867b",
+      "collection_root": "repositories/coupler-io/skills"
+    },
+    {
+      "repository": "dreammis/social-auto-upload",
+      "commit_sha": "3847fff01f5434a8a32829833163cd6723cabc59",
+      "collection_root": "repositories/dreammis/social-auto-upload"
+    },
+    {
+      "repository": "emotixco/claude-skills-founder",
+      "commit_sha": "ea6864c05c2f4a3666b9d6c14c550b20f35a04c9",
+      "collection_root": "repositories/emotixco/claude-skills-founder"
+    },
+    {
+      "repository": "gokapso/agent-skills",
+      "commit_sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd",
+      "collection_root": "repositories/gokapso/agent-skills"
+    },
+    {
+      "repository": "karero/croftweaver",
+      "commit_sha": "26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2",
+      "collection_root": "repositories/karero/croftweaver"
+    },
+    {
+      "repository": "nagameTW/formosa-humanizer",
+      "commit_sha": "4f7c1d9a3e955e97da9bb5aef6a53f052a604153",
+      "collection_root": "repositories/nagameTW/formosa-humanizer"
+    },
+    {
+      "repository": "op7418/NanoBanana-PPT-Skills",
+      "commit_sha": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+      "collection_root": "repositories/op7418/NanoBanana-PPT-Skills"
+    },
+    {
+      "repository": "open-salesblink/skill",
+      "commit_sha": "35a7391802693e970e3e055193363f5a99bb337c",
+      "collection_root": "repositories/open-salesblink/skill"
+    },
+    {
+      "repository": "posteyai/skills",
+      "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+      "collection_root": "repositories/posteyai/skills"
+    },
+    {
+      "repository": "publora/skills",
+      "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+      "collection_root": "repositories/publora/skills"
+    },
+    {
+      "repository": "shalintripathi/saas-marketing-agents",
+      "commit_sha": "bddf39add29f331723bdcbea1a69ec2c6876d66e",
+      "collection_root": "repositories/shalintripathi/saas-marketing-agents"
+    },
+    {
+      "repository": "sujunmin/agy-ppt",
+      "commit_sha": "b0b7712c88172f8126edaa3dc9c48a5bceb99991",
+      "collection_root": "repositories/sujunmin/agy-ppt"
+    },
+    {
+      "repository": "yuwen-cool/yuwen-publish-precheck",
+      "commit_sha": "b9efdc6bc1938b40ad1c556fba65c562fc182be0",
+      "collection_root": "repositories/yuwen-cool/yuwen-publish-precheck"
+    },
+    {
+      "repository": "zarazhangrui/frontend-slides",
+      "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+      "collection_root": "repositories/zarazhangrui/frontend-slides"
+    },
+    {
+      "repository": "zhuyansen/new-term-radar",
+      "commit_sha": "fe67ff1acab728141644a4a9741295469b4feee6",
+      "collection_root": "repositories/zhuyansen/new-term-radar"
+    }
+  ]
+}

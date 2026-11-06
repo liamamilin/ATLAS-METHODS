@@ -1,0 +1,33 @@
+{
+  "repository": "yusufkaraaslan/Skill_Seekers",
+  "commit_sha": "5b5d8dfca263fa76e6daae9f292890b311ef36aa",
+  "tree_entries": 3139,
+  "candidate_skill_paths": [
+    "distribution/claude-plugin/skills/skill-builder/SKILL.md",
+    "skills/skill-seekers/SKILL.md",
+    "tests/golden/phase2/chat/SKILL.md",
+    "tests/golden/phase2/chat_empty/SKILL.md",
+    "tests/golden/phase2/chat_single/SKILL.md",
+    "tests/golden/phase2/chat_topics/SKILL.md",
+    "tests/golden/phase2/epub/SKILL.md",
+    "tests/golden/phase2/epub_kw/SKILL.md",
+    "tests/golden/phase2/html/SKILL.md",
+    "tests/golden/phase2/html_kw/SKILL.md",
+    "tests/golden/phase2/html_multi/SKILL.md",
+    "tests/golden/phase2/jupyter/SKILL.md",
+    "tests/golden/phase2/jupyter_dir/SKILL.md",
+    "tests/golden/phase2/jupyter_kw/SKILL.md",
+    "tests/golden/phase2/jupyter_topics/SKILL.md",
+    "tests/golden/phase2/man/SKILL.md",
+    "tests/golden/phase2/man_kw/SKILL.md",
+    "tests/golden/phase2/man_single/SKILL.md",
+    "tests/golden/phase2/pdf/SKILL.md",
+    "tests/golden/phase2/pdf_chapters/SKILL.md",
+    "tests/golden/phase2/pdf_kw/SKILL.md",
+    "tests/golden/phase2/pptx/SKILL.md",
+    "tests/golden/phase2/pptx_kw/SKILL.md",
+    "tests/golden/phase2/rss/SKILL.md",
+    "tests/golden/phase2/rss_empty/SKILL.md",
+    "tests/golden/phase2/word/SKILL.md"
+  ]
+}

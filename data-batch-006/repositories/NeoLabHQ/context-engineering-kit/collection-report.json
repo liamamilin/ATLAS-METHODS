@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:49:06.971968+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 204,
+  "saved_skill_entries": 204,
+  "unique_entry_texts": 110,
+  "duplicate_entry_groups": 68,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "NeoLabHQ/context-engineering-kit",
+      "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 204,
+      "saved_skill_entries": 204,
+      "saved_text_files": 509,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/NeoLabHQ/context-engineering-kit/23e2428e809d77717f8acc9659c374a3a1fcb93e.json"
+    }
+  ],
+  "errors": []
+}

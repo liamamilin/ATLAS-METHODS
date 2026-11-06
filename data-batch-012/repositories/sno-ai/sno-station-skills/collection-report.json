@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:07:36.477893+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 50,
+  "saved_skill_entries": 50,
+  "unique_entry_texts": 38,
+  "duplicate_entry_groups": 12,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sno-ai/sno-station-skills",
+      "commit_sha": "1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 50,
+      "saved_skill_entries": 50,
+      "saved_text_files": 409,
+      "files_not_exported": 10,
+      "repository_manifest": "manifests/sno-ai/sno-station-skills/1ca8a66158bc9ca26c288c6d5e7ebcf2ffb8491a.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "hermes-labs-ai/lintlang",
+  "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb",
+  "tree_entries": 186,
+  "candidate_skill_paths": [
+    ".agents/skills/lintlang-release/SKILL.md",
+    ".agents/skills/lintlang/SKILL.md",
+    "integrations/claude-code/skills/lintlang-audit/SKILL.md",
+    "integrations/copilot-cli/skills/lintlang-audit/SKILL.md",
+    "samples/frontmatter-boundary/missing-description/SKILL.md",
+    "samples/frontmatter-boundary/missing-trigger/SKILL.md",
+    "skills/lintlang/SKILL.md"
+  ]
+}

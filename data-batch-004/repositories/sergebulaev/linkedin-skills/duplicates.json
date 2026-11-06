@@ -1,0 +1,106 @@
+[
+  {
+    "entry_sha256": "09fe17c34a03cdc51c56bbebb0fcd34df602b223417b5231d5130df6b298d805",
+    "record_ids": [
+      "88889b54fcdf9a0f8836",
+      "02b0ffdb1aa911b9bcaf"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "15d30a63d7f4bf4e60c82565dd25a0c729af038c70243dc6b22d3b672895bd0f",
+    "record_ids": [
+      "82477b05872c82a75322",
+      "bf7b6c30daeaef1e61bd"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "1d4e4c3679e3c0f33d992161563ba80abfecd2b6285cfb916e8cf21a7fa85c24",
+    "record_ids": [
+      "ad4216c57a10a0944f5c",
+      "0ddc556e731fdac8fb47"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "32bcf6fab0db0a960ef15f4cb8bb51d0ca2396648ba518b82a88468d13a95082",
+    "record_ids": [
+      "612eba9ca6f2572a8ce7",
+      "ab49662021474c32f8d6"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "4107d04639d3896710990799cdf59ebe45c2eefedb236444cfccada77f004b6d",
+    "record_ids": [
+      "49bd189536d0083dd6a5",
+      "c6d12aef86ac8bfc70ef"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "4fd73bc68a5bdcfe77947c0e1dc5e99add840e6feb6b9af603d9e3a2ad95e4f1",
+    "record_ids": [
+      "42039135eedfcd6e81f7",
+      "94a59011b5d8b5933acd"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "6744464b0050a9371b0de7af657a7d094e57a4ed456ad2bf0349a1c3e509d266",
+    "record_ids": [
+      "d0c54f3ac8a6b13ceda0",
+      "8aa3c34610374311aee8"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "8395be552396a57ea01fb4299c5ab8aa90ab1cfcae8fc5e8d9d284e3000a90b5",
+    "record_ids": [
+      "cf34a3b39b8d58fdc49e",
+      "827dcbc1c6fe36aee712"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "8b5e1861d17ebfbc6a7cfcb8714ced0f59cd002cb22b5fdbadabb5746f726e19",
+    "record_ids": [
+      "4597f032fbeb0ecc982d",
+      "f2d964291e2338bcb42b"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "9a97a215de88b31afa47fa4ff643bb94ab47f1893c6c2dc73d9c4b0223bdf161",
+    "record_ids": [
+      "b51e00d4755fb02537e9",
+      "427e7c2d0cb4033658fc"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "acd48d54b179cc1600e52ee2aae2bd798c52a8616fef87550cdb616c74e0abb4",
+    "record_ids": [
+      "58e12dce3376b4f91327",
+      "0a13c59256dba7cb98da"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "bfa2b0b69a42547d7cafb8528a4b0cb00471fa578eaa9641977c31338648388c",
+    "record_ids": [
+      "bcdc90cdafbd4cb0593b",
+      "2aeda7a4fd47eece58e1"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "eff2818223f03574bcfc735c9b4c472af161a2b7b539c21e40639319b347d3dd",
+    "record_ids": [
+      "8172eafea030a06048d5",
+      "acebd014c9546ef6d0c7"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

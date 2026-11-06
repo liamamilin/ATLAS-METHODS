@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:14:25.814786+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "more-io/claude-apple-bridges",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 22,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c.json"
+    }
+  ],
+  "errors": []
+}

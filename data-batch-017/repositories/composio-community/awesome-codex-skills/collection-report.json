@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:28:20.846257+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 880,
+  "saved_skill_entries": 880,
+  "unique_entry_texts": 880,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "composio-community/awesome-codex-skills",
+      "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 880,
+      "saved_skill_entries": 880,
+      "saved_text_files": 1045,
+      "files_not_exported": 56,
+      "repository_manifest": "manifests/composio-community/awesome-codex-skills/0930e1373789d2eda449039f7ac154b33031de89.json"
+    }
+  ],
+  "errors": []
+}

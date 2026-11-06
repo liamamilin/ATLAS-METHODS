@@ -1,0 +1,39 @@
+{
+  "repository": "SHADOWPR0/security-bluebook-builder",
+  "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c12aab04a5e588127dbfaf18258bb134a8a4fff6",
+      "bytes": 181,
+      "source_url": "https://github.com/SHADOWPR0/security-bluebook-builder/blob/fc2492951a319880a7b8c69175d2693b9bb7b7aa/README.md",
+      "sha256": "e9287506417fe3636e447590c356cdb5fd00e9e1546f9be6cbf2815c49c1f262",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/security-bluebook-builder/fc2492951a319880a7b8c69175d2693b9bb7b7aa/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "22f0759a75047787d19a32453b16bb54e9e2c3b0",
+      "bytes": 2098,
+      "source_url": "https://github.com/SHADOWPR0/security-bluebook-builder/blob/fc2492951a319880a7b8c69175d2693b9bb7b7aa/SKILL.md",
+      "sha256": "da75f575e24b002450c9517828c1db83122c8c85b1436f99015c74d970227db7",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/security-bluebook-builder/fc2492951a319880a7b8c69175d2693b9bb7b7aa/SKILL.md"
+    },
+    {
+      "path": "references/bluebook_template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "814e0f20b66eddf8b6ff3a49139bd44bcecbbef4",
+      "bytes": 1775,
+      "source_url": "https://github.com/SHADOWPR0/security-bluebook-builder/blob/fc2492951a319880a7b8c69175d2693b9bb7b7aa/references/bluebook_template.md",
+      "sha256": "4f721df08d01c7a6246feaac9e52d36b97ee14c067f45afc663c3ea01b4ee80f",
+      "status": "saved",
+      "raw_path": "raw/SHADOWPR0/security-bluebook-builder/fc2492951a319880a7b8c69175d2693b9bb7b7aa/references/bluebook_template.md"
+    }
+  ]
+}

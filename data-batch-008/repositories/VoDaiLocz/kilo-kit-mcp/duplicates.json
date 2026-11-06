@@ -1,0 +1,90 @@
+[
+  {
+    "entry_sha256": "1213dbf108ac6a56c7c2cb67e81705b10cf0b9d136fa775ad161273bfe452a90",
+    "record_ids": [
+      "8be328326c745f34958a",
+      "a3f8e886a62314be8ecd"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "141bf1ca6af96066cffa91b2b37417b9d1cffec4fcc2a6ef1333ee976121f7dd",
+    "record_ids": [
+      "d076e3c5cfd66b398a78",
+      "c71426cc1dec982f3f63"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "43db8fb50830a99fb14ace08cb29cc60cd7f51a240c5ae73dbe5b31da704f24f",
+    "record_ids": [
+      "8a9a4c60151e2c0153f6",
+      "65cc7027ac0e6435d383"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "59ddbdecc4fa17e74c4747f5f02bd69edb8bffcd1cdc2866dd6a053e19bc139e",
+    "record_ids": [
+      "4587d587bb3f47c5653a",
+      "3496a4cc7f4703ad8a9b"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "5cfa7e0a750c202ce81dde7aef8ebbd6e9954ece42ce47ed1619163d217a48c3",
+    "record_ids": [
+      "d4d2214097de02f17326",
+      "38e51622d31ef48efd16"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "739b244b02659ec53ca719bbdf8ac2684dbeeafc5d5ddac124ffa6407f10f5df",
+    "record_ids": [
+      "096e596c6e3b69acd68c",
+      "a77dfc172912200a1d2d"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "79ee8d6f2e04a993b6cdf5eb251590051427cc4e09aa3a7f67f1ab8e61e205f5",
+    "record_ids": [
+      "39bedcbd5750d38dcb80",
+      "dd3fa74f67a9717da7d1"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "93c4179046820a685506d81b066cbceeaa91b197cdb89ab7da1e04cac9062657",
+    "record_ids": [
+      "fdbda70507232a47ce96",
+      "e81142c8859f3fa8a7a3"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "ab7029cb91c498c6469137f7b8b1575fdc7a97db3cc338c5cd2f0edc2ac2888a",
+    "record_ids": [
+      "bc122f1921d4165164ab",
+      "1ade3534a853fdd8821c"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "b4887369cad061e7e59e9198593ffe3e93dd455dfe0cb93cb4e63ad37ccfa054",
+    "record_ids": [
+      "74896db9d787c08ee693",
+      "96e9e768922bdd96c6af"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "f31d95e041d06f018620fc697f25a32ea115b4ec577d9f448f714eeeb606363d",
+    "record_ids": [
+      "8894f8cd97647f6f297e",
+      "00cee8918a6ca44fa251"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

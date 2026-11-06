@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:12:13.730133+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "rebelytics/one-skill-to-rule-them-all",
+      "commit_sha": "f86755764373f96a50401762f31f22077127b999",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 40,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/rebelytics/one-skill-to-rule-them-all/f86755764373f96a50401762f31f22077127b999.json"
+    }
+  ],
+  "errors": []
+}

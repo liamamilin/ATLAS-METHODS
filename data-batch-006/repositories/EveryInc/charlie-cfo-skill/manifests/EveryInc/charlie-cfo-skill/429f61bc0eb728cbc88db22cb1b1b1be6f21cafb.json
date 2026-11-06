@@ -1,0 +1,61 @@
+{
+  "repository": "EveryInc/charlie-cfo-skill",
+  "commit_sha": "429f61bc0eb728cbc88db22cb1b1b1be6f21cafb",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "299d8cf07a538babd9e6ced2c5b64d9845d96de2",
+      "bytes": 1062,
+      "source_url": "https://github.com/EveryInc/charlie-cfo-skill/blob/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/LICENSE",
+      "sha256": "4648b2d84d492d891c68c4ff906ffd600438b7c7cd2ade0f904abbb404657829",
+      "status": "saved",
+      "raw_path": "raw/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7175cde07f871c00498abde0711030fc350dc1ca",
+      "bytes": 1810,
+      "source_url": "https://github.com/EveryInc/charlie-cfo-skill/blob/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/README.md",
+      "sha256": "75e602cdf26516433859bf7e3a4553d65cbab3b028f40dba13eaa1879894fb85",
+      "status": "saved",
+      "raw_path": "raw/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e1aaaf3a403d57c66259ed053d3a0ca2318b1747",
+      "bytes": 5443,
+      "source_url": "https://github.com/EveryInc/charlie-cfo-skill/blob/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/SKILL.md",
+      "sha256": "12c3a6713cf82ed13d701053585b7242c4418bcd1af1e49a0ab3160d0c3505fb",
+      "status": "saved",
+      "raw_path": "raw/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/SKILL.md"
+    },
+    {
+      "path": "references/case-studies.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bc73599be81af4575e08404b10e57a35683cb5e9",
+      "bytes": 5143,
+      "source_url": "https://github.com/EveryInc/charlie-cfo-skill/blob/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/references/case-studies.md",
+      "sha256": "c4a172fb187fd1cf2d23a34d65b83e4a5ac4e73cade5b2b3059b39be47b85ab7",
+      "status": "saved",
+      "raw_path": "raw/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/references/case-studies.md"
+    },
+    {
+      "path": "references/metrics-benchmarks.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "70190489df0a3e38b0a990313e0ec4ebdb612f82",
+      "bytes": 4781,
+      "source_url": "https://github.com/EveryInc/charlie-cfo-skill/blob/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/references/metrics-benchmarks.md",
+      "sha256": "7a59abad43e01036e85537f8193a5dcf447afb9fb5a87f1f3316294bfae4ae29",
+      "status": "saved",
+      "raw_path": "raw/EveryInc/charlie-cfo-skill/429f61bc0eb728cbc88db22cb1b1b1be6f21cafb/references/metrics-benchmarks.md"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "zincio/skills",
+  "commit_sha": "7a83b68cb4737eb30540d4cb732e9fc0a0376ada",
+  "tree_entries": 32,
+  "candidate_skill_paths": [
+    "skills/1800flowers-checkout/SKILL.md",
+    "skills/acehardware-checkout/SKILL.md",
+    "skills/amazon-checkout/SKILL.md",
+    "skills/bestbuy-checkout/SKILL.md",
+    "skills/ebay-checkout/SKILL.md",
+    "skills/homedepot-checkout/SKILL.md",
+    "skills/lowes-checkout/SKILL.md",
+    "skills/pokemoncenter-checkout/SKILL.md",
+    "skills/send-donuts/SKILL.md",
+    "skills/send-doughnuts/SKILL.md",
+    "skills/target-checkout/SKILL.md",
+    "skills/universal-checkout/SKILL.md",
+    "skills/walmart-checkout/SKILL.md",
+    "skills/wayfair-checkout/SKILL.md"
+  ]
+}

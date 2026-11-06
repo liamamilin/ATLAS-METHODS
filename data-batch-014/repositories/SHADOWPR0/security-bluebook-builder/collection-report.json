@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:13:51.788921+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "SHADOWPR0/security-bluebook-builder",
+      "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/SHADOWPR0/security-bluebook-builder/fc2492951a319880a7b8c69175d2693b9bb7b7aa.json"
+    }
+  ],
+  "errors": []
+}

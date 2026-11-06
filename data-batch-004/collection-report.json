@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-11-06T10:43:38.312081+00:00",
+  "requested_sources": 24,
+  "completed_sources": 24,
+  "indexed_snapshots": 24,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 1509,
+  "saved_skill_entries": 1509,
+  "distinct_skill_paths": 1509,
+  "unique_entry_texts": 1178,
+  "duplicate_entry_groups": 266,
+  "sources": [
+    {
+      "repository": "AIDevGTM/gtm-cofounder",
+      "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 37,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/AIDevGTM/gtm-cofounder/manifests/AIDevGTM/gtm-cofounder/7919aa3d559bcf170c7ab20a8919d44eec5a7e2e.json"
+    },
+    {
+      "repository": "Bomx/distribb-skill",
+      "commit_sha": "01bbede516a8963bff5731bbda412f0e2a364188",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 45,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Bomx/distribb-skill/manifests/Bomx/distribb-skill/01bbede516a8963bff5731bbda412f0e2a364188.json"
+    },
+    {
+      "repository": "Nanako0129/sepia",
+      "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 64,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Nanako0129/sepia/manifests/Nanako0129/sepia/0eb11d6c64c962fcc35f596c167c6e38045d6cb8.json"
+    },
+    {
+      "repository": "ScrapeCreators/social-media-research-skills",
+      "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 20,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/ScrapeCreators/social-media-research-skills/manifests/ScrapeCreators/social-media-research-skills/64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2.json"
+    },
+    {
+      "repository": "SupercmoHQ/superCMO-skills",
+      "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 23,
+      "saved_skill_entries": 23,
+      "saved_text_files": 204,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/SupercmoHQ/superCMO-skills/manifests/SupercmoHQ/superCMO-skills/3bf78a423b1ba27a1f500b3b50f806b86cc5bdab.json"
+    },
+    {
+      "repository": "Vladimir-Human/humanizer-ru",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 1869,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/Vladimir-Human/humanizer-ru/manifests/Vladimir-Human/humanizer-ru/99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3.json"
+    },
+    {
+      "repository": "YannisKiefer/dark-psychology-skills",
+      "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 21,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/YannisKiefer/dark-psychology-skills/manifests/YannisKiefer/dark-psychology-skills/b49849880502bbb7366fe6be7023a031af8dd966.json"
+    },
+    {
+      "repository": "aaron-he-zhu/aaron-marketing-skills",
+      "commit_sha": "9c8815c728c550cf551b82e1c6e1a307c5eae61f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 120,
+      "saved_skill_entries": 120,
+      "saved_text_files": 961,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/aaron-he-zhu/aaron-marketing-skills/manifests/aaron-he-zhu/aaron-marketing-skills/9c8815c728c550cf551b82e1c6e1a307c5eae61f.json"
+    },
+    {
+      "repository": "citlyze/citlyze-skills",
+      "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 8,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/citlyze/citlyze-skills/manifests/citlyze/citlyze-skills/f1265f70a37531f5a81c77659e78276908a9172c.json"
+    },
+    {
+      "repository": "degausai/wonda",
+      "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 40,
+      "files_not_exported": 7,
+      "repository_manifest": "repositories/degausai/wonda/manifests/degausai/wonda/2edfb001c58aa038558178f4e80407c47df2266a.json"
+    },
+    {
+      "repository": "explorium-ai/vibeprospecting-plugin",
+      "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 31,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/explorium-ai/vibeprospecting-plugin/manifests/explorium-ai/vibeprospecting-plugin/510710bb0f6e219d37bb320e766ee3c5c2ef30e0.json"
+    },
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 67,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/gitroomhq/postiz-agent/manifests/gitroomhq/postiz-agent/01ab1fe17efa30d12de7758b961e8776d34dba4e.json"
+    },
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 185,
+      "saved_skill_entries": 185,
+      "saved_text_files": 2112,
+      "files_not_exported": 154,
+      "repository_manifest": "repositories/gooseworks-ai/goose-skills/manifests/gooseworks-ai/goose-skills/1add09bd8e0d057e91e25c96b9282498e2fcb2a2.json"
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 9169,
+      "files_not_exported": 635,
+      "repository_manifest": "repositories/heygen-com/hyperframes/manifests/heygen-com/hyperframes/cb8e02e8264bd6994de29a024a6f320ce21654e7.json"
+    },
+    {
+      "repository": "ilyautov/humanizer-ru",
+      "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 253,
+      "files_not_exported": 29,
+      "repository_manifest": "repositories/ilyautov/humanizer-ru/manifests/ilyautov/humanizer-ru/b6df5d9b87d47ca288cce3a02da007da33221626.json"
+    },
+    {
+      "repository": "indranilbanerjee/digital-marketing-pro",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 164,
+      "saved_skill_entries": 164,
+      "saved_text_files": 788,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/indranilbanerjee/digital-marketing-pro/manifests/indranilbanerjee/digital-marketing-pro/cc45ca06eaf48abde3bb60fb79d31c41229c58db.json"
+    },
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 588,
+      "saved_skill_entries": 588,
+      "saved_text_files": 2476,
+      "files_not_exported": 96,
+      "repository_manifest": "repositories/infrasity-labs/dev-gtm-claude-skills/manifests/infrasity-labs/dev-gtm-claude-skills/02cfefb3a213041de8b80bc659ebc5f17b5e746a.json"
+    },
+    {
+      "repository": "mailtrap/mailtrap-skills",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 34,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/mailtrap/mailtrap-skills/manifests/mailtrap/mailtrap-skills/ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766.json"
+    },
+    {
+      "repository": "nowork-studio/notfair-plugin",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 48,
+      "saved_skill_entries": 48,
+      "saved_text_files": 288,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/nowork-studio/notfair-plugin/manifests/nowork-studio/notfair-plugin/ed835f273dce03a451c13fa0cb67305ae58ecb05.json"
+    },
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 246,
+      "saved_skill_entries": 246,
+      "saved_text_files": 922,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/sandbaseai/sandbase-skills/manifests/sandbaseai/sandbase-skills/cbab58188611e626ccaf54ac346b437d12ea4729.json"
+    },
+    {
+      "repository": "sergebulaev/linkedin-skills",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 26,
+      "saved_skill_entries": 26,
+      "saved_text_files": 214,
+      "files_not_exported": 14,
+      "repository_manifest": "repositories/sergebulaev/linkedin-skills/manifests/sergebulaev/linkedin-skills/8f8bc4b40a2d5419b2dcf898772b85712cfbdf41.json"
+    },
+    {
+      "repository": "socai-io/jev-social",
+      "commit_sha": "2f02e6f4c60943e679993634ad1017b0c97efff5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 136,
+      "files_not_exported": 7,
+      "repository_manifest": "repositories/socai-io/jev-social/manifests/socai-io/jev-social/2f02e6f4c60943e679993634ad1017b0c97efff5.json"
+    },
+    {
+      "repository": "taisly/agent",
+      "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 39,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/taisly/agent/manifests/taisly/agent/2f2c3dd5239265b7b6229d266aa0c79a9f93bdef.json"
+    },
+    {
+      "repository": "vanshyadav1408/Omentir",
+      "commit_sha": "238517f827581b884f9ab860815a255905867f6f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 634,
+      "files_not_exported": 79,
+      "repository_manifest": "repositories/vanshyadav1408/Omentir/manifests/vanshyadav1408/Omentir/238517f827581b884f9ab860815a255905867f6f.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 308
+}

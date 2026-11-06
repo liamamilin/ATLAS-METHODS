@@ -1,0 +1,12 @@
+{
+  "repository": "Aurite-ai/agent-verifier",
+  "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7",
+  "tree_entries": 39,
+  "candidate_skill_paths": [
+    "skills/verification/SKILL.md",
+    "skills/verify-language/SKILL.md",
+    "skills/verify-patterns/SKILL.md",
+    "skills/verify-quality/SKILL.md",
+    "skills/verify-security/SKILL.md"
+  ]
+}

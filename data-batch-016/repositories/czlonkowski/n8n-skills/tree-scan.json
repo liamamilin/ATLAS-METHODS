@@ -1,0 +1,22 @@
+{
+  "repository": "czlonkowski/n8n-skills",
+  "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+  "tree_entries": 187,
+  "candidate_skill_paths": [
+    "skills/n8n-agents/SKILL.md",
+    "skills/n8n-binary-and-data/SKILL.md",
+    "skills/n8n-code-javascript/SKILL.md",
+    "skills/n8n-code-python/SKILL.md",
+    "skills/n8n-code-tool/SKILL.md",
+    "skills/n8n-error-handling/SKILL.md",
+    "skills/n8n-expression-syntax/SKILL.md",
+    "skills/n8n-mcp-tools-expert/SKILL.md",
+    "skills/n8n-multi-instance/SKILL.md",
+    "skills/n8n-node-configuration/SKILL.md",
+    "skills/n8n-self-hosting/SKILL.md",
+    "skills/n8n-subworkflows/SKILL.md",
+    "skills/n8n-validation-expert/SKILL.md",
+    "skills/n8n-workflow-patterns/SKILL.md",
+    "skills/using-n8n-mcp-skills/SKILL.md"
+  ]
+}

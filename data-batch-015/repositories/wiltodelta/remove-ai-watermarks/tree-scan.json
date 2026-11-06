@@ -1,0 +1,10 @@
+{
+  "repository": "wiltodelta/remove-ai-watermarks",
+  "commit_sha": "3168d878461eed072bf86c237b219611261cf85f",
+  "tree_entries": 762,
+  "candidate_skill_paths": [
+    ".claude/skills/provider-oracles/SKILL.md",
+    ".claude/skills/signal-discovery/SKILL.md",
+    "skills/remove-ai-watermarks/SKILL.md"
+  ]
+}

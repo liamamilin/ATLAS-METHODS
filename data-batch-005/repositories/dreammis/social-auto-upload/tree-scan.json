@@ -1,0 +1,25 @@
+{
+  "repository": "dreammis/social-auto-upload",
+  "commit_sha": "3847fff01f5434a8a32829833163cd6723cabc59",
+  "tree_entries": 289,
+  "candidate_skill_paths": [
+    "skills/alipay-upload/SKILL.md",
+    "skills/baijiahao-upload/SKILL.md",
+    "skills/bilibili-upload/SKILL.md",
+    "skills/dayu-upload/SKILL.md",
+    "skills/douyin-upload/SKILL.md",
+    "skills/facebook-upload/SKILL.md",
+    "skills/hupu-upload/SKILL.md",
+    "skills/instagram-upload/SKILL.md",
+    "skills/kuaishou-upload/SKILL.md",
+    "skills/meta-upload/SKILL.md",
+    "skills/social-auto-upload/SKILL.md",
+    "skills/tencent-upload/SKILL.md",
+    "skills/tiktok-upload/SKILL.md",
+    "skills/weibo-upload/SKILL.md",
+    "skills/xiaohongshu-upload/SKILL.md",
+    "skills/xueqiu-upload/SKILL.md",
+    "skills/youtube-upload/SKILL.md",
+    "skills/zhihu-upload/SKILL.md"
+  ]
+}

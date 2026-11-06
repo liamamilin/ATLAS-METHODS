@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "vmware-skills/VMware-AIops",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5"
+    }
+  ]
+}

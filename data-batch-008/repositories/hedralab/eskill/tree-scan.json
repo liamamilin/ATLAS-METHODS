@@ -1,0 +1,10 @@
+{
+  "repository": "hedralab/eskill",
+  "commit_sha": "cbc3c7d62c5bcd27112c9e2d09a8b8744f913983",
+  "tree_entries": 44,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "examples/echeck/SKILL.md",
+    "template/SKILL.md"
+  ]
+}

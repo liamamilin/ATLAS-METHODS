@@ -1,0 +1,8 @@
+{
+  "repository": "scarletkc/vexor",
+  "commit_sha": "eae0d6d85af8cbcce5dfd6dd4aa94d25f2c50776",
+  "tree_entries": 151,
+  "candidate_skill_paths": [
+    "plugins/vexor/skills/vexor-cli/SKILL.md"
+  ]
+}

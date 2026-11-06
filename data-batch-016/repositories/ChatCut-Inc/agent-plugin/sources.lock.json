@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "ChatCut-Inc/agent-plugin",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8"
+    }
+  ]
+}

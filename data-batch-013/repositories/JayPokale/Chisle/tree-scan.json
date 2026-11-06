@@ -1,0 +1,11 @@
+{
+  "repository": "JayPokale/Chisle",
+  "commit_sha": "1b3203fe394ee84ca143a1e8636fafa8e9e1f906",
+  "tree_entries": 1245,
+  "candidate_skill_paths": [
+    "skills/chisle-audit/SKILL.md",
+    "skills/chisle-help/SKILL.md",
+    "skills/chisle-review/SKILL.md",
+    "skills/chisle/SKILL.md"
+  ]
+}

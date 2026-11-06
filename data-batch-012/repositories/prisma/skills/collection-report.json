@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:07:05.331978+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 10,
+  "saved_skill_entries": 10,
+  "unique_entry_texts": 10,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "prisma/skills",
+      "commit_sha": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 78,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/prisma/skills/8ea289b730c2e89f7ff1f518af128b113d842a92.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "ramzesenok/iOS-Accessibility-Audit-Skill",
+  "commit_sha": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+  "tree_entries": 8,
+  "candidate_skill_paths": [
+    "swiftui-wcag-accessibility-auditor/SKILL.md"
+  ]
+}

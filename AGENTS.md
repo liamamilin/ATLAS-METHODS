@@ -2,7 +2,7 @@
 
 ## 本轮目标
 
-在现有采集器和已完成批次基础上继续真实采集。新来源使用独立输出目录，保留旧原文与索引，使用 `merge_collections.py` 维护 `data/cumulative/`。最新状态与续采命令见 `README.md`、`docs/collection-003.md`。
+在现有采集器和已完成批次基础上继续真实采集。新来源使用独立输出目录，保留旧原文与索引，使用 `merge_collections.py` 维护 `data/cumulative/`。最新状态与续采命令见 `README.md`、`docs/collection-run-004.md`。
 
 当前仅做 GitHub Skill 原始材料采集。不要预设 Domain，不提炼 Method / Methodology，不生成摘要、质量评分、领域树或知识图谱，不开发网站、调度平台或自动安装器。
 
@@ -19,7 +19,7 @@
 
    ```bash
    python3 collect_skills.py --sources sources.json --out data
-   python3 collect_skills.py --sources sources.next.json --only degausai/wonda --out data-batch-004/repositories/degausai/wonda
+   python3 collect_skills.py --sources sources.retry.json --only cbrock84/headcount --out data-batch-007/repositories/cbrock84/headcount
    ```
 
    先使用清单中的固定 commit，不使用 `--refresh`。来源或 commit 无法访问时保留具体错误，不静默替换版本。如果需要小范围排错，使用单独输出目录：

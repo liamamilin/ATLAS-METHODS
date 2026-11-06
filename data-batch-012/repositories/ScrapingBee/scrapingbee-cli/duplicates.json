@@ -1,0 +1,30 @@
+[
+  {
+    "entry_sha256": "83ae5b4772fde390e327174544a642dcc4a8c2919303f17afbce17c666874572",
+    "record_ids": [
+      "05a57f6b02eae83643af",
+      "c2fffe3a6d55e9e204f3",
+      "f9621df47d9b2bb865aa",
+      "255eeda1a9b152f9f963",
+      "20d0bcb24abd50e113fc",
+      "8349606f9379931d1bd1",
+      "1412dcd848b2dc1120df",
+      "63c9afcaa642420310c0"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "9965e913b16925e37b0c95423de858fbef94eafc67c386e67736870a2e6ce4d4",
+    "record_ids": [
+      "e737dd4bca00dec31846",
+      "1d0df97d9c5c1f483938",
+      "452b3e92153acc2dabcd",
+      "17633c4e14df378156d2",
+      "e8289ca7e5a60aaa28ec",
+      "6cd870549e29a1d13315",
+      "87bb7822c49d4da9030a",
+      "cd0f69a9d7c665a1f5ae"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

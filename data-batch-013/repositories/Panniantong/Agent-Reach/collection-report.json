@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:10:22.858906+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Panniantong/Agent-Reach",
+      "commit_sha": "47898829204ad27521d8a1719e3aeca3b8a3e0ca",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 113,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/Panniantong/Agent-Reach/47898829204ad27521d8a1719e3aeca3b8a3e0ca.json"
+    }
+  ],
+  "errors": []
+}

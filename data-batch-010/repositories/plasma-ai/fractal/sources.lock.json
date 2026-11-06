@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "plasma-ai/fractal",
+      "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722"
+    }
+  ]
+}

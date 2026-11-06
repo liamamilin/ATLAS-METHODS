@@ -1,0 +1,286 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "b667f6bb4e2ba8ae0bc838783d35ef3fc6bced0be9a2340e0f9c4aebe23cb3b9",
+  "sources": [
+    {
+      "repository": "BehiSecc/VibeSec-Skill",
+      "commit_sha": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 3,
+      "statuses": {
+        "saved": 3
+      }
+    },
+    {
+      "repository": "Ericyoung-183/alpha-insights",
+      "commit_sha": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 84,
+      "statuses": {
+        "saved": 82,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "HeshamFS/materials-simulation-skills",
+      "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+      "candidate_skill_entries": 24,
+      "skill_entries": 24,
+      "manifest_files": 414,
+      "statuses": {
+        "saved": 412,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "NotMyself/claude-win11-speckit-update-skill",
+      "commit_sha": "264d00a719dd8ab88ad396cc27ebf55dbb6e1b72",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 248,
+      "statuses": {
+        "saved": 248
+      }
+    },
+    {
+      "repository": "SHADOWPR0/security-bluebook-builder",
+      "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 3,
+      "statuses": {
+        "saved": 3
+      }
+    },
+    {
+      "repository": "ZeKaiNie/universal-examprep-skill",
+      "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 582,
+      "statuses": {
+        "saved": 571,
+        "non_utf8_or_binary_not_exported": 11
+      }
+    },
+    {
+      "repository": "frmoretto/clarity-gate",
+      "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 44,
+      "statuses": {
+        "saved": 44
+      }
+    },
+    {
+      "repository": "hanhuark/mechanical-engineering-research-skill",
+      "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+      "candidate_skill_entries": 9,
+      "skill_entries": 9,
+      "manifest_files": 128,
+      "statuses": {
+        "saved": 127,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "helius-labs/core-ai",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+      "candidate_skill_entries": 24,
+      "skill_entries": 24,
+      "manifest_files": 572,
+      "statuses": {
+        "saved": 571,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+      "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 79,
+      "statuses": {
+        "saved": 59,
+        "symlink_not_followed": 20
+      }
+    },
+    {
+      "repository": "huifer/WellAlly-health",
+      "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+      "candidate_skill_entries": 37,
+      "skill_entries": 37,
+      "manifest_files": 399,
+      "statuses": {
+        "saved": 395,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "komal-SkyNET/claude-skill-homeassistant",
+      "commit_sha": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 11,
+      "statuses": {
+        "saved": 10,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "lawve-ai/awesome-legal-skills",
+      "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+      "candidate_skill_entries": 281,
+      "skill_entries": 281,
+      "manifest_files": 3189,
+      "statuses": {
+        "saved": 3141,
+        "non_utf8_or_binary_not_exported": 47,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "more-io/claude-apple-bridges",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 22,
+      "statuses": {
+        "saved": 22
+      }
+    },
+    {
+      "repository": "prompt-security/clawsec",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+      "candidate_skill_entries": 16,
+      "skill_entries": 16,
+      "manifest_files": 547,
+      "statuses": {
+        "saved": 514,
+        "non_utf8_or_binary_not_exported": 14,
+        "font_not_exported": 16,
+        "over_size_limit": 3
+      }
+    },
+    {
+      "repository": "raintree-technology/hig-doctor",
+      "commit_sha": "a0f1e4ec3c5ada82e538710b54a344db63189d8b",
+      "candidate_skill_entries": 15,
+      "skill_entries": 15,
+      "manifest_files": 404,
+      "statuses": {
+        "saved": 389,
+        "non_utf8_or_binary_not_exported": 15
+      }
+    },
+    {
+      "repository": "shouldnotappearcalm/a-share-skill",
+      "commit_sha": "8874bd1c46813ddb188aa293e6f9ae34f016ba4d",
+      "candidate_skill_entries": 7,
+      "skill_entries": 7,
+      "manifest_files": 89,
+      "statuses": {
+        "saved": 89
+      }
+    },
+    {
+      "repository": "takechanman1228/claude-ecom",
+      "commit_sha": "7ddf7ffb823fd7ab6015e699d01cdc436739eb2b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 51,
+      "statuses": {
+        "saved": 49,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "talkstream/ru-text",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 161,
+      "statuses": {
+        "saved": 149,
+        "symlink_not_followed": 1,
+        "font_not_exported": 2,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "tinqiao-oss/engramory",
+      "commit_sha": "e84b50924b7017259737d57309fc55839225ffc0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 101,
+      "statuses": {
+        "saved": 74,
+        "non_utf8_or_binary_not_exported": 27
+      }
+    },
+    {
+      "repository": "transloadit/skills",
+      "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+      "candidate_skill_entries": 19,
+      "skill_entries": 19,
+      "manifest_files": 127,
+      "statuses": {
+        "saved": 116,
+        "non_utf8_or_binary_not_exported": 11
+      }
+    },
+    {
+      "repository": "video-db/skills",
+      "commit_sha": "f985577fba97705ed937cc707c3a67e35f23faf5",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 39,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 1,
+        "saved": 38
+      }
+    },
+    {
+      "repository": "vmware-skills/VMware-AIops",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 218,
+      "statuses": {
+        "saved": 218
+      }
+    },
+    {
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "candidate_skill_entries": 197,
+      "skill_entries": 197,
+      "manifest_files": 767,
+      "statuses": {
+        "saved": 753,
+        "non_utf8_or_binary_not_exported": 11,
+        "over_size_limit": 3
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 113076829,
+    "entries_with_license_candidates": 659,
+    "saved": 8077,
+    "non_utf8_or_binary_not_exported": 157,
+    "entries_without_license_candidates": 20,
+    "symlink_not_followed": 21,
+    "over_size_limit": 9,
+    "font_not_exported": 18
+  },
+  "verified_candidate_entries": 679,
+  "verified_skill_entries": 679,
+  "unique_entry_texts": 652,
+  "duplicate_entry_groups": 26,
+  "entries_in_duplicate_groups": 53,
+  "duplicate_entries_beyond_first": 27
+}

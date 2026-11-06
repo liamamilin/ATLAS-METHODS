@@ -1,0 +1,28 @@
+{
+  "repository": "robzolkos/skill-rails-upgrade",
+  "commit_sha": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "df778024615ca7639b821be71f577af07c6a17f1",
+      "bytes": 2492,
+      "source_url": "https://github.com/robzolkos/skill-rails-upgrade/blob/d9a3432b19efa898692c4cff16e4c74b700dcf93/README.md",
+      "sha256": "e315786ee6a48452aa1df12c1ec93fd5bdc0a3a6781795d1d289c050eef00a62",
+      "status": "saved",
+      "raw_path": "raw/robzolkos/skill-rails-upgrade/d9a3432b19efa898692c4cff16e4c74b700dcf93/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6662ea34fd50fb40c17203c731502faabb32b9f7",
+      "bytes": 11911,
+      "source_url": "https://github.com/robzolkos/skill-rails-upgrade/blob/d9a3432b19efa898692c4cff16e4c74b700dcf93/SKILL.md",
+      "sha256": "00c2c90f12fdfc56c285d04927244dbf6533f40e159fa506c56c57f13b4562b2",
+      "status": "saved",
+      "raw_path": "raw/robzolkos/skill-rails-upgrade/d9a3432b19efa898692c4cff16e4c74b700dcf93/SKILL.md"
+    }
+  ]
+}

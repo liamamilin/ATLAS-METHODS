@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:04:54.305012+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 13,
+  "saved_skill_entries": 13,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "fishzjp/qa-skills",
+      "commit_sha": "34b08d6e4a7a2e72da0f01759b161b46d6776054",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 103,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/fishzjp/qa-skills/34b08d6e4a7a2e72da0f01759b161b46d6776054.json"
+    }
+  ],
+  "errors": []
+}

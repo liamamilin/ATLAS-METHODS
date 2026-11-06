@@ -1,0 +1,26 @@
+{
+  "repository": "transloadit/skills",
+  "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+  "tree_entries": 127,
+  "candidate_skill_paths": [
+    "skills/docs-transloadit-robots/SKILL.md",
+    "skills/integrate-asset-delivery-with-transloadit-smartcdn-in-nextjs/SKILL.md",
+    "skills/integrate-uppy-transloadit-s3-uploading-to-nextjs/SKILL.md",
+    "skills/transform-build-mosaic-collage-with-transloadit/SKILL.md",
+    "skills/transform-build-polaroid-collage-with-transloadit/SKILL.md",
+    "skills/transform-caption-video-with-transloadit/SKILL.md",
+    "skills/transform-capture-webpage-with-transloadit/SKILL.md",
+    "skills/transform-convert-markdown-to-pdf-with-transloadit/SKILL.md",
+    "skills/transform-describe-image-with-transloadit/SKILL.md",
+    "skills/transform-encode-hls-video-with-transloadit/SKILL.md",
+    "skills/transform-encode-video-with-transloadit/SKILL.md",
+    "skills/transform-extract-text-with-transloadit/SKILL.md",
+    "skills/transform-generate-image-with-transloadit/SKILL.md",
+    "skills/transform-make-video-covers-with-transloadit/SKILL.md",
+    "skills/transform-prepare-image-with-transloadit/SKILL.md",
+    "skills/transform-remove-background-with-transloadit/SKILL.md",
+    "skills/transform-transcribe-audio-with-transloadit/SKILL.md",
+    "skills/transform-upscale-image-with-transloadit/SKILL.md",
+    "skills/transloadit/SKILL.md"
+  ]
+}

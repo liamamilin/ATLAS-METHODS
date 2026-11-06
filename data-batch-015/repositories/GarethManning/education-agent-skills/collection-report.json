@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:17:43.651955+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 165,
+  "saved_skill_entries": 165,
+  "unique_entry_texts": 165,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "GarethManning/education-agent-skills",
+      "commit_sha": "135d6275e7db0657d70b147f46d3191c5430677d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 165,
+      "saved_skill_entries": 165,
+      "saved_text_files": 331,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/GarethManning/education-agent-skills/135d6275e7db0657d70b147f46d3191c5430677d.json"
+    }
+  ],
+  "errors": []
+}

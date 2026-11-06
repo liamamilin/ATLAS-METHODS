@@ -1,0 +1,9 @@
+{
+  "repository": "AvdLee/SwiftUI-Agent-Skill",
+  "commit_sha": "62bd760f005093d1e2e4de5db156e456a5f96400",
+  "tree_entries": 76,
+  "candidate_skill_paths": [
+    ".agents/skills/update-swiftui-apis/SKILL.md",
+    "skills/swiftui-expert-skill/SKILL.md"
+  ]
+}

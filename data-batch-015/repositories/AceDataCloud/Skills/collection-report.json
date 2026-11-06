@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:20:13.548017+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 122,
+  "saved_skill_entries": 122,
+  "unique_entry_texts": 122,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "AceDataCloud/Skills",
+      "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 122,
+      "saved_skill_entries": 122,
+      "saved_text_files": 322,
+      "files_not_exported": 32,
+      "repository_manifest": "manifests/AceDataCloud/Skills/5219818ac62b1afa8d18553e51d3372954576112.json"
+    }
+  ],
+  "errors": []
+}

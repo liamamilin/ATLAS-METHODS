@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:50:10.089780+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "deusyu/translate-book",
+      "commit_sha": "8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 42,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/deusyu/translate-book/8a2d71cba25c514bfa6b6d6191b1fe21c0fe3229.json"
+    }
+  ],
+  "errors": []
+}

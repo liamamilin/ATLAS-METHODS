@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:44.965416+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 22,
+  "saved_skill_entries": 22,
+  "unique_entry_texts": 22,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "duyunzhoudyz/dyz-gongwen-skills",
+      "commit_sha": "9111fbf1370ba0e2a116c3ef6e70e11f0168257b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 5478,
+      "files_not_exported": 139,
+      "repository_manifest": "manifests/duyunzhoudyz/dyz-gongwen-skills/9111fbf1370ba0e2a116c3ef6e70e11f0168257b.json"
+    }
+  ],
+  "errors": []
+}

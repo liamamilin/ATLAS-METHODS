@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "swaylq/humanize-chinese",
+      "commit_sha": "6510ca720b91919a12fa2e828b5ec959deb11db4"
+    }
+  ]
+}

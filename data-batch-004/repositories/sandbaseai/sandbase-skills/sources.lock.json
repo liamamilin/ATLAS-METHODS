@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729"
+    }
+  ]
+}

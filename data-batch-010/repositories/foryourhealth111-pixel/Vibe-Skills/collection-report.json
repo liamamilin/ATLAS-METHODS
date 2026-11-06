@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:01:00.327653+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 258,
+  "saved_skill_entries": 258,
+  "unique_entry_texts": 258,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "foryourhealth111-pixel/Vibe-Skills",
+      "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 258,
+      "saved_skill_entries": 258,
+      "saved_text_files": 2868,
+      "files_not_exported": 31,
+      "repository_manifest": "manifests/foryourhealth111-pixel/Vibe-Skills/bd10381417cbd890ed6f08a18bb18fb5aaf0f741.json"
+    }
+  ],
+  "errors": []
+}

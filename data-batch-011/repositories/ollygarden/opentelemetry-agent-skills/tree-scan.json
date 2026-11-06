@@ -1,0 +1,27 @@
+{
+  "repository": "ollygarden/opentelemetry-agent-skills",
+  "commit_sha": "3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68",
+  "tree_entries": 835,
+  "candidate_skill_paths": [
+    "skills/otel-browser/SKILL.md",
+    "skills/otel-collector-builder/SKILL.md",
+    "skills/otel-collector/SKILL.md",
+    "skills/otel-declarative-config/SKILL.md",
+    "skills/otel-dotnet/SKILL.md",
+    "skills/otel-go/SKILL.md",
+    "skills/otel-java/SKILL.md",
+    "skills/otel-js/SKILL.md",
+    "skills/otel-ottl/SKILL.md",
+    "skills/otel-profiles/SKILL.md",
+    "skills/otel-python/SKILL.md",
+    "skills/otel-ruby/SKILL.md",
+    "skills/otel-sdk-versions/SKILL.md",
+    "skills/otel-semantic-conventions/SKILL.md",
+    "skills/otel-span-events-to-logs-migration/SKILL.md",
+    "skills/otel-telemetry-emissions/SKILL.md",
+    "skills/otel-telemetrygen/SKILL.md",
+    "skills/otel-upgrade/SKILL.md",
+    "skills/otel-weaver/SKILL.md",
+    "tools/otel-telemetry-emission-scan/SKILL.md"
+  ]
+}

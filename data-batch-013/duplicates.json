@@ -1,0 +1,136 @@
+[
+  {
+    "entry_sha256": "40b6e0045dbe7343d649bfddc313afc7f11f3ee5b44036ddebc73832635f0a8c",
+    "record_ids": [
+      "2a1cb3fed56112002272",
+      "2e4fce198f3216b373e7",
+      "3a85cd317909cd38e52d",
+      "e4a3eba6e259793f7359",
+      "5f30870313aea8266cf0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "thedotmack/claude-mem",
+        "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+        "skill_path": "claude-mem-cursor/skills/agent-cost-report/SKILL.md"
+      },
+      {
+        "repository": "thedotmack/claude-mem",
+        "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+        "skill_path": "claude-mem-grok-bot/skills/agent-cost-report/SKILL.md"
+      },
+      {
+        "repository": "thedotmack/claude-mem",
+        "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+        "skill_path": "cowork/skills/agent-cost-report/SKILL.md"
+      },
+      {
+        "repository": "thedotmack/claude-mem",
+        "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+        "skill_path": "openclaw/skills/agent-cost-report/SKILL.md"
+      },
+      {
+        "repository": "thedotmack/claude-mem",
+        "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+        "skill_path": "plugin/skills/agent-cost-report/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "68a9a66db2da374efa41127e65e13b9b469905187325b0644f7cdeb007f7b7a9",
+    "record_ids": [
+      "0c9c7c7c5fa3a52aa5ad",
+      "5aa801ae0199144a3693",
+      "34f48994d859f930837c",
+      "7612af548e384be551fb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "chrono-meta/forge-harness",
+        "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+        "skill_path": "scripts/fixtures/cartridge/bad_enum/skills/demo/SKILL.md"
+      },
+      {
+        "repository": "chrono-meta/forge-harness",
+        "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+        "skill_path": "scripts/fixtures/cartridge/hook_cartridge/skills/demo/SKILL.md"
+      },
+      {
+        "repository": "chrono-meta/forge-harness",
+        "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+        "skill_path": "scripts/fixtures/cartridge/minimal_ok/skills/demo/SKILL.md"
+      },
+      {
+        "repository": "chrono-meta/forge-harness",
+        "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+        "skill_path": "scripts/fixtures/cartridge/no_manifest/skills/demo/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "71cd30c7cebcc084de121b488db53c1ce24422d9d8921e3e5fca550a03a4799d",
+    "record_ids": [
+      "8e966ff5f45b246a3c69",
+      "cfa413ac27780485ed4e",
+      "acec86d291bf20cb684c",
+      "c58047889cb44b95d930",
+      "53add063cb3fd04a0ea4",
+      "7be462491a8e622f2237"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "antigravity-plugin/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "claude-plugin/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "codebuddy-plugin/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "codex-plugin/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "cursor-plugin/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "devin-plugin/skills/deja-history/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "be8ab23375c02c996b48d742024fc97ed1800ac063662f3fdec1aad0e5d4da06",
+    "record_ids": [
+      "c84ad6528b3b01859926",
+      "9918225bf572c781cf4a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "extensions/grok/skills/deja-history/SKILL.md"
+      },
+      {
+        "repository": "vshulcz/deja-vu",
+        "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+        "skill_path": "extensions/kimi/skills/deja-history/SKILL.md"
+      }
+    ]
+  }
+]

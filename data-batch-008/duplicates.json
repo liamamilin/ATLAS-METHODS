@@ -1,0 +1,660 @@
+[
+  {
+    "entry_sha256": "01e2e9169e863f498a33517929edb59770fbacb41ef01a9d36fc6160850ce58b",
+    "record_ids": [
+      "442c75c72b3011680bf3",
+      "fdb0ada88b248653d340"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewcode/skills/rules/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewcode/.codex/skills/rules/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1213dbf108ac6a56c7c2cb67e81705b10cf0b9d136fa775ad161273bfe452a90",
+    "record_ids": [
+      "8be328326c745f34958a",
+      "a3f8e886a62314be8ecd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/web-games/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/web-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "141bf1ca6af96066cffa91b2b37417b9d1cffec4fcc2a6ef1333ee976121f7dd",
+    "record_ids": [
+      "d076e3c5cfd66b398a78",
+      "c71426cc1dec982f3f63"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/3d-games/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/3d-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2a3f349830fba610dfd9b9c296c01690c25d8cbdf49a7b7accbf2676ca5a965d",
+    "record_ids": [
+      "d17e38eafea9e004f934",
+      "8bb78278dec8f221d3d1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewtools/skills/task-board-setup/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewtools/.codex/skills/task-board-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2acd9ec1631c5035e9f07d82eec922714ac2f184acdb4f0116b7a0ff5035e954",
+    "record_ids": [
+      "8a7618a0afa06fda2d17",
+      "0124689e80f6387c73a5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewcode/skills/agents/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewcode/.codex/skills/agents/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "37cf7b71aeb5dc9a2fa40712ebd8cdea03531fc80438d4aa79b72715a4691cc9",
+    "record_ids": [
+      "f08661b18d70e0d87ba5",
+      "65e63b8594d7502f28a0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3e47c370f95488dc6e5dab95dc9d9af554b030f9810c55025caf5e72a972555c",
+    "record_ids": [
+      "46415da3629041dbf8b2",
+      "93fb517c3a40ced7a479"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-admin/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-admin/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "43db8fb50830a99fb14ace08cb29cc60cd7f51a240c5ae73dbe5b31da704f24f",
+    "record_ids": [
+      "8a9a4c60151e2c0153f6",
+      "65cc7027ac0e6435d383"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/mobile-games/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/mobile-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "45ca97f38d1f68823210f05ae63a0d827a0ec575dec97ffa5561f20d42675017",
+    "record_ids": [
+      "9fabbc4b9d4d5ebbd464",
+      "c294eaa5aea55cd40d16"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-search/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-search/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "49679f14cadae0a6522b370bfd0f557e4c97248c45dea799a85b5541a7e7490a",
+    "record_ids": [
+      "e0a756ee933f859a9ae6",
+      "b0f7543e944e1b1d472f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-oauth/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-oauth/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4da567bae59da77a125321e66b2821559471ef652e90f9a5e7a27273a52873e5",
+    "record_ids": [
+      "aa7d7040b563c23aae90",
+      "ae9d17e3fcc27740f479"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewtools/skills/text-human/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewtools/.codex/skills/text-human/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "59ddbdecc4fa17e74c4747f5f02bd69edb8bffcd1cdc2866dd6a053e19bc139e",
+    "record_ids": [
+      "4587d587bb3f47c5653a",
+      "3496a4cc7f4703ad8a9b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/vr-ar/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/vr-ar/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5cfa7e0a750c202ce81dde7aef8ebbd6e9954ece42ce47ed1619163d217a48c3",
+    "record_ids": [
+      "d4d2214097de02f17326",
+      "38e51622d31ef48efd16"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-audio/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/game-audio/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5dd2e6cae763e7d2c0dee44c5a337838a202793c588124286398f252366a2442",
+    "record_ids": [
+      "29cb85087863686b181a",
+      "d2322c464c6b2f3285d1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-ai-agent/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-ai-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "739b244b02659ec53ca719bbdf8ac2684dbeeafc5d5ddac124ffa6407f10f5df",
+    "record_ids": [
+      "096e596c6e3b69acd68c",
+      "a77dfc172912200a1d2d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/pc-games/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/pc-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "79ee8d6f2e04a993b6cdf5eb251590051427cc4e09aa3a7f67f1ab8e61e205f5",
+    "record_ids": [
+      "39bedcbd5750d38dcb80",
+      "dd3fa74f67a9717da7d1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/multiplayer/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/multiplayer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8ac1a26438c5b5d6aaf08ed644f4e72b6b13317c0f296a383e3df10dc7a8c875",
+    "record_ids": [
+      "c2f1d51af9320a0c40e2",
+      "a71ecfa76c7999157d02"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-messaging/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-messaging/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9232d619776b17d26128131753db87887ef8465fb8ef2a83d2871e619a5ec5dd",
+    "record_ids": [
+      "f3117c3db483e18e41c3",
+      "f695a18fb77b56e19684"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "777genius/agent-notifications",
+        "commit_sha": "53d8f2c528b86147fbda599385f7f2b8ef3fae20",
+        "skill_path": "portable-package/skills/agent-notifications/SKILL.md"
+      },
+      {
+        "repository": "777genius/agent-notifications",
+        "commit_sha": "53d8f2c528b86147fbda599385f7f2b8ef3fae20",
+        "skill_path": "skills/agent-notifications/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9251f74a78979b193bfcf8477a98f3ad52e3b059e79141a4a3c897c3365a823e",
+    "record_ids": [
+      "507cf1c2deb336a0cc5d",
+      "91f2f786044725660f82"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewdoc/skills/md-to-pdf/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewdoc/.codex/skills/md-to-pdf/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "93c4179046820a685506d81b066cbceeaa91b197cdb89ab7da1e04cac9062657",
+    "record_ids": [
+      "fdbda70507232a47ce96",
+      "e81142c8859f3fa8a7a3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-design/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/game-design/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "989e02018369ef6812e7602c5d1cfe78ac28861e8aceaf4c0609ed02cb4e9e9b",
+    "record_ids": [
+      "ed442b9db45773ccb1b6",
+      "0524300ecf0625aba880"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewtools/skills/text-optimize/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewtools/.codex/skills/text-optimize/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9a329a33e41e29e71d5281dc8809805ec992a1ad59b0334f663ac35cbec7c8a7",
+    "record_ids": [
+      "7fcf5d7daf5f17f08898",
+      "c542febd9643fdefd7e6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewcode/skills/convention-setup/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewcode/.codex/skills/convention-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a3a7efea9a556c91889abf85748bfc9f485f1cb953be40baf66822c6144c9f4c",
+    "record_ids": [
+      "9486e72cdb5c03062be7",
+      "79656ae2a0b82108699b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-watch-thread/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-watch-thread/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ab08d8bdc7b75a44f3701914fbd1eb16b68449fc7ee442f90629b8a33ccbb2e5",
+    "record_ids": [
+      "2c67c257bbb9e4ef3086",
+      "890f4adda98f30a14bcc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewtools/skills/manager-setup/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewtools/.codex/skills/manager-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ab7029cb91c498c6469137f7b8b1575fdc7a97db3cc338c5cd2f0edc2ac2888a",
+    "record_ids": [
+      "bc122f1921d4165164ab",
+      "1ade3534a853fdd8821c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-art/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/game-art/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b4887369cad061e7e59e9198593ffe3e93dd455dfe0cb93cb4e63ad37ccfa054",
+    "record_ids": [
+      "74896db9d787c08ee693",
+      "96e9e768922bdd96c6af"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/engineering/app-builder/templates/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/writing-docs/templates/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c49b3fd9cd2cef4ad9d320a66758734a2bf64f1b23845c773abd434deec977e4",
+    "record_ids": [
+      "04865cfc93ccad21fa5e",
+      "f68fe780241305dc6b73"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-api/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-api/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c53985a415e9451bb36330f673b454405969f233a83e271607042e663898f5a0",
+    "record_ids": [
+      "5a41f5c5338274ac756f",
+      "35ae070efea1ed6b62b4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewcode/skills/teams-setup/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewcode/.codex/skills/teams-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dc8e0467dfebd4e57f4ea86f55db50128b6b69cc8e5efc890069e947139e7069",
+    "record_ids": [
+      "9fc4c6db439506737078",
+      "92a38856d6a1d9b00c10"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": ".codex/plugins/brewcode/skills/superreview-setup/SKILL.md"
+      },
+      {
+        "repository": "kochetkov-ma/claude-brewcode",
+        "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+        "skill_path": "brewcode/.codex/skills/superreview-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f31d95e041d06f018620fc697f25a32ea115b4ec577d9f448f714eeeb606363d",
+    "record_ids": [
+      "8894f8cd97647f6f297e",
+      "00cee8918a6ca44fa251"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/2d-games/SKILL.md"
+      },
+      {
+        "repository": "VoDaiLocz/kilo-kit-mcp",
+        "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+        "skill_path": "skills/games/game-development/2d-games/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f4da63dd45a903d0766655b6b8b68a7166a32b95af81332989a98e14d36fc77b",
+    "record_ids": [
+      "12f7735081945c981e72",
+      "c7fee94c7b596d33ff62",
+      "bf06136aabfefee3ccb7",
+      "5c4b8bdc9c9d61601f84",
+      "2f7127c0c714f613b46e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "MetcalfSolutions/Satori",
+        "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+        "skill_path": ".agents/skills/satori/SKILL.md"
+      },
+      {
+        "repository": "MetcalfSolutions/Satori",
+        "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+        "skill_path": ".cursor/skills/satori/SKILL.md"
+      },
+      {
+        "repository": "MetcalfSolutions/Satori",
+        "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+        "skill_path": ".hermes/skills/satori/SKILL.md"
+      },
+      {
+        "repository": "MetcalfSolutions/Satori",
+        "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+        "skill_path": ".opencode/skills/satori/SKILL.md"
+      },
+      {
+        "repository": "MetcalfSolutions/Satori",
+        "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+        "skill_path": "SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fd44cd0fd41e9e216bacaebd897f99fc3ab17d33b81db85bd0553258477cb815",
+    "record_ids": [
+      "18785dd20c05c7b47b52",
+      "9859df833dc471ad3fa0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "apps/docs/public/.well-known/skills/pachca-bots/SKILL.md"
+      },
+      {
+        "repository": "pachca/openapi",
+        "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+        "skill_path": "plugins/pachca/skills/pachca-bots/SKILL.md"
+      }
+    ]
+  }
+]

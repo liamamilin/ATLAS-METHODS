@@ -1,0 +1,8 @@
+{
+  "repository": "hermes-labs-ai/little-canary",
+  "commit_sha": "7045f31882048c58e6b5ea42642b351b5c37a7a1",
+  "tree_entries": 190,
+  "candidate_skill_paths": [
+    ".agents/skills/little-canary/SKILL.md"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "repository": "bevibing/tutor-skills",
+  "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+  "tree_entries": 13,
+  "candidate_skill_paths": [
+    "skills/tutor-setup/SKILL.md",
+    "skills/tutor/SKILL.md"
+  ]
+}

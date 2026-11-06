@@ -1,0 +1,17 @@
+{
+  "repository": "NoizAI/skills",
+  "commit_sha": "779f30af588ebf4dd17fc0acaa590ae147a0d3f5",
+  "tree_entries": 40,
+  "candidate_skill_paths": [
+    "skills/characteristic-voice/SKILL.md",
+    "skills/chat-with-anyone/SKILL.md",
+    "skills/daily-news-caster/SKILL.md",
+    "skills/music-video/SKILL.md",
+    "skills/sound-fx/SKILL.md",
+    "skills/speech-to-text/SKILL.md",
+    "skills/template-skill/SKILL.md",
+    "skills/text-to-music/SKILL.md",
+    "skills/tts/SKILL.md",
+    "skills/video-translation/SKILL.md"
+  ]
+}

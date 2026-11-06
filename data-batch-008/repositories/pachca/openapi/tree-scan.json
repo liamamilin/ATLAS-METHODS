@@ -1,0 +1,26 @@
+{
+  "repository": "pachca/openapi",
+  "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+  "tree_entries": 2079,
+  "candidate_skill_paths": [
+    "apps/docs/public/.well-known/skills/pachca-admin/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-ai-agent/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-api/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-bots/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-messaging/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-oauth/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-search/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca-watch-thread/SKILL.md",
+    "apps/docs/public/.well-known/skills/pachca/SKILL.md",
+    "apps/docs/public/skill.md",
+    "plugins/pachca/skills/pachca-admin/SKILL.md",
+    "plugins/pachca/skills/pachca-ai-agent/SKILL.md",
+    "plugins/pachca/skills/pachca-api/SKILL.md",
+    "plugins/pachca/skills/pachca-bots/SKILL.md",
+    "plugins/pachca/skills/pachca-messaging/SKILL.md",
+    "plugins/pachca/skills/pachca-oauth/SKILL.md",
+    "plugins/pachca/skills/pachca-search/SKILL.md",
+    "plugins/pachca/skills/pachca-watch-thread/SKILL.md",
+    "plugins/pachca/skills/pachca/SKILL.md"
+  ]
+}

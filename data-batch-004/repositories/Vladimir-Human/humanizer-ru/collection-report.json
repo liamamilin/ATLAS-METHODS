@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:42:22.885726+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Vladimir-Human/humanizer-ru",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 1869,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/Vladimir-Human/humanizer-ru/99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,305 @@
+{
+  "repository": "9929y/mesh-gradient-generation",
+  "commit_sha": "a251ed465d486401f19e02a939154090c1aea5af",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9142f0c8e1152baf8b5773ca895385a8630dc7ed",
+      "bytes": 2316,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/AGENTS.md",
+      "sha256": "5721e256bac88a0ef97bd54f427ea0fe459795bfefaf48f35c863f2f77bc9849",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/AGENTS.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6029ae6f588a5e55192155267fcdb97dcaf9093",
+      "bytes": 1068,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/LICENSE",
+      "sha256": "c47d6a99af1f1015f9645453ff0a9b9e5dd550977ac02f966c3174cbe660c73e",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fcd6079259613ac9d3f0e8010a645ca2d870a6cb",
+      "bytes": 24734,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/README.md",
+      "sha256": "f484cc1a9dec019159a43a2cb48249be608029d8aabffc6c129d8c7cbc334d7f",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a19a57c5e346d5acd31d242448d2489c2f2e20e7",
+      "bytes": 12182,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/SKILL.md",
+      "sha256": "74d42ea95d395a179e7ac3564cff3eead1d49a22738883252dfbf899d1ff9253",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/SKILL.md"
+    },
+    {
+      "path": "design/illustrations/diffuse-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d95490a20a33265826d02139093b8bbb4a472ccf",
+      "bytes": 127548,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/diffuse-blue-orange.jpg",
+      "sha256": "b31391b279ceb5a2bd2137db80b50051ff8cc8d54f91c06d35c75f5b06a0e71a",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/dreamlike-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bf23b47cff1e53879ef4f4ccc3d5b454ea5a9e74",
+      "bytes": 154653,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/dreamlike-blue-orange.jpg",
+      "sha256": "f4ca84c85fe558c5813bf75ee46e3143f728f798d1e6d9b1ce14ca70c1170802",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/flower-soft-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "669569aaaeda7732a62d1101b126b19745492b65",
+      "bytes": 138520,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/flower-soft-blue-orange.jpg",
+      "sha256": "83e8b2edd2f5cf6ec41b28c2c976d4af1972816d46b95068c1827d1b0fc076c6",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/heightmap-soft-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5bbd858caf0f418031b302907cc6d1ce3e1a32df",
+      "bytes": 169803,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/heightmap-soft-blue-orange.jpg",
+      "sha256": "61504cb8d09aad4872e516e8734b04286d8df6ec479a04e0163ccb1cf84f73cf",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/multipoint-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fa37d22165ab8d977221589e4afc8e5d663bf9a5",
+      "bytes": 133860,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/multipoint-blue-orange.jpg",
+      "sha256": "28e2d9441070b1358ceadf184345b1c8912e37646a29e0e8288cdd06655e136e",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/palette-adjacent.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b29d4a110d8cd4916189e7f6bd3408adb6c24512",
+      "bytes": 1508,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-adjacent.svg",
+      "sha256": "2389925a3dda54b35a5cf22290d641ceb401f80ff89e7f0849aae4ff8d6634c4",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-adjacent.svg"
+    },
+    {
+      "path": "design/illustrations/palette-blue-orange.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "59cd2571f6ddc7cc9eb53795817861fad5d2b82a",
+      "bytes": 1508,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-blue-orange.svg",
+      "sha256": "3c70655395e2f5385601480a7af036546e49ac1e1bc891373c407057caf61d0f",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-blue-orange.svg"
+    },
+    {
+      "path": "design/illustrations/palette-mono.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3074eb125b667c0de59ec74aa7b88962146b1ef3",
+      "bytes": 1504,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-mono.svg",
+      "sha256": "9df70260729f1ebc893d1e654b8effd14ab02500c293b43d9e7ca05f0df0573d",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-mono.svg"
+    },
+    {
+      "path": "design/illustrations/palette-neutral.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c785e3e83c2f8dd3224f3b3e483a026188368dfe",
+      "bytes": 1507,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-neutral.svg",
+      "sha256": "412ac28dda0fc89e883b30ca7b0f78ab8283eab72e8e9edf53ea553f2bd5d10a",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/palette-neutral.svg"
+    },
+    {
+      "path": "design/illustrations/sky-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7740a64e9cd95ab4afcdc352bb76916f6f28cb31",
+      "bytes": 147690,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/sky-blue-orange.jpg",
+      "sha256": "5dc8a72beec020f37dc002bc4ded177f6a01eefa15a8889298d32e607539a12b",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/sky-blur-100-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b7644731ac763463ff5483e7ed449bf6d456d0ec",
+      "bytes": 147730,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/sky-blur-100-blue-orange.jpg",
+      "sha256": "56bb421dcfc7627b1b3f7d6bd24670b16dc650249f6664b8e6b5fcd81b85cefd",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/sky-blur-150-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6887d175ddda9dbf3863dab3fba7a00cd93f09b",
+      "bytes": 147160,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/sky-blur-150-blue-orange.jpg",
+      "sha256": "108ccc34ebad82e326382aa0970fdfa669709aef5e4c6bd90f05d5f150de4230",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "design/illustrations/sky-blur-200-blue-orange.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f16aff52975400d5daf5d712fe10fff2f7da28cf",
+      "bytes": 148939,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/design/illustrations/sky-blur-200-blue-orange.jpg",
+      "sha256": "61443a0bb6e5b4a45f1d264e3903a045bfba1d6b419025af5ecba183d702d7ef",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "07e01cce81c885a2343f722c0e9c3bf69268b487",
+      "bytes": 44571,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/index.html",
+      "sha256": "8609b58505e3fb6bd8aec11b84cf25432dd1a7312bf803fc2ed378461b7ca0f5",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/index.html"
+    },
+    {
+      "path": "references/adapters.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b395ee328157ad907a116f4c1f57fe849213b8e4",
+      "bytes": 7008,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/adapters.md",
+      "sha256": "0818cff28e89151c57625594060b9245b97135994551c0397199516892fb2a18",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/adapters.md"
+    },
+    {
+      "path": "references/art-direction.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eac66cf5722d688fc06155acf8395a86298f86b4",
+      "bytes": 10203,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/art-direction.md",
+      "sha256": "645f3b6a97daee87be5b7fc43513f9dc7a07ee2c787eacfc8f74676c5bf92f58",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/art-direction.md"
+    },
+    {
+      "path": "references/effects.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7420b752016435a19329405d030ee10d341ad105",
+      "bytes": 6605,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/effects.md",
+      "sha256": "f0132cb7e09b56bea6fc012c5f0c8bb6c0594d2dcdff3b9ed14b559835a489aa",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/effects.md"
+    },
+    {
+      "path": "references/figma-recipes.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a25d6a8b86a9d524442ae281f978652fca9c70d4",
+      "bytes": 12824,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/figma-recipes.md",
+      "sha256": "0d535384253b69a44f7c3c129e74669eda4467982affa125e55be20139affe38",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/figma-recipes.md"
+    },
+    {
+      "path": "references/motion.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "71c55da6c4870a4e26ee522c5f94f5b2b770ff36",
+      "bytes": 3257,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/motion.md",
+      "sha256": "2ed89f736ad1fe1dd1dd1f0057888d6b624744cb0116d3d2d2f34f8defe80a44",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/motion.md"
+    },
+    {
+      "path": "references/palettes-and-layout.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0c645208e2f3fca55fe2d18d5cd402c30ed145e3",
+      "bytes": 6692,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/references/palettes-and-layout.md",
+      "sha256": "61a8c00004467b1a5aeab17d6e7fe7e6e79c26830a52456cfecb16fe16e5c580",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/references/palettes-and-layout.md"
+    },
+    {
+      "path": "scripts/blue_orange_studies.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eb8d932ba3f5383e1a152f61132ff8300d5c4f7c",
+      "bytes": 12459,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/scripts/blue_orange_studies.js",
+      "sha256": "70fe9c6df44ada82160441b327c5b2808c011efd71da3ff3b206cae96e6df48a",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/scripts/blue_orange_studies.js"
+    },
+    {
+      "path": "scripts/figma_native.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "91a3a35902705d2bf5aa0702c5b13f95c3d47da1",
+      "bytes": 3502,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/scripts/figma_native.js",
+      "sha256": "6fef6c1967b841a4dfeb7b3c1c68dec129cd04559a7f1d82bda92ffd36d074b4",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/scripts/figma_native.js"
+    },
+    {
+      "path": "scripts/palette_studies.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5e1e83406b48681166871b91bdbb81a9538e0584",
+      "bytes": 5359,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/scripts/palette_studies.js",
+      "sha256": "f354c4b290a17fc7d249a01e92f475819acd710a3540f7c446e9972ae19c19eb",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/scripts/palette_studies.js"
+    },
+    {
+      "path": "scripts/render_svg.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dcd452209b95b1dfce9210d9e6336e085aff3f64",
+      "bytes": 6305,
+      "source_url": "https://github.com/9929y/mesh-gradient-generation/blob/a251ed465d486401f19e02a939154090c1aea5af/scripts/render_svg.py",
+      "sha256": "c4faec2c5e8fb4e62eb41b73b7c576a79c0c9735a004bcdcf874062ff920c16c",
+      "status": "saved",
+      "raw_path": "raw/9929y/mesh-gradient-generation/a251ed465d486401f19e02a939154090c1aea5af/scripts/render_svg.py"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:18:53.060940+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "renezander030/capcut-cli",
+      "commit_sha": "0f58b834a1188bd810cbf5325ac8cb6480134123",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 354,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/renezander030/capcut-cli/0f58b834a1188bd810cbf5325ac8cb6480134123.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,10 @@
+{
+  "repository": "zhuyansen/new-term-radar",
+  "commit_sha": "fe67ff1acab728141644a4a9741295469b4feee6",
+  "tree_entries": 74,
+  "candidate_skill_paths": [
+    "skills/ai-listening/SKILL.md",
+    "skills/new-term-radar/SKILL.md",
+    "skills/seo-new-keywords-research/SKILL.md"
+  ]
+}

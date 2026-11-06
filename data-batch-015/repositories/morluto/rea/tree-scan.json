@@ -1,0 +1,12 @@
+{
+  "repository": "morluto/rea",
+  "commit_sha": "f3d6f45315b854406a9066cf9ce3ccfdf1ad390d",
+  "tree_entries": 7477,
+  "candidate_skill_paths": [
+    ".agents/skills/rea-analysis-optimization/SKILL.md",
+    ".agents/skills/rea-changelog-update/SKILL.md",
+    ".agents/skills/rea-ci-tests-audit/SKILL.md",
+    ".agents/skills/rea-tool-design/SKILL.md",
+    ".agents/skills/reverse-engineer-anything/SKILL.md"
+  ]
+}

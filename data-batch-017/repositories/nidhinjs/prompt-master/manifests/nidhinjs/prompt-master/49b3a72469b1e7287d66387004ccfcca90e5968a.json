@@ -1,0 +1,61 @@
+{
+  "repository": "nidhinjs/prompt-master",
+  "commit_sha": "49b3a72469b1e7287d66387004ccfcca90e5968a",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "03fd69c267451c91f3e02715247c3e9e91af41d6",
+      "bytes": 1077,
+      "source_url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/LICENSE",
+      "sha256": "29e8ba0b54274eaa92b7cb074fe1765ba7b83993e0d2605e5308c6972a47daa7",
+      "status": "saved",
+      "raw_path": "raw/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5a7e09fba285a6ca2065f412fce7340d6798e17e",
+      "bytes": 22550,
+      "source_url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/README.md",
+      "sha256": "3a43506bd5d3c19e39fd16cdacfc8b199107291801867099dbf330c5da5a38e7",
+      "status": "saved",
+      "raw_path": "raw/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "742deafaf4222f9f0e9d9410e72483dad64fe716",
+      "bytes": 33508,
+      "source_url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/SKILL.md",
+      "sha256": "36e68cdcd62c38b2f99c2538c83fefb8c8837ea9b7eed75297fe76e45c452e75",
+      "status": "saved",
+      "raw_path": "raw/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/SKILL.md"
+    },
+    {
+      "path": "references/patterns.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "03c8d3c9204f12ac1f7c556ea7d5b99b9309f47d",
+      "bytes": 6233,
+      "source_url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/references/patterns.md",
+      "sha256": "95e7b16c32cdf7a5971a952cd40841875dea97fa7c96154e42f1afd2cf468d91",
+      "status": "saved",
+      "raw_path": "raw/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/references/patterns.md"
+    },
+    {
+      "path": "references/templates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "404f2bee81feac602f60e2d83b302c4c33376fc3",
+      "bytes": 18434,
+      "source_url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/references/templates.md",
+      "sha256": "164f151958cc8aa64954a1d35c1b57f99a58f2c57be9742a86defb9f171fabed",
+      "status": "saved",
+      "raw_path": "raw/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/references/templates.md"
+    }
+  ]
+}

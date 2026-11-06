@@ -1,0 +1,165 @@
+{
+  "repository": "EricJujianZou/rederive",
+  "commit_sha": "7f43edc0ee0e098e98f77b01187027238aba77c8",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "79d5155d2e8bfaa76af471277644b24b5652930b",
+      "bytes": 402,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/.claude-plugin/marketplace.json",
+      "sha256": "8dd4b6eb5825edd5b23431764fe1ed5ca1849fa2f1d6f0a342e669c6d5b79b4d",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "949a4da4820596faced0d67278c4e7bc77e83677",
+      "bytes": 612,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/.claude-plugin/plugin.json",
+      "sha256": "15959a338ad6afe2e27a15e8d8abc3aed3c463c3787ed6a9c54dc17f20b028c4",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5f8933a91a8a0f3ade6146390d2f0d332989ad8e",
+      "bytes": 1065,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/LICENSE",
+      "sha256": "9a502bbe6d9b2224b4c8b670a49fdbb1060862bf318e4cb9edb02612e82e06f8",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b5aae9c84cb1d4fb69929db8b8c9cc224423a6d3",
+      "bytes": 4227,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/README.md",
+      "sha256": "5ebc956eadc0cc2468e940d3aa3cab3440f6e5c7d08a26fa00dae09b492e623c",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/README.md"
+    },
+    {
+      "path": "assets/banner-dark.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "81e03ed91fa4c062f7891ae0ac0785836bbc36fc",
+      "bytes": 59866,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/banner-dark.png",
+      "sha256": "3047218495eb78365f24e60c11cbb0d63cfaa4792b569b3e2c6515afe5a57bb3",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/banner-light.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e57f230ac76fa7996228c2f9ddcd8af0381f447",
+      "bytes": 57336,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/banner-light.png",
+      "sha256": "96e6fbb07ba778d0c7412bcec3f47bcf30301ab2dd76c041ca9bb69f7c296614",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/logo.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d345c61cf512bbd7e6841fccc76b99e07eed5fbe",
+      "bytes": 10423,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/logo.png",
+      "sha256": "75758ad57e796dfad1fb4aaf8896ca16ef9f8afee56224ef54e9a53c2d85777b",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/session-dark.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e29585e6bed09214e26f91f83516528c2c69fdf5",
+      "bytes": 324573,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/session-dark.png",
+      "sha256": "211dd0902d5db9fb5e376ddcebdb49e24e2650fbeedf21d8ee280446ec5a10b3",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/session-light.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2b12120b155ed34e8b9ba2651ad67dc1a6b77e23",
+      "bytes": 323354,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/session-light.png",
+      "sha256": "8a4ffe62ced844c6630383c9d3f1c9cec5310ce7dd1a7285e568015e1aa2c7b5",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/social-preview.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "feef658e551d48ea5056bc7eba64584cbd7f5a44",
+      "bytes": 72580,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/assets/social-preview.png",
+      "sha256": "660df5fa624e84ce4603e3a247adac9a282de7f21ee6ff27b441cd070b05ad2a",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/launch-wednesday.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "044f0da895a1659fcbb9f6343f186e5782583d61",
+      "bytes": 3312,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/docs/launch-wednesday.md",
+      "sha256": "cf1ef20ec9e15e4fea9b892a7b466d9933ab085792ade7f8a640c40982176111",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/docs/launch-wednesday.md"
+    },
+    {
+      "path": "docs/viral-skill-findings.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "342887a07bd148aa1565ac13bf69a540b9338c4b",
+      "bytes": 7144,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/docs/viral-skill-findings.md",
+      "sha256": "2fb7d9c8a47a5ac02bf9b6153cbfe954b8cea9634dda3537b1a511a33bc3f717",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/docs/viral-skill-findings.md"
+    },
+    {
+      "path": "skills/rederive/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d201e5282e1b5a95a00e216c317cb34681831fb9",
+      "bytes": 6843,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/SKILL.md",
+      "sha256": "87e18303c666563796c77f14869b466dd5d962a318b5019b11d0ffa6e22ca9f8",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/SKILL.md"
+    },
+    {
+      "path": "skills/rederive/scripts/history.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "23c07c8be73176cbe39767a5167ae2f3080bc6fd",
+      "bytes": 3107,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/scripts/history.sh",
+      "sha256": "12025e3d8eb3f6d3e1c9ba38dfc348f2022dcef59dd793ee5880a5fceb1e8b8d",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/scripts/history.sh"
+    },
+    {
+      "path": "skills/rederive/scripts/structure.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "46485321f431c7ee74a744a984f08477e990f919",
+      "bytes": 9293,
+      "source_url": "https://github.com/EricJujianZou/rederive/blob/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/scripts/structure.py",
+      "sha256": "65d2400945434b43954f21824d0d57266c5259edac152f03c28acf6d1dbfc88d",
+      "status": "saved",
+      "raw_path": "raw/EricJujianZou/rederive/7f43edc0ee0e098e98f77b01187027238aba77c8/skills/rederive/scripts/structure.py"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:41:47.805095+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 588,
+  "saved_skill_entries": 588,
+  "unique_entry_texts": 278,
+  "duplicate_entry_groups": 245,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 588,
+      "saved_skill_entries": 588,
+      "saved_text_files": 2476,
+      "files_not_exported": 96,
+      "repository_manifest": "manifests/infrasity-labs/dev-gtm-claude-skills/02cfefb3a213041de8b80bc659ebc5f17b5e746a.json"
+    }
+  ],
+  "errors": []
+}

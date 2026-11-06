@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "testdino-hq/playwright-skill",
+      "commit_sha": "178d1cb537604279d7b54500c4823a6db42b9de6"
+    }
+  ]
+}

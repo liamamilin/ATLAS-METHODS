@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:26:52.690670+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "0xNyk/council-of-high-intelligence",
+      "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 1,
+      "saved_text_files": 59,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/0xNyk/council-of-high-intelligence/14d398f44771be1fc49488ab1b8a348ed76ca172.json"
+    }
+  ],
+  "errors": []
+}

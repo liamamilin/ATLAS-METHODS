@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:44:43.207584+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 18,
+  "saved_skill_entries": 18,
+  "unique_entry_texts": 18,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "dreammis/social-auto-upload",
+      "commit_sha": "3847fff01f5434a8a32829833163cd6723cabc59",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 18,
+      "saved_skill_entries": 18,
+      "saved_text_files": 267,
+      "files_not_exported": 22,
+      "repository_manifest": "manifests/dreammis/social-auto-upload/3847fff01f5434a8a32829833163cd6723cabc59.json"
+    }
+  ],
+  "errors": []
+}

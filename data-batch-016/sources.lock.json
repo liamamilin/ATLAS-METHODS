@@ -1,0 +1,119 @@
+{
+  "sources": [
+    {
+      "repository": "Bhanunamikaze/Agentic-SEO-Skill",
+      "commit_sha": "445c46c268d947fac25c4b57d38aaf723129fe62",
+      "collection_root": "repositories/Bhanunamikaze/Agentic-SEO-Skill"
+    },
+    {
+      "repository": "ChatCut-Inc/agent-plugin",
+      "commit_sha": "5b93f3afca456dc1dd1da01661ea3825846f83a8",
+      "collection_root": "repositories/ChatCut-Inc/agent-plugin"
+    },
+    {
+      "repository": "KalarisLabs/research-agent-skills",
+      "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+      "collection_root": "repositories/KalarisLabs/research-agent-skills"
+    },
+    {
+      "repository": "Kinprove/genealogy-research-recipes",
+      "commit_sha": "ecfeca598253aaab3474e247aa0a78b7848d98b4",
+      "collection_root": "repositories/Kinprove/genealogy-research-recipes"
+    },
+    {
+      "repository": "MetaMask/agent-skills",
+      "commit_sha": "e87ac501d24648ba05cd86811d97915035eb30df",
+      "collection_root": "repositories/MetaMask/agent-skills"
+    },
+    {
+      "repository": "antvis/AVA",
+      "commit_sha": "8f20bffc82fa5787da5eb9463bb5c26cf6eee96f",
+      "collection_root": "repositories/antvis/AVA"
+    },
+    {
+      "repository": "assafkip/claudemy",
+      "commit_sha": "dadf948aafb90d66b554a13df1e47f2509cc1c70",
+      "collection_root": "repositories/assafkip/claudemy"
+    },
+    {
+      "repository": "czlonkowski/n8n-skills",
+      "commit_sha": "e037563e101749e630e6688d121d04529fe6ee7b",
+      "collection_root": "repositories/czlonkowski/n8n-skills"
+    },
+    {
+      "repository": "danoszz/penthera",
+      "commit_sha": "9b12fb9777ef67d4a50083bf8de2f0d565368661",
+      "collection_root": "repositories/danoszz/penthera"
+    },
+    {
+      "repository": "federicodeponte/opendraft",
+      "commit_sha": "39b21f74b3f52c34d5d771c508c8ad80f965d35f",
+      "collection_root": "repositories/federicodeponte/opendraft"
+    },
+    {
+      "repository": "hyperb1iss/unifly",
+      "commit_sha": "e3afcff46179bea528d6e9189cbf9d65a1cd96cc",
+      "collection_root": "repositories/hyperb1iss/unifly"
+    },
+    {
+      "repository": "jgsystemsconsulting/jgs-se-knowledge-packs",
+      "commit_sha": "3bf1e1338acf4cb83e9339ce535228635165f288",
+      "collection_root": "repositories/jgsystemsconsulting/jgs-se-knowledge-packs"
+    },
+    {
+      "repository": "kepano/obsidian-skills",
+      "commit_sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "collection_root": "repositories/kepano/obsidian-skills"
+    },
+    {
+      "repository": "mblode/agent-skills",
+      "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+      "collection_root": "repositories/mblode/agent-skills"
+    },
+    {
+      "repository": "nexscope-ai/eCommerce-Skills",
+      "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+      "collection_root": "repositories/nexscope-ai/eCommerce-Skills"
+    },
+    {
+      "repository": "op7418/guizang-social-card-skill",
+      "commit_sha": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "collection_root": "repositories/op7418/guizang-social-card-skill"
+    },
+    {
+      "repository": "snyk/agent-scan",
+      "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+      "collection_root": "repositories/snyk/agent-scan"
+    },
+    {
+      "repository": "teng-lin/notebooklm-py",
+      "commit_sha": "7c5857a5be8c3cf465caf0878098a6358a92261f",
+      "collection_root": "repositories/teng-lin/notebooklm-py"
+    },
+    {
+      "repository": "verdikta/verdikta-applications",
+      "commit_sha": "ef426f7a47ffc7d929a9dbbf54aecdafda185ec7",
+      "collection_root": "repositories/verdikta/verdikta-applications"
+    },
+    {
+      "repository": "virgiliojr94/book-to-skill",
+      "commit_sha": "e7bb659d3261491c8b28793dcb9102fa64a46c22",
+      "collection_root": "repositories/virgiliojr94/book-to-skill"
+    },
+    {
+      "repository": "wheresryan22/anatomy",
+      "commit_sha": "1482e8469b0a9e0d8cc18ea2740a01423d29ae80",
+      "collection_root": "repositories/wheresryan22/anatomy"
+    },
+    {
+      "repository": "zenstory-ai/oh-story-claudecode",
+      "commit_sha": "d4a7766d35876a4ac01ad3beb4b4f2002de78f04",
+      "collection_root": "repositories/zenstory-ai/oh-story-claudecode"
+    },
+    {
+      "repository": "zubair-trabzada/geo-seo-claude",
+      "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+      "collection_root": "repositories/zubair-trabzada/geo-seo-claude"
+    }
+  ]
+}

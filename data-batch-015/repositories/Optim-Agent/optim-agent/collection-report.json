@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:17:07.675674+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Optim-Agent/optim-agent",
+      "commit_sha": "39e5f94b5e19d041a9175407ac0ea41c101d100e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 247,
+      "files_not_exported": 10,
+      "repository_manifest": "manifests/Optim-Agent/optim-agent/39e5f94b5e19d041a9175407ac0ea41c101d100e.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:29:44.136108+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 37,
+  "saved_skill_entries": 37,
+  "unique_entry_texts": 37,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 37,
+      "saved_skill_entries": 37,
+      "saved_text_files": 5063,
+      "files_not_exported": 73,
+      "repository_manifest": "manifests/go-musicfox/go-musicfox/12169a71098f8b8607bcf655eaddabf57ca14daf.json"
+    }
+  ],
+  "errors": []
+}

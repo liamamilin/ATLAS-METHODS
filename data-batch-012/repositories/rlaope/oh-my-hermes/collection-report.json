@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:07:50.459361+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 279,
+  "saved_skill_entries": 279,
+  "unique_entry_texts": 279,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "rlaope/oh-my-hermes",
+      "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 279,
+      "saved_skill_entries": 279,
+      "saved_text_files": 3783,
+      "files_not_exported": 54,
+      "repository_manifest": "manifests/rlaope/oh-my-hermes/68768989d56706f444574a70af1e5484c673b11c.json"
+    }
+  ],
+  "errors": []
+}

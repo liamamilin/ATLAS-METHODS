@@ -1,0 +1,122 @@
+[
+  {
+    "entry_sha256": "61cde674a8823f3e20a6a48a1c18bf02d2bc7a716fb30e0a915b715e0499b617",
+    "record_ids": [
+      "3225d286c212897c56bf",
+      "670c6d4e33e9296c8fc1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "siril9/presentation-skill",
+        "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+        "skill_path": "SKILL.md"
+      },
+      {
+        "repository": "siril9/presentation-skill",
+        "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+        "skill_path": "plugins/presentation-skill/skills/presentation-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "93c28c8cc6dbd8702038f6c48cf1c3318e1bced71bb521477304021de7f47132",
+    "record_ids": [
+      "4ee5c05d8079e9e3c762",
+      "55bf702a79d76ec70d7e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "plugins/scout-pro/skills/scout-pro/SKILL.md"
+      },
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "scout-pro/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "acb6cf0229d38fc6959c99d3effa2fa1a188b9b20709986e2f659df267d5389d",
+    "record_ids": [
+      "490ce3d9c0d4981fcadc",
+      "a9ec8052a4ee16492807"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "plugins/scout/skills/scout/SKILL.md"
+      },
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "scout/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c073de9e0dfb8a14c1ed45ff0995786bd17bdfd9beb59dd21e7bb261821b5d20",
+    "record_ids": [
+      "c717fd0aa2434c72123e",
+      "01049d118cb8838d4417"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "manavmishra/ZeroSlop",
+        "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+        "skill_path": "SKILL.md"
+      },
+      {
+        "repository": "manavmishra/ZeroSlop",
+        "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+        "skill_path": "skills/zero-slop/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ca8aa183d4e432be1e5dd8ac107e387f2ce668ce1fe492e934386811a4ead1a8",
+    "record_ids": [
+      "43b5b793b41b5cb28c96",
+      "36b03493ac5e3c1223d6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "radres/call-me",
+        "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+        "skill_path": "claude-code/skills/call-me/SKILL.md"
+      },
+      {
+        "repository": "radres/call-me",
+        "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+        "skill_path": "skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fa93512ef87929280f79f9c967dcd99e763d3f1fdd1abb4c4b1dba23be02d647",
+    "record_ids": [
+      "ff2a4fe3a96cd0129aad",
+      "639bd43b34c76e8b8ada"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "agent-army/SKILL.md"
+      },
+      {
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "plugins/agent-army/skills/agent-army/SKILL.md"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "ollygarden/opentelemetry-agent-skills",
+      "commit_sha": "3791f23e8cbae5a5aa6e259ddc06c220e5cc2c68"
+    }
+  ]
+}

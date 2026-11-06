@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2"
+    }
+  ]
+}

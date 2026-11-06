@@ -1,0 +1,10 @@
+{
+  "repository": "verdikta/verdikta-applications",
+  "commit_sha": "ef426f7a47ffc7d929a9dbbf54aecdafda185ec7",
+  "tree_entries": 918,
+  "candidate_skill_paths": [
+    "skills/hermes/verdikta-discover/SKILL.md",
+    "skills/verdikta-bounties-onboarding/SKILL.md",
+    "skills/verdikta-discover/SKILL.md"
+  ]
+}

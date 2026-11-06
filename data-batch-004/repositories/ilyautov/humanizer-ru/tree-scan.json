@@ -1,0 +1,10 @@
+{
+  "repository": "ilyautov/humanizer-ru",
+  "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626",
+  "tree_entries": 282,
+  "candidate_skill_paths": [
+    "eval/candidates/local-edit-scope/SKILL.md",
+    "eval/candidates/local-edit/SKILL.md",
+    "skills/humanizer-ru/SKILL.md"
+  ]
+}

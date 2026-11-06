@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:44:47.969841+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 20,
+  "saved_skill_entries": 20,
+  "unique_entry_texts": 20,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "checkout-page/ecommerce-skills",
+      "commit_sha": "c12363338947f8072ef1b63451cbe080ee4a9ee1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 52,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/checkout-page/ecommerce-skills/c12363338947f8072ef1b63451cbe080ee4a9ee1.json"
+    }
+  ],
+  "errors": []
+}

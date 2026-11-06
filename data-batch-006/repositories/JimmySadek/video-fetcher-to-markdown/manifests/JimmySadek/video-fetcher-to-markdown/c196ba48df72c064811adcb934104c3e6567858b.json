@@ -1,0 +1,236 @@
+{
+  "repository": "JimmySadek/video-fetcher-to-markdown",
+  "commit_sha": "c196ba48df72c064811adcb934104c3e6567858b",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8e049137d6c6ab68a1d9f88d4aa7f4c014e50290",
+      "bytes": 983,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/.github/workflows/ci.yml",
+      "sha256": "d67e02ba819dd814379692d71475c87062d1ed1c9bf06ba56b060107fba79f18",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".github/workflows/sync-legacy-master.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "23573d5abaaef46b423b236334ee71276962cfc2",
+      "bytes": 443,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/.github/workflows/sync-legacy-master.yml",
+      "sha256": "6ceac236d231684d558f34dbeb6c8c8b508214d7ad5e27bda53b0d49129fcd40",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/.github/workflows/sync-legacy-master.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "124727f0cf97bc39ebbac24360b5000b5fbcf647",
+      "bytes": 36,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/.gitignore",
+      "sha256": "dfccd2d4a57094f6702cf1f1c82dd86b390af24f9238e595bf8b3dfe86a7eafc",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/.gitignore"
+    },
+    {
+      "path": ".scripts/verify-isolated-install.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "4ee02df644605d66dd5304c6e8b416555b592cf6",
+      "bytes": 3279,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/.scripts/verify-isolated-install.sh",
+      "sha256": "2aa38d1b6c81a9c29bf6b3da076dd5388dd8858641321b8f83f2d463f51a503b",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/.scripts/verify-isolated-install.sh"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6c4b59b728a5b761d95f87950377fa54a4f9f642",
+      "bytes": 1066,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/LICENSE",
+      "sha256": "f64eee896f472a1c25aa66f8b339d3cdbb2651a9f97815bad458da81c95527dd",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "244313c152140def6d6ca8cda1cc9076f63c0a93",
+      "bytes": 20362,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/README.md",
+      "sha256": "ce8e517afbf1cae5cf9d7cad7b69d98ba5805b50bd27eec13093efe2bef08e32",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bc64d3518d2394172f527ab8f0d0d9f10a02e38c",
+      "bytes": 12260,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/SKILL.md",
+      "sha256": "74ba6c4d1cab0eaa0c9e5fd6ec966f5233bb29e8a175a0bfed44ce389d956ffd",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/SKILL.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "41b6964b93286f7a2be7f07ac46bd4ab78a4ea72",
+      "bytes": 258,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/agents/openai.yaml",
+      "sha256": "f6275a8ea703f124a4d674002c68fd844a8f1c88cd5b840ec5362ce4f4459628",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/agents/openai.yaml"
+    },
+    {
+      "path": "assets/banner.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e238f0120b68db5c70eab761b537149a65928f2",
+      "bytes": 1595851,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/assets/banner.png",
+      "sha256": "9322373506c89e47d85c86fb547b4a47907285bd9c275484b9e601b0d9ab37b2",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5164b26ce4fd4338328f3079fb2983f13959ee65",
+      "bytes": 55,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/requirements.txt",
+      "sha256": "5903635863ce7421bae03ddc9e84123e6a9f3ca01d67ca43836eb6832b5729e7",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/requirements.txt"
+    },
+    {
+      "path": "scripts/browser_media_links.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "53510eccbc994bae1ea7950b90ca7799b5b9fcd2",
+      "bytes": 2797,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/scripts/browser_media_links.js",
+      "sha256": "37f7aeec60e5e354795afedb7214259b7ec8243bfc6fe83c64f8a03f664b6e61",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/scripts/browser_media_links.js"
+    },
+    {
+      "path": "scripts/fetch_media.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1b87f138e76690c053b6fd6868786c656292e6c0",
+      "bytes": 29179,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/scripts/fetch_media.py",
+      "sha256": "3efc0c1795e4196bd2f522bcf6e8dcb6d1e7812612f56593fe1d2fc5332d6114",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/scripts/fetch_media.py"
+    },
+    {
+      "path": "scripts/fetch_transcript.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "c3eb733e24f4c430dfb6801706a8b962a7c3265e",
+      "bytes": 34838,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/scripts/fetch_transcript.py",
+      "sha256": "0b43e4e7372bfb3ea24f3da0b6ed3311649ebf5ce6b21a16ced15560418bd945",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/scripts/fetch_transcript.py"
+    },
+    {
+      "path": "specs/media-providers.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "23669ecbafa5099eb9043f840431a81e36da9d83",
+      "bytes": 5213,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/specs/media-providers.md",
+      "sha256": "6d19f8459133c0350b6fc42a1e29a0c38e794696b899a8a6a752d18b71a7b175",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/specs/media-providers.md"
+    },
+    {
+      "path": "specs/trust-hub-audit.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f1bfe05cf7ec5a7b0a971e18082dec880ba8bbe3",
+      "bytes": 6384,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/specs/trust-hub-audit.md",
+      "sha256": "c1abc65dbf1463f93c3a6d23fdb15b6f87544d5dcd97e9288f5b075cd9974e02",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/specs/trust-hub-audit.md"
+    },
+    {
+      "path": "specs/youtube-fetcher-reliability-and-languages.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "93536e3aa9c8e1d871d16ae93176bcb7d250557b",
+      "bytes": 7681,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/specs/youtube-fetcher-reliability-and-languages.md",
+      "sha256": "827cc714ebafa7c4285e687d60ecefc4d7ac07b5a27a2d49a37652882153ba11",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/specs/youtube-fetcher-reliability-and-languages.md"
+    },
+    {
+      "path": "specs/youtube-fetcher-v1-1-release-and-distribution.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "916884634cffa011a0ef44aae61ad08439f80561",
+      "bytes": 59875,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/specs/youtube-fetcher-v1-1-release-and-distribution.html",
+      "sha256": "172ab3a7ce0f89318d4292df59915e26d42c013c997b71ad1316422ae72d3da3",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/specs/youtube-fetcher-v1-1-release-and-distribution.html"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e7a13601ccd241f7d2a35a03ff89d46136751302",
+      "bytes": 21255,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/tests/test_cli.py",
+      "sha256": "874883ade36a1001ee9a38d3adcd4184739b9727f2410798d50cd7c0b36cdabd",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/tests/test_cli.py"
+    },
+    {
+      "path": "tests/test_fetch_media.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fdbebeed343ccb35ac8b0e8d5a327e97e6f41214",
+      "bytes": 12173,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/tests/test_fetch_media.py",
+      "sha256": "f063469b5e3ea21c1f58c9c0d67b3519b0ca42598beed1650a95d31f29b1b663",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/tests/test_fetch_media.py"
+    },
+    {
+      "path": "tests/test_fetch_transcript.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "004c99881a98098c32c349bdde700b21b7ad0bbf",
+      "bytes": 8052,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/tests/test_fetch_transcript.py",
+      "sha256": "c433ffc050bc23e21a998ba7929d33103d6a3a5ea08c7e767fdff9265eac5f1a",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/tests/test_fetch_transcript.py"
+    },
+    {
+      "path": "tests/test_skill_bundle.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dcd6717dcabbdadfbbc8721b7fbaf6d78ddf0422",
+      "bytes": 2069,
+      "source_url": "https://github.com/JimmySadek/video-fetcher-to-markdown/blob/c196ba48df72c064811adcb934104c3e6567858b/tests/test_skill_bundle.py",
+      "sha256": "ac7e36eda251b5e0611c45a21fc13503d75dd4c863aa8200dad2385854741bb1",
+      "status": "saved",
+      "raw_path": "raw/JimmySadek/video-fetcher-to-markdown/c196ba48df72c064811adcb934104c3e6567858b/tests/test_skill_bundle.py"
+    }
+  ]
+}

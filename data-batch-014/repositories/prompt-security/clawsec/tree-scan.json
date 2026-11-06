@@ -1,0 +1,23 @@
+{
+  "repository": "prompt-security/clawsec",
+  "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+  "tree_entries": 547,
+  "candidate_skill_paths": [
+    "skills/claw-release/SKILL.md",
+    "skills/clawsec-clawhub-checker/SKILL.md",
+    "skills/clawsec-feed/SKILL.md",
+    "skills/clawsec-nanoclaw/SKILL.md",
+    "skills/clawsec-scanner/SKILL.md",
+    "skills/clawsec-suite/SKILL.md",
+    "skills/clawtributor/SKILL.md",
+    "skills/hermes-attestation-guardian/SKILL.md",
+    "skills/hermes-traffic-guardian/SKILL.md",
+    "skills/nanoclaw-traffic-guardian/SKILL.md",
+    "skills/openclaw-audit-watchdog/SKILL.md",
+    "skills/openclaw-traffic-guardian/SKILL.md",
+    "skills/picoclaw-security-guardian/SKILL.md",
+    "skills/picoclaw-self-pen-testing/SKILL.md",
+    "skills/picoclaw-traffic-guardian/SKILL.md",
+    "skills/soul-guardian/SKILL.md"
+  ]
+}

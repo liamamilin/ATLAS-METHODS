@@ -1,0 +1,312 @@
+{
+  "repository": "op7418/NanoBanana-PPT-Skills",
+  "commit_sha": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+  "files": [
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c4194e4a6ec8da532d46c5293df5811b3256d295",
+      "bytes": 4282,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/.env.example",
+      "sha256": "a2a9fcca4f46b1e6ed23a5f4f20166530d4c782e92b2d112640d9ca53c37fdf2",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/.env.example"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "22d3a5cba1a69c84649d4f151381e9aca0dffc76",
+      "bytes": 395,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/.gitignore",
+      "sha256": "13284385918bc59f7e76d12a80e10ab02e6ccf2e3c906b4ad18cd4ceeef2fc2b",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/.gitignore"
+    },
+    {
+      "path": "ANTIGRAVITY_WORKFLOW.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6d069a769c4b2a8ee1b1553bb7a255266318bb44",
+      "bytes": 15197,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ANTIGRAVITY_WORKFLOW.md",
+      "sha256": "8ed1ea0324076db921fb554465ed7b2cee6f8864afab4098f3082a894de7b7cd",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ANTIGRAVITY_WORKFLOW.md"
+    },
+    {
+      "path": "API_MANAGEMENT.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "02700542ca2e09ce5e9791a6a370f7d89f6db759",
+      "bytes": 7676,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/API_MANAGEMENT.md",
+      "sha256": "8216703a9906812d1c941f172708525807a5e3a32628ea512a01a4a9c5deff72",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/API_MANAGEMENT.md"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3e9196e67be43f1b4514f2aabc5d10a7b5bbcd8e",
+      "bytes": 24984,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ARCHITECTURE.md",
+      "sha256": "84810ed480074cfe603b86343791503973e8c16e51da37fdceccc52d9894b562",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ARCHITECTURE.md"
+    },
+    {
+      "path": "ENV_SETUP.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e51ca314f8d6de16fc50424be03a03fec5fac9ef",
+      "bytes": 6043,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ENV_SETUP.md",
+      "sha256": "f688763d1fc095c56e0efe9c28bec8460eb783e550876e6350e44dd592d59687",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/ENV_SETUP.md"
+    },
+    {
+      "path": "PPT-Skills-Demo.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ecb167fe2c747e28aab032647f16ce5c90aff6f1",
+      "bytes": 2660438,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/PPT-Skills-Demo.mp4",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ac77f28a10b43f3f52544b58c7f9ab714228daa3",
+      "bytes": 4755,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/QUICKSTART.md",
+      "sha256": "6b834176555aa4e3883fc7e47aaa9fb7354279aeaaacfc1439611625374b31ff",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/QUICKSTART.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2801bb442b4c8890eb19e7b88f615abcbf3220b4",
+      "bytes": 23761,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/README.md",
+      "sha256": "2a4e9a8fd2006dce5d01fa8ffaab552b7369dd1e08f4036c0e8d87ab36110869",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/README.md"
+    },
+    {
+      "path": "README_VIDEO_EXAMPLES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aedb7452b74d6021e32a6dd811328703f333a9f2",
+      "bytes": 7767,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/README_VIDEO_EXAMPLES.md",
+      "sha256": "d18cca13e8f394610ff9c3005a61c98cac27bc8295847684e4e23a745c624cbe",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/README_VIDEO_EXAMPLES.md"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "336033ffa3229839bf00a63b56f20bd0ab9bfb95",
+      "bytes": 5498,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SECURITY.md",
+      "sha256": "24485b9284641741e54082edeca30a35d5c99a37451a777783045f3f2e7b92fc",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SECURITY.md"
+    },
+    {
+      "path": "SETUP_COMPLETE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8f32c8d480bfe796ef64c9390b994d919e367e09",
+      "bytes": 4410,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SETUP_COMPLETE.md",
+      "sha256": "72a86b3a57ea3e58bf70431a030799f0d1569a55d847bc50d3154b8a1a5dec6a",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SETUP_COMPLETE.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dac0c7fef481009ef74ca042c3eb0156c00a3b74",
+      "bytes": 15970,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SKILL.md",
+      "sha256": "7eed995592ffd0b19f8aaa75d8d5b280b5c112af94b5467772cdc14b9e24b722",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SKILL.md"
+    },
+    {
+      "path": "generate_ppt.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "c5e9d8dea1a88fa712e3ce263868b22056bd1a44",
+      "bytes": 13146,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/generate_ppt.py",
+      "sha256": "37294140b21e4c49d65b8790257b55862cfeb1b72003ca09b79779a2e1ff1867",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/generate_ppt.py"
+    },
+    {
+      "path": "generate_ppt_video.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d4a776f23a693a5537479114b4e7cd99fad7a3de",
+      "bytes": 14603,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/generate_ppt_video.py",
+      "sha256": "ca72d3e6813b173d489dc00ac49b890bcc4991e4aceaea5c673f2f66258ecfb4",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/generate_ppt_video.py"
+    },
+    {
+      "path": "install_as_skill.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "8e01a21ca5a995cb253a2abc040ebd0b3503a10b",
+      "bytes": 5573,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/install_as_skill.sh",
+      "sha256": "54b02bf1e50e0e81c3b0bcebf854a15997a1d1cb2e1cb6499fe23b3f78f69145",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/install_as_skill.sh"
+    },
+    {
+      "path": "kling_api.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f69fa7ef3a0de3e3e4fb19a88476b61e8258f2cf",
+      "bytes": 13661,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/kling_api.py",
+      "sha256": "bb4285c3e707871a5a0069f8a90ca68b7a55a38a03502f0267dbc5bed2aab6b8",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/kling_api.py"
+    },
+    {
+      "path": "prompt_file_reader.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "690ef7e9922bcaab2b3bee04542b263d1147da73",
+      "bytes": 3594,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/prompt_file_reader.py",
+      "sha256": "713c78b8c194b29d80bb1d12f37f7f382c579827b7a9561657a6939243868d74",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/prompt_file_reader.py"
+    },
+    {
+      "path": "prompts/transition_template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a47ab057c9c7cc5ffce6491db33b8609b37df355",
+      "bytes": 2291,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/prompts/transition_template.md",
+      "sha256": "d97ec495263d8b4b73e59885edbeb167af6747917ea2cc1f99c3bfcda8eb3adb",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/prompts/transition_template.md"
+    },
+    {
+      "path": "run.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "9396659241b2757635d507ac1e655c254439116a",
+      "bytes": 1361,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/run.sh",
+      "sha256": "33eb34291a45a23fe39bebd5aec7801c0d6042f34a7831831d7d0d4f7413c63c",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/run.sh"
+    },
+    {
+      "path": "simple_transition_prompt_generator.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "91951cc2e25116e2a27b6103e3645c178441aa76",
+      "bytes": 5513,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/simple_transition_prompt_generator.py",
+      "sha256": "085921d46853287e1846a6be46a6eea286740bf68dea28894faf58aaecaec494",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/simple_transition_prompt_generator.py"
+    },
+    {
+      "path": "styles/gradient-glass.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a67bb9b49fa3e299260bd354726d720d32df302d",
+      "bytes": 4005,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/styles/gradient-glass.md",
+      "sha256": "fc90216d8c6824a66158d51e1b5e2770060d6e26d67014ae031662a58daaab94",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/styles/gradient-glass.md"
+    },
+    {
+      "path": "styles/vector-illustration.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7af37bf71ba0f4b6716a8a7bf96f67611395cc2a",
+      "bytes": 4928,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/styles/vector-illustration.md",
+      "sha256": "d5d88ce3c82472618cd6bb4e7e85d42b47376c11a5cea53710e72c332e02cf43",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/styles/vector-illustration.md"
+    },
+    {
+      "path": "templates/video_viewer.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2340e608ed8648d067077dd0ec2a0c3795eec318",
+      "bytes": 13805,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/templates/video_viewer.html",
+      "sha256": "01ddc652cadee29522deb2c5e9478501b9f94ce5a2a422956fe62cfcc414b38b",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/templates/video_viewer.html"
+    },
+    {
+      "path": "templates/viewer.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d57b2f1878b69781d5c5db13f3fb6544839bc281",
+      "bytes": 9723,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/templates/viewer.html",
+      "sha256": "19374fafedf78aac9658345d0565b86d1da01aa57da437244e05265b9f84396a",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/templates/viewer.html"
+    },
+    {
+      "path": "transition_prompt_generator.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3afec246c5d66bd715d8b2fd05c29f8132173e53",
+      "bytes": 10244,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/transition_prompt_generator.py",
+      "sha256": "9d608dd1dbe821736733c64795b5dd6106d7e4b899e8517b7399ad998e0ef5ec",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/transition_prompt_generator.py"
+    },
+    {
+      "path": "video_composer.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "40492faa15d41b11857fc9443a179b87555cd569",
+      "bytes": 16112,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/video_composer.py",
+      "sha256": "f1e77b84b06dc8d4c7bc8811559b0ebc066e5106f36d08d718bd20d9747f8dba",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/video_composer.py"
+    },
+    {
+      "path": "video_materials.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bf3fc765f315df7f111fc27302557281c4d808e7",
+      "bytes": 15931,
+      "source_url": "https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/video_materials.py",
+      "sha256": "e2c52d3fc49558ed50c22f43f426b62da5433417eb9a2276ddb5d5f1d4ff2741",
+      "status": "saved",
+      "raw_path": "raw/op7418/NanoBanana-PPT-Skills/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/video_materials.py"
+    }
+  ]
+}

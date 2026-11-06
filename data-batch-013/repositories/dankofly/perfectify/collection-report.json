@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:10:18.103648+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "dankofly/perfectify",
+      "commit_sha": "8c4b8f11008df36896ebb4de610d7ad2b52fe68c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 31,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/dankofly/perfectify/8c4b8f11008df36896ebb4de610d7ad2b52fe68c.json"
+    }
+  ],
+  "errors": []
+}

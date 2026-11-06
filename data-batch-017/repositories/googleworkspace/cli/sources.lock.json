@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9"
+    }
+  ]
+}

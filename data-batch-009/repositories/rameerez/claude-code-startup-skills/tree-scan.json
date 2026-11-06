@@ -1,0 +1,12 @@
+{
+  "repository": "rameerez/claude-code-startup-skills",
+  "commit_sha": "410f81f83e4ac309032eab3d3265353f97ea665f",
+  "tree_entries": 9,
+  "candidate_skill_paths": [
+    "skills/compress-images/SKILL.md",
+    "skills/customer-empathy/SKILL.md",
+    "skills/download-video/SKILL.md",
+    "skills/transcribe-video/SKILL.md",
+    "skills/x-post/SKILL.md"
+  ]
+}

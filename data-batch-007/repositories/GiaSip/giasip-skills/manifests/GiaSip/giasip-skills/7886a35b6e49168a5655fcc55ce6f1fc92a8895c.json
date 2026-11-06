@@ -1,0 +1,302 @@
+{
+  "repository": "GiaSip/giasip-skills",
+  "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "75477474674a4890f83bafb6353cb235740dc268",
+      "bytes": 368,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.agents/plugins/marketplace.json",
+      "sha256": "5a82b62255fba64668907228dfe96220af4d2d58984e4ab0e25b29081b975518",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.agents/plugins/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c7ac442b9f672554c0c8882faa8a5e9037bd12d1",
+      "bytes": 521,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.claude-plugin/marketplace.json",
+      "sha256": "95ddcd0848143462caf913ca349a1204c022528a49605b4e2f1865ce3cd1f9af",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c370af9d1e4ef75e0cbbb799049f95c2b5f65c6",
+      "bytes": 398,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.claude-plugin/plugin.json",
+      "sha256": "47da97714338d72b2753e4db20732c04b03ca2ec3242ef025280a20e258c551d",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "42d9ec3bbfc013b377b044ae796dbe97f1c35ad6",
+      "bytes": 208,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.gitignore",
+      "sha256": "7f1b36e0ca4fa90e47bec677bde5d6ebd8d8ec3bf681b8aa6bc9496b126bb2a7",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/.gitignore"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4d96764a2fdd5e02b064506a121bf70b2a701f10",
+      "bytes": 26380,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/CHANGELOG.md",
+      "sha256": "9e731e034cc3902f34fa03741ae883649257b14f69c025ee34a8183d41ee207d",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43d5f53a0fae93d128635a80c15a4fb36b8b3aef",
+      "bytes": 1063,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/LICENSE",
+      "sha256": "dc1cd728530356b95de7eacedcad3ec8e9acfb98d7ea74de4c4e27a8e7b788e4",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1c7e6643439f69461ee316e4b02982ed72b38185",
+      "bytes": 12913,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/README.md",
+      "sha256": "a443a81480a5d0db6ba635693b5da78cb190fd618f6cccbc4cd27d6965f0e5de",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/README.md"
+    },
+    {
+      "path": "docs/CODEX-PLUGIN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "883653fba9a7d77ddc38c9e88099868022183588",
+      "bytes": 2110,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/docs/CODEX-PLUGIN.md",
+      "sha256": "f00602fd04a6196a49fd9acd75a5f2f0b2b8b9b61305f6805bd39a91559f629c",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/docs/CODEX-PLUGIN.md"
+    },
+    {
+      "path": "docs/assets/research-walkthrough.gif",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ce0fbdb4803143d03974d2adc61d3d4ce0542d5f",
+      "bytes": 227422,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/docs/assets/research-walkthrough.gif",
+      "sha256": "904a5a8fc937f011d067c98107273ddb9d7a9ffd2658b27abb5e9560ae389f4d",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/research-example.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f435ffc84cc361099187862cf5f7dc4263a2149f",
+      "bytes": 1400,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/docs/research-example.md",
+      "sha256": "84631e141636070f06bee9307c4d360d7c53cd7a76d5ae50890274980249a68b",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/docs/research-example.md"
+    },
+    {
+      "path": "locales/zh/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d10ba2466f5ad15b8a28b1728fda6dcd11b9589c",
+      "bytes": 9863,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/README.md",
+      "sha256": "8f9ec568ab65114f0bf82bbaa9081f0edcb7d4a115e405079ba43dd12b7d89d6",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/README.md"
+    },
+    {
+      "path": "locales/zh/skills/giasip-dispatch/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d4db8c52007d3b8587bb3a441bf9b849c2c62cee",
+      "bytes": 13986,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/skills/giasip-dispatch/SKILL.md",
+      "sha256": "22d8b1cce20b384ddfcf7136a3521c0aa9c4e854298c569a693838f1ba87c5f0",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/skills/giasip-dispatch/SKILL.md"
+    },
+    {
+      "path": "locales/zh/skills/giasip-research/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c0580476342aae3c1243c06c618b624f7ed204bf",
+      "bytes": 1425,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/skills/giasip-research/README.md",
+      "sha256": "e23b455beffb765aedb61a4fef2cc6ad4bf6f68498b264767a15d29ba4ba4244",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/locales/zh/skills/giasip-research/README.md"
+    },
+    {
+      "path": "plugins/giasip/.codex-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e0ec1f78bd1b848fae5a4b66cf90e461ad5f1c69",
+      "bytes": 1187,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/.codex-plugin/plugin.json",
+      "sha256": "6bc4563f102b149b5395cfe36bd5ba39ae40c8538c0c5f5444f949413a242790",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/.codex-plugin/plugin.json"
+    },
+    {
+      "path": "plugins/giasip/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e70e1df149c9dea3c9321071f98328c07b610eca",
+      "bytes": 533,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/README.md",
+      "sha256": "e162ba2894b82d42ef76daeb98a12d2e876fa08b34da515a3c1d44ecbf2ed709",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/README.md"
+    },
+    {
+      "path": "plugins/giasip/skills/research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a2139dbe52517a52ffc76e3c0bd692089f805591",
+      "bytes": 2021,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/skills/research/SKILL.md",
+      "sha256": "49818a2fb4c1a4b2843ce5220f046f4b68e528ae63c2578f2ca746c7245d0cfc",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/plugins/giasip/skills/research/SKILL.md"
+    },
+    {
+      "path": "skills/giasip-dispatch/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8784d6b250c6c463a4d805bb7c052b17948814ea",
+      "bytes": 17605,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/SKILL.md",
+      "sha256": "da6078181017b02a3bc3cca3da589e801f1db595d6b647fde30896877180815f",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/SKILL.md"
+    },
+    {
+      "path": "skills/giasip-dispatch/references/model-roster.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "df03188fff0558fe348d41a21fd22c347f99a314",
+      "bytes": 5643,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/references/model-roster.md",
+      "sha256": "a3fb1d3a2815f97ffceab21175bea316bcbcd513d19b06db9ebb00626056b2c8",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/references/model-roster.md"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/api-dispatch.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "0c5c6a8f02a2000b1068a931c8cffd7dcf37e95f",
+      "bytes": 16196,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/api-dispatch.sh",
+      "sha256": "83dcd61a512d9b9ff6d0ab55b98efa7926bf0a26c7aa6233662469f2a77f27f0",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/api-dispatch.sh"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/codex-appserver.mjs",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "3cf562c1209fa2f52dc0fdd4f9df5a5135d122be",
+      "bytes": 15103,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/codex-appserver.mjs",
+      "sha256": "6bbae2e1d7e33df8b7c0672e5d6b27b0f614d7fd99dd81b25d36cdde57d45fe4",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/codex-appserver.mjs"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/dispatch-persist.mjs",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9c51eedc0f316938be0dff0b379a3330a2da72d9",
+      "bytes": 4724,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/dispatch-persist.mjs",
+      "sha256": "387470980bce8147a54f617130463ea920219049007e737e301e5527dc1f398a",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/dispatch-persist.mjs"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/gemini-supervisor.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "10a47ff7ff17415da8d3f8212b5e2d62331b10be",
+      "bytes": 11124,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/gemini-supervisor.sh",
+      "sha256": "4de742d2257eed61ed6a78bba73e1436ed36e9cd8b42c9297d204f7e6f9d5d25",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/gemini-supervisor.sh"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/kimi-dispatch.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "d8195db44fb0568b740c60295668f24da11c6cf1",
+      "bytes": 10866,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/kimi-dispatch.sh",
+      "sha256": "86fde8a9ec36c2fa8e430bb6562d3352855bb036d6e8399508bd8c75812af0b2",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/kimi-dispatch.sh"
+    },
+    {
+      "path": "skills/giasip-dispatch/scripts/stop-review-gate.mjs",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "274d63c38afb3e63177e1e2a9ebc91955f46aecc",
+      "bytes": 5129,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/stop-review-gate.mjs",
+      "sha256": "a2b806392c3c4e1ea8015a9e72ca79ca4f9b5de027f5b188cede6552656af3bd",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-dispatch/scripts/stop-review-gate.mjs"
+    },
+    {
+      "path": "skills/giasip-research/FEEDBACK.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "54c906aaf9194822b122451fa58bb20d4a688b10",
+      "bytes": 168,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-research/FEEDBACK.md",
+      "sha256": "7135cd26c0998697456d13dbdb41de12f21be9efce3a2ac1bef55331a27769cb",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-research/FEEDBACK.md"
+    },
+    {
+      "path": "skills/giasip-research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c0b2852220db779be21d7e4ddc304cacafda2081",
+      "bytes": 2028,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-research/SKILL.md",
+      "sha256": "412776cf73ccd92922c0d925aea826297b92709fac8d56b07f8564ee75fb510c",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/skills/giasip-research/SKILL.md"
+    },
+    {
+      "path": "tests/test_giasip_research_portability.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "af50a159996ddebc001d4628b2d46c69806eed47",
+      "bytes": 7501,
+      "source_url": "https://github.com/GiaSip/giasip-skills/blob/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/tests/test_giasip_research_portability.py",
+      "sha256": "cc007cae34d2477f5a6876aaab7cae4cf3f4078cc943d46caba50740031d1b47",
+      "status": "saved",
+      "raw_path": "raw/GiaSip/giasip-skills/7886a35b6e49168a5655fcc55ce6f1fc92a8895c/tests/test_giasip_research_portability.py"
+    }
+  ]
+}

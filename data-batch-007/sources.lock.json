@@ -1,0 +1,119 @@
+{
+  "sources": [
+    {
+      "repository": "Atomic-Mail/atomic-mail-agentic",
+      "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91",
+      "collection_root": "repositories/Atomic-Mail/atomic-mail-agentic"
+    },
+    {
+      "repository": "AugustusW/audio-tldr-skill",
+      "commit_sha": "124d51678cb1ed95984b3eda687c5085300416d9",
+      "collection_root": "repositories/AugustusW/audio-tldr-skill"
+    },
+    {
+      "repository": "GiaSip/giasip-skills",
+      "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c",
+      "collection_root": "repositories/GiaSip/giasip-skills"
+    },
+    {
+      "repository": "MSG91/m91-skill",
+      "commit_sha": "6c552cab6fc9509373cad6a2d581dbab3b5b2a2d",
+      "collection_root": "repositories/MSG91/m91-skill"
+    },
+    {
+      "repository": "Neeeophytee/finding-unknowns-skills",
+      "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc",
+      "collection_root": "repositories/Neeeophytee/finding-unknowns-skills"
+    },
+    {
+      "repository": "OneWave-AI/claude-skills",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+      "collection_root": "repositories/OneWave-AI/claude-skills"
+    },
+    {
+      "repository": "arifszn/slide-wright",
+      "commit_sha": "a751585b43353b6b9320a97106b59b9dea7ce817",
+      "collection_root": "repositories/arifszn/slide-wright"
+    },
+    {
+      "repository": "bablobanov/hermes-agent-telegram-checklist",
+      "commit_sha": "376421d229e48d46781e7eb625c62619fff7e375",
+      "collection_root": "repositories/bablobanov/hermes-agent-telegram-checklist"
+    },
+    {
+      "repository": "chrisryugj/kordoc",
+      "commit_sha": "9effd38c2a4248f62b5e894cc49d6fa5a949791a",
+      "collection_root": "repositories/chrisryugj/kordoc"
+    },
+    {
+      "repository": "cyperx84/claude-skills-mental-models",
+      "commit_sha": "4f7d092995ea01d4f9295052b8d96b506e00a007",
+      "collection_root": "repositories/cyperx84/claude-skills-mental-models"
+    },
+    {
+      "repository": "dmoshehun-prog/learn-from-materials",
+      "commit_sha": "f8849746d85c5ebe8556fdb8f388783ac7483c8b",
+      "collection_root": "repositories/dmoshehun-prog/learn-from-materials"
+    },
+    {
+      "repository": "forjd/better-writing",
+      "commit_sha": "bbbfcb4898cd9b3bc97ee5643db143ee2990ea96",
+      "collection_root": "repositories/forjd/better-writing"
+    },
+    {
+      "repository": "kgraph57/mckinsey-style-visualization-skill",
+      "commit_sha": "2e7981a622232006c100e088ded89c72709895da",
+      "collection_root": "repositories/kgraph57/mckinsey-style-visualization-skill"
+    },
+    {
+      "repository": "luchasarie/bro-skill",
+      "commit_sha": "6c08e7ee5eb8ef8b9bf0588d400170654abc256b",
+      "collection_root": "repositories/luchasarie/bro-skill"
+    },
+    {
+      "repository": "manavmishra/ZeroSlop",
+      "commit_sha": "7294a405893dd388b9fbff809f58d66fe641bb44",
+      "collection_root": "repositories/manavmishra/ZeroSlop"
+    },
+    {
+      "repository": "radres/call-me",
+      "commit_sha": "b1bb4fde0f7b064c18de96b9ebc44a71893e8a41",
+      "collection_root": "repositories/radres/call-me"
+    },
+    {
+      "repository": "siril9/presentation-skill",
+      "commit_sha": "efd899c5ddf866af2ce0001c4c9340af775d4d55",
+      "collection_root": "repositories/siril9/presentation-skill"
+    },
+    {
+      "repository": "teableio/agent-skills",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21",
+      "collection_root": "repositories/teableio/agent-skills"
+    },
+    {
+      "repository": "tronghieu/agent-skills",
+      "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+      "collection_root": "repositories/tronghieu/agent-skills"
+    },
+    {
+      "repository": "vaibhavarora14/job-application-agent",
+      "commit_sha": "213f5061c7b2bb5362bd6876f7137cd5eac3f360",
+      "collection_root": "repositories/vaibhavarora14/job-application-agent"
+    },
+    {
+      "repository": "voygr-tech/placecall",
+      "commit_sha": "1d9c85e7a6314107a51fcfba77ef98c57644cf14",
+      "collection_root": "repositories/voygr-tech/placecall"
+    },
+    {
+      "repository": "wgwtest/novel-writing",
+      "commit_sha": "838729695148008d42c01bd7c3c0c1a5c15de830",
+      "collection_root": "repositories/wgwtest/novel-writing"
+    },
+    {
+      "repository": "ysskrishna/ai-agent-skills",
+      "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0",
+      "collection_root": "repositories/ysskrishna/ai-agent-skills"
+    }
+  ]
+}

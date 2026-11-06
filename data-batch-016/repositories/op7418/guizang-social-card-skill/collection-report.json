@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:25:25.858621+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "op7418/guizang-social-card-skill",
+      "commit_sha": "64d02d435fb092d3b403455a875e842fc8f29b8b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 41,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/op7418/guizang-social-card-skill/64d02d435fb092d3b403455a875e842fc8f29b8b.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "citlyze/citlyze-skills",
+  "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+  "tree_entries": 8,
+  "candidate_skill_paths": [
+    "skills/aeo-page-audit/SKILL.md",
+    "skills/citlyze-action-plan/SKILL.md",
+    "skills/citlyze-citation-gap/SKILL.md",
+    "skills/citlyze-prompt-audit/SKILL.md",
+    "skills/citlyze-visibility-report/SKILL.md"
+  ]
+}

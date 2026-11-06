@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "archcore-ai/archcore",
+      "commit_sha": "e47d597ceddcb3fafcd1f270165fabe6976e6161"
+    }
+  ]
+}

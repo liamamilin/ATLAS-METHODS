@@ -1,0 +1,9 @@
+{
+  "repository": "marvkr/better-design",
+  "commit_sha": "175e7ba49bcf83857abc32933686b5aa3abb197e",
+  "tree_entries": 6354,
+  "candidate_skill_paths": [
+    ".agents/skills/animate-text/SKILL.md",
+    "skills/better-design/SKILL.md"
+  ]
+}

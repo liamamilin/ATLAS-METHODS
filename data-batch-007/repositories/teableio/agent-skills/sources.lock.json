@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "teableio/agent-skills",
+      "commit_sha": "df55d574006aea57ffc838ea37fb066136262c21"
+    }
+  ]
+}

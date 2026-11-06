@@ -1,0 +1,9 @@
+{
+  "repository": "supercorp-ai/supercov",
+  "commit_sha": "35a51f61a25f1230d1a5fe68c16851c03fc8b72f",
+  "tree_entries": 868,
+  "candidate_skill_paths": [
+    "plugins/supercov/skills/supercov-security/SKILL.md",
+    "plugins/supercov/skills/supercov/SKILL.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "tt-a1i/archify",
+  "commit_sha": "a4065941f12be7967436261d9934784e381d423c",
+  "tree_entries": 1189,
+  "candidate_skill_paths": [
+    ".agents/skills/archify-review/SKILL.md",
+    ".agents/skills/archify-tuning/SKILL.md",
+    ".agents/skills/simplify-codebase/SKILL.md",
+    ".agents/skills/test-value/SKILL.md",
+    "archify/SKILL.md"
+  ]
+}

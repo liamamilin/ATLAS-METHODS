@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:33.844973+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Koloyaaa/foreign-academic-translator-skill",
+      "commit_sha": "6683b4df355095e10c83a6e332519f9bff882a75",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 690,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/Koloyaaa/foreign-academic-translator-skill/6683b4df355095e10c83a6e332519f9bff882a75.json"
+    }
+  ],
+  "errors": []
+}

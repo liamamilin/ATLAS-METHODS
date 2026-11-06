@@ -1,0 +1,14 @@
+{
+  "repository": "fvadicamo/dev-agent-skills",
+  "commit_sha": "8e710c57b4aa34fec63752ccf04a47adb4a8be65",
+  "tree_entries": 51,
+  "candidate_skill_paths": [
+    "plugins/decision-records/skills/decision-records/SKILL.md",
+    "plugins/github-workflow/skills/git-commit/SKILL.md",
+    "plugins/github-workflow/skills/github-pr-creation/SKILL.md",
+    "plugins/github-workflow/skills/github-pr-merge/SKILL.md",
+    "plugins/github-workflow/skills/github-pr-review/SKILL.md",
+    "plugins/privacy-guard/skills/privacy-guard/SKILL.md",
+    "plugins/skill-authoring/skills/creating-skills/SKILL.md"
+  ]
+}

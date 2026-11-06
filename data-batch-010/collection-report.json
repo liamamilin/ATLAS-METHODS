@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-11-06T11:03:09.995132+00:00",
+  "requested_sources": 24,
+  "completed_sources": 24,
+  "indexed_snapshots": 24,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 765,
+  "saved_skill_entries": 765,
+  "distinct_skill_paths": 765,
+  "unique_entry_texts": 719,
+  "duplicate_entry_groups": 13,
+  "sources": [
+    {
+      "repository": "Egonex-AI/Understand-Anything",
+      "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 499,
+      "files_not_exported": 22,
+      "repository_manifest": "repositories/Egonex-AI/Understand-Anything/manifests/Egonex-AI/Understand-Anything/98d6dca712407b8cbf0bca21b539c197e5a7825c.json"
+    },
+    {
+      "repository": "GanyuanRan/Aegis",
+      "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 23,
+      "saved_skill_entries": 23,
+      "saved_text_files": 571,
+      "files_not_exported": 3,
+      "repository_manifest": "repositories/GanyuanRan/Aegis/manifests/GanyuanRan/Aegis/952b150a16b9cf9c702022ea779bcc6750b0d48d.json"
+    },
+    {
+      "repository": "JasonColapietro/suede-creator-skills",
+      "commit_sha": "9406183696bfe56c4c399febf2091aeb93f280a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 67,
+      "saved_skill_entries": 67,
+      "saved_text_files": 14393,
+      "files_not_exported": 98,
+      "repository_manifest": "repositories/JasonColapietro/suede-creator-skills/manifests/JasonColapietro/suede-creator-skills/9406183696bfe56c4c399febf2091aeb93f280a3.json"
+    },
+    {
+      "repository": "KhazP/vibe-coding-prompt-template",
+      "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 55,
+      "saved_skill_entries": 55,
+      "saved_text_files": 210,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/KhazP/vibe-coding-prompt-template/manifests/KhazP/vibe-coding-prompt-template/d26fb0d8a9cdac94cf99f004087620487e4da33d.json"
+    },
+    {
+      "repository": "Maksim-Burtsev/simple-man",
+      "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 136,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/Maksim-Burtsev/simple-man/manifests/Maksim-Burtsev/simple-man/bf37f83442622fe7a89d3316cd6b9bcc344523b9.json"
+    },
+    {
+      "repository": "Simon-He95/markstream-vue",
+      "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 2766,
+      "files_not_exported": 28,
+      "repository_manifest": "repositories/Simon-He95/markstream-vue/manifests/Simon-He95/markstream-vue/e16b6f24da0186a633ccb0e8368332487bb7eff4.json"
+    },
+    {
+      "repository": "aeonfun/aeon",
+      "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 115,
+      "saved_skill_entries": 115,
+      "saved_text_files": 956,
+      "files_not_exported": 34,
+      "repository_manifest": "repositories/aeonfun/aeon/manifests/aeonfun/aeon/504a21d53c0c9b485f6e90c43db83000825e1d3c.json"
+    },
+    {
+      "repository": "agiwhitelist/auteur",
+      "commit_sha": "9bca227df9877e60dc45d49783c8cbd885eccd9b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 37,
+      "files_not_exported": 12,
+      "repository_manifest": "repositories/agiwhitelist/auteur/manifests/agiwhitelist/auteur/9bca227df9877e60dc45d49783c8cbd885eccd9b.json"
+    },
+    {
+      "repository": "baskduf/FableCodex",
+      "commit_sha": "406faa1981ffe8a3b6b44e770bc2fc2ee189c8d0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 59,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/baskduf/FableCodex/manifests/baskduf/FableCodex/406faa1981ffe8a3b6b44e770bc2fc2ee189c8d0.json"
+    },
+    {
+      "repository": "browser-act/skills",
+      "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 103,
+      "saved_skill_entries": 103,
+      "saved_text_files": 295,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/browser-act/skills/manifests/browser-act/skills/593316aa0f8ccd88bdf745c92b24a50641701973.json"
+    },
+    {
+      "repository": "csthink/dashmotion",
+      "commit_sha": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 49,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/csthink/dashmotion/manifests/csthink/dashmotion/ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad.json"
+    },
+    {
+      "repository": "dembrandt/dembrandt-skills",
+      "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 45,
+      "saved_skill_entries": 45,
+      "saved_text_files": 56,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/dembrandt/dembrandt-skills/manifests/dembrandt/dembrandt-skills/8f78f13f74a2356326d0c3c21bc63e5624e6a457.json"
+    },
+    {
+      "repository": "drogers0/gh-image",
+      "commit_sha": "ca57d96dd4ac72bae5c8264a244116bd17f96ce8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 51,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/drogers0/gh-image/manifests/drogers0/gh-image/ca57d96dd4ac72bae5c8264a244116bd17f96ce8.json"
+    },
+    {
+      "repository": "eduardo-sl/go-agent-skills",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 35,
+      "saved_skill_entries": 35,
+      "saved_text_files": 162,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/eduardo-sl/go-agent-skills/manifests/eduardo-sl/go-agent-skills/e25b517bbd0c11db35f75a83a14f18848c1abdb0.json"
+    },
+    {
+      "repository": "ethos-link/rails-conventions",
+      "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 27,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/ethos-link/rails-conventions/manifests/ethos-link/rails-conventions/6a19298942d849a2a4bdda41c123fd79049c5ed2.json"
+    },
+    {
+      "repository": "foryourhealth111-pixel/Vibe-Skills",
+      "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 258,
+      "saved_skill_entries": 258,
+      "saved_text_files": 2868,
+      "files_not_exported": 31,
+      "repository_manifest": "repositories/foryourhealth111-pixel/Vibe-Skills/manifests/foryourhealth111-pixel/Vibe-Skills/bd10381417cbd890ed6f08a18bb18fb5aaf0f741.json"
+    },
+    {
+      "repository": "hqhq1025/skill-optimizer",
+      "commit_sha": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 34,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/hqhq1025/skill-optimizer/manifests/hqhq1025/skill-optimizer/b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84.json"
+    },
+    {
+      "repository": "krisyangdev/motionboard",
+      "commit_sha": "4e1b437b18cf920992c191d983e42b26654e6406",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 228,
+      "files_not_exported": 13,
+      "repository_manifest": "repositories/krisyangdev/motionboard/manifests/krisyangdev/motionboard/4e1b437b18cf920992c191d983e42b26654e6406.json"
+    },
+    {
+      "repository": "mcollina/skills",
+      "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 11,
+      "saved_skill_entries": 11,
+      "saved_text_files": 125,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/mcollina/skills/manifests/mcollina/skills/c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7.json"
+    },
+    {
+      "repository": "metalbear-co/skills",
+      "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 77,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/metalbear-co/skills/manifests/metalbear-co/skills/a5026f8013482a61b8beba78f0600d217bd76a46.json"
+    },
+    {
+      "repository": "plasma-ai/fractal",
+      "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 372,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/plasma-ai/fractal/manifests/plasma-ai/fractal/5e1c65c0a5dc367d3d4f223a997b5f010d568722.json"
+    },
+    {
+      "repository": "reliefeai/browser-relay",
+      "commit_sha": "973434bc6b339dd56d831b1ebd089a8465850844",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 125,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/reliefeai/browser-relay/manifests/reliefeai/browser-relay/973434bc6b339dd56d831b1ebd089a8465850844.json"
+    },
+    {
+      "repository": "squirrelscan/skills",
+      "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 27,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/squirrelscan/skills/manifests/squirrelscan/skills/29f17762cc1ca0696686a0ba1a10b05c65197925.json"
+    },
+    {
+      "repository": "superdesigndev/superdesign-skill",
+      "commit_sha": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 30,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/superdesigndev/superdesign-skill/manifests/superdesigndev/superdesign-skill/f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 165
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:42:16.872786+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 26,
+  "saved_skill_entries": 26,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 13,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sergebulaev/linkedin-skills",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 26,
+      "saved_skill_entries": 26,
+      "saved_text_files": 214,
+      "files_not_exported": 14,
+      "repository_manifest": "manifests/sergebulaev/linkedin-skills/8f8bc4b40a2d5419b2dcf898772b85712cfbdf41.json"
+    }
+  ],
+  "errors": []
+}

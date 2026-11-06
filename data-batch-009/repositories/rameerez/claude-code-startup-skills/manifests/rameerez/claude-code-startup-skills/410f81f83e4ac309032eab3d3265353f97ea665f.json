@@ -1,0 +1,105 @@
+{
+  "repository": "rameerez/claude-code-startup-skills",
+  "commit_sha": "410f81f83e4ac309032eab3d3265353f97ea665f",
+  "files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "78d41dccf4ba8f36105a5a4eff25734d1c239444",
+      "bytes": 393,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/.claude-plugin/plugin.json",
+      "sha256": "2457729d9f9e8dd036c06ac83004a669d52ba64f4e99932fa787bcba8ab5a562",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6a03bf647901b271a05319d1f6170092976f1105",
+      "bytes": 1061,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/LICENSE",
+      "sha256": "04c62c46bb1ae07ebb7b1e11ecc5e8d6879b92629897529fd9aaf2b106742d1b",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9d3594ea785001ba652f10b8e08f0b74bd24bb1a",
+      "bytes": 1138,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/README.md",
+      "sha256": "16005b557425fd5aa04ba26577489b9bd515eb8661b89d23a91c1bac489b6048",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/README.md"
+    },
+    {
+      "path": "skills/compress-images/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d52ff8b7b825e407dd0efd31c46fcd41917e40a4",
+      "bytes": 3790,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/compress-images/SKILL.md",
+      "sha256": "a990ce4dbb3e11f40d017ea26c0e799b967692f344fc06abc11f28c9988de695",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/compress-images/SKILL.md"
+    },
+    {
+      "path": "skills/customer-empathy/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "31601211a561e91263970d6fd39fdff41e953f73",
+      "bytes": 2318,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/customer-empathy/SKILL.md",
+      "sha256": "ed629ab684570b5442f327601fcf364c8289002270761c51b11069d87b09ab91",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/customer-empathy/SKILL.md"
+    },
+    {
+      "path": "skills/download-video/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4dd6b2ef786d229dede7b6c084082f93603c9ed1",
+      "bytes": 2035,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/download-video/SKILL.md",
+      "sha256": "352d71197c463a926a2200f118a58900f375b4ebb549d5d59f05b19bfb340f0b",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/download-video/SKILL.md"
+    },
+    {
+      "path": "skills/transcribe-video/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8fd1aaddcd5f6aaae146188cb53c3f5d7b1a4335",
+      "bytes": 4815,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/transcribe-video/SKILL.md",
+      "sha256": "06ed94e89c85499191b4d7d7d5daaf46bb1f3066ae407ad9dc4f8cb271cc1e5b",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/transcribe-video/SKILL.md"
+    },
+    {
+      "path": "skills/x-post/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "796a7a54ebae70572d8d5db72664ef0e39bd4ef0",
+      "bytes": 1264,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/x-post/SKILL.md",
+      "sha256": "9ee0a479404c244ef6e0cdd0bdd23f2bb576e46b7fa60c0a305e5c82ad6c6c41",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/x-post/SKILL.md"
+    },
+    {
+      "path": "skills/x-post/x-post.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f7292ec25259890f0b1b743f980d87f435a56d59",
+      "bytes": 7932,
+      "source_url": "https://github.com/rameerez/claude-code-startup-skills/blob/410f81f83e4ac309032eab3d3265353f97ea665f/skills/x-post/x-post.py",
+      "sha256": "5eec259158829a2bf464d96eb44f39acde5fe2e5a36917d37bbe888438be10b4",
+      "status": "saved",
+      "raw_path": "raw/rameerez/claude-code-startup-skills/410f81f83e4ac309032eab3d3265353f97ea665f/skills/x-post/x-post.py"
+    }
+  ]
+}

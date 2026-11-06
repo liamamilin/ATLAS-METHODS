@@ -1,0 +1,50 @@
+{
+  "repository": "wrsmith108/varlock-claude-skill",
+  "commit_sha": "348a435345b7ddafb4d1002d41d9e2ef3f5b6992",
+  "files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6291b1778bfff77483867687f1b125d721455778",
+      "bytes": 490,
+      "source_url": "https://github.com/wrsmith108/varlock-claude-skill/blob/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/.claude-plugin/plugin.json",
+      "sha256": "e05bdf0da35858d0c4126e1719b213f9c9b5512f6027b058b49461899e7cd34a",
+      "status": "saved",
+      "raw_path": "raw/wrsmith108/varlock-claude-skill/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "283489b0af7d505405c64db722d0697c95db5b1e",
+      "bytes": 1070,
+      "source_url": "https://github.com/wrsmith108/varlock-claude-skill/blob/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/LICENSE",
+      "sha256": "c878df00bb140f9d689175f88d844b1a1d40b89e5bd849d93e0bcc5c9e6c71da",
+      "status": "saved",
+      "raw_path": "raw/wrsmith108/varlock-claude-skill/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "628219fe86a0fe99a469c04056e8d8f3096e9ebc",
+      "bytes": 2658,
+      "source_url": "https://github.com/wrsmith108/varlock-claude-skill/blob/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/README.md",
+      "sha256": "478536b5c648d2a4d14260a414c37671301e37456ccd657ab242a4d6e31741e3",
+      "status": "saved",
+      "raw_path": "raw/wrsmith108/varlock-claude-skill/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/README.md"
+    },
+    {
+      "path": "skills/varlock/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6d153cd3521d8c215be32ef0b09ca49cccbec31b",
+      "bytes": 9706,
+      "source_url": "https://github.com/wrsmith108/varlock-claude-skill/blob/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/skills/varlock/SKILL.md",
+      "sha256": "1548230c6144ead7d00d53a37420a39ef3477d20fdcbf9760668153dfe72f5fc",
+      "status": "saved",
+      "raw_path": "raw/wrsmith108/varlock-claude-skill/348a435345b7ddafb4d1002d41d9e2ef3f5b6992/skills/varlock/SKILL.md"
+    }
+  ]
+}

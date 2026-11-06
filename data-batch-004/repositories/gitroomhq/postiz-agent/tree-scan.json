@@ -1,0 +1,9 @@
+{
+  "repository": "gitroomhq/postiz-agent",
+  "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+  "tree_entries": 67,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/postiz/SKILL.md"
+  ]
+}

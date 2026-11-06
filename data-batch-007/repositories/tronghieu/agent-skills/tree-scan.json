@@ -1,0 +1,26 @@
+{
+  "repository": "tronghieu/agent-skills",
+  "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+  "tree_entries": 319,
+  "candidate_skill_paths": [
+    "skills/bmad-run-inspector/SKILL.md",
+    "skills/brainstorm-coach/SKILL.md",
+    "skills/critical-thinking/SKILL.md",
+    "skills/cv-scorer/SKILL.md",
+    "skills/data-scientist/SKILL.md",
+    "skills/deep-reader/SKILL.md",
+    "skills/design-thinking/SKILL.md",
+    "skills/diataxis-writer/SKILL.md",
+    "skills/fiction-studio/SKILL.md",
+    "skills/manual-tester/SKILL.md",
+    "skills/market-researcher/SKILL.md",
+    "skills/problem-solver/SKILL.md",
+    "skills/product-manager/SKILL.md",
+    "skills/project-manager/SKILL.md",
+    "skills/scrum-master/SKILL.md",
+    "skills/slidewright/SKILL.md",
+    "skills/socratic-questor/SKILL.md",
+    "skills/strategy-board/SKILL.md",
+    "skills/system-prompt-creator/SKILL.md"
+  ]
+}

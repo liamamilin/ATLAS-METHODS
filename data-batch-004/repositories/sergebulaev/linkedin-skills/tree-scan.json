@@ -1,0 +1,33 @@
+{
+  "repository": "sergebulaev/linkedin-skills",
+  "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+  "tree_entries": 228,
+  "candidate_skill_paths": [
+    ".codex-marketplace/linkedin-skills/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-comment-drafter/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-content-planner/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-employee-advocacy/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-engager-analytics/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-hook-extractor/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-humanizer/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-interviewer/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-post-writer/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-profile-optimizer/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-reply-handler/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-repurposer/SKILL.md",
+    ".codex-marketplace/linkedin-skills/skills/linkedin-thread-monitor/SKILL.md",
+    "SKILL.md",
+    "skills/linkedin-comment-drafter/SKILL.md",
+    "skills/linkedin-content-planner/SKILL.md",
+    "skills/linkedin-employee-advocacy/SKILL.md",
+    "skills/linkedin-engager-analytics/SKILL.md",
+    "skills/linkedin-hook-extractor/SKILL.md",
+    "skills/linkedin-humanizer/SKILL.md",
+    "skills/linkedin-interviewer/SKILL.md",
+    "skills/linkedin-post-writer/SKILL.md",
+    "skills/linkedin-profile-optimizer/SKILL.md",
+    "skills/linkedin-reply-handler/SKILL.md",
+    "skills/linkedin-repurposer/SKILL.md",
+    "skills/linkedin-thread-monitor/SKILL.md"
+  ]
+}

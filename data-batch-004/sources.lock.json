@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "AIDevGTM/gtm-cofounder",
+      "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e",
+      "collection_root": "repositories/AIDevGTM/gtm-cofounder"
+    },
+    {
+      "repository": "Bomx/distribb-skill",
+      "commit_sha": "01bbede516a8963bff5731bbda412f0e2a364188",
+      "collection_root": "repositories/Bomx/distribb-skill"
+    },
+    {
+      "repository": "Nanako0129/sepia",
+      "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+      "collection_root": "repositories/Nanako0129/sepia"
+    },
+    {
+      "repository": "ScrapeCreators/social-media-research-skills",
+      "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+      "collection_root": "repositories/ScrapeCreators/social-media-research-skills"
+    },
+    {
+      "repository": "SupercmoHQ/superCMO-skills",
+      "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+      "collection_root": "repositories/SupercmoHQ/superCMO-skills"
+    },
+    {
+      "repository": "Vladimir-Human/humanizer-ru",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3",
+      "collection_root": "repositories/Vladimir-Human/humanizer-ru"
+    },
+    {
+      "repository": "YannisKiefer/dark-psychology-skills",
+      "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+      "collection_root": "repositories/YannisKiefer/dark-psychology-skills"
+    },
+    {
+      "repository": "aaron-he-zhu/aaron-marketing-skills",
+      "commit_sha": "9c8815c728c550cf551b82e1c6e1a307c5eae61f",
+      "collection_root": "repositories/aaron-he-zhu/aaron-marketing-skills"
+    },
+    {
+      "repository": "citlyze/citlyze-skills",
+      "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+      "collection_root": "repositories/citlyze/citlyze-skills"
+    },
+    {
+      "repository": "degausai/wonda",
+      "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a",
+      "collection_root": "repositories/degausai/wonda"
+    },
+    {
+      "repository": "explorium-ai/vibeprospecting-plugin",
+      "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0",
+      "collection_root": "repositories/explorium-ai/vibeprospecting-plugin"
+    },
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+      "collection_root": "repositories/gitroomhq/postiz-agent"
+    },
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+      "collection_root": "repositories/gooseworks-ai/goose-skills"
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7",
+      "collection_root": "repositories/heygen-com/hyperframes"
+    },
+    {
+      "repository": "ilyautov/humanizer-ru",
+      "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626",
+      "collection_root": "repositories/ilyautov/humanizer-ru"
+    },
+    {
+      "repository": "indranilbanerjee/digital-marketing-pro",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+      "collection_root": "repositories/indranilbanerjee/digital-marketing-pro"
+    },
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+      "collection_root": "repositories/infrasity-labs/dev-gtm-claude-skills"
+    },
+    {
+      "repository": "mailtrap/mailtrap-skills",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766",
+      "collection_root": "repositories/mailtrap/mailtrap-skills"
+    },
+    {
+      "repository": "nowork-studio/notfair-plugin",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05",
+      "collection_root": "repositories/nowork-studio/notfair-plugin"
+    },
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+      "collection_root": "repositories/sandbaseai/sandbase-skills"
+    },
+    {
+      "repository": "sergebulaev/linkedin-skills",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+      "collection_root": "repositories/sergebulaev/linkedin-skills"
+    },
+    {
+      "repository": "socai-io/jev-social",
+      "commit_sha": "2f02e6f4c60943e679993634ad1017b0c97efff5",
+      "collection_root": "repositories/socai-io/jev-social"
+    },
+    {
+      "repository": "taisly/agent",
+      "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef",
+      "collection_root": "repositories/taisly/agent"
+    },
+    {
+      "repository": "vanshyadav1408/Omentir",
+      "commit_sha": "238517f827581b884f9ab860815a255905867f6f",
+      "collection_root": "repositories/vanshyadav1408/Omentir"
+    }
+  ]
+}

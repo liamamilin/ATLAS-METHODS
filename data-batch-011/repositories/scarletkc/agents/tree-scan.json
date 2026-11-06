@@ -1,0 +1,19 @@
+{
+  "repository": "scarletkc/agents",
+  "commit_sha": "8e149b335e963954e9c4bafba00eedbd7de060ed",
+  "tree_entries": 54,
+  "candidate_skill_paths": [
+    "skills/antigravity-cli/SKILL.md",
+    "skills/ask-to-plan/SKILL.md",
+    "skills/codex-cli/SKILL.md",
+    "skills/devin-cli/SKILL.md",
+    "skills/grok-cli/SKILL.md",
+    "skills/marketing-copy/SKILL.md",
+    "skills/product-writing/SKILL.md",
+    "skills/scoped-change/SKILL.md",
+    "skills/talk-like-scarletkc/SKILL.md",
+    "skills/ux-writing/SKILL.md",
+    "skills/worktree-pr/SKILL.md",
+    "skills/x-content/SKILL.md"
+  ]
+}

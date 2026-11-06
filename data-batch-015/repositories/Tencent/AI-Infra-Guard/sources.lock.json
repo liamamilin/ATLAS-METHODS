@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "Tencent/AI-Infra-Guard",
+      "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74"
+    }
+  ]
+}

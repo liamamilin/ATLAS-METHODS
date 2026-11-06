@@ -1,0 +1,358 @@
+{
+  "repository": "Alisa0808/vibe-creating-skill",
+  "commit_sha": "a599301980a66eb47ddac5c15e41081b74a2759d",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "86bb9245fc53b902661cb24dc4cb8c2d2ada6658",
+      "bytes": 380,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/.gitignore",
+      "sha256": "b89c945e3692905d9154f0ff998b463e2c755bba254bd27319016bace7cf4044",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/.gitignore"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9010769e545b935c872ca05939b75cbe4cf67eb1",
+      "bytes": 2357,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/CONTRIBUTING.md",
+      "sha256": "d9c035b33938ed68d1a113cdc68c182c0e2bcb00747948ab77489e1dcdb0c88b",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5c80cf4ab070722220b8d093635b3231767543e6",
+      "bytes": 1414,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/LICENSE",
+      "sha256": "011ce57baa1b219b87eb4755560d22bf52b1b6cabbdfc7a16bf663b482fbca0d",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/LICENSE"
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dc9446f0daf8cb598a06d503be718859de4f1c7e",
+      "bytes": 1927,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/NOTICE",
+      "sha256": "882a6f44980586208a6df8fbfd1c6e6cac586037d5a848cb337656c698a1e78d",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/NOTICE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "24a1f2c0688c993a80cbaa755065b842f61d31c0",
+      "bytes": 21088,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/README.md",
+      "sha256": "28460aee81b445aa88a2fc55a0ca5451e2844fbcf5a4ce1b0d3ef3541fd24958",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/README.md"
+    },
+    {
+      "path": "README.zh.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e8f4c0c0b75baea15e695970ef3fefb4e53e8e0c",
+      "bytes": 19214,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/README.zh.md",
+      "sha256": "33083747d5ea39948b65f8da022a38bf7189301c6dbcee99897db25f8784a07d",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/README.zh.md"
+    },
+    {
+      "path": "assets/cases/case2-regular-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "532dc2abccc4484d9890797ebb29e113f93227e5",
+      "bytes": 18844,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case2-regular-poster.jpg",
+      "sha256": "70fbb6f7fb41582dfd3acc2cc43bc9e95ff4be896173955e846296ea51525460",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case2-regular.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d7a5f65edbfbb1923065b22f93781052c3b9b31",
+      "bytes": 749840,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case2-regular.mp4",
+      "sha256": "e3513b55c8615aea6e97c9586ea4579c0bbd7b81bc95b57872f33ff0ee65d02a",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case2-vibe-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fa8eb9c0c49378dc07cc2c2d1422e14815b793b2",
+      "bytes": 20126,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case2-vibe-poster.jpg",
+      "sha256": "534671babfa5835652c3fc9653cca11afabb98876d4326b8f7c471468302e3cd",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case2-vibe.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a5ad175ea24278081dc18b289c99f62353013103",
+      "bytes": 776072,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case2-vibe.mp4",
+      "sha256": "8db9dfc620baf3b3b6d64f997abfe1ea7e26ac736e64d720f41fb4f631939794",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case3-regular-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "68230b642440ee1c531e5d45ed7d20e787a163f4",
+      "bytes": 32355,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case3-regular-poster.jpg",
+      "sha256": "faa769f887947feb0791050c53f9ef1444bf031fd12e19e7b0ea8bcf3204387f",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case3-regular.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6a34f6c14012afa8f346fc421578545e98eec5a4",
+      "bytes": 1426237,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case3-regular.mp4",
+      "sha256": "1f43e1ca2c41ffcdad671c9a9300ad88713f387fc462cd8bdbf69869e1ee66ca",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case3-vibe-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3becd10743d0d710c0d91f9c890a731e8a1b29f6",
+      "bytes": 29423,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case3-vibe-poster.jpg",
+      "sha256": "02f6f239872e5ba7cca21d177daf59a658de312683c0aef68bafcfc493668bdc",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case3-vibe.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "87f9f2e53da6d0928376eb724095be240661b21b",
+      "bytes": 1028594,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case3-vibe.mp4",
+      "sha256": "94c3ed4599744bea2dee981ba20572f43bcd792ccbb354b1db40cef06fd8bebd",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case4-vibe-poster.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "87bb07154a25bbe3d362cda426b518e502875cde",
+      "bytes": 15771,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case4-vibe-poster.jpg",
+      "sha256": "76c55ccd139802da7361cae5089afd0a019d41507c8949d817b1dc799163c89a",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/cases/case4-vibe.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "62352488f1398a8238a49889ca0a2ce6b0283503",
+      "bytes": 995675,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/cases/case4-vibe.mp4",
+      "sha256": "ae7848d11cd03ab4206e20463538d74bc034749ad3ef5bb604370643aeb4c696",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/social-preview.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b162459fc22b33f578a07eb5c5fe66e550db844a",
+      "bytes": 1083037,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/assets/social-preview.png",
+      "sha256": "adf5ca62fce0afe85eef1479869c0e76f108146e23a2aa94838bc2da1473e3d6",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "bin/install.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "457c1eeb392ffd52bc62acb84476eeb6ba3c35b5",
+      "bytes": 4059,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/bin/install.js",
+      "sha256": "6e1b3cfc5b2fe56fb17bc16d01b4afd67fa598d90d599967de548392cd876081",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/bin/install.js"
+    },
+    {
+      "path": "docs/examples/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d3a23a2ef4f967d9ced73b7e45cbb3e65efe5b24",
+      "bytes": 2133,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/README.md",
+      "sha256": "ba61289503c3a465a548eb7063fe5c09c2a6e67221fe3ecbc6588503652cd707",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/README.md"
+    },
+    {
+      "path": "docs/examples/brand-advertising.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "89fbc287ecac2f6daae6b397612bcc9272af760e",
+      "bytes": 3736,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/brand-advertising.md",
+      "sha256": "82a4918e95483e04a4cfe3240c34374bc7734d4c656ef352193fcfef46034c8d",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/brand-advertising.md"
+    },
+    {
+      "path": "docs/examples/cinematic-narrative.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a59d20e5808a177011d4250ae3542b6ee6b96598",
+      "bytes": 8133,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/cinematic-narrative.md",
+      "sha256": "a348075ea0bfb56d661067b035b79da8265c9c939dc7231fa8806aa7d95a0282",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/cinematic-narrative.md"
+    },
+    {
+      "path": "docs/examples/game-and-ip.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b8ad2713d23c697248a26135126f581c14ce31c9",
+      "bytes": 4084,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/game-and-ip.md",
+      "sha256": "1b765e56b9bcfa1eac702a4a5d7d23b3dee0952c31c45522a11864d31de46e8f",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/game-and-ip.md"
+    },
+    {
+      "path": "docs/examples/knowledge-and-physics.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2de6ad3e41941588233731bbd5c8a9831a075090",
+      "bytes": 6130,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/knowledge-and-physics.md",
+      "sha256": "3897a132cb558e70823eb9b1a75cd0767df6d0c0a8e587e71159045bc46b02df",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/knowledge-and-physics.md"
+    },
+    {
+      "path": "docs/examples/light-entertainment.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1483630feb405022da76eb4a120b74ed72adf927",
+      "bytes": 2968,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/light-entertainment.md",
+      "sha256": "06a87d0349143e318e5e9a9956ab93eec8456ce1e76fb26fd2bd015c2881aa5f",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/light-entertainment.md"
+    },
+    {
+      "path": "docs/examples/literary-visualization.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "18a517a52aa184dd9871690bc53be9ce86448177",
+      "bytes": 5963,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/literary-visualization.md",
+      "sha256": "ee395c347bc4b3b69b45dbf30c488cdb2b98c51a0275bf9c17b112551dc27e93",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/literary-visualization.md"
+    },
+    {
+      "path": "docs/examples/surreal-dreamcore.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d0e62cf7452ff580d3217138a6bbb2b26095ce7d",
+      "bytes": 5840,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/surreal-dreamcore.md",
+      "sha256": "8d251b11165e180574eb0ea85d57f264585fe6e158865fefac4797eb5bbad7f4",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/examples/surreal-dreamcore.md"
+    },
+    {
+      "path": "docs/philosophy.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "edf0ca09774eec76cc6e910023efe9c1b7533404",
+      "bytes": 6016,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/philosophy.md",
+      "sha256": "090e31735c30704497140e27b52c7b7f20bc352478f63e872f805e94a522ef3b",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/philosophy.md"
+    },
+    {
+      "path": "docs/philosophy.zh.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bea23336f9676fbdde16d4623bb97e735195f7b3",
+      "bytes": 5493,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/philosophy.zh.md",
+      "sha256": "fa688e8591fbb40696278e16c2bf6bc9d4f4a9076db397181b776051314dab9f",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/philosophy.zh.md"
+    },
+    {
+      "path": "docs/test-cases.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "89568825a2b6d7e4533dc30154c077ac7f52c279",
+      "bytes": 25356,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/docs/test-cases.md",
+      "sha256": "63f02a4812c41c6a40257b5193027bc6f10477250683c1230e6d89b0f3b54f6a",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/docs/test-cases.md"
+    },
+    {
+      "path": "llms.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0da2565e2e9cc4730fd9f4a2ab95838fe66fd5f6",
+      "bytes": 2226,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/llms.txt",
+      "sha256": "087a8aba6a7106b554924ee721fc9e15b3ef41a6e4c44e92422f3ba6302f9699",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/llms.txt"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "97e8da75364f4cc0fe7d31d2bf611b47949a6d99",
+      "bytes": 1072,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/package.json",
+      "sha256": "21da65caef22d9d4b323882deb2ed79cd9cd5c249b6b9c374edb0a50fde4c80c",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/package.json"
+    },
+    {
+      "path": "skills/vibe-creating-prompt/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cd8dc1d17b3d3d0314cad76a066e7bd52302399e",
+      "bytes": 16408,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/skills/vibe-creating-prompt/SKILL.md",
+      "sha256": "a218c351be018c4d5b26c51855cc02f0d1815c9119ed53562e01324642372810",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/skills/vibe-creating-prompt/SKILL.md"
+    },
+    {
+      "path": "skills/vibe-creating-prompt/SKILL.zh.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "71739021df474d61bc4e9b6ad47185c720882427",
+      "bytes": 14952,
+      "source_url": "https://github.com/Alisa0808/vibe-creating-skill/blob/a599301980a66eb47ddac5c15e41081b74a2759d/skills/vibe-creating-prompt/SKILL.zh.md",
+      "sha256": "6aa3b260e9892c2ad9efc900dcd1ab246cfb1290377d4691a1de0d7174797540",
+      "status": "saved",
+      "raw_path": "raw/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d/skills/vibe-creating-prompt/SKILL.zh.md"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-11-06T10:57:08.020111+00:00",
+  "requested_sources": 24,
+  "completed_sources": 23,
+  "indexed_snapshots": 23,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 1,
+  "pending_sources": 0,
+  "candidate_skill_files": 348,
+  "saved_skill_entries": 348,
+  "distinct_skill_paths": 348,
+  "unique_entry_texts": 313,
+  "duplicate_entry_groups": 32,
+  "sources": [
+    {
+      "repository": "777genius/agent-notifications",
+      "commit_sha": "53d8f2c528b86147fbda599385f7f2b8ef3fae20",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 2030,
+      "files_not_exported": 27,
+      "repository_manifest": "repositories/777genius/agent-notifications/manifests/777genius/agent-notifications/53d8f2c528b86147fbda599385f7f2b8ef3fae20.json"
+    },
+    {
+      "repository": "Koloyaaa/foreign-academic-translator-skill",
+      "commit_sha": "6683b4df355095e10c83a6e332519f9bff882a75",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 690,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/Koloyaaa/foreign-academic-translator-skill/manifests/Koloyaaa/foreign-academic-translator-skill/6683b4df355095e10c83a6e332519f9bff882a75.json"
+    },
+    {
+      "repository": "MetcalfSolutions/Satori",
+      "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 155,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/MetcalfSolutions/Satori/manifests/MetcalfSolutions/Satori/6db45752624c6620a4a7b784686d1025b7d9654d.json"
+    },
+    {
+      "repository": "QingYunA/answer-me-with-html",
+      "commit_sha": "053619b917c6bf2e17eae5496d05eb08e10fe889",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 371,
+      "files_not_exported": 10,
+      "repository_manifest": "repositories/QingYunA/answer-me-with-html/manifests/QingYunA/answer-me-with-html/053619b917c6bf2e17eae5496d05eb08e10fe889.json"
+    },
+    {
+      "repository": "VoDaiLocz/kilo-kit-mcp",
+      "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 180,
+      "saved_skill_entries": 180,
+      "saved_text_files": 892,
+      "files_not_exported": 66,
+      "repository_manifest": "repositories/VoDaiLocz/kilo-kit-mcp/manifests/VoDaiLocz/kilo-kit-mcp/1c04afc2a760ed58cea1308851e7626f76c4ff44.json"
+    },
+    {
+      "repository": "antonbabenko/terraform-skill",
+      "commit_sha": "9c1e92d962a5407c227e5566416e962a2f057240",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 31,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/antonbabenko/terraform-skill/manifests/antonbabenko/terraform-skill/9c1e92d962a5407c227e5566416e962a2f057240.json"
+    },
+    {
+      "repository": "coderabbitai/skills",
+      "commit_sha": "778c35a36e0afd2549c3fba86ec6e64afe649df3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 49,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/coderabbitai/skills/manifests/coderabbitai/skills/778c35a36e0afd2549c3fba86ec6e64afe649df3.json"
+    },
+    {
+      "repository": "conorluddy/ios-simulator-skill",
+      "commit_sha": "30d2ea43ef88d353f4de560e7b7f132e05c502ab",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 100,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/conorluddy/ios-simulator-skill/manifests/conorluddy/ios-simulator-skill/30d2ea43ef88d353f4de560e7b7f132e05c502ab.json"
+    },
+    {
+      "repository": "duyunzhoudyz/dyz-gongwen-skills",
+      "commit_sha": "9111fbf1370ba0e2a116c3ef6e70e11f0168257b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 5478,
+      "files_not_exported": 139,
+      "repository_manifest": "repositories/duyunzhoudyz/dyz-gongwen-skills/manifests/duyunzhoudyz/dyz-gongwen-skills/9111fbf1370ba0e2a116c3ef6e70e11f0168257b.json"
+    },
+    {
+      "repository": "hedralab/eskill",
+      "commit_sha": "cbc3c7d62c5bcd27112c9e2d09a8b8744f913983",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 44,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/hedralab/eskill/manifests/hedralab/eskill/cbc3c7d62c5bcd27112c9e2d09a8b8744f913983.json"
+    },
+    {
+      "repository": "ibelick/ui-skills",
+      "commit_sha": "00db7d656719c399c091f3ea138c6f42a7fa4d98",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 311,
+      "files_not_exported": 11,
+      "repository_manifest": "repositories/ibelick/ui-skills/manifests/ibelick/ui-skills/00db7d656719c399c091f3ea138c6f42a7fa4d98.json"
+    },
+    {
+      "repository": "jthack/ffuf_claude_skill",
+      "commit_sha": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 5,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/jthack/ffuf_claude_skill/manifests/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d.json"
+    },
+    {
+      "repository": "kklimuk/docx-cli",
+      "commit_sha": "e830c0cd5aac888cf4b749d278db6e71003ab5d9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 645,
+      "files_not_exported": 46,
+      "repository_manifest": "repositories/kklimuk/docx-cli/manifests/kklimuk/docx-cli/e830c0cd5aac888cf4b749d278db6e71003ab5d9.json"
+    },
+    {
+      "repository": "kochetkov-ma/claude-brewcode",
+      "commit_sha": "9ddf5c045b576a3b6493b37dc1743fa3015b5a22",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 55,
+      "saved_skill_entries": 55,
+      "saved_text_files": 1441,
+      "files_not_exported": 56,
+      "repository_manifest": "repositories/kochetkov-ma/claude-brewcode/manifests/kochetkov-ma/claude-brewcode/9ddf5c045b576a3b6493b37dc1743fa3015b5a22.json"
+    },
+    {
+      "repository": "lackeyjb/playwright-skill",
+      "commit_sha": "dd47a6a023e249eb1b36e9e943eab89d0900865d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 24,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/lackeyjb/playwright-skill/manifests/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d.json"
+    },
+    {
+      "repository": "pachca/openapi",
+      "commit_sha": "6eb682e3982e077145d56acb1449311bc049d5a8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 1958,
+      "files_not_exported": 121,
+      "repository_manifest": "repositories/pachca/openapi/manifests/pachca/openapi/6eb682e3982e077145d56acb1449311bc049d5a8.json"
+    },
+    {
+      "repository": "ramzesenok/iOS-Accessibility-Audit-Skill",
+      "commit_sha": "8214fbf61e3ab6ff71e880061bfb5ee581414fac",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 8,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/ramzesenok/iOS-Accessibility-Audit-Skill/manifests/ramzesenok/iOS-Accessibility-Audit-Skill/8214fbf61e3ab6ff71e880061bfb5ee581414fac.json"
+    },
+    {
+      "repository": "robzolkos/skill-rails-upgrade",
+      "commit_sha": "d9a3432b19efa898692c4cff16e4c74b700dcf93",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 2,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/robzolkos/skill-rails-upgrade/manifests/robzolkos/skill-rails-upgrade/d9a3432b19efa898692c4cff16e4c74b700dcf93.json"
+    },
+    {
+      "repository": "salemalem/npmscan-mcp-plugin",
+      "commit_sha": "efd8dd03e380c50f10829707913b9a293914c12c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 90,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/salemalem/npmscan-mcp-plugin/manifests/salemalem/npmscan-mcp-plugin/efd8dd03e380c50f10829707913b9a293914c12c.json"
+    },
+    {
+      "repository": "sanjay3290/ai-skills",
+      "commit_sha": "c84255839a1bfaa06d681aa528f9b50d70002afb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 25,
+      "saved_skill_entries": 25,
+      "saved_text_files": 152,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/sanjay3290/ai-skills/manifests/sanjay3290/ai-skills/c84255839a1bfaa06d681aa528f9b50d70002afb.json"
+    },
+    {
+      "repository": "truongduy2611/app-store-preflight-skills",
+      "commit_sha": "cfd9c73577300f9310ca892fefd38fbe1abd73cb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 30,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/truongduy2611/app-store-preflight-skills/manifests/truongduy2611/app-store-preflight-skills/cfd9c73577300f9310ca892fefd38fbe1abd73cb.json"
+    },
+    {
+      "repository": "woniu9524/open-web-bridge",
+      "commit_sha": "27c9ebe62c338edc851dc01bef73465712be2006",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 64,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/woniu9524/open-web-bridge/manifests/woniu9524/open-web-bridge/27c9ebe62c338edc851dc01bef73465712be2006.json"
+    },
+    {
+      "repository": "zxkane/aws-skills",
+      "commit_sha": "68530c6f296ccd2f5e99c79782f3e0fbf962c51a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 59,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/zxkane/aws-skills/manifests/zxkane/aws-skills/68530c6f296ccd2f5e99c79782f3e0fbf962c51a.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "rootlyhq/rootly-mcp-server",
+      "output_directory": "data-batch-008/repositories/rootlyhq/rootly-mcp-server",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T10:56:11.965853+00:00",
+      "commit_sha": "44926940d3866dab7d6cafbf04e8fc20aff6b7e0",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T10:56:18.545783+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 213
+}

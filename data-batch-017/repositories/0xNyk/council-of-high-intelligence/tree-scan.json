@@ -1,0 +1,9 @@
+{
+  "repository": "0xNyk/council-of-high-intelligence",
+  "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172",
+  "tree_entries": 68,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/council/SKILL.md"
+  ]
+}

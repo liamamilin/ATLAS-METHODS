@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:08:54.081903+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 20,
+  "saved_skill_entries": 20,
+  "unique_entry_texts": 20,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "laolaoshiren/claude-code-skills-zh",
+      "commit_sha": "4521b155d36e50fd7a103a46e3a24d48241508af",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 50,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/laolaoshiren/claude-code-skills-zh/4521b155d36e50fd7a103a46e3a24d48241508af.json"
+    }
+  ],
+  "errors": []
+}

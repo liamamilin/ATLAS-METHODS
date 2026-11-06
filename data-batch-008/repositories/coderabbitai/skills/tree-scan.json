@@ -1,0 +1,9 @@
+{
+  "repository": "coderabbitai/skills",
+  "commit_sha": "778c35a36e0afd2549c3fba86ec6e64afe649df3",
+  "tree_entries": 53,
+  "candidate_skill_paths": [
+    "skills/autofix/SKILL.md",
+    "skills/code-review/SKILL.md"
+  ]
+}

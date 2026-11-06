@@ -1,0 +1,22 @@
+{
+  "repository": "unbrowse-ai/unbrowse",
+  "commit_sha": "41db2a37092aa704d65fc4a8027e1e3733c258d0",
+  "tree_entries": 276,
+  "candidate_skill_paths": [
+    "plugins/claude-code/skills/unbrowse-contribute/SKILL.md",
+    "plugins/claude-code/skills/unbrowse/SKILL.md",
+    "plugins/codex/skills/unbrowse-contribute/SKILL.md",
+    "plugins/codex/skills/unbrowse/SKILL.md",
+    "plugins/cursor/skills/unbrowse-contribute/SKILL.md",
+    "plugins/cursor/skills/unbrowse/SKILL.md",
+    "plugins/elizaos/skill/SKILL.md",
+    "plugins/grok-build/skills/unbrowse-contribute/SKILL.md",
+    "plugins/grok-build/skills/unbrowse/SKILL.md",
+    "plugins/hermes/skills/unbrowse-contribute/SKILL.md",
+    "plugins/hermes/skills/unbrowse/SKILL.md",
+    "plugins/openclaw/skills/unbrowse-contribute/SKILL.md",
+    "plugins/openclaw/skills/unbrowse/SKILL.md",
+    "skill/SKILL.md",
+    "skills/unbrowse-contribute/SKILL.md"
+  ]
+}

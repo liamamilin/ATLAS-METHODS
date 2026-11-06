@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:50:56.509737+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 28,
+  "saved_skill_entries": 28,
+  "unique_entry_texts": 28,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tjboudreaux/cc-thinking-skills",
+      "commit_sha": "7b8fece345dfaa11773be7152ccd194589cb5437",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 376,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/tjboudreaux/cc-thinking-skills/7b8fece345dfaa11773be7152ccd194589cb5437.json"
+    }
+  ],
+  "errors": []
+}

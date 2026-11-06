@@ -1,0 +1,15 @@
+{
+  "repository": "edonadei/caliper",
+  "commit_sha": "aa19bd28606c49e8b60b5d1e0c29aa6673e6bf5f",
+  "tree_entries": 201,
+  "candidate_skill_paths": [
+    "examples/01-false-success/SKILL.md",
+    "examples/02-tool-misuse/SKILL.md",
+    "examples/03-runaway-loops/SKILL.md",
+    "examples/04-prompt-regression/SKILL.md",
+    "examples/05-context-boundary/SKILL.md",
+    "examples/06-mid-conversation/SKILL.md",
+    "skills/evaluate-skill/SKILL.md",
+    "skills/grill-skill/SKILL.md"
+  ]
+}

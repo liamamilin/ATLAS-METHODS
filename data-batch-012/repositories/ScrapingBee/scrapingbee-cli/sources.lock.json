@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "ScrapingBee/scrapingbee-cli",
+      "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "supercorp-ai/supercov",
+      "commit_sha": "35a51f61a25f1230d1a5fe68c16851c03fc8b72f"
+    }
+  ]
+}

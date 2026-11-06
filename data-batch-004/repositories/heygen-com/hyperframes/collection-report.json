@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:41:15.532159+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 28,
+  "saved_skill_entries": 28,
+  "unique_entry_texts": 22,
+  "duplicate_entry_groups": 6,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "heygen-com/hyperframes",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 9169,
+      "files_not_exported": 635,
+      "repository_manifest": "manifests/heygen-com/hyperframes/cb8e02e8264bd6994de29a024a6f320ce21654e7.json"
+    }
+  ],
+  "errors": []
+}

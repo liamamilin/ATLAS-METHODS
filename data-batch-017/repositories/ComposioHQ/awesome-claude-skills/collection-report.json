@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:28:27.476234+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 864,
+  "saved_skill_entries": 864,
+  "unique_entry_texts": 864,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ComposioHQ/awesome-claude-skills",
+      "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 864,
+      "saved_skill_entries": 864,
+      "saved_text_files": 1086,
+      "files_not_exported": 56,
+      "repository_manifest": "manifests/ComposioHQ/awesome-claude-skills/be2a406907dbc61b73e6827ded415c96139d13a2.json"
+    }
+  ],
+  "errors": []
+}

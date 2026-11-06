@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:45:53.706625+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zarazhangrui/frontend-slides",
+      "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 163,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/zarazhangrui/frontend-slides/9906a34d640d2111f724544cbc50f7f130569ae1.json"
+    }
+  ],
+  "errors": []
+}

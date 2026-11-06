@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:04:00.013487+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 12,
+  "saved_skill_entries": 12,
+  "unique_entry_texts": 12,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "scarletkc/agents",
+      "commit_sha": "8e149b335e963954e9c4bafba00eedbd7de060ed",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 12,
+      "saved_skill_entries": 12,
+      "saved_text_files": 54,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/scarletkc/agents/8e149b335e963954e9c4bafba00eedbd7de060ed.json"
+    }
+  ],
+  "errors": []
+}

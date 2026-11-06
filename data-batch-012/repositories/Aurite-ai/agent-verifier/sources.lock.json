@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "Aurite-ai/agent-verifier",
+      "commit_sha": "e7c783a02cc565616d33357572a4f87ef39f1cd7"
+    }
+  ]
+}

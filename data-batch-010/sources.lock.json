@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "Egonex-AI/Understand-Anything",
+      "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+      "collection_root": "repositories/Egonex-AI/Understand-Anything"
+    },
+    {
+      "repository": "GanyuanRan/Aegis",
+      "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+      "collection_root": "repositories/GanyuanRan/Aegis"
+    },
+    {
+      "repository": "JasonColapietro/suede-creator-skills",
+      "commit_sha": "9406183696bfe56c4c399febf2091aeb93f280a3",
+      "collection_root": "repositories/JasonColapietro/suede-creator-skills"
+    },
+    {
+      "repository": "KhazP/vibe-coding-prompt-template",
+      "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+      "collection_root": "repositories/KhazP/vibe-coding-prompt-template"
+    },
+    {
+      "repository": "Maksim-Burtsev/simple-man",
+      "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+      "collection_root": "repositories/Maksim-Burtsev/simple-man"
+    },
+    {
+      "repository": "Simon-He95/markstream-vue",
+      "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+      "collection_root": "repositories/Simon-He95/markstream-vue"
+    },
+    {
+      "repository": "aeonfun/aeon",
+      "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+      "collection_root": "repositories/aeonfun/aeon"
+    },
+    {
+      "repository": "agiwhitelist/auteur",
+      "commit_sha": "9bca227df9877e60dc45d49783c8cbd885eccd9b",
+      "collection_root": "repositories/agiwhitelist/auteur"
+    },
+    {
+      "repository": "baskduf/FableCodex",
+      "commit_sha": "406faa1981ffe8a3b6b44e770bc2fc2ee189c8d0",
+      "collection_root": "repositories/baskduf/FableCodex"
+    },
+    {
+      "repository": "browser-act/skills",
+      "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "collection_root": "repositories/browser-act/skills"
+    },
+    {
+      "repository": "csthink/dashmotion",
+      "commit_sha": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+      "collection_root": "repositories/csthink/dashmotion"
+    },
+    {
+      "repository": "dembrandt/dembrandt-skills",
+      "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+      "collection_root": "repositories/dembrandt/dembrandt-skills"
+    },
+    {
+      "repository": "drogers0/gh-image",
+      "commit_sha": "ca57d96dd4ac72bae5c8264a244116bd17f96ce8",
+      "collection_root": "repositories/drogers0/gh-image"
+    },
+    {
+      "repository": "eduardo-sl/go-agent-skills",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0",
+      "collection_root": "repositories/eduardo-sl/go-agent-skills"
+    },
+    {
+      "repository": "ethos-link/rails-conventions",
+      "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2",
+      "collection_root": "repositories/ethos-link/rails-conventions"
+    },
+    {
+      "repository": "foryourhealth111-pixel/Vibe-Skills",
+      "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+      "collection_root": "repositories/foryourhealth111-pixel/Vibe-Skills"
+    },
+    {
+      "repository": "hqhq1025/skill-optimizer",
+      "commit_sha": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+      "collection_root": "repositories/hqhq1025/skill-optimizer"
+    },
+    {
+      "repository": "krisyangdev/motionboard",
+      "commit_sha": "4e1b437b18cf920992c191d983e42b26654e6406",
+      "collection_root": "repositories/krisyangdev/motionboard"
+    },
+    {
+      "repository": "mcollina/skills",
+      "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "collection_root": "repositories/mcollina/skills"
+    },
+    {
+      "repository": "metalbear-co/skills",
+      "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+      "collection_root": "repositories/metalbear-co/skills"
+    },
+    {
+      "repository": "plasma-ai/fractal",
+      "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722",
+      "collection_root": "repositories/plasma-ai/fractal"
+    },
+    {
+      "repository": "reliefeai/browser-relay",
+      "commit_sha": "973434bc6b339dd56d831b1ebd089a8465850844",
+      "collection_root": "repositories/reliefeai/browser-relay"
+    },
+    {
+      "repository": "squirrelscan/skills",
+      "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+      "collection_root": "repositories/squirrelscan/skills"
+    },
+    {
+      "repository": "superdesigndev/superdesign-skill",
+      "commit_sha": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+      "collection_root": "repositories/superdesigndev/superdesign-skill"
+    }
+  ]
+}

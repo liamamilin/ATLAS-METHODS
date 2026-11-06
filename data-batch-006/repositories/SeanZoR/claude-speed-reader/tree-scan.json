@@ -1,0 +1,8 @@
+{
+  "repository": "SeanZoR/claude-speed-reader",
+  "commit_sha": "9e8be8b7a480668d8b237be3a0428deddcab7302",
+  "tree_entries": 6,
+  "candidate_skill_paths": [
+    ".claude/skills/speed/SKILL.md"
+  ]
+}

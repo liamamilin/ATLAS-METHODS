@@ -1,0 +1,21 @@
+{
+  "repository": "ZeKaiNie/universal-examprep-skill",
+  "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+  "tree_entries": 582,
+  "candidate_skill_paths": [
+    "full/SKILL.md",
+    "full/locales/en/SKILL.md",
+    "full/locales/zh/SKILL.md",
+    "full/skills/confusion-tracker/SKILL.md",
+    "full/skills/exam-audit/SKILL.md",
+    "full/skills/exam-cheatsheet/SKILL.md",
+    "full/skills/exam-cram/SKILL.md",
+    "full/skills/exam-help/SKILL.md",
+    "full/skills/exam-ingest/SKILL.md",
+    "full/skills/exam-quiz/SKILL.md",
+    "full/skills/exam-review/SKILL.md",
+    "full/skills/exam-study-guide/SKILL.md",
+    "full/skills/exam-tutor/SKILL.md",
+    "skills/universal-exam-cram-coach/SKILL.md"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "repository": "bevibing/tutor-skills",
+  "commit_sha": "397110c9fefbc6bd5444277686600aec28063c05",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "482e34b165185b4eeee8a28ed0254ed85e90df91",
+      "bytes": 22,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/.gitignore",
+      "sha256": "9c30cca8ecec0f1bac5cc30070a7a90554d12b492560e14b3c0062b307fc6165",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3b25ff09b899cbcbf82a3bea7bf91e07ecf79097",
+      "bytes": 1060,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/LICENSE",
+      "sha256": "0ff5035ab0fd227727981ed95743bf97521ccda391654eeec2466c52bffca21c",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5b989ba212291652f02af0b6a6f495f6be743dc7",
+      "bytes": 10079,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/README.md",
+      "sha256": "8c99ee11f59ec37f7f2fe54f46942d051801a348118ce444cc9c8b9efa840e39",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/README.md"
+    },
+    {
+      "path": "examples/.gitkeep",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/examples/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/examples/.gitkeep"
+    },
+    {
+      "path": "install.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "15ad9646144c22aa6e1e5d9c81d7a0c3b322db98",
+      "bytes": 806,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/install.sh",
+      "sha256": "897b06f57fa05e5073848377a79212dfefa121218fb8e107026c79b538acaf90",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/install.sh"
+    },
+    {
+      "path": "skills/tutor-setup/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5f41b885b2a7831e8e8154bad5a4c139ad6b5223",
+      "bytes": 7524,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/SKILL.md",
+      "sha256": "69bf456cc1d889cfcfc47dac06ec621b3ee3ff0a1962575f04611924ee2ef752",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/SKILL.md"
+    },
+    {
+      "path": "skills/tutor-setup/references/codebase-templates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "75e8aa90dfca1573944fb67d80b5e079b531330c",
+      "bytes": 6137,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/codebase-templates.md",
+      "sha256": "38b0f7dee40b7a76a7da4f5db927f1f19125f9997861969a8724c0ba2aacea94",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/codebase-templates.md"
+    },
+    {
+      "path": "skills/tutor-setup/references/codebase-workflow.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f2dd3a6a8f0ad0542fa218fead20af03c11f142b",
+      "bytes": 4743,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/codebase-workflow.md",
+      "sha256": "cabb58123d04deca83efd84499e8aa627cf3e448c261a7b18da342ab8726bd5c",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/codebase-workflow.md"
+    },
+    {
+      "path": "skills/tutor-setup/references/quality-checklist.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0f410b64a8b0549b89c0c0231398f8ed5cfcc65e",
+      "bytes": 4381,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/quality-checklist.md",
+      "sha256": "4bc606389f9b5f01c5ca467401619ae03139b222ce79db10c87d0d84533daa2a",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/quality-checklist.md"
+    },
+    {
+      "path": "skills/tutor-setup/references/templates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f90481478ccad32115d522eb7dcdb913794a228",
+      "bytes": 4983,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/templates.md",
+      "sha256": "9e02d8ed6be5f97e1ae0464b1db99d16cbd022c2e5377f50ff347c41bc0999d4",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor-setup/references/templates.md"
+    },
+    {
+      "path": "skills/tutor/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aeec70d843344d5992f4ba042a693b40f11a8c65",
+      "bytes": 5696,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor/SKILL.md",
+      "sha256": "94bd0aec3fbb2f45c1afb27191b3cfc720efabbe4a58732543cc7ed3c543c52c",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor/SKILL.md"
+    },
+    {
+      "path": "skills/tutor/references/quiz-rules.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2ef7240c339271dec06ea092905b4f4f8e89d14e",
+      "bytes": 2131,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor/references/quiz-rules.md",
+      "sha256": "4ecf315341cea0bbed7df74155cbc1b8234c61f3a8f5b5adeb7f0fa11e3f0edd",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/skills/tutor/references/quiz-rules.md"
+    },
+    {
+      "path": "uninstall.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "c63812c09c473500907ea594fe906f76959da69b",
+      "bytes": 294,
+      "source_url": "https://github.com/bevibing/tutor-skills/blob/397110c9fefbc6bd5444277686600aec28063c05/uninstall.sh",
+      "sha256": "e43ccb99b6ad36213bddfdb0ec8159b2fb6d33d6e3eacd26858df01507a016a0",
+      "status": "saved",
+      "raw_path": "raw/bevibing/tutor-skills/397110c9fefbc6bd5444277686600aec28063c05/uninstall.sh"
+    }
+  ]
+}

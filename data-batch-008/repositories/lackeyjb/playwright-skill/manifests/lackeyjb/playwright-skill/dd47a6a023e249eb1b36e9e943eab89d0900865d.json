@@ -1,0 +1,270 @@
+{
+  "repository": "lackeyjb/playwright-skill",
+  "commit_sha": "dd47a6a023e249eb1b36e9e943eab89d0900865d",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "79d5931aa5872859d6c7f33b00d1f809121c86dd",
+      "bytes": 1085,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.claude-plugin/marketplace.json",
+      "sha256": "c2ec664debbcfdca0b72fa6fac114c47245a98d6a187ec3ee1de7de01a84deb6",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "746a7d81083388fafb0c59716a33f9f65f04710c",
+      "bytes": 550,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.claude-plugin/plugin.json",
+      "sha256": "76d018eae25b5bfedf8f82d4b639f4a117b4b304c2eeba4b75dd911e67981fdf",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "99a3f51f5f38dd435a4760ee9a43d719358c007c",
+      "bytes": 87,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/CODEOWNERS",
+      "sha256": "0b9bf21764c1fa2df584050b441c438b628fc89cb8bb052d988265d5eb421e97",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/CODEOWNERS"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f8b4f80143f0600b14616abecdd04d96d3c53c0c",
+      "bytes": 647,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "sha256": "d899b944a4c77521d69cc0a6a22724224a3e58ec4d0705a31dceb56434c0f511",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c767f9fbee5d4dec60dc984cd010397d2836501a",
+      "bytes": 410,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "sha256": "fce005d763deac1eda2e9d75e894904abc4d40e1d49867957e52b1ada656b132",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/ISSUE_TEMPLATE/feature_request.yml"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "293148697a2b4d76bca4efb50a785b51d78d77ee",
+      "bytes": 218,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/dependabot.yml",
+      "sha256": "6389a0901dce616a9cb67f28916a4cc9006315585974719d7dd09396de41b114",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/dependabot.yml"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9f47bb905ae4ec9a18f8978d525429be1c0298b1",
+      "bytes": 343,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/pull_request_template.md",
+      "sha256": "2de8f2faba8858c0b2e1b10989062699b834531d8778e1b26bbb95c41382f662",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/pull_request_template.md"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ab3b58d5e9cef8737e7c4d2407dac92493d9a395",
+      "bytes": 731,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/workflows/ci.yml",
+      "sha256": "8944a30c12f55cbeb13b2869949a5bf5b10144957fe80b876aae9a25f8ad7b8d",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dd45e757c712fd22ce88e45917440aecf589f0d8",
+      "bytes": 380,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/.gitignore",
+      "sha256": "bc272d1ba73da218851f52283d57757af5f041396e53140d1e5980e1eac2fe37",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/.gitignore"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f6b90212d1c1041b97efcb0ee438bee113987705",
+      "bytes": 1512,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/CHANGELOG.md",
+      "sha256": "fc9a877de5072a4834ed826fb31c767b4d441e44fb02863505515a3b25a59b5e",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/CHANGELOG.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c2051648c0d9e4e32dd3a890ded44d6d32c5c8e5",
+      "bytes": 1399,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/CONTRIBUTING.md",
+      "sha256": "d5c1fadba1d1130a61f8120c5a103803505f81f44172d462383d5587d94a5894",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5d40ba0e4e8be1cf170fb43e41ab5991ad7012b2",
+      "bytes": 1065,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/LICENSE",
+      "sha256": "c9104b65859edbe0df0255c2adbad01b147b58a02fa2aff1c2e5736512e8a143",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb30f5116a055de7a4555aac0247faf1eec773fa",
+      "bytes": 9161,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/README.md",
+      "sha256": "52008f1aa357ef27a73e3d42da981f3bb1b8d1bc461fdf2c60f0c136d0b83215",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/README.md"
+    },
+    {
+      "path": "skills/playwright-skill/API_REFERENCE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6d4b74fb2b51bf1153cb9b02c1cd76659bafe3d0",
+      "bytes": 16461,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/API_REFERENCE.md",
+      "sha256": "948e778e15e24d453219be6e05889416f088b59469818875f728d97a4ad17603",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/API_REFERENCE.md"
+    },
+    {
+      "path": "skills/playwright-skill/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8e002881ae65ebfa13f61a99d50678622c0ae5bf",
+      "bytes": 7741,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/SKILL.md",
+      "sha256": "6dc254f552392e1f5b8704434e982cd26375d04ebe815084d1b47af1ee2a971f",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/SKILL.md"
+    },
+    {
+      "path": "skills/playwright-skill/lib/helpers.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dadda5789af2e9cdf0e98c9564fe3018073d4767",
+      "bytes": 4243,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/lib/helpers.js",
+      "sha256": "b837864b43126da1c0fc216b4d555b14a52c78bd78e0075af0c6acd1efa0e010",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/lib/helpers.js"
+    },
+    {
+      "path": "skills/playwright-skill/package-lock.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "394a373178a2c23f1b905186a1f9cb3e7c2efaa0",
+      "bytes": 1761,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/package-lock.json",
+      "sha256": "a0502f20d5c475c9654b8a6faa69263d2eb7ab0c7898c3c0a2490ddc75316df3",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/package-lock.json"
+    },
+    {
+      "path": "skills/playwright-skill/package.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ca53adefa033247185059bec7b89a0449577a874",
+      "bytes": 699,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/package.json",
+      "sha256": "8f1870c8f1124cadae0bf493eccdbc8e2df48124f90d2eecaef0c43638906d8e",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/package.json"
+    },
+    {
+      "path": "skills/playwright-skill/run.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "55ef973701fee172d3592fdcf4c7f6e90c0b5682",
+      "bytes": 3685,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/run.js",
+      "sha256": "f2afe1a17379548abee60e91c9cee9a3907ff5ae9a2423d9190e45ace761399d",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/skills/playwright-skill/run.js"
+    },
+    {
+      "path": "tests/executor.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5f34b6d6edc123bf4df64b8ca202a43a35ddb076",
+      "bytes": 4394,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/executor.test.js",
+      "sha256": "3de1d9e20bc5e1451b1ccd1b7d0bf1bda415c9bc14796cb15b204fd37f7d2a54",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/executor.test.js"
+    },
+    {
+      "path": "tests/fixtures/dashboard.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "01bebd97b0307970ba1e81eb44d3dd4979793aa9",
+      "bytes": 188,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/fixtures/dashboard.html",
+      "sha256": "b55aacd00e9748f70ebed2b503cd7095f1afeb73a40896361ff01db5d8f00dee",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/fixtures/dashboard.html"
+    },
+    {
+      "path": "tests/fixtures/login.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "93e4419ef5c47b7236ee4545ac4e333fe58a4fe1",
+      "bytes": 1193,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/fixtures/login.html",
+      "sha256": "d378a50162b9184d16a9757d909993296409cc5407174a165575136b9b291cf8",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/fixtures/login.html"
+    },
+    {
+      "path": "tests/helpers.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e1079f55e466948e95bbe03918b0724c8028fb2a",
+      "bytes": 2626,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/helpers.test.js",
+      "sha256": "3f9ab7c202a726806b08da9e4c942dacc234db8ea55fb7561219496102020ab5",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/helpers.test.js"
+    },
+    {
+      "path": "tests/smoke.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d30195800c00b7ded8ae1ed12db57a667759d93",
+      "bytes": 1008,
+      "source_url": "https://github.com/lackeyjb/playwright-skill/blob/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/smoke.js",
+      "sha256": "6a20c5cf868729f5b57eabae70c38fc705d415bcd0bf0ebe320ff4a7577d87f0",
+      "status": "saved",
+      "raw_path": "raw/lackeyjb/playwright-skill/dd47a6a023e249eb1b36e9e943eab89d0900865d/tests/smoke.js"
+    }
+  ]
+}

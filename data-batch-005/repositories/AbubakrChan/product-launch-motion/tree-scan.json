@@ -1,0 +1,9 @@
+{
+  "repository": "AbubakrChan/product-launch-motion",
+  "commit_sha": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+  "tree_entries": 42,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "legacy/SKILL.md"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "arcmira/mcp",
+  "commit_sha": "f1fe83efbb8baa437d3c3403f4d7f586c3b2e4d4",
+  "tree_entries": 80,
+  "candidate_skill_paths": [
+    "plugins/arcmira/skills/arcmira/SKILL.md",
+    "plugins/arcmira/skills/company-watch/SKILL.md",
+    "plugins/arcmira/skills/compare-shows/SKILL.md",
+    "plugins/arcmira/skills/find-quotes/SKILL.md",
+    "plugins/arcmira/skills/person-research/SKILL.md",
+    "plugins/arcmira/skills/sponsor-research/SKILL.md"
+  ]
+}

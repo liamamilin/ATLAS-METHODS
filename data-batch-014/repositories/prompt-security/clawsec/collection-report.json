@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:14:44.246559+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 16,
+  "saved_skill_entries": 16,
+  "unique_entry_texts": 16,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "prompt-security/clawsec",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 514,
+      "files_not_exported": 33,
+      "repository_manifest": "manifests/prompt-security/clawsec/e46beec4f559e15c57d250023298391253e9ce43.json"
+    }
+  ],
+  "errors": []
+}

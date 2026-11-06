@@ -1,0 +1,13 @@
+{
+  "repository": "MetcalfSolutions/Satori",
+  "commit_sha": "6db45752624c6620a4a7b784686d1025b7d9654d",
+  "tree_entries": 163,
+  "candidate_skill_paths": [
+    ".agents/skills/satori/SKILL.md",
+    ".cursor/skills/satori/SKILL.md",
+    ".hermes/skills/satori/SKILL.md",
+    ".opencode/skills/satori/SKILL.md",
+    "SKILL.md",
+    "compact/SKILL.md"
+  ]
+}

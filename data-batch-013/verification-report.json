@@ -1,0 +1,291 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "f4ebfbc6ed9eae1ab2e86fe76c7927fa10b6c324cac88256f26402775e121493",
+  "sources": [
+    {
+      "repository": "JayPokale/Chisle",
+      "commit_sha": "1b3203fe394ee84ca143a1e8636fafa8e9e1f906",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 1245,
+      "statuses": {
+        "saved": 1241,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "Panniantong/Agent-Reach",
+      "commit_sha": "47898829204ad27521d8a1719e3aeca3b8a3e0ca",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 120,
+      "statuses": {
+        "saved": 113,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "Qiuner/birdview",
+      "commit_sha": "32b7a77f99639a5e79dfc4cc123bf98f8b889b52",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 218,
+      "statuses": {
+        "saved": 202,
+        "non_utf8_or_binary_not_exported": 13,
+        "over_size_limit": 3
+      }
+    },
+    {
+      "repository": "RAKKUNN/vicem",
+      "commit_sha": "47d5b2191dcfe61cbc1d8ec18033b430fb5ab113",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 59,
+      "statuses": {
+        "saved": 49,
+        "non_utf8_or_binary_not_exported": 8,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "Tubo2333/obsidian-knowledge-brain",
+      "commit_sha": "de83d3a5a9ccd724b3e504c72b72001242c50061",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 46,
+      "statuses": {
+        "saved": 46
+      }
+    },
+    {
+      "repository": "amirkiarafiei/subagent-cli-skills",
+      "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+      "candidate_skill_entries": 25,
+      "skill_entries": 25,
+      "manifest_files": 85,
+      "statuses": {
+        "saved": 83,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "archcore-ai/archcore",
+      "commit_sha": "e47d597ceddcb3fafcd1f270165fabe6976e6161",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 95,
+      "statuses": {
+        "saved": 93,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "awrshift/agent-memory-kit",
+      "commit_sha": "c74602aef15c102459f7a0c9368306126231bf5e",
+      "candidate_skill_entries": 10,
+      "skill_entries": 10,
+      "manifest_files": 165,
+      "statuses": {
+        "saved": 149,
+        "non_utf8_or_binary_not_exported": 14,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "chrono-meta/forge-harness",
+      "commit_sha": "34b3559899f3407d829f5448026d30309a827c7c",
+      "candidate_skill_entries": 61,
+      "skill_entries": 61,
+      "manifest_files": 1065,
+      "statuses": {
+        "saved": 1056,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 8
+      }
+    },
+    {
+      "repository": "dankofly/perfectify",
+      "commit_sha": "8c4b8f11008df36896ebb4de610d7ad2b52fe68c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 33,
+      "statuses": {
+        "saved": 31,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "k-kolomeitsev/data-structure-protocol",
+      "commit_sha": "d3da6d96776b5de8748fb416f34d2297ba29f9a0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 52,
+      "statuses": {
+        "saved": 52
+      }
+    },
+    {
+      "repository": "khendzel/skills-janitor",
+      "commit_sha": "4b42f391fd537b791d1c09c7825be0bc641fd41c",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 34,
+      "statuses": {
+        "saved": 31,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    },
+    {
+      "repository": "ohad6k/emulo",
+      "commit_sha": "5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe",
+      "candidate_skill_entries": 8,
+      "skill_entries": 8,
+      "manifest_files": 477,
+      "statuses": {
+        "saved": 378,
+        "non_utf8_or_binary_not_exported": 97,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "oliver-zehentleitner/keep-the-why",
+      "commit_sha": "e640a3d2c8dc8eb57cbab8c40562e3e8e7d551eb",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 789,
+      "statuses": {
+        "saved": 765,
+        "non_utf8_or_binary_not_exported": 24
+      }
+    },
+    {
+      "repository": "orziz/odai",
+      "commit_sha": "ce7a999843ca42ecd84778561cb0ac7642c5648e",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 381,
+      "statuses": {
+        "saved": 357,
+        "non_utf8_or_binary_not_exported": 19,
+        "over_size_limit": 5
+      }
+    },
+    {
+      "repository": "rebelytics/one-skill-to-rule-them-all",
+      "commit_sha": "f86755764373f96a50401762f31f22077127b999",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 40,
+      "statuses": {
+        "saved": 40
+      }
+    },
+    {
+      "repository": "ruslanlap/cavemenko",
+      "commit_sha": "cb1d5f42774682ded8029c67c55ac62df95568dd",
+      "candidate_skill_entries": 5,
+      "skill_entries": 5,
+      "manifest_files": 46,
+      "statuses": {
+        "saved": 46
+      }
+    },
+    {
+      "repository": "sametbrr/llm-wiki-manager",
+      "commit_sha": "28ad2850354a5e9aa1fd3798dade5ba9a35b371a",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 39,
+      "statuses": {
+        "saved": 39
+      }
+    },
+    {
+      "repository": "stjbrown/agent-knowledge",
+      "commit_sha": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+      "candidate_skill_entries": 7,
+      "skill_entries": 7,
+      "manifest_files": 113,
+      "statuses": {
+        "saved": 110,
+        "non_utf8_or_binary_not_exported": 1,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "swiftlysingh/excalidraw-cli",
+      "commit_sha": "913349475eb7200f458ae3a046a12669fa044bed",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 75,
+      "statuses": {
+        "saved": 71,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "thedotmack/claude-mem",
+      "commit_sha": "4f88958cf01fe8d2af916047af9b405a0375196a",
+      "candidate_skill_entries": 44,
+      "skill_entries": 42,
+      "manifest_files": 3031,
+      "statuses": {
+        "saved": 2963,
+        "non_utf8_or_binary_not_exported": 46,
+        "over_size_limit": 4,
+        "symlink_not_followed": 7,
+        "font_not_exported": 11
+      }
+    },
+    {
+      "repository": "thousandflowers/skillreaper",
+      "commit_sha": "1cfd85dce3ac922df37ff4c86f281ae3f695c8d8",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 164,
+      "statuses": {
+        "saved": 162,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "vshulcz/deja-vu",
+      "commit_sha": "acb6f9bb97729f89dfd869cce760545bbe9f161b",
+      "candidate_skill_entries": 11,
+      "skill_entries": 11,
+      "manifest_files": 4251,
+      "statuses": {
+        "saved": 4234,
+        "non_utf8_or_binary_not_exported": 17
+      }
+    },
+    {
+      "repository": "zilliztech/mfs",
+      "commit_sha": "78352894a0a826ee24db852411bf9a3c49884922",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 586,
+      "statuses": {
+        "saved": 585,
+        "symlink_not_followed": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 117134703,
+    "entries_with_license_candidates": 207,
+    "saved": 12896,
+    "non_utf8_or_binary_not_exported": 271,
+    "over_size_limit": 23,
+    "symlink_not_followed": 8,
+    "font_not_exported": 11
+  },
+  "verified_candidate_entries": 207,
+  "verified_skill_entries": 205,
+  "unique_entry_texts": 192,
+  "duplicate_entry_groups": 4,
+  "entries_in_duplicate_groups": 17,
+  "duplicate_entries_beyond_first": 13
+}

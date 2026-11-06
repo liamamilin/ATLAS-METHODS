@@ -1,0 +1,28 @@
+{
+  "repository": "Tencent/AI-Infra-Guard",
+  "commit_sha": "76146bf479b2fedb34f7acb7f536aa37b1f8ba74",
+  "tree_entries": 7540,
+  "candidate_skill_paths": [
+    "Research/pikit/demos/samples/demo_skill/SKILL.md",
+    "Research/pikit/pikit/carriers/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/agentic-supply-chain-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/authorization-bypass-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/cascading-failure-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/data-leakage-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/direct-injection-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/file-path-traversal-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/hardcoded-secret-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/human-agent-trust-exploit-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/indirect-injection-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/inter-agent-comm-security-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/memory-poisoning-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/memory-rag-poisoning-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/owasp-asi/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/tool-abuse-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/unexpected-code-execution-detection/SKILL.md",
+    "agent-scan/agent_scan/prompt/skills/web-exfiltration-detection/SKILL.md",
+    "skills/aig-agent-redteam/SKILL.md",
+    "skills/edgeone-clawscan/SKILL.md",
+    "skills/edgeone-skill-scanner/SKILL.md"
+  ]
+}

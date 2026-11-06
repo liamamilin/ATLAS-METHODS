@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:57:07.881421+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ibelick/ui-skills",
+      "commit_sha": "00db7d656719c399c091f3ea138c6f42a7fa4d98",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 311,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/ibelick/ui-skills/00db7d656719c399c091f3ea138c6f42a7fa4d98.json"
+    }
+  ],
+  "errors": []
+}

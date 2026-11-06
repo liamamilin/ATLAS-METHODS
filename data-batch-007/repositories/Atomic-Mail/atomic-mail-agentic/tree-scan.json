@@ -1,0 +1,9 @@
+{
+  "repository": "Atomic-Mail/atomic-mail-agentic",
+  "commit_sha": "89e66c6c73553f3c665ac73e006debeb994acb91",
+  "tree_entries": 551,
+  "candidate_skill_paths": [
+    "docs/SKILL.md",
+    "integrations/skill/atomicmail/SKILL.md"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "repository": "publora/skills",
+  "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+  "tree_entries": 49,
+  "candidate_skill_paths": [
+    ".codex-marketplace/publora-skills/skills/bluesky-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/instagram-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/linkedin-analytics/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/linkedin-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/social-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/telegram-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/threads-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/tiktok-post/SKILL.md",
+    ".codex-marketplace/publora-skills/skills/x-post/SKILL.md",
+    "skills/bluesky-post/SKILL.md",
+    "skills/instagram-post/SKILL.md",
+    "skills/linkedin-analytics/SKILL.md",
+    "skills/linkedin-post/SKILL.md",
+    "skills/social-post/SKILL.md",
+    "skills/telegram-post/SKILL.md",
+    "skills/threads-post/SKILL.md",
+    "skills/tiktok-post/SKILL.md",
+    "skills/x-post/SKILL.md"
+  ]
+}

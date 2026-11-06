@@ -1,0 +1,14 @@
+{
+  "repository": "Kayforkind/reimagine-it",
+  "commit_sha": "e8c93788bd76d5a3276fb8cc0b0f59379c40c076",
+  "tree_entries": 637,
+  "candidate_skill_paths": [
+    "skills/reimagine-it/SKILL.md",
+    "skills/reimagine-it/audit/SKILL.md",
+    "skills/reimagine-it/extract/SKILL.md",
+    "skills/reimagine-it/generate/SKILL.md",
+    "skills/reimagine-it/infographic/SKILL.md",
+    "skills/reimagine-it/lock/SKILL.md",
+    "skills/reimagine-it/variations/SKILL.md"
+  ]
+}

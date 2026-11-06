@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:15:41.843149+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "talkstream/ru-text",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 149,
+      "files_not_exported": 12,
+      "repository_manifest": "manifests/talkstream/ru-text/e398aec9e6f02d1bf28ae5a79a118e2404d52e90.json"
+    }
+  ],
+  "errors": []
+}

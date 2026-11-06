@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:54:10.253851+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "MSG91/m91-skill",
+      "commit_sha": "6c552cab6fc9509373cad6a2d581dbab3b5b2a2d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 6,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/MSG91/m91-skill/6c552cab6fc9509373cad6a2d581dbab3b5b2a2d.json"
+    }
+  ],
+  "errors": []
+}

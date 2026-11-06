@@ -1,0 +1,31 @@
+{
+  "repository": "coreyhaines31/makerskills",
+  "commit_sha": "0f20eaf6e4479ce03858ee09a56fe93e7440ed1b",
+  "tree_entries": 122,
+  "candidate_skill_paths": [
+    "skills/business-brainstorm/SKILL.md",
+    "skills/castmate/SKILL.md",
+    "skills/ci-audit/SKILL.md",
+    "skills/company-brain/SKILL.md",
+    "skills/company-cfo/SKILL.md",
+    "skills/decide/SKILL.md",
+    "skills/deep-research/SKILL.md",
+    "skills/domain/SKILL.md",
+    "skills/ingest/SKILL.md",
+    "skills/jab-hook/SKILL.md",
+    "skills/loopify/SKILL.md",
+    "skills/maker-council/SKILL.md",
+    "skills/paste/SKILL.md",
+    "skills/personal-cfo/SKILL.md",
+    "skills/pm/SKILL.md",
+    "skills/radar/SKILL.md",
+    "skills/read-book/SKILL.md",
+    "skills/second-brain/SKILL.md",
+    "skills/skillify/SKILL.md",
+    "skills/slide-deck/SKILL.md",
+    "skills/social-fetch/SKILL.md",
+    "skills/toolify/SKILL.md",
+    "skills/unstuck/SKILL.md",
+    "skills/watch-video/SKILL.md"
+  ]
+}

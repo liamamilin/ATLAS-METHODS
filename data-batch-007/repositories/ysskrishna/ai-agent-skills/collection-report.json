@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:53:46.428365+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 17,
+  "saved_skill_entries": 17,
+  "unique_entry_texts": 17,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ysskrishna/ai-agent-skills",
+      "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 17,
+      "saved_skill_entries": 17,
+      "saved_text_files": 102,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/ysskrishna/ai-agent-skills/8a6a5745556e60706ac5fa889dcc66ccd3a875b0.json"
+    }
+  ],
+  "errors": []
+}

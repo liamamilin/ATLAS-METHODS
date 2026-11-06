@@ -1,0 +1,61 @@
+{
+  "repository": "jthack/ffuf_claude_skill",
+  "commit_sha": "50fd4af4d8bd60cfc48fd84eda1720fbd718857d",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "071b29cf4c722664847b716dc12de86da585b3d2",
+      "bytes": 2577,
+      "source_url": "https://github.com/jthack/ffuf_claude_skill/blob/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/README.md",
+      "sha256": "e06a8050761d3793d4ab4c8a9d8a7bb1f4efb5360ebc7bb4c09446b73398264b",
+      "status": "saved",
+      "raw_path": "raw/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/README.md"
+    },
+    {
+      "path": "ffuf-skill/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d8e997199f17f98ca861e4289933ed9d38ba2cc",
+      "bytes": 17381,
+      "source_url": "https://github.com/jthack/ffuf_claude_skill/blob/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/SKILL.md",
+      "sha256": "ddedfc6165b0b85a0fd84f032df7a9970d48a614b266485458e83bf8dc705cbc",
+      "status": "saved",
+      "raw_path": "raw/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/SKILL.md"
+    },
+    {
+      "path": "ffuf-skill/ffuf_helper.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "5c67e820f0ec86c9a7d87c87681d0ee392a7ff94",
+      "bytes": 7336,
+      "source_url": "https://github.com/jthack/ffuf_claude_skill/blob/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/ffuf_helper.py",
+      "sha256": "146e73d162b71f6535da267a09584f2de10757291088c1405fa98ce81eda7a7d",
+      "status": "saved",
+      "raw_path": "raw/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/ffuf_helper.py"
+    },
+    {
+      "path": "ffuf-skill/resources/REQUEST_TEMPLATES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d8415a22fe7f9718fdf82da54660450cf7ff9b72",
+      "bytes": 4789,
+      "source_url": "https://github.com/jthack/ffuf_claude_skill/blob/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/resources/REQUEST_TEMPLATES.md",
+      "sha256": "dad5734c8df662bfe9c2014636df4a0d5daafaff6b8c30cbd88352b2dd3e7b7b",
+      "status": "saved",
+      "raw_path": "raw/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/resources/REQUEST_TEMPLATES.md"
+    },
+    {
+      "path": "ffuf-skill/resources/WORDLISTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e866cd69f6e0817517d9d54c509a0966edc62da2",
+      "bytes": 4487,
+      "source_url": "https://github.com/jthack/ffuf_claude_skill/blob/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/resources/WORDLISTS.md",
+      "sha256": "a698968d67d0259f544d0448e48575703b3ca907d1d3fbfbf18c0be6748dad80",
+      "status": "saved",
+      "raw_path": "raw/jthack/ffuf_claude_skill/50fd4af4d8bd60cfc48fd84eda1720fbd718857d/ffuf-skill/resources/WORDLISTS.md"
+    }
+  ]
+}

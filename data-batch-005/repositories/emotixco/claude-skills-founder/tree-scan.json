@@ -1,0 +1,21 @@
+{
+  "repository": "emotixco/claude-skills-founder",
+  "commit_sha": "ea6864c05c2f4a3666b9d6c14c550b20f35a04c9",
+  "tree_entries": 130,
+  "candidate_skill_paths": [
+    "skills/competitor-matrix/SKILL.md",
+    "skills/email-sequence/SKILL.md",
+    "skills/fundraise-prep/SKILL.md",
+    "skills/go-to-market/SKILL.md",
+    "skills/landing-page/SKILL.md",
+    "skills/metrics-dashboard/SKILL.md",
+    "skills/mvp-scope/SKILL.md",
+    "skills/persona-gen/SKILL.md",
+    "skills/pitch-deck/SKILL.md",
+    "skills/pricing-strategy/SKILL.md",
+    "skills/product-brief/SKILL.md",
+    "skills/status/SKILL.md",
+    "skills/user-interviews/SKILL.md",
+    "skills/validate-idea/SKILL.md"
+  ]
+}

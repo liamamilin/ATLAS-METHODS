@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "NotMyself/claude-win11-speckit-update-skill",
+      "commit_sha": "264d00a719dd8ab88ad396cc27ebf55dbb6e1b72"
+    }
+  ]
+}

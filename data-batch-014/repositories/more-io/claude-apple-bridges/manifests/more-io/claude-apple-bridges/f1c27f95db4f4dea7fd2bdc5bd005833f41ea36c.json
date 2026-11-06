@@ -1,0 +1,248 @@
+{
+  "repository": "more-io/claude-apple-bridges",
+  "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8baf5cd62a689d38a7af413223c7a53732d72c7b",
+      "bytes": 192,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/.gitignore",
+      "sha256": "687cb12ad1b0ef3b8e9f8a1f7953b245e9059e39549ac62822622118a3b22a88",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/.gitignore"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "918b3452f2ccd2d136a7dd6db9662f91ae37040d",
+      "bytes": 11890,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/CLAUDE.md",
+      "sha256": "5286121dad9fb85a06dcda96dab152f6b119df2f575fe03adcf9dad9168f48bc",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/CLAUDE.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4cfa336219c1e68abd8cace812c7445a8aa8deaa",
+      "bytes": 1081,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/LICENSE",
+      "sha256": "d1aeaad4b90bbdc662890ce51ced4404c848bc91c4b87dcff119e2ce0c034c50",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/LICENSE"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "00494a9baa3a1114044bd37e806f8028aef4e9fb",
+      "bytes": 6786,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/Makefile",
+      "sha256": "d953fb2c82e50b2b3b98677d03553043c00d11e5c0325bd3fc4211b18ed9403b",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/Makefile"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f4dcaa14f1a64ce29a4d6ab4202557b7d8a3e44",
+      "bytes": 27595,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/README.md",
+      "sha256": "22d0b3f5fd5ad9dd9666b2a615241dffe36412839c02b411a3c08da5c933ff8d",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/README.md"
+    },
+    {
+      "path": "apple-bridges-mcp.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "03aaa0b3ca1b568ba5ac9bf666b0941205c37238",
+      "bytes": 13806,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/apple-bridges-mcp.swift",
+      "sha256": "699287abaee7885b63b6e30d9579c2fc3ac79f9d2feef5b3fa787a18766cab70",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/apple-bridges-mcp.swift"
+    },
+    {
+      "path": "calendar-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "645c849fdd770fdc486b48f086d35766f6965a20",
+      "bytes": 13006,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/calendar-bridge.swift",
+      "sha256": "829aa16dac572b0bf263f5f3389cb00a2be6b4480c28281667551504bfed7f97",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/calendar-bridge.swift"
+    },
+    {
+      "path": "contacts-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c3144068434e19c9be99c1a19f4663f725195c05",
+      "bytes": 16714,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/contacts-bridge.swift",
+      "sha256": "f030e03bfaa141484a8c8ce70682fc09c53403164cf8b2493db575a7a3dc8bef",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/contacts-bridge.swift"
+    },
+    {
+      "path": "mail-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "249e6335341f34a27a2a401a03f049d64a0899a0",
+      "bytes": 29837,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/mail-bridge.swift",
+      "sha256": "8e345e6624176f4cf5a9416ff00b79ab44764fa9345f7a955cefa0fe7ff87563",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/mail-bridge.swift"
+    },
+    {
+      "path": "messages-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "73a22c3d9eed3ab01e9b7ee19393263dc7867516",
+      "bytes": 23918,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/messages-bridge.swift",
+      "sha256": "dc163296294dca09b83f8456d40faca1b684e8b36c14a79b694440f6e398f0ba",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/messages-bridge.swift"
+    },
+    {
+      "path": "notes-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2df32bf8defcc050b5c9119564eaf4e4b209f579",
+      "bytes": 13099,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/notes-bridge.swift",
+      "sha256": "1ce54f18f20cd34cc32a783d353df0be326afd14370626c582869df3b541f9dd",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/notes-bridge.swift"
+    },
+    {
+      "path": "reminders-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e6cd66f12b10c81ae0b4cd68d9eed3d374e3fd82",
+      "bytes": 27418,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/reminders-bridge.swift",
+      "sha256": "b8aab2f907dbaa85f3bb96f31fddafc11a3e983612214eb84b7cbbc45c4d7dca",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/reminders-bridge.swift"
+    },
+    {
+      "path": "skills/apple-bridges/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "be4ed325774f862d52d896f9982f9369171fb198",
+      "bytes": 4256,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/SKILL.md",
+      "sha256": "2f2f01218371c7bc1639d8a06c00eb878ffdca19b252bf16a2a721f13caee83b",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/SKILL.md"
+    },
+    {
+      "path": "skills/apple-bridges/calendar-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "81da31aaa0f706e62f9a8b9fa9ecc1be1f97369d",
+      "bytes": 3973,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/calendar-bridge.md",
+      "sha256": "decc12e39090e3098803d55f8eb74095915633ba175f689cc0ac94832b8cb422",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/calendar-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/contacts-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa84706364a08535ae62eb8236a614e170514cdb",
+      "bytes": 3920,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/contacts-bridge.md",
+      "sha256": "0b6ef2d64230edc75743b56faf64155488af755fac3e9d00c8a4751db62aac9c",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/contacts-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/mail-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f4bf2e7d30055ac778e8f87959fc79aa11f1b470",
+      "bytes": 6299,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/mail-bridge.md",
+      "sha256": "14edafa7da891d79a83615925242919853b79fac00542393a1157fbf61334664",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/mail-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/messages-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e0b121fbfc50b68d239c1dbf08f0fd19ab19b2f0",
+      "bytes": 7033,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/messages-bridge.md",
+      "sha256": "58ddaccfa6c3c95f1ad6b33b2ef6708dbb7d64cf3b1ca9a603d85bcac902879c",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/messages-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/notes-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fbd38a719632ca167be6680dab94baaa26e8e62e",
+      "bytes": 4153,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/notes-bridge.md",
+      "sha256": "42866041c3bf7b3eedaef966054fa793a49dc6e2f4dcffaf9c9a0802d73808d5",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/notes-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/reminders-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b7c9d83d4c8664ffd59007fcb02dce9b6e98b98c",
+      "bytes": 6506,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/reminders-bridge.md",
+      "sha256": "fd6ef7d9c34315f232088a1319b99d88ab07413d4ca2e60b91d7229c4ade4e3b",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/reminders-bridge.md"
+    },
+    {
+      "path": "skills/apple-bridges/tmux-bridge.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6483909b538ea207649900ad746e2c96a6e8827f",
+      "bytes": 4008,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/tmux-bridge.md",
+      "sha256": "9c9d82e25a499822e19ed584abdd8e137a8cc98e550c47887e4ab031625231dd",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/skills/apple-bridges/tmux-bridge.md"
+    },
+    {
+      "path": "test.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "60516c4f6d78e23e7a663d34d6b77f8cc913eee6",
+      "bytes": 21161,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/test.sh",
+      "sha256": "d3484a7668ead3bc72952818e91c41fadc2861e440e0cb1d5e0f7ee45b85b2d0",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/test.sh"
+    },
+    {
+      "path": "tmux-bridge.swift",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f41ecfaf427b1f275d0f758b80a1d97609046cb",
+      "bytes": 8317,
+      "source_url": "https://github.com/more-io/claude-apple-bridges/blob/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/tmux-bridge.swift",
+      "sha256": "8ac57c8d9fddfe95619235a584e1b57db2938448c62a51b412c02822722d48ed",
+      "status": "saved",
+      "raw_path": "raw/more-io/claude-apple-bridges/f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c/tmux-bridge.swift"
+    }
+  ]
+}

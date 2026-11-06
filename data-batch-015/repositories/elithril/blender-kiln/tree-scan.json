@@ -1,0 +1,9 @@
+{
+  "repository": "elithril/blender-kiln",
+  "commit_sha": "e9a421467dd95d0de71d45b3d331f8efa4b80f26",
+  "tree_entries": 519,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "plugin/SKILL.md"
+  ]
+}

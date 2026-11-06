@@ -1,0 +1,30 @@
+{
+  "repository": "GanyuanRan/Aegis",
+  "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+  "tree_entries": 574,
+  "candidate_skill_paths": [
+    "skills/anti-entropy-governance/SKILL.md",
+    "skills/brainstorming/SKILL.md",
+    "skills/communicating-concisely/SKILL.md",
+    "skills/dispatching-parallel-agents/SKILL.md",
+    "skills/establishing-project-context/SKILL.md",
+    "skills/executing-plans/SKILL.md",
+    "skills/finishing-a-development-branch/SKILL.md",
+    "skills/first-principles-review/SKILL.md",
+    "skills/goal-framing/SKILL.md",
+    "skills/long-task-continuation/SKILL.md",
+    "skills/receiving-code-review/SKILL.md",
+    "skills/recording-architecture-decisions/SKILL.md",
+    "skills/requesting-code-review/SKILL.md",
+    "skills/subagent-driven-development/SKILL.md",
+    "skills/systematic-debugging/SKILL.md",
+    "skills/test-driven-development/SKILL.md",
+    "skills/ui-ux-governance/SKILL.md",
+    "skills/update-aegis/SKILL.md",
+    "skills/using-aegis/SKILL.md",
+    "skills/using-git-worktrees/SKILL.md",
+    "skills/verification-before-completion/SKILL.md",
+    "skills/writing-plans/SKILL.md",
+    "skills/writing-skills/SKILL.md"
+  ]
+}

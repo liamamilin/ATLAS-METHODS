@@ -1,0 +1,17 @@
+{
+  "repository": "prisma/skills",
+  "commit_sha": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+  "tree_entries": 78,
+  "candidate_skill_paths": [
+    "prisma-cli/SKILL.md",
+    "prisma-client-api/SKILL.md",
+    "prisma-compute/SKILL.md",
+    "prisma-database-setup/SKILL.md",
+    "prisma-driver-adapter-implementation/SKILL.md",
+    "prisma-mongodb-upgrade/SKILL.md",
+    "prisma-orm-setup/SKILL.md",
+    "prisma-postgres-setup/SKILL.md",
+    "prisma-postgres/SKILL.md",
+    "prisma-upgrade-v7/SKILL.md"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "repository": "Sendmux/skills",
+  "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+  "tree_entries": 625,
+  "candidate_skill_paths": [
+    "plugins/sendmux/skills/agent-email-inbox/SKILL.md",
+    "plugins/sendmux/skills/email-for-ai-agents/SKILL.md",
+    "plugins/sendmux/skills/sendmux-attachments/SKILL.md",
+    "plugins/sendmux/skills/sendmux-cli/SKILL.md",
+    "plugins/sendmux/skills/sendmux-email-for-agents/SKILL.md",
+    "plugins/sendmux/skills/sendmux-getting-started/SKILL.md",
+    "plugins/sendmux/skills/sendmux-mailbox-agent/SKILL.md",
+    "plugins/sendmux/skills/sendmux-management/SKILL.md",
+    "plugins/sendmux/skills/sendmux-mcp-setup/SKILL.md",
+    "plugins/sendmux/skills/sendmux-send-email/SKILL.md",
+    "plugins/sendmux/skills/sendmux-token-efficient-usage/SKILL.md",
+    "skills/agent-email-inbox/SKILL.md",
+    "skills/email-for-ai-agents/SKILL.md",
+    "skills/sendmux-attachments/SKILL.md",
+    "skills/sendmux-cli/SKILL.md",
+    "skills/sendmux-email-for-agents/SKILL.md",
+    "skills/sendmux-getting-started/SKILL.md",
+    "skills/sendmux-mailbox-agent/SKILL.md",
+    "skills/sendmux-management/SKILL.md",
+    "skills/sendmux-mcp-setup/SKILL.md",
+    "skills/sendmux-send-email/SKILL.md",
+    "skills/sendmux-token-efficient-usage/SKILL.md"
+  ]
+}

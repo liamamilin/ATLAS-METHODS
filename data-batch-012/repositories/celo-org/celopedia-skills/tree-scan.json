@@ -1,0 +1,9 @@
+{
+  "repository": "celo-org/celopedia-skills",
+  "commit_sha": "3cc63acd5eeb77d87277028450686bbad7f9881c",
+  "tree_entries": 64,
+  "candidate_skill_paths": [
+    ".claude/skills/docs-watch/SKILL.md",
+    "skills/celopedia-skill/SKILL.md"
+  ]
+}

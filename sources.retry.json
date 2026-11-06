@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "note": "Sources attempted in this run that failed; commit pins are retained where resolution succeeded. Historical unexported entrances are not retried.",
+  "sources": [
+    {
+      "repository": "cbrock84/headcount",
+      "repository_url": "https://github.com/cbrock84/headcount",
+      "discovered_via": [
+        {
+          "index": "VoltAgent/awesome-agent-skills",
+          "index_commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+          "url": "https://github.com/cbrock84/headcount",
+          "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1661",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "failed",
+      "batch": "007"
+    }
+  ]
+}

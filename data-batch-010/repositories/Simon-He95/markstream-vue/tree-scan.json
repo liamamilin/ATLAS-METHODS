@@ -1,0 +1,19 @@
+{
+  "repository": "Simon-He95/markstream-vue",
+  "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+  "tree_entries": 2794,
+  "candidate_skill_paths": [
+    ".agents/skills/markstream-angular/SKILL.md",
+    ".agents/skills/markstream-custom-components/SKILL.md",
+    ".agents/skills/markstream-install/SKILL.md",
+    ".agents/skills/markstream-migration/SKILL.md",
+    ".agents/skills/markstream-nuxt/SKILL.md",
+    ".agents/skills/markstream-react/SKILL.md",
+    ".agents/skills/markstream-solid/SKILL.md",
+    ".agents/skills/markstream-svelte/SKILL.md",
+    ".agents/skills/markstream-vue/SKILL.md",
+    ".agents/skills/markstream-vue2-cli/SKILL.md",
+    ".agents/skills/markstream-vue2-vite/SKILL.md",
+    ".agents/skills/markstream-vue2/SKILL.md"
+  ]
+}

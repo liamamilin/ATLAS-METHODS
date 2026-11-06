@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "wiltodelta/remove-ai-watermarks",
+      "commit_sha": "3168d878461eed072bf86c237b219611261cf85f"
+    }
+  ]
+}

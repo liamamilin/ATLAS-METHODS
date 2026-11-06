@@ -1,0 +1,13 @@
+{
+  "repository": "Nanako0129/sepia",
+  "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+  "tree_entries": 66,
+  "candidate_skill_paths": [
+    "skills/sepia-hemingway/SKILL.md",
+    "skills/sepia-recreate/SKILL.md",
+    "skills/sepia-refactor/SKILL.md",
+    "skills/sepia-review/SKILL.md",
+    "skills/sepia-write/SKILL.md",
+    "skills/sepia/SKILL.md"
+  ]
+}

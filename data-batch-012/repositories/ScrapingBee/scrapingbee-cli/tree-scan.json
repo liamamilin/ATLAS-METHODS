@@ -1,0 +1,23 @@
+{
+  "repository": "ScrapingBee/scrapingbee-cli",
+  "commit_sha": "6faed902c5d786fcb5eb1e8a57c49563b0a591e9",
+  "tree_entries": 393,
+  "candidate_skill_paths": [
+    ".agents/skills/scrapingbee-cli-guard/SKILL.md",
+    ".agents/skills/scrapingbee-cli/SKILL.md",
+    ".github/skills/scrapingbee-cli-guard/SKILL.md",
+    ".github/skills/scrapingbee-cli/SKILL.md",
+    ".kiro/skills/scrapingbee-cli-guard/SKILL.md",
+    ".kiro/skills/scrapingbee-cli/SKILL.md",
+    ".opencode/skills/scrapingbee-cli-guard/SKILL.md",
+    ".opencode/skills/scrapingbee-cli/SKILL.md",
+    "plugins/scrapingbee-antigravity/skills/scrapingbee-cli-guard/SKILL.md",
+    "plugins/scrapingbee-antigravity/skills/scrapingbee-cli/SKILL.md",
+    "plugins/scrapingbee-cli/skills/scrapingbee-cli-guard/SKILL.md",
+    "plugins/scrapingbee-cli/skills/scrapingbee-cli/SKILL.md",
+    "plugins/scrapingbee-cursor/skills/scrapingbee-cli-guard/SKILL.md",
+    "plugins/scrapingbee-cursor/skills/scrapingbee-cli/SKILL.md",
+    "plugins/scrapingbee-kiro/skills/scrapingbee-cli-guard/SKILL.md",
+    "plugins/scrapingbee-kiro/skills/scrapingbee-cli/SKILL.md"
+  ]
+}

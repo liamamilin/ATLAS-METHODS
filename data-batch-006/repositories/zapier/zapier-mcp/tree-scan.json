@@ -1,0 +1,11 @@
+{
+  "repository": "zapier/zapier-mcp",
+  "commit_sha": "54a12277a12c60df51ec16cf4e4ef0b27b166649",
+  "tree_entries": 32,
+  "candidate_skill_paths": [
+    "plugins/zapier/skills/zapier-demo/SKILL.md",
+    "plugins/zapier/skills/zapier-explore/SKILL.md",
+    "plugins/zapier/skills/zapier-onboard/SKILL.md",
+    "plugins/zapier/skills/zapier-status/SKILL.md"
+  ]
+}

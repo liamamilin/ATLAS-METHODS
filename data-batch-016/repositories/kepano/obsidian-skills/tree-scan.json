@@ -1,0 +1,13 @@
+{
+  "repository": "kepano/obsidian-skills",
+  "commit_sha": "3ccff5338ea700537839b21900aa5358a0402c98",
+  "tree_entries": 15,
+  "candidate_skill_paths": [
+    "skills/defuddle/SKILL.md",
+    "skills/json-canvas/SKILL.md",
+    "skills/knap/SKILL.md",
+    "skills/obsidian-bases/SKILL.md",
+    "skills/obsidian-cli/SKILL.md",
+    "skills/obsidian-markdown/SKILL.md"
+  ]
+}

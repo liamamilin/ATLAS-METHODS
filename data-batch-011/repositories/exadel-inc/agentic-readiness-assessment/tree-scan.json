@@ -1,0 +1,9 @@
+{
+  "repository": "exadel-inc/agentic-readiness-assessment",
+  "commit_sha": "ea984d78133871c5014ddcbdabc8532058f3f6a2",
+  "tree_entries": 53,
+  "candidate_skill_paths": [
+    "skills/agent-tool-call-latency/SKILL.md",
+    "skills/agentic-readiness-assessment/SKILL.md"
+  ]
+}

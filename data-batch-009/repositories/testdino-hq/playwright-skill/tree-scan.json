@@ -1,0 +1,15 @@
+{
+  "repository": "testdino-hq/playwright-skill",
+  "commit_sha": "178d1cb537604279d7b54500c4823a6db42b9de6",
+  "tree_entries": 89,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "ci/SKILL.md",
+    "core/SKILL.md",
+    "frontend/SKILL.md",
+    "migration/SKILL.md",
+    "playwright-cli/SKILL.md",
+    "pom/SKILL.md",
+    "qa/SKILL.md"
+  ]
+}

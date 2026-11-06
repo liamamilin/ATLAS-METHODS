@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:56:11.952110+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 6,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "zxkane/aws-skills",
+      "commit_sha": "68530c6f296ccd2f5e99c79782f3e0fbf962c51a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 59,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/zxkane/aws-skills/68530c6f296ccd2f5e99c79782f3e0fbf962c51a.json"
+    }
+  ],
+  "errors": []
+}

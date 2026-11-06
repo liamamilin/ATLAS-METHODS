@@ -1,0 +1,19 @@
+{
+  "repository": "metalbear-co/skills",
+  "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+  "tree_entries": 81,
+  "candidate_skill_paths": [
+    "skills/mirrord-chaos/SKILL.md",
+    "skills/mirrord-ci/SKILL.md",
+    "skills/mirrord-config/SKILL.md",
+    "skills/mirrord-db-branching/SKILL.md",
+    "skills/mirrord-header-propagation/SKILL.md",
+    "skills/mirrord-kafka/SKILL.md",
+    "skills/mirrord-operator/SKILL.md",
+    "skills/mirrord-prev-env/SKILL.md",
+    "skills/mirrord-propagation-discovery/SKILL.md",
+    "skills/mirrord-quickstart/SKILL.md",
+    "skills/mirrord-temporal/SKILL.md",
+    "skills/mirrord-up/SKILL.md"
+  ]
+}

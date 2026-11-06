@@ -1,0 +1,13 @@
+{
+  "repository": "UiPath/coder_eval",
+  "commit_sha": "bc45225fe4b836ae9376a66fc5864f5b49e6851f",
+  "tree_entries": 944,
+  "candidate_skill_paths": [
+    "plugins/coder-eval/skills/analyze/SKILL.md",
+    "plugins/coder-eval/skills/check-skill/SKILL.md",
+    "plugins/coder-eval/skills/ci/SKILL.md",
+    "plugins/coder-eval/skills/init/SKILL.md",
+    "plugins/coder-eval/skills/lint-tasks/SKILL.md",
+    "plugins/coder-eval/skills/task/SKILL.md"
+  ]
+}

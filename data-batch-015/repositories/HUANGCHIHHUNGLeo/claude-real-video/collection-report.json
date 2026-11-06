@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:16:59.225837+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 5,
+  "saved_skill_entries": 5,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "HUANGCHIHHUNGLeo/claude-real-video",
+      "commit_sha": "ab4b9b2b23790f5d63a6d15165d3d8ba284c6023",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 116,
+      "files_not_exported": 52,
+      "repository_manifest": "manifests/HUANGCHIHHUNGLeo/claude-real-video/ab4b9b2b23790f5d63a6d15165d3d8ba284c6023.json"
+    }
+  ],
+  "errors": []
+}

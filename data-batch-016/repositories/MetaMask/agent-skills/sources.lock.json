@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "MetaMask/agent-skills",
+      "commit_sha": "e87ac501d24648ba05cd86811d97915035eb30df"
+    }
+  ]
+}

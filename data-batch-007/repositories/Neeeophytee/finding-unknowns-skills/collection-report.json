@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:51:41.865097+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Neeeophytee/finding-unknowns-skills",
+      "commit_sha": "ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 55,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/Neeeophytee/finding-unknowns-skills/ca5696a0f08d2de6b2997fff1d6cc05c3ed587cc.json"
+    }
+  ],
+  "errors": []
+}

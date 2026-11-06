@@ -1,0 +1,9 @@
+{
+  "repository": "Maksim-Burtsev/simple-man",
+  "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+  "tree_entries": 140,
+  "candidate_skill_paths": [
+    "plugins/simple-man/skills/simple-man/SKILL.md",
+    "skills/simple-man/SKILL.md"
+  ]
+}

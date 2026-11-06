@@ -1,0 +1,294 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "54be9d41d2b2a2a7699db96a70de438ee8e8893aa1d91600d5e84f567707bd01",
+  "sources": [
+    {
+      "repository": "AIDevGTM/gtm-cofounder",
+      "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e",
+      "candidate_skill_entries": 20,
+      "skill_entries": 20,
+      "manifest_files": 38,
+      "statuses": {
+        "saved": 37,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "Bomx/distribb-skill",
+      "commit_sha": "01bbede516a8963bff5731bbda412f0e2a364188",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 45,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "Nanako0129/sepia",
+      "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 66,
+      "statuses": {
+        "saved": 64,
+        "symlink_not_followed": 2
+      }
+    },
+    {
+      "repository": "ScrapeCreators/social-media-research-skills",
+      "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 20,
+      "statuses": {
+        "saved": 20
+      }
+    },
+    {
+      "repository": "SupercmoHQ/superCMO-skills",
+      "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+      "candidate_skill_entries": 23,
+      "skill_entries": 23,
+      "manifest_files": 208,
+      "statuses": {
+        "saved": 204,
+        "non_utf8_or_binary_not_exported": 2,
+        "font_not_exported": 2
+      }
+    },
+    {
+      "repository": "Vladimir-Human/humanizer-ru",
+      "commit_sha": "99db93d7d8ea8b2d9578a33ab30a9f6b8679a9e3",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 1870,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 1,
+        "saved": 1869
+      }
+    },
+    {
+      "repository": "YannisKiefer/dark-psychology-skills",
+      "commit_sha": "b49849880502bbb7366fe6be7023a031af8dd966",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 22,
+      "statuses": {
+        "saved": 21,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "aaron-he-zhu/aaron-marketing-skills",
+      "commit_sha": "9c8815c728c550cf551b82e1c6e1a307c5eae61f",
+      "candidate_skill_entries": 120,
+      "skill_entries": 120,
+      "manifest_files": 961,
+      "statuses": {
+        "saved": 961
+      }
+    },
+    {
+      "repository": "citlyze/citlyze-skills",
+      "commit_sha": "f1265f70a37531f5a81c77659e78276908a9172c",
+      "candidate_skill_entries": 5,
+      "skill_entries": 5,
+      "manifest_files": 8,
+      "statuses": {
+        "saved": 8
+      }
+    },
+    {
+      "repository": "degausai/wonda",
+      "commit_sha": "2edfb001c58aa038558178f4e80407c47df2266a",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 40,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "explorium-ai/vibeprospecting-plugin",
+      "commit_sha": "510710bb0f6e219d37bb320e766ee3c5c2ef30e0",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 32,
+      "statuses": {
+        "saved": 31,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "gitroomhq/postiz-agent",
+      "commit_sha": "01ab1fe17efa30d12de7758b961e8776d34dba4e",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 67,
+      "statuses": {
+        "saved": 67
+      }
+    },
+    {
+      "repository": "gooseworks-ai/goose-skills",
+      "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+      "candidate_skill_entries": 185,
+      "skill_entries": 185,
+      "manifest_files": 2266,
+      "statuses": {
+        "saved": 2112,
+        "font_not_exported": 39,
+        "non_utf8_or_binary_not_exported": 115
+      }
+    },
+    {
+      "repository": "heygen-com/hyperframes",
+      "commit_sha": "cb8e02e8264bd6994de29a024a6f320ce21654e7",
+      "candidate_skill_entries": 28,
+      "skill_entries": 28,
+      "manifest_files": 9804,
+      "statuses": {
+        "saved": 9169,
+        "font_not_exported": 161,
+        "non_utf8_or_binary_not_exported": 457,
+        "over_size_limit": 15,
+        "symlink_not_followed": 2
+      }
+    },
+    {
+      "repository": "ilyautov/humanizer-ru",
+      "commit_sha": "b6df5d9b87d47ca288cce3a02da007da33221626",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 282,
+      "statuses": {
+        "saved": 253,
+        "non_utf8_or_binary_not_exported": 15,
+        "font_not_exported": 14
+      }
+    },
+    {
+      "repository": "indranilbanerjee/digital-marketing-pro",
+      "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+      "candidate_skill_entries": 164,
+      "skill_entries": 164,
+      "manifest_files": 789,
+      "statuses": {
+        "saved": 788,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "infrasity-labs/dev-gtm-claude-skills",
+      "commit_sha": "02cfefb3a213041de8b80bc659ebc5f17b5e746a",
+      "candidate_skill_entries": 588,
+      "skill_entries": 588,
+      "manifest_files": 2572,
+      "statuses": {
+        "saved": 2476,
+        "non_utf8_or_binary_not_exported": 36,
+        "font_not_exported": 54,
+        "over_size_limit": 6
+      }
+    },
+    {
+      "repository": "mailtrap/mailtrap-skills",
+      "commit_sha": "ba8ea7d802bb66cc9b9529dcf441fb99bc1d8766",
+      "candidate_skill_entries": 8,
+      "skill_entries": 8,
+      "manifest_files": 34,
+      "statuses": {
+        "saved": 34
+      }
+    },
+    {
+      "repository": "nowork-studio/notfair-plugin",
+      "commit_sha": "ed835f273dce03a451c13fa0cb67305ae58ecb05",
+      "candidate_skill_entries": 48,
+      "skill_entries": 48,
+      "manifest_files": 289,
+      "statuses": {
+        "saved": 288,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "sandbaseai/sandbase-skills",
+      "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+      "candidate_skill_entries": 246,
+      "skill_entries": 246,
+      "manifest_files": 922,
+      "statuses": {
+        "saved": 922
+      }
+    },
+    {
+      "repository": "sergebulaev/linkedin-skills",
+      "commit_sha": "8f8bc4b40a2d5419b2dcf898772b85712cfbdf41",
+      "candidate_skill_entries": 26,
+      "skill_entries": 26,
+      "manifest_files": 228,
+      "statuses": {
+        "saved": 214,
+        "symlink_not_followed": 12,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "socai-io/jev-social",
+      "commit_sha": "2f02e6f4c60943e679993634ad1017b0c97efff5",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 143,
+      "statuses": {
+        "saved": 136,
+        "non_utf8_or_binary_not_exported": 6,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "taisly/agent",
+      "commit_sha": "2f2c3dd5239265b7b6229d266aa0c79a9f93bdef",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 40,
+      "statuses": {
+        "saved": 39,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "vanshyadav1408/Omentir",
+      "commit_sha": "238517f827581b884f9ab860815a255905867f6f",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 713,
+      "statuses": {
+        "saved": 634,
+        "symlink_not_followed": 2,
+        "non_utf8_or_binary_not_exported": 70,
+        "font_not_exported": 6,
+        "over_size_limit": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 320154886,
+    "entries_with_license_candidates": 1506,
+    "saved": 20432,
+    "non_utf8_or_binary_not_exported": 719,
+    "entries_without_license_candidates": 3,
+    "symlink_not_followed": 18,
+    "font_not_exported": 276,
+    "over_size_limit": 23
+  },
+  "verified_candidate_entries": 1509,
+  "verified_skill_entries": 1509,
+  "unique_entry_texts": 1178,
+  "duplicate_entry_groups": 266,
+  "entries_in_duplicate_groups": 597,
+  "duplicate_entries_beyond_first": 331
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "Panniantong/Agent-Reach",
+  "commit_sha": "47898829204ad27521d8a1719e3aeca3b8a3e0ca",
+  "tree_entries": 120,
+  "candidate_skill_paths": [
+    "agent_reach/skill/SKILL.md"
+  ]
+}

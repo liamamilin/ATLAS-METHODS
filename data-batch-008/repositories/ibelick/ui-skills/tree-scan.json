@@ -1,0 +1,16 @@
+{
+  "repository": "ibelick/ui-skills",
+  "commit_sha": "00db7d656719c399c091f3ea138c6f42a7fa4d98",
+  "tree_entries": 322,
+  "candidate_skill_paths": [
+    "skills/baseline-ui/SKILL.md",
+    "skills/component-canvas/SKILL.md",
+    "skills/create-canvas/SKILL.md",
+    "skills/create-design-md/SKILL.md",
+    "skills/fixing-accessibility/SKILL.md",
+    "skills/fixing-metadata/SKILL.md",
+    "skills/fixing-motion-performance/SKILL.md",
+    "skills/improve-ui/SKILL.md",
+    "skills/ui-skills-root/SKILL.md"
+  ]
+}

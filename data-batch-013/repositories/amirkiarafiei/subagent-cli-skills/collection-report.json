@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:12:08.121398+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 25,
+  "saved_skill_entries": 25,
+  "unique_entry_texts": 25,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "amirkiarafiei/subagent-cli-skills",
+      "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 25,
+      "saved_skill_entries": 25,
+      "saved_text_files": 83,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/amirkiarafiei/subagent-cli-skills/ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4.json"
+    }
+  ],
+  "errors": []
+}

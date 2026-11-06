@@ -1,0 +1,27 @@
+{
+  "repository": "AIDevGTM/gtm-cofounder",
+  "commit_sha": "7919aa3d559bcf170c7ab20a8919d44eec5a7e2e",
+  "tree_entries": 38,
+  "candidate_skill_paths": [
+    "skills/00-start-here/SKILL.md",
+    "skills/01-strategy-and-roadmap/SKILL.md",
+    "skills/02-who-is-this-for/SKILL.md",
+    "skills/03-talk-to-users/SKILL.md",
+    "skills/04-positioning-and-story/SKILL.md",
+    "skills/05-beyond-the-wrapper/SKILL.md",
+    "skills/06-value-prop-that-converts/SKILL.md",
+    "skills/07-the-homepage/SKILL.md",
+    "skills/08-time-to-first-value/SKILL.md",
+    "skills/09-first-50-users/SKILL.md",
+    "skills/10-launch-it/SKILL.md",
+    "skills/11-market-to-devs-sell-to-buyers/SKILL.md",
+    "skills/12-pricing/SKILL.md",
+    "skills/13-founder-led-sales/SKILL.md",
+    "skills/14-founder-led-content/SKILL.md",
+    "skills/15-know-if-its-working/SKILL.md",
+    "skills/16-market-scan/SKILL.md",
+    "skills/17-review-the-work/SKILL.md",
+    "skills/18-growth-loops/SKILL.md",
+    "skills/19-research-the-market/SKILL.md"
+  ]
+}

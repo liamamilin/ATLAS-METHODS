@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "eduardo-sl/go-agent-skills",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0"
+    }
+  ]
+}

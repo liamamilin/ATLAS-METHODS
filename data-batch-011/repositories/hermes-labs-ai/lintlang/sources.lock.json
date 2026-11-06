@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "hermes-labs-ai/lintlang",
+      "commit_sha": "d0729b6ec84e68bafb8b329a171e2252a8ff8ecb"
+    }
+  ]
+}

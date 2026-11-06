@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:55:53.155930+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 180,
+  "saved_skill_entries": 180,
+  "unique_entry_texts": 169,
+  "duplicate_entry_groups": 11,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "VoDaiLocz/kilo-kit-mcp",
+      "commit_sha": "1c04afc2a760ed58cea1308851e7626f76c4ff44",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 180,
+      "saved_skill_entries": 180,
+      "saved_text_files": 892,
+      "files_not_exported": 66,
+      "repository_manifest": "manifests/VoDaiLocz/kilo-kit-mcp/1c04afc2a760ed58cea1308851e7626f76c4ff44.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,460 @@
+[
+  {
+    "entry_sha256": "215be6f92a9f4e02ff2600ccd4534b591f9ad29bbcccedf30e951f168afd2e07",
+    "record_ids": [
+      "3fe842b23b8294e7d10a",
+      "f051e70d007025b3e05f",
+      "530ca6eb3a9fc0e4eb6e",
+      "8a89104b3a81a1d14f41",
+      "7cbad6e7aa56f5872d82"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-debug/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-debug/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-debug/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-debug/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-debug/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "43b6930f2707fe002d06776955074cf739100d5a4505a751b6b82b5c39f7601a",
+    "record_ids": [
+      "88d1e9e9a9391a071b42",
+      "510ddfb78172b960acad",
+      "3afc275a6be403910e90",
+      "b3ab1d7b8043ed52a536",
+      "cef7a661502c8699dda4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-verify/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-verify/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-verify/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-verify/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-verify/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "44deb0fa07d8d9debc7158f6b26a57f098138286314fe2ced3d533f6d9bcd8a2",
+    "record_ids": [
+      "824a1a4d585988a37341",
+      "b5b2b50048157ac0195f",
+      "c9a27f7c088cbdcbb452",
+      "8f080414dd4bf3a9e450",
+      "ad5a97b48852a9bb63fd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-prd/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-prd/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-prd/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-prd/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-prd/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "44ea82c7170be44f129802b361ab57b56a3226771b4fbee5dd8f4fbf72c47601",
+    "record_ids": [
+      "0a803766e8a1789b2d82",
+      "574092849373806b4dd4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "browser-act/skills",
+        "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+        "skill_path": "solutions/lead-generation/trustpilot-company-info/SKILL.md"
+      },
+      {
+        "repository": "browser-act/skills",
+        "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+        "skill_path": "solutions/social-listening/trustpilot-company-info/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "483f14d69f9795ab0486fd529a014eb8316a3a8d7839a47cfcb12a2e761da946",
+    "record_ids": [
+      "0c6f3b64c908c538b52c",
+      "63943e9b109faa6b5cfc",
+      "ffeba497004f7deba783",
+      "631c52b55d9f3f133dc4",
+      "b24e05710a3791b1cf88"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-build/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-build/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-build/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-build/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-build/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "57a6906ec93410bb032c1c75a98334f63abe1868e3186182990c71e63f95da88",
+    "record_ids": [
+      "0372b87f1dcc0cc1d8bc",
+      "c030c05e0d68faf30931",
+      "e7e88a8686a92ea82397",
+      "bb2ed5b26634196fe233",
+      "9835d437a2d4ea9f791d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-research/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-research/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-research/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-research/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-research/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5b339a16dc24e7e75cd1a6beae6ffb680827079bb94cc63ccf0afa7dda205d8a",
+    "record_ids": [
+      "db7aa60c1b7106b5dd04",
+      "6d52bc7c0ea16926ae77",
+      "a4efef6afae3def1ed14",
+      "2f0eec2d208e49f3346d",
+      "e14afa39d51c84f697b1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-change/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-change/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-change/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-change/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-change/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "79eec86ee344e66ac0f262746d1d12bf0603ed20292cf55bcc5debe125bcfa3f",
+    "record_ids": [
+      "334af4f59a5cb5a7122e",
+      "edd094795e08e1f7a8f7",
+      "39b7e236da80731f035b",
+      "7d392e99b3a8c238aa60",
+      "380cebe4c59a0a3d5924"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-review/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-review/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-review/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-review/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-review/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "86818a517f8dea41dee2d453d0abf93bfaff0891c28f1ed7dce80471887504a0",
+    "record_ids": [
+      "63abf2ee87f237e00478",
+      "ac5b9a7fae78a7c0b16e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Maksim-Burtsev/simple-man",
+        "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+        "skill_path": "plugins/simple-man/skills/simple-man/SKILL.md"
+      },
+      {
+        "repository": "Maksim-Burtsev/simple-man",
+        "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+        "skill_path": "skills/simple-man/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "923e58d843bd3eca81d1ef5e8ec5528b2e39fc9b2487eeb204fc0e54f91e3de5",
+    "record_ids": [
+      "a8c6f3d477f31d85705c",
+      "d608375edd35cc59052c",
+      "7c8720afd14e2fb37b4f",
+      "929d891d766a46c63f83",
+      "5bdbb8db1b4b61c35963"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-techdesign/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-techdesign/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-techdesign/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-techdesign/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-techdesign/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "99ddf03299e6c139677f0d545b9ca466040c471d1aa60ecba10b3cfcd30cc7b9",
+    "record_ids": [
+      "b8a51dfbd2e4ee21ab0f",
+      "1281b18747ef10046033",
+      "623334590ac471dfe58d",
+      "bb76a3287da78d10764d",
+      "2775daabc4c8e34b41d3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-handoff/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-handoff/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-handoff/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-handoff/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-handoff/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a9755159c258bed00da95a477f83b7b006327f63685b4f4611eec9af95074262",
+    "record_ids": [
+      "8251a0ec6d1a6e90a503",
+      "3e3b59945be9309c5663",
+      "2737e32104fd13e1bf4c",
+      "55b73db34e89356a1e8c",
+      "786205da7a2a4c33bbac"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-agents/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-agents/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-agents/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-agents/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-agents/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d4ca9ad57463f5c16d1b91c4bc6e07b43fed3939094837073f8a2ca203dc08b2",
+    "record_ids": [
+      "c0c2c09e61e7bf980214",
+      "b183122ed91af00ff54b",
+      "0fb0ca79512cfa040cb4",
+      "c8a82a47b1314ac3d7e9",
+      "6e29c18441304834d513"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".agents/skills/vibe-workflow/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": ".claude/skills/vibe-workflow/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.agents/skills/vibe-workflow/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "templates/.claude/skills/vibe-workflow/SKILL.md"
+      },
+      {
+        "repository": "KhazP/vibe-coding-prompt-template",
+        "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+        "skill_path": "workflow/skills/vibe-workflow/SKILL.md"
+      }
+    ]
+  }
+]

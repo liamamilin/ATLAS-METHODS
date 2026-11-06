@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:16:40.506909+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Alisa0808/vibe-creating-skill",
+      "commit_sha": "a599301980a66eb47ddac5c15e41081b74a2759d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 22,
+      "files_not_exported": 11,
+      "repository_manifest": "manifests/Alisa0808/vibe-creating-skill/a599301980a66eb47ddac5c15e41081b74a2759d.json"
+    }
+  ],
+  "errors": []
+}

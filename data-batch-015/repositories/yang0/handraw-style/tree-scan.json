@@ -1,0 +1,30 @@
+{
+  "repository": "yang0/handraw-style",
+  "commit_sha": "11d3915a8c30fd4d5223e188ae9fc3ad23743505",
+  "tree_entries": 1043,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/article-cover-designer/SKILL.md",
+    "skills/article-illustration-planner/SKILL.md",
+    "skills/community-share/SKILL.md",
+    "skills/couple-photo-orchestrator/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/hairstyle/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/huanzhuang/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/kefu/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/makeup/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/meihua/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/paishe/SKILL.md",
+    "skills/couple-photo-orchestrator/skills/zongkong/SKILL.md",
+    "skills/custom-asset-manager/SKILL.md",
+    "skills/handdraw-style-prompter/SKILL.md",
+    "skills/ip-designer/SKILL.md",
+    "skills/layout-library-importer/SKILL.md",
+    "skills/personal-library/SKILL.md",
+    "skills/poster-prompt-generator/SKILL.md",
+    "skills/release-illustration-planner/SKILL.md",
+    "skills/style-business-analyzer/SKILL.md",
+    "skills/style-fusion-prompter/SKILL.md",
+    "skills/style-library-importer/SKILL.md",
+    "skills/tweet-style-importer/SKILL.md"
+  ]
+}

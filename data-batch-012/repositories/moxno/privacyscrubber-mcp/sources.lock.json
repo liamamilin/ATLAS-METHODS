@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "moxno/privacyscrubber-mcp",
+      "commit_sha": "52e0805708bfd4aa3dcd6d918b0eda6bcec06f74"
+    }
+  ]
+}

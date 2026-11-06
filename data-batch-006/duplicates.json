@@ -1,0 +1,5026 @@
+[
+  {
+    "entry_sha256": "003c1d8aa62a575affa8bae69b3f9380d6b73952b346dbd57e34243e23efaa86",
+    "record_ids": [
+      "81ffc21c9555b9178380",
+      "75874892b683cb4fa356"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-payroll-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-payroll-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "007f915b06a7649f81e94c92617b28f3dbb431442147585e5fc0058284b32e3a",
+    "record_ids": [
+      "58b3c1d2fea9ac2adae8",
+      "0b9663fdfcac7df93092"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-transfer-pricing/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-transfer-pricing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "01a181e1c8c6e23ea0ad65f9f8d1b4a64aa0141ac7e2372b2794c8afe0b28098",
+    "record_ids": [
+      "969c62b35c969c52662c",
+      "75279f48819b35182094"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-social-contributions/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-social-contributions/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "027b51c8b448d9d889d06e9c3077ef161b444a2e87d5722ca85b6be66cf2acc0",
+    "record_ids": [
+      "c58bfc93fd9e736a7be9",
+      "730a0314f2b984dc8ef3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/write-tests/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/write-tests/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "051cdc5e52f6a9ae5f790bb14449432b92ffd2f7b269bef199f6d9dd61e0d98a",
+    "record_ids": [
+      "07edcacd0d5c0130744a",
+      "f6bccd161a2fd1586652"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/cause-and-effect/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/cause-and-effect/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "066dbc14590e48432e318a1cccc6d924a0d685171f8ccdb5e9e9f650e9caaa26",
+    "record_ids": [
+      "4394c5ffdbb4f5c75b04",
+      "471d77732702b45dcda5",
+      "a1d79b08c64ad1616e66"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/build-mcp/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/mcp/skills/build-mcp/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/build-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "08955702722323c878ccdac55a6835f0bbc7519c67f48c26dd9d2a3cd04ef9af",
+    "record_ids": [
+      "796d28e136bf050694ba",
+      "b2750f1b44369a9cda13"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-partners-and-part-year/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-partners-and-part-year/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "08d52d336b8b5f312e90632563734c76face099d57b7ce62b6c48de5a997a729",
+    "record_ids": [
+      "4b06f77936a296bde5dd",
+      "0969572288cbd0711542"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-freelance-intake/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-freelance-intake/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "08deffde3dcdf4849983604e2266bea343e8c8a0444fb28ed970800e64ab4f7f",
+    "record_ids": [
+      "1da1ba81daf9e597f1ce",
+      "325d420219267de512c2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/critique/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/critique/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0946e4ddc7c50b4d02aa4cbc75b7b19e9b18f3237bf86076abeb85a35b33514b",
+    "record_ids": [
+      "8499776c05cf178d6ac0",
+      "eb73cba19e3abc1b2a89",
+      "fea9e04beff03a2847af"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/test-coverage/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/tdd/skills/test-coverage/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/test-coverage/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0a22543a5b9ecba60f2a59cf056ecf1220c84a39fb861e59a44b3f7e98fcd4a7",
+    "record_ids": [
+      "dedcccdb4a488eb23027",
+      "691ac4e2542792e0eef2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-inheritance-and-succession/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-inheritance-and-succession/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0a64aca228a3f7fcff1a63056883baa62851cc29f5c2201777e9ea52f359d1f8",
+    "record_ids": [
+      "dcd30565abdda111cf36",
+      "a489ffa0a9a673a62f1e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/propose-hypotheses/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/propose-hypotheses/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0be8ae4e58c2319647623dd3c1c349da51dbfc82575cf06196835d7f874ab024",
+    "record_ids": [
+      "45af0f2ca19113f9779e",
+      "5ff5b831b52a8921f336"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-ssc/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-ssc/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0c6dfed398877d6065b07f961e59e314be8389a0a2d806c368fd8ce3d30f69c5",
+    "record_ids": [
+      "cd3bd39b5a06995255df",
+      "b6a2587e894a3fa9d534",
+      "ad69a456c71c602b97e6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/subagent-driven-development/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/sadd/skills/subagent-driven-development/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/subagent-driven-development/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0ca6dfa4b3f8ebcb89978b0c59bf7a86b3748d20c94cda0bee371a7a1b40bb7f",
+    "record_ids": [
+      "59569dc41c675ad093b0",
+      "36b12256ef936cb29072"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-property-transfer-tax-the-sale-immovable/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-property-transfer-tax-the-sale-immovable/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0dd66c46af5871158b3b462681bc6f106f4228b01438330398fa4fef286f98f0",
+    "record_ids": [
+      "3b668794ca3ff25f26a8",
+      "6812d30b51b4136710cd",
+      "59bd17864b2cba4323e2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/decay/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/fpf/skills/decay/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/decay/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0e3dc481f13195e2a7da19a079c8863e4c5be1b3f3f97fecd1487a3d1618f819",
+    "record_ids": [
+      "b67e5a1910a0a3614537",
+      "6d8ed24b94b48b3c8975"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/property-management-2/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/property-management-2/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "114365a7ef196831dd2d7d04dbf216ee6995ad7803fab254b69143ce03a1573b",
+    "record_ids": [
+      "3714e9f79221ed61153a",
+      "5710704a69ee607c2fd6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-social-contributions/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-social-contributions/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "13e6bbe1b509d83a9df3fd4ea978f2c513edd83ff8e97b4fa67f8d8f7b9106f1",
+    "record_ids": [
+      "d1ad21b7bbe972684edd",
+      "c94d05875408e974559e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-capital-gains/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-capital-gains/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "14f4a82446aff8fa38eec9ea42aed1c9fb17553c1f04a7207d420bd2fb4d5830",
+    "record_ids": [
+      "7dfda30bd5deb396b9ce",
+      "8f3b23b30150e177acfd",
+      "ef359b6fc222827f7de1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/traiage-review/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/review/skills/traiage-review/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/traiage-review/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "154e89d805a81906a2f7349f18465bcd0ad198babb9b514f3fef15b2ee26e897",
+    "record_ids": [
+      "8a678e2fc17ca39fb8cc",
+      "57d99e782c8962d8c550"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-dividend-withholding/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-dividend-withholding/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1649c581b8e81765f4b341f724b16aad21dd800ddae7bb12b114ab617e8bac00",
+    "record_ids": [
+      "39e737bd6985e2644854",
+      "d4d43412688ad6f6c35a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/plan-task/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/plan-task/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "171541b96ca0275641dca3d3bd80abf9e8c4fbbc08483e2135405567e0a9efca",
+    "record_ids": [
+      "37b1c48a0c454ff3d189",
+      "8a4b97b9f01c6f39d3b6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "18ccfb6c595ae51fa01b17d39226b4af6f803191beb1e70870962882c3bf94d1",
+    "record_ids": [
+      "ccce4d2dc9aa67e21bd0",
+      "10c8e403f20a1d11e879"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-deductions/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-deductions/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1a300eb3c93aa3f8307e034cc5f45731076ae478f78c049e23f06ad2a0c98626",
+    "record_ids": [
+      "b7e4c7a1f2364817b3d8",
+      "8a1368a3de4ebed3830e",
+      "a545524b85b47bd451ef"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/kaizen/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/kaizen/skills/kaizen/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/kaizen/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1aa41e7b190d5e79ba0d4849afd36e9e277102fb6acb5fc0a243a17c81b29396",
+    "record_ids": [
+      "c288708035639aa02cf8",
+      "038e077b2d3d683c5412"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-transfer-pricing/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-transfer-pricing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1c543ab0eb226b0e404fcbd4495e7322ae129c5cb940b248ae58656fd2e240d6",
+    "record_ids": [
+      "07440944c8ff21ee9978",
+      "57b69692839260ccea1d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/interview-prep-generator/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/interview-prep-generator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1c5ded05bd9ce5316c9245a0f930a39b12a5931a9569b1552c24cdc6e60807da",
+    "record_ids": [
+      "9777125bf6fdb3dee913",
+      "028872a18839b1a32b19",
+      "6777910b9eb766ea44ab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/status/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/fpf/skills/status/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/status/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1d2fee845dc9fcacdcc0bca80b1c28cbcc375803675aaa0e0be7657f63d9d545",
+    "record_ids": [
+      "9f58e945144fc8376ff5",
+      "27a31616c09724b28aa5",
+      "25deae3497d82f39a584"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/write-concisely/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/docs/skills/write-concisely/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/write-concisely/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1d98d13bffc2f1eadef3bce9e1dcf211cb6790fd170984e1079d362319d85fd7",
+    "record_ids": [
+      "37596a2dcc5222cf68a2",
+      "cada28167a27a67d3e3f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-dividends/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-dividends/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1db8488cf019848a7353c29bf88b1c7367f816de326ff726d7cf4cbdf072da74",
+    "record_ids": [
+      "a436d11327900f7439fc",
+      "2dc02d14ce3236c840d9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/fix-tests/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/fix-tests/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1ef033ed120c4990ddcb16fc625f4ae1c7f5e820e6ef948aaf915af2e8521f8c",
+    "record_ids": [
+      "bcec52bd607a1896d193",
+      "9eafcc01776e23d968f9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/administrative-obligations-for-employers-in-the-netherlands/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/administrative-obligations-for-employers-in-the-netherlands/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1f23bb0b713c344c85f0b2047d1185daaf5b1917b437a9c14a32ed487477776c",
+    "record_ids": [
+      "20662ad4694c7aa00d9f",
+      "800b5945deea200d9159"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/close-the-uk-vat-quarter-from-xero/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/close-the-uk-vat-quarter-from-xero/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1f9e389525b2832a9d4e87b59acde08eaebc2472c17094b9e536de809c8fd707",
+    "record_ids": [
+      "6adea0dc9317063892d4",
+      "0167e87670af376d177a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-corporate-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-corporate-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2391f3f5af6f87bcd2becbfefb827567cb82363bbaebcdd061d1f00f5dabf784",
+    "record_ids": [
+      "dea6996cc8d2dec4bc2b",
+      "3717a46b85be49a43542"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "24150bc7a95f0d120b5b88bef0501408910c2bc066e01a071159fb4d79d0569b",
+    "record_ids": [
+      "e1f6d236d362f5e0cb0f",
+      "5cbe9211e67c8c4e6fc6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-tax-optimization/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-tax-optimization/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "24b28b74515ea9f63221fad9739e9927baef1a34b4e414aae0df94bce9ec0f7f",
+    "record_ids": [
+      "18569be776604a65eba3",
+      "2001501248cdf69f9e0a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-email-for-agents/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-email-for-agents/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2a826d97bff31fb6a455a9ef325a600e76e8d279416df0aad2cbafd615d2da9e",
+    "record_ids": [
+      "b9c3af732685c8e40ea4",
+      "681958496615897f0bd0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-zzp-deductions/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-zzp-deductions/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2c6fce2f90f1e10c19374da6b7f0658d7b204ef6f7957e38a42bac377fc75387",
+    "record_ids": [
+      "dbd1c2461be6df66ff52",
+      "bc38619f28642736e4d0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-owner-occupied-home-tax-scheme/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-owner-occupied-home-tax-scheme/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2cc0163c94f6348212bd731d526c2bfa3818785e3607ed2d33668f738f7ab5bf",
+    "record_ids": [
+      "a1b9b5cf0ccd91d76819",
+      "accf2a9b10552debc699"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-non-resident-sa109/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-non-resident-sa109/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2cfb668b9e8ce61e73c1efbcbc933f1b1e2ee4243d168ea157439d10075a84ab",
+    "record_ids": [
+      "c2a2b4d7844025340b0c",
+      "5ba5d909d37b7f92ffc6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/do-in-parallel/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/do-in-parallel/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2d11c5ca787c2506e9a8cc9b8c4f8c4e3b5b2a3818006653bfe6613bc58709c9",
+    "record_ids": [
+      "02786922e0b6dd59aec4",
+      "cc4b4f5449b4bd848547"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-transfer-pricing/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-transfer-pricing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2d223dd152ae8dfda1bda6b3e604220373d377708d93409061eb2d5739e2f19b",
+    "record_ids": [
+      "f3b92ae84e1eaf5e5d42",
+      "b4731ef9aaac5672219b",
+      "d31d80a6164dfc609926"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/multi-agent-patterns/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/sadd/skills/multi-agent-patterns/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/multi-agent-patterns/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2d59c187253c0df17abbf2dddf159f4a42f18841fd7ed5b7baa62c1b9ae885b6",
+    "record_ids": [
+      "fb30b7a299da44920b10",
+      "c425a02a16ee751bd4a8",
+      "00168d7acbbe05e665f3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/root-cause-tracing/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/kaizen/skills/root-cause-tracing/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/root-cause-tracing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2db05405b7527e922e2f8cd8da71139344ba0fa270e6073f9a605dbc27fcaf8d",
+    "record_ids": [
+      "0e88eeae8f44d6039db4",
+      "d2f3399b79d16cdc8534"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-financial-statements/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-financial-statements/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2f7cae8aa50c7a49839f54b67ba8fef47a9702a95abba83368575fcab3e6f08e",
+    "record_ids": [
+      "f83c10a997e87d465b70",
+      "40c4d750fc747089794e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-paye-rental-nonresident/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-paye-rental-nonresident/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "30a62b866e820efe2b931b73cd4ceb31050af014831db1a6064d4e9570f91ab9",
+    "record_ids": [
+      "eee06cd62f772b677314",
+      "0afc30aab4ecb019415a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-payments-on-account/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-payments-on-account/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "30e862d7e62c441e940a6e4ed7a2b2ddb44f5e0cc88d02f89fa7760b0e7c4936",
+    "record_ids": [
+      "895d610e4194a6b2b7c8",
+      "0513f86168c10f28cd99"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-national-insurance/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-national-insurance/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "31b8d23cfa4502f07059ff61a8deb640338fe72792a39b2bd1d9cdb8ce7bf8d3",
+    "record_ids": [
+      "fdb8977f4527eb6a8ae5",
+      "9e481aa4da8e05f7c0b0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-student-loan-repayment/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-student-loan-repayment/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3265a7bb36a9b8ffb986f5e5dec6de88578f45b28da0be493d4e86ce366cf95d",
+    "record_ids": [
+      "e963018f993eda1efb0e",
+      "5351e8cec6b9aa75dd22"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/offer-comparison-analyzer/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/offer-comparison-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3489cf65b3b8e4a8d319f3988df0724796446bc783f97eec5d8d3a19e556000f",
+    "record_ids": [
+      "eae29af9a3cf7c3f29bd",
+      "289e0e65c16a6e234c8c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-tax-objection/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-tax-objection/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "34be471cd30d0a201ea4c9eedcc95435a94fec63a2792d61eead9d88e71566d9",
+    "record_ids": [
+      "75d6d5830a409d657374",
+      "4fb4360c5887a44cd6d6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-vat-registration/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-vat-registration/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "368ef6d17bfe8a6c2e6947795f91ff472f6119a903750540af18b47688378923",
+    "record_ids": [
+      "51af57640afd29554870",
+      "cf3c5fbf7d103e1fff02"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-mailbox-agent/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-mailbox-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "370b73d70cb063c171cbdd0bdae43d3146ae12d6193abdb9ea65b01a79204462",
+    "record_ids": [
+      "dbc03e2cfdeea693ee1e",
+      "b2c5909bc040f04e005d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-global-residence-programme/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-global-residence-programme/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3ed9b6da8f961c7c1eaa35525f763616b4ac87499ceccf1294b2f4bfb823c7d4",
+    "record_ids": [
+      "1ce47e80153b4b681c1c",
+      "8029af39bdafdcb4d2e7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-bookkeeping/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-bookkeeping/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3f01cd82d7dd283245ff803a427bd632318403c61cedf6459d18fe675cb464bc",
+    "record_ids": [
+      "4fc76278f4558f3985b6",
+      "254236e85453415f62a7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-company-residence-and-substance/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-company-residence-and-substance/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3f65d038d6973165c5c875894e241a566dd3ef78f8a3e986762adf3b670dcddd",
+    "record_ids": [
+      "a5d2de0b50d6d37d1aac",
+      "24345b5644465536e387"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-einkommensteuer-freelancer/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-einkommensteuer-freelancer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3fffcd58f30fe045bcdf7e776417dfccb3061efd3ad15ec537b7e8c285547862",
+    "record_ids": [
+      "f2f70155f306658a370e",
+      "d781b279e2914a7f24e8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/linkedin-profile-optimizer/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/linkedin-profile-optimizer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4139ed798371ebc0540d77838ee959791248397c12e78c426fe12d3ad384de09",
+    "record_ids": [
+      "aafd71f8072f716fd136",
+      "99b8295df50c6db190c2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/analyse-problem/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/analyse-problem/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "434e642746ed226880d471c9ccc3ca4fb563b4db2e2c390785316c74e8059feb",
+    "record_ids": [
+      "7268a6c17fd5866804a0",
+      "71eb6e188e8516fe1b18"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-company-car/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-company-car/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "44ae6b4fd249af50fbaa2cc00377153be699adc6a676f2007f0016c4eeca62db",
+    "record_ids": [
+      "7aaac2ba8982cb2894ff",
+      "c6c7061313ab19d28ac4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/tree-of-thoughts/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/tree-of-thoughts/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "44d4dad6a57ebe67130076fa539fabf80a072c72d51e9d33eb4b6760593df65e",
+    "record_ids": [
+      "d8851106e20581a81804",
+      "da75628609fc75c83e51"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/setup-codemap-cli/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/setup-codemap-cli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "45d820c5faf517d4fba75a3338731451617dc0dc40b328a690270b783d03c8e9",
+    "record_ids": [
+      "e12b119c30aeb959335b",
+      "c6aac94a93afc035e4d4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/load-pr-comments/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/load-pr-comments/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "47c99d3086b5e0d7ba678e132fab49d5991c2146f2ff396a586c910fe1412392",
+    "record_ids": [
+      "dec5cae2bd1689204231",
+      "59f3724eb3a98947548e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/plan-do-check-act/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/plan-do-check-act/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "47f4bb1f6d9ce5699c01171fe95cc7b5fa3520169225c17f48fabb1f4ccae868",
+    "record_ids": [
+      "db92dd8fe9278ae37ce1",
+      "a4d4bb4d52fba1e012d0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-statutory-residence-test/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-statutory-residence-test/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "483019f2a6d2a1e861345bfe4cd5555f357204ff3a5664f30e2975553dc0ec15",
+    "record_ids": [
+      "b521a06b24811ab3a9c2",
+      "c59f800cfe4e725ce266",
+      "658bde535091a734ff43"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/git-worktrees/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/git/skills/git-worktrees/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/git-worktrees/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "484bb842e5f921084117c16ffc58f88cb0f066e6f1b79abf4a508d79cb50aad2",
+    "record_ids": [
+      "03341ff5a91a3278c1f5",
+      "91347b0a8951b7462a61"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-pr/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-pr/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4a3bf46c243f0fe3c2f6e66a9eb3c496718324bd4b1e601fa12164dc227eefea",
+    "record_ids": [
+      "da8eeb9a2a11c790cd00",
+      "f41314471ef7e2a67a04"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/reflect/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/reflect/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4d749ee80029bfd22ea4d76949bf28aaede1ffd30340a00ca4acba814b12d0c1",
+    "record_ids": [
+      "811909593bb2f672c13a",
+      "0ecf623e609dd655b8df"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-mcp-setup/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-mcp-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4e9ef4f039b283eb9724b9a5ffe43cd7921ed448f9ee7f9caef951b82f6386f1",
+    "record_ids": [
+      "a6e2a9ae9cb34c9dcc92",
+      "123cdd147f8e8ae892fe",
+      "776b84670222f9929f29"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/resolve-fixed-pr-comments/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/git/skills/resolve-fixed-pr-comments/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/resolve-fixed-pr-comments/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4f6fd2badf1166cbe029b0cf3687c4ae50b183b140f9b985dc8e09ebd4412e72",
+    "record_ids": [
+      "afef0a5902ba82e9e344",
+      "c4ff405652ac3732bfd7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-send-email/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-send-email/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4ff6fadc708c13706b1f5b7b1ab57d0c35523f8a0176b80f08fc22c64d5771c6",
+    "record_ids": [
+      "fd3f234db057296753b6",
+      "f8ee3575a3fcc8e54f43"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/how-to-submit-capital-gain-taxes-in-malta/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/how-to-submit-capital-gain-taxes-in-malta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "50eb9f20c73971c6418d9b261f5c7af3cde70884c0bdf31dcde6f3f10f7836c1",
+    "record_ids": [
+      "6e7f48d4be3b471e4ff6",
+      "3171c60aeabb92fba2fe"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/judge-with-debate/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/judge-with-debate/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "521e000257ede06cca0a46ead1077a2dcd5ee5fa7ad4befcb3b97b1883d4d73c",
+    "record_ids": [
+      "48530e0387d35089515c",
+      "a289e3a78c5cd13f049d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/add-task/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/add-task/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "52f411f8fad09988a451373f4154af7ff060307605857143f69ea99196b8dfe7",
+    "record_ids": [
+      "1808a14a7aae33a42053",
+      "14eb3e1079da57b46b84"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-preliminary-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-preliminary-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "56a1b73728a1b4d159b8838d19c01bd0d71fa6947e22d358ae8d46c04716a015",
+    "record_ids": [
+      "ce5ae08fe3a52e60dfcc",
+      "12b5f20e31c1fe656c80"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/real-estate-and-property/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/real-estate-and-property/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6042b77d6b663f0ec761c6c1661b35c49ae8f6292108f6159f1cd3c3aa1814f2",
+    "record_ids": [
+      "f6bcad0446c30e8eaabd",
+      "1f00bc6c25dcc26b7399",
+      "62090b327a9b16dd8c7d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/test-driven-development/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/tdd/skills/test-driven-development/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/test-driven-development/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6280c7c8cc9e33b42ef69a326874cc80acc5bbe08859f4b79dc0fc69501e43a5",
+    "record_ids": [
+      "414e09934bc4387068be",
+      "f2a3bc6500d81d459e19",
+      "1eff83cbe99b4cfcaf08"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/prompt-engineering/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/prompt-engineering/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/prompt-engineering/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "62a20d09dc4b6017b55880a5fc7e799b820c176d07d4d4f605e2ac4dd4cbd883",
+    "record_ids": [
+      "d15759f5bfb57aad9ccb",
+      "6a54c7a1591a07ddad31"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-prsi-cross-border/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-prsi-cross-border/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "631acdf7eef54e4944bbb355cddc503a866c8b81ebd7549479f1499c756ddd65",
+    "record_ids": [
+      "0a2cefaf3b4fa801006f",
+      "192623bbe0c2756eb2bc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-command/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-command/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "63cd42b3ba53097af78e8e7b7abc99cc0e9e32d47a7bba3851040eb577039c3f",
+    "record_ids": [
+      "f19a135d1382043f1410",
+      "50a62fca9cb7b33d3822"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-employee-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-employee-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6450e6e6e8e4797dc2e3c995737ffa4ef392044f079a5ceb4124d170a4d3cc84",
+    "record_ids": [
+      "d2a53052968d4d66c07c",
+      "7657cbac51264003840c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/setup-serena-mcp/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/setup-serena-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "64a8b2a832af833cf86f47b6a944eb754033f0d998acd1a5593f1b7038224a1a",
+    "record_ids": [
+      "68c486218bf27e7852e2",
+      "12bf2966ea8630968f90",
+      "901e2564d33635168ef1",
+      "00a929ed26f8b28a8173",
+      "1a833504e5aaa12b1050",
+      "885ab9efe5efffe5ea60",
+      "1177ea46b287be824549"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-chunking/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-chunking/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "673295b653530a6e7609c861bae7b34cebdfb1ce901581557d1618e69cb4cd94",
+    "record_ids": [
+      "cf612fb6687a84709b8c",
+      "30913a92b210f3dc381b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-crypto-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-crypto-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "681e456d00509f1ddc87830b595b1a3667913fa4307cbdb6b5d652e042b6d18a",
+    "record_ids": [
+      "5ece092483b4c8256fb6",
+      "7792707c43ebb7745e79",
+      "feb13831c70d35b72b3d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/agent-evaluation/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/agent-evaluation/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/agent-evaluation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "697aa4e470a5ee64e8d1618767cf6796a4961ca355cd6d775b7d2de768715c04",
+    "record_ids": [
+      "2b97eab772aca3620175",
+      "510ee9ec59a5618a8759"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-reverse-charge-acquisition-intra/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-reverse-charge-acquisition-intra/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6c944e4d4bf9dbe28df414ef72284b7d8cbd0c0a7306186938b4f10073502c23",
+    "record_ids": [
+      "d62f28a0edc46d7a8fd9",
+      "e4f1bfd8f100a30031f6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6cfcd86efaefe40827926dba8f4f49ebdf56e95d87070527427dc681f2c9eaa3",
+    "record_ids": [
+      "2c3dfa8be6d5da09d928",
+      "bdb7aad960d7b5a0557a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-double-tax-relief/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-double-tax-relief/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6d10c489d62d36f5c029324c4eabc0caee89dd07ac656d110b601f785df06e26",
+    "record_ids": [
+      "1f43921ecab1d7575ea8",
+      "97c790bf1cd965a896e2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-usc/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-usc/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6d26f1a0242c1317142bc645a6288d2d8710c8cbc4cb2e6e6ba327342a88567a",
+    "record_ids": [
+      "df630d950878d06ae541",
+      "a077bd9a68dbe2e541c2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-agent/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6de9b6442de50d5cec578ace5128fc00bf91008cf501793ef3edab9a8d747058",
+    "record_ids": [
+      "ff398cb238f68e52d9c8",
+      "0e3498b0a80f86b4371a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-bookkeeping/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-bookkeeping/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6e89bf4e30d37436a17a98820b46b61362deed6737e7770d7a9b71223884e20e",
+    "record_ids": [
+      "8ca2cbdec4bf68ff3718",
+      "20a2cbbd102e0789194f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-formation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-formation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6f924437ae18503e4525fcb000eef44e525095fce568b2e42f67c0f1bbbe15c1",
+    "record_ids": [
+      "4377a207b8420de59fb9",
+      "bda6a75abf3d26ab520f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-box2-substantial-interest/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-box2-substantial-interest/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "706372c7da57649b7631257e43df4cc1a21945ed2b32a9ddd41c4d495dce042b",
+    "record_ids": [
+      "e5be704e24505210adea",
+      "a8ca2c4833a10c7efb99",
+      "78b98953aa00d7fb1d9b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-rule/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/create-rule/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-rule/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "70900a9abca84f569ada6095f1d411be299522570ff0868c386d1f336829e5e2",
+    "record_ids": [
+      "c8903b07cf0d6b782ac1",
+      "4da932617359f036838d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/review-local-changes/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/review-local-changes/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "70a20b3e17d6700ae4c969e664c36f2f2186a427f6ef58bc648ee1a7ad510c99",
+    "record_ids": [
+      "8153e54a5350c69c5179",
+      "1bffa815e1a865d64910"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "70eb256989df22b5b2b29e38c512fb6ca5d354574ddbc781ddf32bf8f09683b0",
+    "record_ids": [
+      "5f9d15dcc5275d61578f",
+      "a09a7a6d4d1de146fa9d",
+      "7b5df56f4cced46f7c1e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/git-notes/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/git/skills/git-notes/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/git-notes/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7143f8d27b9b0d58fcef72f4b142e7204c6973f5d169e6631811f4273a886dfb",
+    "record_ids": [
+      "be963286a1eb9d0f0fe5",
+      "f863a33ea791aa388a56"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/implement-task/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/implement-task/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "71abf326be816f24a6829aed26e8fb73fff7ed4347ba62d65d4bf51435457207",
+    "record_ids": [
+      "62552b2f4b05d136fa07",
+      "322ed4c6d4fd6699226a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-financial-statements/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-financial-statements/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "72d83d13c714974e45b6822863219beca6e3bfa0dd496e9c17b305f1720d4e40",
+    "record_ids": [
+      "801382b7e249a67ad19b",
+      "c352e183f03f487253fc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-income-tax-form11/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-income-tax-form11/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7449c3bd95305ffc04868c2a13736112330556eaff42be9c528dfaead64ae5cd",
+    "record_ids": [
+      "4a2ba8da82aa668489c6",
+      "5fbd9e75fd79a652bc9c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/selling-a-company-in-malta/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/selling-a-company-in-malta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "74b38e19c347742019116c372d387aa9e062474a424628fa5a462d7a163339ff",
+    "record_ids": [
+      "6af8f5a502c04fd52124",
+      "3925a27223a9e13dfadc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/apply-anthropic-skill-best-practices/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/apply-anthropic-skill-best-practices/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "74d0bc493c1a12bb16c47a451fcee68d4dc77a16794d2bb38ddbd5e6b8228869",
+    "record_ids": [
+      "811f3047a3ac9425ce4a",
+      "9b319d1f765bcdb70e7f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-reverse-charge-vat-services-received-from/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-reverse-charge-vat-services-received-from/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "74f67e630aa44ce5e1791907993ea80e2bd25957e5d6a1c2d4f072250f105447",
+    "record_ids": [
+      "a643f9de662e7b2d433d",
+      "cc0798a61059ca5c724f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-payroll-benefits/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-payroll-benefits/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "74fc63ac5b836f3bf994a3100c03eb2f3f4a9d67e64cbb0df6e973e06e9d95c0",
+    "record_ids": [
+      "83373ff24a8c3ef68082",
+      "6fa4916849aaf4d5427a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/executive-resume-writer/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/executive-resume-writer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7759aa1d6953c48d67445110cd3fe58c999c6b24f731c48198d8e21bf3c133a7",
+    "record_ids": [
+      "6894e173cc32e7085b87",
+      "aa3ecc254f8b7b8774e4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-treaty-withholding-rates/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-treaty-withholding-rates/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "77eb35a55b652e922e25df88eb4126c71d94a9ccfe292a3e7e74ecde922515c7",
+    "record_ids": [
+      "276994a95e73704b517d",
+      "12767179b26fc3957c4c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/setup-context7-mcp/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/setup-context7-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7a2ba6a419611832bb325c07c35f3d9e24fae06339ed19d5b23f15360fb949aa",
+    "record_ids": [
+      "97857d7ba0ea0ffa25cb",
+      "b2f7fdf2e9f246f4f07f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-non-resident-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-non-resident-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7a4c3581f5ac1f84e24193b52f7a01fccfe9ea002572d8a284bae0d04fb6788c",
+    "record_ids": [
+      "b2dc22a76a8d8900e4b4",
+      "b2a15a51542dcdb85f79",
+      "15f7808abacdacc3bf8d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/thought-based-reasoning/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/thought-based-reasoning/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/thought-based-reasoning/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7a7af7f0bc367591e6ac3e00c5c2715e5edf4e0849b05920d9fced7c2e8447d3",
+    "record_ids": [
+      "842c41a1d66ea3cba2db",
+      "06c907429ce99473b24a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7ac66c2b0d9f6bacbe7d2651ee8d9c8dcbcc7d05adea82a390e9d34aad7e2c1c",
+    "record_ids": [
+      "8a09e77f76eda008db76",
+      "74dce29972aa40cc9cfe"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-return-assembly/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-return-assembly/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7b848eadc66ff43702ebae70617fae4296d733119f9679fb6ddf3b73a004b1f5",
+    "record_ids": [
+      "411ae8fbf580d098b221",
+      "2783be3263ddbf05e54b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-corporate-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-corporate-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7cd602f71a2dd19ae3ac33053490e3b01308cc25347a6c7fee7385573ec55400",
+    "record_ids": [
+      "e5b8a7c56a800732fccf",
+      "2d871961bbac4ba13aa6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-cli/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-cli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7dee8c4da9f3caef3ebc034a204b39a6c3553551f1d77ded47f11509a14a5aa7",
+    "record_ids": [
+      "cb01c00832f51423a4c1",
+      "c24d991ee2572b5c1cd5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-to-italy-flat-tax-relocation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-to-italy-flat-tax-relocation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7f1065347db9faa3f2f7eefd7bdb4eefa0d3106c8ef407607d90f732b80437e8",
+    "record_ids": [
+      "26e209104afe2fdd8982",
+      "813a0eea2de37fb96981"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/review-pr/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/review-pr/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "80854dd691008984307e407126ec86d5ddf483fea34546b3ebdb20acef4b310f",
+    "record_ids": [
+      "a090d6ec12f7eea3c601",
+      "1f8df0f8d47269966641"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-einvoice/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-einvoice/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8193f4007fbc1a2dd96abd7fc0c89519d74c07a69e7c125b39f0a13c257c16af",
+    "record_ids": [
+      "a9033002305bf9ae4f6d",
+      "ed8f11078527a0242538",
+      "163a30368f67b4ee8e87"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/context-engineering/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/context-engineering/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/context-engineering/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "81f3632704d6fb3560151233648723f80c01c821059ae09825cf4fd57744942b",
+    "record_ids": [
+      "90c19456d4cdc1815f2f",
+      "672dfe4084fabda01d23"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-corporation-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-corporation-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "84b37adf9e4e79fecbb4e827898edb60d1bbe52896d6b5d5a7a9ec01a2ef4528",
+    "record_ids": [
+      "2b2f54bc275acabb6cfc",
+      "9b68175632e655d3d297"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-family-office-setup/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-family-office-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "84d5fdccc11cd3aacf886dc6828da315898078245dd0729fd2a19bcba485b2a7",
+    "record_ids": [
+      "23e35e23a8a3439ac4af",
+      "872448cf195c39d49e33"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/do-in-steps/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/do-in-steps/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "883533b7bcfcb31551c3631125e9ac233af89356700e76c7d32e8180f01b75b4",
+    "record_ids": [
+      "6ef18619869485cb3e3c",
+      "111b9807d3087bb1df3d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-non-dom/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-non-dom/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8c7974e954e8f556936016637885a3a07946a40f2db537e83486ccf8f81cc2a1",
+    "record_ids": [
+      "317869720c2da0557287",
+      "6243a13b23b4e4be0bfd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-30-percent-ruling/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-30-percent-ruling/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8d670c532757f87356f67deb7f7ec1b5cb6e7a2f9637b8d9d7eee01d6ba3b810",
+    "record_ids": [
+      "1744efa68c35ecb2e365",
+      "2d7226b34c00734264fd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-rental-income/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-rental-income/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8df6f5a64fb2d21c53a18b9dc19e6c462f945f071a85caa8bf0730e1cb11a0a6",
+    "record_ids": [
+      "ec3b69dcbb2ec1b1f11c",
+      "b8d896c98f9b3c7b3874"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-self-employment-sa103/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-self-employment-sa103/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8e6dfbda9c44465d9566cdcf38b68df9ea8eefb0dc98d6d832b3db8b550eec24",
+    "record_ids": [
+      "171f0d27dc4e04ee81fa",
+      "4308661338307caf5016"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-bookkeeping/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-bookkeeping/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8f6519d109bafb52c2777d8ace79c749afda0af3306f4f4663163edbd16f37b8",
+    "record_ids": [
+      "7ebde3f2f28974646d7f",
+      "6863f2cf06130bb4b92e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/judge/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/judge/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "90b28552b34b6d67d8fce1e99e7e3d6cd2098f084f16a6a759ba25a35e038a59",
+    "record_ids": [
+      "c268cc5e85be31d99ccc",
+      "b2610a05fa96ca594fb6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-foundations-and-trusts/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-foundations-and-trusts/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "91253a9e713197a2c2cd5185ca0bbb0e7de86b2149fe2e69b5b14ad946ed96e5",
+    "record_ids": [
+      "b86c016f91c15ad5ab6b",
+      "221a4fb095ccfe6413e9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-crypto-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-crypto-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "91a0ed907dff91823719325ee6f071c94cedf9a625fbf3555516821a03091dfe",
+    "record_ids": [
+      "bcbc2daa54cc0089dbb3",
+      "83ac1274b14d358bb3e2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-to-switzerland-cross-border-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-to-switzerland-cross-border-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "92843c90b013fa5868769a41b0fa1bd5062c0ed49efd72d76e6aefcc7422a60f",
+    "record_ids": [
+      "5f4a41aac99399c14d4d",
+      "12a22cbc82d5ffb5a85c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/brainstorm/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/brainstorm/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "96e7760080559f8ce8ffd33aef85293400af1f70dbf00a6d2befb4a996b8cab2",
+    "record_ids": [
+      "93435ae1ff9cb4099c88",
+      "8370303a8d0f9debfeb3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-token-efficient-usage/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-token-efficient-usage/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9784e6c0e483ffd5263548dfe07250f9ca011ef6b378f0ef2cd518df56fd444d",
+    "record_ids": [
+      "cc06fda452457656120a",
+      "fc28255644a88db705a4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-ideas/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-ideas/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9898051a4a54ddeb82115778e4dfe24dbf226a6457dcb7be6c94bddca15479d5",
+    "record_ids": [
+      "b8cda4363e278b63184d",
+      "bbca1cb229f9bc72e7fa"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/job-description-analyzer/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/job-description-analyzer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9a84c62b7f83d2cf596bfedb1ea466563234c92e6fbbb3f833a42fc79ea59659",
+    "record_ids": [
+      "240181576c3518bd3889",
+      "9bb80827ea199fab6262"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-formation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-formation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9c26a4d6de412867706be57eda89e265751baef2a4a88fd72dba7174f4bbba95",
+    "record_ids": [
+      "1f3a6afeb0516cc54ef3",
+      "1c65b4801483a925e6a2",
+      "8389cc4f80a5584d066d",
+      "8af34d03bccc8888478b",
+      "e3e3e6cfc0f89f353f1b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "career-ops-hq/career-ops",
+        "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+        "skill_path": ".agents/skills/career-ops/SKILL.md"
+      },
+      {
+        "repository": "career-ops-hq/career-ops",
+        "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+        "skill_path": "antigravity-directory/skills/career-ops/SKILL.md"
+      },
+      {
+        "repository": "career-ops-hq/career-ops",
+        "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+        "skill_path": "claude-directory/skills/career-ops/SKILL.md"
+      },
+      {
+        "repository": "career-ops-hq/career-ops",
+        "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+        "skill_path": "cursor-directory/skills/career-ops/SKILL.md"
+      },
+      {
+        "repository": "career-ops-hq/career-ops",
+        "commit_sha": "0aa6518c32447f63047c90e57aa74c1a900e1f79",
+        "skill_path": "openai-directory/skills/career-ops/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9c4d8a44bf9f3b5e59a1016ccd7828598d1ed36093fa821886f8e9bb1c55a0de",
+    "record_ids": [
+      "93b207b43521f773068e",
+      "118b9fde2f5aa996e5ba",
+      "66748f1106f8b0d5e7d5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-skill/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/create-skill/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9e850cccbd51e545c4d7b98a65a1413d6c972d062fee66fa2af8fd89382e786f",
+    "record_ids": [
+      "ec4abfd5aa9728d3c00e",
+      "f8bd9b0cb867b41cdc8f",
+      "e933b142c0215cf74d37"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/test-skill/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/test-skill/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/test-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a02cebbbab9e35d29f36bdd78d603677fc50881a001837f825d2012ee2e62665",
+    "record_ids": [
+      "94b280cc1cf775e4c3fe",
+      "5636188b366ea11357d2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-cross-border/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-cross-border/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a059ee558c1f71e0cc1c2300227e8e29e7cf1d4ab5758eb4cb508274c1cfc469",
+    "record_ids": [
+      "053c30d28289e4252e7e",
+      "922855853adc1f314d2f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/setup-arxiv-mcp/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/setup-arxiv-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a0a6dc939175dc5f4b971456f70dea753edbacea0a24179753819c077f28ae47",
+    "record_ids": [
+      "aab9703b4fa5adca7cf9",
+      "6beebf87c9ebb454c114"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-transfer-pricing/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-transfer-pricing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a276580e319501b382c25883f0750985f0a4fd4d7908d5367ef4bfd718de473b",
+    "record_ids": [
+      "22a483fb6c22c3682eb5",
+      "e781332fbd92b0e14904"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-cat/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-cat/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a3ad703068d340079c6d893ed3cac167cbf08c168f0ddbc866884e2b0524878f",
+    "record_ids": [
+      "9b9428d5739bd0626989",
+      "8ec25b8dcd01b7b8447f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-income-tax-sa100/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-income-tax-sa100/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a60d46cba748b2963580d60926f909ed41c33b3b072612cfd3876542f6d15be6",
+    "record_ids": [
+      "75ea9caa3d58287d660a",
+      "6a1ebb014611644be9eb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a67899b06ae56d2a3e7fde600c34435b683d3f5574b61c8fec257a7e4ec28616",
+    "record_ids": [
+      "a16d0b3a2f1ea635b2a0",
+      "b9f98d33140ffdf80d0d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-transfer-pricing/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-transfer-pricing/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a6823b0e9930cb99a458d9b5941bcaab711c1184d762d23d1d152e7f7eea8b9f",
+    "record_ids": [
+      "bfdba2b36d4d612ffb9e",
+      "8eb70e6817f2c751aae5"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/launch-sub-agent/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/launch-sub-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a6938e46fd9cd6e88ef4e8297b543e81b022a918c8ebac1266b9c898f200ac17",
+    "record_ids": [
+      "8d761c64e84eadb4df26",
+      "b221cd937e0a570160ec"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a76f76cadefc7b09f19e5b8d2e311be8e40392c45c46cf299e56389423d30639",
+    "record_ids": [
+      "d832e8c3331718e519c3",
+      "f252249d70d623c19738"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-crypto-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-crypto-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a89807bafd747f80224ea61937e0e0b440771e707d801cf81891a3110fe53f4f",
+    "record_ids": [
+      "abec309d8ae2f9200db2",
+      "ddef0a9f94217a7517da"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/analyze-issue/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/analyze-issue/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a8d6723824a62e2640ef7e05ab843664dca68e6249c4669460c4e776b92e6df6",
+    "record_ids": [
+      "dcd063a09f31d8bf39e3",
+      "cedb6def5416b2a174a8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/how-to-account-for-rental-income-in-malta/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/how-to-account-for-rental-income-in-malta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a9cbdaf1cbd34337d085cdacc030f3ae32e85491fc8978e4b5fb87d204e3aab5",
+    "record_ids": [
+      "c80d88bea973e6233c20",
+      "1df9b9d900072bf73067",
+      "d323a048287babdd55b2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/query/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/fpf/skills/query/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/query/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "aad3f981bae78330f14fca7b91df7227478000c15840cda296237aea48129dee",
+    "record_ids": [
+      "880a3dfd22d625c73422",
+      "29ae8332fdf683bbb464"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-non-dom/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-non-dom/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ac2bb92cbfc8aef856c92b0b50327c524e7b0619c691731e2476ee5baa0d6b5e",
+    "record_ids": [
+      "8921a52de4a7466d8d28",
+      "0278b6de6935ca140a7c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/commit/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/commit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ac541526710ff0fd4f1fa4352eb07e91d736385d81c7044bee6c35a63f31f9fb",
+    "record_ids": [
+      "ff593044dabcd8783ba9",
+      "c2daaf356558fe58c36c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/vat-returns-for-small-businesses-in-the-uk/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/vat-returns-for-small-businesses-in-the-uk/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "af192f8c4b0f28ecf53ef7a788a9dec5504f8b9ee72faaac7a4b38177744df6e",
+    "record_ids": [
+      "cf9fcc63e513c9da7566",
+      "0475eccc8ee3bca254c4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/do-competitively/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/do-competitively/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "aff85abdf458918838825a148de9bd1be3b4bc4aa36f61bced81646de3064da0",
+    "record_ids": [
+      "c71d9f80d89f00c7643d",
+      "119dd16b4e46006ea6fc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/agent-email-inbox/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/agent-email-inbox/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b1dcc5c7d6aa559c700c68ee92736cf157af9fdfc8014ce8feb6541e402a4b00",
+    "record_ids": [
+      "319e81792c94e4f37f90",
+      "27908875263d915e2382"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-rental-sa105/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-rental-sa105/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b2f15640c95b2e8b39d67b136cbe8e7094bf72baa1a7a027ff0f22c902d211e7",
+    "record_ids": [
+      "dd117b4befdde7f8e7a6",
+      "467307a838019aeff9c2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-corporate-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-corporate-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b32d857aa3677cadffc218ef0ed2c93027a0555695e3f3c0446a09e16503c416",
+    "record_ids": [
+      "02d535461774248fb4bf",
+      "95b37ea292f8faa753e6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-crypto-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-crypto-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b5886f40e024311981e18a61619d6bb8e82c7662ea003c6439499db82ee4fec5",
+    "record_ids": [
+      "69bee10bf416f254c19d",
+      "95b06d789b3d9877ed38"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-uk-employer-first-hire/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-uk-employer-first-hire/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b59efbce8f30add885202f70d03100821695cd5e6c40d91dc8958119dfb33fbf",
+    "record_ids": [
+      "39552c00e8f1a4fed1b8",
+      "3346e0f2bba163106a58"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/email-for-ai-agents/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/email-for-ai-agents/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b6904102c18d2c9a96b8be0f5fd68850b22eec56cdc028ee0137e3fdc2964732",
+    "record_ids": [
+      "202fe63e6dd616cbae10",
+      "d526b3068e8a3ee4d495"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/load-issues/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/load-issues/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b6b17fe94dd87ec68f3818bbfef3ce855a499dba7f1cbb1bb44aa920a9b0f84d",
+    "record_ids": [
+      "087798e122387776cdf3",
+      "e32af03ff7f98e3a7c2a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/portfolio-case-study-writer/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/portfolio-case-study-writer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b73d1c60701d039ed70265b250f158a1e5fef86bd03f6fbac6b4be440a1dff77",
+    "record_ids": [
+      "fa9e2ead4c30ef50289f",
+      "a59cce0e9d1e67244218"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-formation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-formation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b7c5bbadf9939981aea5b4ac94b795c015a6d585f0c2b2026122877b766f0d4f",
+    "record_ids": [
+      "fb3bea2aeafcc360f15c",
+      "90898f6f8f64de3f223d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/gb-tax-relief-under-the-merged-scheme/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/gb-tax-relief-under-the-merged-scheme/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b891ff0a87ed8ed43bd71960685293f835c988dc1e8ccdd5544d04565c6ed935",
+    "record_ids": [
+      "81873903c767e29d0948",
+      "e9a5460054bc0f3802af"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-workflow-command/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-workflow-command/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b8c1ab35666cc977d70d2993179e1ee9ae14b62b1f9d835b3d28239c821a517c",
+    "record_ids": [
+      "4eaace67972f145c5125",
+      "4e439bfdce367b3eb726"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-prsi-class-s/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-prsi-class-s/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ba68f669c0e10b27ebb1e2f6e495847b647cdf0c633374aa67785e6c819af6f1",
+    "record_ids": [
+      "865dd6a365d5e3a20760",
+      "eb5d1a4a6e372ad41924"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-capital-gains-sa108/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-capital-gains-sa108/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bb66ad0eb0548a5ddc8b50e1b1333bf75b96e20afd445922886f3347519b96ab",
+    "record_ids": [
+      "366048a9d730fde9ae63",
+      "060756027752c558a890"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-self-employed-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-self-employed-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bd082128b2f2c16da8530ecade0bdd33fa77d7744f2c716ff6804da48339dac4",
+    "record_ids": [
+      "feb549759cfb4f064d20",
+      "381ad0e42ff6e8187c73"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bd28e0bb93cf540eac00ccaa08b384b7381bfab5feeeeb8d4e0bd1db5b8638ce",
+    "record_ids": [
+      "7442c93357d1bfd45c47",
+      "66c4c596f9ca7afccf53"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bd6c59be9db4cb89962d7603140976d5fd1e70e85ca62e9097de5b9c45e66178",
+    "record_ids": [
+      "99bee7e2ef75669ef37e",
+      "5c7dccb634e21419430b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-holding-company-participation-exemption/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-holding-company-participation-exemption/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bd8c728b50dfb43261ec2e9574293838c1b2a49ecb2e5ff6f66c4b6cf4d43742",
+    "record_ids": [
+      "ecb8060e1f0887874bdb",
+      "893e47e08e2b4ecc56cb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-permanent-residence-programme/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-permanent-residence-programme/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c0b8d468275e07b3eb301328fbad43cb2a1a3398974ccb5aa5508cd8ebafcb37",
+    "record_ids": [
+      "c70258a3f06e2d24addc",
+      "ef58abb357dc49081449"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/germany-tax-optimization/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/germany-tax-optimization/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c12e009d29f84b8b6df789c5f53a3ddf59be45d054987e7162ba0495ebaf4d3a",
+    "record_ids": [
+      "36bce9c69f9f30931746",
+      "7a302cb4c83cc9285ed8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/update-docs/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/update-docs/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c16bcd531632495285a695e970527a525aed188db5eea957de847db8cfe80903",
+    "record_ids": [
+      "166d7c5226e7a164cb02",
+      "631075f1b9ee0a3eb8a2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-capital-gains/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-capital-gains/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c1b993214b449aada4528db14f2bc2928f2a2291e9058ef3f00a3c1bb3a0cbdc",
+    "record_ids": [
+      "12bb60778871592a53c7",
+      "905af5f552b505e25e47"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-income-tax-special-groups/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-income-tax-special-groups/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c45895fd87799e08cefb09f744331b7ce6309387efd18af4dbd97a57807fc2a5",
+    "record_ids": [
+      "6ea74fd8ed52189160a7",
+      "7a6b0d9edea9a44b1f58"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-corporation-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-corporation-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c58a112a8a22eb6ba303b5a9d10a3778249390ae9f7b52d8c1ad28bd6995bbc3",
+    "record_ids": [
+      "0e82c7003abd74d80f50",
+      "8a97f741ea31c3ee6777"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/attach-review-to-pr/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/attach-review-to-pr/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c58ad6272f39709c9e6f0a07f60da4e4180c045e57cc819fd1bb4fe5956a18f5",
+    "record_ids": [
+      "34b87c13d151407db37e",
+      "0b235e8774b2cf442f30",
+      "d7034b663376799a0b46",
+      "06f31977336f72c5be36",
+      "7c33fee6289724209c27",
+      "54f545f6865b0e214aad",
+      "43b5df967d81ff95d065"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-batch-extraction/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-batch-extraction/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c5eb28232b592230d5a50ecba3666d1d21dccd542cb81e51c13dea6d69ab6674",
+    "record_ids": [
+      "28ea64ea1988d62e08b5",
+      "d0214d8adca9fd2666cf"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-cgt/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-cgt/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c7dbb0975c0b794fb9633e25a6c53eb3850eafafd8d2266d9f3064b38a52f90a",
+    "record_ids": [
+      "5ac00f97e23171dcc177",
+      "5f91931755a76295923c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-tax-optimization/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-tax-optimization/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c9763f211cba3b1d593d67c1a0445f9def52d3926c483f901b1deceb0e81931b",
+    "record_ids": [
+      "14db79725e6c1c073242",
+      "3769de92aa455286c65c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/xero-uk-vat-close/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/xero-uk-vat-close/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c9db6eb359bd476c8ba3cc1cdd6cba8dfd309852d16a00e9b0588995479fa56d",
+    "record_ids": [
+      "92b054538b4f45830786",
+      "69519b3100fe7d613644"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cbc059938c7a08aedccbe6d91dd55a11402a969c4ba4b55cf2d39b498f4bc1f0",
+    "record_ids": [
+      "6188f58947bb2a1691c1",
+      "2857bfe0528a4dd124e8",
+      "4158f827e0164bfa2178",
+      "47d86d1eb4cabcc02039",
+      "cc82eaafa05176591c6a",
+      "3edfb2ecdbc8f9ac8e5f",
+      "e5590c3d4f5536c2d098"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-extracting-tables/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-extracting-tables/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cdf178cdfdba86a49f51296f9795697f9474e972987260da6c32a9dfa03c86b7",
+    "record_ids": [
+      "0d32166af5226e0607ba",
+      "d529a902a1da19e3bc21"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-rental-income/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-rental-income/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ceacc85853a0524989e4a4da984f9cb012eb9c5f3e6f5fef53abdf04f8f8d336",
+    "record_ids": [
+      "a0e9a97baae7c161bdfa",
+      "3dec411ccf36e5226d2a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/why/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/why/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ceeeb92dae038731c9773b4fa099cf3509d81be7b13a09883669e8b2b70be2a7",
+    "record_ids": [
+      "66b1154d083aa47d75b3",
+      "7e64a5bb7ea9d8c11c9c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-estimated-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-estimated-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cf5bb910cde7d99ea91eaec694060723475ffa2fa0763f2deb1b2d826602eee0",
+    "record_ids": [
+      "af0852ef0ff4498d4d01",
+      "ef24b87697a3f9d58994"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-cross-border/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-cross-border/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cf76673bde15d820c4ba6568d808fc5789cc7e1a8fad251587043243e6f9456d",
+    "record_ids": [
+      "3c1d698116bc08e8751c",
+      "2504760ae95b5252d4f9",
+      "2b64e753460e4d4bfd16"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/design-testing-strategy/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/tdd/skills/design-testing-strategy/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/design-testing-strategy/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d01efc6434d57d52311859624d3e1fffbe7191ffb58416d4a16e26aa2d53160b",
+    "record_ids": [
+      "704ba1d256d5a9a80d0b",
+      "b0102fb10fb03eef787d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d3a3c9c4d019c3086c256f6d3f75ec34f649a70a6606c28097358f27b3e89d9f",
+    "record_ids": [
+      "e258facf5e0250ac31f7",
+      "ddc40f1b5391570e0657",
+      "111f3bd160df1c317eb0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/actualize/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/fpf/skills/actualize/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/actualize/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d3fb3f53dd83332aca965a7c7a472123d2c9bf33a87f957ceab4e5e337323104",
+    "record_ids": [
+      "e320acd78431e1fed296",
+      "0f9f9023f5863c0297af"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/moving-to-malta-tax-residence/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/moving-to-malta-tax-residence/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d407453b70a792838608009e21f8bb08b2ced99f8bdc0def544215da6a7596fb",
+    "record_ids": [
+      "c674bf28ea781ebbfda8",
+      "809cbd0a34b92f272277"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-getting-started/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-getting-started/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d5a8c3598bf062b329907d7cca8120dea25bce14f3b4e88e30552374ef9d2f29",
+    "record_ids": [
+      "e0df92eda7e8ce765453",
+      "afe6d0789df537b9bab1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/create-hook/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/create-hook/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d6cb879e97cc0e374d9d50e1c7523f1099e6ad6753f2d0df49f54e02241442bc",
+    "record_ids": [
+      "d478291fe7cda3e3b5dc",
+      "691b53dd4f7e7b33b872"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-management/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-management/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d7d80f1467f1e9dad0b780deef2869bd2c058b5490cb925a5f638ec4d444c97d",
+    "record_ids": [
+      "abcc310124496647974e",
+      "8b79bb52060c865c7729"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d8e9b1ccd1363f9ba83359f6ee562889b915f80cba2d43961bdc49e8427ad367",
+    "record_ids": [
+      "af04059f69ffcd8104d6",
+      "adc759646806561cfc55"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-trade-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-trade-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d9264b193d7414c3bcc532a9b5f6a5c1588d3a94b5f1e0a20691625dbf2637fb",
+    "record_ids": [
+      "b32a6027b85d56567af0",
+      "a444d42faa9a0cae9641",
+      "b0b1a177803fbb84480c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/test-prompt/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/customaize-agent/skills/test-prompt/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/test-prompt/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "db928a2d0ef76c7bfdf423160a1a743f5104761059e27555c99fca4aa306ed17",
+    "record_ids": [
+      "eafb1b2d154895be3c15",
+      "71f22b579bcd3c7ec183"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-vat-annual-and-special-schemes/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-vat-annual-and-special-schemes/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dbd489313043aa6087d2db1ec9fb41a54735e7daf407990a78e661c0004b31a5",
+    "record_ids": [
+      "d9dfa7baf4423a532638",
+      "d3bbd3c0c5432af53173"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-vat3-quarterly-return-malta/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-vat3-quarterly-return-malta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "dd30e1fe65f1470c163e9751e5439286670022ad2946268b5c003ecee21f3757",
+    "record_ids": [
+      "24ee101ffb5bc6586c3c",
+      "cacc7cc77f3a60f9f8da"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-tax-optimization/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-tax-optimization/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "df3175d57e16880dac94ba727297854976f1831c0c5ed3db3b32713f5f00f828",
+    "record_ids": [
+      "3e0997126f1513408fbd",
+      "a021a9706eb4070532a1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-formation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-formation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "df47acaca92d2941ae79ee1d962c4eb8214849a6b8a3ccddb4c3fdfba615847d",
+    "record_ids": [
+      "18aa871ce0e3cf871adf",
+      "46920f48a01a52ca9639"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-financial-statements/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-financial-statements/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e02b715fe8d717661e3871293f864b270dd29b02d710c14630705ab77b1ebf43",
+    "record_ids": [
+      "5000d609c4372b119b44",
+      "5f7f6ad79eb47ca55457"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/leaving-germany-exit-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/leaving-germany-exit-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e0798026b16df116e627e1f68c83c5875d064df87570c3196bcc63be058e0364",
+    "record_ids": [
+      "34562d38d3d70d96cce9",
+      "de40fc5878d5cba75629"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/analyse/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/analyse/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e11b75adf28dc87d6583cbbff09ed143d40bbf35f079a1902504e69d07ea88af",
+    "record_ids": [
+      "f2992d1b81593ce16d93",
+      "85a9771fe8264e03298f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "plugins/sendmux/skills/sendmux-attachments/SKILL.md"
+      },
+      {
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-attachments/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e1d600ba1e313abe293ae84407cc9fade563f579085fdb9d88ddac440eb116a5",
+    "record_ids": [
+      "2fc3585be5910e17a132",
+      "fc7979ec4678432a0b2a",
+      "1d0cfcdabd10982075a0",
+      "2fc0edeef25160c89df5",
+      "da9047225384fc9e878a",
+      "623f9e2516534dfbc424",
+      "ee6052b862ecb10fc494"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-extracting-keywords/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-extracting-keywords/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e297b831a229c1a0edec052d4285c8e7d37781151de6c9cf6b55439d19abc051",
+    "record_ids": [
+      "04c17cbff34339262051",
+      "1956c831cdd979e24b58",
+      "bd5db473efba313aeb89",
+      "e9cb2e07d477831a9b9e",
+      "35d78ef7a26bba56baf8",
+      "a97d1ebfb9656750012e",
+      "268234636ec608ddef8f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e4fdb7deeaeaf9cc771513acb572f2049347a7dcbf04bd56585de52c66a0d1c4",
+    "record_ids": [
+      "becae242ff9f43eac1a8",
+      "aa05055870f0835bff9f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/gb-vat-eu-goods-sellers/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/gb-vat-eu-goods-sellers/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e5d06c20829813d3a9d4fffd43acb5e8602224d62ccdb2566c122d3d8fcbe8e4",
+    "record_ids": [
+      "f05fead9d8bb1c5b25d6",
+      "f81011cb14263767a004"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-residence-programmes-for-wealthy-families/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-residence-programmes-for-wealthy-families/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e5ddc9bf3d3e24bc9a53637835bffc15a1eb46caaa747e25e9022e196cdd12da",
+    "record_ids": [
+      "c40b0763b3a5d2160b05",
+      "cd6bde7c138e902c2536"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/mt-nomad-residence-permit/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/mt-nomad-residence-permit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e74fafddc726d8fc330cbdd37f6e4561730d6b68f6d54f40693b5f189c8f1ea8",
+    "record_ids": [
+      "b682a89c60885660dc8e",
+      "2e45795e50973b8b45a0",
+      "26807921cd2b64d6aac1",
+      "779d6ff2ba4eb9f547b1",
+      "2bbf1985f6708f96a442",
+      "2b737a3895be6d36c2d0",
+      "0143ba5cbe9bc9ecf291"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-extracting-with-ocr/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-extracting-with-ocr/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e829b071b0b37b9870f7502efb7cd05ec6f0b57598a4a88d84fd73299604c891",
+    "record_ids": [
+      "b7f39460bc3c4bd7c8af",
+      "a6999296fd9b45c7d1fb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/crypto-accounting/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/crypto-accounting/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e887a07ae295f66b523d54173674d684414bb1fa15813928b38745e29242a496",
+    "record_ids": [
+      "86db539c8be797cf3fdb",
+      "ad77937bf5f9c7757302"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-to-uae-relocation-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-to-uae-relocation-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e955c5f6b6f84c32933a72b82bca7e51903e5a48a6c5a906578d450739d50646",
+    "record_ids": [
+      "360e1baf888458787938",
+      "1f7b2c4d9c12b518ee37"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-foreign-tax-and-withholding/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-foreign-tax-and-withholding/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "eae3781e9342afebba6b17e808866c5c18ee75615f1e6b5680a0abd62888eb73",
+    "record_ids": [
+      "00cfc38e370fc9a1057d",
+      "795f1e8993a7f81e93ef"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-foreign-tax-and-withholding/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-foreign-tax-and-withholding/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ebc80d12565ee20ca896ab3f80d51f9a1fbfca6cd6844dabaf9ddb809c4cab3c",
+    "record_ids": [
+      "4c10d7c8f8d3db3c4f58",
+      "b6f39ebaa20af750c791"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ebcdc73791fde4a40a9b39baeeac9176580d98beb5488c07bc0ac691b554c4f9",
+    "record_ids": [
+      "e0169219b40017955d22",
+      "7ba07211e5b566704ca6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/do-and-judge/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/do-and-judge/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ec9e856cca9e42f4b48e9ef9a57d39be45022bd0b8fd18eda8a160e8e54fb79f",
+    "record_ids": [
+      "c612089bf7eaa2a496a9",
+      "af3fe8b2bcb4c0d19b2d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ie-non-dom/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ie-non-dom/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ece8e7d0b249e5c6c72a8ad28104c8c76f8a9d161fcb1debcee50a9a717ade6d",
+    "record_ids": [
+      "d0423fafd45784e60dc5",
+      "21c181308045fdbc4d53"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/de-estimated-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/de-estimated-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ed65690220c06e795bb64921006760ac7d663892d6b9c8ac77dca98add48f1e8",
+    "record_ids": [
+      "1fd1d3790cb367881345",
+      "1723567e407e0aa5f977"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-payroll/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-payroll/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ee04a04e89a07c31acbe2dc877388d48dd682350986880c40b343cb49d9ab052",
+    "record_ids": [
+      "a265700e7bc23354a9d6",
+      "8961151e8495321ebe00"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-formation/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-formation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ef4d0794277724c9476ae4d728a5192d975b64b6b01250cfa0d229839d99349a",
+    "record_ids": [
+      "6311050594dd2b607577",
+      "396d1ae6db4ee6513009"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": ".agents/skills/reference-list-builder/SKILL.md"
+      },
+      {
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/reference-list-builder/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f3d4398d8fab72208301f7620c81a30703bd0d782afb45ad2cf98a4e091ba121",
+    "record_ids": [
+      "ba7c33ce428bf77b69d5",
+      "5c3d47990cb5fdfebff8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/nl-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f6f656df2e7f7d54aef2ce3e9009699698e027b5f00b5e342aa7c6cd7dc104a8",
+    "record_ids": [
+      "a5e7011f3c6db57b83b1",
+      "2de489986d032b5bd4c9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/malta-financial-statements/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/malta-financial-statements/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f760bc731e2445a00ff3c080b3869618de727616083372feb27e367c149f4842",
+    "record_ids": [
+      "24afe8fa545274c76e1c",
+      "81c36758dd276ff0db52"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ireland-vat-return/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/ireland-vat-return/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f77d84aafa8b38b5cd7774ae4df79d0f22bb3671175c87851dfc822b7b548ec8",
+    "record_ids": [
+      "c38d3a18e57dad0b184c",
+      "a00c6cf40b870d7fb1bd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-30-percent-ruling/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-30-percent-ruling/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f83e6f79d06323714e8f421206659a5d937e8510fc88b2218fd907adb4e76136",
+    "record_ids": [
+      "2aaccf4f0d871993b64f",
+      "a4a45c3176afc5339492"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/netherlands-bookkeeping/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/netherlands-bookkeeping/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f8800170d44b0d854928dcc2be3a91b69b48f31be521c5d37ef3e8f7388402af",
+    "record_ids": [
+      "a1189c755500e8c9e453",
+      "cbc8939c771ba90cd6d4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/uk-scottish-income-tax/SKILL.md"
+      },
+      {
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "plugins/openaccountants/skills/uk-scottish-income-tax/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f8e111a14952cd5e77cd37f549f35baa628149a78f9187c313b583e582bac1ac",
+    "record_ids": [
+      "d2c2d898d5e9ac2dce20",
+      "dfcb4315ac9c64b47b29",
+      "e47db4417730c80a673b",
+      "f100df9406879a3718a6",
+      "e754808e8e12e7f9514d",
+      "21b5b4aa9c61bdafc9ea",
+      "50d5ea65e911a8a4a142"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.cursor-plugin/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/package/src/xberg_hermes_plugin/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.hermes/plugins/xberg/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.opencode/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/.pi/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "plugin/skills/xberg-picking-a-format/SKILL.md"
+      },
+      {
+        "repository": "xberg-io/xberg",
+        "commit_sha": "da0c2048bb30907ce692b0bceac284d0c62fe430",
+        "skill_path": "skills/xberg-picking-a-format/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f91509dacf081f8f86f6a553b0edc0fa92c4b3c4900b665fb5c065214227ce4f",
+    "record_ids": [
+      "e5eb907a41192380bf43",
+      "cfa202272adc86f1f509",
+      "849032cf6e4acb6816b7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/reset/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "plugins/fpf/skills/reset/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/reset/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fcfcf036a3e9b7bceb7ee22101a68ba3b55d27c27e1755404a9bfb6c94517c0c",
+    "record_ids": [
+      "18131a59b84936901904",
+      "212eb3e2817b07b99e63"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "antigravity/skills/memorize/SKILL.md"
+      },
+      {
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/memorize/SKILL.md"
+      }
+    ]
+  }
+]

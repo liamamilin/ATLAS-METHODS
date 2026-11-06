@@ -1,0 +1,24 @@
+{
+  "repository": "ysskrishna/ai-agent-skills",
+  "commit_sha": "8a6a5745556e60706ac5fa889dcc66ccd3a875b0",
+  "tree_entries": 106,
+  "candidate_skill_paths": [
+    "skills/analytical-thinking/SKILL.md",
+    "skills/creative-thinking/SKILL.md",
+    "skills/critical-thinking/SKILL.md",
+    "skills/design-thinking/SKILL.md",
+    "skills/ethical-thinking/SKILL.md",
+    "skills/fermi-estimation/SKILL.md",
+    "skills/first-principles-thinking/SKILL.md",
+    "skills/five-whys/SKILL.md",
+    "skills/lateral-thinking/SKILL.md",
+    "skills/pre-mortem/SKILL.md",
+    "skills/prioritization/SKILL.md",
+    "skills/six-thinking-hats/SKILL.md",
+    "skills/strategic-thinking/SKILL.md",
+    "skills/swot-analysis/SKILL.md",
+    "skills/systems-thinking/SKILL.md",
+    "skills/thinking-method-selector/SKILL.md",
+    "skills/tradeoff-analysis/SKILL.md"
+  ]
+}

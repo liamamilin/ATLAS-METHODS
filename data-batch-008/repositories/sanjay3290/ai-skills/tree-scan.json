@@ -1,0 +1,32 @@
+{
+  "repository": "sanjay3290/ai-skills",
+  "commit_sha": "c84255839a1bfaa06d681aa528f9b50d70002afb",
+  "tree_entries": 152,
+  "candidate_skill_paths": [
+    "skills/apple-container/SKILL.md",
+    "skills/atlassian/SKILL.md",
+    "skills/azure-devops/SKILL.md",
+    "skills/deep-research/SKILL.md",
+    "skills/elevenlabs/SKILL.md",
+    "skills/gemini-api/SKILL.md",
+    "skills/gmail/SKILL.md",
+    "skills/google-calendar/SKILL.md",
+    "skills/google-chat/SKILL.md",
+    "skills/google-docs/SKILL.md",
+    "skills/google-drive/SKILL.md",
+    "skills/google-sheets/SKILL.md",
+    "skills/google-slides/SKILL.md",
+    "skills/google-tts/SKILL.md",
+    "skills/grok-build/SKILL.md",
+    "skills/imagen/SKILL.md",
+    "skills/jules/SKILL.md",
+    "skills/manus/SKILL.md",
+    "skills/mssql/SKILL.md",
+    "skills/mysql/SKILL.md",
+    "skills/notebooklm/SKILL.md",
+    "skills/outline/SKILL.md",
+    "skills/postgres/SKILL.md",
+    "skills/telegram/SKILL.md",
+    "skills/whatsapp/SKILL.md"
+  ]
+}

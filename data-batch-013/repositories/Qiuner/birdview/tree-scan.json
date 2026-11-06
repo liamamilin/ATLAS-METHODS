@@ -1,0 +1,10 @@
+{
+  "repository": "Qiuner/birdview",
+  "commit_sha": "32b7a77f99639a5e79dfc4cc123bf98f8b889b52",
+  "tree_entries": 218,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "compatibility-audit/SKILL.md",
+    "review-skill/SKILL.md"
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "repository": "massimodeluisa/recursive-decomposition-skill",
+  "commit_sha": "e0a8b0418a1e40e3ae774ad1d06834db2696ee26",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "283d20cd0ef297ceb0ab793b3adb531e72ab02d5",
+      "bytes": 914,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.claude-plugin/marketplace.json",
+      "sha256": "329eb5c410b11845d27bbc0876e6029f7f8f04326451cbc96b13d30687dc7b83",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4824568e15e0fc87ab14c35f90c288cb86699ed7",
+      "bytes": 752,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.claude-plugin/plugin.json",
+      "sha256": "204aa95eb55aa98640911589592c932f41a0c8dedadc3107b4dc0fb87ddd3a36",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".github/scripts/eval-skill.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "cef1932b3cc8becd640563678a74b4bcbf5c5ddc",
+      "bytes": 6078,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/scripts/eval-skill.sh",
+      "sha256": "f2b46af16cac1c779c508aab8102f717d887dd67ac6a7e97b00bbfe164926ba0",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/scripts/eval-skill.sh"
+    },
+    {
+      "path": ".github/scripts/validate-skill.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "4545fe0698577a611884a4614a32464ce113e3b8",
+      "bytes": 3177,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/scripts/validate-skill.sh",
+      "sha256": "7455166f292f7cc7ff1fc4ddc3248820281ca546b431b149f0acd546a409936b",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/scripts/validate-skill.sh"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ddaccd6ee8588dd0d451f475ac8b5879b50e8286",
+      "bytes": 623,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/workflows/validate.yml",
+      "sha256": "b8d5c9ba103c51e14ef5c987a789e70ec819aef96a8dc84eb587eeb973f4d854",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.github/workflows/validate.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c3a9a79f09dd59d9866fbc4b59e8d76b719e9480",
+      "bytes": 59,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.gitignore",
+      "sha256": "f48f9259af733c3efd6503cb4f3bcb55606985f6008c77d8c892902e99099af6",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.gitignore"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "57991544be9194ce3d57bd39bad27d34645508d3",
+      "bytes": 195,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.gitmodules",
+      "sha256": "0a4284e851e6629456ddb9f89df63ee97f4041cb4cca29a27c84da491da55e0d",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/.gitmodules"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e65a9a6add9be1669b321040d5837b8790a4c6ab",
+      "bytes": 1218,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/AGENTS.md",
+      "sha256": "ae0a0c76d3d002df96c30e9eaa8c8a8f48e1af06383290d1a70b5c9a430cc105",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/AGENTS.md"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f704eb256ddb7b53ed07c135e9177238ccb981da",
+      "bytes": 1507,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CHANGELOG.md",
+      "sha256": "597a95174c4281fddfc60b6bc7d30da8fd2da1760ce1852f31fe92a599e31155",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CHANGELOG.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "120000",
+      "kind": "blob",
+      "git_blob_sha": "47dc3e3d863cfb5727b87d785d09abf9743c0a72",
+      "bytes": 9,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CLAUDE.md",
+      "status": "symlink_not_followed"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "996dc887879f8d30d612af5f4b479f1bd41649d8",
+      "bytes": 1121,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CONTRIBUTING.md",
+      "sha256": "4d89c6991408a66b3a3e6e4219605bdc9d390a7809f283d7241abd93aa9f5242",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CONTRIBUTING.md"
+    },
+    {
+      "path": "CONVENTIONS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "14e4ebe34cd0f3de5d44c8d13edbbc2c61822a4d",
+      "bytes": 3895,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CONVENTIONS.md",
+      "sha256": "d26b00a825db3a66a1504682c6c874f833bb85710fce1fe099c5d84283a43ab8",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/CONVENTIONS.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8addd18cdb64b34911f7a4a293759af267f946d5",
+      "bytes": 1060,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/LICENSE",
+      "sha256": "1b5252a9422e44a5929ad527b5d5dfdef3f102ff22914df9272ec3194e7bee90",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "55c0f3555fa9ecf447b98ca8fd743eca3238a4d6",
+      "bytes": 8127,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/README.md",
+      "sha256": "9ec206125f13dbbc6f07000e77c8e28b21347d5ab47032ecb41b1949967c8641",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/README.md"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "44be1616688b41397a5c8375c3c4c5b6d0809b5a",
+      "bytes": 46947,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-dark.png",
+      "sha256": "944bc31148454e82ed83ae8f7c5cfc870961254376335da0231c46bd8bca72ea",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/logo-dark.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2ee3c585d4e6cfac9428a9a4b35ee18db91ec163",
+      "bytes": 18102,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-dark.svg",
+      "sha256": "abdd3bea57ecc2859694972062663c47b67a0e901e3e80450b7df4bf27c43e40",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-dark.svg"
+    },
+    {
+      "path": "assets/logo-dark@2x.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "60bbff7374d566787febf10163c7466d72a96df9",
+      "bytes": 109147,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-dark%402x.png",
+      "sha256": "7543b3c863da248effff339d79c301b756f2faeab85151354f70e5b9d8e549d9",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/logo-light.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c5de37a1f45df5d732e7cc537cc864d59943d004",
+      "bytes": 50061,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-light.png",
+      "sha256": "e78d4a218452c59c47d26399dc61805804ad2106848b025a4bbbcf77799b8071",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/logo-light.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ed99d024fc2c6192a123859000edacbe81c9eab3",
+      "bytes": 18102,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-light.svg",
+      "sha256": "8ea519929a3add6f87d4a9e0dced8df0a47434543767a6e7f50a4d122717ef10",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-light.svg"
+    },
+    {
+      "path": "assets/logo-light@2x.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f395e7f2a9da44c6babb71d42d64339cc0e70515",
+      "bytes": 114536,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/logo-light%402x.png",
+      "sha256": "22d037e0bb35661fb0a7b553b80954b39f74c0e13e900e8a12ead737290d3500",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "assets/og.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d9ea6bf1770c3555cec05b68200d1d1a4171dd95",
+      "bytes": 2996,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/og.html",
+      "sha256": "dc068e8e958e3d903214b0dc6dff321d82d2182f2e2432d4c446e8ce892af23f",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/og.html"
+    },
+    {
+      "path": "assets/og.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bc3ea7509abd8f3e83322bea20b65b04e18be71e",
+      "bytes": 600606,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/assets/og.png",
+      "sha256": "b914bfa5ecca509589db0ab4d8aa01428a1f49dc3e58d07390bd9aef70787f05",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-08-28-repository-restructure.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6942729bdce23ee55feef8bf0c431f6386637201",
+      "bytes": 32616,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/docs/superpowers/plans/2026-08-28-repository-restructure.md",
+      "sha256": "d4b0bdb9b55e916255269264ab865cee2289763609b2d5f0179c072edfc74c1d",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/docs/superpowers/plans/2026-08-28-repository-restructure.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43980d42563ab6a63823fdbb58de7e7f1c9c405b",
+      "bytes": 8684,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/SKILL.md",
+      "sha256": "5fd29fab49e9477d60228efe8b4af3ed6a5566b1187c1700efece6897f47278a",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/SKILL.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/evals/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43adb13b3f0d614daf9209c16294d069ace3f47c",
+      "bytes": 2315,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/README.md",
+      "sha256": "6b4bb50ca2ea75cad92299ae887b6c70d4088ed10670af700415ae45ef8e9895",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/README.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/evals/evals.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "831a72aec9d523d8ad11c0b38b01e6744451c129",
+      "bytes": 1214,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/evals.json",
+      "sha256": "1bdf34a2e2d079198b51afd8b65dbf8fe9ee2e1ca9e06ffd3cf18d55a1765312",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/evals.json"
+    },
+    {
+      "path": "skills/recursive-decomposition/evals/files/mortgage-doc-rag",
+      "mode": "160000",
+      "kind": "commit",
+      "git_blob_sha": "2792bcb0f3369a8af85a65d6eae8b43932a371aa",
+      "bytes": null,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/files/mortgage-doc-rag",
+      "status": "gitlink_not_exported"
+    },
+    {
+      "path": "skills/recursive-decomposition/evals/gold/pdf-corpus.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8dd99060c5849d09486825a43ce25affbd0fdb7d",
+      "bytes": 253,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/gold/pdf-corpus.json",
+      "sha256": "5e3eb648e59a3bfce21b9628dd16c10d4f06242319700855b6b3573dfcf60bb3",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/gold/pdf-corpus.json"
+    },
+    {
+      "path": "skills/recursive-decomposition/evals/trigger-queries.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "be8e2b324cda93b85fa52668c21381b192c4626c",
+      "bytes": 3086,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/trigger-queries.json",
+      "sha256": "f2358543f662feafbc58ae533bba735737cb81b0c53b22929c63ade96b29f44f",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/evals/trigger-queries.json"
+    },
+    {
+      "path": "skills/recursive-decomposition/references/codebase-analysis.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "76dfc413f77b6b3c203341d7baa013d37cee2929",
+      "bytes": 2993,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/codebase-analysis.md",
+      "sha256": "41dbf6c1312aac719d8f65594e8282a552ae48db349c596297ff05e2c3328a31",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/codebase-analysis.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/references/cost-analysis.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "97783578abf3a816ac7302998c30eb25c7a4a3ae",
+      "bytes": 3929,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/cost-analysis.md",
+      "sha256": "c7bde1bafc94fa746c145523504f877fd07f0b2250656d9f5b8dc4d924130a44",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/cost-analysis.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/references/document-aggregation.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "58511b3e3199cf90de706e9b6fc7b6bbe5566d2b",
+      "bytes": 3549,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/document-aggregation.md",
+      "sha256": "e592ade3ab4f5b77c9cc0b3c79bad408eb33ed3d62edb96f740fcc9a8c42fc96",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/document-aggregation.md"
+    },
+    {
+      "path": "skills/recursive-decomposition/references/rlm-strategies.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6b15a87823c23e554253c025e5a5f4aa4c157f8a",
+      "bytes": 4975,
+      "source_url": "https://github.com/massimodeluisa/recursive-decomposition-skill/blob/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/rlm-strategies.md",
+      "sha256": "e2597cf2ded65222f81a7172c6804743cf1647eef541ac2a3e10f821750f9d56",
+      "status": "saved",
+      "raw_path": "raw/massimodeluisa/recursive-decomposition-skill/e0a8b0418a1e40e3ae774ad1d06834db2696ee26/skills/recursive-decomposition/references/rlm-strategies.md"
+    }
+  ]
+}

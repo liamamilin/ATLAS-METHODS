@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:52:37.761915+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 233,
+  "saved_skill_entries": 233,
+  "unique_entry_texts": 230,
+  "duplicate_entry_groups": 3,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "OneWave-AI/claude-skills",
+      "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 233,
+      "saved_skill_entries": 233,
+      "saved_text_files": 672,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/OneWave-AI/claude-skills/b2267d9171af4f56848d82992381b20b89b44056.json"
+    }
+  ],
+  "errors": []
+}

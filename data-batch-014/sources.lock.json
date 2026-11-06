@@ -1,0 +1,124 @@
+{
+  "sources": [
+    {
+      "repository": "BehiSecc/VibeSec-Skill",
+      "commit_sha": "0590993b35ad51961f65a4d01cf1196dfead05bb",
+      "collection_root": "repositories/BehiSecc/VibeSec-Skill"
+    },
+    {
+      "repository": "Ericyoung-183/alpha-insights",
+      "commit_sha": "30c1e874f1de74bdcd488f1158c03c92c808be55",
+      "collection_root": "repositories/Ericyoung-183/alpha-insights"
+    },
+    {
+      "repository": "HeshamFS/materials-simulation-skills",
+      "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+      "collection_root": "repositories/HeshamFS/materials-simulation-skills"
+    },
+    {
+      "repository": "NotMyself/claude-win11-speckit-update-skill",
+      "commit_sha": "264d00a719dd8ab88ad396cc27ebf55dbb6e1b72",
+      "collection_root": "repositories/NotMyself/claude-win11-speckit-update-skill"
+    },
+    {
+      "repository": "SHADOWPR0/security-bluebook-builder",
+      "commit_sha": "fc2492951a319880a7b8c69175d2693b9bb7b7aa",
+      "collection_root": "repositories/SHADOWPR0/security-bluebook-builder"
+    },
+    {
+      "repository": "ZeKaiNie/universal-examprep-skill",
+      "commit_sha": "e01d2f7647b0917172ae8ad5fb788b404e977cae",
+      "collection_root": "repositories/ZeKaiNie/universal-examprep-skill"
+    },
+    {
+      "repository": "frmoretto/clarity-gate",
+      "commit_sha": "88eaf21b0e38c95959429a1a5f9b4cec72f01a43",
+      "collection_root": "repositories/frmoretto/clarity-gate"
+    },
+    {
+      "repository": "hanhuark/mechanical-engineering-research-skill",
+      "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+      "collection_root": "repositories/hanhuark/mechanical-engineering-research-skill"
+    },
+    {
+      "repository": "helius-labs/core-ai",
+      "commit_sha": "6f1fcec7e0ba46e0b0b54319f08b22796810d533",
+      "collection_root": "repositories/helius-labs/core-ai"
+    },
+    {
+      "repository": "honeydew-ai/honeydew-ai-coding-agents-plugins",
+      "commit_sha": "5a4fd5df27729940dc9e33a93cffb2b9bf788855",
+      "collection_root": "repositories/honeydew-ai/honeydew-ai-coding-agents-plugins"
+    },
+    {
+      "repository": "huifer/WellAlly-health",
+      "commit_sha": "f604350c8448194ee7791495c1b3b84e1895c30b",
+      "collection_root": "repositories/huifer/WellAlly-health"
+    },
+    {
+      "repository": "komal-SkyNET/claude-skill-homeassistant",
+      "commit_sha": "21126796f5da91d6d18757f0059762a5ab16ccd4",
+      "collection_root": "repositories/komal-SkyNET/claude-skill-homeassistant"
+    },
+    {
+      "repository": "lawve-ai/awesome-legal-skills",
+      "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+      "collection_root": "repositories/lawve-ai/awesome-legal-skills"
+    },
+    {
+      "repository": "more-io/claude-apple-bridges",
+      "commit_sha": "f1c27f95db4f4dea7fd2bdc5bd005833f41ea36c",
+      "collection_root": "repositories/more-io/claude-apple-bridges"
+    },
+    {
+      "repository": "prompt-security/clawsec",
+      "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+      "collection_root": "repositories/prompt-security/clawsec"
+    },
+    {
+      "repository": "raintree-technology/hig-doctor",
+      "commit_sha": "a0f1e4ec3c5ada82e538710b54a344db63189d8b",
+      "collection_root": "repositories/raintree-technology/hig-doctor"
+    },
+    {
+      "repository": "shouldnotappearcalm/a-share-skill",
+      "commit_sha": "8874bd1c46813ddb188aa293e6f9ae34f016ba4d",
+      "collection_root": "repositories/shouldnotappearcalm/a-share-skill"
+    },
+    {
+      "repository": "takechanman1228/claude-ecom",
+      "commit_sha": "7ddf7ffb823fd7ab6015e699d01cdc436739eb2b",
+      "collection_root": "repositories/takechanman1228/claude-ecom"
+    },
+    {
+      "repository": "talkstream/ru-text",
+      "commit_sha": "e398aec9e6f02d1bf28ae5a79a118e2404d52e90",
+      "collection_root": "repositories/talkstream/ru-text"
+    },
+    {
+      "repository": "tinqiao-oss/engramory",
+      "commit_sha": "e84b50924b7017259737d57309fc55839225ffc0",
+      "collection_root": "repositories/tinqiao-oss/engramory"
+    },
+    {
+      "repository": "transloadit/skills",
+      "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+      "collection_root": "repositories/transloadit/skills"
+    },
+    {
+      "repository": "video-db/skills",
+      "commit_sha": "f985577fba97705ed937cc707c3a67e35f23faf5",
+      "collection_root": "repositories/video-db/skills"
+    },
+    {
+      "repository": "vmware-skills/VMware-AIops",
+      "commit_sha": "26255efb48e1c57169dfabfae265b59744bf40e5",
+      "collection_root": "repositories/vmware-skills/VMware-AIops"
+    },
+    {
+      "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+      "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+      "collection_root": "repositories/wanshuiyin/Auto-claude-code-research-in-sleep"
+    }
+  ]
+}

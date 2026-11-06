@@ -1,0 +1,31 @@
+{
+  "repository": "ZeroPointRepo/youtube-skills",
+  "commit_sha": "4f7994b94e7d5e250c3b51102d609992e04d5d0d",
+  "tree_entries": 72,
+  "candidate_skill_paths": [
+    "clawhub/captions/SKILL.md",
+    "clawhub/subtitles/SKILL.md",
+    "clawhub/transcript/SKILL.md",
+    "clawhub/transcriptapi/SKILL.md",
+    "clawhub/video-transcript/SKILL.md",
+    "clawhub/youtube-api/SKILL.md",
+    "clawhub/youtube-channels/SKILL.md",
+    "clawhub/youtube-data/SKILL.md",
+    "clawhub/youtube-full/SKILL.md",
+    "clawhub/youtube-playlist/SKILL.md",
+    "clawhub/youtube-search/SKILL.md",
+    "clawhub/yt/SKILL.md",
+    "skills/captions/SKILL.md",
+    "skills/subtitles/SKILL.md",
+    "skills/transcript/SKILL.md",
+    "skills/transcriptapi/SKILL.md",
+    "skills/video-transcript/SKILL.md",
+    "skills/youtube-api/SKILL.md",
+    "skills/youtube-channels/SKILL.md",
+    "skills/youtube-data/SKILL.md",
+    "skills/youtube-full/SKILL.md",
+    "skills/youtube-playlist/SKILL.md",
+    "skills/youtube-search/SKILL.md",
+    "skills/yt/SKILL.md"
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "0xNyk/council-of-high-intelligence",
+      "repository_url": "https://github.com/0xNyk/council-of-high-intelligence",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/0xNyk/council-of-high-intelligence",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L113",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "partial_text_snapshot",
+      "commit_sha": "14d398f44771be1fc49488ab1b8a348ed76ca172"
+    },
+    {
+      "repository": "ayghri/i-have-adhd",
+      "repository_url": "https://github.com/ayghri/i-have-adhd",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/ayghri/i-have-adhd",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L114",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "1ecea1993b7fce257ffbd686c070948b5e07eda6"
+    },
+    {
+      "repository": "nidhinjs/prompt-master",
+      "repository_url": "https://github.com/nidhinjs/prompt-master",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/nidhinjs/prompt-master",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L115",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "49b3a72469b1e7287d66387004ccfcca90e5968a"
+    },
+    {
+      "repository": "OthmanAdi/planning-with-files",
+      "repository_url": "https://github.com/OthmanAdi/planning-with-files",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/OthmanAdi/planning-with-files",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L116",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "8eef6dc6540dde5eef3fdc0ac487ad9c48ef3ba5"
+    },
+    {
+      "repository": "latent-spaces/brag",
+      "repository_url": "https://github.com/latent-spaces/brag",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/latent-spaces/brag",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L122",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "669ab9286aa28b6c3ee30e75f181ee74319d012a"
+    },
+    {
+      "repository": "Vincentwei1021/video-shotcraft",
+      "repository_url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/Vincentwei1021/video-shotcraft",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L123",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "1266a3ec4831289c4d893d42dd5102723658039a"
+    },
+    {
+      "repository": "googleworkspace/cli",
+      "repository_url": "https://github.com/googleworkspace/cli",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/googleworkspace/cli",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L130",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9"
+    },
+    {
+      "repository": "iOfficeAI/OfficeCLI",
+      "repository_url": "https://github.com/iOfficeAI/OfficeCLI",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/iOfficeAI/OfficeCLI",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L131",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "c56512c8c7b76fe284f09940e4cd492470099d3e"
+    },
+    {
+      "repository": "composio-community/awesome-codex-skills",
+      "repository_url": "https://github.com/composio-community/awesome-codex-skills",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/composio-community/awesome-codex-skills",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L137",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89"
+    },
+    {
+      "repository": "ComposioHQ/awesome-claude-skills",
+      "repository_url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L138",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2"
+    },
+    {
+      "repository": "hesreallyhim/awesome-claude-code",
+      "repository_url": "https://github.com/hesreallyhim/awesome-claude-code",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/hesreallyhim/awesome-claude-code",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L139",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "no_skill_files",
+      "commit_sha": "31b517448cf9e7bf537ca3400549a5b27aa88ec6"
+    },
+    {
+      "repository": "travisvn/awesome-claude-skills",
+      "repository_url": "https://github.com/travisvn/awesome-claude-skills",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/travisvn/awesome-claude-skills",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L140",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "no_skill_files",
+      "commit_sha": "1da55aa810f206d3fe2005e7e3989b15a275d942"
+    },
+    {
+      "repository": "VoltAgent/awesome-codex-subagents",
+      "repository_url": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/VoltAgent/awesome-codex-subagents",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L142",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "no_skill_files",
+      "commit_sha": "9abe3279a0aa4ee518381af800ca1062398f5433"
+    },
+    {
+      "repository": "VoltAgent/awesome-openclaw-skills",
+      "repository_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "discovered_via": [
+        {
+          "index": "devanasolver/awesome-agent-skills",
+          "index_commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+          "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+          "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L143",
+          "link_type": "direct_github"
+        }
+      ],
+      "state": "no_skill_files",
+      "commit_sha": "5492fcd98f7c52c69e1b2fa58790faf4fc90ce13"
+    },
+    {
+      "repository": "bazel-contrib/bazel-gazelle",
+      "repository_url": "https://github.com/bazel-contrib/bazel-gazelle",
+      "discovered_via": [
+        {
+          "url": "https://github.com/bazel-contrib/bazel-gazelle/blob/2ddd36aa159de9ee97e24f726341177cd1f026a9/v2.md",
+          "link_type": "github_search",
+          "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/bazel-contrib/bazel-gazelle/blob/2ddd36aa159de9ee97e24f726341177cd1f026a9/v2.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "2ddd36aa159de9ee97e24f726341177cd1f026a9"
+    },
+    {
+      "repository": "pengchujin/jzsub",
+      "repository_url": "https://github.com/pengchujin/jzsub",
+      "discovered_via": [
+        {
+          "url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/TODO.md",
+          "link_type": "github_search",
+          "query": "SKILL.md"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "222a90265d2a8797ca258eb1a980cee0863a8311"
+    },
+    {
+      "repository": "open-gitagent/opengap",
+      "repository_url": "https://github.com/open-gitagent/opengap",
+      "discovered_via": [
+        {
+          "url": "https://github.com/open-gitagent/opengap/blob/d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5/docs.md",
+          "link_type": "github_search",
+          "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/open-gitagent/opengap/blob/d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5/docs.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5"
+    },
+    {
+      "repository": "coreyhaines31/makerskills",
+      "repository_url": "https://github.com/coreyhaines31/makerskills",
+      "discovered_via": [
+        {
+          "url": "https://github.com/coreyhaines31/makerskills/blob/0f20eaf6e4479ce03858ee09a56fe93e7440ed1b/FAQ.md",
+          "link_type": "github_search",
+          "query": "SKILL.md"
+        },
+        {
+          "url": "https://github.com/coreyhaines31/makerskills/blob/0f20eaf6e4479ce03858ee09a56fe93e7440ed1b/FAQ.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ],
+      "state": "text_snapshot_collected",
+      "commit_sha": "0f20eaf6e4479ce03858ee09a56fe93e7440ed1b"
+    },
+    {
+      "repository": "KiWi233333/JiwuChat",
+      "repository_url": "https://github.com/KiWi233333/JiwuChat",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "url": "https://github.com/KiWi233333/JiwuChat/blob/63458b9c34a29ef17a6e61873f63c587d82bfc6c/Run.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ],
+      "commit_sha": "63458b9c34a29ef17a6e61873f63c587d82bfc6c"
+    },
+    {
+      "repository": "go-musicfox/go-musicfox",
+      "repository_url": "https://github.com/go-musicfox/go-musicfox",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "url": "https://github.com/go-musicfox/go-musicfox/blob/12169a71098f8b8607bcf655eaddabf57ca14daf/SDLC.md",
+          "link_type": "github_search",
+          "query": "agent skills SKILL.md"
+        }
+      ],
+      "commit_sha": "12169a71098f8b8607bcf655eaddabf57ca14daf"
+    }
+  ]
+}

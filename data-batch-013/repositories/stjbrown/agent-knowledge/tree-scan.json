@@ -1,0 +1,14 @@
+{
+  "repository": "stjbrown/agent-knowledge",
+  "commit_sha": "0d1a8282d90b1ef347c5e26575e57603de7bad77",
+  "tree_entries": 113,
+  "candidate_skill_paths": [
+    "skills/kb-document/SKILL.md",
+    "skills/kb-ingest/SKILL.md",
+    "skills/kb-init/SKILL.md",
+    "skills/kb-lint/SKILL.md",
+    "skills/kb-query/SKILL.md",
+    "skills/kb-visualize/SKILL.md",
+    "skills/kb/SKILL.md"
+  ]
+}

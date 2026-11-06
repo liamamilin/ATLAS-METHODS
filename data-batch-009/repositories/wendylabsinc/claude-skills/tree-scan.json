@@ -1,0 +1,33 @@
+{
+  "repository": "wendylabsinc/claude-skills",
+  "commit_sha": "934e0a5d179be1a7f6836b9e7c60b0bce1908ab8",
+  "tree_entries": 169,
+  "candidate_skill_paths": [
+    "database-driver-design/SKILL.md",
+    "deckset/SKILL.md",
+    "github-actions/SKILL.md",
+    "hummingbird/SKILL.md",
+    "linear/SKILL.md",
+    "postgres-nio/SKILL.md",
+    "pull-request/SKILL.md",
+    "swift-concurrency/SKILL.md",
+    "swift-library-design/SKILL.md",
+    "swift-nio/SKILL.md",
+    "swift-valkey/SKILL.md",
+    "swift/SKILL.md",
+    "wendy-aaa-interop/SKILL.md",
+    "wendy-certificates/SKILL.md",
+    "wendy-cloud-iterate/SKILL.md",
+    "wendy-cloud-testing/SKILL.md",
+    "wendy-contributing/SKILL.md",
+    "wendy-device-enrollment/SKILL.md",
+    "wendy-device-interop/SKILL.md",
+    "wendy-gcp-deployment/SKILL.md",
+    "wendy-iterating/SKILL.md",
+    "wendy-lite/SKILL.md",
+    "wendy-security-baselines/SKILL.md",
+    "wendy-self-hosted/SKILL.md",
+    "wendy-swift/SKILL.md",
+    "wendy/SKILL.md"
+  ]
+}

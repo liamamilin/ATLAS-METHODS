@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:14:31.772356+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "hanhuark/mechanical-engineering-research-skill",
+      "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 127,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/hanhuark/mechanical-engineering-research-skill/7b6c32d4e67b3a7896903b2d37cb2ddafc395b65.json"
+    }
+  ],
+  "errors": []
+}

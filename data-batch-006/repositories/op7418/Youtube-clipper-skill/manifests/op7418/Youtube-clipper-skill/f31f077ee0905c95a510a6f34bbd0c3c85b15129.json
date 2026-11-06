@@ -1,0 +1,270 @@
+{
+  "repository": "op7418/Youtube-clipper-skill",
+  "commit_sha": "f31f077ee0905c95a510a6f34bbd0c3c85b15129",
+  "files": [
+    {
+      "path": ".env.example",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d1a45ef62800ac96adb7781f66681ba39485465b",
+      "bytes": 2841,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.env.example",
+      "sha256": "8ef8841dec4a07682cf4d78b88db091efd9dcaa06ac26d97f8259d91955f5980",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.env.example"
+    },
+    {
+      "path": ".github/REPOSITORY_SETTINGS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "85274e61688c9624d3363f44822f27112460a1d7",
+      "bytes": 1418,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.github/REPOSITORY_SETTINGS.md",
+      "sha256": "4910ea2bdd3171444155d980cc785bbd93c513aacf4ce0cc5692be2544bcb928",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.github/REPOSITORY_SETTINGS.md"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3d518690be69a430925b923790bbd050c9718c0f",
+      "bytes": 372,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.gitignore",
+      "sha256": "21cb64aa9eb8e13b27b08eb923da1fc66b0c0854cd7b69ad5f306601467e7a7c",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/.gitignore"
+    },
+    {
+      "path": "FIXES_AND_IMPROVEMENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "83176ab0b4b80df8443b148ebf5a4ce3907a68d5",
+      "bytes": 8163,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/FIXES_AND_IMPROVEMENTS.md",
+      "sha256": "fcf28bfad7e54c9f9bb9bedc1c0474c12e25db7e74c18a9d46f4318b9ad506b2",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/FIXES_AND_IMPROVEMENTS.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "54fcb7cadb836e056a12b0ef764099415067ff92",
+      "bytes": 1063,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/LICENSE",
+      "sha256": "954179ac6635cd6fb0d7cfc49cdbec4f12019cc53f25db927dd34cd039015ea8",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "435b00629b3a85592fbdf7f7330210a3085796e3",
+      "bytes": 8596,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/README.md",
+      "sha256": "16234a04fc31ebd88e44c294220619c4b98b331a7356101bee8d05821a831d1e",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/README.md"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "22adee51ebbfadcce047795b3271fc249dcd3ad2",
+      "bytes": 8006,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/README.zh-CN.md",
+      "sha256": "d2d72374b3b2ac11bdb66beff0322564f22092d1bcf2ba1c8f1d326ddd2789f8",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/README.zh-CN.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "79938ae5671077a080facbb8dd56427bf6d60269",
+      "bytes": 10859,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/SKILL.md",
+      "sha256": "1039e3c3ac3028ec6e0e4d47c25553886a9b7f2bccdd62a76c160e14813f9ce8",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/SKILL.md"
+    },
+    {
+      "path": "TECHNICAL_NOTES.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5b2845492b3eece596b5122927e5ab1818e44949",
+      "bytes": 11590,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/TECHNICAL_NOTES.md",
+      "sha256": "4449ee72f8584129e8513363ad7477e586a4f0610ca5a6f2b8b1d2a32a80d21d",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/TECHNICAL_NOTES.md"
+    },
+    {
+      "path": "install_as_skill.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "864086b7d0c34ce441ec2dc672444e6bdd964f9b",
+      "bytes": 6975,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/install_as_skill.sh",
+      "sha256": "0219fa61731a842086c6158ff02e7f24d429136c1af04f6203a29bfab3794bf2",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/install_as_skill.sh"
+    },
+    {
+      "path": "references/ffmpeg-guide.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "757532f641acef168fcf425150b8f88f920162ef",
+      "bytes": 3479,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/ffmpeg-guide.md",
+      "sha256": "0c8f24e500118394566dcdc3cd461ada5d98b3d6e13fb280d8a7fff7b347948d",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/ffmpeg-guide.md"
+    },
+    {
+      "path": "references/subtitle-formatting.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6716c01553e59d698c9235c92b3c2f2e17835f5b",
+      "bytes": 7917,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/subtitle-formatting.md",
+      "sha256": "a57ae34665405c91f3db3a6122def0308493ea4997aca11e446e217915fc8c28",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/subtitle-formatting.md"
+    },
+    {
+      "path": "references/yt-dlp-guide.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0346dbb0f2a5e96a3a53bc8f5b70e42aced18a81",
+      "bytes": 6496,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/yt-dlp-guide.md",
+      "sha256": "6bccd5e3e093a779a71cf0e6acc2f115be2edc1a4fb7a85f522d6d08db17b275",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/references/yt-dlp-guide.md"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d7375491e0aa41a2fa5504371b630066f1536793",
+      "bytes": 128,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/__init__.py",
+      "sha256": "c2aa743aa3beb8b1aaab17ff38e302722a3824bcc708e5b222bfac9227cbecc2",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/__init__.py"
+    },
+    {
+      "path": "scripts/analyze_subtitles.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9d91493130c5fd352e66e565342f1d26adad58a5",
+      "bytes": 7595,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/analyze_subtitles.py",
+      "sha256": "59db173af8a3cb7496890f04b21a773378b7ec0dbd3ff8a605ce1c98c93c2c30",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/analyze_subtitles.py"
+    },
+    {
+      "path": "scripts/burn_subtitles.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cdab89d1bf4c3f6687ffaf57d9256873ef203aaa",
+      "bytes": 8688,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/burn_subtitles.py",
+      "sha256": "f3b64446ff1385bf5fba65088f76551717ece5b5fbdc9a125db860abc81953d3",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/burn_subtitles.py"
+    },
+    {
+      "path": "scripts/clip_video.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "131ed60e6380f95e8c24d196c1c49d315c56f95d",
+      "bytes": 7227,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/clip_video.py",
+      "sha256": "92bcacb270479e67b6820b1c9d1f30618510651cf84b01a81831718f54641eb6",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/clip_video.py"
+    },
+    {
+      "path": "scripts/download_video.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6595203c2c0ba584411403aed6caffc229638726",
+      "bytes": 6708,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/download_video.py",
+      "sha256": "383c962b762d66bb0010925206d4813fe9a62c46a202c5994bbdf7146df36a01",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/download_video.py"
+    },
+    {
+      "path": "scripts/extract_subtitle_clip.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2274cb622d99fab165f7a9526c1a868ee5c2df64",
+      "bytes": 3666,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/extract_subtitle_clip.py",
+      "sha256": "4e8b0838a27a92df4bae3e086cd7f3fecdda5c34e51923edc5bff72e10a66d98",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/extract_subtitle_clip.py"
+    },
+    {
+      "path": "scripts/generate_summary.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1083cde6bbf446a634b0d0774ee4aec7bbb641c0",
+      "bytes": 6257,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/generate_summary.py",
+      "sha256": "f2ac3811fa9b72bb707ca5eda7b13da7d70daa062f873f6c46a3297f31089067",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/generate_summary.py"
+    },
+    {
+      "path": "scripts/merge_bilingual_subtitles.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2fbbf5da890d2b2ce3c131fe105b34e5030fa7b6",
+      "bytes": 2302,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/merge_bilingual_subtitles.py",
+      "sha256": "8074bf46c045248da299e4f40dc91ce638895577c20d28c5c93c64d20a38db6c",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/merge_bilingual_subtitles.py"
+    },
+    {
+      "path": "scripts/translate_subtitles.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f8691bf1f02306b1f263d0c9b636a7282879ae60",
+      "bytes": 7095,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/translate_subtitles.py",
+      "sha256": "f3c0b0a6458c5936638cbc4466fba62322c846e73deef508360d0d4ac5ffb664",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/translate_subtitles.py"
+    },
+    {
+      "path": "scripts/utils.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e60de4f42f4c5cd341a4290c29b31069608f7b6",
+      "bytes": 8139,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/utils.py",
+      "sha256": "ba4b0bc846057952bce9ec4131b64779bc048edfddf434ae347fc1368b2f0e42",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/scripts/utils.py"
+    },
+    {
+      "path": "templates/summary-template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ceb31c6cfe2efb6fcf70a4cd044f5482089713d4",
+      "bytes": 3220,
+      "source_url": "https://github.com/op7418/Youtube-clipper-skill/blob/f31f077ee0905c95a510a6f34bbd0c3c85b15129/templates/summary-template.md",
+      "sha256": "d0580c93e32ed775fc87137450b2cfc4b91f16786c879288b381839a3324bf11",
+      "status": "saved",
+      "raw_path": "raw/op7418/Youtube-clipper-skill/f31f077ee0905c95a510a6f34bbd0c3c85b15129/templates/summary-template.md"
+    }
+  ]
+}

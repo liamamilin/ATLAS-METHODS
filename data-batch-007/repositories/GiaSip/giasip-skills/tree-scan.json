@@ -1,0 +1,11 @@
+{
+  "repository": "GiaSip/giasip-skills",
+  "commit_sha": "7886a35b6e49168a5655fcc55ce6f1fc92a8895c",
+  "tree_entries": 27,
+  "candidate_skill_paths": [
+    "locales/zh/skills/giasip-dispatch/SKILL.md",
+    "plugins/giasip/skills/research/SKILL.md",
+    "skills/giasip-dispatch/SKILL.md",
+    "skills/giasip-research/SKILL.md"
+  ]
+}

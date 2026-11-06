@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "first-fluke/oh-my-agent",
+      "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869"
+    }
+  ]
+}

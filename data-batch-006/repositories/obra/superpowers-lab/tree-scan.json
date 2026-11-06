@@ -1,0 +1,11 @@
+{
+  "repository": "obra/superpowers-lab",
+  "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+  "tree_entries": 15,
+  "candidate_skill_paths": [
+    "skills/finding-duplicate-functions/SKILL.md",
+    "skills/mcp-cli/SKILL.md",
+    "skills/using-tmux-for-interactive-commands/SKILL.md",
+    "skills/windows-vm/SKILL.md"
+  ]
+}

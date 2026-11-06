@@ -1,0 +1,171 @@
+{
+  "repository": "obra/superpowers-lab",
+  "commit_sha": "51111f74f24058117752d9aa917cb19859f8ec86",
+  "files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eb483f046b8ea678d0e672d218e5f51783c8ebbe",
+      "bytes": 577,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/.claude-plugin/plugin.json",
+      "sha256": "74b7efb1e4c2176c1fd0caa03ef76c2c8386d7f0bfbdc917bdfce33956799fe3",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c8f86e9d5188178b2b8a9feeedd02378dcc05553",
+      "bytes": 41,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/.gitignore",
+      "sha256": "e52aac198acd71945e1730f45cafba41fffda4e2a0d7d6a38175880aae8eabea",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/.gitignore"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1b2926686a1ce0cd56dee6e042d1b9f4a88c5025",
+      "bytes": 1704,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/CHANGELOG.md",
+      "sha256": "12edf03cad28dcc187ee63510c184ebf2a6cfb6ec5ceec567c97e568fd60f6db",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+      "bytes": 1070,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f7f5cb5645d57005110fadb83cbcfceb3a898800",
+      "bytes": 4001,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/README.md",
+      "sha256": "fae676cf73bde303af87cc5c8eb547795bc0d0abc21a60bce3d868a25643f754",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/README.md"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "71c6a530be8271766add8147194af1063ed5c5b8",
+      "bytes": 4794,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/SKILL.md",
+      "sha256": "fa3782c9d7e583665cd18ff39981d7dc8a7dededb60942b97995653101eb66b3",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/SKILL.md"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/scripts/categorize-prompt.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8c09214fd2d80a84d0f3fe86cdf8c6b28fc4225c",
+      "bytes": 2773,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/categorize-prompt.md",
+      "sha256": "764fa94432965ce27cbdb0811250fa3514740b666db1a8d5c5cea33c5a6d36e9",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/categorize-prompt.md"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/scripts/extract-functions.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "f22d20af338b89b25c5cd4ab55602a57b3223ac0",
+      "bytes": 8171,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/extract-functions.sh",
+      "sha256": "6e4a1ab1738463bc1f85cf30730990d359f476e4ca06d26ba662b923ecd30fd2",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/extract-functions.sh"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/scripts/find-duplicates-prompt.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f4dc277d0bce37722530213b935e52c598ef5799",
+      "bytes": 2953,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/find-duplicates-prompt.md",
+      "sha256": "8e2e7de14fe29ca49118b68b63ab33ee42efb2dfb4acb1d7f2f19d256925ecc7",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/find-duplicates-prompt.md"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/scripts/generate-report.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "700aa8d6dca0c98f6cdb65f7872a87f3af347fb8",
+      "bytes": 4670,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/generate-report.sh",
+      "sha256": "b55187a8b8149a6b0f65e1128accdae7340a3124d3291f6df51e5da374c70b35",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/generate-report.sh"
+    },
+    {
+      "path": "skills/finding-duplicate-functions/scripts/prepare-category-analysis.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "92ddd23bddfc3ea5b4c278e817a2d0e87474cb69",
+      "bytes": 1965,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/prepare-category-analysis.sh",
+      "sha256": "3452d4a370fe2fdebc1f0fa6de93ac7ee8a6c382bbfe77907871c663b8d6ebad",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/finding-duplicate-functions/scripts/prepare-category-analysis.sh"
+    },
+    {
+      "path": "skills/mcp-cli/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8a12676fef5ae0af5c275f0351a39f67e23e510b",
+      "bytes": 9217,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/mcp-cli/SKILL.md",
+      "sha256": "f9cd31599575a0b4ada2481ffa817e8a8025759c32da49bacf2d8e2a6ed90efe",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/mcp-cli/SKILL.md"
+    },
+    {
+      "path": "skills/using-tmux-for-interactive-commands/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b8805d846d01c9ed2bfa1d6985fbfadeb663f5fa",
+      "bytes": 5074,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/using-tmux-for-interactive-commands/SKILL.md",
+      "sha256": "51a3f28d4d16b8847bdc5a8d42c2d9987f83bbdf68550db20b8b59b7b32c6a84",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/using-tmux-for-interactive-commands/SKILL.md"
+    },
+    {
+      "path": "skills/using-tmux-for-interactive-commands/tmux-wrapper.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "325f08aec6d8a47f3da641280987d146b41be246",
+      "bytes": 1911,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/using-tmux-for-interactive-commands/tmux-wrapper.sh",
+      "sha256": "07fc3255187bcb0c9abe2861331ca5b23707e7e5625022472a82812c42bbcfee",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/using-tmux-for-interactive-commands/tmux-wrapper.sh"
+    },
+    {
+      "path": "skills/windows-vm/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d1841412559f2e5c5488232b20d618c4a7c96fd0",
+      "bytes": 10034,
+      "source_url": "https://github.com/obra/superpowers-lab/blob/51111f74f24058117752d9aa917cb19859f8ec86/skills/windows-vm/SKILL.md",
+      "sha256": "7aa90971d3d049f0ddddc6972b40b219633c7bdbadde6572549638ab4adedfa4",
+      "status": "saved",
+      "raw_path": "raw/obra/superpowers-lab/51111f74f24058117752d9aa917cb19859f8ec86/skills/windows-vm/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "f4cb2f0cba902c67f63cc9f8146205655059051c6ae481b645c52b63d5656b72",
+  "sources": [
+    {
+      "repository": "Egonex-AI/Understand-Anything",
+      "commit_sha": "98d6dca712407b8cbf0bca21b539c197e5a7825c",
+      "candidate_skill_entries": 9,
+      "skill_entries": 9,
+      "manifest_files": 521,
+      "statuses": {
+        "saved": 499,
+        "non_utf8_or_binary_not_exported": 11,
+        "font_not_exported": 8,
+        "over_size_limit": 3
+      }
+    },
+    {
+      "repository": "GanyuanRan/Aegis",
+      "commit_sha": "952b150a16b9cf9c702022ea779bcc6750b0d48d",
+      "candidate_skill_entries": 23,
+      "skill_entries": 23,
+      "manifest_files": 574,
+      "statuses": {
+        "saved": 571,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    },
+    {
+      "repository": "JasonColapietro/suede-creator-skills",
+      "commit_sha": "9406183696bfe56c4c399febf2091aeb93f280a3",
+      "candidate_skill_entries": 67,
+      "skill_entries": 67,
+      "manifest_files": 14491,
+      "statuses": {
+        "saved": 14393,
+        "non_utf8_or_binary_not_exported": 88,
+        "over_size_limit": 4,
+        "font_not_exported": 6
+      }
+    },
+    {
+      "repository": "KhazP/vibe-coding-prompt-template",
+      "commit_sha": "d26fb0d8a9cdac94cf99f004087620487e4da33d",
+      "candidate_skill_entries": 55,
+      "skill_entries": 55,
+      "manifest_files": 210,
+      "statuses": {
+        "saved": 210
+      }
+    },
+    {
+      "repository": "Maksim-Burtsev/simple-man",
+      "commit_sha": "bf37f83442622fe7a89d3316cd6b9bcc344523b9",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 140,
+      "statuses": {
+        "saved": 136,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "Simon-He95/markstream-vue",
+      "commit_sha": "e16b6f24da0186a633ccb0e8368332487bb7eff4",
+      "candidate_skill_entries": 12,
+      "skill_entries": 12,
+      "manifest_files": 2794,
+      "statuses": {
+        "saved": 2766,
+        "non_utf8_or_binary_not_exported": 26,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "aeonfun/aeon",
+      "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+      "candidate_skill_entries": 115,
+      "skill_entries": 115,
+      "manifest_files": 990,
+      "statuses": {
+        "saved": 956,
+        "non_utf8_or_binary_not_exported": 33,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "agiwhitelist/auteur",
+      "commit_sha": "9bca227df9877e60dc45d49783c8cbd885eccd9b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 49,
+      "statuses": {
+        "saved": 37,
+        "non_utf8_or_binary_not_exported": 11,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "baskduf/FableCodex",
+      "commit_sha": "406faa1981ffe8a3b6b44e770bc2fc2ee189c8d0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 59,
+      "statuses": {
+        "saved": 59
+      }
+    },
+    {
+      "repository": "browser-act/skills",
+      "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+      "candidate_skill_entries": 103,
+      "skill_entries": 103,
+      "manifest_files": 297,
+      "statuses": {
+        "saved": 295,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "csthink/dashmotion",
+      "commit_sha": "ae2fe4f28c60caa53da8b15fa3537f4ea576f4ad",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 57,
+      "statuses": {
+        "saved": 49,
+        "non_utf8_or_binary_not_exported": 8
+      }
+    },
+    {
+      "repository": "dembrandt/dembrandt-skills",
+      "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+      "candidate_skill_entries": 45,
+      "skill_entries": 45,
+      "manifest_files": 58,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 2,
+        "saved": 56
+      }
+    },
+    {
+      "repository": "drogers0/gh-image",
+      "commit_sha": "ca57d96dd4ac72bae5c8264a244116bd17f96ce8",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 52,
+      "statuses": {
+        "saved": 51,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "eduardo-sl/go-agent-skills",
+      "commit_sha": "e25b517bbd0c11db35f75a83a14f18848c1abdb0",
+      "candidate_skill_entries": 35,
+      "skill_entries": 35,
+      "manifest_files": 163,
+      "statuses": {
+        "saved": 162,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "ethos-link/rails-conventions",
+      "commit_sha": "6a19298942d849a2a4bdda41c123fd79049c5ed2",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 27,
+      "statuses": {
+        "saved": 27
+      }
+    },
+    {
+      "repository": "foryourhealth111-pixel/Vibe-Skills",
+      "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+      "candidate_skill_entries": 258,
+      "skill_entries": 258,
+      "manifest_files": 2899,
+      "statuses": {
+        "saved": 2868,
+        "non_utf8_or_binary_not_exported": 31
+      }
+    },
+    {
+      "repository": "hqhq1025/skill-optimizer",
+      "commit_sha": "b9ffd1513e84136b72e2b6f041dc1ebfd9e23a84",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 34,
+      "statuses": {
+        "saved": 34
+      }
+    },
+    {
+      "repository": "krisyangdev/motionboard",
+      "commit_sha": "4e1b437b18cf920992c191d983e42b26654e6406",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 241,
+      "statuses": {
+        "saved": 228,
+        "over_size_limit": 2,
+        "font_not_exported": 11
+      }
+    },
+    {
+      "repository": "mcollina/skills",
+      "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+      "candidate_skill_entries": 11,
+      "skill_entries": 11,
+      "manifest_files": 125,
+      "statuses": {
+        "saved": 125
+      }
+    },
+    {
+      "repository": "metalbear-co/skills",
+      "commit_sha": "a5026f8013482a61b8beba78f0600d217bd76a46",
+      "candidate_skill_entries": 12,
+      "skill_entries": 12,
+      "manifest_files": 81,
+      "statuses": {
+        "saved": 77,
+        "non_utf8_or_binary_not_exported": 4
+      }
+    },
+    {
+      "repository": "plasma-ai/fractal",
+      "commit_sha": "5e1c65c0a5dc367d3d4f223a997b5f010d568722",
+      "candidate_skill_entries": 5,
+      "skill_entries": 5,
+      "manifest_files": 380,
+      "statuses": {
+        "saved": 372,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 4,
+        "font_not_exported": 3
+      }
+    },
+    {
+      "repository": "reliefeai/browser-relay",
+      "commit_sha": "973434bc6b339dd56d831b1ebd089a8465850844",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 133,
+      "statuses": {
+        "saved": 125,
+        "non_utf8_or_binary_not_exported": 8
+      }
+    },
+    {
+      "repository": "squirrelscan/skills",
+      "commit_sha": "29f17762cc1ca0696686a0ba1a10b05c65197925",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 29,
+      "statuses": {
+        "saved": 27,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "superdesigndev/superdesign-skill",
+      "commit_sha": "f9f05cd988c247dce6c072eaf9ac6b162f2ffc4b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 32,
+      "statuses": {
+        "saved": 30,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 221428190,
+    "entries_with_license_candidates": 765,
+    "saved": 24153,
+    "non_utf8_or_binary_not_exported": 239,
+    "font_not_exported": 28,
+    "over_size_limit": 14,
+    "symlink_not_followed": 2
+  },
+  "verified_candidate_entries": 765,
+  "verified_skill_entries": 765,
+  "unique_entry_texts": 719,
+  "duplicate_entry_groups": 13,
+  "entries_in_duplicate_groups": 59,
+  "duplicate_entries_beyond_first": 46
+}

@@ -1,0 +1,15 @@
+{
+  "repository": "ohad6k/emulo",
+  "commit_sha": "5b6745f0ecbb11027d5dfdc3c97778b0fbd273fe",
+  "tree_entries": 477,
+  "candidate_skill_paths": [
+    ".agents/skills/agent-profile-from-sessions/SKILL.md",
+    ".agents/skills/emulo/SKILL.md",
+    "compat/clawhub/SKILL.md",
+    "skills/design/SKILL.md",
+    "skills/mine/SKILL.md",
+    "skills/video/SKILL.md",
+    "skills/work/SKILL.md",
+    "skills/write/SKILL.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "ScrapeCreators/social-media-research-skills",
+  "commit_sha": "64ba7b4dea71e130d2712ffb6c1c1024b3b7c4b2",
+  "tree_entries": 20,
+  "candidate_skill_paths": [
+    "skills/ad-library-teardown/SKILL.md",
+    "skills/audience-research/SKILL.md",
+    "skills/comment-mining/SKILL.md",
+    "skills/competitor-social-research/SKILL.md",
+    "skills/content-repurposing/SKILL.md",
+    "skills/creator-profile-teardown/SKILL.md",
+    "skills/influencer-prospecting/SKILL.md",
+    "skills/outlier-post-finder/SKILL.md",
+    "skills/product-demand-research/SKILL.md",
+    "skills/scrapecreators-api/SKILL.md",
+    "skills/social-listening-brief/SKILL.md",
+    "skills/transcript-intelligence/SKILL.md",
+    "skills/trend-discovery/SKILL.md"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:10:13.714628+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sametbrr/llm-wiki-manager",
+      "commit_sha": "28ad2850354a5e9aa1fd3798dade5ba9a35b371a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 39,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/sametbrr/llm-wiki-manager/28ad2850354a5e9aa1fd3798dade5ba9a35b371a.json"
+    }
+  ],
+  "errors": []
+}

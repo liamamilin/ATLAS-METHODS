@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T11:24:27.446415+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 281,
+  "saved_skill_entries": 281,
+  "unique_entry_texts": 281,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "KalarisLabs/research-agent-skills",
+      "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 281,
+      "saved_skill_entries": 281,
+      "saved_text_files": 3177,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/KalarisLabs/research-agent-skills/fa023d6d166562a8de118f59bb73647c0e444b8c.json"
+    }
+  ],
+  "errors": []
+}

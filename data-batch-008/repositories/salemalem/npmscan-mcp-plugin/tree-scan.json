@@ -1,0 +1,12 @@
+{
+  "repository": "salemalem/npmscan-mcp-plugin",
+  "commit_sha": "efd8dd03e380c50f10829707913b9a293914c12c",
+  "tree_entries": 94,
+  "candidate_skill_paths": [
+    "skills/ci-pr-gate/SKILL.md",
+    "skills/dependency-audit/SKILL.md",
+    "skills/incident-response/SKILL.md",
+    "skills/new-dependency-evaluation/SKILL.md",
+    "skills/package-trust-check/SKILL.md"
+  ]
+}

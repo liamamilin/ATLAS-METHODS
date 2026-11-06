@@ -1,0 +1,283 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "218061815f1a12bf41e5968037e6c3499df6a21b73eb7a6145bd8f87fa9b8ea4",
+  "sources": [
+    {
+      "repository": "Aboudjem/humanizer-skill",
+      "commit_sha": "a58df065367550b6ce40ff3f648335018d8e0589",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 102,
+      "statuses": {
+        "saved": 95,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "AbubakrChan/product-launch-motion",
+      "commit_sha": "edbfb105382f21507bad895d8b5f6e0faa67487c",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 42,
+      "statuses": {
+        "saved": 37,
+        "over_size_limit": 3,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "Hyacehila/humanizer-zh-next",
+      "commit_sha": "0c3ee9cbba7a54b8ae180554c95a0ff906a7b8fd",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 18,
+      "statuses": {
+        "saved": 18
+      }
+    },
+    {
+      "repository": "PSPDFKit-labs/nutrient-agent-skill",
+      "commit_sha": "09c3251cb65bf167a72875793a39df68b1115479",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 59,
+      "statuses": {
+        "saved": 56,
+        "non_utf8_or_binary_not_exported": 1,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "PleasePrompto/notebooklm-skill",
+      "commit_sha": "c80722d3f27d65e06b6579add201bf69b99101d0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 21,
+      "statuses": {
+        "saved": 20,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "Upload-Post/upload-post-skill",
+      "commit_sha": "539cdbdec9525cde8865bed549e907312d180162",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 5,
+      "statuses": {
+        "saved": 5
+      }
+    },
+    {
+      "repository": "apify/awesome-skills",
+      "commit_sha": "485f6c0d47e3a05269fe735f15e7aeeb7a98d78e",
+      "candidate_skill_entries": 30,
+      "skill_entries": 30,
+      "manifest_files": 173,
+      "statuses": {
+        "saved": 173
+      }
+    },
+    {
+      "repository": "arcmira/mcp",
+      "commit_sha": "f1fe83efbb8baa437d3c3403f4d7f586c3b2e4d4",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 80,
+      "statuses": {
+        "saved": 78,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "checkout-page/ecommerce-skills",
+      "commit_sha": "c12363338947f8072ef1b63451cbe080ee4a9ee1",
+      "candidate_skill_entries": 20,
+      "skill_entries": 20,
+      "manifest_files": 53,
+      "statuses": {
+        "saved": 52,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "coupler-io/skills",
+      "commit_sha": "d25f3b33c62682049577af3e2e96e3efcdf7867b",
+      "candidate_skill_entries": 106,
+      "skill_entries": 106,
+      "manifest_files": 131,
+      "statuses": {
+        "saved": 129,
+        "symlink_not_followed": 2
+      }
+    },
+    {
+      "repository": "dreammis/social-auto-upload",
+      "commit_sha": "3847fff01f5434a8a32829833163cd6723cabc59",
+      "candidate_skill_entries": 18,
+      "skill_entries": 18,
+      "manifest_files": 289,
+      "statuses": {
+        "saved": 267,
+        "non_utf8_or_binary_not_exported": 22
+      }
+    },
+    {
+      "repository": "emotixco/claude-skills-founder",
+      "commit_sha": "ea6864c05c2f4a3666b9d6c14c550b20f35a04c9",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 130,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 1,
+        "saved": 129
+      }
+    },
+    {
+      "repository": "gokapso/agent-skills",
+      "commit_sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 173,
+      "statuses": {
+        "saved": 173
+      }
+    },
+    {
+      "repository": "karero/croftweaver",
+      "commit_sha": "26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2",
+      "candidate_skill_entries": 39,
+      "skill_entries": 39,
+      "manifest_files": 935,
+      "statuses": {
+        "saved": 928,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "nagameTW/formosa-humanizer",
+      "commit_sha": "4f7c1d9a3e955e97da9bb5aef6a53f052a604153",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 25,
+      "statuses": {
+        "saved": 25
+      }
+    },
+    {
+      "repository": "op7418/NanoBanana-PPT-Skills",
+      "commit_sha": "0c18b9abde04ad42f4f62c7e9ead346b7bb39260",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 28,
+      "statuses": {
+        "saved": 27,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "open-salesblink/skill",
+      "commit_sha": "35a7391802693e970e3e055193363f5a99bb337c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 59,
+      "statuses": {
+        "saved": 58,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "posteyai/skills",
+      "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+      "candidate_skill_entries": 27,
+      "skill_entries": 27,
+      "manifest_files": 157,
+      "statuses": {
+        "saved": 154,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "publora/skills",
+      "commit_sha": "6f4277bb67233e626bae3a7bec221e990bfa24ef",
+      "candidate_skill_entries": 18,
+      "skill_entries": 18,
+      "manifest_files": 49,
+      "statuses": {
+        "saved": 46,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    },
+    {
+      "repository": "shalintripathi/saas-marketing-agents",
+      "commit_sha": "bddf39add29f331723bdcbea1a69ec2c6876d66e",
+      "candidate_skill_entries": 19,
+      "skill_entries": 19,
+      "manifest_files": 278,
+      "statuses": {
+        "saved": 277,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "sujunmin/agy-ppt",
+      "commit_sha": "b0b7712c88172f8126edaa3dc9c48a5bceb99991",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 319,
+      "statuses": {
+        "saved": 304,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 14
+      }
+    },
+    {
+      "repository": "yuwen-cool/yuwen-publish-precheck",
+      "commit_sha": "b9efdc6bc1938b40ad1c556fba65c562fc182be0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 36,
+      "statuses": {
+        "saved": 36
+      }
+    },
+    {
+      "repository": "zarazhangrui/frontend-slides",
+      "commit_sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 163,
+      "statuses": {
+        "saved": 163
+      }
+    },
+    {
+      "repository": "zhuyansen/new-term-radar",
+      "commit_sha": "fe67ff1acab728141644a4a9741295469b4feee6",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 74,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 6,
+        "saved": 68
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 43064457,
+    "entries_with_license_candidates": 312,
+    "saved": 3318,
+    "non_utf8_or_binary_not_exported": 71,
+    "over_size_limit": 7,
+    "entries_without_license_candidates": 6,
+    "symlink_not_followed": 3
+  },
+  "verified_candidate_entries": 318,
+  "verified_skill_entries": 318,
+  "unique_entry_texts": 306,
+  "duplicate_entry_groups": 11,
+  "entries_in_duplicate_groups": 23,
+  "duplicate_entries_beyond_first": 12
+}

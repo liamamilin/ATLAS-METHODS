@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T10:58:32.395005+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ZhangHanDong/makepad-skills",
+      "commit_sha": "6e16c8d5beefcb410d57e83a799014beb2957977",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 40,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/ZhangHanDong/makepad-skills/6e16c8d5beefcb410d57e83a799014beb2957977.json"
+    }
+  ],
+  "errors": []
+}
