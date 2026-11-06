@@ -1,0 +1,39 @@
+{
+  "repository": "modem-dev/skills",
+  "commit_sha": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b9a3de8999f8e87f8748d091681458df4b65eb50",
+      "bytes": 1062,
+      "source_url": "https://github.com/modem-dev/skills/blob/edcdedb38a545f67c065f4084b3627517f0d79cf/LICENSE",
+      "sha256": "da3311c19276b56122751f1e0df32f98eca3df99be3b3a68c026262ed4e92d5e",
+      "status": "saved",
+      "raw_path": "raw/modem-dev/skills/edcdedb38a545f67c065f4084b3627517f0d79cf/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "440216816129c66f35ad72c8f8a16248ef8704cc",
+      "bytes": 996,
+      "source_url": "https://github.com/modem-dev/skills/blob/edcdedb38a545f67c065f4084b3627517f0d79cf/README.md",
+      "sha256": "7fe63214fb5f94b3e1ff6ae64947b25c5ef8cd3a37428e806297616db54e2bc8",
+      "status": "saved",
+      "raw_path": "raw/modem-dev/skills/edcdedb38a545f67c065f4084b3627517f0d79cf/README.md"
+    },
+    {
+      "path": "write-discoverable-code/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a5255e871516295283f0d1dc830bf389e8aea3e8",
+      "bytes": 6792,
+      "source_url": "https://github.com/modem-dev/skills/blob/edcdedb38a545f67c065f4084b3627517f0d79cf/write-discoverable-code/SKILL.md",
+      "sha256": "c873629b4996443d42abf7b8cc8a216b5a3dce37bc5d44a23f1cce16b313db28",
+      "status": "saved",
+      "raw_path": "raw/modem-dev/skills/edcdedb38a545f67c065f4084b3627517f0d79cf/write-discoverable-code/SKILL.md"
+    }
+  ]
+}

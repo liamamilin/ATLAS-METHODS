@@ -1,0 +1,27 @@
+{
+  "query": "SKILL.md",
+  "topn": 5,
+  "results": [
+    {
+      "url": "https://github.com/bazel-contrib/bazel-gazelle/blob/2ddd36aa159de9ee97e24f726341177cd1f026a9/v2.md",
+      "path": "v2.md"
+    },
+    {
+      "url": "https://github.com/pengchujin/jzsub/blob/222a90265d2a8797ca258eb1a980cee0863a8311/TODO.md",
+      "path": "TODO.md"
+    },
+    {
+      "url": "https://github.com/open-gitagent/opengap/blob/d7a8e2edb54b942d6b4635cdd8b919ebd23e5da5/docs.md",
+      "path": "docs.md"
+    },
+    {
+      "url": "https://github.com/coreyhaines31/makerskills/blob/0f20eaf6e4479ce03858ee09a56fe93e7440ed1b/FAQ.md",
+      "path": "FAQ.md"
+    },
+    {
+      "url": "https://github.com/conorluddy/ios-simulator-skill/blob/30d2ea43ef88d353f4de560e7b7f132e05c502ab/DEV.md",
+      "path": "DEV.md"
+    }
+  ],
+  "note": "Search hits are candidates only; SKILL.md presence must be checked in Git trees."
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:54:15.770727+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9016,
+  "saved_skill_entries": 9013,
+  "unique_entry_texts": 3236,
+  "duplicate_entry_groups": 2923,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9016,
+      "saved_skill_entries": 9013,
+      "saved_text_files": 29174,
+      "files_not_exported": 459,
+      "repository_manifest": "manifests/sickn33/agentic-awesome-skills/828257c3037dc7c3c3ec987decc5a603025a0ce5.json"
+    }
+  ],
+  "errors": []
+}

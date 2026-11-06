@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62"
+    }
+  ]
+}

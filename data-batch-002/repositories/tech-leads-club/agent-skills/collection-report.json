@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:39:21.703050+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 94,
+  "saved_skill_entries": 94,
+  "unique_entry_texts": 94,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tech-leads-club/agent-skills",
+      "commit_sha": "8658b6658c762b9e5efd3956ed35a51c41bdf6c3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 94,
+      "saved_skill_entries": 94,
+      "saved_text_files": 1195,
+      "files_not_exported": 14,
+      "repository_manifest": "manifests/tech-leads-club/agent-skills/8658b6658c762b9e5efd3956ed35a51c41bdf6c3.json"
+    }
+  ],
+  "errors": []
+}

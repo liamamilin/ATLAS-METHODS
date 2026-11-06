@@ -1,0 +1,10 @@
+{
+  "repository": "officialzeroxyz/zero-plugins",
+  "commit_sha": "698c47fd02e26cf12c2ef3a1240e6c0940ada04e",
+  "tree_entries": 52,
+  "candidate_skill_paths": [
+    "plugins/zero-hermes/hermes/skills/zero/SKILL.md",
+    "plugins/zero-mcp/skills/zero/SKILL.md",
+    "plugins/zero/skills/zero/SKILL.md"
+  ]
+}

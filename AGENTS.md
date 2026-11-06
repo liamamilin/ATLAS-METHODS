@@ -2,7 +2,7 @@
 
 ## 本轮目标
 
-在现有采集器基础上，完成首批六个固定版本来源的真实联网采集，检查结果并提交索引与报告。
+在现有采集器和已完成批次基础上继续真实采集。新来源使用独立输出目录，保留旧原文与索引，使用 `merge_collections.py` 维护 `data/cumulative/`。最新状态与续采命令见 `README.md`、`docs/collection-002.md`。
 
 当前仅做 GitHub Skill 原始材料采集。不要预设 Domain，不提炼 Method / Methodology，不生成摘要、质量评分、领域树或知识图谱，不开发网站、调度平台或自动安装器。
 
@@ -15,10 +15,11 @@
    python3 collect_skills.py --self-test
    ```
 
-3. 在能访问 GitHub 的环境运行真实采集：
+3. 首批固定版本可以用以下命令复现；新增候选使用独立目录，不覆盖首批：
 
    ```bash
    python3 collect_skills.py --sources sources.json --out data
+   python3 collect_skills.py --sources sources.next.json --only cloudflare/security-audit-skill --out data-batch-003/repositories/cloudflare/security-audit-skill
    ```
 
    先使用清单中的固定 commit，不使用 `--refresh`。来源或 commit 无法访问时保留具体错误，不静默替换版本。如果需要小范围排错，使用单独输出目录：
@@ -46,11 +47,13 @@
 - 抽查正文，确认与固定版本 Git blob 一致；抽查共享 `references/` 等文本上下文。
 - 重复执行不新增重复来源记录；二进制、字体、超限文件等遗漏在清单中可见。
 - 失败会记录原因并返回非零退出码，不用删除来源或降低检查来凑成功。
-- 六个来源都完成且入口发现数等于保存数，才可标记这批文本采集完成。完整资产、执行效果和方法质量仍不属于本轮。
+- 入口发现数等于保存数才可标记对应来源文本完整；部分保存、无 Skill、失败和待处理分别记录，已保存正文仍可纳入累计成果。完整资产、执行效果和方法质量不属于本阶段。
 
 ## Git 提交范围
 
 提交采集器及必要修复、来源清单、测试、`data/skills.jsonl`、`data/sources.lock.json`、`data/duplicates.json`、`data/collection-report.json` 和必要文件清单。遵守 `.gitignore`，不提交 Git 缓存、临时文件或整个原始快照。
+
+新增批次的每来源索引、`data-batch-*/` 批次索引和 `data/cumulative/` 累计索引沿用相同提交边界。所有 `raw/` 材料及 `.cache/` 仅保留本地。
 
 原始材料先保留本地。之后若要公开发布正文或附属文件，另行检查各自许可；不要将第三方材料统一改为本项目许可。
 

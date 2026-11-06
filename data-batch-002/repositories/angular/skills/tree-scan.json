@@ -1,0 +1,9 @@
+{
+  "repository": "angular/skills",
+  "commit_sha": "d2cdd2cfeeb2301e5b30b80d3094e2cbd48aae7a",
+  "tree_entries": 47,
+  "candidate_skill_paths": [
+    "angular-developer/SKILL.md",
+    "angular-new-app/SKILL.md"
+  ]
+}

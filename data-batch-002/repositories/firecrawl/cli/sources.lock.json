@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "firecrawl/cli",
+      "commit_sha": "da25d5cd06db21cb33b100661cea0d9b89d457a3"
+    }
+  ]
+}

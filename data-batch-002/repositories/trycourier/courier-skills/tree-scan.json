@@ -1,0 +1,8 @@
+{
+  "repository": "trycourier/courier-skills",
+  "commit_sha": "465479eadd2abbe863dd3f7bfaea8e1caf2fd136",
+  "tree_entries": 48,
+  "candidate_skill_paths": [
+    "skills/courier/SKILL.md"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "repository": "VoltAgent/awesome-agent-skills",
+    "commit_sha": "6d483e29da745a010d88974ef6d0e50d15755e9a",
+    "path": "README.md",
+    "git_blob_sha": "cfb805af027cf36699843b6760c9e277ef613eb5",
+    "sha256": "c2f3447c752015a67db5e7eefb86790fc3945f311e9643232c4733da146160d4",
+    "local_path": "data-batch-002/discovery/raw/VoltAgent/awesome-agent-skills/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md",
+    "source_url": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md"
+  },
+  {
+    "repository": "devanasolver/awesome-agent-skills",
+    "commit_sha": "e7e8e2e75b317c9573019f270aebfd8756a0a419",
+    "path": "README.md",
+    "git_blob_sha": "b97a4c7d50b5723363439ae8ed6251ade0bde469",
+    "sha256": "31fd5b267486d424de15789418e7e9f03050eace2be8468f6fb7e4c300c51016",
+    "local_path": "data-batch-002/discovery/raw/devanasolver/awesome-agent-skills/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md",
+    "source_url": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md"
+  }
+]

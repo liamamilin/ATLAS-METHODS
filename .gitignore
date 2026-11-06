@@ -2,6 +2,9 @@
 .cache/
 data/raw/
 data-trial/
+data-batch-*/raw/
+data-batch-*/discovery/raw/
+data-batch-*/repositories/**/raw/
 
 # Python and local temporary files.
 __pycache__/

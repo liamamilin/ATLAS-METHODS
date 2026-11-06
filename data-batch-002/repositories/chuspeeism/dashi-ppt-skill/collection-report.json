@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:48:21.119348+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "chuspeeism/dashi-ppt-skill",
+      "commit_sha": "d2b75389ca056a3a8fb5b997b79a098acce0c189",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 175,
+      "files_not_exported": 208,
+      "repository_manifest": "manifests/chuspeeism/dashi-ppt-skill/d2b75389ca056a3a8fb5b997b79a098acce0c189.json"
+    }
+  ],
+  "errors": []
+}

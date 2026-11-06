@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:47:48.639362+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 185,
+  "saved_skill_entries": 185,
+  "unique_entry_texts": 185,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "wshobson/agents",
+      "commit_sha": "4bde3168b43c0655c4d00ea2726e631719908a6d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 185,
+      "saved_skill_entries": 185,
+      "saved_text_files": 1171,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/wshobson/agents/4bde3168b43c0655c4d00ea2726e631719908a6d.json"
+    }
+  ],
+  "errors": []
+}

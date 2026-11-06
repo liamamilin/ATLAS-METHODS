@@ -1,0 +1,194 @@
+[
+  {
+    "repository": "serpapi/serpapi-search-tools-python",
+    "canonical_repository": "serpapi/serpapi-search-tools-python",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "github/awesome-copilot",
+    "canonical_repository": "github/awesome-copilot",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "serpapi/serpapi-cli",
+    "canonical_repository": "serpapi/serpapi-cli",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "tech-leads-club/agent-skills",
+    "canonical_repository": "tech-leads-club/agent-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "crawlbase/crawlbase-mcp",
+    "canonical_repository": "crawlbase/crawlbase-mcp",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "vercel-labs/agent-skills",
+    "canonical_repository": "vercel-labs/agent-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "crawlbase/langchain-crawlbase",
+    "canonical_repository": "crawlbase/langchain-crawlbase",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "alirezarezvani/claude-skills",
+    "canonical_repository": "alirezarezvani/claude-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "crawlbase/n8n-nodes-crawlbase",
+    "canonical_repository": "crawlbase/n8n-nodes-crawlbase",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "Jeffallan/claude-skills",
+    "canonical_repository": "Jeffallan/claude-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "LambdaTest/agent-skills",
+    "canonical_repository": "LambdaTest/agent-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "canonical_repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "modem-dev/skills",
+    "canonical_repository": "modem-dev/skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "Orchestra-Research/AI-Research-SKILLs",
+    "canonical_repository": "Orchestra-Research/AI-Research-SKILLs",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "officialzeroxyz/zero-plugins",
+    "canonical_repository": "officialzeroxyz/zero-plugins",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "sickn33/agentic-awesome-skills",
+    "canonical_repository": "sickn33/agentic-awesome-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "angular/skills",
+    "canonical_repository": "angular/skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "wshobson/agents",
+    "canonical_repository": "wshobson/agents",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "trycourier/courier-skills",
+    "canonical_repository": "trycourier/courier-skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "cathrynlavery/diagram-design",
+    "canonical_repository": "cathrynlavery/diagram-design",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "firecrawl/cli",
+    "canonical_repository": "firecrawl/cli",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "chuspeeism/dashi-ppt-skill",
+    "canonical_repository": "chuspeeism/dashi-ppt-skill",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "veniceai/skills",
+    "canonical_repository": "veniceai/skills",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  },
+  {
+    "repository": "Leonxlnx/taste-skill",
+    "canonical_repository": "Leonxlnx/taste-skill",
+    "fork": false,
+    "parent_repository": null,
+    "archived": false,
+    "default_branch": "main"
+  }
+]

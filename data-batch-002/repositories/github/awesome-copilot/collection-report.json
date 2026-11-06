@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:38:54.218839+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 475,
+  "saved_skill_entries": 475,
+  "unique_entry_texts": 475,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "github/awesome-copilot",
+      "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 475,
+      "saved_skill_entries": 475,
+      "saved_text_files": 3602,
+      "files_not_exported": 462,
+      "repository_manifest": "manifests/github/awesome-copilot/60dcb901abbd87609d93d6281f1916c22b8bbd8c.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,371 @@
+{
+  "generated_at": "2026-11-06T10:00:40.556470+00:00",
+  "requested_sources": 30,
+  "completed_sources": 23,
+  "indexed_snapshots": 25,
+  "partial_sources": 2,
+  "partial_results": [
+    {
+      "repository": "alirezarezvani/claude-skills",
+      "output_directory": "data-batch-002/repositories/alirezarezvani/claude-skills",
+      "started_at": "2026-11-06T09:39:42.339307+00:00",
+      "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+      "command": [
+        "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+        "collect_skills.py",
+        "--sources",
+        "sources.batch-002.json",
+        "--only",
+        "alirezarezvani/claude-skills",
+        "--out",
+        "data-batch-002/repositories/alirezarezvani/claude-skills"
+      ],
+      "state": "partial_text_snapshot",
+      "exit_code": 1,
+      "saved_skill_entries": 411,
+      "errors": [],
+      "candidate_skill_files": 478,
+      "unexported_entry_reasons": {
+        "symlink_not_followed": 67
+      },
+      "status_recorded_at": "2026-11-06T09:50:48.239801+00:00"
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "output_directory": "data-batch-002/repositories/sickn33/agentic-awesome-skills",
+      "started_at": "2026-11-06T09:42:03.238903+00:00",
+      "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+      "command": [
+        "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+        "collect_skills.py",
+        "--sources",
+        "sources.batch-002.json",
+        "--only",
+        "sickn33/agentic-awesome-skills",
+        "--out",
+        "data-batch-002/repositories/sickn33/agentic-awesome-skills"
+      ],
+      "state": "partial_text_snapshot",
+      "saved_skill_entries": 9013,
+      "candidate_skill_files": 9016,
+      "unexported_entry_reasons": {
+        "non_utf8_or_binary_not_exported": 3
+      },
+      "errors": [],
+      "exit_code": 1,
+      "retry_note": "Initial single-source process interrupted for measured performance optimization; retried identical pinned commit with batched Git reads and indexed package lookup.",
+      "retry_elapsed_seconds": 5.602,
+      "status_recorded_at": "2026-11-06T09:50:48.316015+00:00"
+    }
+  ],
+  "failed_sources": 0,
+  "no_skill_sources": 5,
+  "pending_sources": 0,
+  "candidate_skill_files": 10914,
+  "saved_skill_entries": 10844,
+  "distinct_skill_paths": 10844,
+  "unique_entry_texts": 5046,
+  "duplicate_entry_groups": 2944,
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 390,
+      "files_not_exported": 56,
+      "repository_manifest": "../manifests/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5.json"
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 25,
+      "saved_skill_entries": 25,
+      "saved_text_files": 239,
+      "files_not_exported": 1,
+      "repository_manifest": "../manifests/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde.json"
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 234,
+      "files_not_exported": 2,
+      "repository_manifest": "../manifests/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7.json"
+    },
+    {
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 39,
+      "saved_skill_entries": 39,
+      "saved_text_files": 183,
+      "files_not_exported": 1,
+      "repository_manifest": "../manifests/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d.json"
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 53,
+      "saved_skill_entries": 53,
+      "saved_text_files": 815,
+      "files_not_exported": 2,
+      "repository_manifest": "../manifests/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768.json"
+    },
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 177,
+      "saved_skill_entries": 177,
+      "saved_text_files": 2580,
+      "files_not_exported": 200,
+      "repository_manifest": "../manifests/K-Dense-AI/scientific-agent-skills/a25cf9ec00e2745d03f8704acf6f6919694ccd9a.json"
+    },
+    {
+      "repository": "Jeffallan/claude-skills",
+      "commit_sha": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 67,
+      "saved_skill_entries": 67,
+      "saved_text_files": 591,
+      "files_not_exported": 2,
+      "repository_manifest": "../../data-batch-002/repositories/Jeffallan/claude-skills/manifests/Jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3.json"
+    },
+    {
+      "repository": "LambdaTest/agent-skills",
+      "commit_sha": "375e466d6efd77436075e39ffba9623433740e18",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 87,
+      "saved_skill_entries": 87,
+      "saved_text_files": 427,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/LambdaTest/agent-skills/manifests/LambdaTest/agent-skills/375e466d6efd77436075e39ffba9623433740e18.json"
+    },
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "commit_sha": "9b4bf937a1f69348126959c15d2f99a73e65699b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 1485,
+      "files_not_exported": 163,
+      "repository_manifest": "../../data-batch-002/repositories/Leonxlnx/taste-skill/manifests/Leonxlnx/taste-skill/9b4bf937a1f69348126959c15d2f99a73e65699b.json"
+    },
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit_sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 98,
+      "saved_skill_entries": 98,
+      "saved_text_files": 506,
+      "files_not_exported": 23,
+      "repository_manifest": "../../data-batch-002/repositories/Orchestra-Research/AI-Research-SKILLs/manifests/Orchestra-Research/AI-Research-SKILLs/773a52944ba4747a18bd4ae9ade53fff041adcbc.json"
+    },
+    {
+      "repository": "alirezarezvani/claude-skills",
+      "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+      "state": "partial_text_snapshot",
+      "candidate_skill_files": 478,
+      "saved_skill_entries": 411,
+      "saved_text_files": 3678,
+      "files_not_exported": 1666,
+      "repository_manifest": "../../data-batch-002/repositories/alirezarezvani/claude-skills/manifests/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0.json"
+    },
+    {
+      "repository": "angular/skills",
+      "commit_sha": "d2cdd2cfeeb2301e5b30b80d3094e2cbd48aae7a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 47,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/angular/skills/manifests/angular/skills/d2cdd2cfeeb2301e5b30b80d3094e2cbd48aae7a.json"
+    },
+    {
+      "repository": "cathrynlavery/diagram-design",
+      "commit_sha": "f24d98b05e2d7a5e68c2dedfe46e5b7173f50118",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 548,
+      "files_not_exported": 148,
+      "repository_manifest": "../../data-batch-002/repositories/cathrynlavery/diagram-design/manifests/cathrynlavery/diagram-design/f24d98b05e2d7a5e68c2dedfe46e5b7173f50118.json"
+    },
+    {
+      "repository": "chuspeeism/dashi-ppt-skill",
+      "commit_sha": "d2b75389ca056a3a8fb5b997b79a098acce0c189",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 175,
+      "files_not_exported": 208,
+      "repository_manifest": "../../data-batch-002/repositories/chuspeeism/dashi-ppt-skill/manifests/chuspeeism/dashi-ppt-skill/d2b75389ca056a3a8fb5b997b79a098acce0c189.json"
+    },
+    {
+      "repository": "firecrawl/cli",
+      "commit_sha": "da25d5cd06db21cb33b100661cea0d9b89d457a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 179,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/firecrawl/cli/manifests/firecrawl/cli/da25d5cd06db21cb33b100661cea0d9b89d457a3.json"
+    },
+    {
+      "repository": "github/awesome-copilot",
+      "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 475,
+      "saved_skill_entries": 475,
+      "saved_text_files": 3602,
+      "files_not_exported": 462,
+      "repository_manifest": "../../data-batch-002/repositories/github/awesome-copilot/manifests/github/awesome-copilot/60dcb901abbd87609d93d6281f1916c22b8bbd8c.json"
+    },
+    {
+      "repository": "modem-dev/skills",
+      "commit_sha": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/modem-dev/skills/manifests/modem-dev/skills/edcdedb38a545f67c065f4084b3627517f0d79cf.json"
+    },
+    {
+      "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "commit_sha": "9ff0c99108b36d3b886defd825d8ac1f47dba374",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 24,
+      "saved_skill_entries": 24,
+      "saved_text_files": 491,
+      "files_not_exported": 20,
+      "repository_manifest": "../../data-batch-002/repositories/muratcankoylan/Agent-Skills-for-Context-Engineering/manifests/muratcankoylan/Agent-Skills-for-Context-Engineering/9ff0c99108b36d3b886defd825d8ac1f47dba374.json"
+    },
+    {
+      "repository": "officialzeroxyz/zero-plugins",
+      "commit_sha": "698c47fd02e26cf12c2ef3a1240e6c0940ada04e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 51,
+      "files_not_exported": 1,
+      "repository_manifest": "../../data-batch-002/repositories/officialzeroxyz/zero-plugins/manifests/officialzeroxyz/zero-plugins/698c47fd02e26cf12c2ef3a1240e6c0940ada04e.json"
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+      "state": "partial_text_snapshot",
+      "candidate_skill_files": 9016,
+      "saved_skill_entries": 9013,
+      "saved_text_files": 29174,
+      "files_not_exported": 459,
+      "repository_manifest": "../../data-batch-002/repositories/sickn33/agentic-awesome-skills/manifests/sickn33/agentic-awesome-skills/828257c3037dc7c3c3ec987decc5a603025a0ce5.json"
+    },
+    {
+      "repository": "tech-leads-club/agent-skills",
+      "commit_sha": "8658b6658c762b9e5efd3956ed35a51c41bdf6c3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 94,
+      "saved_skill_entries": 94,
+      "saved_text_files": 1195,
+      "files_not_exported": 14,
+      "repository_manifest": "../../data-batch-002/repositories/tech-leads-club/agent-skills/manifests/tech-leads-club/agent-skills/8658b6658c762b9e5efd3956ed35a51c41bdf6c3.json"
+    },
+    {
+      "repository": "trycourier/courier-skills",
+      "commit_sha": "465479eadd2abbe863dd3f7bfaea8e1caf2fd136",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 48,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/trycourier/courier-skills/manifests/trycourier/courier-skills/465479eadd2abbe863dd3f7bfaea8e1caf2fd136.json"
+    },
+    {
+      "repository": "veniceai/skills",
+      "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 29,
+      "saved_skill_entries": 29,
+      "saved_text_files": 52,
+      "files_not_exported": 0,
+      "repository_manifest": "../../data-batch-002/repositories/veniceai/skills/manifests/veniceai/skills/15a6fa63ff7466cd894ccc5bab91985e3b88f216.json"
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 438,
+      "files_not_exported": 6,
+      "repository_manifest": "../../data-batch-002/repositories/vercel-labs/agent-skills/manifests/vercel-labs/agent-skills/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62.json"
+    },
+    {
+      "repository": "wshobson/agents",
+      "commit_sha": "4bde3168b43c0655c4d00ea2726e631719908a6d",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 185,
+      "saved_skill_entries": 185,
+      "saved_text_files": 1171,
+      "files_not_exported": 1,
+      "repository_manifest": "../../data-batch-002/repositories/wshobson/agents/manifests/wshobson/agents/4bde3168b43c0655c4d00ea2726e631719908a6d.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "serpapi/serpapi-search-tools-python",
+      "output_directory": "data-batch-002/repositories/serpapi/serpapi-search-tools-python",
+      "started_at": "2026-11-06T09:37:09.941772+00:00",
+      "commit_sha": "6051ec2bce262faf83b9e9d457dd4ec950546e0a",
+      "state": "no_skill_files",
+      "saved_skill_entries": 0,
+      "status_recorded_at": "2026-11-06T09:50:48.231757+00:00"
+    },
+    {
+      "repository": "serpapi/serpapi-cli",
+      "output_directory": "data-batch-002/repositories/serpapi/serpapi-cli",
+      "started_at": "2026-11-06T09:38:54.230492+00:00",
+      "commit_sha": "70681a822c018caae1c77544a77f6240ef17621a",
+      "state": "no_skill_files",
+      "saved_skill_entries": 0,
+      "status_recorded_at": "2026-11-06T09:50:48.235121+00:00"
+    },
+    {
+      "repository": "crawlbase/crawlbase-mcp",
+      "output_directory": "data-batch-002/repositories/crawlbase/crawlbase-mcp",
+      "started_at": "2026-11-06T09:39:21.711239+00:00",
+      "commit_sha": "66e16b730580417a1813b6a429d09d6c3af6d95e",
+      "state": "no_skill_files",
+      "saved_skill_entries": 0,
+      "status_recorded_at": "2026-11-06T09:50:48.236373+00:00"
+    },
+    {
+      "repository": "crawlbase/langchain-crawlbase",
+      "output_directory": "data-batch-002/repositories/crawlbase/langchain-crawlbase",
+      "started_at": "2026-11-06T09:39:38.443518+00:00",
+      "commit_sha": "3bed216d1aa3e99d7a7798f1fc5a7e5d9c66f2b7",
+      "state": "no_skill_files",
+      "saved_skill_entries": 0,
+      "status_recorded_at": "2026-11-06T09:50:48.236795+00:00"
+    },
+    {
+      "repository": "crawlbase/n8n-nodes-crawlbase",
+      "output_directory": "data-batch-002/repositories/crawlbase/n8n-nodes-crawlbase",
+      "started_at": "2026-11-06T09:40:56.084710+00:00",
+      "commit_sha": "07003dcd2c6886432596f6b2eb64bd74db2c9c27",
+      "state": "no_skill_files",
+      "saved_skill_entries": 0,
+      "status_recorded_at": "2026-11-06T09:50:48.239813+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths."
+}

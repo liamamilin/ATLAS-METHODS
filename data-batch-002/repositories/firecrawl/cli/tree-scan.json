@@ -1,0 +1,20 @@
+{
+  "repository": "firecrawl/cli",
+  "commit_sha": "da25d5cd06db21cb33b100661cea0d9b89d457a3",
+  "tree_entries": 179,
+  "candidate_skill_paths": [
+    "skills/firecrawl-agent/SKILL.md",
+    "skills/firecrawl-alexandria/SKILL.md",
+    "skills/firecrawl-crawl/SKILL.md",
+    "skills/firecrawl-developer-index/SKILL.md",
+    "skills/firecrawl-download/SKILL.md",
+    "skills/firecrawl-interact/SKILL.md",
+    "skills/firecrawl-map/SKILL.md",
+    "skills/firecrawl-monitor/SKILL.md",
+    "skills/firecrawl-parse/SKILL.md",
+    "skills/firecrawl-research-index/SKILL.md",
+    "skills/firecrawl-scrape/SKILL.md",
+    "skills/firecrawl-search/SKILL.md",
+    "skills/firecrawl/SKILL.md"
+  ]
+}

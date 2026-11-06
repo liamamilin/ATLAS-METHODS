@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:48:03.312668+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "cathrynlavery/diagram-design",
+      "commit_sha": "f24d98b05e2d7a5e68c2dedfe46e5b7173f50118",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 548,
+      "files_not_exported": 148,
+      "repository_manifest": "manifests/cathrynlavery/diagram-design/f24d98b05e2d7a5e68c2dedfe46e5b7173f50118.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "LambdaTest/agent-skills",
+      "commit_sha": "375e466d6efd77436075e39ffba9623433740e18"
+    }
+  ]
+}

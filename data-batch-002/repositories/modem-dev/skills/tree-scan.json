@@ -1,0 +1,8 @@
+{
+  "repository": "modem-dev/skills",
+  "commit_sha": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+  "tree_entries": 3,
+  "candidate_skill_paths": [
+    "write-discoverable-code/SKILL.md"
+  ]
+}

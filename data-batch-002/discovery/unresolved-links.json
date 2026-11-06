@@ -1,0 +1,3137 @@
+[
+  {
+    "url": "https://awesome.re/badge.svg",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L22",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://img.shields.io/discord/1361559153780195478.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L25",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://img.shields.io/badge/Official-MCP%20Servers-c2410c?style=flat-square&logo=github&logoColor=white&labelColor=24292f",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L26",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://www.testmuai.com",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L47",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://crawlbase.com/?utm_source=awesome-agent-skills&utm_medium=sponsorship&utm_campaign=voltagent_2026q3&utm_content=readme_listing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L48",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://serpapi.com/awesome-agent-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L49",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://everyfeed.ai/",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L58",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/docx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L113",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/doc-coauthoring",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L114",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/pptx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L115",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/xlsx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L116",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/pdf",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L117",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/algorithmic-art",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L118",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/canvas-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L119",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/frontend-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L120",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/slack-gif-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L121",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/theme-factory",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L122",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/web-artifacts-builder",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L123",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/mcp-builder",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L124",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/webapp-testing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L125",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/brand-guidelines",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L126",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/internal-comms",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L127",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/skill-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L128",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/anthropics/skills/template",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L129",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/voltagent/skills/create-voltagent",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L137",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/voltagent/skills/voltagent-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L138",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/voltagent/skills/voltagent-core-reference",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L139",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/voltagent/skills/voltagent-docs-bundle",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L140",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://serpapi.com/awesome-agent-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L147",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/serpapi/skills/serpapi-web-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L149",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/serpapi/skills/agent-usability-test",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L150",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://crawlbase.com/?utm_source=awesome-agent-skills&utm_medium=sponsorship&utm_campaign=voltagent_2026q3&utm_content=readme_listing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L162",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/crawl-html",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L164",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/crawl-markdown",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L165",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/crawl-screenshot",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L166",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-get",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L167",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-list",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L168",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-bulk-get",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L169",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-count",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L170",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-delete",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L171",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/crawlbase/skills/storage-bulk-delete",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L172",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://modem.dev/go/awesome-agent-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L242",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/composiohq/skills/composio",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L266",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/supabase/skills/postgres-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L273",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-gemini/skills/gemini-api-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L280",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-gemini/skills/vertex-ai-api-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L281",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-gemini/skills/gemini-live-api-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L282",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-gemini/skills/gemini-interactions-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L283",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/stripe/skills/stripe-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L290",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/stripe/skills/upgrade-stripe",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L291",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/callstackincubator/skills/react-native-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L305",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/callstackincubator/skills/github",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L306",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/callstackincubator/skills/upgrading-react-native",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L307",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L314",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/explain-error",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L315",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/providers",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L316",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/create-auth",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L317",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/emailAndPassword",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L318",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/organization",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L319",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/better-auth/skills/twoFactor",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L320",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/tinybirdco/skills/tinybird-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L327",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/tinybirdco/skills/tinybird-cli-guidelines",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L328",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/tinybirdco/skills/tinybird-python-sdk-guidelines",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L329",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/tinybirdco/skills/tinybird-typescript-sdk-guidelines",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L330",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/azure-verified-modules",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L337",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/new-terraform-provider",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L338",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/provider-resources",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L339",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/provider-test-patterns",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L340",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/provider-actions",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L341",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/run-acceptance-tests",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L342",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/refactor-module",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L343",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/terraform-search-import",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L344",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/terraform-style-guide",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L345",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/terraform-stacks",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L346",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/hashicorp/skills/terraform-test",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L347",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/sanity-io/skills/sanity-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L354",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/sanity-io/skills/content-modeling-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L355",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/sanity-io/skills/seo-aeo-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L356",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/sanity-io/skills/content-experimentation-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L357",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firecrawl/skills/firecrawl-build",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L364",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firecrawl/skills/firecrawl-build-interact",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L365",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firecrawl/skills/firecrawl-build-onboarding",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L366",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firecrawl/skills/firecrawl-build-scrape",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L367",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firecrawl/skills/firecrawl-build-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L368",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/neondatabase/skills/neon-postgres",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L376",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/neondatabase/skills/claimable-postgres",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L377",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/neondatabase/skills/neon-postgres-egress-optimizer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L378",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/clickhouse-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L385",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/chdb-datastore",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L386",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/chdb-sql",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L387",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/clickhouse-architecture-advisor",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L388",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/clickhousectl-cloud-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L389",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/clickhouse/skills/clickhousectl-local-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L390",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/remotion-dev/skills/remotion",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L397",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/replicate/skills/replicate",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L404",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/typefully/skills/typefully",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L411",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/vercel-labs/skills/next-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L445",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/vercel-labs/skills/next-cache-components",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L446",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/vercel-labs/skills/next-upgrade",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L447",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/agents-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L463",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/cloudflare",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L464",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/cloudflare-email-service",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L465",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/durable-objects",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L466",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/sandbox-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L467",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/web-perf",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L468",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/workers-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L469",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/cloudflare/skills/wrangler",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L470",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-functions",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L478",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-edge-functions",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L479",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-blobs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L480",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-db",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L481",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-image-cdn",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L482",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-forms",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L483",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-frameworks",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L484",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-caching",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L485",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-config",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L486",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-cli-and-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L487",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L488",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/netlify/skills/netlify-ai-gateway",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L489",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/design-md",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L498",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/enhance-prompt",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L499",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/react-components",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L500",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/remotion",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L501",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/shadcn-ui",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L502",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/google-labs-code/skills/stitch-loop",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L503",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-shared",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L512",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-drive",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L513",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-sheets",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L514",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-gmail",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L515",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-calendar",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L516",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-admin-reports",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L517",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-docs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L518",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-slides",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L519",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-tasks",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L520",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-people",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L521",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-chat",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L522",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-classroom",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L523",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-forms",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L524",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-keep",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L525",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-events",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L526",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-modelarmor",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L527",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/googleworkspace/skills/gws-workflow",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L528",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/building-native-ui",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L537",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-api-routes",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L538",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-cicd-workflows",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L539",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-deployment",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L540",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-dev-client",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L541",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-tailwind-setup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L542",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-ui-jetpack-compose",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L543",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/expo-ui-swift-ui",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L544",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/native-data-fetching",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L545",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/upgrading-expo",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L546",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/expo/skills/use-dom",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L547",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hf-cli",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L556",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-dataset-viewer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L557",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-datasets",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L558",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-evaluation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L559",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-jobs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L560",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-model-trainer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L561",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-paper-pages",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L562",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-paper-publisher",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L563",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-tool-builder",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L564",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-trackio",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L565",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/hugging-face-vision-trainer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L566",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/huggingface-gradio",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L567",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/huggingface/skills/transformers.js",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L568",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/ask-questions-if-underspecified",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L575",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/audit-context-building",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L576",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/building-secure-contracts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L577",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/burpsuite-project-parser",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L578",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/claude-in-chrome-troubleshooting",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L579",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/constant-time-analysis",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L580",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/culture-index",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L581",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/differential-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L582",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/dwarf-expert",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L583",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/entry-point-analyzer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L584",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/firebase-apk-scanner",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L585",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/insecure-defaults",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L586",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/modern-python",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L587",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/property-based-testing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L588",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/semgrep-rule-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L589",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/semgrep-rule-variant-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L590",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/sharp-edges",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L591",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/spec-to-code-compliance",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L592",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/static-analysis",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L593",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/testing-handbook-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L594",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/trailofbits/skills/variant-analysis",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L595",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-sdk-setup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L602",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-workflow",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L603",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-fix-issues",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L604",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-code-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L605",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-pr-code-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L606",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-create-alert",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L607",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-feature-setup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L608",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-otel-exporter-setup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L609",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-setup-ai-monitoring",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L610",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-sdk-upgrade",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L611",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-sdk-skill-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L612",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-android-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L613",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-browser-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L614",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-cloudflare-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L615",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-cocoa-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L616",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-dotnet-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L617",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-elixir-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L618",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-flutter-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L619",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-go-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L620",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-nestjs-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L621",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-nextjs-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L622",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-node-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L623",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-php-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L624",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-python-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L625",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-react-native-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L626",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-react-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L627",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-ruby-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L628",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/getsentry/skills/sentry-svelte-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L629",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/cloud-solution-architect",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L640",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/continual-learning",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L641",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/copilot-sdk",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L642",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/entra-agent-id",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L643",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/frontend-design-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L644",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/github-issue-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L645",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/mcp-builder",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L646",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/podcast-generation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L647",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/skill-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L648",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-document-intelligence-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L652",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-openai-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L653",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-projects-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L654",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-voicelive-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L655",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventgrid-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L656",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventhub-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L657",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-identity-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L658",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-maps-search-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L659",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-apicenter-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L660",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-apimanagement-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L661",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-applicationinsights-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L662",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-arizeaiobservabilityeval-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L663",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-botservice-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L664",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-fabric-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L665",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-mongodbatlas-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L666",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-weightsandbiases-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L667",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-cosmosdb-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L668",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-durabletask-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L669",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-mysql-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L670",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-playwright-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L671",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-postgresql-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L672",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-redis-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L673",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-resource-manager-sql-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L674",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-search-documents-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L675",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-security-keyvault-keys-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L676",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-servicebus-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L677",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/m365-agents-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L678",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L679",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-anomalydetector-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L683",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-contentsafety-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L684",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-formrecognizer-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L685",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-projects-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L686",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-vision-imageanalysis-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L687",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-voicelive-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L688",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-appconfiguration-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L689",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-communication-callautomation-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L690",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-communication-callingserver-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L691",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-communication-chat-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L692",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-communication-common-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L693",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-communication-sms-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L694",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-compute-batch-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L695",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-cosmos-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L696",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-data-tables-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L697",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventgrid-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L698",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventhub-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L699",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-identity-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L700",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-messaging-webpubsub-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L701",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-ingestion-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L702",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-opentelemetry-exporter-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L703",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-query-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L704",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-security-keyvault-keys-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L705",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-security-keyvault-secrets-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L706",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-blob-java",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L707",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/agent-framework-azure-ai-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L711",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/agents-v2-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L712",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-contentsafety-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L713",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-contentunderstanding-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L714",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-ml-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L715",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-projects-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L716",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-textanalytics-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L717",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-transcription-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L718",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-translation-document-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L719",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-translation-text-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L720",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-vision-imageanalysis-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L721",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-voicelive-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L722",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-appconfiguration-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L723",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-containerregistry-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L724",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-cosmos-db-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L725",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-cosmos-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L726",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-data-tables-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L727",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventgrid-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L728",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventhub-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L729",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-identity-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L730",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L731",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-messaging-webpubsubservice-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L732",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-apicenter-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L733",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-apimanagement-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L734",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-botservice-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L735",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-mgmt-fabric-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L736",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-ingestion-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L737",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-opentelemetry-exporter-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L738",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-opentelemetry-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L739",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-query-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L740",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-search-documents-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L741",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-servicebus-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L742",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-speech-to-text-rest-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L743",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-blob-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L744",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-file-datalake-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L745",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-file-share-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L746",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-queue-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L747",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/fastapi-router-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L748",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/m365-agents-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L749",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/pydantic-models-py",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L750",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-cosmos-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L754",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventhub-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L755",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-identity-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L756",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-certificates-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L757",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-keys-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L758",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-secrets-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L759",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-blob-rust",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L760",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-contentsafety-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L764",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-document-intelligence-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L765",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-projects-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L766",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-translation-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L767",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-ai-voicelive-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L768",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-appconfiguration-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L769",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-cosmos-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L770",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-eventhub-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L771",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-identity-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L772",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-keys-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L773",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-keyvault-secrets-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L774",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-microsoft-playwright-testing-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L775",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-monitor-opentelemetry-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L776",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-postgres-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L777",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-search-documents-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L778",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-servicebus-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L779",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-blob-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L780",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-file-share-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L781",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-storage-queue-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L782",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/azure-web-pubsub-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L783",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/frontend-ui-dark-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L784",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/m365-agents-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L785",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/react-flow-node-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L786",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/microsoft/skills/zustand-store-ts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L787",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-3d",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L794",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-audio",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L795",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-generate",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L796",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-image-edit",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L797",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-kling-o3",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L798",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-lip-sync",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L799",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-platform",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L800",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-realtime",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L801",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-restore",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L802",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-train",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L803",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-tryon",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L804",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-upscale",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L805",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-video-edit",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L806",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-vision",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L807",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/fal-ai-community/skills/fal-workflow",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L808",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wordpress-router",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L815",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-project-triage",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L816",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-block-development",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L817",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-block-themes",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L818",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-plugin-development",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L819",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-rest-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L820",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-interactivity-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L821",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-abilities-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L822",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-wpcli-and-ops",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L823",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-performance",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L824",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-phpstan",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L825",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wp-playground",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L826",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/WordPress/skills/wpds",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L827",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/cloudflare-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L836",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/develop-web-game",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L837",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/doc",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L838",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/gh-address-comments",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L839",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/gh-fix-ci",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L840",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/imagegen",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L841",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/jupyter-notebook",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L842",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/linear",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L843",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/netlify-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L844",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/notion-knowledge-capture",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L845",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/notion-meeting-intelligence",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L846",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/notion-research-documentation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L847",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/notion-spec-to-implementation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L848",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/openai-docs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L849",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/pdf",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L850",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/playwright",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L851",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/render-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L852",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/screenshot",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L853",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/security-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L854",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/security-ownership-map",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L855",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/security-threat-model",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L856",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/sentry",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L857",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/sora",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L858",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/speech",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L859",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/spreadsheet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L860",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/transcribe",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L861",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/vercel-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L862",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/yeet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L863",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/aspnet-core",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L864",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/chatgpt-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L865",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L866",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-code-connect-components",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L867",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-create-design-system-rules",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L868",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-create-new-file",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L869",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-generate-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L870",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-generate-library",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L871",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-implement-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L872",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/figma-use",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L873",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/frontend-skill",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L874",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/playwright-interactive",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L875",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/slides",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L876",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/openai/skills/winui-app",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L877",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-code-connect-components",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L886",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-create-design-system-rules",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L887",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-create-new-file",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L888",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-generate-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L889",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-generate-library",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L890",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-implement-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L891",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/figma/skills/figma-use",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L892",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://github.com/coreyhaines31",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L899",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/crypto-market-rank",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L960",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/meme-rush",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L961",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/query-address-info",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L962",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/query-token-audit",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L963",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/query-token-info",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L964",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/trading-signal",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L965",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/binance/skills/spot",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L966",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-client",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L975",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-connectors",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L976",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-federation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L977",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-kotlin",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L978",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-mcp-server",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L979",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-router",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L980",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-router-plugin-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L981",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/apollo-server",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L982",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/graphql-operations",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L983",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/graphql-schema",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L984",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/rover",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L985",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/rust-best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L986",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/apollographql/skills/skill-creator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L987",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-android",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L996",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-angular",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L997",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-aspnetcore-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L998",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-express",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L999",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-fastify",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1000",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-fastify-api",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1001",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-mfa",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1002",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-migration",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1003",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-nextjs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1004",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-nuxt",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1005",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-quickstart",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1006",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-react",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1007",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-react-native",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1008",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/auth0/skills/auth0-vue",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1009",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/answers",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1018",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/bx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1019",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/images-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1020",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/llm-context",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1021",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/local-descriptions",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1022",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/local-pois",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1023",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/news-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1024",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/spellcheck",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1025",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/suggest",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1026",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/videos-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1027",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/brave/skills/web-search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1028",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/browser",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1037",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/browserbase-cli",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1038",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/cookie-sync",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1039",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/fetch",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1040",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/functions",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1041",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/search",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1042",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/browserbase/skills/ui-test",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1043",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coderabbitai/skills/autofix",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1052",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coderabbitai/skills/code-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1053",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/authenticate-wallet",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1062",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/fund",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1063",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/monetize-service",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1064",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/pay-for-service",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1065",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/query-onchain-data",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1066",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/search-for-service",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1067",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/send-usdc",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1068",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/trade",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1069",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/coinbase/skills/x402",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1070",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-apm",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1080",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-docs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1081",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-llmo-eval-bootstrap",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1082",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-llmo-eval-trace-rca",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1083",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-llmo-experiment-analyzer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1084",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-logs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1085",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-monitors",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1086",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/datadog-labs/skills/dd-pup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1087",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/developing-genkit-dart",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1096",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/developing-genkit-go",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1097",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/developing-genkit-js",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1098",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-ai-logic-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1099",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-app-hosting-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1100",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-auth-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1101",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1102",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-data-connect-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1103",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-firestore-enterprise-native-mode",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1104",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-firestore-standard",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1105",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-hosting-basics",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1106",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/firebase/skills/firebase-security-rules-auditor",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1107",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-adding-home-screen-widgets",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1116",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-animating-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1117",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-architecting-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1118",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-building-forms",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1119",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-building-layouts",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1120",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-building-plugins",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1121",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-caching-data",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1122",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-embedding-native-views",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1123",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-handling-concurrency",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1124",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-handling-http-and-json",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1125",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-implementing-navigation-and-routing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1126",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-improving-accessibility",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1127",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-interoperating-with-native-apis",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1128",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-localizing-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1129",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-managing-state",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1130",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-reducing-app-size",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1131",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-setting-up-on-linux",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1132",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-setting-up-on-macos",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1133",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-setting-up-on-windows",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1134",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-testing-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1135",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-theming-apps",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1136",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/flutter/skills/flutter-working-with-databases",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1137",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://github.com/deanpeters",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1144",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://github.com/phuryn",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1207",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/cli",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1305",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/frontend-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1306",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/fullstack-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1307",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/android-native-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1308",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/ios-application-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1309",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/shader-dev",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1310",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/gif-sticker-maker",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1311",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/minimax-pdf",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1312",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/pptx-generator",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1313",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/minimax-xlsx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1314",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/MiniMax-AI/skills/minimax-docx",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1315",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/attach-db",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1324",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/query",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1325",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/read-file",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1326",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/duckdb-docs",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1327",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/read-memories",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1328",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/duckdb/skills/install-duckdb",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1329",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-core",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1338",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-timeline",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1339",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-scrolltrigger",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1340",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-plugins",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1341",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-utils",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1342",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-react",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1343",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-performance",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1344",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/greensock/skills/gsap-frameworks",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1345",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://github.com/garrytan",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1352",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/office-hours",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1354",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/plan-ceo-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1355",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/plan-eng-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1356",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/plan-design-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1357",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/design-consultation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1358",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/design-review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1359",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/review",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1360",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/investigate",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1361",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/qa",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1362",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/qa-only",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1363",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/cso",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1364",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/ship",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1365",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/land-and-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1366",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/canary",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1367",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/benchmark",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1368",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/document-release",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1369",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/retro",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1370",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/browse",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1371",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/setup-browser-cookies",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1372",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/autoplan",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1373",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/codex",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1374",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/careful",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1375",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/freeze",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1376",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/guard",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1377",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/unfreeze",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1378",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/setup-deploy",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1379",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/garrytan/skills/gstack-upgrade",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1380",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/knowledge-capture",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1391",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/meeting-intelligence",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1392",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/research-documentation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1393",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/spec-to-implementation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1394",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/knowledge-capture",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1398",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/meeting-intelligence",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1399",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/research-documentation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1400",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/makenotion/skills/spec-to-implementation",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1401",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/web-quality-audit",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1423",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/performance",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1424",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/core-web-vitals",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1425",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/accessibility",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1426",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/seo",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1427",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/addyosmani/skills/best-practices",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1428",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-mcp-setup",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1437",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-connection",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1438",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-schema-design",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1439",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/atlas-stream-processing",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1440",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-natural-language-querying",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1441",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-query-optimizer",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1442",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://officialskills.sh/mongodb/skills/mongodb-search-and-ai",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1443",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://catalog.redhat.com/en/ai/skills/detail/agentic-skill-pack-for-red-hat-customers#agent-and-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1496",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://catalog.redhat.com/en/ai/skills/detail/agentic-skill-pack-for-site-reliability-engineers",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1498",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://catalog.redhat.com/en/ai/skills/detail/agentic-skill-pack-for-red-hat-openshift",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1500",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://catalog.redhat.com/en/ai/skills/detail/agentic-skill-pack-for-red-hat-openshift-virtualization",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1502",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://www.npmjs.com/package/@nutrient-sdk/dws-mcp-server",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1607",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1608",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://teable.ai",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1660",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://paulo.com.br/skills/genealogy-research/SKILL.md",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1882",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://ai.gendigital.com/agent-trust-hub",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1959",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://antigravity.google/docs/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1968",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://docs.anthropic.com/en/docs/claude-code/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1969",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://developers.openai.com/codex/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1970",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://cursor.com/docs/context/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1971",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://geminicli.com/docs/cli/skills/",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1972",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1973",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://opencode.ai/docs/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1974",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://docs.windsurf.com/windsurf/cascade/skills",
+    "discovered_via": "https://github.com/VoltAgent/awesome-agent-skills/blob/6d483e29da745a010d88974ef6d0e50d15755e9a/README.md#L1975",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://github.com/devanasolver",
+    "discovered_via": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L159",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://airankwp.com",
+    "discovered_via": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L159",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  },
+  {
+    "url": "https://buymeacoffee.com/isaac49",
+    "discovered_via": "https://github.com/devanasolver/awesome-agent-skills/blob/e7e8e2e75b317c9573019f270aebfd8756a0a419/README.md#L163",
+    "reason": "not_a_direct_GitHub_repository_link; no automatic repository mapping"
+  }
+]

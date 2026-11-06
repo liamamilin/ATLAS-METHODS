@@ -105,6 +105,33 @@ def blob_hash(data: bytes) -> str:
     return hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
 
 
+def tree_blobs(directory: Path, entries: list[dict], max_bytes: int):
+    """Read eligible objects through one Git process, keeping only one blob in memory."""
+    command = ["git", "-c", "core.hooksPath=/dev/null", "--git-dir", str(directory), "cat-file", "--batch"]
+    with subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE) as process:
+        try:
+            for entry in entries:
+                data = None
+                if (entry["kind"] == "blob" and entry["mode"] != "120000" and
+                        PurePosixPath(entry["path"]).suffix.lower() not in FONTS and entry["bytes"] <= max_bytes):
+                    sha = entry["git_blob_sha"]
+                    process.stdin.write(sha.encode("ascii") + b"\n")
+                    process.stdin.flush()
+                    header = process.stdout.readline().split()
+                    if header != [sha.encode("ascii"), b"blob", str(entry["bytes"]).encode("ascii")]:
+                        raise RuntimeError(f"Unexpected Git blob response: {header!r}")
+                    data = process.stdout.read(entry["bytes"])
+                    if len(data) != entry["bytes"] or process.stdout.read(1) != b"\n":
+                        raise RuntimeError(f"Truncated Git blob: {sha}")
+                yield entry, data
+            process.stdin.close()
+            if process.wait(timeout=240):
+                raise RuntimeError(process.stderr.read().decode("utf-8", "replace")[-1500:])
+        finally:
+            if process.poll() is None:
+                process.kill()
+
+
 def frontmatter(text: str) -> tuple[str | None, str | None]:
     # Preserve the full header; do not pretend this is a full YAML validator.
     lines = text.splitlines()
@@ -119,11 +146,10 @@ def frontmatter(text: str) -> tuple[str | None, str | None]:
     return raw, name
 
 
-def license_paths(path: str, paths: list[str]) -> list[str]:
+def license_paths(path: str, paths_by_parent: dict) -> list[str]:
     # Record candidate governing files, not a legal conclusion about their scope.
     parents = set(PurePosixPath(path).parent.parents) | {PurePosixPath(path).parent}
-    return [p for p in paths if PurePosixPath(p).parent in parents and
-            PurePosixPath(p).name.upper().startswith(("LICENSE", "LICENCE", "COPYING", "NOTICE"))]
+    return sorted(p for parent in parents for p in paths_by_parent.get(parent, []))
 
 
 def export_source(repo: str, directory: Path, commit: str, output: Path,
@@ -135,7 +161,7 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
     # Save the whole repository's text context, not just each SKILL.md. This keeps
     # shared references/scripts at their original relative paths. Non-text assets
     # remain indexed with immutable upstream URLs, but are not exported.
-    for entry in entries:
+    for entry, data in tree_blobs(directory, entries, max_bytes):
         row = dict(entry)
         path = entry["path"]
         row["source_url"] = f"https://github.com/{repo}/blob/{commit}/{quote(path)}"
@@ -148,7 +174,6 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
         elif entry["bytes"] > max_bytes:
             row["status"] = "over_size_limit"
         else:
-            data = git("cat-file", "blob", entry["git_blob_sha"], directory=directory)
             if blob_hash(data) != entry["git_blob_sha"] or len(data) != entry["bytes"]:
                 raise RuntimeError(f"Content integrity failure: {repo}:{path}")
             row["sha256"] = hashlib.sha256(data).hexdigest()
@@ -167,13 +192,21 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
         manifest.append(row)
     manifest_path = output / "manifests" / repo / (commit + ".json")
     write_json(manifest_path, {"repository": repo, "commit_sha": commit, "files": manifest})
-    all_paths = [e["path"] for e in entries]
     candidates = [x for x in manifest if PurePosixPath(x["path"]).name.lower() == "skill.md"]
+    packages = {PurePosixPath(x["path"]).parent: [] for x in candidates}
+    licenses = {}
+    for item in manifest:
+        relative = PurePosixPath(item["path"])
+        for parent in relative.parents:
+            if parent in packages:
+                packages[parent].append(item)
+        if relative.name.upper().startswith(("LICENSE", "LICENCE", "COPYING", "NOTICE")):
+            licenses.setdefault(relative.parent, []).append(item["path"])
     records = []
     for item in candidates:
         path = item["path"]
         parent = PurePosixPath(path).parent
-        package = [x for x in manifest if PurePosixPath(x["path"]).is_relative_to(parent)]
+        package = packages[parent]
         excluded = [x["path"] for x in package if x["status"] != "saved"]
         source_identity = f"{repo}:{path}"
         record = {
@@ -183,7 +216,7 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
             "sha256": item.get("sha256"), "bytes": item["bytes"], "collected_at": now(),
             "state": "collected" if item["status"] == "saved" else item["status"],
             "raw_path": item.get("raw_path"), "execution_status": "not_executed",
-            "quality_status": "not_evaluated", "license_candidates": license_paths(path, all_paths),
+            "quality_status": "not_evaluated", "license_candidates": license_paths(path, licenses),
             "repository_manifest": manifest_path.relative_to(output).as_posix(),
             "local_package_files": [x["path"] for x in package],
             "local_package_files_not_exported": excluded,
@@ -265,6 +298,8 @@ def self_test() -> None:
                     "references/check.md": b"Shared context\n", "LICENSE": b"Fixture license\n",
                     "skills/one/picture.png": b"\x89PNG\0\xff", "skills/one/font.ttf": b"must not export",
                     "tests/fixtures/bad/SKILL.md": b"No frontmatter; still inventory it.\n",
+                    "skills/one/empty.txt": b"", "skills/one/nested/context.txt": b"Nested text\n",
+                    "skills/one/LICENSE": b"Local fixture license\n",
                     "skills/one/scripts/helper.py": b"raise RuntimeError('must never run')\n"}
         for name, data in fixtures.items():
             p=work/name; p.parent.mkdir(parents=True, exist_ok=True); p.write_bytes(data)
@@ -281,6 +316,10 @@ def self_test() -> None:
         assert not (root/"skills/one/font.ttf").exists()
         assert not (root/"skills/one/picture.png").exists()
         assert (root/"skills/one/scripts/helper.py").exists()
+        one = next(x for x in records if x["skill_path"] == "skills/one/SKILL.md")
+        assert "skills/one/nested/context.txt" in one["local_package_files"]
+        assert one["license_candidates"] == ["LICENSE", "skills/one/LICENSE"]
+        assert (root/"skills/one/empty.txt").read_bytes() == b""
         bad=next(x for x in records if x["skill_path"].startswith("tests/"))
         assert bad["format_status"] == "no_parseable_frontmatter" and bad["path_review_hints"]
         repeated,_=export_source("fixture/repository", work/".git", commit, output, 1024**2)

@@ -1,0 +1,308 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "2d9303225059c536e7b06b691e32fc5a3e0b34eb72c240d8b180e698d1cbe891",
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "candidate_skill_entries": 20,
+      "skill_entries": 20,
+      "manifest_files": 446,
+      "statuses": {
+        "saved": 390,
+        "font_not_exported": 54,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "candidate_skill_entries": 25,
+      "skill_entries": 25,
+      "manifest_files": 240,
+      "statuses": {
+        "saved": 239,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "candidate_skill_entries": 15,
+      "skill_entries": 15,
+      "manifest_files": 236,
+      "statuses": {
+        "saved": 234,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "candidate_skill_entries": 39,
+      "skill_entries": 39,
+      "manifest_files": 184,
+      "statuses": {
+        "saved": 183,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "candidate_skill_entries": 53,
+      "skill_entries": 53,
+      "manifest_files": 817,
+      "statuses": {
+        "saved": 815,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "candidate_skill_entries": 177,
+      "skill_entries": 177,
+      "manifest_files": 2780,
+      "statuses": {
+        "saved": 2580,
+        "non_utf8_or_binary_not_exported": 199,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "Jeffallan/claude-skills",
+      "commit_sha": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+      "candidate_skill_entries": 67,
+      "skill_entries": 67,
+      "manifest_files": 593,
+      "statuses": {
+        "saved": 591,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "LambdaTest/agent-skills",
+      "commit_sha": "375e466d6efd77436075e39ffba9623433740e18",
+      "candidate_skill_entries": 87,
+      "skill_entries": 87,
+      "manifest_files": 427,
+      "statuses": {
+        "saved": 427
+      }
+    },
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "commit_sha": "9b4bf937a1f69348126959c15d2f99a73e65699b",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 1648,
+      "statuses": {
+        "saved": 1485,
+        "non_utf8_or_binary_not_exported": 163
+      }
+    },
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit_sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "candidate_skill_entries": 98,
+      "skill_entries": 98,
+      "manifest_files": 529,
+      "statuses": {
+        "saved": 506,
+        "non_utf8_or_binary_not_exported": 21,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "alirezarezvani/claude-skills",
+      "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+      "candidate_skill_entries": 478,
+      "skill_entries": 411,
+      "manifest_files": 5344,
+      "statuses": {
+        "saved": 3678,
+        "symlink_not_followed": 1663,
+        "non_utf8_or_binary_not_exported": 3
+      }
+    },
+    {
+      "repository": "angular/skills",
+      "commit_sha": "d2cdd2cfeeb2301e5b30b80d3094e2cbd48aae7a",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 47
+      }
+    },
+    {
+      "repository": "cathrynlavery/diagram-design",
+      "commit_sha": "f24d98b05e2d7a5e68c2dedfe46e5b7173f50118",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 696,
+      "statuses": {
+        "saved": 548,
+        "non_utf8_or_binary_not_exported": 146,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "chuspeeism/dashi-ppt-skill",
+      "commit_sha": "d2b75389ca056a3a8fb5b997b79a098acce0c189",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 383,
+      "statuses": {
+        "saved": 175,
+        "non_utf8_or_binary_not_exported": 19,
+        "over_size_limit": 3,
+        "font_not_exported": 186
+      }
+    },
+    {
+      "repository": "firecrawl/cli",
+      "commit_sha": "da25d5cd06db21cb33b100661cea0d9b89d457a3",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 179,
+      "statuses": {
+        "saved": 179
+      }
+    },
+    {
+      "repository": "github/awesome-copilot",
+      "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+      "candidate_skill_entries": 475,
+      "skill_entries": 475,
+      "manifest_files": 4064,
+      "statuses": {
+        "saved": 3602,
+        "non_utf8_or_binary_not_exported": 451,
+        "over_size_limit": 10,
+        "font_not_exported": 1
+      }
+    },
+    {
+      "repository": "modem-dev/skills",
+      "commit_sha": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 3,
+      "statuses": {
+        "saved": 3
+      }
+    },
+    {
+      "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "commit_sha": "9ff0c99108b36d3b886defd825d8ac1f47dba374",
+      "candidate_skill_entries": 24,
+      "skill_entries": 24,
+      "manifest_files": 511,
+      "statuses": {
+        "saved": 491,
+        "non_utf8_or_binary_not_exported": 20
+      }
+    },
+    {
+      "repository": "officialzeroxyz/zero-plugins",
+      "commit_sha": "698c47fd02e26cf12c2ef3a1240e6c0940ada04e",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 52,
+      "statuses": {
+        "saved": 51,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+      "candidate_skill_entries": 9016,
+      "skill_entries": 9013,
+      "manifest_files": 29633,
+      "statuses": {
+        "saved": 29174,
+        "non_utf8_or_binary_not_exported": 198,
+        "font_not_exported": 237,
+        "over_size_limit": 22,
+        "symlink_not_followed": 2
+      }
+    },
+    {
+      "repository": "tech-leads-club/agent-skills",
+      "commit_sha": "8658b6658c762b9e5efd3956ed35a51c41bdf6c3",
+      "candidate_skill_entries": 94,
+      "skill_entries": 94,
+      "manifest_files": 1209,
+      "statuses": {
+        "saved": 1195,
+        "non_utf8_or_binary_not_exported": 13,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "trycourier/courier-skills",
+      "commit_sha": "465479eadd2abbe863dd3f7bfaea8e1caf2fd136",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 48,
+      "statuses": {
+        "saved": 48
+      }
+    },
+    {
+      "repository": "veniceai/skills",
+      "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+      "candidate_skill_entries": 29,
+      "skill_entries": 29,
+      "manifest_files": 52,
+      "statuses": {
+        "saved": 52
+      }
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "candidate_skill_entries": 9,
+      "skill_entries": 9,
+      "manifest_files": 444,
+      "statuses": {
+        "saved": 438,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 5
+      }
+    },
+    {
+      "repository": "wshobson/agents",
+      "commit_sha": "4bde3168b43c0655c4d00ea2726e631719908a6d",
+      "candidate_skill_entries": 185,
+      "skill_entries": 185,
+      "manifest_files": 1172,
+      "statuses": {
+        "saved": 1171,
+        "symlink_not_followed": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 465070826,
+    "entries_with_license_candidates": 10885,
+    "entries_without_license_candidates": 29,
+    "saved": 48302,
+    "font_not_exported": 478,
+    "non_utf8_or_binary_not_exported": 1245,
+    "symlink_not_followed": 1672,
+    "over_size_limit": 40
+  },
+  "verified_candidate_entries": 10914,
+  "verified_skill_entries": 10844,
+  "unique_entry_texts": 5046,
+  "duplicate_entry_groups": 2944,
+  "entries_in_duplicate_groups": 8742,
+  "duplicate_entries_beyond_first": 5798,
+  "repeatability": "passed; indexes and manifests unchanged except run timestamps; no extra source records"
+}

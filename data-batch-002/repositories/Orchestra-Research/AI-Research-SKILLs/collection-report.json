@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:41:57.926472+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 98,
+  "saved_skill_entries": 98,
+  "unique_entry_texts": 98,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit_sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 98,
+      "saved_skill_entries": 98,
+      "saved_text_files": 506,
+      "files_not_exported": 23,
+      "repository_manifest": "manifests/Orchestra-Research/AI-Research-SKILLs/773a52944ba4747a18bd4ae9ade53fff041adcbc.json"
+    }
+  ],
+  "errors": []
+}

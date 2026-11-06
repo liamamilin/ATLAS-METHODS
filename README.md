@@ -6,11 +6,12 @@
 
 ## 当前状态
 
-- 2026-11-06 已完成首批 6 个固定 commit 的联网文本采集，成功 6、失败 0。
-- 实际发现并保存 329 条 Skill 入口，329 种不同正文，完全相同正文重复组为 0。
-- 保存 4,441 个文本文件；262 个字体、二进制、符号链接或超限文件仅建立清单。
-- 离线自检、全部已保存文件与 Git blob 的逐字节核验、完整批次重复采集检查均已通过。
-- 详见 [首批采集报告](docs/collection.md) 与 `data/collection-report.json`。原始材料保留本地，不随索引提交。
+- 2026-11-06 第二批实际处理 24 个新候选：17 个完整文本采集、2 个部分采集、5 个固定版本无 SKILL.md，仓库访问失败 0。
+- 第二批保存 10,515 条入口、4,717 种正文；另有 70 个入口因符号链接或非 UTF-8 / 二进制规则未导出，没有计入保存数。
+- 累计 25 个有已保存正文的仓库（23 个完整、2 个部分），保存 10,844 条入口、5,046 种正文，2,944 个完全相同正文重复组；每个来源均保留。
+- 累计索引入口为 [data/cumulative/skills.jsonl](data/cumulative/skills.jsonl)，状态与遗漏见 [累计报告](data/cumulative/collection-report.json) 和 [第二批报告](docs/collection-002.md)。首批目录及 329 条记录保留原样。
+- 全部 48,302 个已保存文本文件通过固定版本 Git blob 逐字节核验；大来源重跑、索引合并重跑和离线测试均通过。
+- 已保存 385 个候选仓库记录；其中 354 个仍待后续扫描，不计入采集成果。原始材料保留本机持久目录，不随索引提交。
 - 先前对话中的 4 份正文样本未纳入本仓库，不计入正式采集结果。
 - 没有安装或执行来源中的 Skill，也没有进行方法有效性验证。
 
@@ -22,6 +23,9 @@
 |---|---|
 | `collect_skills.py` | 批量采集原文、仓库文本上下文、文件清单与索引 |
 | `sources.json` | 首批来源与固定 commit；另含后续发现入口 |
+| `sources.batch-002.json` | 第二批 24 个候选的实际固定 commit、发现出处和处理结果 |
+| `sources.candidates.json` / `sources.next.json` | 完整去重候选及尚未扫描的 354 个来源 |
+| `merge_collections.py` | 简单合并已有索引，保留原文位置、失败及部分结果；不下载或迁移材料 |
 | `AGENTS.md` | 编码 Agent 的本阶段任务、边界和验收要求 |
 | `.gitignore` | 排除缓存、原始快照及临时文件；保留采集索引和报告 |
 | `tests/verify_collection.py` | 对照固定版本 Git 对象，核验完整文件清单、原文字节、索引和重复分组 |
@@ -45,12 +49,23 @@ python3 collect_skills.py --sources sources.json --out data-trial --only anthrop
 需要另外采集当前默认分支，而不是重现固定版本时：
 
 ```bash
-python3 collect_skills.py --sources sources.json --out data --refresh
+python3 collect_skills.py --sources sources.json --out data-batch-refresh --refresh
 ```
 
 默认使用 `sources.json` 中的 commit。固定版本无法访问时应记录失败，不静默换成最新版本。
 
 **每次输出的索引和报告只表示该次所选来源。** 小范围试采请使用独立 `--out`，避免部分来源索引覆盖完整批次索引。`--refresh` 生成新版本快照，旧原文目录保留。
+
+后续继续一个待处理来源，并将结果纳入累计索引：
+
+```bash
+python3 collect_skills.py --sources sources.next.json --only cloudflare/security-audit-skill --out data-batch-003/repositories/cloudflare/security-audit-skill
+python3 merge_collections.py --out data/cumulative --status data-batch-002/source-results.json data data-batch-002/repositories/*/* data-batch-003/repositories/*/*
+```
+
+首次采集会将实际 commit 写入该输出目录的 `sources.lock.json`。后续对同一来源复现时，将 `--sources` 指向该 lock 文件，继续使用同一输出目录。独立来源的输出不会覆盖其他来源；合并按仓库、commit、路径去重，版本快照数与独立路径数分别报告。
+
+累计索引中的 `raw_path`、`repository_manifest` 相对于 `data/cumulative/`；`collection_root` 指回实际保存该来源的目录。旧原文位于 `data/raw/`，新增原文位于 `data-batch-002/repositories/<owner>/<repo>/raw/`，可直接从本机目录取回。
 
 ## 输出
 
@@ -106,6 +121,7 @@ frontmatter 原文保留；脚本只提取简单 name 预览，不进行完整 Y
 
 ```bash
 python3 tests/verify_collection.py --sources sources.json --out data
+python3 tests/verify_collection.py --sources data/cumulative/sources.lock.json --out data/cumulative
 ```
 
 核验需要本地 `data/raw/` 和 `data/.cache/`；从 GitHub 新拉取本项目后，先运行采集命令重建它们。核验脚本不会运行收集来的代码。

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:42:03.232848+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "officialzeroxyz/zero-plugins",
+      "commit_sha": "698c47fd02e26cf12c2ef3a1240e6c0940ada04e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 51,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/officialzeroxyz/zero-plugins/698c47fd02e26cf12c2ef3a1240e6c0940ada04e.json"
+    }
+  ],
+  "errors": []
+}

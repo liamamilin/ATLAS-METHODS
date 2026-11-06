@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:48:38.237715+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "commit_sha": "9b4bf937a1f69348126959c15d2f99a73e65699b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 1485,
+      "files_not_exported": 163,
+      "repository_manifest": "manifests/Leonxlnx/taste-skill/9b4bf937a1f69348126959c15d2f99a73e65699b.json"
+    }
+  ],
+  "errors": []
+}

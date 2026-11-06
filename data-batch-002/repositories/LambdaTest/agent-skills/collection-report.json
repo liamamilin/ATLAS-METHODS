@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T09:41:24.414493+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 87,
+  "saved_skill_entries": 87,
+  "unique_entry_texts": 87,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "LambdaTest/agent-skills",
+      "commit_sha": "375e466d6efd77436075e39ffba9623433740e18",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 87,
+      "saved_skill_entries": 87,
+      "saved_text_files": 427,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/LambdaTest/agent-skills/375e466d6efd77436075e39ffba9623433740e18.json"
+    }
+  ],
+  "errors": []
+}

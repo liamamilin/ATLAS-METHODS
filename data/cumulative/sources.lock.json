@@ -1,0 +1,129 @@
+{
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "collection_root": ".."
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "collection_root": ".."
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "collection_root": ".."
+    },
+    {
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "collection_root": ".."
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "collection_root": ".."
+    },
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "collection_root": ".."
+    },
+    {
+      "repository": "Jeffallan/claude-skills",
+      "commit_sha": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+      "collection_root": "../../data-batch-002/repositories/Jeffallan/claude-skills"
+    },
+    {
+      "repository": "LambdaTest/agent-skills",
+      "commit_sha": "375e466d6efd77436075e39ffba9623433740e18",
+      "collection_root": "../../data-batch-002/repositories/LambdaTest/agent-skills"
+    },
+    {
+      "repository": "Leonxlnx/taste-skill",
+      "commit_sha": "9b4bf937a1f69348126959c15d2f99a73e65699b",
+      "collection_root": "../../data-batch-002/repositories/Leonxlnx/taste-skill"
+    },
+    {
+      "repository": "Orchestra-Research/AI-Research-SKILLs",
+      "commit_sha": "773a52944ba4747a18bd4ae9ade53fff041adcbc",
+      "collection_root": "../../data-batch-002/repositories/Orchestra-Research/AI-Research-SKILLs"
+    },
+    {
+      "repository": "alirezarezvani/claude-skills",
+      "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+      "collection_root": "../../data-batch-002/repositories/alirezarezvani/claude-skills"
+    },
+    {
+      "repository": "angular/skills",
+      "commit_sha": "d2cdd2cfeeb2301e5b30b80d3094e2cbd48aae7a",
+      "collection_root": "../../data-batch-002/repositories/angular/skills"
+    },
+    {
+      "repository": "cathrynlavery/diagram-design",
+      "commit_sha": "f24d98b05e2d7a5e68c2dedfe46e5b7173f50118",
+      "collection_root": "../../data-batch-002/repositories/cathrynlavery/diagram-design"
+    },
+    {
+      "repository": "chuspeeism/dashi-ppt-skill",
+      "commit_sha": "d2b75389ca056a3a8fb5b997b79a098acce0c189",
+      "collection_root": "../../data-batch-002/repositories/chuspeeism/dashi-ppt-skill"
+    },
+    {
+      "repository": "firecrawl/cli",
+      "commit_sha": "da25d5cd06db21cb33b100661cea0d9b89d457a3",
+      "collection_root": "../../data-batch-002/repositories/firecrawl/cli"
+    },
+    {
+      "repository": "github/awesome-copilot",
+      "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+      "collection_root": "../../data-batch-002/repositories/github/awesome-copilot"
+    },
+    {
+      "repository": "modem-dev/skills",
+      "commit_sha": "edcdedb38a545f67c065f4084b3627517f0d79cf",
+      "collection_root": "../../data-batch-002/repositories/modem-dev/skills"
+    },
+    {
+      "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "commit_sha": "9ff0c99108b36d3b886defd825d8ac1f47dba374",
+      "collection_root": "../../data-batch-002/repositories/muratcankoylan/Agent-Skills-for-Context-Engineering"
+    },
+    {
+      "repository": "officialzeroxyz/zero-plugins",
+      "commit_sha": "698c47fd02e26cf12c2ef3a1240e6c0940ada04e",
+      "collection_root": "../../data-batch-002/repositories/officialzeroxyz/zero-plugins"
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+      "collection_root": "../../data-batch-002/repositories/sickn33/agentic-awesome-skills"
+    },
+    {
+      "repository": "tech-leads-club/agent-skills",
+      "commit_sha": "8658b6658c762b9e5efd3956ed35a51c41bdf6c3",
+      "collection_root": "../../data-batch-002/repositories/tech-leads-club/agent-skills"
+    },
+    {
+      "repository": "trycourier/courier-skills",
+      "commit_sha": "465479eadd2abbe863dd3f7bfaea8e1caf2fd136",
+      "collection_root": "../../data-batch-002/repositories/trycourier/courier-skills"
+    },
+    {
+      "repository": "veniceai/skills",
+      "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+      "collection_root": "../../data-batch-002/repositories/veniceai/skills"
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "collection_root": "../../data-batch-002/repositories/vercel-labs/agent-skills"
+    },
+    {
+      "repository": "wshobson/agents",
+      "commit_sha": "4bde3168b43c0655c4d00ea2726e631719908a6d",
+      "collection_root": "../../data-batch-002/repositories/wshobson/agents"
+    }
+  ]
+}
