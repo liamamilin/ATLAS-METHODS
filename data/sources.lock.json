@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5"
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde"
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7"
+    },
+    {
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d"
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768"
+    },
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a"
+    }
+  ]
+}

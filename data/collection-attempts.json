@@ -1,0 +1,209 @@
+[
+  {
+    "command": "python3 collect_skills.py --sources sources.json --out data",
+    "environment": "restricted sandbox; DNS unavailable",
+    "exit_code": 1,
+    "report": {
+      "generated_at": "2026-11-06T04:53:37.261110+00:00",
+      "requested_sources": 6,
+      "completed_sources": 0,
+      "failed_sources": 6,
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "unique_entry_texts": 0,
+      "duplicate_entry_groups": 0,
+      "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+      "sources": [],
+      "errors": [
+        {
+          "repository": "anthropics/skills",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/anthropics__skills.git'...\nfatal: unable to access 'https://github.com/anthropics/skills.git/': Could not resolve host: github.com"
+        },
+        {
+          "repository": "addyosmani/agent-skills",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/addyosmani__agent-skills.git'...\nfatal: unable to access 'https://github.com/addyosmani/agent-skills.git/': Could not resolve host: github.com"
+        },
+        {
+          "repository": "obra/superpowers",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/obra__superpowers.git'...\nfatal: unable to access 'https://github.com/obra/superpowers.git/': Could not resolve host: github.com"
+        },
+        {
+          "repository": "mattpocock/skills",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/mattpocock__skills.git'...\nfatal: unable to access 'https://github.com/mattpocock/skills.git/': Could not resolve host: github.com"
+        },
+        {
+          "repository": "coreyhaines31/marketingskills",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/coreyhaines31__marketingskills.git'...\nfatal: unable to access 'https://github.com/coreyhaines31/marketingskills.git/': Could not resolve host: github.com"
+        },
+        {
+          "repository": "K-Dense-AI/scientific-agent-skills",
+          "state": "failed",
+          "error": "Git failed: Cloning into bare repository '/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/.cache/K-Dense-AI__scientific-agent-skills.git'...\nfatal: unable to access 'https://github.com/K-Dense-AI/scientific-agent-skills.git/': Could not resolve host: github.com"
+        }
+      ]
+    }
+  },
+  {
+    "command": "python3 collect_skills.py --sources sources.json --out data",
+    "environment": "network-enabled execution",
+    "exit_code": 0,
+    "report": {
+      "generated_at": "2026-11-06T04:55:52.886249+00:00",
+      "requested_sources": 6,
+      "completed_sources": 6,
+      "failed_sources": 0,
+      "candidate_skill_files": 329,
+      "saved_skill_entries": 329,
+      "unique_entry_texts": 329,
+      "duplicate_entry_groups": 0,
+      "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+      "sources": [
+        {
+          "repository": "anthropics/skills",
+          "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 20,
+          "saved_skill_entries": 20,
+          "saved_text_files": 390,
+          "files_not_exported": 56,
+          "repository_manifest": "manifests/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5.json"
+        },
+        {
+          "repository": "addyosmani/agent-skills",
+          "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 25,
+          "saved_skill_entries": 25,
+          "saved_text_files": 239,
+          "files_not_exported": 1,
+          "repository_manifest": "manifests/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde.json"
+        },
+        {
+          "repository": "obra/superpowers",
+          "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 15,
+          "saved_skill_entries": 15,
+          "saved_text_files": 234,
+          "files_not_exported": 2,
+          "repository_manifest": "manifests/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7.json"
+        },
+        {
+          "repository": "mattpocock/skills",
+          "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 39,
+          "saved_skill_entries": 39,
+          "saved_text_files": 183,
+          "files_not_exported": 1,
+          "repository_manifest": "manifests/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d.json"
+        },
+        {
+          "repository": "coreyhaines31/marketingskills",
+          "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 53,
+          "saved_skill_entries": 53,
+          "saved_text_files": 815,
+          "files_not_exported": 2,
+          "repository_manifest": "manifests/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768.json"
+        },
+        {
+          "repository": "K-Dense-AI/scientific-agent-skills",
+          "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 177,
+          "saved_skill_entries": 177,
+          "saved_text_files": 2580,
+          "files_not_exported": 200,
+          "repository_manifest": "manifests/K-Dense-AI/scientific-agent-skills/a25cf9ec00e2745d03f8704acf6f6919694ccd9a.json"
+        }
+      ],
+      "errors": []
+    }
+  },
+  {
+    "command": "python3 collect_skills.py --sources sources.json --out data",
+    "environment": "restricted sandbox; pinned objects reused from local bare Git cache",
+    "exit_code": 0,
+    "report": {
+      "generated_at": "2026-11-06T04:58:17.023388+00:00",
+      "requested_sources": 6,
+      "completed_sources": 6,
+      "failed_sources": 0,
+      "candidate_skill_files": 329,
+      "saved_skill_entries": 329,
+      "unique_entry_texts": 329,
+      "duplicate_entry_groups": 0,
+      "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+      "sources": [
+        {
+          "repository": "anthropics/skills",
+          "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 20,
+          "saved_skill_entries": 20,
+          "saved_text_files": 390,
+          "files_not_exported": 56,
+          "repository_manifest": "manifests/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5.json"
+        },
+        {
+          "repository": "addyosmani/agent-skills",
+          "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 25,
+          "saved_skill_entries": 25,
+          "saved_text_files": 239,
+          "files_not_exported": 1,
+          "repository_manifest": "manifests/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde.json"
+        },
+        {
+          "repository": "obra/superpowers",
+          "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 15,
+          "saved_skill_entries": 15,
+          "saved_text_files": 234,
+          "files_not_exported": 2,
+          "repository_manifest": "manifests/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7.json"
+        },
+        {
+          "repository": "mattpocock/skills",
+          "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 39,
+          "saved_skill_entries": 39,
+          "saved_text_files": 183,
+          "files_not_exported": 1,
+          "repository_manifest": "manifests/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d.json"
+        },
+        {
+          "repository": "coreyhaines31/marketingskills",
+          "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 53,
+          "saved_skill_entries": 53,
+          "saved_text_files": 815,
+          "files_not_exported": 2,
+          "repository_manifest": "manifests/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768.json"
+        },
+        {
+          "repository": "K-Dense-AI/scientific-agent-skills",
+          "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+          "state": "text_snapshot_collected",
+          "candidate_skill_files": 177,
+          "saved_skill_entries": 177,
+          "saved_text_files": 2580,
+          "files_not_exported": 200,
+          "repository_manifest": "manifests/K-Dense-AI/scientific-agent-skills/a25cf9ec00e2745d03f8704acf6f6919694ccd9a.json"
+        }
+      ],
+      "errors": []
+    }
+  }
+]

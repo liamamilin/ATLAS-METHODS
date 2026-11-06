@@ -1,0 +1,86 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "7f4ea03552caa924c802da9bfa06fd1b18021980b7e8b18d53dd5065d334cebe",
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_entries": 20,
+      "manifest_files": 446,
+      "statuses": {
+        "saved": 390,
+        "font_not_exported": 54,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "skill_entries": 25,
+      "manifest_files": 240,
+      "statuses": {
+        "saved": 239,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_entries": 15,
+      "manifest_files": 236,
+      "statuses": {
+        "saved": 234,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_entries": 39,
+      "manifest_files": 184,
+      "statuses": {
+        "saved": 183,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_entries": 53,
+      "manifest_files": 817,
+      "statuses": {
+        "saved": 815,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "K-Dense-AI/scientific-agent-skills",
+      "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+      "skill_entries": 177,
+      "manifest_files": 2780,
+      "statuses": {
+        "saved": 2580,
+        "non_utf8_or_binary_not_exported": 199,
+        "over_size_limit": 1
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 44265710,
+    "entries_with_license_candidates": 327,
+    "entries_without_license_candidates": 2,
+    "saved": 4441,
+    "font_not_exported": 54,
+    "non_utf8_or_binary_not_exported": 204,
+    "symlink_not_followed": 3,
+    "over_size_limit": 1
+  },
+  "verified_skill_entries": 329,
+  "unique_entry_texts": 329,
+  "duplicate_entry_groups": 0,
+  "entries_in_duplicate_groups": 0,
+  "duplicate_entries_beyond_first": 0,
+  "repeatability": "passed; indexes and manifests unchanged except run timestamps; no extra source records"
+}
