@@ -1,0 +1,11 @@
+# Local Git caches and upstream raw material; publish indexes/reports only.
+.cache/
+data/raw/
+data-trial/
+
+# Python and local temporary files.
+__pycache__/
+*.py[cod]
+.venv/
+*.tmp
+.DS_Store
