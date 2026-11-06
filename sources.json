@@ -1,0 +1,18 @@
+{
+  "schema_version": "0.1",
+  "verified_on": "2026-11-06",
+  "purpose": "Raw GitHub Skill collection only; no Domain, Method, or Methodology classification.",
+  "selection_note": "First seed batch, not an exhaustive or representative sample of GitHub. Repository refs were resolved through the GitHub connector. A pinned ref is not a completed download.",
+  "discovery_indexes": [
+    "https://github.com/VoltAgent/awesome-agent-skills",
+    "https://github.com/devanasolver/awesome-agent-skills"
+  ],
+  "sources": [
+    {"repository": "anthropics/skills", "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5", "ref": "refs/heads/main", "discovered_via": "GitHub search and upstream repository", "state": "ref_verified; full_snapshot_pending"},
+    {"repository": "addyosmani/agent-skills", "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde", "ref": "refs/heads/main", "discovered_via": "user-provided source", "state": "ref_verified; full_snapshot_pending"},
+    {"repository": "obra/superpowers", "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7", "ref": "refs/heads/main", "discovered_via": "upstream references in addyosmani/agent-skills", "state": "ref_verified; full_snapshot_pending"},
+    {"repository": "mattpocock/skills", "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d", "ref": "refs/heads/main", "discovered_via": "upstream references in addyosmani/agent-skills", "state": "ref_verified; full_snapshot_pending"},
+    {"repository": "coreyhaines31/marketingskills", "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768", "ref": "refs/heads/main", "discovered_via": "GitHub search and skill indexes", "state": "ref_verified; full_snapshot_pending"},
+    {"repository": "K-Dense-AI/scientific-agent-skills", "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a", "ref": "refs/heads/main", "discovered_via": "GitHub search and upstream repository", "state": "ref_verified; full_snapshot_pending"}
+  ]
+}
