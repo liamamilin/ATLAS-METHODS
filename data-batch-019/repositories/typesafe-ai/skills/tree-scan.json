@@ -1,0 +1,8 @@
+{
+  "repository": "typesafe-ai/skills",
+  "commit_sha": "302eea662c54bca6730873fe245bec1d69ebc23d",
+  "tree_entries": 6,
+  "candidate_skill_paths": [
+    "skills/typesafe-ai/SKILL.md"
+  ]
+}

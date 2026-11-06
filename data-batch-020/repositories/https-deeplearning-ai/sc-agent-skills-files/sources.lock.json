@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "https-deeplearning-ai/sc-agent-skills-files",
+      "commit_sha": "438a5a51a68b86a6262835796ae7a671ece58e4f"
+    }
+  ]
+}

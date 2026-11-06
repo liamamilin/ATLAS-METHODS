@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:32:55.258285+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Yusuke710/manim-skill",
+      "commit_sha": "a0048d9e265499038f34a9aa58ff16d306b5034c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 12,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Yusuke710/manim-skill/a0048d9e265499038f34a9aa58ff16d306b5034c.json"
+    }
+  ],
+  "errors": []
+}

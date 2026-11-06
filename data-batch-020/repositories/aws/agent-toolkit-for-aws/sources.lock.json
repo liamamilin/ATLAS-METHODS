@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "aws/agent-toolkit-for-aws",
+      "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a"
+    }
+  ]
+}

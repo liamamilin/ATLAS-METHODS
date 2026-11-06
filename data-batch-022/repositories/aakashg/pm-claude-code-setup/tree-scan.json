@@ -1,0 +1,13 @@
+{
+  "repository": "aakashg/pm-claude-code-setup",
+  "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+  "tree_entries": 15,
+  "candidate_skill_paths": [
+    ".claude/skills/competitive-analysis/SKILL.md",
+    ".claude/skills/launch-checklist/SKILL.md",
+    ".claude/skills/metrics-definer/SKILL.md",
+    ".claude/skills/prd-writer/SKILL.md",
+    ".claude/skills/sprint-planner/SKILL.md",
+    ".claude/skills/user-research/SKILL.md"
+  ]
+}

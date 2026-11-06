@@ -1,0 +1,22 @@
+{
+  "repository": "zcashlabs/zcash-skills",
+  "commit_sha": "e5f639ebf9eac59ad9e6057e8f357ccdd99075b9",
+  "tree_entries": 47,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "skills/sprout-rescue/SKILL.md",
+    "skills/ths-dashboard/SKILL.md",
+    "skills/ths-regtest-verifier/SKILL.md",
+    "skills/ths-release/SKILL.md",
+    "skills/ths-runtime/SKILL.md",
+    "skills/ths-wallet-server/SKILL.md",
+    "skills/ths/SKILL.md",
+    "skills/zakura/SKILL.md",
+    "skills/zcash-light-client/SKILL.md",
+    "skills/zcash-payments/SKILL.md",
+    "skills/zcash-protocol/SKILL.md",
+    "skills/zcash-wallet/SKILL.md",
+    "skills/zcash/SKILL.md",
+    "skills/zcashjs/SKILL.md"
+  ]
+}

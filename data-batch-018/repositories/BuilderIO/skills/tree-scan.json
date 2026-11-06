@@ -1,0 +1,33 @@
+{
+  "repository": "BuilderIO/skills",
+  "commit_sha": "f4f10b8d513476c24bd995ceac5294bcdd6ee15c",
+  "tree_entries": 92,
+  "candidate_skill_paths": [
+    ".agents/skills/adding-a-skill/SKILL.md",
+    "skills/agent-watchdog/SKILL.md",
+    "skills/an/SKILL.md",
+    "skills/efficient-fable/SKILL.md",
+    "skills/efficient-frontier/SKILL.md",
+    "skills/efficient-orchestrator/SKILL.md",
+    "skills/factory-babysit-pr/SKILL.md",
+    "skills/factory-collect/SKILL.md",
+    "skills/factory-human-digest/SKILL.md",
+    "skills/factory-lookback/SKILL.md",
+    "skills/factory-recover/SKILL.md",
+    "skills/factory-review-prs/SKILL.md",
+    "skills/factory-ship/SKILL.md",
+    "skills/factory-watchdog/SKILL.md",
+    "skills/factory/SKILL.md",
+    "skills/plan-arbiter/SKILL.md",
+    "skills/plow-ahead/SKILL.md",
+    "skills/quick-recap/SKILL.md",
+    "skills/read-the-damn-docs/SKILL.md",
+    "skills/rewind/SKILL.md",
+    "skills/stay-within-limits/SKILL.md",
+    "skills/turn-into-app/SKILL.md",
+    "skills/visual-edit/SKILL.md",
+    "skills/visual-plan/SKILL.md",
+    "skills/visual-recap/SKILL.md",
+    "skills/webmcp/SKILL.md"
+  ]
+}

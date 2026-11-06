@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:33:13.981482+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 28,
+  "saved_skill_entries": 28,
+  "unique_entry_texts": 28,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "mrhlaingbwardev/agentic-hacking-skills",
+      "commit_sha": "e1dc2759662155ba5a2d72e733a7d899ef4499ef",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 36,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/mrhlaingbwardev/agentic-hacking-skills/e1dc2759662155ba5a2d72e733a7d899ef4499ef.json"
+    }
+  ],
+  "errors": []
+}

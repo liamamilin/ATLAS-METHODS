@@ -1,0 +1,14 @@
+{
+  "repository": "FrancyJGLisboa/agent-skills-platform",
+  "commit_sha": "0c6900a0597622791d1daaafc1c19b2fead0e8d4",
+  "tree_entries": 424,
+  "candidate_skill_paths": [
+    ".agents/skills/live-weather-briefing-skill/SKILL.md",
+    "SKILL.md",
+    "references/examples/github-release-briefing-skill/SKILL.md",
+    "references/examples/live-weather-briefing-skill/SKILL.md",
+    "references/examples/pr-blocker-summarizer/SKILL.md",
+    "references/examples/stock-analyzer/SKILL.md",
+    "references/examples/weekly-crm-report/SKILL.md"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "OpenLinkSoftware/ai-agent-skills",
+      "commit_sha": "e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import io
 import json
 from pathlib import Path, PurePosixPath
 import subprocess
+import unicodedata
 from urllib.parse import quote
 
 
@@ -65,6 +66,14 @@ def verify(sources, output):
                 mode, kind, sha, size = header.decode().split()
                 tree[path.decode()] = (mode, kind, sha, None if size == "-" else int(size))
         assert set(tree) == set(files), f"Incomplete manifest: {repo}"
+        path_groups = defaultdict(list)
+        for path in tree:
+            path_groups[unicodedata.normalize("NFD", path).casefold()].append(path)
+        collision_paths = {p for group in path_groups.values() if len(group) > 1 for p in group}
+        collision_prefix = ".atlas-path-collisions"
+        top_names = {unicodedata.normalize("NFD", p.split("/")[0]).casefold() for p in tree}
+        while collision_prefix.casefold() in top_names:
+            collision_prefix += "_"
         saved = [f for f in files.values() if f["status"] == "saved"]
         shas = list(dict.fromkeys(f["git_blob_sha"] for f in saved))
         stream = io.BytesIO(git(cache, "cat-file", "--batch", input="".join(s + "\n" for s in shas).encode()))
@@ -82,6 +91,10 @@ def verify(sources, output):
             counts[f["status"]] += 1
             if f["status"] == "saved":
                 expected_path = (Path("raw") / repo / commit / path).as_posix()
+                if f.get("storage_path_reason") == "case_or_unicode_normalization_collision":
+                    assert path in collision_paths
+                    expected_path = (Path("raw") / repo / commit / collision_prefix /
+                                     hashlib.sha256(path.encode("utf-8")).hexdigest() / PurePosixPath(path).name).as_posix()
                 assert f["raw_path"] == expected_path
                 data = (collection_root / expected_path).read_bytes()
                 assert data == blobs[f["git_blob_sha"]], f"Changed bytes: {repo}:{path}"

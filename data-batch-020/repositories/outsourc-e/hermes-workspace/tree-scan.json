@@ -1,0 +1,8 @@
+{
+  "repository": "outsourc-e/hermes-workspace",
+  "commit_sha": "c631425d8baa933f8c61d8447040f4ec8b5f571c",
+  "tree_entries": 1173,
+  "candidate_skill_paths": [
+    "skills/workspace-dispatch/SKILL.md"
+  ]
+}

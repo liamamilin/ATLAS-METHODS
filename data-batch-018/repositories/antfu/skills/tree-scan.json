@@ -1,0 +1,21 @@
+{
+  "repository": "antfu/skills",
+  "commit_sha": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+  "tree_entries": 190,
+  "candidate_skill_paths": [
+    "skills/antfu-create-pr/SKILL.md",
+    "skills/antfu-issue-triage/SKILL.md",
+    "skills/antfu-query/SKILL.md",
+    "skills/antfu-simplify/SKILL.md",
+    "skills/antfu/SKILL.md",
+    "skills/nitro/SKILL.md",
+    "skills/nuxt/SKILL.md",
+    "skills/pinia/SKILL.md",
+    "skills/pnpm/SKILL.md",
+    "skills/unocss/SKILL.md",
+    "skills/vite/SKILL.md",
+    "skills/vitepress/SKILL.md",
+    "skills/vitest/SKILL.md",
+    "skills/vue/SKILL.md"
+  ]
+}

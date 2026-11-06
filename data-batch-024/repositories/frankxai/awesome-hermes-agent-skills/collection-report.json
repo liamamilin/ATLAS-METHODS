@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:52:26.942962+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "frankxai/awesome-hermes-agent-skills",
+      "commit_sha": "1f1ae5bd11bffc525fb675836c34225f2f41c2e9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 36,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/frankxai/awesome-hermes-agent-skills/1f1ae5bd11bffc525fb675836c34225f2f41c2e9.json"
+    }
+  ],
+  "errors": []
+}

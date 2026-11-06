@@ -1,0 +1,26 @@
+{
+  "repository": "waynesutton/builder-skills",
+  "commit_sha": "82d1ce23d8637f6d0301e6cac9dcdb124711f3b1",
+  "tree_entries": 142,
+  "candidate_skill_paths": [
+    "skills/avoid-feature-creep/SKILL.md",
+    "skills/convex-agents/SKILL.md",
+    "skills/convex-best-practices/SKILL.md",
+    "skills/convex-component-authoring/SKILL.md",
+    "skills/convex-cron-jobs/SKILL.md",
+    "skills/convex-file-storage/SKILL.md",
+    "skills/convex-functions/SKILL.md",
+    "skills/convex-http-actions/SKILL.md",
+    "skills/convex-migrations/SKILL.md",
+    "skills/convex-realtime/SKILL.md",
+    "skills/convex-schema-validator/SKILL.md",
+    "skills/convex-security-audit/SKILL.md",
+    "skills/convex-security-check/SKILL.md",
+    "skills/convex/SKILL.md",
+    "skills/git-safety/SKILL.md",
+    "skills/project-docs/SKILL.md",
+    "skills/project-workflow/SKILL.md",
+    "templates/skills/dev/SKILL.md",
+    "templates/skills/help/SKILL.md"
+  ]
+}

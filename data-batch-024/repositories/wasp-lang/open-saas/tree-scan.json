@@ -1,0 +1,10 @@
+{
+  "repository": "wasp-lang/open-saas",
+  "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11",
+  "tree_entries": 696,
+  "candidate_skill_paths": [
+    "template/app/.agents/skills/add-wasp-skills/SKILL.md",
+    "template/app/.agents/skills/getting-started/SKILL.md",
+    "template/app/.agents/skills/guided-tour/SKILL.md"
+  ]
+}

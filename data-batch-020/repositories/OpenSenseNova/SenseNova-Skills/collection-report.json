@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:24:09.550047+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 84,
+  "saved_skill_entries": 84,
+  "unique_entry_texts": 84,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "OpenSenseNova/SenseNova-Skills",
+      "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 84,
+      "saved_skill_entries": 84,
+      "saved_text_files": 573,
+      "files_not_exported": 118,
+      "repository_manifest": "manifests/OpenSenseNova/SenseNova-Skills/004a2426fa092097d65ac9233ca0bcb2be793f57.json"
+    }
+  ],
+  "errors": []
+}

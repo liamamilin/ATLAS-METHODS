@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "google/agents-cli",
+      "commit_sha": "896e4719c4184841325a301755781d6b3da233ef"
+    }
+  ]
+}

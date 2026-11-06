@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:31:05.384464+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "geekjourneyx/md2wechat-skill",
+      "commit_sha": "a8e2900033e5c9ee152a629e108fe57228ba31e6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 359,
+      "files_not_exported": 13,
+      "repository_manifest": "manifests/geekjourneyx/md2wechat-skill/a8e2900033e5c9ee152a629e108fe57228ba31e6.json"
+    }
+  ],
+  "errors": []
+}

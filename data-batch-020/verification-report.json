@@ -1,0 +1,270 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "40736a5d268dbf7a9bef667fcd37edd34614f72dce810532f3451efcd4f4ba13",
+  "sources": [
+    {
+      "repository": "FrancyJGLisboa/agent-skills-platform",
+      "commit_sha": "0c6900a0597622791d1daaafc1c19b2fead0e8d4",
+      "candidate_skill_entries": 7,
+      "skill_entries": 7,
+      "manifest_files": 424,
+      "statuses": {
+        "saved": 395,
+        "non_utf8_or_binary_not_exported": 29
+      }
+    },
+    {
+      "repository": "LeoYeAI/agent-master-skills",
+      "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+      "candidate_skill_entries": 3451,
+      "skill_entries": 3451,
+      "manifest_files": 30805,
+      "statuses": {
+        "saved": 30643,
+        "non_utf8_or_binary_not_exported": 161,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "Memento-Teams/Memento-Skills",
+      "commit_sha": "ee9b9a45efd093d669c06fe318b4b1dceb246d19",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 641,
+      "statuses": {
+        "saved": 634,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "NVIDIA/SkillSpector",
+      "commit_sha": "ab36c42f5c364cd828586c637e5f8f00425d465d",
+      "candidate_skill_entries": 33,
+      "skill_entries": 33,
+      "manifest_files": 521,
+      "statuses": {
+        "saved": 521
+      }
+    },
+    {
+      "repository": "OpenSenseNova/SenseNova-Skills",
+      "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+      "candidate_skill_entries": 84,
+      "skill_entries": 84,
+      "manifest_files": 691,
+      "statuses": {
+        "saved": 573,
+        "non_utf8_or_binary_not_exported": 116,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "PrathamLearnsToCode/paper2code",
+      "commit_sha": "fcffce7a1250659ed74f2a96cdf54595c92306c4",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 49,
+      "statuses": {
+        "saved": 49
+      }
+    },
+    {
+      "repository": "adobe/skills",
+      "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+      "candidate_skill_entries": 184,
+      "skill_entries": 184,
+      "manifest_files": 2021,
+      "statuses": {
+        "saved": 1998,
+        "font_not_exported": 10,
+        "non_utf8_or_binary_not_exported": 13
+      }
+    },
+    {
+      "repository": "aws/agent-toolkit-for-aws",
+      "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+      "candidate_skill_entries": 199,
+      "skill_entries": 199,
+      "manifest_files": 3657,
+      "statuses": {
+        "saved": 3656,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "coleam00/skills",
+      "commit_sha": "7f34fd5fead3db1403652377dd59ee00a785f833",
+      "candidate_skill_entries": 38,
+      "skill_entries": 38,
+      "manifest_files": 133,
+      "statuses": {
+        "saved": 132,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "davila7/claude-code-templates",
+      "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+      "candidate_skill_entries": 923,
+      "skill_entries": 923,
+      "manifest_files": 9897,
+      "statuses": {
+        "saved": 9736,
+        "non_utf8_or_binary_not_exported": 103,
+        "font_not_exported": 54,
+        "over_size_limit": 4
+      }
+    },
+    {
+      "repository": "google/agents-cli",
+      "commit_sha": "896e4719c4184841325a301755781d6b3da233ef",
+      "candidate_skill_entries": 16,
+      "skill_entries": 16,
+      "manifest_files": 600,
+      "statuses": {
+        "saved": 591,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "google/elephant-goldfish-model",
+      "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 282,
+      "statuses": {
+        "saved": 271,
+        "non_utf8_or_binary_not_exported": 9,
+        "font_not_exported": 2
+      }
+    },
+    {
+      "repository": "google-gemini/gemini-skills",
+      "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 19,
+      "statuses": {
+        "saved": 19
+      }
+    },
+    {
+      "repository": "heygen-com/skills",
+      "commit_sha": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 45,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "https-deeplearning-ai/sc-agent-skills-files",
+      "commit_sha": "438a5a51a68b86a6262835796ae7a671ece58e4f",
+      "candidate_skill_entries": 11,
+      "skill_entries": 11,
+      "manifest_files": 116,
+      "statuses": {
+        "saved": 107,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    },
+    {
+      "repository": "inference-sh/skills",
+      "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150",
+      "candidate_skill_entries": 86,
+      "skill_entries": 86,
+      "manifest_files": 133,
+      "statuses": {
+        "saved": 133
+      }
+    },
+    {
+      "repository": "memodb-io/Acontext",
+      "commit_sha": "1ddfd903fd1004672ca9f9a70d92041153ba43d5",
+      "candidate_skill_entries": 3,
+      "skill_entries": 3,
+      "manifest_files": 1297,
+      "statuses": {
+        "saved": 1278,
+        "symlink_not_followed": 1,
+        "non_utf8_or_binary_not_exported": 17,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "numman-ali/openskills",
+      "commit_sha": "57d933a4f0d5c8659bd8b285f50fb9554360f0b3",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 94,
+      "statuses": {
+        "saved": 94
+      }
+    },
+    {
+      "repository": "outsourc-e/hermes-workspace",
+      "commit_sha": "c631425d8baa933f8c61d8447040f4ec8b5f571c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 1173,
+      "statuses": {
+        "saved": 1040,
+        "non_utf8_or_binary_not_exported": 126,
+        "over_size_limit": 7
+      }
+    },
+    {
+      "repository": "plugin87/ux-ui-agent-skills",
+      "commit_sha": "def84a70fadc3490d80901295a4f1951fdb2cc69",
+      "candidate_skill_entries": 27,
+      "skill_entries": 27,
+      "manifest_files": 2698,
+      "statuses": {
+        "saved": 2634,
+        "non_utf8_or_binary_not_exported": 62,
+        "font_not_exported": 2
+      }
+    },
+    {
+      "repository": "softaworks/agent-toolkit",
+      "commit_sha": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+      "candidate_skill_entries": 86,
+      "skill_entries": 86,
+      "manifest_files": 479,
+      "statuses": {
+        "saved": 478,
+        "symlink_not_followed": 1
+      }
+    },
+    {
+      "repository": "yaklang/hack-skills",
+      "commit_sha": "6fbf0bc8d5c71830d62543a308d8744606c43d7c",
+      "candidate_skill_entries": 103,
+      "skill_entries": 103,
+      "manifest_files": 193,
+      "statuses": {
+        "saved": 184,
+        "non_utf8_or_binary_not_exported": 9
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 518517084,
+    "entries_with_license_candidates": 5183,
+    "saved": 55211,
+    "non_utf8_or_binary_not_exported": 674,
+    "over_size_limit": 15,
+    "font_not_exported": 68,
+    "entries_without_license_candidates": 97,
+    "symlink_not_followed": 2
+  },
+  "verified_candidate_entries": 5280,
+  "verified_skill_entries": 5280,
+  "unique_entry_texts": 4860,
+  "duplicate_entry_groups": 279,
+  "entries_in_duplicate_groups": 699,
+  "duplicate_entries_beyond_first": 420
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:01.274015+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 65,
+  "saved_skill_entries": 65,
+  "unique_entry_texts": 32,
+  "duplicate_entry_groups": 4,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "volcengine/OpenViking",
+      "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 65,
+      "saved_skill_entries": 65,
+      "saved_text_files": 5589,
+      "files_not_exported": 428,
+      "repository_manifest": "manifests/volcengine/OpenViking/b8e88959f3ab437b4d08514eceaa7221cca470dc.json"
+    }
+  ],
+  "errors": []
+}

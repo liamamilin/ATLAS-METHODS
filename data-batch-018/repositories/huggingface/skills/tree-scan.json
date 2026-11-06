@@ -1,0 +1,33 @@
+{
+  "repository": "huggingface/skills",
+  "commit_sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+  "tree_entries": 203,
+  "candidate_skill_paths": [
+    "hf-mcp/skills/hf-mcp/SKILL.md",
+    "skills/hf-cli/SKILL.md",
+    "skills/hf-cloud-aws-context-discovery/SKILL.md",
+    "skills/hf-cloud-python-env-setup/SKILL.md",
+    "skills/hf-cloud-sagemaker-deployment-planner/SKILL.md",
+    "skills/hf-cloud-sagemaker-iam-preflight/SKILL.md",
+    "skills/hf-cloud-sagemaker-production-defaults/SKILL.md",
+    "skills/hf-cloud-serving-image-selection/SKILL.md",
+    "skills/hf-mem/SKILL.md",
+    "skills/huggingface-best/SKILL.md",
+    "skills/huggingface-community-evals/SKILL.md",
+    "skills/huggingface-datasets/SKILL.md",
+    "skills/huggingface-gradio/SKILL.md",
+    "skills/huggingface-llm-trainer/SKILL.md",
+    "skills/huggingface-local-models/SKILL.md",
+    "skills/huggingface-lora-space-builder/SKILL.md",
+    "skills/huggingface-paper-publisher/SKILL.md",
+    "skills/huggingface-papers/SKILL.md",
+    "skills/huggingface-spaces/SKILL.md",
+    "skills/huggingface-tool-builder/SKILL.md",
+    "skills/huggingface-trackio/SKILL.md",
+    "skills/huggingface-vision-trainer/SKILL.md",
+    "skills/huggingface-zerogpu/SKILL.md",
+    "skills/train-sentence-transformers/SKILL.md",
+    "skills/transformers-js/SKILL.md",
+    "skills/trl-training/SKILL.md"
+  ]
+}

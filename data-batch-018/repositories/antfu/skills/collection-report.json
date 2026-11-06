@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:07.068084+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "antfu/skills",
+      "commit_sha": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 181,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/antfu/skills/f63e9ec7bc85f67364b6596c2d29da87e83ce445.json"
+    }
+  ],
+  "errors": []
+}

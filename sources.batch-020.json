@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "https-deeplearning-ai/sc-agent-skills-files",
+      "repository_url": "https://github.com/https-deeplearning-ai/sc-agent-skills-files",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/https-deeplearning-ai/sc-agent-skills-files"
+        }
+      ],
+      "repository_id": "1143744237",
+      "commit_sha": "438a5a51a68b86a6262835796ae7a671ece58e4f",
+      "batch": "020"
+    },
+    {
+      "repository": "LeoYeAI/agent-master-skills",
+      "repository_url": "https://github.com/LeoYeAI/agent-master-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/LeoYeAI/agent-master-skills"
+        }
+      ],
+      "repository_id": "1170326509",
+      "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+      "batch": "020"
+    },
+    {
+      "repository": "inference-sh/skills",
+      "repository_url": "https://github.com/inference-sh/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/inference-sh/skills"
+        }
+      ],
+      "repository_id": "1146509126",
+      "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150",
+      "batch": "020"
+    },
+    {
+      "repository": "FrancyJGLisboa/agent-skills-platform",
+      "repository_url": "https://github.com/FrancyJGLisboa/agent-skills-platform",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/FrancyJGLisboa/agent-skills-platform"
+        }
+      ],
+      "repository_id": "1078850969",
+      "commit_sha": "0c6900a0597622791d1daaafc1c19b2fead0e8d4",
+      "batch": "020"
+    },
+    {
+      "repository": "google/agents-cli",
+      "repository_url": "https://github.com/google/agents-cli",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/google/agents-cli"
+        }
+      ],
+      "repository_id": "1205137520",
+      "commit_sha": "896e4719c4184841325a301755781d6b3da233ef",
+      "batch": "020"
+    },
+    {
+      "repository": "PrathamLearnsToCode/paper2code",
+      "repository_url": "https://github.com/PrathamLearnsToCode/paper2code",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/PrathamLearnsToCode/paper2code"
+        }
+      ],
+      "repository_id": "1200426344",
+      "commit_sha": "fcffce7a1250659ed74f2a96cdf54595c92306c4",
+      "batch": "020"
+    },
+    {
+      "repository": "memodb-io/Acontext",
+      "repository_url": "https://github.com/memodb-io/Acontext",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/memodb-io/Acontext"
+        }
+      ],
+      "repository_id": "1020834440",
+      "commit_sha": "1ddfd903fd1004672ca9f9a70d92041153ba43d5",
+      "batch": "020"
+    },
+    {
+      "repository": "Memento-Teams/Memento-Skills",
+      "repository_url": "https://github.com/Memento-Teams/Memento-Skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/Memento-Teams/Memento-Skills"
+        }
+      ],
+      "repository_id": "1157386749",
+      "commit_sha": "ee9b9a45efd093d669c06fe318b4b1dceb246d19",
+      "batch": "020"
+    },
+    {
+      "repository": "plugin87/ux-ui-agent-skills",
+      "repository_url": "https://github.com/plugin87/ux-ui-agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/plugin87/ux-ui-agent-skills"
+        }
+      ],
+      "repository_id": "1183286798",
+      "commit_sha": "def84a70fadc3490d80901295a4f1951fdb2cc69",
+      "batch": "020"
+    },
+    {
+      "repository": "softaworks/agent-toolkit",
+      "repository_url": "https://github.com/softaworks/agent-toolkit",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/softaworks/agent-toolkit"
+        }
+      ],
+      "repository_id": "1137485434",
+      "commit_sha": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+      "batch": "020"
+    },
+    {
+      "repository": "coleam00/skills",
+      "repository_url": "https://github.com/coleam00/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/coleam00/skills"
+        }
+      ],
+      "repository_id": "1323419190",
+      "commit_sha": "7f34fd5fead3db1403652377dd59ee00a785f833",
+      "batch": "020"
+    },
+    {
+      "repository": "NVIDIA/SkillSpector",
+      "repository_url": "https://github.com/NVIDIA/SkillSpector",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/NVIDIA/SkillSpector"
+        }
+      ],
+      "repository_id": "1187630119",
+      "commit_sha": "ab36c42f5c364cd828586c637e5f8f00425d465d",
+      "batch": "020"
+    },
+    {
+      "repository": "google/elephant-goldfish-model",
+      "repository_url": "https://github.com/google/elephant-goldfish-model",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/google/elephant-goldfish-model"
+        }
+      ],
+      "repository_id": "1368596582",
+      "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7",
+      "batch": "020"
+    },
+    {
+      "repository": "davila7/claude-code-templates",
+      "repository_url": "https://github.com/davila7/claude-code-templates",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/davila7/claude-code-templates"
+        }
+      ],
+      "repository_id": "1013480284",
+      "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+      "batch": "020"
+    },
+    {
+      "repository": "adobe/skills",
+      "repository_url": "https://github.com/adobe/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/adobe/skills"
+        }
+      ],
+      "repository_id": "1150753215",
+      "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+      "batch": "020"
+    },
+    {
+      "repository": "outsourc-e/hermes-workspace",
+      "repository_url": "https://github.com/outsourc-e/hermes-workspace",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/outsourc-e/hermes-workspace"
+        }
+      ],
+      "repository_id": "1182887460",
+      "commit_sha": "c631425d8baa933f8c61d8447040f4ec8b5f571c",
+      "batch": "020"
+    },
+    {
+      "repository": "aws/agent-toolkit-for-aws",
+      "repository_url": "https://github.com/aws/agent-toolkit-for-aws",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/aws/agent-toolkit-for-aws"
+        }
+      ],
+      "repository_id": "1219009070",
+      "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+      "batch": "020"
+    },
+    {
+      "repository": "google-gemini/gemini-skills",
+      "repository_url": "https://github.com/google-gemini/gemini-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/google-gemini/gemini-skills"
+        }
+      ],
+      "repository_id": "1151113612",
+      "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf",
+      "batch": "020"
+    },
+    {
+      "repository": "lsdefine/GenericAgent",
+      "repository_url": "https://github.com/lsdefine/GenericAgent",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/lsdefine/GenericAgent"
+        }
+      ],
+      "repository_id": "1135791677",
+      "commit_sha": "68d996a4588210aacb39cf79a4974d2743316e64",
+      "batch": "020"
+    },
+    {
+      "repository": "0xNyk/awesome-hermes-agent",
+      "repository_url": "https://github.com/0xNyk/awesome-hermes-agent",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/0xNyk/awesome-hermes-agent"
+        }
+      ],
+      "repository_id": "1189234446",
+      "commit_sha": "9c87ae281f7291702dc6eeb85305ec369578f24e",
+      "batch": "020"
+    },
+    {
+      "repository": "heygen-com/skills",
+      "repository_url": "https://github.com/heygen-com/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/heygen-com/skills"
+        }
+      ],
+      "repository_id": "1140152286",
+      "commit_sha": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "batch": "020"
+    },
+    {
+      "repository": "OpenSenseNova/SenseNova-Skills",
+      "repository_url": "https://github.com/OpenSenseNova/SenseNova-Skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/OpenSenseNova/SenseNova-Skills"
+        }
+      ],
+      "repository_id": "1210155353",
+      "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+      "batch": "020"
+    },
+    {
+      "repository": "numman-ali/openskills",
+      "repository_url": "https://github.com/numman-ali/openskills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/numman-ali/openskills"
+        }
+      ],
+      "repository_id": "1083829346",
+      "commit_sha": "57d933a4f0d5c8659bd8b285f50fb9554360f0b3",
+      "batch": "020"
+    },
+    {
+      "repository": "yaklang/hack-skills",
+      "repository_url": "https://github.com/yaklang/hack-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/yaklang/hack-skills"
+        }
+      ],
+      "repository_id": "1204024367",
+      "commit_sha": "6fbf0bc8d5c71830d62543a308d8744606c43d7c",
+      "batch": "020"
+    }
+  ]
+}

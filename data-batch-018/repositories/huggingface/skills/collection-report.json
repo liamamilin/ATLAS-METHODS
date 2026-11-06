@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:11:20.466130+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 26,
+  "saved_skill_entries": 26,
+  "unique_entry_texts": 26,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "huggingface/skills",
+      "commit_sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 26,
+      "saved_skill_entries": 26,
+      "saved_text_files": 202,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/huggingface/skills/25910b3d0ba31a2ba102f901cdc9e008c278a69c.json"
+    }
+  ],
+  "errors": []
+}

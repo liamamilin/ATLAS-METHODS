@@ -1,0 +1,116 @@
+{
+  "repository": "AIwithhassan/lets-scroll",
+  "commit_sha": "a0605366e8e774b1596a993ecaf564b6de5916cc",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "083f5772340f7228a097bc7716911d3c0f29d0f2",
+      "bytes": 1060,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/LICENSE",
+      "sha256": "c4b96a7a050b85026eb68ac5b5fee2778384b14371aaeac50891dbadd848d309",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5517eee7cd689c8364eedee9e790d81088de4de",
+      "bytes": 7642,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/README.md",
+      "sha256": "6204166191db23eee16437067494f4c6d1bba7d1754b130cb4a30f51abfe4d5d",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/README.md"
+    },
+    {
+      "path": "claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "88d7d485dfc40f2c3bed33e74cacd3f5e534dc2c",
+      "bytes": 798,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/claude-plugin/marketplace.json",
+      "sha256": "886a3d128ca9645e59951a8f53c516825175def3eb247172cfdeba1a07f71ac4",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/claude-plugin/marketplace.json"
+    },
+    {
+      "path": "claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e89ce7660813dacebee7daaeeb685daefff4dbcf",
+      "bytes": 902,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/claude-plugin/plugin.json",
+      "sha256": "f6ed367f9c837d7ee6603329c2dea12a69770956ddfc7fc43c7aea6754d1e0a2",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/claude-plugin/plugin.json"
+    },
+    {
+      "path": "skills/lets-scroll/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "88bd440fa4f2c6d3e0d8b1ab4e5d1f40883efd7b",
+      "bytes": 57278,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/SKILL.md",
+      "sha256": "83d8126791f7d218d766920eafcb53f18d355c2ba7ad855b3e7a566625aafd7a",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/SKILL.md"
+    },
+    {
+      "path": "skills/lets-scroll/references/index-template.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "efb736a63af6f7d2eed9d6c39061bc5830f91d6b",
+      "bytes": 2712,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/index-template.html",
+      "sha256": "f0654905ec3d207b825d5baadfb68a30ebc0a7f7ac529475047ea7f3e08fd099",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/index-template.html"
+    },
+    {
+      "path": "skills/lets-scroll/references/knockout.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7b3bb1d326853fd14f266f920bee2494c4b162df",
+      "bytes": 2855,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/knockout.py",
+      "sha256": "c06bfc916592ba4f3dfd3e37070b20529298707ca3f94c9dcc51d508222e7792",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/knockout.py"
+    },
+    {
+      "path": "skills/lets-scroll/references/pipeline.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8cd86a4314a1c96f942cdf3ce7910410d44d4550",
+      "bytes": 16603,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/pipeline.md",
+      "sha256": "5897b043127a3117ddd0bd289ff30e7a27f23342a2c9b1f0a2ba7f4f735d263c",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/pipeline.md"
+    },
+    {
+      "path": "skills/lets-scroll/references/prompts.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5012f4709a825d98800bbd6aa21dba78f97c7c3",
+      "bytes": 11845,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/prompts.md",
+      "sha256": "782642ab7865db5fa41ce507edaafd05258235738f8f51a7c1802ceeaffbdb3e",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/prompts.md"
+    },
+    {
+      "path": "skills/lets-scroll/references/scrub-engine.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6a8a9d16e3ede42abf449d96360f7d6df6c1188e",
+      "bytes": 28691,
+      "source_url": "https://github.com/AIwithhassan/lets-scroll/blob/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/scrub-engine.js",
+      "sha256": "39f7e3a3a7ae091e7bf8ade02f5452450ff808136f34b25e2d6c5dba962760c4",
+      "status": "saved",
+      "raw_path": "raw/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc/skills/lets-scroll/references/scrub-engine.js"
+    }
+  ]
+}

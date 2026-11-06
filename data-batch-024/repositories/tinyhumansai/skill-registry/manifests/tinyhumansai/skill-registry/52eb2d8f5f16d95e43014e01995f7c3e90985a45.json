@@ -1,0 +1,39 @@
+{
+  "repository": "tinyhumansai/skill-registry",
+  "commit_sha": "52eb2d8f5f16d95e43014e01995f7c3e90985a45",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1b03f4c356e19607b2eb3b86a36f9d136a51468e",
+      "bytes": 1095,
+      "source_url": "https://github.com/tinyhumansai/skill-registry/blob/52eb2d8f5f16d95e43014e01995f7c3e90985a45/README.md",
+      "sha256": "c449c458f085a451e0d5dbb3edf0e37ef59a9b10c2ab7748afdaefc72d0585b5",
+      "status": "saved",
+      "raw_path": "raw/tinyhumansai/skill-registry/52eb2d8f5f16d95e43014e01995f7c3e90985a45/README.md"
+    },
+    {
+      "path": "index.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f58cc4a0da95d626f7bdc7da59aecd2126bf2be2",
+      "bytes": 525,
+      "source_url": "https://github.com/tinyhumansai/skill-registry/blob/52eb2d8f5f16d95e43014e01995f7c3e90985a45/index.json",
+      "sha256": "42037753e880c1402c7ad4eac64af3a8d3eba7e3e0f0951f7ab28b7d6493b8ea",
+      "status": "saved",
+      "raw_path": "raw/tinyhumansai/skill-registry/52eb2d8f5f16d95e43014e01995f7c3e90985a45/index.json"
+    },
+    {
+      "path": "skills/git-summary/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "19c52ffea3db81f72735e3c3d9a62d43e15833ca",
+      "bytes": 1113,
+      "source_url": "https://github.com/tinyhumansai/skill-registry/blob/52eb2d8f5f16d95e43014e01995f7c3e90985a45/skills/git-summary/SKILL.md",
+      "sha256": "103e2d5f77bd60030cdaea32e857b2a7783a4933efd57f32df5ba8e4c368506b",
+      "status": "saved",
+      "raw_path": "raw/tinyhumansai/skill-registry/52eb2d8f5f16d95e43014e01995f7c3e90985a45/skills/git-summary/SKILL.md"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "entry_sha256": "484a65a0122aa70bca7c63c6d36125be57c6e5d9c07112a570999b307ac86ab7",
+    "record_ids": [
+      "6eb0c7ef4a9faefcc88a",
+      "eae17996b7bdcae42971"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "agent-sh/agnix",
+        "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+        "skill_path": "tests/fixtures/invalid/claude-skills/.claude/skills/unknown-frontmatter-field/SKILL.md"
+      },
+      {
+        "repository": "agent-sh/agnix",
+        "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+        "skill_path": "tests/fixtures/invalid/skills/unknown-frontmatter-field/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "bebcbf80b0dc2866336563e84a8481ff05368509ddeb3580c0568927ce6a6adf",
+    "record_ids": [
+      "af2c3db3a5d82d4ad0b4",
+      "6056f15e773c6473b2cd"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "agent-sh/agnix",
+        "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+        "skill_path": "tests/fixtures/amp-skills/valid/.agents/skills/style-guide/SKILL.md"
+      },
+      {
+        "repository": "agent-sh/agnix",
+        "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+        "skill_path": "tests/fixtures/amp-skills/valid/.claude/skills/style-guide/SKILL.md"
+      }
+    ]
+  }
+]

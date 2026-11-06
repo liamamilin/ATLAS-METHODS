@@ -1,0 +1,10 @@
+{
+  "repository": "frankxai/awesome-hermes-agent-skills",
+  "commit_sha": "1f1ae5bd11bffc525fb675836c34225f2f41c2e9",
+  "tree_entries": 37,
+  "candidate_skill_paths": [
+    "skills/coding-agents-superpack/SKILL.md",
+    "skills/ecc-session-guard/SKILL.md",
+    "skills/todo-discipline/SKILL.md"
+  ]
+}

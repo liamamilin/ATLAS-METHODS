@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "qiye45/wechatDownload",
+      "repository_url": "https://github.com/qiye45/wechatDownload",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/qiye45/wechatDownload"
+        }
+      ],
+      "repository_id": "673881338",
+      "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+      "batch": "025"
+    },
+    {
+      "repository": "FredAntB/Spec-Driven-Development",
+      "repository_url": "https://github.com/FredAntB/Spec-Driven-Development",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/FredAntB/Spec-Driven-Development"
+        }
+      ],
+      "repository_id": "1242697027",
+      "commit_sha": "7296108716dea8447938a81fa82bbf7369a0fce2",
+      "batch": "025"
+    }
+  ]
+}

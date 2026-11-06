@@ -1,0 +1,303 @@
+{
+  "repository": "dgk-dev/dgk-gpt",
+  "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b56f60dbf86723767fd129525b2eec140b194b35",
+      "bytes": 48,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/.gitignore",
+      "sha256": "f1e46df2da29b7dd83c10fe46381dc72d9a122e5c3f77b4155b160c3d63e34a8",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ff5935b50645c5a34d53102918f8c5aa2f6cba64",
+      "bytes": 1064,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/LICENSE",
+      "sha256": "9ea79c8a362d2c1b5ed55344ecf67e4d938566dbe8f6b9b18d778c2a25609bfa",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "accdbc962a7b9bb7dfc8e9a687258f99763b13c6",
+      "bytes": 9919,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/README.md",
+      "sha256": "144f7acee8d80d02b562f0c82a1b60177dd0d4867f0dfdc5f32da14775dcb09f",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/README.md"
+    },
+    {
+      "path": "assets/bin/setup-codex.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "7ff061478f5d1b3025fae005e0b97665ff9a38c0",
+      "bytes": 4758,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/bin/setup-codex.sh",
+      "sha256": "35c6230f4a2254190d05e9e4fb34f47108dcc14dac3399a4c68593274e5c9997",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/bin/setup-codex.sh"
+    },
+    {
+      "path": "assets/codex-scripts/codex-statusline.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c4d194af4405a3da6cf7a144e8e8edf7605591a",
+      "bytes": 8060,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/codex-scripts/codex-statusline.py",
+      "sha256": "d46292e4039bb1d8c861f9f62712f7db6a7fa7f16a1363d66190c568e3ccabf0",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/codex-scripts/codex-statusline.py"
+    },
+    {
+      "path": "assets/codex-scripts/codex-tmux.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "b87096267eb0de08a4c352565f83bc9ca324b47d",
+      "bytes": 6466,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/codex-scripts/codex-tmux.sh",
+      "sha256": "2f50e959e8402a44bdd9689ad9256d2fd9b5796f50e9a6c845b6a242eb3f2a41",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/codex-scripts/codex-tmux.sh"
+    },
+    {
+      "path": "assets/pix-devtools/bin/chrome",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f1baa2142bd84174d3ca3b5f34faeef8bd13016",
+      "bytes": 1052,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/bin/chrome",
+      "sha256": "dcde65d73a9f8a234775987ef62e6126dacc8eb62e304f56d579fd3a7de4272f",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/bin/chrome"
+    },
+    {
+      "path": "assets/pix-devtools/bin/tauri-pix",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0085c414dc7e7dceab72090c1002a7b25a243136",
+      "bytes": 3716,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/bin/tauri-pix",
+      "sha256": "67e4d9667c626235452858152813dab747bc3029a9285ec86d07d53be25459d1",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/bin/tauri-pix"
+    },
+    {
+      "path": "assets/pix-devtools/powershell/tauri-dev.ps1",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d99e807b4e98fbd79cd46fa03ba8a3b4d0f0773",
+      "bytes": 4579,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/powershell/tauri-dev.ps1",
+      "sha256": "874bec86b7e08729dc0cbc4b564b53b9ffe495b0b07c4c3d369f314694adee47",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/assets/pix-devtools/powershell/tauri-dev.ps1"
+    },
+    {
+      "path": "bin/dgk-gpt.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "ae8017cb5f5b1846871ff89daeaaed3cbf720ea5",
+      "bytes": 228,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/bin/dgk-gpt.js",
+      "sha256": "3432e0253b7eee60a2bf0369512e4c3cdee1e3831f5bb4c74bbb8b2b4dc48c08",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/bin/dgk-gpt.js"
+    },
+    {
+      "path": "install-remote.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "e24b6a68b123cbba0643c931dfb19719ef8598cd",
+      "bytes": 984,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/install-remote.sh",
+      "sha256": "7de8f249e85c0315f2fba45c5c06b1be64e1753e12c34e037a9aa9364ab069dc",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/install-remote.sh"
+    },
+    {
+      "path": "install.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "2e74b8ba7bde07ff5c192b9a2669e5685ca4a2de",
+      "bytes": 317,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/install.sh",
+      "sha256": "5e958cd2d1c071bc30381d4b0c209c6653f74f5c263abbe59d9e76a4bebbb805",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/install.sh"
+    },
+    {
+      "path": "lib/install.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8a94b6ef93979b8af4a0a2783c73f95423dcf36f",
+      "bytes": 26198,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/lib/install.js",
+      "sha256": "cbc84adde639239ad6f6aefc314592b454d2bb34f1f88bcbeca31ca24e51fcb5",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/lib/install.js"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d6bd0f6b2dff9722890890d85af24f4a1335bd6",
+      "bytes": 958,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/package.json",
+      "sha256": "7d0e3432db99b0157f4b0dd00f19a928e39b1c87dab86a98a5d84ae8607f9f43",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/package.json"
+    },
+    {
+      "path": "skills/cp/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "871d90acaf6c38e1de8f7b9b5e211fa2a6c4fdfe",
+      "bytes": 2632,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/cp/SKILL.md",
+      "sha256": "ae504c6b4144a6132b5630ff0d8f304048ed261ed6522f1242447068dd21e998",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/cp/SKILL.md"
+    },
+    {
+      "path": "skills/cp/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "592ae92055490eb57e35f68d5e48059525ec6056",
+      "bytes": 339,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/cp/agents/openai.yaml",
+      "sha256": "3f1f3d11cca7658a66838dddc297b52a455a93fb10ec3efc1e390ec39ca7dabd",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/cp/agents/openai.yaml"
+    },
+    {
+      "path": "skills/fd/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "18cf2095b46755a5c757a0b6c450858c35063d76",
+      "bytes": 8904,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/fd/SKILL.md",
+      "sha256": "82cd3947d2a227ef5d419d74c9090a779b995b773a5f415d3679edc4e92659dd",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/fd/SKILL.md"
+    },
+    {
+      "path": "skills/ralph/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c9ea534c8760af6b908ae143ab8a99cdc97f340c",
+      "bytes": 1305,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/ralph/SKILL.md",
+      "sha256": "b56eeedcc6527cecaa3018a7326d731456595ed4702477dfc32ab3f88117d635",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/ralph/SKILL.md"
+    },
+    {
+      "path": "skills/re/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "47e5323605ba43d64ce07012e82554b0594bfb0b",
+      "bytes": 2191,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/re/SKILL.md",
+      "sha256": "0c6e6013129ae193a3cdcdb8152505420c72e2d9b02c02dd2efb1a6416acbcad",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/re/SKILL.md"
+    },
+    {
+      "path": "skills/re/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e9bf3f8f30e26119d2ddcbb4ca9777b4ddb37a6",
+      "bytes": 284,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/re/agents/openai.yaml",
+      "sha256": "a56fdd9ab1e017f415fda22cf57bc9ced44f36b495fdddb821d844519391fcde",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/re/agents/openai.yaml"
+    },
+    {
+      "path": "skills/rr/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c087c863c77da54192b1cc5cf71e23b1414d6505",
+      "bytes": 2689,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/rr/SKILL.md",
+      "sha256": "c56a7d1b2248fea8d22270e6486660b8883b33e57ae91f34e1d6447c6aff038d",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/rr/SKILL.md"
+    },
+    {
+      "path": "skills/rrr/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5aadd1ede58e7028fd8fc33611812bd604bd9dc4",
+      "bytes": 2396,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/rrr/SKILL.md",
+      "sha256": "a33e7bf7e0db450364e91de1475c8e9b25b0454f93b40de6e9302568724e7cc6",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/rrr/SKILL.md"
+    },
+    {
+      "path": "skills/test/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "730faa66e9141b3808b3725dacbee4e89a1cd075",
+      "bytes": 3887,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/test/SKILL.md",
+      "sha256": "10e22519d212478b49689f87ea8a822093e1ed76d551ccb84c662e4c15fae2d0",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/test/SKILL.md"
+    },
+    {
+      "path": "skills/test/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2376b3cc4017f5de49e069ca48f6fdf60f8bea28",
+      "bytes": 360,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/skills/test/agents/openai.yaml",
+      "sha256": "8528ac1d4adf99b0dab201f3d9329d4ff4f7dbf8757b33a506eaec43eea3ae18",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/skills/test/agents/openai.yaml"
+    },
+    {
+      "path": "templates/AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dda1081aaa6848d83a3bd038e6b2c5dc3a44d5b6",
+      "bytes": 1137,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/templates/AGENTS.md",
+      "sha256": "b7adee4e1fe278431e42a956523fbe6b5f6e227f0a209e6771a4bfa4d0ce45c9",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/templates/AGENTS.md"
+    },
+    {
+      "path": "templates/AGENTS.pix-devtools.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16861998cded0a3b4782279f9c3ea4ab50d085f2",
+      "bytes": 737,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/templates/AGENTS.pix-devtools.md",
+      "sha256": "6269d07b3a27a2bcf12b4265fb6c9fc2548f73f5aad5ecb2c03b4c9d257fa48c",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/templates/AGENTS.pix-devtools.md"
+    },
+    {
+      "path": "tests/install.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fcaa39330ba2c82e0cb07175dbaccd5b168da067",
+      "bytes": 15963,
+      "source_url": "https://github.com/dgk-dev/dgk-gpt/blob/30243e91266ac2175bf2d02590b0066f469324c0/tests/install.test.js",
+      "sha256": "4f3c9a2eb6647ecf6462ff4d155a84c861192050fa5d641a1a50f6c5999aedf7",
+      "status": "saved",
+      "raw_path": "raw/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0/tests/install.test.js"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "michaelshimeles/rstack",
+  "commit_sha": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+  "tree_entries": 29,
+  "candidate_skill_paths": [
+    "before-and-after/SKILL.md",
+    "code-structure/SKILL.md",
+    "evidence-driven-testing/SKILL.md",
+    "greploop-apps/SKILL.md",
+    "greploop/SKILL.md",
+    "new-feature/SKILL.md",
+    "unslop/SKILL.md"
+  ]
+}

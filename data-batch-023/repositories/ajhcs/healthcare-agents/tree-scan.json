@@ -1,0 +1,15 @@
+{
+  "repository": "ajhcs/healthcare-agents",
+  "commit_sha": "b00a51b654fc31331b005818c4bb1ec7f7817a9f",
+  "tree_entries": 646,
+  "candidate_skill_paths": [
+    "skills/healthcare-agents/SKILL.md",
+    "skills/healthcare-ambulatory-access-backlog/SKILL.md",
+    "skills/healthcare-denial-spike-workup/SKILL.md",
+    "skills/healthcare-discharge-barrier-workplan/SKILL.md",
+    "skills/healthcare-payer-contract-underpayment-review/SKILL.md",
+    "skills/healthcare-prior-authorization-appeal-workup/SKILL.md",
+    "skills/healthcare-survey-readiness-gap-review/SKILL.md",
+    "skills/healthcare-workflow-builder/SKILL.md"
+  ]
+}

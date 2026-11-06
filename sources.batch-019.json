@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "BankrBot/skills",
+      "repository_url": "https://github.com/BankrBot/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/BankrBot/skills"
+        }
+      ],
+      "repository_id": "1142701705",
+      "commit_sha": "059a1e8077f2047b79e301c7c4321a7536932fc5",
+      "batch": "019"
+    },
+    {
+      "repository": "benjitaylor/skills",
+      "repository_url": "https://github.com/benjitaylor/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/benjitaylor/skills"
+        }
+      ],
+      "repository_id": "1433974029",
+      "commit_sha": "299140fafd08df55a9c234e610c3f64af3f45531",
+      "batch": "019"
+    },
+    {
+      "repository": "libukai/awesome-agent-skills",
+      "repository_url": "https://github.com/libukai/awesome-agent-skills",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/libukai/awesome-agent-skills"
+        }
+      ],
+      "repository_id": "1120540348",
+      "commit_sha": "3159af9b36eda650e6e4e7ac7ff8bd59f24f4983",
+      "batch": "019"
+    },
+    {
+      "repository": "itsmostafa/aws-agent-skills",
+      "repository_url": "https://github.com/itsmostafa/aws-agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/itsmostafa/aws-agent-skills"
+        }
+      ],
+      "repository_id": "187398354",
+      "commit_sha": "3ee171adbe5ce02086fec9fde0b437a30958f34f",
+      "batch": "019"
+    },
+    {
+      "repository": "vibe-motion/skills",
+      "repository_url": "https://github.com/vibe-motion/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/vibe-motion/skills"
+        }
+      ],
+      "repository_id": "1184541668",
+      "commit_sha": "4c86c0d016a3ba22ee673428a494f3c44f84111f",
+      "batch": "019"
+    },
+    {
+      "repository": "browserbase/skills",
+      "repository_url": "https://github.com/browserbase/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/browserbase/skills"
+        }
+      ],
+      "repository_id": "1074669117",
+      "commit_sha": "6811ca31163332d9d60309cff48e77f09de37a17",
+      "batch": "019"
+    },
+    {
+      "repository": "KKKKhazix/khazix-skills",
+      "repository_url": "https://github.com/KKKKhazix/khazix-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/KKKKhazix/khazix-skills"
+        }
+      ],
+      "repository_id": "1202599845",
+      "commit_sha": "35bd05b466ceb83a727b28afb54b45b69a6c3b0a",
+      "batch": "019"
+    },
+    {
+      "repository": "wondelai/skills",
+      "repository_url": "https://github.com/wondelai/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/wondelai/skills"
+        }
+      ],
+      "repository_id": "1145158024",
+      "commit_sha": "d8d5d75f83da9f16d8aad5bab5f5b341a4770a30",
+      "batch": "019"
+    },
+    {
+      "repository": "apify/agent-skills",
+      "repository_url": "https://github.com/apify/agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/apify/agent-skills"
+        }
+      ],
+      "repository_id": "1129716674",
+      "commit_sha": "f22557f15941aa6a5bc7539f0408d509d4a32ab6",
+      "batch": "019"
+    },
+    {
+      "repository": "jjyaoao/HelloAgents",
+      "repository_url": "https://github.com/jjyaoao/HelloAgents",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/jjyaoao/HelloAgents"
+        }
+      ],
+      "repository_id": "1054677274",
+      "commit_sha": "c597a7ca46ea9969e5b21d9e130549ab69626ff9",
+      "batch": "019"
+    },
+    {
+      "repository": "affaan-m/ECC",
+      "repository_url": "https://github.com/affaan-m/ECC",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/affaan-m/ECC"
+        }
+      ],
+      "repository_id": "1136590548",
+      "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+      "batch": "019"
+    },
+    {
+      "repository": "google-labs-code/stitch-skills",
+      "repository_url": "https://github.com/google-labs-code/stitch-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/google-labs-code/stitch-skills"
+        }
+      ],
+      "repository_id": "1135847870",
+      "commit_sha": "0337446dadde6f8c94210444e2aa9d546126480f",
+      "batch": "019"
+    },
+    {
+      "repository": "revfactory/harness",
+      "repository_url": "https://github.com/revfactory/harness",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/revfactory/harness"
+        }
+      ],
+      "repository_id": "1193082155",
+      "commit_sha": "92d9f1b29e7af81acebf51a9fcd1832e739a1414",
+      "batch": "019"
+    },
+    {
+      "repository": "Jakeschincariol/instagram-agent-skill",
+      "repository_url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill"
+        }
+      ],
+      "repository_id": "1368447577",
+      "commit_sha": "d03c56bb598be770c60b201f94237e5d1a4268a6",
+      "batch": "019"
+    },
+    {
+      "repository": "WordPress/agent-skills",
+      "repository_url": "https://github.com/WordPress/agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/WordPress/agent-skills"
+        }
+      ],
+      "repository_id": "1137891086",
+      "commit_sha": "7374e6f1c913b3b02b25465d266d9c0e0a04fc96",
+      "batch": "019"
+    },
+    {
+      "repository": "expo/skills",
+      "repository_url": "https://github.com/expo/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/expo/skills"
+        }
+      ],
+      "repository_id": "1106846196",
+      "commit_sha": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+      "batch": "019"
+    },
+    {
+      "repository": "typesafe-ai/skills",
+      "repository_url": "https://github.com/typesafe-ai/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/typesafe-ai/skills"
+        }
+      ],
+      "repository_id": "1345508845",
+      "commit_sha": "302eea662c54bca6730873fe245bec1d69ebc23d",
+      "batch": "019"
+    },
+    {
+      "repository": "RKiding/Awesome-finance-skills",
+      "repository_url": "https://github.com/RKiding/Awesome-finance-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/RKiding/Awesome-finance-skills"
+        }
+      ],
+      "repository_id": "1146462485",
+      "commit_sha": "853f09b4d0baae747759ed31e21ed5c5b2316a5f",
+      "batch": "019"
+    },
+    {
+      "repository": "jihe520/MathModelAgent",
+      "repository_url": "https://github.com/jihe520/MathModelAgent",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/jihe520/MathModelAgent"
+        }
+      ],
+      "repository_id": "924706399",
+      "commit_sha": "03f4eb388b3862b7bde55b508dceaf3d6b39d5ac",
+      "batch": "019"
+    },
+    {
+      "repository": "supabase/agent-skills",
+      "repository_url": "https://github.com/supabase/agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/supabase/agent-skills"
+        }
+      ],
+      "repository_id": "1135501937",
+      "commit_sha": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+      "batch": "019"
+    },
+    {
+      "repository": "markdown-viewer/skills",
+      "repository_url": "https://github.com/markdown-viewer/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/markdown-viewer/skills"
+        }
+      ],
+      "repository_id": "1146800670",
+      "commit_sha": "2672b6920f6c055caf72a916b414ede62ecbfc2e",
+      "batch": "019"
+    },
+    {
+      "repository": "evalstate/fast-agent",
+      "repository_url": "https://github.com/evalstate/fast-agent",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/evalstate/fast-agent"
+        }
+      ],
+      "repository_id": "918778709",
+      "commit_sha": "337c5986c674d5bdebcee938cec727a01ef75cf7",
+      "batch": "019"
+    },
+    {
+      "repository": "NousResearch/hermes-agent-self-evolution",
+      "repository_url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/NousResearch/hermes-agent-self-evolution"
+        }
+      ],
+      "repository_id": "1176753219",
+      "commit_sha": "0a929e3aa20e15cf04dc7c28492a7d41a5139125",
+      "batch": "019"
+    },
+    {
+      "repository": "titanwings/distilly",
+      "repository_url": "https://github.com/titanwings/distilly",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "agent skills",
+          "page": 1,
+          "url": "https://github.com/titanwings/distilly"
+        }
+      ],
+      "repository_id": "1195828337",
+      "commit_sha": "0afc45c29c360ba7bc8260f1bb0bf34e9155f4fa",
+      "batch": "019"
+    }
+  ]
+}

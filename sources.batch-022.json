@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "TerminalSkills/skills",
+      "repository_url": "https://github.com/TerminalSkills/skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/TerminalSkills/skills"
+        }
+      ],
+      "repository_id": "1147994670",
+      "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+      "batch": "022"
+    },
+    {
+      "repository": "Berserk-hub150/skillhawk",
+      "repository_url": "https://github.com/Berserk-hub150/skillhawk",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Berserk-hub150/skillhawk"
+        }
+      ],
+      "repository_id": "1335864397",
+      "commit_sha": "cbdbef03f2b006b25e725c014745521b9ed1f561",
+      "batch": "022"
+    },
+    {
+      "repository": "gapmiss/obsidian-plugin-skill",
+      "repository_url": "https://github.com/gapmiss/obsidian-plugin-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/gapmiss/obsidian-plugin-skill"
+        }
+      ],
+      "repository_id": "1081523808",
+      "commit_sha": "017d9b22ef96b50aa50513d7141b1ff7e80cbb25",
+      "batch": "022"
+    },
+    {
+      "repository": "Narwhal-Lab/MagicSkills",
+      "repository_url": "https://github.com/Narwhal-Lab/MagicSkills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Narwhal-Lab/MagicSkills"
+        }
+      ],
+      "repository_id": "1124765513",
+      "commit_sha": "00f3e8640445b0d91682a670b8ba7cc4465151cb",
+      "batch": "022"
+    },
+    {
+      "repository": "machina-sports/sports-skills",
+      "repository_url": "https://github.com/machina-sports/sports-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/machina-sports/sports-skills"
+        }
+      ],
+      "repository_id": "1159009925",
+      "commit_sha": "48e17c0acdc0c62ae5ac811d7b9b005cd469fd04",
+      "batch": "022"
+    },
+    {
+      "repository": "TheDecipherist/claude-code-mastery",
+      "repository_url": "https://github.com/TheDecipherist/claude-code-mastery",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/TheDecipherist/claude-code-mastery"
+        }
+      ],
+      "repository_id": "1134445014",
+      "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee",
+      "batch": "022"
+    },
+    {
+      "repository": "wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+      "repository_url": "https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit"
+        }
+      ],
+      "repository_id": "1166239178",
+      "commit_sha": "2a6d0958e6966e0003896f94ce5003466e89e91d",
+      "batch": "022"
+    },
+    {
+      "repository": "sno-ai/mda",
+      "repository_url": "https://github.com/sno-ai/mda",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/sno-ai/mda"
+        }
+      ],
+      "repository_id": "965872694",
+      "commit_sha": "03a0f4126bf1ca0f9428618865c9b9dd65fada40",
+      "batch": "022"
+    },
+    {
+      "repository": "elementalsouls/Claude-OSINT",
+      "repository_url": "https://github.com/elementalsouls/Claude-OSINT",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/elementalsouls/Claude-OSINT"
+        }
+      ],
+      "repository_id": "1221922293",
+      "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890",
+      "batch": "022"
+    },
+    {
+      "repository": "fernandotellado/ai-skills",
+      "repository_url": "https://github.com/fernandotellado/ai-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/fernandotellado/ai-skills"
+        }
+      ],
+      "repository_id": "1156594766",
+      "commit_sha": "9d30564450b336a54d27e07991a4bf6a3f6526ea",
+      "batch": "022"
+    },
+    {
+      "repository": "iannuttall/dotagents",
+      "repository_url": "https://github.com/iannuttall/dotagents",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/iannuttall/dotagents"
+        }
+      ],
+      "repository_id": "1129100081",
+      "commit_sha": "7193a940e9b1ab01ab256f3465a0c96830e12b25",
+      "batch": "022"
+    },
+    {
+      "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+      "repository_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules"
+        }
+      ],
+      "repository_id": "1248685391",
+      "commit_sha": "35e32ae45878148a6bd898572a9d15c96711affe",
+      "batch": "022"
+    },
+    {
+      "repository": "alpacahq/alpaca-skills",
+      "repository_url": "https://github.com/alpacahq/alpaca-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/alpacahq/alpaca-skills"
+        }
+      ],
+      "repository_id": "1271379258",
+      "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317",
+      "batch": "022"
+    },
+    {
+      "repository": "Jianing1117/jianing-skills",
+      "repository_url": "https://github.com/Jianing1117/jianing-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Jianing1117/jianing-skills"
+        }
+      ],
+      "repository_id": "1229818152",
+      "commit_sha": "fc9bb033c6e2d64a1e8618cb42b28c311f5c651c",
+      "batch": "022"
+    },
+    {
+      "repository": "seb1n/awesome-ai-agent-skills",
+      "repository_url": "https://github.com/seb1n/awesome-ai-agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/seb1n/awesome-ai-agent-skills"
+        }
+      ],
+      "repository_id": "1155566591",
+      "commit_sha": "75865a5d037a4cdaa7f409a4ec14ab9b0292920b",
+      "batch": "022"
+    },
+    {
+      "repository": "waynesutton/builder-skills",
+      "repository_url": "https://github.com/waynesutton/builder-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/waynesutton/builder-skills"
+        }
+      ],
+      "repository_id": "1133906703",
+      "commit_sha": "82d1ce23d8637f6d0301e6cac9dcdb124711f3b1",
+      "batch": "022"
+    },
+    {
+      "repository": "kvanland/ticktick-cli",
+      "repository_url": "https://github.com/kvanland/ticktick-cli",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/kvanland/ticktick-cli"
+        }
+      ],
+      "repository_id": "1142249769",
+      "commit_sha": "bac930df237127fe8e5680ca4341a04aeac0c549",
+      "batch": "022"
+    },
+    {
+      "repository": "jzOcb/writing-style-skill",
+      "repository_url": "https://github.com/jzOcb/writing-style-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/jzOcb/writing-style-skill"
+        }
+      ],
+      "repository_id": "1191052245",
+      "commit_sha": "d94826e1cd48f5403b82a5a909efdfab96221259",
+      "batch": "022"
+    },
+    {
+      "repository": "aakashg/pm-claude-code-setup",
+      "repository_url": "https://github.com/aakashg/pm-claude-code-setup",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/aakashg/pm-claude-code-setup"
+        }
+      ],
+      "repository_id": "1168031239",
+      "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+      "batch": "022"
+    },
+    {
+      "repository": "Railly/tinte",
+      "repository_url": "https://github.com/Railly/tinte",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Railly/tinte"
+        }
+      ],
+      "repository_id": "703854926",
+      "commit_sha": "7905be3e62819faa4db312d2cbcd0e2991326d0a",
+      "batch": "022"
+    },
+    {
+      "repository": "michaelpersonal/goal-forge",
+      "repository_url": "https://github.com/michaelpersonal/goal-forge",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/michaelpersonal/goal-forge"
+        }
+      ],
+      "repository_id": "1226874555",
+      "commit_sha": "8315c845acda9ced9ce2744fcafc90b6347950e7",
+      "batch": "022"
+    },
+    {
+      "repository": "ythx-101/live-panel-skill",
+      "repository_url": "https://github.com/ythx-101/live-panel-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/ythx-101/live-panel-skill"
+        }
+      ],
+      "repository_id": "1403431984",
+      "commit_sha": "439c9addce7e7ac2b4e384aa847a351926c8f945",
+      "batch": "022"
+    },
+    {
+      "repository": "arpitg1304/robotics-agent-skills",
+      "repository_url": "https://github.com/arpitg1304/robotics-agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/arpitg1304/robotics-agent-skills"
+        }
+      ],
+      "repository_id": "1167626999",
+      "commit_sha": "f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11",
+      "batch": "022"
+    },
+    {
+      "repository": "pickle-an/md-to-docx-skill",
+      "repository_url": "https://github.com/pickle-an/md-to-docx-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/pickle-an/md-to-docx-skill"
+        }
+      ],
+      "repository_id": "1178550238",
+      "commit_sha": "7d8d49cb7690a5438313ba43ecc05d5ec43de8fb",
+      "batch": "022"
+    }
+  ]
+}

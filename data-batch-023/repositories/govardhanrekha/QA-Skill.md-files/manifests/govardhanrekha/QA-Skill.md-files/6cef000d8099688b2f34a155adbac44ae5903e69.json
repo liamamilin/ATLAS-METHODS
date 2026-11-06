@@ -1,0 +1,237 @@
+{
+  "repository": "govardhanrekha/QA-Skill.md-files",
+  "commit_sha": "6cef000d8099688b2f34a155adbac44ae5903e69",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "314b29d5014da0ba32236bd3830a528473087898",
+      "bytes": 11426,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/README.md",
+      "sha256": "cc418d665b7dbec376185d8cb33ebde081a1d248507c42cd22aebdfbdb43a06d",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/README.md"
+    },
+    {
+      "path": "stlc_manual_testing/01_jira-requirement-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d3c97df66f5ea1a91963a5b3dd40ccd0c1adaed",
+      "bytes": 3424,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/01_jira-requirement-analyzer/SKILL.md",
+      "sha256": "13a21282747744610a3eb4fa36921c53df4d673da88cbf1df3f14e97784a41e2",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/01_jira-requirement-analyzer/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/01_jira-requirement-analyzer/scripts/fetch_jira.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f4305fc8aa22524a3976dc391599db5ac46f63ee",
+      "bytes": 1095,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/01_jira-requirement-analyzer/scripts/fetch_jira.sh",
+      "sha256": "d242aaf60c78d3ac5cb8959c9bd9e5616b6fa76ee539e612a11fe4896b855f38",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/01_jira-requirement-analyzer/scripts/fetch_jira.sh"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fc5e2e266048d3ec84a77faf3df417dbafc26fab",
+      "bytes": 2047,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/SKILL.md",
+      "sha256": "7c9e09deb936a903c4cba9442f10542e5239d70a52dd78251f55cfc242f2ca0e",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/context/How_to_Create_TestPlan_VWO.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/context/How_to_Create_TestPlan_VWO.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/context/How_to_Create_TestPlan_VWO.md"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/copilot/test-plan.prompt.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "feb0733caf65898fc2bb3c5c09aeb83869c2c026",
+      "bytes": 1488,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/copilot/test-plan.prompt.md",
+      "sha256": "7602a5ccfeea9e111b19995a564db8804f180b80c9a5b848b221027ef5b47fd8",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/copilot/test-plan.prompt.md"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/references/requirement-checklist.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3ce98a6b99a7a366039eb804ac1425dc5b86aafd",
+      "bytes": 1331,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/references/requirement-checklist.md",
+      "sha256": "931b939f6a6b3ba360f693f8e52711fe1a7dd1da5d7f9f0edddeed3f7271e96c",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/references/requirement-checklist.md"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/scripts/fetch_jira.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f4305fc8aa22524a3976dc391599db5ac46f63ee",
+      "bytes": 1095,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/scripts/fetch_jira.sh",
+      "sha256": "d242aaf60c78d3ac5cb8959c9bd9e5616b6fa76ee539e612a11fe4896b855f38",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/scripts/fetch_jira.sh"
+    },
+    {
+      "path": "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/template/test-plan-template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e05500c4d2978d8b890ee255cb3c1d47d4e5fc77",
+      "bytes": 1093,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/template/test-plan-template.md",
+      "sha256": "070e0422e80c65e2a075e2e4f8dcfa170be2cdddc34a37a70ccabe262f733a60",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/02_testplan-creater-via-jira_LIVE/template/test-plan-template.md"
+    },
+    {
+      "path": "stlc_manual_testing/03-test-design/api-test-designer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cb8f0bad548cad79ce3aeef73f5042e8011a0371",
+      "bytes": 3162,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/03-test-design/api-test-designer/SKILL.md",
+      "sha256": "dd27a08fcfca912d5496e36e08bf18e4da94610f80459fbf8c4cdbb025b8b782",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/03-test-design/api-test-designer/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/03-test-design/test-scenario-designer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d3738f6d47c35180621f13a8892fbb4626904d0c",
+      "bytes": 2963,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/03-test-design/test-scenario-designer/SKILL.md",
+      "sha256": "7e3d33b8224f36e82227987a140e646b408979225a679bd423cc0169f54052d8",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/03-test-design/test-scenario-designer/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/04-test-case-development/test-case-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8d730bfac9449d7e6293d39a933faba8f3e5c2a1",
+      "bytes": 2842,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/04-test-case-development/test-case-writer/SKILL.md",
+      "sha256": "6251d220178375e0cfdc801e785192e4866571a9d171ddd2f895184f1494de02",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/04-test-case-development/test-case-writer/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/04-test-case-development/test-data-generator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "006ea6a09a9bd2c24fc3345903b5fda2c020375f",
+      "bytes": 2768,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/04-test-case-development/test-data-generator/SKILL.md",
+      "sha256": "b98a680dc7471fe0b4c81ab4bb1dc9148fea25c53d6cd2a9d11baf59c69f38d2",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/04-test-case-development/test-data-generator/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/05-test-execution/automation-script-generator/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2e061728c7019145412994f009bde6ce490ae511",
+      "bytes": 2968,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/automation-script-generator/SKILL.md",
+      "sha256": "3505cfd8339052b7dc71f8d49626146f6cbae17d537d39fa0169e0c06ebf4e00",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/automation-script-generator/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/05-test-execution/regression-suite-selector/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c428314d78fa499923f74ccd9a7775b07a47a97b",
+      "bytes": 2749,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/regression-suite-selector/SKILL.md",
+      "sha256": "1238e31cc225896ddc1f7069bea6e3fc4c469b52a411d2fd33ebf724538fab99",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/regression-suite-selector/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/05-test-execution/test-execution-tracker/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "efa774aecbc870f4320bd462b89b1a8b9b9c819c",
+      "bytes": 2886,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/test-execution-tracker/SKILL.md",
+      "sha256": "612820d9e673a97d56a6b32404d349d6f9f51172a55b8b83f0188c969f61bc6a",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/05-test-execution/test-execution-tracker/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/06-defect-management/bug-reporter/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "100dc6f042f443913242ba6e76d9e1bf300a5422",
+      "bytes": 2866,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/bug-reporter/SKILL.md",
+      "sha256": "e8287e5cd2e7267884381045e8c15d8d84f972eb4bb9e4e63d1c7d2ccabe9f54",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/bug-reporter/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/06-defect-management/bug-triage-assistant/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "be71ed35086cb22de465d6dcca1d7fe7068817fa",
+      "bytes": 2839,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/bug-triage-assistant/SKILL.md",
+      "sha256": "bdcb7002e8f29a63bacb6ebb6722560f156f5d392692db2fb38e796a6a09cdcc",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/bug-triage-assistant/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/06-defect-management/rca-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c00a4949c8886f4316e5d09e61f298186eb51d1",
+      "bytes": 2913,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/rca-analyzer/SKILL.md",
+      "sha256": "8c768e5af35b2c4e569c797a1658438719783388234909473dcfd54a0123c891",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/06-defect-management/rca-analyzer/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/07-test-closure/test-closure-reporter/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29cd1e68af3fae80723601b90a1501ee16faca7b",
+      "bytes": 2865,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/07-test-closure/test-closure-reporter/SKILL.md",
+      "sha256": "96930f34eb5fdb7ad3c6136e05fa334c7f702536e37f095f28a53cfd0b9470fd",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/07-test-closure/test-closure-reporter/SKILL.md"
+    },
+    {
+      "path": "stlc_manual_testing/07-test-closure/test-coverage-analyzer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b1d9dbf061bd523ea0171fbc6f1e9393e4deb819",
+      "bytes": 2762,
+      "source_url": "https://github.com/govardhanrekha/QA-Skill.md-files/blob/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/07-test-closure/test-coverage-analyzer/SKILL.md",
+      "sha256": "c1734226f6c5a4da5e89f7d4eebf1e9e19fbcf0024272b9e7515b5cfd3bf8024",
+      "status": "saved",
+      "raw_path": "raw/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69/stlc_manual_testing/07-test-closure/test-coverage-analyzer/SKILL.md"
+    }
+  ]
+}

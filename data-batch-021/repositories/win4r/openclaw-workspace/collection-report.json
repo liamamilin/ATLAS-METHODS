@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:32:33.357106+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "win4r/openclaw-workspace",
+      "commit_sha": "4e81a914b5f4ed52d88e0b31476354f92fcd4be7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 5,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7.json"
+    }
+  ],
+  "errors": []
+}

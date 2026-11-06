@@ -1,0 +1,43 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "71ebf0ef9086ca0007dd2a86bf8d5d62a60dc7e31b7a087aec859342c558efb9",
+  "sources": [
+    {
+      "repository": "FredAntB/Spec-Driven-Development",
+      "commit_sha": "7296108716dea8447938a81fa82bbf7369a0fce2",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 33,
+      "statuses": {
+        "saved": 33
+      }
+    },
+    {
+      "repository": "qiye45/wechatDownload",
+      "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 59,
+      "statuses": {
+        "saved": 31,
+        "non_utf8_or_binary_not_exported": 12,
+        "over_size_limit": 16
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 4304420,
+    "entries_with_license_candidates": 1,
+    "saved": 64,
+    "entries_without_license_candidates": 1,
+    "non_utf8_or_binary_not_exported": 12,
+    "over_size_limit": 16
+  },
+  "verified_candidate_entries": 2,
+  "verified_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "entries_in_duplicate_groups": 0,
+  "duplicate_entries_beyond_first": 0
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "Jakeschincariol/instagram-agent-skill",
+  "commit_sha": "d03c56bb598be770c60b201f94237e5d1a4268a6",
+  "tree_entries": 28,
+  "candidate_skill_paths": [
+    "skills/ig-audit/SKILL.md",
+    "skills/ig-caption/SKILL.md",
+    "skills/ig-carousel/SKILL.md",
+    "skills/ig-comment/SKILL.md",
+    "skills/ig-dm/SKILL.md",
+    "skills/ig-human/SKILL.md",
+    "skills/ig-plan/SKILL.md",
+    "skills/ig-profile/SKILL.md",
+    "skills/ig-reel/SKILL.md",
+    "skills/ig-reply/SKILL.md",
+    "skills/ig-repurpose/SKILL.md",
+    "skills/ig-story/SKILL.md",
+    "skills/ig-viral/SKILL.md"
+  ]
+}

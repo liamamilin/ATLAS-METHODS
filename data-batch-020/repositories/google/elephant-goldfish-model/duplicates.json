@@ -1,0 +1,58 @@
+[
+  {
+    "entry_sha256": "2c107ecd3751635df1eedef261c7e14a79e7bb9429d20753c3f0df5834e1dbec",
+    "record_ids": [
+      "91413cd1f1dbf7323879",
+      "28f71c161b3e488eb043"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "4a63ecf9db2a512f10da122b3767fdd1d501ae28d2d1db9865534557fe0f961b",
+    "record_ids": [
+      "13b20839ae31d637ba2b",
+      "e8880530245359f6c4ed"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "844b174055d32a7394f1096964a289987272109fff531a080fc9c3c9acef26fa",
+    "record_ids": [
+      "00730451f9dc44ddeced",
+      "9deb686b8657439c69b4"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "a17ee3b983bcd77000099bedf014db84a7a6e6f3245c712acd84a4f119b6b58c",
+    "record_ids": [
+      "086fa7f3dca9bf209fee",
+      "9d32a3a5e662c77a6e89"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "a660b44e3cfdd23da8e8ecff2ff1aa01accb96ad2a823b67c90f89fc188ec7e8",
+    "record_ids": [
+      "89f20a9d638bf7fd3434",
+      "d20bcc6b62e08fdc7270"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "c000ffe2e77a9fe74ee6915b314e1547337c95c79a19014c44fd976dc6511476",
+    "record_ids": [
+      "3d3114b643931554a20c",
+      "e46325b03507ab2357e0"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "fe12b8712f88b51780d817e6c8f0ac5e7a29961ee111d0fd19bfc2f738d2f531",
+    "record_ids": [
+      "4a9e50fded4ad89e2b6d",
+      "ef44bf6f9f6a9604d83e"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

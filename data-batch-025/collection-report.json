@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-11-06T12:55:52.195706+00:00",
+  "requested_sources": 2,
+  "completed_sources": 2,
+  "indexed_snapshots": 2,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 0,
+  "pending_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "distinct_skill_paths": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "sources": [
+    {
+      "repository": "FredAntB/Spec-Driven-Development",
+      "commit_sha": "7296108716dea8447938a81fa82bbf7369a0fce2",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 33,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/FredAntB/Spec-Driven-Development/manifests/FredAntB/Spec-Driven-Development/7296108716dea8447938a81fa82bbf7369a0fce2.json"
+    },
+    {
+      "repository": "qiye45/wechatDownload",
+      "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 31,
+      "files_not_exported": 28,
+      "repository_manifest": "repositories/qiye45/wechatDownload/manifests/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 1
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:41:32.193596+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "spboyer/sensei",
+      "commit_sha": "bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 170,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/spboyer/sensei/bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f.json"
+    }
+  ],
+  "errors": []
+}

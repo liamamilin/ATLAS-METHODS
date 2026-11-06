@@ -1,0 +1,23 @@
+{
+  "repository": "google/agents-cli",
+  "commit_sha": "896e4719c4184841325a301755781d6b3da233ef",
+  "tree_entries": 600,
+  "candidate_skill_paths": [
+    "extensions/claude/template/.agents/skills/agents-cli-claude/SKILL.md",
+    "extensions/langchain/template/.agents/skills/agents-cli-langchain/SKILL.md",
+    "skills/google-agents-cli-adk-code/SKILL.md",
+    "skills/google-agents-cli-deploy/SKILL.md",
+    "skills/google-agents-cli-eval/SKILL.md",
+    "skills/google-agents-cli-observability/SKILL.md",
+    "skills/google-agents-cli-publish/SKILL.md",
+    "skills/google-agents-cli-scaffold/SKILL.md",
+    "skills/google-agents-cli-workflow/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-adk-code/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-deploy/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-eval/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-observability/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-publish/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-scaffold/SKILL.md",
+    "src/google/agents/cli/skills/data/google-agents-cli-workflow/SKILL.md"
+  ]
+}

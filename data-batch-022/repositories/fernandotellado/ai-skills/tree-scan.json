@@ -1,0 +1,12 @@
+{
+  "repository": "fernandotellado/ai-skills",
+  "commit_sha": "9d30564450b336a54d27e07991a4bf6a3f6526ea",
+  "tree_entries": 31,
+  "candidate_skill_paths": [
+    "humanizar-texto-es/SKILL.md",
+    "humanize-text-en/SKILL.md",
+    "wp-plugin-development/SKILL.md",
+    "wp-plugin-performance/SKILL.md",
+    "wp-plugin-security/SKILL.md"
+  ]
+}

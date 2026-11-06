@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "cisco-ai-defense/skill-scanner",
+      "commit_sha": "f7824651ffeb9b89f7682ddd97d6fba8fe9c10b1"
+    }
+  ]
+}

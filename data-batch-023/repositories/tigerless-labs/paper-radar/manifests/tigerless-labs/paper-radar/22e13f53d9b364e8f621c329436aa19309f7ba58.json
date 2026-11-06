@@ -1,0 +1,83 @@
+{
+  "repository": "tigerless-labs/paper-radar",
+  "commit_sha": "22e13f53d9b364e8f621c329436aa19309f7ba58",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b4c473443864db7b7b8a94885868359da261079d",
+      "bytes": 42,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/.gitignore",
+      "sha256": "13fa04462be2afdfba31fdc997aaff58ff67f4e1b5a1d82dc9f81dd04a876074",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6f0618654690600158e73e99ab7f185d08057d8",
+      "bytes": 1347,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/LICENSE",
+      "sha256": "10a58c15a681f26378562fb9d3c0e119f779f17e96f35763da69b98e8d3e9624",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "165eb7250f7d3e49833b081234c1ef68229270a0",
+      "bytes": 6491,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/README.md",
+      "sha256": "01af4d96dd1f140858a019606dc95c002b6db561ad2d8ce0678d653c4b2db822",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/README.md"
+    },
+    {
+      "path": "skills/paper-radar/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "41bcaccec44d21ab3de25f560e82bd3587d6119f",
+      "bytes": 9720,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/SKILL.md",
+      "sha256": "b26f9f881e30c5f6c548ea66afc21a4367f3a92dacf91d93fa813469aeb29559",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/SKILL.md"
+    },
+    {
+      "path": "skills/paper-radar/scripts/affiliation.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f539d3aed3f251a1f6ff216d0bfca26050e53375",
+      "bytes": 9807,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/affiliation.py",
+      "sha256": "8540970c47f523a53b9871bc2757622be68194fd66b810f672bcddb283c4b453",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/affiliation.py"
+    },
+    {
+      "path": "skills/paper-radar/scripts/data/ror_anchors.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "368cbd724836330ad87556e89e02e9594fcca6f5",
+      "bytes": 7192,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/data/ror_anchors.json",
+      "sha256": "7766fc8a8021d72e3697fb6a23ca4510419797c7a900e061cf197fe96a140d0c",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/data/ror_anchors.json"
+    },
+    {
+      "path": "skills/paper-radar/scripts/paper_radar.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "01af23b68abad882b4de0404049a77ff1bf842e3",
+      "bytes": 15285,
+      "source_url": "https://github.com/tigerless-labs/paper-radar/blob/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/paper_radar.py",
+      "sha256": "2275b298dac5817c44d867af42916bfe9263911a637b32bbb802e958b97dd32c",
+      "status": "saved",
+      "raw_path": "raw/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58/skills/paper-radar/scripts/paper_radar.py"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "repository": "gapmiss/obsidian-plugin-skill",
+  "commit_sha": "017d9b22ef96b50aa50513d7141b1ff7e80cbb25",
+  "files": [
+    {
+      "path": ".agents/skills/obsidian/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4b491193622c8527bee92d32ea31fc4d46a1cecc",
+      "bytes": 19599,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/SKILL.md",
+      "sha256": "b8036421add31e37c57304c6951d5deb3cd7eaf07f1520736cfdc291cc42b423",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/SKILL.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/accessibility.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "91afb68a3190739055145f91fe45dd67608b5378",
+      "bytes": 8161,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/accessibility.md",
+      "sha256": "7a27966d0ec5e0c064a6514f12d8c1ed988a5708b06eb488a4cf5aa766d31380",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/accessibility.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/code-quality.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ed73f101df59ef9c9413ae01e165ab57166eee59",
+      "bytes": 20966,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/code-quality.md",
+      "sha256": "86db7ac2df5dd309d3f004c861a1777cc402971466f87486b3c10b9b509c8bcf",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/code-quality.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/community-scanner.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e50d4e39930c80334da3723606a00ee294dc790a",
+      "bytes": 11014,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/community-scanner.md",
+      "sha256": "bad86db84430e7b97f0e1a9128db01da00da66cd50edc5b181cbd4b53278e236",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/community-scanner.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/css-styling.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb9f4b5231d91f4c50cc280b1668c43db8dac464",
+      "bytes": 10236,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/css-styling.md",
+      "sha256": "58049ed4006eb3bfee32d0c52066df29bef824a227907447fb6c3cde7f0dbb78",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/css-styling.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/eslint-setup.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9bfc3047cb317b9fba4347e1e86b31e899488fdf",
+      "bytes": 51981,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/eslint-setup.md",
+      "sha256": "f6113d7095a85b936ffae824fee31d8e2b8ba656d456aee54979061ce999a55c",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/eslint-setup.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/file-operations.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2527d6b1191342ef54ba2c1f6cc373657ca19d33",
+      "bytes": 5789,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/file-operations.md",
+      "sha256": "33f6385721ee924132a62d727057ed82cc5070580652301898b5fa73cd8f7d85",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/file-operations.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/memory-management.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "def69955fc8c19e45e6c9915fecfe797be3100c6",
+      "bytes": 6236,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/memory-management.md",
+      "sha256": "5d2467012c6ccf47e05235364b2358d5bb91575496816193e926e5ed3249d838",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/memory-management.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/submission.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ff4d42eb7692e7f19af2506732c4df4de3d66b6f",
+      "bytes": 5246,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/submission.md",
+      "sha256": "0dddf60371d76a065a7ca90f00b792a7bf860c5753c44f073ed104dbebf3876f",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/submission.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/type-safety.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "467d41fce2ddd7971e5fc86b261802e511086bcd",
+      "bytes": 1571,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/type-safety.md",
+      "sha256": "e36d40c881b046bc6cd28ff487e5c616da9d7499c81a81afc7167ec6f3ceefe6",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/type-safety.md"
+    },
+    {
+      "path": ".agents/skills/obsidian/reference/ui-ux.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "70cd01154f61c207a5621f677bb12ed3a24f7206",
+      "bytes": 23274,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/ui-ux.md",
+      "sha256": "868697977ac5c3bd1e14fdd4fb3b59b7151f4ae0d71b9875d77ca92e1a553b5e",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.agents/skills/obsidian/reference/ui-ux.md"
+    },
+    {
+      "path": ".claude/commands/create-plugin.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8c7fcfeb76037103d092c0455622d6215841eb83",
+      "bytes": 1824,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.claude/commands/create-plugin.md",
+      "sha256": "55325ba8342fbed376ec7320ccb62f6a7f49c43fa9e2f1a3b662d2de87abd8e7",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.claude/commands/create-plugin.md"
+    },
+    {
+      "path": ".claude/commands/obsidian.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9533d4bff9796f6c3ff1108fe794f530c03da5b0",
+      "bytes": 406,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.claude/commands/obsidian.md",
+      "sha256": "1411dc60b69ded571307ad7ee2e2068d354b713aee2ff9f64fd36ae14c03362b",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.claude/commands/obsidian.md"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "91e9625de628b58eec0f8b218cb05124f5a8d785",
+      "bytes": 15,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.github/FUNDING.yml",
+      "sha256": "6af7d3ae699e0627e8d4b2e3d12710f0e556febdbdb680900d1aed7f706b4153",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.github/FUNDING.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6f2cb64e674081a0cc0607d49df55a49857d76a5",
+      "bytes": 1439,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.gitignore",
+      "sha256": "be7e5905c568c55735698dc4a5e9ae56fd3b6e4a8531d769ce4032b131162075",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2c94dfa552b04ed9e58d2e1d60c94f15acc85a45",
+      "bytes": 1064,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/LICENSE",
+      "sha256": "a5352f009acbf038b59f6b65b65e5b9c457604653e4a2096d5d751b1b9b20f07",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e7ba6002c1c19f7058ffac90a8095a5cda8ae69c",
+      "bytes": 20959,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/README.md",
+      "sha256": "2a0777bc305cd6e60db7b34a21348aa758a30b3a939310a824f9e4db95fa6328",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/README.md"
+    },
+    {
+      "path": "install-skill.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "bf59733d8813c232f55adcac10e0108044639aee",
+      "bytes": 5722,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/install-skill.sh",
+      "sha256": "13fe3490e784108c69893d6ac19a7d7027bf0022cf14c9f0bb9af4992afad9a0",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/install-skill.sh"
+    },
+    {
+      "path": "tools/create-plugin.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "bf95e5ef3a1613a87cc4073509ecbca937b018eb",
+      "bytes": 17135,
+      "source_url": "https://github.com/gapmiss/obsidian-plugin-skill/blob/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/tools/create-plugin.js",
+      "sha256": "701f8d2741e3e95db30a5764304d11df4ab7e8f9d2a9bb9356005567de2f06d1",
+      "status": "saved",
+      "raw_path": "raw/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25/tools/create-plugin.js"
+    }
+  ]
+}

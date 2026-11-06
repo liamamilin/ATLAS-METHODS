@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:20:48.092267+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 16,
+  "saved_skill_entries": 16,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 7,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "google/agents-cli",
+      "commit_sha": "896e4719c4184841325a301755781d6b3da233ef",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 591,
+      "files_not_exported": 9,
+      "repository_manifest": "manifests/google/agents-cli/896e4719c4184841325a301755781d6b3da233ef.json"
+    }
+  ],
+  "errors": []
+}

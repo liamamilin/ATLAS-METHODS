@@ -1,0 +1,215 @@
+{
+  "repository": "google-gemini/gemini-skills",
+  "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dfb7314c02a5ee0e420695b47613675760b9ef21",
+      "bytes": 486,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.agents/plugins/marketplace.json",
+      "sha256": "4a73791678ac3e1802b223be7fdc957bf99dd7980bc70de6eb3599548c62c7e6",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.agents/plugins/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cdf02239720539379727b4aed25a6a6e8e1747ac",
+      "bytes": 405,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.claude-plugin/marketplace.json",
+      "sha256": "16b2bd19d2cd387f2594786ee174cbd8d8d5cb34c4eb8e729a87d62969708647",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2f0c67a83a5b9d180dccec52647bcfcd69c896bb",
+      "bytes": 369,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.claude-plugin/plugin.json",
+      "sha256": "248057b7f40bb07ae2e20098162db2efcd9e3701801e195eadb16f631ab26a0c",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "69addb6752e081182765587b325d83bbd04807fd",
+      "bytes": 393,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.codex-plugin/plugin.json",
+      "sha256": "4c338db8ee57e8c136301c2cd48c4b7885d3f045d7b240ace3b903d85a16d3d1",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.codex-plugin/plugin.json"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "69addb6752e081182765587b325d83bbd04807fd",
+      "bytes": 393,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.cursor-plugin/plugin.json",
+      "sha256": "4c338db8ee57e8c136301c2cd48c4b7885d3f045d7b240ace3b903d85a16d3d1",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.cursor-plugin/plugin.json"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f0352eeee126cb72f2293df3a4edb096362cf2e3",
+      "bytes": 3760,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.gitignore",
+      "sha256": "401025ff60a060eae192211fff726ee084725289b914955d5541480d724d1443",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "bytes": 11357,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e1f3e64117f2cca2d0e625d83ec02c21f00a2b4b",
+      "bytes": 4643,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/README.md",
+      "sha256": "aabef86e1198feb424d2cda1d93dd87d6cc5209f2fa792d96442fb53c20547a9",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/README.md"
+    },
+    {
+      "path": "plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2f0c67a83a5b9d180dccec52647bcfcd69c896bb",
+      "bytes": 369,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/plugin.json",
+      "sha256": "248057b7f40bb07ae2e20098162db2efcd9e3701801e195eadb16f631ab26a0c",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/plugin.json"
+    },
+    {
+      "path": "skills/gemini-api-cli/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b4d652ebb6064fe489b3e07a0b3485835f501b6e",
+      "bytes": 12618,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-cli/SKILL.md",
+      "sha256": "c157440c790f40adbf4e32a66904777c6f1bf58b65ac4bdb4f36a61518e2fdd1",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-cli/SKILL.md"
+    },
+    {
+      "path": "skills/gemini-api-dev/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d97d8587dc68881f6f02de094d9fdbd2a58d1eb",
+      "bytes": 20986,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-dev/SKILL.md",
+      "sha256": "0d057d67451daf4df4c7fd2619e51a8074920109130bc1d4856fc65524840fdc",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-dev/SKILL.md"
+    },
+    {
+      "path": "skills/gemini-api-dev/references/migration.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "202d181679d3198985052656c2841df67dcc1f48",
+      "bytes": 16551,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-dev/references/migration.md",
+      "sha256": "8c3a8c36f393db28514fe2ac7f006f2f4b0e3db73ece4e4583201546a255948b",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-api-dev/references/migration.md"
+    },
+    {
+      "path": "skills/gemini-live-api-dev/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2b2a16b82fab501f31746f0c71999b856117d84a",
+      "bytes": 18616,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-live-api-dev/SKILL.md",
+      "sha256": "00f63eafd2ca15b07421a0e744d37bd602463c08d1acafa7930f3a4d583b590f",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-live-api-dev/SKILL.md"
+    },
+    {
+      "path": "skills/gemini-live-api-dev/references/migration.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aef1fe265b43cdde55e2cee19101bb058c672062",
+      "bytes": 8946,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-live-api-dev/references/migration.md",
+      "sha256": "407705de5aef62e3298929c7255cc42e733bd2b0d493b3df8f242a5011051bc4",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-live-api-dev/references/migration.md"
+    },
+    {
+      "path": "skills/gemini-omni-flash-api/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "925cc491554bcb9b0973abaf3900ce2258e0c31f",
+      "bytes": 25455,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/SKILL.md",
+      "sha256": "731dc8622cbeb730d8f6f6739a919d62b2a035e90fccec5bdc921672dc1bf8c2",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/SKILL.md"
+    },
+    {
+      "path": "skills/gemini-omni-flash-api/scripts/upload_file.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "1ecb3adee453f31d0cd208574f4afdf1fc88b8dc",
+      "bytes": 14682,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/upload_file.py",
+      "sha256": "9cf738db76e3849c813b2968655d41e6b245f4cdba9e9c8de8444f36135e0a72",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/upload_file.py"
+    },
+    {
+      "path": "skills/gemini-omni-flash-api/scripts/video/generate_video.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "67ed6c725a42b61b3797926bc3ab67ccbc007620",
+      "bytes": 32217,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/generate_video.py",
+      "sha256": "820c6f5e59758a331b54387d034645663cbe882fce537a6e59fa75266325414a",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/generate_video.py"
+    },
+    {
+      "path": "skills/gemini-omni-flash-api/scripts/video/inspect_video.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "032c899b908b37d9282c4741e6447b1a4b62e4b5",
+      "bytes": 6359,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/inspect_video.py",
+      "sha256": "bc5352b51cd051c24965b3bca1e74d833cb6f28731323d525baf0fec600939e3",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/inspect_video.py"
+    },
+    {
+      "path": "skills/gemini-omni-flash-api/scripts/video/prep_video.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "dbe83922d798295e50b4ae352de61dc2e2e06e6e",
+      "bytes": 10756,
+      "source_url": "https://github.com/google-gemini/gemini-skills/blob/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/prep_video.py",
+      "sha256": "80e77de075fc997b51d2b1a17dcb329d7e36253ead8e265ad5262c61905085a5",
+      "status": "saved",
+      "raw_path": "raw/google-gemini/gemini-skills/7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf/skills/gemini-omni-flash-api/scripts/video/prep_video.py"
+    }
+  ]
+}

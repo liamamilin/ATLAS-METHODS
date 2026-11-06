@@ -1,0 +1,25 @@
+{
+  "repository": "browserbase/skills",
+  "commit_sha": "6811ca31163332d9d60309cff48e77f09de37a17",
+  "tree_entries": 199,
+  "candidate_skill_paths": [
+    "skills/add-webmcp/SKILL.md",
+    "skills/agent-experience/SKILL.md",
+    "skills/autobrowse/SKILL.md",
+    "skills/browser-to-api/SKILL.md",
+    "skills/browser-trace/SKILL.md",
+    "skills/browser-use-to-stagehand/SKILL.md",
+    "skills/browser/SKILL.md",
+    "skills/company-research/SKILL.md",
+    "skills/competitor-analysis/SKILL.md",
+    "skills/cookie-sync/SKILL.md",
+    "skills/event-prospecting/SKILL.md",
+    "skills/fetch/SKILL.md",
+    "skills/functions/SKILL.md",
+    "skills/optimize-agent-prompt/SKILL.md",
+    "skills/safe-browser/SKILL.md",
+    "skills/search/SKILL.md",
+    "skills/ui-test/SKILL.md",
+    "skills/webmcp-gen/SKILL.md"
+  ]
+}

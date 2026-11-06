@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:37:18.701440+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 10,
+  "saved_skill_entries": 10,
+  "unique_entry_texts": 10,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "elementalsouls/Claude-OSINT",
+      "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 84,
+      "files_not_exported": 3,
+      "repository_manifest": "manifests/elementalsouls/Claude-OSINT/c359ec1b44d01d324ba98698277e96ccbcd3e890.json"
+    }
+  ],
+  "errors": []
+}

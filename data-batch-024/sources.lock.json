@@ -1,0 +1,119 @@
+{
+  "sources": [
+    {
+      "repository": "AIwithhassan/lets-scroll",
+      "commit_sha": "a0605366e8e774b1596a993ecaf564b6de5916cc",
+      "collection_root": "repositories/AIwithhassan/lets-scroll"
+    },
+    {
+      "repository": "DominikTobureto/awesome-grok-build",
+      "commit_sha": "9125e026dddc2c3e5884f2db5cc56436c7e71665",
+      "collection_root": "repositories/DominikTobureto/awesome-grok-build"
+    },
+    {
+      "repository": "GODGOD126/self-improving-for-codex",
+      "commit_sha": "ae5004343368c7fb9d04691cec7e2df466354328",
+      "collection_root": "repositories/GODGOD126/self-improving-for-codex"
+    },
+    {
+      "repository": "Helpercraft/helpercraft",
+      "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+      "collection_root": "repositories/Helpercraft/helpercraft"
+    },
+    {
+      "repository": "LOGIN-TB/claude-skills",
+      "commit_sha": "1bcf6c4bd4ed539ffa55e274cb7641b963d12276",
+      "collection_root": "repositories/LOGIN-TB/claude-skills"
+    },
+    {
+      "repository": "LukeRenton/explore-claude-code",
+      "commit_sha": "02245e611be86b8ce62b1ff5e9b4f6b16aa10f22",
+      "collection_root": "repositories/LukeRenton/explore-claude-code"
+    },
+    {
+      "repository": "ProxymanApp/proxyman-SKILL.md",
+      "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+      "collection_root": "repositories/ProxymanApp/proxyman-SKILL.md"
+    },
+    {
+      "repository": "Tencent/SkillHone",
+      "commit_sha": "773d54d11aaa6c00d45720e2e501b6d8bfa8f590",
+      "collection_root": "repositories/Tencent/SkillHone"
+    },
+    {
+      "repository": "Worldbuilder013/HEXIS",
+      "commit_sha": "96be2719ee79fc5071dc7eb2aeed816dc03aaa6c",
+      "collection_root": "repositories/Worldbuilder013/HEXIS"
+    },
+    {
+      "repository": "adriannoes/awesome-agentic-ai",
+      "commit_sha": "e797ed58cfe6dd6453fe7632f89d7226d203f6f6",
+      "collection_root": "repositories/adriannoes/awesome-agentic-ai"
+    },
+    {
+      "repository": "aliyun/maxcompute-semantic",
+      "commit_sha": "d09554d8df1dfe9c06ded046451cdb99fc81dce3",
+      "collection_root": "repositories/aliyun/maxcompute-semantic"
+    },
+    {
+      "repository": "dbwls99706/ros2-engineering-skills",
+      "commit_sha": "f0de84dfedd67b067ccc6d2851e681529606930c",
+      "collection_root": "repositories/dbwls99706/ros2-engineering-skills"
+    },
+    {
+      "repository": "dgk-dev/dgk-gpt",
+      "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0",
+      "collection_root": "repositories/dgk-dev/dgk-gpt"
+    },
+    {
+      "repository": "feichanggege/ecommerce-visual-copywriting-skill",
+      "commit_sha": "7fd4abaa5a280dddf414ccc1372d886bef702cba",
+      "collection_root": "repositories/feichanggege/ecommerce-visual-copywriting-skill"
+    },
+    {
+      "repository": "fivetaku/claude-office-skills",
+      "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab",
+      "collection_root": "repositories/fivetaku/claude-office-skills"
+    },
+    {
+      "repository": "frankxai/awesome-hermes-agent-skills",
+      "commit_sha": "1f1ae5bd11bffc525fb675836c34225f2f41c2e9",
+      "collection_root": "repositories/frankxai/awesome-hermes-agent-skills"
+    },
+    {
+      "repository": "jeremylongshore/excel-analyst-pro-skill-md",
+      "commit_sha": "d4997388ed5243b9dbefdac409a7209a2d649a40",
+      "collection_root": "repositories/jeremylongshore/excel-analyst-pro-skill-md"
+    },
+    {
+      "repository": "skillmds/skillmd",
+      "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+      "collection_root": "repositories/skillmds/skillmd"
+    },
+    {
+      "repository": "tigerless-labs/design-harness",
+      "commit_sha": "9aca84e8c4721d4e7623df5f4d67153477ec40a5",
+      "collection_root": "repositories/tigerless-labs/design-harness"
+    },
+    {
+      "repository": "tinyhumansai/skill-registry",
+      "commit_sha": "52eb2d8f5f16d95e43014e01995f7c3e90985a45",
+      "collection_root": "repositories/tinyhumansai/skill-registry"
+    },
+    {
+      "repository": "tizzy916/humanities-writing-companion",
+      "commit_sha": "e097ff629f6575af1b2ec129afa7b23f30d2a39c",
+      "collection_root": "repositories/tizzy916/humanities-writing-companion"
+    },
+    {
+      "repository": "tomkrikorian/visionOSAgents",
+      "commit_sha": "c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc",
+      "collection_root": "repositories/tomkrikorian/visionOSAgents"
+    },
+    {
+      "repository": "wasp-lang/open-saas",
+      "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11",
+      "collection_root": "repositories/wasp-lang/open-saas"
+    }
+  ]
+}

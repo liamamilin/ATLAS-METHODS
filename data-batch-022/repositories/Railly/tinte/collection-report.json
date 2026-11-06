@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:38:21.701839+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Railly/tinte",
+      "commit_sha": "7905be3e62819faa4db312d2cbcd0e2991326d0a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 721,
+      "files_not_exported": 27,
+      "repository_manifest": "manifests/Railly/tinte/7905be3e62819faa4db312d2cbcd0e2991326d0a.json"
+    }
+  ],
+  "errors": []
+}

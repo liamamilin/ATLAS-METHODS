@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:43:30.651181+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tmchow/agent-skills",
+      "commit_sha": "8e232f001fff3590b1420f2236923137ddc05bfe",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 18,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe.json"
+    }
+  ],
+  "errors": []
+}

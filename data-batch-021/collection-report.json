@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-11-06T12:34:14.971656+00:00",
+  "requested_sources": 24,
+  "completed_sources": 19,
+  "indexed_snapshots": 19,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 5,
+  "pending_sources": 0,
+  "candidate_skill_files": 644,
+  "saved_skill_entries": 644,
+  "distinct_skill_paths": 644,
+  "unique_entry_texts": 642,
+  "duplicate_entry_groups": 2,
+  "sources": [
+    {
+      "repository": "K-Dense-AI/mimeo",
+      "commit_sha": "a4cea1842a24515cda354a3aa9eb9763677a3cdd",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 262,
+      "files_not_exported": 21,
+      "repository_manifest": "repositories/K-Dense-AI/mimeo/manifests/K-Dense-AI/mimeo/a4cea1842a24515cda354a3aa9eb9763677a3cdd.json"
+    },
+    {
+      "repository": "SnailSploit/Claude-Red",
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 79,
+      "saved_skill_entries": 79,
+      "saved_text_files": 95,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/SnailSploit/Claude-Red/manifests/SnailSploit/Claude-Red/a8de813edc9f66f60d44cfe42d47750e89d9930b.json"
+    },
+    {
+      "repository": "Yusuke710/manim-skill",
+      "commit_sha": "a0048d9e265499038f34a9aa58ff16d306b5034c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 12,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Yusuke710/manim-skill/manifests/Yusuke710/manim-skill/a0048d9e265499038f34a9aa58ff16d306b5034c.json"
+    },
+    {
+      "repository": "agent-sh/agnix",
+      "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 88,
+      "saved_skill_entries": 88,
+      "saved_text_files": 40222,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/agent-sh/agnix/manifests/agent-sh/agnix/4926685333ad34df98c6196d3508c466561b439c.json"
+    },
+    {
+      "repository": "alchaincyf/huashu-md-html",
+      "commit_sha": "5826f83f3050c19aa45acdd7f9405af48011736f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 30,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/alchaincyf/huashu-md-html/manifests/alchaincyf/huashu-md-html/5826f83f3050c19aa45acdd7f9405af48011736f.json"
+    },
+    {
+      "repository": "bergside/awesome-design-skills",
+      "commit_sha": "f631a09b4fcc0166f2e2c1a8c81906ef680c57e8",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 67,
+      "saved_skill_entries": 67,
+      "saved_text_files": 137,
+      "files_not_exported": 78,
+      "repository_manifest": "repositories/bergside/awesome-design-skills/manifests/bergside/awesome-design-skills/f631a09b4fcc0166f2e2c1a8c81906ef680c57e8.json"
+    },
+    {
+      "repository": "blacktop/ipsw-skill",
+      "commit_sha": "1a797280aa27481e646be89f334784ad04d315c6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 24,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/blacktop/ipsw-skill/manifests/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6.json"
+    },
+    {
+      "repository": "callstackincubator/agent-skills",
+      "commit_sha": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 149,
+      "files_not_exported": 28,
+      "repository_manifest": "repositories/callstackincubator/agent-skills/manifests/callstackincubator/agent-skills/59e9d17446a248b21d86f078fcd0bd2d36db1ca4.json"
+    },
+    {
+      "repository": "ciembor/agent-rules-books",
+      "commit_sha": "893a88a6fce3a80c565bf39ac65021b43a8b2990",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 200,
+      "files_not_exported": 15,
+      "repository_manifest": "repositories/ciembor/agent-rules-books/manifests/ciembor/agent-rules-books/893a88a6fce3a80c565bf39ac65021b43a8b2990.json"
+    },
+    {
+      "repository": "dhicoc/dsh-reverse-skill",
+      "commit_sha": "f1b61cf3deec370198ae81a23b8512338002d073",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 88,
+      "saved_skill_entries": 88,
+      "saved_text_files": 534,
+      "files_not_exported": 5,
+      "repository_manifest": "repositories/dhicoc/dsh-reverse-skill/manifests/dhicoc/dsh-reverse-skill/f1b61cf3deec370198ae81a23b8512338002d073.json"
+    },
+    {
+      "repository": "geekjourneyx/md2wechat-skill",
+      "commit_sha": "a8e2900033e5c9ee152a629e108fe57228ba31e6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 359,
+      "files_not_exported": 13,
+      "repository_manifest": "repositories/geekjourneyx/md2wechat-skill/manifests/geekjourneyx/md2wechat-skill/a8e2900033e5c9ee152a629e108fe57228ba31e6.json"
+    },
+    {
+      "repository": "microsoft/SkillOpt",
+      "commit_sha": "eb959c3ba3f0b6bcfa23e485ee223e019eded3a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 474,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/microsoft/SkillOpt/manifests/microsoft/SkillOpt/eb959c3ba3f0b6bcfa23e485ee223e019eded3a3.json"
+    },
+    {
+      "repository": "mrhlaingbwardev/agentic-hacking-skills",
+      "commit_sha": "e1dc2759662155ba5a2d72e733a7d899ef4499ef",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 28,
+      "saved_skill_entries": 28,
+      "saved_text_files": 36,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/mrhlaingbwardev/agentic-hacking-skills/manifests/mrhlaingbwardev/agentic-hacking-skills/e1dc2759662155ba5a2d72e733a7d899ef4499ef.json"
+    },
+    {
+      "repository": "mxyhi/ok-skills",
+      "commit_sha": "91108cf5c608edd1f00a8c5ac635f16504e08a35",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 36,
+      "saved_skill_entries": 36,
+      "saved_text_files": 574,
+      "files_not_exported": 157,
+      "repository_manifest": "repositories/mxyhi/ok-skills/manifests/mxyhi/ok-skills/91108cf5c608edd1f00a8c5ac635f16504e08a35.json"
+    },
+    {
+      "repository": "open-legal-products/mike-workflows",
+      "commit_sha": "20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 169,
+      "saved_skill_entries": 169,
+      "saved_text_files": 226,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/open-legal-products/mike-workflows/manifests/open-legal-products/mike-workflows/20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1.json"
+    },
+    {
+      "repository": "openclaw/agent-skills",
+      "commit_sha": "02f3158379a7ec355d73c92bf97d432fafb2adc9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 104,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/openclaw/agent-skills/manifests/openclaw/agent-skills/02f3158379a7ec355d73c92bf97d432fafb2adc9.json"
+    },
+    {
+      "repository": "shaom/brand-to-design-md-skill",
+      "commit_sha": "f7fe99e7a2985d4457d44bfab8399bb1cf1896c0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 13,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/shaom/brand-to-design-md-skill/manifests/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0.json"
+    },
+    {
+      "repository": "tikoci/routeros-skills",
+      "commit_sha": "55941deb75fb02be34a802a214c669a3c7228227",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 79,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/tikoci/routeros-skills/manifests/tikoci/routeros-skills/55941deb75fb02be34a802a214c669a3c7228227.json"
+    },
+    {
+      "repository": "win4r/openclaw-workspace",
+      "commit_sha": "4e81a914b5f4ed52d88e0b31476354f92fcd4be7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 5,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/win4r/openclaw-workspace/manifests/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "futantan/agent-skills.md",
+      "output_directory": "data-batch-021/repositories/futantan/agent-skills.md",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:32:14.102358+00:00",
+      "commit_sha": "4942c44563f932a3740bf52a5a557c1ee18f9eb0",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:32:20.831693+00:00"
+    },
+    {
+      "repository": "EverMind-AI/SkillCorpus",
+      "output_directory": "data-batch-021/repositories/EverMind-AI/SkillCorpus",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:32:20.840135+00:00",
+      "commit_sha": "17d0e19e3ce495c0929d30c34b2c0f39714661f0",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:32:28.737539+00:00"
+    },
+    {
+      "repository": "bergside/design-md-chrome",
+      "output_directory": "data-batch-021/repositories/bergside/design-md-chrome",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:33:13.993052+00:00",
+      "commit_sha": "8e07614fb18752ab1ee14dd65a8ff93e63c9b13b",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:33:20.017828+00:00"
+    },
+    {
+      "repository": "vibeforge1111/vibeship-spawner-skills",
+      "output_directory": "data-batch-021/repositories/vibeforge1111/vibeship-spawner-skills",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:33:49.219199+00:00",
+      "commit_sha": "70b2e1062fc6a38fce854226c27097a87732cb5f",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:33:58.328919+00:00"
+    },
+    {
+      "repository": "rohitg00/awesome-claude-design",
+      "output_directory": "data-batch-021/repositories/rohitg00/awesome-claude-design",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:33:58.337123+00:00",
+      "commit_sha": "7f60ee56b9340f8c2671a08c2d8aab4037546a64",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:34:04.964638+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 75
+}

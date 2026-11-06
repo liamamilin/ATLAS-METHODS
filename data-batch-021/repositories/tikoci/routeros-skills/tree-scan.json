@@ -1,0 +1,26 @@
+{
+  "repository": "tikoci/routeros-skills",
+  "commit_sha": "55941deb75fb02be34a802a214c669a3c7228227",
+  "tree_entries": 79,
+  "candidate_skill_paths": [
+    "routeros-app-yaml/SKILL.md",
+    "routeros-centrs/SKILL.md",
+    "routeros-cmr/SKILL.md",
+    "routeros-command-tree/SKILL.md",
+    "routeros-container/SKILL.md",
+    "routeros-firewall/SKILL.md",
+    "routeros-fundamentals/SKILL.md",
+    "routeros-hotspot/SKILL.md",
+    "routeros-mac-telnet/SKILL.md",
+    "routeros-mndp/SKILL.md",
+    "routeros-netinstall/SKILL.md",
+    "routeros-qemu-chr/SKILL.md",
+    "routeros-quickchr-cli/SKILL.md",
+    "routeros-quickchr/SKILL.md",
+    "routeros-scripting/SKILL.md",
+    "routeros-sniffer/SKILL.md",
+    "routeros-syntax-inspection/SKILL.md",
+    "routeros-webfig/SKILL.md",
+    "routeros-zerotier/SKILL.md"
+  ]
+}

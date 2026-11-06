@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "alpacahq/alpaca-skills",
+      "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317"
+    }
+  ]
+}

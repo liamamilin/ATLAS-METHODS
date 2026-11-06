@@ -1,5 +1,6 @@
 {
   "schema_version": "0.1",
+  "selection_note": "One pass over the saved retry plus newly discovered repository candidates from existing search channels. No historical refresh.",
   "sources": [
     {
       "repository": "cbrock84/headcount",
@@ -13,7 +14,8 @@
           "link_type": "direct_github"
         }
       ],
-      "state": "failed"
+      "state": "failed",
+      "batch": "018"
     }
   ]
 }

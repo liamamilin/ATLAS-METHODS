@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:48:04.323799+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 22,
+  "saved_skill_entries": 22,
+  "unique_entry_texts": 22,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tomkrikorian/visionOSAgents",
+      "commit_sha": "c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 234,
+      "files_not_exported": 38,
+      "repository_manifest": "manifests/tomkrikorian/visionOSAgents/c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,114 @@
+{
+  "sources": [
+    {
+      "repository": "Berserk-hub150/skillhawk",
+      "commit_sha": "cbdbef03f2b006b25e725c014745521b9ed1f561",
+      "collection_root": "repositories/Berserk-hub150/skillhawk"
+    },
+    {
+      "repository": "Jianing1117/jianing-skills",
+      "commit_sha": "fc9bb033c6e2d64a1e8618cb42b28c311f5c651c",
+      "collection_root": "repositories/Jianing1117/jianing-skills"
+    },
+    {
+      "repository": "Narwhal-Lab/MagicSkills",
+      "commit_sha": "00f3e8640445b0d91682a670b8ba7cc4465151cb",
+      "collection_root": "repositories/Narwhal-Lab/MagicSkills"
+    },
+    {
+      "repository": "Railly/tinte",
+      "commit_sha": "7905be3e62819faa4db312d2cbcd0e2991326d0a",
+      "collection_root": "repositories/Railly/tinte"
+    },
+    {
+      "repository": "TerminalSkills/skills",
+      "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+      "collection_root": "repositories/TerminalSkills/skills"
+    },
+    {
+      "repository": "TheDecipherist/claude-code-mastery",
+      "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee",
+      "collection_root": "repositories/TheDecipherist/claude-code-mastery"
+    },
+    {
+      "repository": "aakashg/pm-claude-code-setup",
+      "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+      "collection_root": "repositories/aakashg/pm-claude-code-setup"
+    },
+    {
+      "repository": "alpacahq/alpaca-skills",
+      "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317",
+      "collection_root": "repositories/alpacahq/alpaca-skills"
+    },
+    {
+      "repository": "arpitg1304/robotics-agent-skills",
+      "commit_sha": "f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11",
+      "collection_root": "repositories/arpitg1304/robotics-agent-skills"
+    },
+    {
+      "repository": "elementalsouls/Claude-OSINT",
+      "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890",
+      "collection_root": "repositories/elementalsouls/Claude-OSINT"
+    },
+    {
+      "repository": "fernandotellado/ai-skills",
+      "commit_sha": "9d30564450b336a54d27e07991a4bf6a3f6526ea",
+      "collection_root": "repositories/fernandotellado/ai-skills"
+    },
+    {
+      "repository": "gapmiss/obsidian-plugin-skill",
+      "commit_sha": "017d9b22ef96b50aa50513d7141b1ff7e80cbb25",
+      "collection_root": "repositories/gapmiss/obsidian-plugin-skill"
+    },
+    {
+      "repository": "jzOcb/writing-style-skill",
+      "commit_sha": "d94826e1cd48f5403b82a5a909efdfab96221259",
+      "collection_root": "repositories/jzOcb/writing-style-skill"
+    },
+    {
+      "repository": "kvanland/ticktick-cli",
+      "commit_sha": "bac930df237127fe8e5680ca4341a04aeac0c549",
+      "collection_root": "repositories/kvanland/ticktick-cli"
+    },
+    {
+      "repository": "machina-sports/sports-skills",
+      "commit_sha": "48e17c0acdc0c62ae5ac811d7b9b005cd469fd04",
+      "collection_root": "repositories/machina-sports/sports-skills"
+    },
+    {
+      "repository": "michaelpersonal/goal-forge",
+      "commit_sha": "8315c845acda9ced9ce2744fcafc90b6347950e7",
+      "collection_root": "repositories/michaelpersonal/goal-forge"
+    },
+    {
+      "repository": "pickle-an/md-to-docx-skill",
+      "commit_sha": "7d8d49cb7690a5438313ba43ecc05d5ec43de8fb",
+      "collection_root": "repositories/pickle-an/md-to-docx-skill"
+    },
+    {
+      "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+      "commit_sha": "35e32ae45878148a6bd898572a9d15c96711affe",
+      "collection_root": "repositories/realrossmanngroup/no_ai_slop_writing_rules"
+    },
+    {
+      "repository": "seb1n/awesome-ai-agent-skills",
+      "commit_sha": "75865a5d037a4cdaa7f409a4ec14ab9b0292920b",
+      "collection_root": "repositories/seb1n/awesome-ai-agent-skills"
+    },
+    {
+      "repository": "sno-ai/mda",
+      "commit_sha": "03a0f4126bf1ca0f9428618865c9b9dd65fada40",
+      "collection_root": "repositories/sno-ai/mda"
+    },
+    {
+      "repository": "waynesutton/builder-skills",
+      "commit_sha": "82d1ce23d8637f6d0301e6cac9dcdb124711f3b1",
+      "collection_root": "repositories/waynesutton/builder-skills"
+    },
+    {
+      "repository": "ythx-101/live-panel-skill",
+      "commit_sha": "439c9addce7e7ac2b4e384aa847a351926c8f945",
+      "collection_root": "repositories/ythx-101/live-panel-skill"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "Shubhamsaboo/awesome-llm-apps",
+  "commit_sha": "c129f31036f5ba0bba42cbb63937a66946fdf2c0",
+  "tree_entries": 1988,
+  "candidate_skill_paths": [
+    "agent_skills/advisor-orchestrator-worker/SKILL.md",
+    "agent_skills/commit-archaeologist/SKILL.md",
+    "agent_skills/dependency-doctor/SKILL.md",
+    "agent_skills/first-reader/SKILL.md",
+    "agent_skills/project-graveyard/SKILL.md",
+    "agent_skills/scope-creep-detector/SKILL.md",
+    "agent_skills/thinking-out-loud/SKILL.md",
+    "generative_ui_agents/ai-mcp-app-builder/apps/mcp-use-server/.agent/skills/chatgpt-app-builder/SKILL.md",
+    "generative_ui_agents/ai-mcp-app-builder/apps/mcp-use-server/.agent/skills/mcp-apps-builder/SKILL.md",
+    "generative_ui_agents/ai-mcp-app-builder/apps/mcp-use-server/.agent/skills/mcp-builder/SKILL.md"
+  ]
+}

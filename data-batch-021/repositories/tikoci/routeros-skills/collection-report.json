@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:33:41.589901+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 19,
+  "saved_skill_entries": 19,
+  "unique_entry_texts": 19,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tikoci/routeros-skills",
+      "commit_sha": "55941deb75fb02be34a802a214c669a3c7228227",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 79,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/tikoci/routeros-skills/55941deb75fb02be34a802a214c669a3c7228227.json"
+    }
+  ],
+  "errors": []
+}

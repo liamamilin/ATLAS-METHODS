@@ -1,0 +1,17 @@
+{
+  "repository": "RKiding/Awesome-finance-skills",
+  "commit_sha": "853f09b4d0baae747759ed31e21ed5c5b2316a5f",
+  "tree_entries": 163,
+  "candidate_skill_paths": [
+    "skills/alphaear-deepear-lite/SKILL.md",
+    "skills/alphaear-logic-visualizer/SKILL.md",
+    "skills/alphaear-news/SKILL.md",
+    "skills/alphaear-predictor/SKILL.md",
+    "skills/alphaear-reporter/SKILL.md",
+    "skills/alphaear-search/SKILL.md",
+    "skills/alphaear-sentiment/SKILL.md",
+    "skills/alphaear-signal-tracker/SKILL.md",
+    "skills/alphaear-stock/SKILL.md",
+    "skills/skill-creator/SKILL.md"
+  ]
+}

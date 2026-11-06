@@ -1,0 +1,99 @@
+{
+  "sources": [
+    {
+      "repository": "K-Dense-AI/mimeo",
+      "commit_sha": "a4cea1842a24515cda354a3aa9eb9763677a3cdd",
+      "collection_root": "repositories/K-Dense-AI/mimeo"
+    },
+    {
+      "repository": "SnailSploit/Claude-Red",
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "collection_root": "repositories/SnailSploit/Claude-Red"
+    },
+    {
+      "repository": "Yusuke710/manim-skill",
+      "commit_sha": "a0048d9e265499038f34a9aa58ff16d306b5034c",
+      "collection_root": "repositories/Yusuke710/manim-skill"
+    },
+    {
+      "repository": "agent-sh/agnix",
+      "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+      "collection_root": "repositories/agent-sh/agnix"
+    },
+    {
+      "repository": "alchaincyf/huashu-md-html",
+      "commit_sha": "5826f83f3050c19aa45acdd7f9405af48011736f",
+      "collection_root": "repositories/alchaincyf/huashu-md-html"
+    },
+    {
+      "repository": "bergside/awesome-design-skills",
+      "commit_sha": "f631a09b4fcc0166f2e2c1a8c81906ef680c57e8",
+      "collection_root": "repositories/bergside/awesome-design-skills"
+    },
+    {
+      "repository": "blacktop/ipsw-skill",
+      "commit_sha": "1a797280aa27481e646be89f334784ad04d315c6",
+      "collection_root": "repositories/blacktop/ipsw-skill"
+    },
+    {
+      "repository": "callstackincubator/agent-skills",
+      "commit_sha": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "collection_root": "repositories/callstackincubator/agent-skills"
+    },
+    {
+      "repository": "ciembor/agent-rules-books",
+      "commit_sha": "893a88a6fce3a80c565bf39ac65021b43a8b2990",
+      "collection_root": "repositories/ciembor/agent-rules-books"
+    },
+    {
+      "repository": "dhicoc/dsh-reverse-skill",
+      "commit_sha": "f1b61cf3deec370198ae81a23b8512338002d073",
+      "collection_root": "repositories/dhicoc/dsh-reverse-skill"
+    },
+    {
+      "repository": "geekjourneyx/md2wechat-skill",
+      "commit_sha": "a8e2900033e5c9ee152a629e108fe57228ba31e6",
+      "collection_root": "repositories/geekjourneyx/md2wechat-skill"
+    },
+    {
+      "repository": "microsoft/SkillOpt",
+      "commit_sha": "eb959c3ba3f0b6bcfa23e485ee223e019eded3a3",
+      "collection_root": "repositories/microsoft/SkillOpt"
+    },
+    {
+      "repository": "mrhlaingbwardev/agentic-hacking-skills",
+      "commit_sha": "e1dc2759662155ba5a2d72e733a7d899ef4499ef",
+      "collection_root": "repositories/mrhlaingbwardev/agentic-hacking-skills"
+    },
+    {
+      "repository": "mxyhi/ok-skills",
+      "commit_sha": "91108cf5c608edd1f00a8c5ac635f16504e08a35",
+      "collection_root": "repositories/mxyhi/ok-skills"
+    },
+    {
+      "repository": "open-legal-products/mike-workflows",
+      "commit_sha": "20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1",
+      "collection_root": "repositories/open-legal-products/mike-workflows"
+    },
+    {
+      "repository": "openclaw/agent-skills",
+      "commit_sha": "02f3158379a7ec355d73c92bf97d432fafb2adc9",
+      "collection_root": "repositories/openclaw/agent-skills"
+    },
+    {
+      "repository": "shaom/brand-to-design-md-skill",
+      "commit_sha": "f7fe99e7a2985d4457d44bfab8399bb1cf1896c0",
+      "collection_root": "repositories/shaom/brand-to-design-md-skill"
+    },
+    {
+      "repository": "tikoci/routeros-skills",
+      "commit_sha": "55941deb75fb02be34a802a214c669a3c7228227",
+      "collection_root": "repositories/tikoci/routeros-skills"
+    },
+    {
+      "repository": "win4r/openclaw-workspace",
+      "commit_sha": "4e81a914b5f4ed52d88e0b31476354f92fcd4be7",
+      "collection_root": "repositories/win4r/openclaw-workspace"
+    }
+  ]
+}

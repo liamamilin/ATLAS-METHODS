@@ -1,0 +1,11 @@
+{
+  "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+  "commit_sha": "35e32ae45878148a6bd898572a9d15c96711affe",
+  "tree_entries": 11,
+  "candidate_skill_paths": [
+    ".claude/skills/no-ai-slop/SKILL.md",
+    ".claude/skills/rossmann-voice/SKILL.md",
+    "skills/no-ai-slop/SKILL.md",
+    "skills/rossmann-voice/SKILL.md"
+  ]
+}

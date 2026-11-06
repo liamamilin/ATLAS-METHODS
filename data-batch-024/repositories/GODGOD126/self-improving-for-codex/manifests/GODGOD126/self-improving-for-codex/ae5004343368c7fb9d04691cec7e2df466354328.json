@@ -1,0 +1,83 @@
+{
+  "repository": "GODGOD126/self-improving-for-codex",
+  "commit_sha": "ae5004343368c7fb9d04691cec7e2df466354328",
+  "files": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8b2ad86de0764ebee0c94dcdffc6b74b756bfb6b",
+      "bytes": 1066,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/LICENSE",
+      "sha256": "00a74a779793a6e4aa8c586f1d91e0254108dbcc44720a35520e1b7e65b3b05d",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "48c9cbdbab756e1c60fabd2346dc7fa057d33501",
+      "bytes": 4407,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/README.md",
+      "sha256": "130e0de12948c12b90e9d656cea5566acd471e734d7b54579f993adc434168be",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c1935af72f51cab3cddd2d669831697e8f65106a",
+      "bytes": 4606,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/SKILL.md",
+      "sha256": "e4d753f8c3261c4320a760e24b55ffce5d6812f15f071086471c82c6f9d8bd50",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/SKILL.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "20b8eeff879e0540e92f561dc4221112880d2407",
+      "bytes": 272,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/agents/openai.yaml",
+      "sha256": "321299c5cfa3d49137fac520934cf4194d18389c5fa7d769f85eb6f94e6cfe50",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/agents/openai.yaml"
+    },
+    {
+      "path": "references/agents-snippet.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d7da38e0d4983d75be0ad10a7f3cd60bab14c84b",
+      "bytes": 2738,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/references/agents-snippet.md",
+      "sha256": "59fb4f55591c7f0d1f2193433fe3c5a94d261b70c60692167aa487173d3f309e",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/references/agents-snippet.md"
+    },
+    {
+      "path": "references/memory-files.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "65110fa3c2fdf5aa93f70e7f0a88c6cdbde940fd",
+      "bytes": 2686,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/references/memory-files.md",
+      "sha256": "b846adbf041641377526e1c0d39c1d721cfdba4c9d879b850b895dd4356bdfbd",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/references/memory-files.md"
+    },
+    {
+      "path": "references/nightly-review.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4a571df5914c1d822988976b6f5866ca3017d91b",
+      "bytes": 6569,
+      "source_url": "https://github.com/GODGOD126/self-improving-for-codex/blob/ae5004343368c7fb9d04691cec7e2df466354328/references/nightly-review.md",
+      "sha256": "014ce5ce6d92fb6c1d69a48dc9330bfab658cc68202ae769c55f26b66565d721",
+      "status": "saved",
+      "raw_path": "raw/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328/references/nightly-review.md"
+    }
+  ]
+}

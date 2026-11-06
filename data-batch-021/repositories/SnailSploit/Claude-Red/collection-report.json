@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:31:23.487022+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 79,
+  "saved_skill_entries": 79,
+  "unique_entry_texts": 79,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "SnailSploit/Claude-Red",
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 79,
+      "saved_skill_entries": 79,
+      "saved_text_files": 95,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/SnailSploit/Claude-Red/a8de813edc9f66f60d44cfe42d47750e89d9930b.json"
+    }
+  ],
+  "errors": []
+}

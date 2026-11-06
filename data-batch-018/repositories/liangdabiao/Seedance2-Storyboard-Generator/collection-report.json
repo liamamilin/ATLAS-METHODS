@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:52.733237+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "liangdabiao/Seedance2-Storyboard-Generator",
+      "commit_sha": "53f749e094374a8215b20edba745e0a6e7af94ca",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 93,
+      "files_not_exported": 19,
+      "repository_manifest": "manifests/liangdabiao/Seedance2-Storyboard-Generator/53f749e094374a8215b20edba745e0a6e7af94ca.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "google-gemini/gemini-skills",
+      "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf"
+    }
+  ]
+}

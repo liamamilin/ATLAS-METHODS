@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:14:11.184525+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 78,
+  "saved_skill_entries": 78,
+  "unique_entry_texts": 78,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+      "commit_sha": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 78,
+      "saved_skill_entries": 78,
+      "saved_text_files": 250,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/gamedev-skills/awesome-gamedev-agent-skills/19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9.json"
+    }
+  ],
+  "errors": []
+}

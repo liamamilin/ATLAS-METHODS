@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:30:55.897034+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "openclaw/agent-skills",
+      "commit_sha": "02f3158379a7ec355d73c92bf97d432fafb2adc9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 104,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/openclaw/agent-skills/02f3158379a7ec355d73c92bf97d432fafb2adc9.json"
+    }
+  ],
+  "errors": []
+}

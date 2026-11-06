@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:21:30.450816+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 27,
+  "saved_skill_entries": 27,
+  "unique_entry_texts": 27,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "plugin87/ux-ui-agent-skills",
+      "commit_sha": "def84a70fadc3490d80901295a4f1951fdb2cc69",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 27,
+      "saved_skill_entries": 27,
+      "saved_text_files": 2634,
+      "files_not_exported": 64,
+      "repository_manifest": "manifests/plugin87/ux-ui-agent-skills/def84a70fadc3490d80901295a4f1951fdb2cc69.json"
+    }
+  ],
+  "errors": []
+}

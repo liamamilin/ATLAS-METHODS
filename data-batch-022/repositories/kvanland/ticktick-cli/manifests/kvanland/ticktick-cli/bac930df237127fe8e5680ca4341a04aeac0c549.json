@@ -1,0 +1,259 @@
+{
+  "repository": "kvanland/ticktick-cli",
+  "commit_sha": "bac930df237127fe8e5680ca4341a04aeac0c549",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4ee033bac9fa1bd2a107be7d8d40045dfcde4bf0",
+      "bytes": 91,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/.gitignore",
+      "sha256": "e782a4856dd4d944c4b748d2108569f0615bd6294bafda92c82af399da5199c1",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c13f99117e366fd54b4c097b67ca34dfb1fb8ba1",
+      "bytes": 1056,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/LICENSE",
+      "sha256": "75486ea0af9309140ca6e2c401d7e67bea8f4892344e5707f6394dc5e83dfc44",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "728330dd8a6cd33317f1dfa989e50e41ba5b716d",
+      "bytes": 8833,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/README.md",
+      "sha256": "293a173e88cd169e4426de54872f811b20cdc093e0d9fde7e1747efe69640101",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "27eb619c828ca4a59b208e96fb0788bb7943d5ca",
+      "bytes": 3323,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/SKILL.md",
+      "sha256": "ce7a4c211b1165086c69da7b00e71fd90ca13b9671d7478cde4668bc7703261d",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/SKILL.md"
+    },
+    {
+      "path": "bin/ticktick-mcp.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "89667dac963a8dfd21674dbe6f3ce5039947b9a9",
+      "bytes": 404,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/bin/ticktick-mcp.js",
+      "sha256": "a6260ddd51a0d731e47ff374cc321fe893c76573959a29e2f60b6b51b7df710a",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/bin/ticktick-mcp.js"
+    },
+    {
+      "path": "bin/ticktick.js",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "6041cb89b2fc1989d2f23cac57d29c634c22d7bb",
+      "bytes": 7515,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/bin/ticktick.js",
+      "sha256": "945ea0bd78ff02821afa1df8bf737418bd83d0cfe6e6df0b63f178662d1ae277",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/bin/ticktick.js"
+    },
+    {
+      "path": "lib/auth.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3dd5fd301091526e119967aadd8c294a0f91056b",
+      "bytes": 3117,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/auth.js",
+      "sha256": "415529fe90c39fd314c77ad7a8e0bffe6a974973d58dde725285a5da51ef10fa",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/auth.js"
+    },
+    {
+      "path": "lib/cli.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6b21d28229f4d7540b1413e4c2affcfae3ac97c",
+      "bytes": 11665,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/cli.js",
+      "sha256": "11620baad0eda49603df78540a78de3ac237ff151ffc87580e03a9360f183691",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/cli.js"
+    },
+    {
+      "path": "lib/core.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "48fcb1a10c56841a0e6aca44517b3cb0175725a7",
+      "bytes": 10130,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/core.js",
+      "sha256": "29487ad51942bdd4247dd388a3946e1bcb92f4bad726d34f5a0854e025047010",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/core.js"
+    },
+    {
+      "path": "lib/interactive.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "007e2c317989e46df1c60b51ea97933f81279feb",
+      "bytes": 2337,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/interactive.js",
+      "sha256": "845162a899baced272ccf372b1971a881f0413deea35b943298e18ee862d9074",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/interactive.js"
+    },
+    {
+      "path": "lib/mcp.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "07670285d7814e695c9affbb8f453b31fd0e35d6",
+      "bytes": 7631,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/mcp.js",
+      "sha256": "cf868dffcc1878b1abdd9fde68dc6f84881e21fb302ffbf552f595cf58d71776",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/mcp.js"
+    },
+    {
+      "path": "lib/projects.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "22aa910d74a279bd6760ae82325c37e9459118d4",
+      "bytes": 3640,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/projects.js",
+      "sha256": "6f3e0d102c52bef45b701426de4ecc7915cf68e8812e546477ef51ad9c94314e",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/projects.js"
+    },
+    {
+      "path": "lib/setup.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ae3190b5cc96023a290d157263a78ad9250e7fc6",
+      "bytes": 3825,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/setup.js",
+      "sha256": "01654d5cd0bca584e9f85c9c980860e2308a5078648a6802a0a9ca441749ad27",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/setup.js"
+    },
+    {
+      "path": "lib/tasks.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "18d4900b03a67402e554b1e3314aa4dd8671d2b2",
+      "bytes": 15649,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/lib/tasks.js",
+      "sha256": "177485fc6a9c8f51bdab7bcf0bcb86a1c0760038a55eee2b2f4882de4501d330",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/lib/tasks.js"
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2cfe08111878b5789769a41cbd07962308305cf5",
+      "bytes": 39964,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/package-lock.json",
+      "sha256": "cb3d0ee28b281278c7be69f1933606cc6cf9233f330ae76bb32daff2bf36a69d",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/package-lock.json"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1b7a86ee11672c2db410f79578d43474e586bcf1",
+      "bytes": 800,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/package.json",
+      "sha256": "ecf15e63a0ea22cfd044fa9ff9a5654493bede554583214e7ca3f4f681a3db13",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/package.json"
+    },
+    {
+      "path": "test/auth.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "14b61f1065059b60ebeac6c82c50a4a0bfdc298c",
+      "bytes": 14156,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/auth.test.js",
+      "sha256": "a0e819f5326f77d6147ac7156ce5bacc98428839a11f83d9124c8c9ad510c9fc",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/auth.test.js"
+    },
+    {
+      "path": "test/cli.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d58f4371c69ea600452a4e5aef66d9d11d1bd969",
+      "bytes": 7698,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/cli.test.js",
+      "sha256": "b0f7aeb428b9bce34c16fe65bf9698b52bfe2a8764ba6c02bdc3b889ef74422b",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/cli.test.js"
+    },
+    {
+      "path": "test/core-extended.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d15e70b720a5a4a79695e25bb0dcba8712911fad",
+      "bytes": 25674,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/core-extended.test.js",
+      "sha256": "4647f0ad54f4211d145116ae129479f080e8d8dc5952a283ccf3d5e98d7f513d",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/core-extended.test.js"
+    },
+    {
+      "path": "test/core.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1e0c43dab2af2fa940628596f2562da1db5fd39b",
+      "bytes": 6259,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/core.test.js",
+      "sha256": "1e3928dce9fd33b139a2ed712073d3f0de81e44366e711ad6961d0fe8576e6bc",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/core.test.js"
+    },
+    {
+      "path": "test/mcp.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d69811e09c4ccd027a46b238e1ddf06f53b9d5e",
+      "bytes": 2256,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/mcp.test.js",
+      "sha256": "5f09c676e4411c259e1151400f715ce6e3138fca82e1efab38a9104a2c890dbb",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/mcp.test.js"
+    },
+    {
+      "path": "test/projects.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9d70d72ace44236cb184707e223e5bfd76828585",
+      "bytes": 12448,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/projects.test.js",
+      "sha256": "2cfe4754534db63df8f050fe27d78386150905217334a2976c1772470fb820b6",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/projects.test.js"
+    },
+    {
+      "path": "test/tasks.test.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b5da8b73dd4d90f963bcfb0c82573950ede9cfd8",
+      "bytes": 28332,
+      "source_url": "https://github.com/kvanland/ticktick-cli/blob/bac930df237127fe8e5680ca4341a04aeac0c549/test/tasks.test.js",
+      "sha256": "a1f296f4edb56358542fdaa8831c0755c498782ff2738983f18ac5562e5536fb",
+      "status": "saved",
+      "raw_path": "raw/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549/test/tasks.test.js"
+    }
+  ]
+}

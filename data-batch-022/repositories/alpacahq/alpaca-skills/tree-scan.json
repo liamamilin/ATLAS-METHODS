@@ -1,0 +1,22 @@
+{
+  "repository": "alpacahq/alpaca-skills",
+  "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317",
+  "tree_entries": 43,
+  "candidate_skill_paths": [
+    "skills/broker-api/account-onboarding/SKILL.md",
+    "skills/broker-api/funding-transfers/SKILL.md",
+    "skills/broker-api/integration/SKILL.md",
+    "skills/broker-api/journals/SKILL.md",
+    "skills/broker-api/market-data/SKILL.md",
+    "skills/broker-api/money-precision/SKILL.md",
+    "skills/broker-api/rate-limits-resilience/SKILL.md",
+    "skills/broker-api/reconciliation-idempotency/SKILL.md",
+    "skills/broker-api/sse-events/SKILL.md",
+    "skills/broker-api/trading-orders/SKILL.md",
+    "skills/trading-api/backtest/SKILL.md",
+    "skills/trading-api/paper-trading-cli/SKILL.md",
+    "skills/trading-api/paper-trading-mcp/SKILL.md",
+    "skills/trading-api/paper-trading/SKILL.md",
+    "templates/skill/SKILL.md"
+  ]
+}

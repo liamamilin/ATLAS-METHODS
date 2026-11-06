@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:24.375536+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 38,
+  "saved_skill_entries": 38,
+  "unique_entry_texts": 38,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "cisco-ai-defense/skill-scanner",
+      "commit_sha": "f7824651ffeb9b89f7682ddd97d6fba8fe9c10b1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 38,
+      "saved_skill_entries": 38,
+      "saved_text_files": 802,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/cisco-ai-defense/skill-scanner/f7824651ffeb9b89f7682ddd97d6fba8fe9c10b1.json"
+    }
+  ],
+  "errors": []
+}

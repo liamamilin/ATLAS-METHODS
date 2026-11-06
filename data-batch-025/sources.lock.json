@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "repository": "FredAntB/Spec-Driven-Development",
+      "commit_sha": "7296108716dea8447938a81fa82bbf7369a0fce2",
+      "collection_root": "repositories/FredAntB/Spec-Driven-Development"
+    },
+    {
+      "repository": "qiye45/wechatDownload",
+      "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+      "collection_root": "repositories/qiye45/wechatDownload"
+    }
+  ]
+}

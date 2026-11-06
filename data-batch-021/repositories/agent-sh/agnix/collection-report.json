@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:32:47.820159+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 88,
+  "saved_skill_entries": 88,
+  "unique_entry_texts": 86,
+  "duplicate_entry_groups": 2,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "agent-sh/agnix",
+      "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 88,
+      "saved_skill_entries": 88,
+      "saved_text_files": 40222,
+      "files_not_exported": 8,
+      "repository_manifest": "manifests/agent-sh/agnix/4926685333ad34df98c6196d3508c466561b439c.json"
+    }
+  ],
+  "errors": []
+}

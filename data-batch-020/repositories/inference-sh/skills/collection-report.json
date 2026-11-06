@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:20:29.253815+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 86,
+  "saved_skill_entries": 86,
+  "unique_entry_texts": 86,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "inference-sh/skills",
+      "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 86,
+      "saved_skill_entries": 86,
+      "saved_text_files": 133,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/inference-sh/skills/0cbf91c26ada28702c79962406286f0c14292150.json"
+    }
+  ],
+  "errors": []
+}

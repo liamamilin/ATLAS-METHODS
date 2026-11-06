@@ -1,0 +1,611 @@
+{
+  "repository": "qiye45/wechatDownload",
+  "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/提交-issue.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "45bd1710192e4b29d84aba88085a69166385b0f1",
+      "bytes": 310,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/%E6%8F%90%E4%BA%A4-issue.md",
+      "sha256": "c2c997a98f484ed1dfb9f82fa7ccad1fdfcd563a1a7548432d9ffdc8881204e9",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/提交-issue.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/🐛-bug-报告.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16a9157404c88298699092348f0b9d0b5f58c344",
+      "bytes": 324,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/%F0%9F%90%9B-bug-%E6%8A%A5%E5%91%8A.md",
+      "sha256": "32f20b7d2a93fbc5e878f78d979f1aae4ad522b78949242a7c0d4916820b7da7",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/🐛-bug-报告.md"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/🚀-功能要求.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "733217f95d3adaf51dae75b2a017ddae5e7c5417",
+      "bytes": 146,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/%F0%9F%9A%80-%E5%8A%9F%E8%83%BD%E8%A6%81%E6%B1%82.md",
+      "sha256": "7fed19463912ecdb496b8d4056fae041893784c745d6c7a0eef4a202df909bc5",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/.github/ISSUE_TEMPLATE/🚀-功能要求.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "24fb1d4acaeee31cf30fe46bd1d03c23d9048e5a",
+      "bytes": 6573,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/README.md",
+      "sha256": "73c8ffb111012ed6665b2f99a8e52f7d9219662099095a94b4d2969c48797400",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/README.md"
+    },
+    {
+      "path": "example/2024-11-01_科技爱好者周刊323技术公司的口号比拼.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "507eaa8522b9e265abf2d183b00fa1bf8005e6ce",
+      "bytes": 47508,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/2024-11-01_%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A323%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E7%9A%84%E5%8F%A3%E5%8F%B7%E6%AF%94%E6%8B%BC.jpg",
+      "sha256": "ceb7d5afb151bc17a1078eaa454c3a3b86bccfe2018b2de57c2936dcab382010",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/2024-11-06-160246.csv",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "eaba5f54c340353a331c186e8907341216e1ccdb",
+      "bytes": 5983,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/2024-11-06-160246.csv",
+      "sha256": "1f15966e5db25690653a91ffdb8a676e64bfd8ec62fe1b28518fa1bd5db3feba",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/2024-11-06-160246.csv"
+    },
+    {
+      "path": "example/2024-12-07-231605.csv",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8cc6e88e59765bfbebe99a2819c19625c0b6b0bd",
+      "bytes": 9828,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/2024-12-07-231605.csv",
+      "sha256": "55282df7891198fabd363a64ec280c7211020bbc0cbc5b4c8682fd2d61eb670c",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/2024-12-07-231605.csv"
+    },
+    {
+      "path": "example/20240705科技爱好者周刊307不要看重ProductHunt.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43490644b8fd6a9c9866caa0bd09b881914b38e9",
+      "bytes": 1982367,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A307%E4%B8%8D%E8%A6%81%E7%9C%8B%E9%87%8DProductHunt.docx",
+      "sha256": "abf3f3cb98b4a33725afb485337e8e9567aa4c3e2ed6b11ad0b86caa76fbd775",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/20240705科技爱好者周刊307不要看重ProductHunt.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7d8cece75a496949db4191246cbd428d5b220d85",
+      "bytes": 314894,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A307%E4%B8%8D%E8%A6%81%E7%9C%8B%E9%87%8DProductHunt.html",
+      "sha256": "4b32c7b1dc79a5161c66a74f28522b95b75d97b8194ddabe69c4b35b195a8462",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705科技爱好者周刊307不要看重ProductHunt.html"
+    },
+    {
+      "path": "example/20240705科技爱好者周刊307不要看重ProductHunt.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a4303199cce044b9c3d559728ba0c706f5e109dc",
+      "bytes": 28505,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A307%E4%B8%8D%E8%A6%81%E7%9C%8B%E9%87%8DProductHunt.md",
+      "sha256": "e72c00a69f0d533f4ca86e479883c806f6f0179cd44921e4b1f0aaf3328f7d75",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705科技爱好者周刊307不要看重ProductHunt.md"
+    },
+    {
+      "path": "example/20240705科技爱好者周刊307不要看重ProductHunt.mhtml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5ee76a780230f1b4ac4f444477c5ea76dae444cd",
+      "bytes": 3205027,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A307%E4%B8%8D%E8%A6%81%E7%9C%8B%E9%87%8DProductHunt.mhtml",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/20240705科技爱好者周刊307不要看重ProductHunt.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f962b9ea13bd3d385a652d996ea76bd2fb859394",
+      "bytes": 2256828,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20240705%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A307%E4%B8%8D%E8%A6%81%E7%9C%8B%E9%87%8DProductHunt.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/20241101科技爱好者周刊323技术公司的口号比拼.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9fbf88f82aa7ca6e7c6d0d6500631aee82cae13c",
+      "bytes": 1978347,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A323%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E7%9A%84%E5%8F%A3%E5%8F%B7%E6%AF%94%E6%8B%BC.docx",
+      "sha256": "706975231a326445c214d4aab839b00e2951b895fdd894b054405fa19b5984cc",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/20241101科技爱好者周刊323技术公司的口号比拼.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3e788983f1e2719c125e9576dce98cf1111403cb",
+      "bytes": 354730,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A323%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E7%9A%84%E5%8F%A3%E5%8F%B7%E6%AF%94%E6%8B%BC.html",
+      "sha256": "bdcb4cda9ea79945cf4bb2883ceeb80424463b32a37d661aba247cc846262b43",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101科技爱好者周刊323技术公司的口号比拼.html"
+    },
+    {
+      "path": "example/20241101科技爱好者周刊323技术公司的口号比拼.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2f907bfc0e7f18911c7efe1a0abc9ab09d17d5e8",
+      "bytes": 48754,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A323%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E7%9A%84%E5%8F%A3%E5%8F%B7%E6%AF%94%E6%8B%BC.md",
+      "sha256": "6a40bac34775a58d06bcbd249e1c4af973a4eaaec9c626f1f652bd78efda46a3",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101科技爱好者周刊323技术公司的口号比拼.md"
+    },
+    {
+      "path": "example/20241101科技爱好者周刊323技术公司的口号比拼.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "66d593f8fc547c7275f70362b900158f384d241b",
+      "bytes": 2289421,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20241101%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A323%E6%8A%80%E6%9C%AF%E5%85%AC%E5%8F%B8%E7%9A%84%E5%8F%A3%E5%8F%B7%E6%AF%94%E6%8B%BC.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/20250110科技爱好者周刊333一切都要支付两次.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ac09e896e91ef8389ced4d3285eb89bc57ad0c9b",
+      "bytes": 2690379,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A333%E4%B8%80%E5%88%87%E9%83%BD%E8%A6%81%E6%94%AF%E4%BB%98%E4%B8%A4%E6%AC%A1.docx",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/20250110科技爱好者周刊333一切都要支付两次.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6ec8578dd496102919adc06a165041a4e8c58393",
+      "bytes": 321583,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A333%E4%B8%80%E5%88%87%E9%83%BD%E8%A6%81%E6%94%AF%E4%BB%98%E4%B8%A4%E6%AC%A1.html",
+      "sha256": "4849c2fe6cb539253c416a284f1999e507283688bdfef6cef8b7f0513e7a5a57",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110科技爱好者周刊333一切都要支付两次.html"
+    },
+    {
+      "path": "example/20250110科技爱好者周刊333一切都要支付两次.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0e0b5a5bee837b748585bf3af76ed29cadcf1a7b",
+      "bytes": 29717,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A333%E4%B8%80%E5%88%87%E9%83%BD%E8%A6%81%E6%94%AF%E4%BB%98%E4%B8%A4%E6%AC%A1.md",
+      "sha256": "4a01a57768a48143a6126bbce794151b8336be317f53f44db74465ab8c74a4de",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110科技爱好者周刊333一切都要支付两次.md"
+    },
+    {
+      "path": "example/20250110科技爱好者周刊333一切都要支付两次.mhtml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8e50a806d987852b57a00bce79d1bd9bb935e62e",
+      "bytes": 4191789,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A333%E4%B8%80%E5%88%87%E9%83%BD%E8%A6%81%E6%94%AF%E4%BB%98%E4%B8%A4%E6%AC%A1.mhtml",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/20250110科技爱好者周刊333一切都要支付两次.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7e82ac8e0244acf6b32628b0166fed70a6a24d79",
+      "bytes": 2960520,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/20250110%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A333%E4%B8%80%E5%88%87%E9%83%BD%E8%A6%81%E6%94%AF%E4%BB%98%E4%B8%A4%E6%AC%A1.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/418295898-27f34599-da13-4ae9-8c55-0cbd114e1c7e.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8540e9fe21a4e5bf42fc1162396b2bc3acbf372a",
+      "bytes": 112108,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/418295898-27f34599-da13-4ae9-8c55-0cbd114e1c7e.png",
+      "sha256": "ff8c7681a95e657675c4273528c475f1c47779f04869731c6365cff020dfbca8",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/[2025-12-20225424]田.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "73aa2fe2a89812ae8ef87407f2fcdcb6f4ad1196",
+      "bytes": 195644,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2025-12-20225424%5D%E7%94%B0.html",
+      "sha256": "cb3934a0ad82de379adaadb4bcbabb55b3a042ee2d55b86a79c132f4c8942ba5",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/[2025-12-20225424]田.html"
+    },
+    {
+      "path": "example/[2025-12-20225424]田.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2fe99880ef6752e49217def2c11f83f9bbbb3682",
+      "bytes": 458,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2025-12-20225424%5D%E7%94%B0.md",
+      "sha256": "f08f06bdfee7d067988a65e76b4ce569bf1d023a12ca23690464319a6a92763d",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/[2025-12-20225424]田.md"
+    },
+    {
+      "path": "example/[2025-12-20225424]田.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa57962270f3cc373e1047e2a8c4b6990153e31f",
+      "bytes": 132048,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2025-12-20225424%5D%E7%94%B0.pdf",
+      "sha256": "320234212bdca600ee967f6c058786e0ad9a1176cbef8203ece404a199912554",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "87bae7e811f081832d9b760cfb9cb70a84cc56ec",
+      "bytes": 1693576,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2026-08-14-0843%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A408%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84AI%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86.docx",
+      "sha256": "1a3ecc3c8950f9c8e10860028211904a1b43a6cfdfee8a43fbb5adde07935aeb",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "14df402e7f963c4816a7defad331ddf8786bfeb0",
+      "bytes": 418194,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2026-08-14-0843%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A408%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84AI%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86.html",
+      "sha256": "02c010f8ef92676ddefad7dc115587a58d53896a4ecc0ab9b4ee55b1e16113c5",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.html"
+    },
+    {
+      "path": "example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b2d99190293c831f7b6bb18c21bd95998b07260b",
+      "bytes": 34009,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2026-08-14-0843%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A408%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84AI%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86.md",
+      "sha256": "8435d83c3ae692337a1134fdcd486c05fe97dcd0bb7e27f26ca27050828cfd32",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.md"
+    },
+    {
+      "path": "example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.mhtml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e466905f67eb6b4646fa2fd7c34bef3bc6cc9b8",
+      "bytes": 2956604,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2026-08-14-0843%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A408%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84AI%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86.mhtml",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/[2026-08-14-0843]科技爱好者周刊408你需要知道的AI缓存知识.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "228186d85d694d4a449edbc5c4d1aea42f58c0c0",
+      "bytes": 1828265,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B2026-08-14-0843%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A408%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84AI%E7%BC%93%E5%AD%98%E7%9F%A5%E8%AF%86.pdf",
+      "sha256": "5c0a655fac5b42c95d599b965c8f71caeff4c244bbcaaf0d07949ecc34443e90",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/[202604030825]科技爱好者周刊391AI的贫富分化.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dbddf354c57977b22450cfed3f6ea9763d025052",
+      "bytes": 484651,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%5B202604030825%5D%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A391AI%E7%9A%84%E8%B4%AB%E5%AF%8C%E5%88%86%E5%8C%96.html",
+      "sha256": "52352838ba91c7ef117b45d6abe2052d66eec19f1ae799a477d61f1c0d5cf85a",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/[202604030825]科技爱好者周刊391AI的贫富分化.html"
+    },
+    {
+      "path": "example/image.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "145391220d3112c2308449019beb25697412f6d3",
+      "bytes": 367357,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/image.png",
+      "sha256": "a2503350733d834cb1e19ccf7e71dc1ca31df44be9b7cdb6d58e26a6b6c599f6",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/log20250921.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aee9411da82304f2e94ecbd5f3b87dd6fc7bf767",
+      "bytes": 25507,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/log20250921.txt",
+      "sha256": "f374acc9f1ec60c51fce2d20aaab399ba25a3c91367d2083ee4f0ee100d678b9",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/log20250921.txt"
+    },
+    {
+      "path": "example/差评/封面/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.jpg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7b17475139f4cd5d503d2add60c04b1d6abc96e6",
+      "bytes": 66409,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E5%B0%81%E9%9D%A2/%E6%8F%90%E8%BD%A6%E4%B8%89%E5%A4%A9%E5%BC%80%E4%BA%861073%E5%85%AC%E9%87%8C34%E4%B8%AA%E9%97%AE%E9%A2%98%E5%91%8A%E8%AF%89%E4%BD%A0%E5%B0%8F%E7%B1%B3SU7%E5%88%B0%E5%BA%95%E5%92%8B%E6%A0%B7.jpg",
+      "sha256": "f8e5f8c8e451727693164e2cde2ce4838b05e97a7c848e82b5a4a21787a1582f",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9ec3de4775908867f8d98a7698d296e31190b33b",
+      "bytes": 25478852,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E6%8F%90%E8%BD%A6%E4%B8%89%E5%A4%A9%E5%BC%80%E4%BA%861073%E5%85%AC%E9%87%8C34%E4%B8%AA%E9%97%AE%E9%A2%98%E5%91%8A%E8%AF%89%E4%BD%A0%E5%B0%8F%E7%B1%B3SU7%E5%88%B0%E5%BA%95%E5%92%8B%E6%A0%B7.docx",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "63b58cf1dc1c55ec12b25732b426725a58ce4f07",
+      "bytes": 384028,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E6%8F%90%E8%BD%A6%E4%B8%89%E5%A4%A9%E5%BC%80%E4%BA%861073%E5%85%AC%E9%87%8C34%E4%B8%AA%E9%97%AE%E9%A2%98%E5%91%8A%E8%AF%89%E4%BD%A0%E5%B0%8F%E7%B1%B3SU7%E5%88%B0%E5%BA%95%E5%92%8B%E6%A0%B7.html",
+      "sha256": "cceb769583f3d3d88e7471dc294eb3b52d5803b621a433b8ecbef5e2d21d33d2",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.html"
+    },
+    {
+      "path": "example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "816cac33da3146000aea268527240674c575a648",
+      "bytes": 27518,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E6%8F%90%E8%BD%A6%E4%B8%89%E5%A4%A9%E5%BC%80%E4%BA%861073%E5%85%AC%E9%87%8C34%E4%B8%AA%E9%97%AE%E9%A2%98%E5%91%8A%E8%AF%89%E4%BD%A0%E5%B0%8F%E7%B1%B3SU7%E5%88%B0%E5%BA%95%E5%92%8B%E6%A0%B7.md",
+      "sha256": "8068d7c767a1a3a8e0bc2dd1bbde092c606ff48e10aef8b1d9e328238eee115f",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.md"
+    },
+    {
+      "path": "example/差评/提车三天开了1073公里34个问题告诉你小米SU7到底咋样.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f62a35db3b982ab7bc07079c6f70286dc4132186",
+      "bytes": 3785397,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E6%8F%90%E8%BD%A6%E4%B8%89%E5%A4%A9%E5%BC%80%E4%BA%861073%E5%85%AC%E9%87%8C34%E4%B8%AA%E9%97%AE%E9%A2%98%E5%91%8A%E8%AF%89%E4%BD%A0%E5%B0%8F%E7%B1%B3SU7%E5%88%B0%E5%BA%95%E5%92%8B%E6%A0%B7.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/差评/视频/0bc35maauaaadaaiihasrjtfb26dblvqacqa.f10002.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8f75c7f8298a55ddd2c8b56cba388ff9d1376639",
+      "bytes": 6915815,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E8%A7%86%E9%A2%91/0bc35maauaaadaaiihasrjtfb26dblvqacqa.f10002.mp4",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/差评/视频/0bc3uiaauaaavyaiirysprtfbiwdbkraacqa.f10102.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b9e07ac0c26dfe19f838826001ffe8beba6df837",
+      "bytes": 10313893,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E5%B7%AE%E8%AF%84/%E8%A7%86%E9%A2%91/0bc3uiaauaaavyaiirysprtfbiwdbkraacqa.f10102.mp4",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dd26a41cf31ebf8e8e94f61d728cbb2107783106",
+      "bytes": 662099,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%89%B9%E6%96%AF%E6%8B%89%E8%A2%AB%E6%9B%9D%E5%9C%A8%E4%B8%8E%E4%B8%AD%E4%BC%81%E7%AB%9E%E4%BA%89%E4%B8%AD%E6%94%BE%E5%BC%83%E7%94%9F%E4%BA%A7%E4%BD%8E%E6%88%90%E6%9C%AC%E8%BD%A6%E5%9E%8BModel2%E9%A9%AC%E6%96%AF%E5%85%8B.docx",
+      "sha256": "84b022d49843b2998ed718e8c569a93ad67881689ced88ff341ae2389fe9d115",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0937af1e519186b5cba1ca6ba977535865e1ffec",
+      "bytes": 168966,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%89%B9%E6%96%AF%E6%8B%89%E8%A2%AB%E6%9B%9D%E5%9C%A8%E4%B8%8E%E4%B8%AD%E4%BC%81%E7%AB%9E%E4%BA%89%E4%B8%AD%E6%94%BE%E5%BC%83%E7%94%9F%E4%BA%A7%E4%BD%8E%E6%88%90%E6%9C%AC%E8%BD%A6%E5%9E%8BModel2%E9%A9%AC%E6%96%AF%E5%85%8B.html",
+      "sha256": "3dd7575a08f0c666f99ed1cce7c0473b31139aa4afe6bf23f260da2a846552d8",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.html"
+    },
+    {
+      "path": "example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa7173c3ec3d39668290ce3bf3b523b32302805c",
+      "bytes": 62156,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%89%B9%E6%96%AF%E6%8B%89%E8%A2%AB%E6%9B%9D%E5%9C%A8%E4%B8%8E%E4%B8%AD%E4%BC%81%E7%AB%9E%E4%BA%89%E4%B8%AD%E6%94%BE%E5%BC%83%E7%94%9F%E4%BA%A7%E4%BD%8E%E6%88%90%E6%9C%AC%E8%BD%A6%E5%9E%8BModel2%E9%A9%AC%E6%96%AF%E5%85%8B.md",
+      "sha256": "b5d7255cc4a2ed8d5287f9849eba076565cbe37ceaf5680f34ca4535b2af6ba1",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.md"
+    },
+    {
+      "path": "example/特斯拉被曝在与中企竞争中放弃生产低成本车型Model2马斯克.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4bab9715f037f5581f30fe217777f6a76dfb35b2",
+      "bytes": 969029,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%89%B9%E6%96%AF%E6%8B%89%E8%A2%AB%E6%9B%9D%E5%9C%A8%E4%B8%8E%E4%B8%AD%E4%BC%81%E7%AB%9E%E4%BA%89%E4%B8%AD%E6%94%BE%E5%BC%83%E7%94%9F%E4%BA%A7%E4%BD%8E%E6%88%90%E6%9C%AC%E8%BD%A6%E5%9E%8BModel2%E9%A9%AC%E6%96%AF%E5%85%8B.pdf",
+      "sha256": "7406cb64ca220b7b69987b75843e3431bbd3f9ee964e8db477412ab5547856c2",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/科技爱好者周刊#275：彼得·蒂尔的实验.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1f7f65572c4a82a3f364e3c9791eedc7802ca94e",
+      "bytes": 319213,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%23275%EF%BC%9A%E5%BD%BC%E5%BE%97%C2%B7%E8%92%82%E5%B0%94%E7%9A%84%E5%AE%9E%E9%AA%8C.html",
+      "sha256": "22ef3d688f55eadd6b34248429f7cb97f8e19853de2fe5fbcfb9036c69d9b310",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊#275：彼得·蒂尔的实验.html"
+    },
+    {
+      "path": "example/科技爱好者周刊#276：内容行业的衰落.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fe560b417132b9c44f2b192be05bbeae0fb1d584",
+      "bytes": 19917919,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%23276%EF%BC%9A%E5%86%85%E5%AE%B9%E8%A1%8C%E4%B8%9A%E7%9A%84%E8%A1%B0%E8%90%BD.docx",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/科技爱好者周刊#276：内容行业的衰落.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e01efbbf26f7a4808741802b0aa5dba8fe30665",
+      "bytes": 22472,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%23276%EF%BC%9A%E5%86%85%E5%AE%B9%E8%A1%8C%E4%B8%9A%E7%9A%84%E8%A1%B0%E8%90%BD.md",
+      "sha256": "86ca03e1efe5a7fd2e8997602d2b23ac7482b7f929bb20ed89760a6fb457677b",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊#276：内容行业的衰落.md"
+    },
+    {
+      "path": "example/科技爱好者周刊#276：内容行业的衰落.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b43c037fa1e1fb2ac8d1ea1dc00f1b88894a79fd",
+      "bytes": 2613976,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A%23276%EF%BC%9A%E5%86%85%E5%AE%B9%E8%A1%8C%E4%B8%9A%E7%9A%84%E8%A1%B0%E8%90%BD.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/科技爱好者周刊289宽容从何而来.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "82fdc17a7cdba6c939aa3523d0830aaf4df649dd",
+      "bytes": 2026959,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A289%E5%AE%BD%E5%AE%B9%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5.docx",
+      "sha256": "294e86ded37121b24cf4514a61820f5a2fbdd55316f699578ab140729061f1db",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "example/科技爱好者周刊289宽容从何而来.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "92f34cb834affc0771f2ba64fbc4efcc414ef503",
+      "bytes": 351563,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A289%E5%AE%BD%E5%AE%B9%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5.html",
+      "sha256": "1dd85e861f8a9a2711fbd1b6ce569721d434d2bb4018983ce27a84420da6d65f",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊289宽容从何而来.html"
+    },
+    {
+      "path": "example/科技爱好者周刊289宽容从何而来.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6e408f67361d17f03a2792bfe671177d950ca3f3",
+      "bytes": 39261,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A289%E5%AE%BD%E5%AE%B9%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5.md",
+      "sha256": "820f9b4795a87dcc771fe8e02994e8491b2215aaa9c04497ba664857ddfd5af6",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊289宽容从何而来.md"
+    },
+    {
+      "path": "example/科技爱好者周刊289宽容从何而来.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0d1af663238428eab65d86cdcd25d6cb1a97e10b",
+      "bytes": 2258786,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A289%E5%AE%BD%E5%AE%B9%E4%BB%8E%E4%BD%95%E8%80%8C%E6%9D%A5.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/科技爱好者周刊304最受欢迎的颜色.docx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8b0a333ce59dafe7a0b9597110b6fe13fdbdf16b",
+      "bytes": 2549903,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A304%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E9%A2%9C%E8%89%B2.docx",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/科技爱好者周刊304最受欢迎的颜色.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "033619fdf0d0b43060053e671c7c3aa019dd8cdd",
+      "bytes": 371003,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A304%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E9%A2%9C%E8%89%B2.html",
+      "sha256": "1af9c0b7f2bef3e0a87249c65fec375e57861aefd24e05297d25280649eacd2e",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊304最受欢迎的颜色.html"
+    },
+    {
+      "path": "example/科技爱好者周刊304最受欢迎的颜色.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "81121756884e4364c1eb77370f8bbda613446fed",
+      "bytes": 49750,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A304%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E9%A2%9C%E8%89%B2.md",
+      "sha256": "1dbffdc8cff0285a05344035d3ff42dbc014f93a859c188362cadb82b3d4d37a",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/科技爱好者周刊304最受欢迎的颜色.md"
+    },
+    {
+      "path": "example/科技爱好者周刊304最受欢迎的颜色.pdf",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cd91a0fd6c8901ac484a5fc862ce19de89e20c50",
+      "bytes": 2795633,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E7%A7%91%E6%8A%80%E7%88%B1%E5%A5%BD%E8%80%85%E5%91%A8%E5%88%8A304%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E9%A2%9C%E8%89%B2.pdf",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "example/阮一峰的网络日志 2024-04-06-203823.csv",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "19da71de88f6a12f71541e76f8480d0d180a6cf4",
+      "bytes": 1590,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97%202024-04-06-203823.csv",
+      "sha256": "42f613d955fa3dfd13e89b98096caa1ff5714638e0a251391862e09e23858c75",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/example/阮一峰的网络日志 2024-04-06-203823.csv"
+    },
+    {
+      "path": "skills/wechat-article-downloader/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "39d2e67b1c2ed7e5fb52c4a2b09c27bc991944ac",
+      "bytes": 10501,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/skills/wechat-article-downloader/SKILL.md",
+      "sha256": "a81f26355f079b40f7f71d5e6c5e94a76c04ac176bf11f8d6ecf6f6b11b658d7",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/skills/wechat-article-downloader/SKILL.md"
+    },
+    {
+      "path": "skills/wechat-article-downloader/evals/evals.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7bf55245cacfb84873639cf1a3455b0273e62230",
+      "bytes": 1333,
+      "source_url": "https://github.com/qiye45/wechatDownload/blob/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/skills/wechat-article-downloader/evals/evals.json",
+      "sha256": "4f753c431226d3d47d12d46d13a455883fdd682380fcddffc4eb13fe6f4ede6c",
+      "status": "saved",
+      "raw_path": "raw/qiye45/wechatDownload/33adf7186e9fd40c1c43df8615c8bcb3d193f39c/skills/wechat-article-downloader/evals/evals.json"
+    }
+  ]
+}

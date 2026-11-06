@@ -1,0 +1,12 @@
+{
+  "repository": "microsoft/SkillOpt",
+  "commit_sha": "eb959c3ba3f0b6bcfa23e485ee223e019eded3a3",
+  "tree_entries": 480,
+  "candidate_skill_paths": [
+    "plugins/claude-code/skills/skillopt-sleep/SKILL.md",
+    "plugins/codex/skills/skillopt-sleep/SKILL.md",
+    "plugins/cursor/skills/skillopt-sleep/SKILL.md",
+    "plugins/dsh/skills/skillopt-sleep/SKILL.md",
+    "plugins/openclaw/SKILL.md"
+  ]
+}

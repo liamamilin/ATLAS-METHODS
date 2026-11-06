@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "qiye45/wechatDownload",
+    "output_directory": "data-batch-025/repositories/qiye45/wechatDownload",
+    "state": "text_snapshot_collected",
+    "tree_scanned": true,
+    "started_at": "2026-11-06T12:55:10.561716+00:00",
+    "commit_sha": "33adf7186e9fd40c1c43df8615c8bcb3d193f39c",
+    "command": [
+      "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+      "collect_skills.py",
+      "--sources",
+      "sources.batch-025.json",
+      "--only",
+      "qiye45/wechatDownload",
+      "--out",
+      "data-batch-025/repositories/qiye45/wechatDownload"
+    ],
+    "exit_code": 0,
+    "candidate_skill_files": 1,
+    "saved_skill_entries": 1,
+    "unexported_entry_reasons": {},
+    "errors": [],
+    "finished_at": "2026-11-06T12:55:46.922374+00:00"
+  },
+  {
+    "repository": "FredAntB/Spec-Driven-Development",
+    "output_directory": "data-batch-025/repositories/FredAntB/Spec-Driven-Development",
+    "state": "text_snapshot_collected",
+    "tree_scanned": true,
+    "started_at": "2026-11-06T12:55:46.930718+00:00",
+    "commit_sha": "7296108716dea8447938a81fa82bbf7369a0fce2",
+    "command": [
+      "/Users/milin/.pyenv/versions/3.10.13/bin/python3",
+      "collect_skills.py",
+      "--sources",
+      "sources.batch-025.json",
+      "--only",
+      "FredAntB/Spec-Driven-Development",
+      "--out",
+      "data-batch-025/repositories/FredAntB/Spec-Driven-Development"
+    ],
+    "exit_code": 0,
+    "candidate_skill_files": 1,
+    "saved_skill_entries": 1,
+    "unexported_entry_reasons": {},
+    "errors": [],
+    "finished_at": "2026-11-06T12:55:52.186575+00:00"
+  }
+]

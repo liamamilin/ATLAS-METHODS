@@ -1,0 +1,9 @@
+{
+  "repository": "malkreide/socratic-method-skill",
+  "commit_sha": "7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232",
+  "tree_entries": 11,
+  "candidate_skill_paths": [
+    "SKILL.md",
+    "docs/de/SKILL.md"
+  ]
+}

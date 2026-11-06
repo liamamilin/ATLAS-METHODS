@@ -1,0 +1,72 @@
+{
+  "repository": "noobnooc/agent",
+  "commit_sha": "1f594b5dd4db0371bba49e8ca131d69b17218137",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "550c693a5640ce17a407ea5803cb98e45fdbe9bb",
+      "bytes": 2115,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/README.md",
+      "sha256": "331c8f237b85ca3bd6cea2e2beb90ebac62aad81608084f74951c3e3d5cf8112",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/README.md"
+    },
+    {
+      "path": "skills/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "815d9be25c402f0b87ee461df4adfffd8e087831",
+      "bytes": 905,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/README.md",
+      "sha256": "5a809e37b069396d463be29e12244a540ff3ff53927ddbcdd48edad71bf9fd1e",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/README.md"
+    },
+    {
+      "path": "skills/better-codex/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5908692f069c8542efb047772f156b2ed864b5ba",
+      "bytes": 12820,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/better-codex/SKILL.md",
+      "sha256": "e2fb616cadcb77f5580ea3b7e75b82cc495ca63d24b0fba3d5aae891ec147734",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/better-codex/SKILL.md"
+    },
+    {
+      "path": "skills/better-codex/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a5da963292e203cd7ebe8eb69054c8fd8db0769a",
+      "bytes": 188,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/better-codex/agents/openai.yaml",
+      "sha256": "0bed8386b886e9b187fe979c9a878f5cc8524e23825ac2caba36291efc2fc929",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/better-codex/agents/openai.yaml"
+    },
+    {
+      "path": "skills/wtf/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "45d6cb4b60dee6f5d483c4a6cdc362af2e9abe53",
+      "bytes": 8207,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/wtf/SKILL.md",
+      "sha256": "d8b4a79fcf16d05d28774df3ccba84a3f5c55a116fa950b69389da85ff23bf80",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/wtf/SKILL.md"
+    },
+    {
+      "path": "skills/wtf/agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "023d664e9812b75f9d885ab7dfd4174d9560f5fd",
+      "bytes": 172,
+      "source_url": "https://github.com/noobnooc/agent/blob/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/wtf/agents/openai.yaml",
+      "sha256": "272b7543068419ddec8a5e9cb616757e40f60c5f4d45c2b70faefc2b97cbe9e2",
+      "status": "saved",
+      "raw_path": "raw/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137/skills/wtf/agents/openai.yaml"
+    }
+  ]
+}

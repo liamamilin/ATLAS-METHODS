@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "dgk-dev/dgk-gpt",
+      "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0"
+    }
+  ]
+}

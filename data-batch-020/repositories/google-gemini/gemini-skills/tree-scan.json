@@ -1,0 +1,11 @@
+{
+  "repository": "google-gemini/gemini-skills",
+  "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf",
+  "tree_entries": 19,
+  "candidate_skill_paths": [
+    "skills/gemini-api-cli/SKILL.md",
+    "skills/gemini-api-dev/SKILL.md",
+    "skills/gemini-live-api-dev/SKILL.md",
+    "skills/gemini-omni-flash-api/SKILL.md"
+  ]
+}

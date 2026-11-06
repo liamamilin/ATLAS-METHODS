@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:51:56.573900+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tigerless-labs/design-harness",
+      "commit_sha": "9aca84e8c4721d4e7623df5f4d67153477ec40a5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 156,
+      "files_not_exported": 13,
+      "repository_manifest": "manifests/tigerless-labs/design-harness/9aca84e8c4721d4e7623df5f4d67153477ec40a5.json"
+    }
+  ],
+  "errors": []
+}

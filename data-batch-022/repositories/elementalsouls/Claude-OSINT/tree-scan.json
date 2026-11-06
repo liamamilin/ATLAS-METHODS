@@ -1,0 +1,17 @@
+{
+  "repository": "elementalsouls/Claude-OSINT",
+  "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890",
+  "tree_entries": 87,
+  "candidate_skill_paths": [
+    ".claude/skills/run-claude-osint/SKILL.md",
+    "skills/cloud-saas-exposure/SKILL.md",
+    "skills/continuous-exposure-monitoring/SKILL.md",
+    "skills/email-domain-security/SKILL.md",
+    "skills/exposure-risk-quantification/SKILL.md",
+    "skills/identity-provider-recon/SKILL.md",
+    "skills/offensive-osint/SKILL.md",
+    "skills/org-attack-surface/SKILL.md",
+    "skills/osint-autopilot/SKILL.md",
+    "skills/osint-methodology/SKILL.md"
+  ]
+}

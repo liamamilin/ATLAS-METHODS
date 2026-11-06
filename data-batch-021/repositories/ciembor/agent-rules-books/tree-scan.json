@@ -1,0 +1,21 @@
+{
+  "repository": "ciembor/agent-rules-books",
+  "commit_sha": "893a88a6fce3a80c565bf39ac65021b43a8b2990",
+  "tree_entries": 215,
+  "candidate_skill_paths": [
+    "a-philosophy-of-software-design/SKILL.md",
+    "clean-architecture/SKILL.md",
+    "clean-code/SKILL.md",
+    "code-complete/SKILL.md",
+    "designing-data-intensive-applications/SKILL.md",
+    "domain-driven-design-distilled/SKILL.md",
+    "domain-driven-design/SKILL.md",
+    "implementing-domain-driven-design/SKILL.md",
+    "patterns-of-enterprise-application-architecture/SKILL.md",
+    "refactoring-guru/SKILL.md",
+    "refactoring/SKILL.md",
+    "release-it/SKILL.md",
+    "the-pragmatic-programmer/SKILL.md",
+    "working-effectively-with-legacy-code/SKILL.md"
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "entry_sha256": "092068f262fecac6c7ec1dffa15334d5ac9bd1535cb9fcfb8b9b495ce56710c4",
+    "record_ids": [
+      "42ee67bf2ca705e2ac76",
+      "e2054c36f0199187091f"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "2046e5b955aa16c288f9c7290c58f237628dfb6ba6d4817fad3da0fa830b46c2",
+    "record_ids": [
+      "1ede307ff0a865a46fb5",
+      "31b3341b9ade162b72c9"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22",
+    "record_ids": [
+      "17579db3859938ac9154",
+      "1358b6e6b433a9f843e1"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+    "record_ids": [
+      "3367ac6e1bfb330cdfdd",
+      "16a56683018f1a47227a"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "582937183ad9bec6fac0ce8c6ad85d2e6404e1e274a4564594577f1965d4d8ae",
+    "record_ids": [
+      "c803d53627b8cb3f3ff5",
+      "164cba649fd1649a15ac"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "724ff7f5edf539a7b5697daa120a5d0befa012660376724adaf9dd04ca6c305a",
+    "record_ids": [
+      "44dadf0803ee98cb370f",
+      "459b30e92b386b7aea09"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+    "record_ids": [
+      "4fb927dd33973aed12e1",
+      "e135cd2467994677efcf"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "c628917689ccc12ce9991615db6824d44c4fe71f8427cd959560aebe6a1a6476",
+    "record_ids": [
+      "7501b1f1a7a56bf57100",
+      "f84fc24d87e4a2d2795a"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  },
+  {
+    "entry_sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+    "record_ids": [
+      "8ac4a1ba739d190dc832",
+      "c497db617235ebadd8d0"
+    ],
+    "scope": "entry_text_only; packages may differ"
+  }
+]

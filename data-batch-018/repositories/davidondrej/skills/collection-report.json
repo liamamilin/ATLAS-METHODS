@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:11:27.120944+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 62,
+  "saved_skill_entries": 62,
+  "unique_entry_texts": 62,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "davidondrej/skills",
+      "commit_sha": "c23d9026faad2a122b989e6faf54930e099bc19e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 62,
+      "saved_skill_entries": 62,
+      "saved_text_files": 143,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/davidondrej/skills/c23d9026faad2a122b989e6faf54930e099bc19e.json"
+    }
+  ],
+  "errors": []
+}

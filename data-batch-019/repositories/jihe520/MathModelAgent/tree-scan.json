@@ -1,0 +1,18 @@
+{
+  "repository": "jihe520/MathModelAgent",
+  "commit_sha": "03f4eb388b3862b7bde55b508dceaf3d6b39d5ac",
+  "tree_entries": 978,
+  "candidate_skill_paths": [
+    "skills/1start-mathmodel/SKILL.md",
+    "skills/2analysis-modeling/SKILL.md",
+    "skills/3coding-visual/SKILL.md",
+    "skills/4drawio/SKILL.md",
+    "skills/5writing/SKILL.md",
+    "skills/6verity/SKILL.md",
+    "skills/_references/SKILL.md",
+    "skills/doctor/SKILL.md",
+    "skills/mathmodel-figure-templates/SKILL.md",
+    "skills/mathmodel-to-ei/SKILL.md",
+    "skills/typst-author/SKILL.md"
+  ]
+}

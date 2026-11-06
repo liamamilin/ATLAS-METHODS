@@ -1,0 +1,72 @@
+{
+  "repository": "typesafe-ai/skills",
+  "commit_sha": "302eea662c54bca6730873fe245bec1d69ebc23d",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "64ab26b6f16335094e8d71a4317b80d5f4aa3436",
+      "bytes": 382,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/.claude-plugin/marketplace.json",
+      "sha256": "7040ea575b7549d7db06cce21ebe479471930953eaede01d8cd9ed81511abd11",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "85828398f2121e089ecb41bd72e405da7dcb8f32",
+      "bytes": 320,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/.claude-plugin/plugin.json",
+      "sha256": "112435e04aeb054abccd9045f8105e1e87dc8c9fb539009ac856296c36c5ba51",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/.claude-plugin/plugin.json"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8c73b41b89d9a76ddf0fdb0edfaafdda800d36e8",
+      "bytes": 1068,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/LICENSE",
+      "sha256": "835f233f1d6ed84a9b9a351aba0689b47644a4137d6316911fc7957bde523b02",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a6e2009caa7b422877257d3c70c5e032d1365a80",
+      "bytes": 1355,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/README.md",
+      "sha256": "e3e5a0d970bdc0d9041e09aa0cfa321aa98ad21109ccd0112cba432504057e08",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/README.md"
+    },
+    {
+      "path": "skills/typesafe-ai/LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8c73b41b89d9a76ddf0fdb0edfaafdda800d36e8",
+      "bytes": 1068,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/skills/typesafe-ai/LICENSE",
+      "sha256": "835f233f1d6ed84a9b9a351aba0689b47644a4137d6316911fc7957bde523b02",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/skills/typesafe-ai/LICENSE"
+    },
+    {
+      "path": "skills/typesafe-ai/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5e4fd5507990f3b67fe65b3e0e345cbea1192357",
+      "bytes": 18085,
+      "source_url": "https://github.com/typesafe-ai/skills/blob/302eea662c54bca6730873fe245bec1d69ebc23d/skills/typesafe-ai/SKILL.md",
+      "sha256": "d1513cb2e0f72f58c11ac004ce99fd828fce8668a741b6a274247201e57db724",
+      "status": "saved",
+      "raw_path": "raw/typesafe-ai/skills/302eea662c54bca6730873fe245bec1d69ebc23d/skills/typesafe-ai/SKILL.md"
+    }
+  ]
+}

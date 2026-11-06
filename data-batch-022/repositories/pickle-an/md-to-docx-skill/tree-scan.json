@@ -1,0 +1,8 @@
+{
+  "repository": "pickle-an/md-to-docx-skill",
+  "commit_sha": "7d8d49cb7690a5438313ba43ecc05d5ec43de8fb",
+  "tree_entries": 13,
+  "candidate_skill_paths": [
+    "skill/SKILL.md"
+  ]
+}

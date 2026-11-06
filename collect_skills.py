@@ -18,6 +18,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import unicodedata
 from datetime import datetime, timezone
 from urllib.parse import quote
 
@@ -152,11 +153,26 @@ def license_paths(path: str, paths_by_parent: dict) -> list[str]:
     return sorted(p for parent in parents for p in paths_by_parent.get(parent, []))
 
 
+def collision_storage_paths(entries: list[dict]) -> dict[str, str]:
+    """Keep distinct Git paths separate on case-insensitive/normalizing filesystems."""
+    groups = {}
+    for entry in entries:
+        key = unicodedata.normalize("NFD", entry["path"]).casefold()
+        groups.setdefault(key, []).append(entry["path"])
+    prefix = ".atlas-path-collisions"
+    top_names = {unicodedata.normalize("NFD", e["path"].split("/")[0]).casefold() for e in entries}
+    while prefix.casefold() in top_names:
+        prefix += "_"
+    return {path: f"{prefix}/{hashlib.sha256(path.encode('utf-8')).hexdigest()}/{PurePosixPath(path).name}"
+            for paths in groups.values() if len(paths) > 1 for path in paths}
+
+
 def export_source(repo: str, directory: Path, commit: str, output: Path,
                   max_bytes: int) -> tuple[list[dict], dict]:
     entries = file_tree(directory, commit)
     root = output / "raw" / repo / commit
     root.mkdir(parents=True, exist_ok=True)
+    storage_paths = collision_storage_paths(entries)
     manifest = []
     # Save the whole repository's text context, not just each SKILL.md. This keeps
     # shared references/scripts at their original relative paths. Non-text assets
@@ -184,12 +200,28 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
             except UnicodeError:
                 row["status"] = "non_utf8_or_binary_not_exported"
             else:
-                destination = root / path
+                destination = root / storage_paths.get(path, path)
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_bytes(data)
                 row["status"] = "saved"
                 row["raw_path"] = destination.relative_to(output).as_posix()
+                if path in storage_paths:
+                    row["storage_path_reason"] = "case_or_unicode_normalization_collision"
         manifest.append(row)
+    # A previous export may have overwritten one variant at the original path.
+    # Remove only verified collector copies, after both variants have been saved.
+    expected_by_key = {}
+    for entry in entries:
+        if entry["path"] in storage_paths:
+            key = unicodedata.normalize("NFD", entry["path"]).casefold()
+            expected_by_key.setdefault(key, set()).add(entry["git_blob_sha"])
+    for path in storage_paths:
+        legacy = root / path
+        if legacy.is_file():
+            key = unicodedata.normalize("NFD", path).casefold()
+            if blob_hash(legacy.read_bytes()) not in expected_by_key[key]:
+                raise RuntimeError(f"Refusing to remove changed collision copy: {repo}:{path}")
+            legacy.unlink()
     manifest_path = output / "manifests" / repo / (commit + ".json")
     write_json(manifest_path, {"repository": repo, "commit_sha": commit, "files": manifest})
     candidates = [x for x in manifest if PurePosixPath(x["path"]).name.lower() == "skill.md"]
@@ -224,7 +256,9 @@ def export_source(repo: str, directory: Path, commit: str, output: Path,
             "path_review_hints": sorted(set(PurePosixPath(path).parts) & REVIEW_HINTS),
         }
         if item["status"] == "saved":
-            text = (root / path).read_text(encoding="utf-8")
+            text = (output / item["raw_path"]).read_text(encoding="utf-8")
+            if "storage_path_reason" in item:
+                record["storage_path_reason"] = item["storage_path_reason"]
             header, name = frontmatter(text)
             record.update(frontmatter_raw=header, declared_name=name,
                           format_status="header_present_not_schema_validated" if header is not None else "no_parseable_frontmatter")

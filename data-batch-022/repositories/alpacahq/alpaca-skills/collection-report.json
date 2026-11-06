@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:37:40.906908+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 15,
+  "saved_skill_entries": 15,
+  "unique_entry_texts": 15,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "alpacahq/alpaca-skills",
+      "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 43,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/alpacahq/alpaca-skills/89d0943084f311db5199e63ebd77b29c6819d317.json"
+    }
+  ],
+  "errors": []
+}

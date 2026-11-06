@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:37:10.992675+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 8,
+  "saved_skill_entries": 8,
+  "unique_entry_texts": 8,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "sno-ai/mda",
+      "commit_sha": "03a0f4126bf1ca0f9428618865c9b9dd65fada40",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 237,
+      "files_not_exported": 8,
+      "repository_manifest": "manifests/sno-ai/mda/03a0f4126bf1ca0f9428618865c9b9dd65fada40.json"
+    }
+  ],
+  "errors": []
+}

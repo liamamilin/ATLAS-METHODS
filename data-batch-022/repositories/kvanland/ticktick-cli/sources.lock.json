@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "kvanland/ticktick-cli",
+      "commit_sha": "bac930df237127fe8e5680ca4341a04aeac0c549"
+    }
+  ]
+}

@@ -85,7 +85,7 @@ data-batch-003/repositories/<owner>/<repo>/raw/<owner>/<repo>/<commit>/
 直接打开或复制这些 `raw/` 目录即可取回本轮材料，不需要重新从上游下载。旧原文继续保存在 `data/raw/` 和 `data-batch-002/repositories/<owner>/<repo>/raw/`。未将整个上游快照推送到公开 GitHub。
 
 - [本批索引](../data-batch-003/skills.jsonl)、[本批报告](../data-batch-003/collection-report.json)、[逐来源结果](../data-batch-003/source-results.json)。
-- [累计索引](../data/cumulative/skills.jsonl)、[累计报告](../data/cumulative/collection-report.json)、[累计重复分组](../data/cumulative/duplicates.json)、[累计核验](../data/cumulative/verification-report.json)。
+- [累计索引](../data/cumulative/skills.jsonl.gz)、[累计报告](../data/cumulative/collection-report.json)、[累计重复分组](../data/cumulative/duplicates.json)、[累计核验](../data/cumulative/verification-report.json)。
 - [已固定版本清单](../sources.batch-003.json)、[全部候选](../sources.candidates.json)、[待处理队列](../sources.next.json)。
 
 累计 `raw_path`、`repository_manifest` 相对于 `data/cumulative/`；`collection_root` 指向实际来源目录，清单内部原文路径相对于该来源目录。合并不搬迁原文。原有 `.gitignore` 已覆盖新增批次的原文、Git 缓存及临时文件，无需修改。

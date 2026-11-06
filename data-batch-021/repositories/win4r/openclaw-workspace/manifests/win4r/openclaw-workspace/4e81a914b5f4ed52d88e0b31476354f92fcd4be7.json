@@ -1,0 +1,61 @@
+{
+  "repository": "win4r/openclaw-workspace",
+  "commit_sha": "4e81a914b5f4ed52d88e0b31476354f92fcd4be7",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "79603976e8ed83bbfd8461f8cdab8af57d0640e8",
+      "bytes": 8569,
+      "source_url": "https://github.com/win4r/openclaw-workspace/blob/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/README.md",
+      "sha256": "1e39dbb6ee1049ab830f86d0508e99ca78797ba9f0dcd855897f55615aba530b",
+      "status": "saved",
+      "raw_path": "raw/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/README.md"
+    },
+    {
+      "path": "README_CN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29e0767e8a6ea6f6c7c974f61ef6a94394172c44",
+      "bytes": 12112,
+      "source_url": "https://github.com/win4r/openclaw-workspace/blob/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/README_CN.md",
+      "sha256": "d9cade575679b7a32b823989c89da09739bb6016b283cd70a5dcd2402430c576",
+      "status": "saved",
+      "raw_path": "raw/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/README_CN.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6572dbcfe0ad30aa2a2001e91c8ed60e7a6ad140",
+      "bytes": 9770,
+      "source_url": "https://github.com/win4r/openclaw-workspace/blob/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/SKILL.md",
+      "sha256": "5f3e5cdfb1549a5a2ca3c7f84b9f88378cdd92fe82e27b0471ee353295f3001c",
+      "status": "saved",
+      "raw_path": "raw/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/SKILL.md"
+    },
+    {
+      "path": "references/optimization-guide.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5957736c870c76be7a76c9fac7b999995ed2ffd0",
+      "bytes": 7908,
+      "source_url": "https://github.com/win4r/openclaw-workspace/blob/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/references/optimization-guide.md",
+      "sha256": "15e3a9f634eca50f2650af711267eb4888f7f34c7d90c5745aac9f7764c59b7a",
+      "status": "saved",
+      "raw_path": "raw/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/references/optimization-guide.md"
+    },
+    {
+      "path": "references/workspace-files.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "4d1dd0ab0d246da7fee4d7aa1682f80a99a33d09",
+      "bytes": 13101,
+      "source_url": "https://github.com/win4r/openclaw-workspace/blob/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/references/workspace-files.md",
+      "sha256": "de3c691c1afe18c845e273a1f7dbe8735589350d10507fe3a52020919d9c7958",
+      "status": "saved",
+      "raw_path": "raw/win4r/openclaw-workspace/4e81a914b5f4ed52d88e0b31476354f92fcd4be7/references/workspace-files.md"
+    }
+  ]
+}

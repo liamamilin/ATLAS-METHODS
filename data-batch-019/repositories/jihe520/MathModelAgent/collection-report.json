@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:17:53.000468+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 11,
+  "saved_skill_entries": 11,
+  "unique_entry_texts": 11,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "jihe520/MathModelAgent",
+      "commit_sha": "03f4eb388b3862b7bde55b508dceaf3d6b39d5ac",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 11,
+      "saved_skill_entries": 11,
+      "saved_text_files": 928,
+      "files_not_exported": 50,
+      "repository_manifest": "manifests/jihe520/MathModelAgent/03f4eb388b3862b7bde55b508dceaf3d6b39d5ac.json"
+    }
+  ],
+  "errors": []
+}

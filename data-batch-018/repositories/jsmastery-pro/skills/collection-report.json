@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:14:04.365308+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 9,
+  "saved_skill_entries": 9,
+  "unique_entry_texts": 9,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "jsmastery-pro/skills",
+      "commit_sha": "43b69e44c9ca905fe3a3418ccdf4102255e20d40",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 83,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/jsmastery-pro/skills/43b69e44c9ca905fe3a3418ccdf4102255e20d40.json"
+    }
+  ],
+  "errors": []
+}

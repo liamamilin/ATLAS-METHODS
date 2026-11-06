@@ -1,0 +1,20 @@
+{
+  "repository": "remotion-dev/skills",
+  "commit_sha": "a2824c67f8b4585c294a8101db9f9f0ad3c643f8",
+  "tree_entries": 299,
+  "candidate_skill_paths": [
+    "skills/remotion-best-practices/SKILL.md",
+    "skills/remotion-captions/SKILL.md",
+    "skills/remotion-create/SKILL.md",
+    "skills/remotion-docs/SKILL.md",
+    "skills/remotion-interactivity/SKILL.md",
+    "skills/remotion-license/SKILL.md",
+    "skills/remotion-maps/SKILL.md",
+    "skills/remotion-markup/SKILL.md",
+    "skills/remotion-multimedia/SKILL.md",
+    "skills/remotion-render/SKILL.md",
+    "skills/remotion-saas/SKILL.md",
+    "skills/remotion-studio/SKILL.md",
+    "skills/remotion-upgrade/SKILL.md"
+  ]
+}

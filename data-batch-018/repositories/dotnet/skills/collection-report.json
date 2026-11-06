@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:15.714149+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 115,
+  "saved_skill_entries": 115,
+  "unique_entry_texts": 115,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "dotnet/skills",
+      "commit_sha": "d63a2a78358c7641821b62c5e7a6d36598f6ca79",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 115,
+      "saved_skill_entries": 115,
+      "saved_text_files": 3759,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/dotnet/skills/d63a2a78358c7641821b62c5e7a6d36598f6ca79.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "gapmiss/obsidian-plugin-skill",
+  "commit_sha": "017d9b22ef96b50aa50513d7141b1ff7e80cbb25",
+  "tree_entries": 19,
+  "candidate_skill_paths": [
+    ".agents/skills/obsidian/SKILL.md"
+  ]
+}

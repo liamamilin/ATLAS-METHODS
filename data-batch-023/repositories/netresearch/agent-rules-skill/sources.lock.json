@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "netresearch/agent-rules-skill",
+      "commit_sha": "aa0ff50699a60d4a02de70be3af83182b766fe33"
+    }
+  ]
+}

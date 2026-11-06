@@ -1,0 +1,11 @@
+{
+  "repository": "Memento-Teams/Memento-Skills",
+  "commit_sha": "ee9b9a45efd093d669c06fe318b4b1dceb246d19",
+  "tree_entries": 641,
+  "candidate_skill_paths": [
+    "builtin/skills/filesystem/SKILL.md",
+    "builtin/skills/skill-creator/SKILL.md",
+    "builtin/skills/uv-pip-install/SKILL.md",
+    "builtin/skills/web-search/SKILL.md"
+  ]
+}

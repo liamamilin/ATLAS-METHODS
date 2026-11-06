@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:21:15.363480+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Memento-Teams/Memento-Skills",
+      "commit_sha": "ee9b9a45efd093d669c06fe318b4b1dceb246d19",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 634,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/Memento-Teams/Memento-Skills/ee9b9a45efd093d669c06fe318b4b1dceb246d19.json"
+    }
+  ],
+  "errors": []
+}

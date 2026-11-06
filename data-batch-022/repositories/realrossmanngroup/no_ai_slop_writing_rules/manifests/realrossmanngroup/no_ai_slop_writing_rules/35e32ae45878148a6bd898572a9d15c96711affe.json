@@ -1,0 +1,127 @@
+{
+  "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+  "commit_sha": "35e32ae45878148a6bd898572a9d15c96711affe",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "be41e66804e2205c92fba120861f3b6d3d596cdb",
+      "bytes": 702,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/.claude-plugin/marketplace.json",
+      "sha256": "2cfedaf888a0a3c25d2247a02fbd6ca46c9e40316a082b07fcf69d163a005429",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude/skills/no-ai-slop/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "514d28bb6d985734b9ddb091e39ad25fd7ac4b4f",
+      "bytes": 5723,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/no-ai-slop/SKILL.md",
+      "sha256": "b8367b9b8d3582a6e440967844f00497d0dffcb438e8c6818313bb8b8afe7508",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/no-ai-slop/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/no-ai-slop/references/ai-writing-detection.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29fb6d910b71f3ec564c8850e725689c1bf99b86",
+      "bytes": 17418,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/no-ai-slop/references/ai-writing-detection.md",
+      "sha256": "1ed8b87231ee92d6562e8eccc9de9a7f2654d1a7191ebc690015d2a6f3924ca6",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/no-ai-slop/references/ai-writing-detection.md"
+    },
+    {
+      "path": ".claude/skills/rossmann-voice/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "09465ef2c6882bed324a6524d15252ffb2a567c5",
+      "bytes": 18150,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/rossmann-voice/SKILL.md",
+      "sha256": "dabe17260a5192e8a2b1ebcea63805ff66d205e407339e673dd92c41d6433286",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/.claude/skills/rossmann-voice/SKILL.md"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "40335a7b34b1853a05a91bd7eeec313a24f13e39",
+      "bytes": 80,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/.gitignore",
+      "sha256": "d4a9a5829971e3ab1053e1b1df4ea1d209f68f999f91276db1bcbbe8a050c79a",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "16563e48830f6f6973e32faa613042aedbbad144",
+      "bytes": 1358,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/AGENTS.md",
+      "sha256": "c5c16cc2069cbf2492f4f6f4a84f1bf0275e29981c8d161ce8c5af6db981919a",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/AGENTS.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "26eafe61ea059b8d3a9e527220b7fd203d089505",
+      "bytes": 8291,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/CLAUDE.md",
+      "sha256": "178afbb96f47c5027f23e8f18461824ecc9680b48901d2c3d1a98ed37d75b0ad",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/CLAUDE.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6ec168eaa92d19b6cd3d7aaa98d462cbfe2a9aad",
+      "bytes": 5103,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/README.md",
+      "sha256": "4f6bf25b094e64d3de14d28416c72d27846f4346f2ee5305b4e879699efd691e",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/README.md"
+    },
+    {
+      "path": "skills/no-ai-slop/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "514d28bb6d985734b9ddb091e39ad25fd7ac4b4f",
+      "bytes": 5723,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/skills/no-ai-slop/SKILL.md",
+      "sha256": "b8367b9b8d3582a6e440967844f00497d0dffcb438e8c6818313bb8b8afe7508",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/skills/no-ai-slop/SKILL.md"
+    },
+    {
+      "path": "skills/no-ai-slop/references/ai-writing-detection.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29fb6d910b71f3ec564c8850e725689c1bf99b86",
+      "bytes": 17418,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/skills/no-ai-slop/references/ai-writing-detection.md",
+      "sha256": "1ed8b87231ee92d6562e8eccc9de9a7f2654d1a7191ebc690015d2a6f3924ca6",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/skills/no-ai-slop/references/ai-writing-detection.md"
+    },
+    {
+      "path": "skills/rossmann-voice/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "09465ef2c6882bed324a6524d15252ffb2a567c5",
+      "bytes": 18150,
+      "source_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules/blob/35e32ae45878148a6bd898572a9d15c96711affe/skills/rossmann-voice/SKILL.md",
+      "sha256": "dabe17260a5192e8a2b1ebcea63805ff66d205e407339e673dd92c41d6433286",
+      "status": "saved",
+      "raw_path": "raw/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe/skills/rossmann-voice/SKILL.md"
+    }
+  ]
+}

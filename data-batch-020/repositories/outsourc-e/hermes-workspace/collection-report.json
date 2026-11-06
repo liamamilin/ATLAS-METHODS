@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:22:56.305328+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "outsourc-e/hermes-workspace",
+      "commit_sha": "c631425d8baa933f8c61d8447040f4ec8b5f571c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 1040,
+      "files_not_exported": 133,
+      "repository_manifest": "manifests/outsourc-e/hermes-workspace/c631425d8baa933f8c61d8447040f4ec8b5f571c.json"
+    }
+  ],
+  "errors": []
+}

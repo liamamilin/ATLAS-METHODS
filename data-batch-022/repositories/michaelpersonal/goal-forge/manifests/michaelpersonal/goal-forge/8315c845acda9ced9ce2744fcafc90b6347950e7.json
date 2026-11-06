@@ -1,0 +1,149 @@
+{
+  "repository": "michaelpersonal/goal-forge",
+  "commit_sha": "8315c845acda9ced9ce2744fcafc90b6347950e7",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7a60b85e148f80966a550e5ab6a762a907c69ca6",
+      "bytes": 19,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/.gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/.gitignore"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "09c0c8fe1b00df9f10cbfbc24446ffede936eae2",
+      "bytes": 1068,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/LICENSE",
+      "sha256": "4ebbcc2ed98096f5a6ab3b97cf439317e5cdf04e93e2196342fc187318fa9d5d",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fb3df59b1933fd294b9506a60a034b3fe1ff36d6",
+      "bytes": 5124,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/README.md",
+      "sha256": "ea672250dbafd3d136f3df7bd9384620a45120e560136e9f72c02abc796223d4",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5c9b11944a4bea988dee657e30582a87baa51676",
+      "bytes": 10196,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/SKILL.md",
+      "sha256": "02eaf1a8a3f538d05fe41d3ef4bc8ff951d5cc478a7d3249ef99a9a238e1a28d",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/SKILL.md"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0b38c38cfa44d7a26ca93f58c0c4c11407f3d14a",
+      "bytes": 252,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/agents/openai.yaml",
+      "sha256": "dd39b732756e1b7d93de6bd45888c0c41c391d97f5949dfc1f26d31edba4e65b",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/agents/openai.yaml"
+    },
+    {
+      "path": "assets/readme-cover.svg",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b153c4c0d23e75169253a49054d11dd0350e27ef",
+      "bytes": 7112,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/assets/readme-cover.svg",
+      "sha256": "cf86e0cb35e82c5817470d22c100c348bf30c4239e0e12ea407f231efd7401d7",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/assets/readme-cover.svg"
+    },
+    {
+      "path": "references/budget_contract.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "799240e61444d8401d584e3ec54c8b36373b9663",
+      "bytes": 3675,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/budget_contract.md",
+      "sha256": "b15085e02069028ccc2dec47b6d6d34afc5d19fa152e6462bbcb5ce64b4419e7",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/budget_contract.md"
+    },
+    {
+      "path": "references/config_checklist.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cd5dddfa1eae57f293219a98a2b246c3e59bad42",
+      "bytes": 2862,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/config_checklist.md",
+      "sha256": "05ac192c06b3c38086c7638646a93fa3851e80431b45125bdfe0c075bc35b087",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/config_checklist.md"
+    },
+    {
+      "path": "references/control_surface_templates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "19d6759e52c0bfd825c9ba2c020c2962fde67f26",
+      "bytes": 3427,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/control_surface_templates.md",
+      "sha256": "2c87d9d922321fb85891eee6d1c48a251a914bb90b042f57675020f3d589141c",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/control_surface_templates.md"
+    },
+    {
+      "path": "references/goal_prompt_blocks.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e1bbd0eaa8cca0650bdcc81222a92af58cee7ab5",
+      "bytes": 5624,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/goal_prompt_blocks.md",
+      "sha256": "d48690d77f7e6e384fa07339f6ccba141ac89c74dec0f55303291822268ea5bd",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/goal_prompt_blocks.md"
+    },
+    {
+      "path": "references/standard_execution_rules.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8fcd0d245a343ed88e4b3eec6b65d2a83d8c2292",
+      "bytes": 1622,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/standard_execution_rules.md",
+      "sha256": "8ec132e8341c10caa1b81bb200c17a5ee8a85f1d74193d6c676287b5fb661d31",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/standard_execution_rules.md"
+    },
+    {
+      "path": "references/working_memory_templates.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "793915efc11558f7788cf5315a416d5553897a9d",
+      "bytes": 1305,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/references/working_memory_templates.md",
+      "sha256": "c3fe3d7cc2744eb1a37fcac17c72f00aeae28e8ee1897db08b17f1c132ebf7ea",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/references/working_memory_templates.md"
+    },
+    {
+      "path": "scripts/inspect_codex_config.py",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "30f1c510536baef85da3877b301734223da807c5",
+      "bytes": 7382,
+      "source_url": "https://github.com/michaelpersonal/goal-forge/blob/8315c845acda9ced9ce2744fcafc90b6347950e7/scripts/inspect_codex_config.py",
+      "sha256": "2b5419b4d3dbe92d2a7615f2b2e64f2d1dc1cd815fdee4770006e9859a669f2d",
+      "status": "saved",
+      "raw_path": "raw/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7/scripts/inspect_codex_config.py"
+    }
+  ]
+}

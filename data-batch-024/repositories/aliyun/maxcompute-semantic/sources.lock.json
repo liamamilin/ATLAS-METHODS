@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "aliyun/maxcompute-semantic",
+      "commit_sha": "d09554d8df1dfe9c06ded046451cdb99fc81dce3"
+    }
+  ]
+}

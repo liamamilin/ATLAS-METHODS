@@ -1,0 +1,23 @@
+{
+  "repository": "vibe-motion/skills",
+  "commit_sha": "4c86c0d016a3ba22ee673428a494f3c44f84111f",
+  "tree_entries": 94,
+  "candidate_skill_paths": [
+    "3d-chladni-render/SKILL.md",
+    "brand-launch-video-star/SKILL.md",
+    "claude-typer/SKILL.md",
+    "colorize/SKILL.md",
+    "disney-animation-rule-skill/SKILL.md",
+    "fisheye-motion/SKILL.md",
+    "light-spotlight-render/SKILL.md",
+    "pixel2motion/SKILL.md",
+    "printed-curtain-render/SKILL.md",
+    "procedural-fish-render/SKILL.md",
+    "remotion-3d-ticker/SKILL.md",
+    "remotion-candlestick/SKILL.md",
+    "remotion-vinyl-player/SKILL.md",
+    "ruler-progress-render/SKILL.md",
+    "threejs-earth-render/SKILL.md",
+    "wechat-2d-render/SKILL.md"
+  ]
+}

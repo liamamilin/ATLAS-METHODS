@@ -1,0 +1,207 @@
+{
+  "repository": "shaom/brand-to-design-md-skill",
+  "commit_sha": "f7fe99e7a2985d4457d44bfab8399bb1cf1896c0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2915cabd846412c4c149f9e8b708805dcdbbe12e",
+      "bytes": 31,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/.gitignore",
+      "sha256": "fbcbad1a334230a3377a4e61116a04e1149efc082ca3e63de47fa9392c66b9ae",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/.gitignore"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e32edaef04d8ae93bfc8356a82f2a5d10b8df2fb",
+      "bytes": 1753,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/README.md",
+      "sha256": "256e43f8f36b7fd456c6a59387da0d75ff3649d6625971735f157783bda1de82",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/README.md"
+    },
+    {
+      "path": "Showcases/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ddede30a0828e0448ae4f87d1193c2e3139282d4",
+      "bytes": 473,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/README.md",
+      "sha256": "09ef777d733689db6a71bf164148a1208aa1da69d0446fe180ba380b1f4fc60f",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/README.md"
+    },
+    {
+      "path": "Showcases/apple/Apple-DESIGN-demo.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "8e352dcda13f1c6f82af3846791a3b0ae9ff458e",
+      "bytes": 44882,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/Apple-DESIGN-demo.html",
+      "sha256": "47efe15b6ae4e65fffcfb17da6df24490b2fa448e9bd80ead6294d1351475ea7",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/Apple-DESIGN-demo.html"
+    },
+    {
+      "path": "Showcases/apple/DESIGN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "35f07b39ee122eee3350a44b2db1141fe902c045",
+      "bytes": 18168,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/DESIGN.md",
+      "sha256": "6669288c9b333ba46d9965708affc0fc0690d2af4a652c1401968e0aca7d102d",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/DESIGN.md"
+    },
+    {
+      "path": "Showcases/apple/apple-showcase-desktop.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9413062469ebeade8c5ad7d9947360efcd96468a",
+      "bytes": 1280430,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/apple-showcase-desktop.png",
+      "sha256": "01d746406c921b0ae191ae5187f174d59c1b912964f17de1e9274ea6dde625a9",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "Showcases/apple/apple-showcase-mobile.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e18265dc6f4b6b308c30900633b2fafa8f1500ba",
+      "bytes": 723787,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/apple-showcase-mobile.png",
+      "sha256": "7d2d11d8cdfff6dafe8b5882984e13ce274878db270169f71e188afafd87303f",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "Showcases/apple/video/STORYBOARD.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1b96d87f56460fd0c207473d6747ac637f50130a",
+      "bytes": 1811,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/STORYBOARD.md",
+      "sha256": "f313bccc75a32e8ed83557ad1cdd3ea3961732a1161f43a978fb90341f96665f",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/STORYBOARD.md"
+    },
+    {
+      "path": "Showcases/apple/video/apple-design-study-showcase-4x3.mp4",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0979ea4c53d14a7795cff959ab368e4cf3e64f8c",
+      "bytes": 3389257,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/apple-design-study-showcase-4x3.mp4",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "Showcases/apple/video/apple-design-study-showcase-contact-sheet.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7cf28401f6caf2491ddfd70ab37e9f91782bb133",
+      "bytes": 322292,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/apple-design-study-showcase-contact-sheet.png",
+      "sha256": "e1d4a9d481e3d001b3eb6c2ae22e1e8dcb733cce5a6482b474d5878f97b30b75",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "Showcases/apple/video/apple-design-study-showcase-raw.webm",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "29b7ed73c010cd7ec4fbe74ea74f5bd281d6e085",
+      "bytes": 2983572,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/apple-design-study-showcase-raw.webm",
+      "status": "over_size_limit"
+    },
+    {
+      "path": "Showcases/apple/video/record-showcase.cjs",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "140d1c6555524a8374f655e863214920a78e94cb",
+      "bytes": 11064,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/record-showcase.cjs",
+      "sha256": "d844a3fe984f5b228f8001df0d4974811b402db47bba70a3ec1e11fcb6bc4033",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/apple/video/record-showcase.cjs"
+    },
+    {
+      "path": "Showcases/kigen/DESIGN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "983df30aa33eaf40f4d74815d7a4eaf37ccd663e",
+      "bytes": 10383,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/kigen/DESIGN.md",
+      "sha256": "b871fcd46a1b9d307e5b783e1f527b03d506f244f20bff6dd3fc8595cbb2ceed",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/kigen/DESIGN.md"
+    },
+    {
+      "path": "Showcases/kigen/Kigen-DESIGN-demo.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2603a726efa744fef7d18d6a044b813c2c49e41a",
+      "bytes": 25112,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/kigen/Kigen-DESIGN-demo.html",
+      "sha256": "b634b7839f1f84bf7713513d76e38e6cfb6861f782a3d63f9292e563f58c2053",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/kigen/Kigen-DESIGN-demo.html"
+    },
+    {
+      "path": "Showcases/poolside/DESIGN.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c8066710d80aa91c0cbef08cf7de81ea368764d3",
+      "bytes": 9454,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/poolside/DESIGN.md",
+      "sha256": "cd4fd9f3f04597a045b64f1a524a3dc592ab859aaba5e6284685a8daa91f4423",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/poolside/DESIGN.md"
+    },
+    {
+      "path": "Showcases/poolside/Poolside-DESIGN-demo.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c4ef57852ab964f90596bbd414d01dfcae8d96c2",
+      "bytes": 26949,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/poolside/Poolside-DESIGN-demo.html",
+      "sha256": "c3688160b14aebfe85fdb05851948ac8910e67a20cf98df4fe51b3e2cab325d1",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/Showcases/poolside/Poolside-DESIGN-demo.html"
+    },
+    {
+      "path": "assets/brand-to-design-md-cover.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ffac4604438a66731b162953204a16215d9f28c7",
+      "bytes": 998914,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/assets/brand-to-design-md-cover.png",
+      "sha256": "9352ec1d678eed5545d74ca367ef571089c6ee53c14f1027715576db721c5e37",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "skills/brand-to-design-md/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "373675e2dc3a02f7804d45c6c5ba11a5b0322faa",
+      "bytes": 5048,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/skills/brand-to-design-md/SKILL.md",
+      "sha256": "e973e45c8a544b25bc422020ce69793040e14d57dbf6c77d16c9e9e0132e6a3e",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/skills/brand-to-design-md/SKILL.md"
+    },
+    {
+      "path": "skills/brand-to-design-md/references/workflow-checklist.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b46d15d06c6d7fdabe6be25d081da572afa21eba",
+      "bytes": 1340,
+      "source_url": "https://github.com/shaom/brand-to-design-md-skill/blob/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/skills/brand-to-design-md/references/workflow-checklist.md",
+      "sha256": "822ad9abf21fd961fcf5267a05908263ceedb256cb0ebcd7e36a73366bf290a0",
+      "status": "saved",
+      "raw_path": "raw/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0/skills/brand-to-design-md/references/workflow-checklist.md"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "selection_note": "Next 24 entries from the existing queue, frozen before collection; no new discovery or historical refresh.",
+  "sources": [
+    {
+      "repository": "Worldbuilder013/HEXIS",
+      "repository_url": "https://github.com/Worldbuilder013/HEXIS",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Worldbuilder013/HEXIS"
+        }
+      ],
+      "repository_id": "1374027278",
+      "commit_sha": "96be2719ee79fc5071dc7eb2aeed816dc03aaa6c",
+      "batch": "024"
+    },
+    {
+      "repository": "GODGOD126/self-improving-for-codex",
+      "repository_url": "https://github.com/GODGOD126/self-improving-for-codex",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/GODGOD126/self-improving-for-codex"
+        }
+      ],
+      "repository_id": "1186635997",
+      "commit_sha": "ae5004343368c7fb9d04691cec7e2df466354328",
+      "batch": "024"
+    },
+    {
+      "repository": "LOGIN-TB/claude-skills",
+      "repository_url": "https://github.com/LOGIN-TB/claude-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/LOGIN-TB/claude-skills"
+        }
+      ],
+      "repository_id": "1326586077",
+      "commit_sha": "1bcf6c4bd4ed539ffa55e274cb7641b963d12276",
+      "batch": "024"
+    },
+    {
+      "repository": "wasp-lang/open-saas",
+      "repository_url": "https://github.com/wasp-lang/open-saas",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/wasp-lang/open-saas"
+        }
+      ],
+      "repository_id": "726082384",
+      "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11",
+      "batch": "024"
+    },
+    {
+      "repository": "feichanggege/ecommerce-visual-copywriting-skill",
+      "repository_url": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill"
+        }
+      ],
+      "repository_id": "1211089620",
+      "commit_sha": "7fd4abaa5a280dddf414ccc1372d886bef702cba",
+      "batch": "024"
+    },
+    {
+      "repository": "jeremylongshore/excel-analyst-pro-skill-md",
+      "repository_url": "https://github.com/jeremylongshore/excel-analyst-pro-skill-md",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/jeremylongshore/excel-analyst-pro-skill-md"
+        }
+      ],
+      "repository_id": "1084599830",
+      "commit_sha": "d4997388ed5243b9dbefdac409a7209a2d649a40",
+      "batch": "024"
+    },
+    {
+      "repository": "DominikTobureto/awesome-grok-build",
+      "repository_url": "https://github.com/DominikTobureto/awesome-grok-build",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/DominikTobureto/awesome-grok-build"
+        }
+      ],
+      "repository_id": "1249659243",
+      "commit_sha": "9125e026dddc2c3e5884f2db5cc56436c7e71665",
+      "batch": "024"
+    },
+    {
+      "repository": "LukeRenton/explore-claude-code",
+      "repository_url": "https://github.com/LukeRenton/explore-claude-code",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/LukeRenton/explore-claude-code"
+        }
+      ],
+      "repository_id": "1173592029",
+      "commit_sha": "02245e611be86b8ce62b1ff5e9b4f6b16aa10f22",
+      "batch": "024"
+    },
+    {
+      "repository": "skillmds/skillmd",
+      "repository_url": "https://github.com/skillmds/skillmd",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/skillmds/skillmd"
+        }
+      ],
+      "repository_id": "1346442038",
+      "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+      "batch": "024"
+    },
+    {
+      "repository": "tomkrikorian/visionOSAgents",
+      "repository_url": "https://github.com/tomkrikorian/visionOSAgents",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/tomkrikorian/visionOSAgents"
+        }
+      ],
+      "repository_id": "1121591511",
+      "commit_sha": "c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc",
+      "batch": "024"
+    },
+    {
+      "repository": "dbwls99706/ros2-engineering-skills",
+      "repository_url": "https://github.com/dbwls99706/ros2-engineering-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/dbwls99706/ros2-engineering-skills"
+        }
+      ],
+      "repository_id": "1182813444",
+      "commit_sha": "f0de84dfedd67b067ccc6d2851e681529606930c",
+      "batch": "024"
+    },
+    {
+      "repository": "adriannoes/awesome-agentic-ai",
+      "repository_url": "https://github.com/adriannoes/awesome-agentic-ai",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/adriannoes/awesome-agentic-ai"
+        }
+      ],
+      "repository_id": "1074836671",
+      "commit_sha": "e797ed58cfe6dd6453fe7632f89d7226d203f6f6",
+      "batch": "024"
+    },
+    {
+      "repository": "dgk-dev/dgk-gpt",
+      "repository_url": "https://github.com/dgk-dev/dgk-gpt",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/dgk-dev/dgk-gpt"
+        }
+      ],
+      "repository_id": "1178423889",
+      "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0",
+      "batch": "024"
+    },
+    {
+      "repository": "AIwithhassan/lets-scroll",
+      "repository_url": "https://github.com/AIwithhassan/lets-scroll",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/AIwithhassan/lets-scroll"
+        }
+      ],
+      "repository_id": "1334984194",
+      "commit_sha": "a0605366e8e774b1596a993ecaf564b6de5916cc",
+      "batch": "024"
+    },
+    {
+      "repository": "fivetaku/claude-office-skills",
+      "repository_url": "https://github.com/fivetaku/claude-office-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/fivetaku/claude-office-skills"
+        }
+      ],
+      "repository_id": "1204702862",
+      "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab",
+      "batch": "024"
+    },
+    {
+      "repository": "tigerless-labs/design-harness",
+      "repository_url": "https://github.com/tigerless-labs/design-harness",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/tigerless-labs/design-harness"
+        }
+      ],
+      "repository_id": "1292529733",
+      "commit_sha": "9aca84e8c4721d4e7623df5f4d67153477ec40a5",
+      "batch": "024"
+    },
+    {
+      "repository": "tizzy916/humanities-writing-companion",
+      "repository_url": "https://github.com/tizzy916/humanities-writing-companion",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/tizzy916/humanities-writing-companion"
+        }
+      ],
+      "repository_id": "1233480477",
+      "commit_sha": "e097ff629f6575af1b2ec129afa7b23f30d2a39c",
+      "batch": "024"
+    },
+    {
+      "repository": "Helpercraft/helpercraft",
+      "repository_url": "https://github.com/Helpercraft/helpercraft",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Helpercraft/helpercraft"
+        }
+      ],
+      "repository_id": "1396873089",
+      "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+      "batch": "024"
+    },
+    {
+      "repository": "Tencent/SkillHone",
+      "repository_url": "https://github.com/Tencent/SkillHone",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/Tencent/SkillHone"
+        }
+      ],
+      "repository_id": "1263731684",
+      "commit_sha": "773d54d11aaa6c00d45720e2e501b6d8bfa8f590",
+      "batch": "024"
+    },
+    {
+      "repository": "frankxai/awesome-hermes-agent-skills",
+      "repository_url": "https://github.com/frankxai/awesome-hermes-agent-skills",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/frankxai/awesome-hermes-agent-skills"
+        }
+      ],
+      "repository_id": "1276791067",
+      "commit_sha": "1f1ae5bd11bffc525fb675836c34225f2f41c2e9",
+      "batch": "024"
+    },
+    {
+      "repository": "HunterisLive-1/mobile-maya-skills",
+      "repository_url": "https://github.com/HunterisLive-1/mobile-maya-skills",
+      "state": "no_skill_files",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/HunterisLive-1/mobile-maya-skills"
+        }
+      ],
+      "repository_id": "1310981814",
+      "commit_sha": "5dd620a0f4f80b58d5432e2132eb50cda78c71a8",
+      "batch": "024"
+    },
+    {
+      "repository": "aliyun/maxcompute-semantic",
+      "repository_url": "https://github.com/aliyun/maxcompute-semantic",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/aliyun/maxcompute-semantic"
+        }
+      ],
+      "repository_id": "1262784746",
+      "commit_sha": "d09554d8df1dfe9c06ded046451cdb99fc81dce3",
+      "batch": "024"
+    },
+    {
+      "repository": "ProxymanApp/proxyman-SKILL.md",
+      "repository_url": "https://github.com/ProxymanApp/proxyman-SKILL.md",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/ProxymanApp/proxyman-SKILL.md"
+        }
+      ],
+      "repository_id": "1259159255",
+      "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+      "batch": "024"
+    },
+    {
+      "repository": "tinyhumansai/skill-registry",
+      "repository_url": "https://github.com/tinyhumansai/skill-registry",
+      "state": "text_snapshot_collected",
+      "discovered_via": [
+        {
+          "link_type": "github_repository_search",
+          "query": "SKILL.md",
+          "page": 1,
+          "url": "https://github.com/tinyhumansai/skill-registry"
+        }
+      ],
+      "repository_id": "1261773709",
+      "commit_sha": "52eb2d8f5f16d95e43014e01995f7c3e90985a45",
+      "batch": "024"
+    }
+  ]
+}

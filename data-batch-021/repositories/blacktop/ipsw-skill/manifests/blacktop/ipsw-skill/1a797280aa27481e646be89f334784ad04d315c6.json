@@ -1,0 +1,270 @@
+{
+  "repository": "blacktop/ipsw-skill",
+  "commit_sha": "1a797280aa27481e646be89f334784ad04d315c6",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c8a6e038a55181b8f5a0bc99da9a926289a61414",
+      "bytes": 343,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.agents/plugins/marketplace.json",
+      "sha256": "f032f796787e2dbbb36f33bef21bb5065d67c2ebf116988974e59a1ff7df9dd8",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.agents/plugins/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7aceff6a7e300f54b620e3e0475ec362593aeaed",
+      "bytes": 380,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.claude-plugin/marketplace.json",
+      "sha256": "80aab6c9da84be65536fb15777070b726903043fe77f9e4ca6fb0e85082893bd",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "020f1bdeee38bf4cc6831340c7d598e7080745ea",
+      "bytes": 487,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.claude-plugin/plugin.json",
+      "sha256": "3670190bcb5ee647ea0c3970764a2cb24569de6ba3db9b7d99ddc0276b5e6283",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.claude-plugin/plugin.json"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "96ffee80d18008f157e61c9c0ee2a56d4d94f8a1",
+      "bytes": 1232,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.codex-plugin/plugin.json",
+      "sha256": "522d0b3fbc8450fdf33f59c397e87bc82c5c6064627342647572134978154b1c",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.codex-plugin/plugin.json"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fa786ed3c640899a4d18c9e6b05ffcc392546a5e",
+      "bytes": 615,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.github/workflows/check.yml",
+      "sha256": "6cc012c902e427b61d8e7c5c0775ff70fbae81566f3682f071e2ca4b495b7fcd",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.github/workflows/check.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7c909ba33337c94e158cc23995375746fc9ceaa2",
+      "bytes": 237,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/.gitignore",
+      "sha256": "d72c517e5061081a6db8ed2aa75afabe118431c35eaf27771a7d2c06858ab640",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/.gitignore"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9c1dad7ce309f227a16217e24331a87631af070e",
+      "bytes": 1804,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/CHANGELOG.md",
+      "sha256": "fe7504915fd57c429d61e86e13337967e00d4b3bbc7c570f8d6aaf9200df8445",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/CHANGELOG.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6b40ed1b69a2314319c22595f2eac015dfc360ae",
+      "bytes": 1065,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/LICENSE",
+      "sha256": "402b458b05fbdaeaa28d08156a9ef8c5653d0de97d5acb55df3979c0c4bf05e5",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f1672acaead9203991489ec2f01bab536ab1a642",
+      "bytes": 6266,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/README.md",
+      "sha256": "d9ac1bbf808683a148dc55ca0187a85ad27910a2c93649614bb93e43b1749ff3",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/README.md"
+    },
+    {
+      "path": "ipsw/LICENSE.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a7cb0fd5de0863931dfb1769390ad45e48a3c35a",
+      "bytes": 1070,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/LICENSE.txt",
+      "sha256": "7a42fb8e327023d9e983923fff004b85da6a91df22f5fe59d8ed6fc450f64ba3",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/LICENSE.txt"
+    },
+    {
+      "path": "ipsw/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ae6ac42b731bfafe48b0da88dbd68206e39fe8e8",
+      "bytes": 13569,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/SKILL.md",
+      "sha256": "cfbb858350f0f241920652197524140671ea103116b8c6187382587e3a49dcce",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/SKILL.md"
+    },
+    {
+      "path": "ipsw/references/class-dump.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c98855e612af4fe241ba0c9c2a899b377131721f",
+      "bytes": 5497,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/class-dump.md",
+      "sha256": "b2f697856fefece910620696d96a13aee3ab3fc44d11dea8fe5f4ce68d61d868",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/class-dump.md"
+    },
+    {
+      "path": "ipsw/references/device.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "35b27cac8ac62b91fc8c6d655631916df3e58884",
+      "bytes": 2641,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/device.md",
+      "sha256": "8775e3c2a2554b1a6e87940f302f36bd02fd9210e846558048b983cb5d036a4e",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/device.md"
+    },
+    {
+      "path": "ipsw/references/diffing.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "27880715bb59e7f910364e5c1920371a6751ab55",
+      "bytes": 3625,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/diffing.md",
+      "sha256": "e85775b2bfcc2bbe180a83bfc39a11e669f47256448ca6f736279d60d86e8015",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/diffing.md"
+    },
+    {
+      "path": "ipsw/references/download.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3ac610bfbe7f52adf38b151eef6c0f1bfb40212a",
+      "bytes": 9981,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/download.md",
+      "sha256": "f24db9c6a41a3345a1406e28c8f2b6cd0f60e24344c6cbb5c99358a8d87ca8da",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/download.md"
+    },
+    {
+      "path": "ipsw/references/dyld.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f5adb8a5caae3ace306d500ad2ce0165660225ec",
+      "bytes": 8695,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/dyld.md",
+      "sha256": "4b60ea55b95744012a1b17b943c8ab1fdfd397877a54e51b007ba0d3845d1982",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/dyld.md"
+    },
+    {
+      "path": "ipsw/references/entitlements.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b6a15c4bcd7f2103748ba8a5828687419e6dacf4",
+      "bytes": 3231,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/entitlements.md",
+      "sha256": "b14e35009a9819053a06582059166ad97c4909b960d4ad82c62c2c0424fa8b08",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/entitlements.md"
+    },
+    {
+      "path": "ipsw/references/firmware.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fbf1d4b598a24d1fd4093e8159feb7406b8e592f",
+      "bytes": 7921,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/firmware.md",
+      "sha256": "72aa494f11fd6fa892103bd753cd381f8312c2777e8aa7b8e88b877f9a1f59de",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/firmware.md"
+    },
+    {
+      "path": "ipsw/references/kernel.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cf44e0ca740fc02387a1b877c890e88ccfd55a80",
+      "bytes": 6579,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/kernel.md",
+      "sha256": "397c3ce1172dc76186f3051548e3cb5cc37f2429bec0b6700ae7d83eb3d25acb",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/kernel.md"
+    },
+    {
+      "path": "ipsw/references/macho.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7e8f63d9635c8db1f2d34ac2f7e605e74e19d6d7",
+      "bytes": 4637,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/macho.md",
+      "sha256": "c17549df0960fc5ac157475f1e711db596f593bb3f8526ecb9abe1268bf4c08b",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/macho.md"
+    },
+    {
+      "path": "ipsw/references/sandbox.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3cb4aff8953132bfe954917a08327483c3e7174f",
+      "bytes": 5319,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/sandbox.md",
+      "sha256": "cc95dd6e561f1717ec689266f555dcc2a880fd3cec6c54f0140ee110e49f1b16",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/sandbox.md"
+    },
+    {
+      "path": "ipsw/references/symbolication.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "070e5a2c796f0463e538ae8b06fffbc3565d1aa4",
+      "bytes": 4139,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/symbolication.md",
+      "sha256": "80a1832cc4c2d1ce60f9ae12f2f010750d0a40307277923ce547641146b6042f",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/ipsw/references/symbolication.md"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "37085637f69b47e613996816136dc6aaafdcaefa",
+      "bytes": 139,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/package.json",
+      "sha256": "8da8e7c8885d93577fa373c4b21b0f2b15a9df9de78326912fe7a8cacc5397dc",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/package.json"
+    },
+    {
+      "path": "scripts/check-versions.sh",
+      "mode": "100755",
+      "kind": "blob",
+      "git_blob_sha": "f1af8b91f10d6661032506d781c95337bf2246d8",
+      "bytes": 1552,
+      "source_url": "https://github.com/blacktop/ipsw-skill/blob/1a797280aa27481e646be89f334784ad04d315c6/scripts/check-versions.sh",
+      "sha256": "1cc7ea60fa3ceee217586b9c8d8b6f248ab15ddddc8da2cc03dd9a83fdeee8d8",
+      "status": "saved",
+      "raw_path": "raw/blacktop/ipsw-skill/1a797280aa27481e646be89f334784ad04d315c6/scripts/check-versions.sh"
+    }
+  ]
+}

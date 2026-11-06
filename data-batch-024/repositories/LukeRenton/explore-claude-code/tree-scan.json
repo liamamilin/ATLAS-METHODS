@@ -1,0 +1,12 @@
+{
+  "repository": "LukeRenton/explore-claude-code",
+  "commit_sha": "02245e611be86b8ce62b1ff5e9b4f6b16aa10f22",
+  "tree_entries": 112,
+  "candidate_skill_paths": [
+    ".claude/skills/build-agent/SKILL.md",
+    ".claude/skills/build-skill/SKILL.md",
+    ".claude/skills/core-brainstorm/SKILL.md",
+    ".claude/skills/frontend-design/SKILL.md",
+    "site/content/.claude/skills/my-skill/SKILL.md"
+  ]
+}

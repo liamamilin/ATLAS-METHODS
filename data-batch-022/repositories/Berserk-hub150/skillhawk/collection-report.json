@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:35:38.578681+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 13,
+  "saved_skill_entries": 13,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "Berserk-hub150/skillhawk",
+      "commit_sha": "cbdbef03f2b006b25e725c014745521b9ed1f561",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 104,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/Berserk-hub150/skillhawk/cbdbef03f2b006b25e725c014745521b9ed1f561.json"
+    }
+  ],
+  "errors": []
+}

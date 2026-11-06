@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "repository": "BuilderIO/skills",
+      "commit_sha": "f4f10b8d513476c24bd995ceac5294bcdd6ee15c",
+      "collection_root": "repositories/BuilderIO/skills"
+    },
+    {
+      "repository": "ConardLi/garden-skills",
+      "commit_sha": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "collection_root": "repositories/ConardLi/garden-skills"
+    },
+    {
+      "repository": "MengTo/Skills",
+      "commit_sha": "5ea1661a0e05d82b054553daaa6baf6d0233c33c",
+      "collection_root": "repositories/MengTo/Skills"
+    },
+    {
+      "repository": "Shubhamsaboo/awesome-llm-apps",
+      "commit_sha": "c129f31036f5ba0bba42cbb63937a66946fdf2c0",
+      "collection_root": "repositories/Shubhamsaboo/awesome-llm-apps"
+    },
+    {
+      "repository": "antfu/skills",
+      "commit_sha": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+      "collection_root": "repositories/antfu/skills"
+    },
+    {
+      "repository": "cisco-ai-defense/skill-scanner",
+      "commit_sha": "f7824651ffeb9b89f7682ddd97d6fba8fe9c10b1",
+      "collection_root": "repositories/cisco-ai-defense/skill-scanner"
+    },
+    {
+      "repository": "cloudflare/skills",
+      "commit_sha": "7de59bfd40b36c64d5d2dd8f01d11d419b2c66e6",
+      "collection_root": "repositories/cloudflare/skills"
+    },
+    {
+      "repository": "davidondrej/skills",
+      "commit_sha": "c23d9026faad2a122b989e6faf54930e099bc19e",
+      "collection_root": "repositories/davidondrej/skills"
+    },
+    {
+      "repository": "dotnet/skills",
+      "commit_sha": "d63a2a78358c7641821b62c5e7a6d36598f6ca79",
+      "collection_root": "repositories/dotnet/skills"
+    },
+    {
+      "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+      "commit_sha": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+      "collection_root": "repositories/gamedev-skills/awesome-gamedev-agent-skills"
+    },
+    {
+      "repository": "huggingface/skills",
+      "commit_sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c",
+      "collection_root": "repositories/huggingface/skills"
+    },
+    {
+      "repository": "jakubkrehel/skills",
+      "commit_sha": "60bf140e43c98b248e6594487384ec967e89d98a",
+      "collection_root": "repositories/jakubkrehel/skills"
+    },
+    {
+      "repository": "jsmastery-pro/skills",
+      "commit_sha": "43b69e44c9ca905fe3a3418ccdf4102255e20d40",
+      "collection_root": "repositories/jsmastery-pro/skills"
+    },
+    {
+      "repository": "liangdabiao/Seedance2-Storyboard-Generator",
+      "commit_sha": "53f749e094374a8215b20edba745e0a6e7af94ca",
+      "collection_root": "repositories/liangdabiao/Seedance2-Storyboard-Generator"
+    },
+    {
+      "repository": "microsoft/skills",
+      "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6",
+      "collection_root": "repositories/microsoft/skills"
+    },
+    {
+      "repository": "noobnooc/agent",
+      "commit_sha": "1f594b5dd4db0371bba49e8ca131d69b17218137",
+      "collection_root": "repositories/noobnooc/agent"
+    },
+    {
+      "repository": "remotion-dev/skills",
+      "commit_sha": "a2824c67f8b4585c294a8101db9f9f0ad3c643f8",
+      "collection_root": "repositories/remotion-dev/skills"
+    },
+    {
+      "repository": "vercel-labs/skills",
+      "commit_sha": "d3701c11b1101251af14c9d148f026e1a47ebe17",
+      "collection_root": "repositories/vercel-labs/skills"
+    },
+    {
+      "repository": "volcengine/OpenViking",
+      "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+      "collection_root": "repositories/volcengine/OpenViking"
+    },
+    {
+      "repository": "vuejs-ai/skills",
+      "commit_sha": "198f0cd8f7f9c0a3d9b566ccc16de6677519ee78",
+      "collection_root": "repositories/vuejs-ai/skills"
+    },
+    {
+      "repository": "zhayujie/CowAgent",
+      "commit_sha": "19e84350d6c5459133fc7d0c573d1b6600e55ff7",
+      "collection_root": "repositories/zhayujie/CowAgent"
+    }
+  ]
+}

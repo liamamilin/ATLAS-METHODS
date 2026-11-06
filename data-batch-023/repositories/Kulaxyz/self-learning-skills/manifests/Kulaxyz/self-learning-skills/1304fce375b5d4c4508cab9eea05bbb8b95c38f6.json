@@ -1,0 +1,127 @@
+{
+  "repository": "Kulaxyz/self-learning-skills",
+  "commit_sha": "1304fce375b5d4c4508cab9eea05bbb8b95c38f6",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e166495cf783950ebc470912efcb0133074cd45d",
+      "bytes": 789,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.claude-plugin/marketplace.json",
+      "sha256": "abc571ded6204d75bbca0038625f14c40377710328fbd5a4c7c9eef47408c6b9",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.claude-plugin/marketplace.json"
+    },
+    {
+      "path": ".cursor/rules/learned/.gitkeep",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c2105d3e5488b90bea30cbbba799ad45fc75137a",
+      "bytes": 63,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.cursor/rules/learned/.gitkeep",
+      "sha256": "a65d7d902b7e6c297ce7bdbedbd820729dac5fd9c504ef87fc0a14395f7892bb",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.cursor/rules/learned/.gitkeep"
+    },
+    {
+      "path": ".cursor/rules/self-learning.mdc",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3164407701b59c857db4b9b0d6fa45756127efb2",
+      "bytes": 2640,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.cursor/rules/self-learning.mdc",
+      "sha256": "b344f5d4c62f20b0d793d0685da7c4036a6c451a623e30de9af15b6a31a75563",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.cursor/rules/self-learning.mdc"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "996f7a209aa62b7e5e8ad481f061ea6fc9aac650",
+      "bytes": 89,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.gitignore",
+      "sha256": "6b27cca445f448b91cdae13ea9ad799b23ef919445ec94a2dfd4bf6d598090f4",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "538c09661753cc492ade21b7891c3853e46264b1",
+      "bytes": 3500,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/AGENTS.md",
+      "sha256": "a5be9046eff42e5a7b647bdfe150f8161f1eb88a111d5e8415ceec46e7ea0ba4",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/AGENTS.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "00e1f9f597aee442dd3391f6b9ba9c0467ff8327",
+      "bytes": 1064,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/LICENSE",
+      "sha256": "e81879a9c9f39e8611554adb189b2af335d5ea341b03ed2ce202ab33e954d024",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa3037781b56aab17b547702f997207bc4f39174",
+      "bytes": 5998,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/README.md",
+      "sha256": "44e35f2f8aa285debcfbd98b8a0204d5534ac7b7dfeb7151a5cb2472cfcdc0ad",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/README.md"
+    },
+    {
+      "path": "skills.sh.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "0b18b199d2bddc8f28b18c434ab934d7d91a3d76",
+      "bytes": 344,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills.sh.json",
+      "sha256": "5659ac4628d339a8f0e6326dcad781f30a710873fb7cc86f1812c836322a5ce7",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills.sh.json"
+    },
+    {
+      "path": "skills/self-learning/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "cb679302f41ee1722833e519b84f9e333e87f2e4",
+      "bytes": 11382,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/SKILL.md",
+      "sha256": "aa10df892c62b362ac4cca9cb3110f13f6f8b4bdaebfc6d8d13d43a5d5c56a61",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/SKILL.md"
+    },
+    {
+      "path": "skills/self-learning/assets/SKILL.template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "07e7c33b5af5545a9a4dff33bf92cb44c02a67e9",
+      "bytes": 2195,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/assets/SKILL.template.md",
+      "sha256": "c5e6a0a6a795a8f22b1eaf4d4efeb2980f35731fa3a4019fda83689d204e5cc6",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/assets/SKILL.template.md"
+    },
+    {
+      "path": "skills/self-learning/references/skill-authoring.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3c59464673253a94d96d16412b567ab7d3a8a9b",
+      "bytes": 6649,
+      "source_url": "https://github.com/Kulaxyz/self-learning-skills/blob/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/references/skill-authoring.md",
+      "sha256": "1d99d25164f2547e3db95dc599dff59a147ebd37605625908a992f6e42e9fac4",
+      "status": "saved",
+      "raw_path": "raw/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6/skills/self-learning/references/skill-authoring.md"
+    }
+  ]
+}

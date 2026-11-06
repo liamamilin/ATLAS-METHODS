@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:31:32.991227+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 5,
+  "saved_skill_entries": 5,
+  "unique_entry_texts": 5,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "microsoft/SkillOpt",
+      "commit_sha": "eb959c3ba3f0b6bcfa23e485ee223e019eded3a3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 474,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/microsoft/SkillOpt/eb959c3ba3f0b6bcfa23e485ee223e019eded3a3.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T13:01:14.706398+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3451,
+  "saved_skill_entries": 3451,
+  "unique_entry_texts": 3223,
+  "duplicate_entry_groups": 133,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "LeoYeAI/agent-master-skills",
+      "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3451,
+      "saved_skill_entries": 3451,
+      "saved_text_files": 30643,
+      "files_not_exported": 162,
+      "repository_manifest": "manifests/LeoYeAI/agent-master-skills/8f88f9a0dd5a1075d4f0c7626f9d960844d57575.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,99 @@
+{
+  "sources": [
+    {
+      "repository": "Hao0321/claude-skill-code-cleanup",
+      "commit_sha": "7be5e421a8c772d91ceafa0dbf07d0db90787f0e",
+      "collection_root": "repositories/Hao0321/claude-skill-code-cleanup"
+    },
+    {
+      "repository": "Kulaxyz/self-learning-skills",
+      "commit_sha": "1304fce375b5d4c4508cab9eea05bbb8b95c38f6",
+      "collection_root": "repositories/Kulaxyz/self-learning-skills"
+    },
+    {
+      "repository": "O0000-code/paper-search-pro",
+      "commit_sha": "2b55e0853b8a42325b69cd20cb6d13e03b23695e",
+      "collection_root": "repositories/O0000-code/paper-search-pro"
+    },
+    {
+      "repository": "OpenLinkSoftware/ai-agent-skills",
+      "commit_sha": "e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e",
+      "collection_root": "repositories/OpenLinkSoftware/ai-agent-skills"
+    },
+    {
+      "repository": "ThomasMoreAI/legal-skills-open",
+      "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+      "collection_root": "repositories/ThomasMoreAI/legal-skills-open"
+    },
+    {
+      "repository": "ajhcs/healthcare-agents",
+      "commit_sha": "b00a51b654fc31331b005818c4bb1ec7f7817a9f",
+      "collection_root": "repositories/ajhcs/healthcare-agents"
+    },
+    {
+      "repository": "bergside/design-md-figma",
+      "commit_sha": "746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590",
+      "collection_root": "repositories/bergside/design-md-figma"
+    },
+    {
+      "repository": "bowenliang123/markdown-exporter",
+      "commit_sha": "398597a3d45d603e3dca36b843d4e894790e19f5",
+      "collection_root": "repositories/bowenliang123/markdown-exporter"
+    },
+    {
+      "repository": "gadievron/raptor",
+      "commit_sha": "54336c2a8f01ef4c2004e3bdb1a11c96e499c3bc",
+      "collection_root": "repositories/gadievron/raptor"
+    },
+    {
+      "repository": "govardhanrekha/QA-Skill.md-files",
+      "commit_sha": "6cef000d8099688b2f34a155adbac44ae5903e69",
+      "collection_root": "repositories/govardhanrekha/QA-Skill.md-files"
+    },
+    {
+      "repository": "malkreide/socratic-method-skill",
+      "commit_sha": "7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232",
+      "collection_root": "repositories/malkreide/socratic-method-skill"
+    },
+    {
+      "repository": "michaelshimeles/rstack",
+      "commit_sha": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "collection_root": "repositories/michaelshimeles/rstack"
+    },
+    {
+      "repository": "nearai/ironhub",
+      "commit_sha": "c49fd181a7bdd968ba5fe40eda12416e732c71ce",
+      "collection_root": "repositories/nearai/ironhub"
+    },
+    {
+      "repository": "netresearch/agent-rules-skill",
+      "commit_sha": "aa0ff50699a60d4a02de70be3af83182b766fe33",
+      "collection_root": "repositories/netresearch/agent-rules-skill"
+    },
+    {
+      "repository": "ooocooc/open-skill-sunset",
+      "commit_sha": "b703cf00712b21f12bfa41f1d3d0a6a9455fd954",
+      "collection_root": "repositories/ooocooc/open-skill-sunset"
+    },
+    {
+      "repository": "spboyer/sensei",
+      "commit_sha": "bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f",
+      "collection_root": "repositories/spboyer/sensei"
+    },
+    {
+      "repository": "tigerless-labs/paper-radar",
+      "commit_sha": "22e13f53d9b364e8f621c329436aa19309f7ba58",
+      "collection_root": "repositories/tigerless-labs/paper-radar"
+    },
+    {
+      "repository": "tmchow/agent-skills",
+      "commit_sha": "8e232f001fff3590b1420f2236923137ddc05bfe",
+      "collection_root": "repositories/tmchow/agent-skills"
+    },
+    {
+      "repository": "zcashlabs/zcash-skills",
+      "commit_sha": "e5f639ebf9eac59ad9e6057e8f357ccdd99075b9",
+      "collection_root": "repositories/zcashlabs/zcash-skills"
+    }
+  ]
+}

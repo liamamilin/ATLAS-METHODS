@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "inference-sh/skills",
+      "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150"
+    }
+  ]
+}

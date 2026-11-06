@@ -1,0 +1,24 @@
+{
+  "repository": "jjyaoao/HelloAgents",
+  "commit_sha": "c597a7ca46ea9969e5b21d9e130549ab69626ff9",
+  "tree_entries": 360,
+  "candidate_skill_paths": [
+    "skills/ASR/SKILL.md",
+    "skills/LLM/SKILL.md",
+    "skills/TTS/SKILL.md",
+    "skills/VLM/SKILL.md",
+    "skills/docx/SKILL.md",
+    "skills/finance/SKILL.md",
+    "skills/frontend-design/SKILL.md",
+    "skills/gift-evaluator/SKILL.md",
+    "skills/image-generation/SKILL.md",
+    "skills/pdf/SKILL.md",
+    "skills/podcast-generate/SKILL.md",
+    "skills/pptx/SKILL.md",
+    "skills/video-generation/SKILL.md",
+    "skills/video-understand/SKILL.md",
+    "skills/web-reader/SKILL.md",
+    "skills/web-search/SKILL.md",
+    "skills/xlsx/SKILL.md"
+  ]
+}

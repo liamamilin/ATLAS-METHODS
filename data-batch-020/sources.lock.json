@@ -1,0 +1,114 @@
+{
+  "sources": [
+    {
+      "repository": "FrancyJGLisboa/agent-skills-platform",
+      "commit_sha": "0c6900a0597622791d1daaafc1c19b2fead0e8d4",
+      "collection_root": "repositories/FrancyJGLisboa/agent-skills-platform"
+    },
+    {
+      "repository": "LeoYeAI/agent-master-skills",
+      "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+      "collection_root": "repositories/LeoYeAI/agent-master-skills"
+    },
+    {
+      "repository": "Memento-Teams/Memento-Skills",
+      "commit_sha": "ee9b9a45efd093d669c06fe318b4b1dceb246d19",
+      "collection_root": "repositories/Memento-Teams/Memento-Skills"
+    },
+    {
+      "repository": "NVIDIA/SkillSpector",
+      "commit_sha": "ab36c42f5c364cd828586c637e5f8f00425d465d",
+      "collection_root": "repositories/NVIDIA/SkillSpector"
+    },
+    {
+      "repository": "OpenSenseNova/SenseNova-Skills",
+      "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+      "collection_root": "repositories/OpenSenseNova/SenseNova-Skills"
+    },
+    {
+      "repository": "PrathamLearnsToCode/paper2code",
+      "commit_sha": "fcffce7a1250659ed74f2a96cdf54595c92306c4",
+      "collection_root": "repositories/PrathamLearnsToCode/paper2code"
+    },
+    {
+      "repository": "adobe/skills",
+      "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+      "collection_root": "repositories/adobe/skills"
+    },
+    {
+      "repository": "aws/agent-toolkit-for-aws",
+      "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+      "collection_root": "repositories/aws/agent-toolkit-for-aws"
+    },
+    {
+      "repository": "coleam00/skills",
+      "commit_sha": "7f34fd5fead3db1403652377dd59ee00a785f833",
+      "collection_root": "repositories/coleam00/skills"
+    },
+    {
+      "repository": "davila7/claude-code-templates",
+      "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+      "collection_root": "repositories/davila7/claude-code-templates"
+    },
+    {
+      "repository": "google/agents-cli",
+      "commit_sha": "896e4719c4184841325a301755781d6b3da233ef",
+      "collection_root": "repositories/google/agents-cli"
+    },
+    {
+      "repository": "google/elephant-goldfish-model",
+      "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7",
+      "collection_root": "repositories/google/elephant-goldfish-model"
+    },
+    {
+      "repository": "google-gemini/gemini-skills",
+      "commit_sha": "7cfc690ba9c8efe36a5316e6d4000e2b6aa25dbf",
+      "collection_root": "repositories/google-gemini/gemini-skills"
+    },
+    {
+      "repository": "heygen-com/skills",
+      "commit_sha": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "collection_root": "repositories/heygen-com/skills"
+    },
+    {
+      "repository": "https-deeplearning-ai/sc-agent-skills-files",
+      "commit_sha": "438a5a51a68b86a6262835796ae7a671ece58e4f",
+      "collection_root": "repositories/https-deeplearning-ai/sc-agent-skills-files"
+    },
+    {
+      "repository": "inference-sh/skills",
+      "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150",
+      "collection_root": "repositories/inference-sh/skills"
+    },
+    {
+      "repository": "memodb-io/Acontext",
+      "commit_sha": "1ddfd903fd1004672ca9f9a70d92041153ba43d5",
+      "collection_root": "repositories/memodb-io/Acontext"
+    },
+    {
+      "repository": "numman-ali/openskills",
+      "commit_sha": "57d933a4f0d5c8659bd8b285f50fb9554360f0b3",
+      "collection_root": "repositories/numman-ali/openskills"
+    },
+    {
+      "repository": "outsourc-e/hermes-workspace",
+      "commit_sha": "c631425d8baa933f8c61d8447040f4ec8b5f571c",
+      "collection_root": "repositories/outsourc-e/hermes-workspace"
+    },
+    {
+      "repository": "plugin87/ux-ui-agent-skills",
+      "commit_sha": "def84a70fadc3490d80901295a4f1951fdb2cc69",
+      "collection_root": "repositories/plugin87/ux-ui-agent-skills"
+    },
+    {
+      "repository": "softaworks/agent-toolkit",
+      "commit_sha": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+      "collection_root": "repositories/softaworks/agent-toolkit"
+    },
+    {
+      "repository": "yaklang/hack-skills",
+      "commit_sha": "6fbf0bc8d5c71830d62543a308d8744606c43d7c",
+      "collection_root": "repositories/yaklang/hack-skills"
+    }
+  ]
+}

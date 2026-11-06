@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:30.096300+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 19,
+  "saved_skill_entries": 19,
+  "unique_entry_texts": 19,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "cloudflare/skills",
+      "commit_sha": "7de59bfd40b36c64d5d2dd8f01d11d419b2c66e6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 252,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/cloudflare/skills/7de59bfd40b36c64d5d2dd8f01d11d419b2c66e6.json"
+    }
+  ],
+  "errors": []
+}

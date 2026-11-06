@@ -1,0 +1,29 @@
+{
+  "repository": "K-Dense-AI/mimeo",
+  "commit_sha": "a4cea1842a24515cda354a3aa9eb9763677a3cdd",
+  "tree_entries": 283,
+  "candidate_skill_paths": [
+    "output/andrej-karpathy/SKILL.md",
+    "output/andrew-ng/SKILL.md",
+    "output/christopher-manning/SKILL.md",
+    "output/daphne-koller/SKILL.md",
+    "output/david-silver/SKILL.md",
+    "output/demis-hassabis/SKILL.md",
+    "output/fei-fei-li/SKILL.md",
+    "output/geoffrey-hinton/SKILL.md",
+    "output/ian-goodfellow/SKILL.md",
+    "output/ilya-sutskever/SKILL.md",
+    "output/j-brandon-dixon/SKILL.md",
+    "output/jeff-dean/SKILL.md",
+    "output/judea-pearl/SKILL.md",
+    "output/jurgen-schmidhuber/SKILL.md",
+    "output/kaiming-he/SKILL.md",
+    "output/linda-griffith/SKILL.md",
+    "output/pieter-abbeel/SKILL.md",
+    "output/richard-s-sutton/SKILL.md",
+    "output/sebastian-thrun/SKILL.md",
+    "output/stuart-russell/SKILL.md",
+    "output/yann-lecun/SKILL.md",
+    "output/yoshua-bengio/SKILL.md"
+  ]
+}

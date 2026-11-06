@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "huggingface/skills",
+      "commit_sha": "25910b3d0ba31a2ba102f901cdc9e008c278a69c"
+    }
+  ]
+}

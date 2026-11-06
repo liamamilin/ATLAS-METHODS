@@ -1,0 +1,301 @@
+{
+  "repository": "fivetaku/claude-office-skills",
+  "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "530beae17fac050844f009b8d852b2fec104a823",
+      "bytes": 42,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/.gitignore",
+      "sha256": "a2d57c9d3aae51c3ac0f4fd36f296baa44ca2022ffdd9119bbc213891e9c4d2a",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/.gitignore"
+    },
+    {
+      "path": "README.ko.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6815fa69860361f7810933c16020ac1d3b1039b9",
+      "bytes": 6990,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/README.ko.md",
+      "sha256": "28b5345c30e0969b1aaa8cc1529c1fc54580f4626ace7ec178f0f81cfba841f6",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/README.ko.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e172ae311f7906ea28e6168b3460aa6eb3dc850a",
+      "bytes": 6503,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/README.md",
+      "sha256": "72a92e38fc2d93429ed0fe2034db1739856d21a5f3aad93d537bd2e0ad7a64d0",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/README.md"
+    },
+    {
+      "path": "claude-in-excel/3-statement-model/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "749c99d82cd8563225b5b5c483ef1f6f91438be4",
+      "bytes": 22139,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/SKILL.md",
+      "sha256": "9fa14c0b523dffe1d65d68394ca5efe49c66fe718d6dcee81d2d840da15eca40",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/3-statement-model/references/formatting.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "dad792f8a7c391056d8e90a16b3ea9b2b70b92a2",
+      "bytes": 3386,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/formatting.md",
+      "sha256": "64cbda2ad86fea0dd5c1d96a9761cf163bf7ba59e279dee3045b661ec473b898",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/formatting.md"
+    },
+    {
+      "path": "claude-in-excel/3-statement-model/references/formulas.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f1380fe7a2ab79211148dcc31f02de00cd1b5bb2",
+      "bytes": 7734,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/formulas.md",
+      "sha256": "64106850460527e6c6c4aff625fbdd8de90dea6a52c27b469b5d7b45a8f32324",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/formulas.md"
+    },
+    {
+      "path": "claude-in-excel/3-statement-model/references/sec-filings.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f20393d34a86208308cb905033b77bd390f0620",
+      "bytes": 3405,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/sec-filings.md",
+      "sha256": "d987e6ca19e343c8c230b7bdfefee3f8dcf3249db8287ecb9b2446e9ac28e753",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/references/sec-filings.md"
+    },
+    {
+      "path": "claude-in-excel/3-statement-model/scripts/recalc.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a6ec3578ee4912836908c3584e9da5f09a38e035",
+      "bytes": 5058,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/scripts/recalc.py",
+      "sha256": "c36bd85c4efbc098fc3de012727a594df8f5626ccdd78ab0b63d8cd700030113",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/3-statement-model/scripts/recalc.py"
+    },
+    {
+      "path": "claude-in-excel/audit-xls/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1a17fbc3a9c25a971d9ee3938f4bd35019a0a0b2",
+      "bytes": 6770,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/audit-xls/SKILL.md",
+      "sha256": "a4f642f5dc95c7eff4b528328b1a507d5a08633cc2536987387ad44411d232c9",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/audit-xls/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/clean-data-xls/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ad6c66c19c550eeb0dea087415fe46f00c2a8bb4",
+      "bytes": 3086,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/clean-data-xls/SKILL.md",
+      "sha256": "e4a662b1a597202eab18283120f9042c03a4eee5ca258758753219c59928ff6d",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/clean-data-xls/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/comps-analysis/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a56dfa929d331c5b4cae677b0ea3edad8ab9cc97",
+      "bytes": 5323,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/comps-analysis/SKILL.md",
+      "sha256": "37cd895299eedbf4d764afbb587e23d286092bd3aa896bcfc68b51a0710ccbec",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/comps-analysis/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/comps-analysis/comps_example.xlsx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3caf2795ec61ed403ba0cc9628130cd1555a42b2",
+      "bytes": 13959,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/comps-analysis/comps_example.xlsx",
+      "sha256": "405a72ba1bb0d23b69d766f434ccbadab4ee96be28f0ffb36f01e9edb993e511",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "claude-in-excel/comps-analysis/scripts/recalc.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a6ec3578ee4912836908c3584e9da5f09a38e035",
+      "bytes": 5058,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/comps-analysis/scripts/recalc.py",
+      "sha256": "c36bd85c4efbc098fc3de012727a594df8f5626ccdd78ab0b63d8cd700030113",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/comps-analysis/scripts/recalc.py"
+    },
+    {
+      "path": "claude-in-excel/dcf-model/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "90db59cec30134abcd344ab843b2a994f6011d37",
+      "bytes": 14095,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/SKILL.md",
+      "sha256": "efabb61590c3e9b4bdf21588ee0cb75161e7f89dab6185452e7629f1a412b0ea",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/dcf-model/scripts/recalc.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a6ec3578ee4912836908c3584e9da5f09a38e035",
+      "bytes": 5058,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/scripts/recalc.py",
+      "sha256": "c36bd85c4efbc098fc3de012727a594df8f5626ccdd78ab0b63d8cd700030113",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/scripts/recalc.py"
+    },
+    {
+      "path": "claude-in-excel/dcf-model/scripts/validate_dcf.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6c8172cf8cf86f6518c99a6886336fdbf3bcc12a",
+      "bytes": 11623,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/scripts/validate_dcf.py",
+      "sha256": "6892a153a0b834f0f31d8676602341a4d721bbb2c294dbed64a03262512e738a",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/dcf-model/scripts/validate_dcf.py"
+    },
+    {
+      "path": "claude-in-excel/lbo-model/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "698b7b0fe96c33d977d394356f278eb0d46d0524",
+      "bytes": 5097,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/lbo-model/SKILL.md",
+      "sha256": "86681ebbd84076bd11dfcfc50cf38a3f627932c8a96ce440a5fae59c3ff7cb3e",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/lbo-model/SKILL.md"
+    },
+    {
+      "path": "claude-in-excel/lbo-model/lbo-model.xlsx",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d40892208614fbd1922a2bd6def1aa5d61ed7f13",
+      "bytes": 115108,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/lbo-model/lbo-model.xlsx",
+      "sha256": "40abeb083b9eb3d11220eb8d46fccf8a872e4ff9b8f113be28e58da94f6dea0e",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "claude-in-excel/lbo-model/scripts/recalc.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a6ec3578ee4912836908c3584e9da5f09a38e035",
+      "bytes": 5058,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/lbo-model/scripts/recalc.py",
+      "sha256": "c36bd85c4efbc098fc3de012727a594df8f5626ccdd78ab0b63d8cd700030113",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-excel/lbo-model/scripts/recalc.py"
+    },
+    {
+      "path": "claude-in-powerpoint/competitive-analysis/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "22448943d3ea36b59f0e2d116b4a167af350c92f",
+      "bytes": 11819,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/SKILL.md",
+      "sha256": "729a29d210e601c46a34d2746114f740e3dd6305fa94e943b5c4e50b86d56878",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/SKILL.md"
+    },
+    {
+      "path": "claude-in-powerpoint/competitive-analysis/references/frameworks.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "66b9f3d138db176c0a0a1a8caa0e7c97bc92eb61",
+      "bytes": 492,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/references/frameworks.md",
+      "sha256": "93b3f437c8da7a48e8a77603bd4eb47aba5880e40afdc1d77b8e590bd02c61b7",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/references/frameworks.md"
+    },
+    {
+      "path": "claude-in-powerpoint/competitive-analysis/references/schemas.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa640adf0a573851f74eaa64d5dfc8bfe4a0676a",
+      "bytes": 1782,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/references/schemas.md",
+      "sha256": "40178605fb6e8ea7f963d7dda480e3dfe38e2e10e2d4f72dd33e45c8b48a5de3",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/competitive-analysis/references/schemas.md"
+    },
+    {
+      "path": "claude-in-powerpoint/deck-refresh/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b0e295d7a3089a8acc383fb0c76b2520c42742c3",
+      "bytes": 6749,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/deck-refresh/SKILL.md",
+      "sha256": "375ed548a7c3c9d93caf826a591fb88672f95c6e48187de3c6bd1cf6759b95c6",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/deck-refresh/SKILL.md"
+    },
+    {
+      "path": "claude-in-powerpoint/ib-check-deck/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2afc0ace7e578edcc4079e52fd317b8af0882445",
+      "bytes": 4400,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/SKILL.md",
+      "sha256": "1165c092921afb8497b68c0901ff7a7ca066abab759bc7b3ee73fbee8a535fe0",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/SKILL.md"
+    },
+    {
+      "path": "claude-in-powerpoint/ib-check-deck/references/ib-terminology.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9d503181b2d4276c653c3514890d83c68a1b2154",
+      "bytes": 2040,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/references/ib-terminology.md",
+      "sha256": "f609b5ca48b09c9d883db5785eb0cdd97f6240d070a9345dea88e8d12171fc7a",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/references/ib-terminology.md"
+    },
+    {
+      "path": "claude-in-powerpoint/ib-check-deck/references/report-format.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f0db62442f9e9bf984dbc6fd2f2af92ba1537b7e",
+      "bytes": 1415,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/references/report-format.md",
+      "sha256": "c8dc69194f82c30cff5096bed476225ccff87d30f9a8fe46c69a17de039534f2",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/references/report-format.md"
+    },
+    {
+      "path": "claude-in-powerpoint/ib-check-deck/scripts/extract_numbers.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "12d6acca12ac32d6d43dd5f984380997f2406c86",
+      "bytes": 8885,
+      "source_url": "https://github.com/fivetaku/claude-office-skills/blob/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/scripts/extract_numbers.py",
+      "sha256": "9cbed6d94048a79d3fc6893b0676f54b2cf3f46573288b6741afb370ff186883",
+      "status": "saved",
+      "raw_path": "raw/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab/claude-in-powerpoint/ib-check-deck/scripts/extract_numbers.py"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:42:00.674800+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 72,
+  "saved_skill_entries": 72,
+  "unique_entry_texts": 72,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "nearai/ironhub",
+      "commit_sha": "c49fd181a7bdd968ba5fe40eda12416e732c71ce",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 72,
+      "saved_skill_entries": 72,
+      "saved_text_files": 1107,
+      "files_not_exported": 45,
+      "repository_manifest": "manifests/nearai/ironhub/c49fd181a7bdd968ba5fe40eda12416e732c71ce.json"
+    }
+  ],
+  "errors": []
+}

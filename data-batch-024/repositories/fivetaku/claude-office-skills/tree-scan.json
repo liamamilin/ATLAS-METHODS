@@ -1,0 +1,16 @@
+{
+  "repository": "fivetaku/claude-office-skills",
+  "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab",
+  "tree_entries": 27,
+  "candidate_skill_paths": [
+    "claude-in-excel/3-statement-model/SKILL.md",
+    "claude-in-excel/audit-xls/SKILL.md",
+    "claude-in-excel/clean-data-xls/SKILL.md",
+    "claude-in-excel/comps-analysis/SKILL.md",
+    "claude-in-excel/dcf-model/SKILL.md",
+    "claude-in-excel/lbo-model/SKILL.md",
+    "claude-in-powerpoint/competitive-analysis/SKILL.md",
+    "claude-in-powerpoint/deck-refresh/SKILL.md",
+    "claude-in-powerpoint/ib-check-deck/SKILL.md"
+  ]
+}

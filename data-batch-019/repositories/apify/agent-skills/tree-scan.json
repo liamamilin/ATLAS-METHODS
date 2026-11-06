@@ -1,0 +1,12 @@
+{
+  "repository": "apify/agent-skills",
+  "commit_sha": "f22557f15941aa6a5bc7539f0408d509d4a32ab6",
+  "tree_entries": 45,
+  "candidate_skill_paths": [
+    "skills/apify-actor-development/SKILL.md",
+    "skills/apify-actorization/SKILL.md",
+    "skills/apify-generate-output-schema/SKILL.md",
+    "skills/apify-integration-development/SKILL.md",
+    "skills/apify-ultimate-scraper/SKILL.md"
+  ]
+}

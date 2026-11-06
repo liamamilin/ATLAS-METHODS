@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:23:44.469404+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 4,
+  "saved_skill_entries": 4,
+  "unique_entry_texts": 4,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "heygen-com/skills",
+      "commit_sha": "1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 45,
+      "files_not_exported": 2,
+      "repository_manifest": "manifests/heygen-com/skills/1bd5e4d33a028dfed3abf504c5e3dd644fb9ea8a.json"
+    }
+  ],
+  "errors": []
+}

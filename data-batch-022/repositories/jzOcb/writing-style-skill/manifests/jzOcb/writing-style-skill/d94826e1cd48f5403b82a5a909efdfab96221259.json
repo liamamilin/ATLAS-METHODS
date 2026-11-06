@@ -1,0 +1,50 @@
+{
+  "repository": "jzOcb/writing-style-skill",
+  "commit_sha": "d94826e1cd48f5403b82a5a909efdfab96221259",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1ef85ef4b8be51633d9593c64a0a88bf5520f125",
+      "bytes": 1896,
+      "source_url": "https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/README.md",
+      "sha256": "426b24874d6cbcda1d8aeda70f66dfe5b86f72cd00b2fccc1f703d6082541bce",
+      "status": "saved",
+      "raw_path": "raw/jzOcb/writing-style-skill/d94826e1cd48f5403b82a5a909efdfab96221259/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fa3ab6fb461b4d934beb68d58ced90ce20c04caa",
+      "bytes": 5000,
+      "source_url": "https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/SKILL.md",
+      "sha256": "8c965846e4c298e0de74d44d1cd61f931f54a946f305769cc09a0ee1d05f0488",
+      "status": "saved",
+      "raw_path": "raw/jzOcb/writing-style-skill/d94826e1cd48f5403b82a5a909efdfab96221259/SKILL.md"
+    },
+    {
+      "path": "scripts/improve.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5f8e36b080f4f57ac460107969fcfa93cec2891f",
+      "bytes": 13362,
+      "source_url": "https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/scripts/improve.py",
+      "sha256": "8ffa7e305a6c7bdf08f718539d00ee092993ddfc9d66d115864f385afb5561e6",
+      "status": "saved",
+      "raw_path": "raw/jzOcb/writing-style-skill/d94826e1cd48f5403b82a5a909efdfab96221259/scripts/improve.py"
+    },
+    {
+      "path": "scripts/observe.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "61cfe179015bef9d8fbc7decfc40ea8fcf2d5842",
+      "bytes": 10153,
+      "source_url": "https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/scripts/observe.py",
+      "sha256": "2cca03bd16b380605387537875ddabe5abf445b359803746012f8ff44fbc6bae",
+      "status": "saved",
+      "raw_path": "raw/jzOcb/writing-style-skill/d94826e1cd48f5403b82a5a909efdfab96221259/scripts/observe.py"
+    }
+  ]
+}

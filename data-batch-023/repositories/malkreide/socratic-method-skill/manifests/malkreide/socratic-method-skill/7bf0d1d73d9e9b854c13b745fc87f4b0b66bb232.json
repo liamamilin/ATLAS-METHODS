@@ -1,0 +1,127 @@
+{
+  "repository": "malkreide/socratic-method-skill",
+  "commit_sha": "7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ee363abd29e0ce7d5b1da1542d01a16f7e1b02f5",
+      "bytes": 1847,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/CHANGELOG.md",
+      "sha256": "5b9d0b48a6626b0476a16fda54d79efca9da76f84a7e4cdf9f1ca5a8d6f52877",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/CHANGELOG.md"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9e844b0160188f6e8ad6c4d9461d23ed83556a50",
+      "bytes": 2300,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/CONTRIBUTING.md",
+      "sha256": "5253caec6c484b5c3404d5615cb0175f4fa7c155ac030b103279bcc7c83a57ca",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/CONTRIBUTING.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "91d53c32c4fa67de0a54b349dd6a1ba38146510d",
+      "bytes": 1069,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/LICENSE",
+      "sha256": "ac1fc40e61a612ca841633c01326de21f3002abc4ad6f706b73afeb964c17ded",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d6b983ae480ae298ec77c06663d13e0c7df92fb2",
+      "bytes": 5651,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/README.md",
+      "sha256": "60c015ee0005594876e1bc3b60ac104a3bb6ac0a22fbc5c1802bb3e4e86071c4",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/README.md"
+    },
+    {
+      "path": "SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "baab1ff90394a4630b785115d5ce26e3d30d9da9",
+      "bytes": 12377,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/SKILL.md",
+      "sha256": "af076f95350efb4525189084c89c2ed2722d7bba1b3bad97f1af30b936e04e32",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/SKILL.md"
+    },
+    {
+      "path": "USAGE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5a7a4d78af037b5305fd7c8570cce744fa0966a0",
+      "bytes": 10005,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/USAGE.md",
+      "sha256": "268bcdb534308f6219f1b8740b990aa612c80d48d4c0ca75cf77c1f115fff211",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/USAGE.md"
+    },
+    {
+      "path": "docs/de/CHANGELOG.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9c26738f3f328ef0bc79385cd7f348a18b88bf91",
+      "bytes": 1997,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/CHANGELOG.md",
+      "sha256": "c783ebc542b56d23e1308e13c01ff20b751346ed98f2ea312b658a6a1e3710ee",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/CHANGELOG.md"
+    },
+    {
+      "path": "docs/de/CONTRIBUTING.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d971fd4f9f948fa00eecffbebdd53f72b63d7351",
+      "bytes": 2600,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/CONTRIBUTING.md",
+      "sha256": "3f4c034c04f31112628003f8864b8661c859ae8949f9d415114221bb28f809f6",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/CONTRIBUTING.md"
+    },
+    {
+      "path": "docs/de/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b17f36c97ae720baa0d321b35ddc069f5fb7d8d5",
+      "bytes": 6305,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/README.md",
+      "sha256": "de1fac0512e02aa30379ed9fa0fd4c6856e4e24ffbddab2f91f7786faec9898a",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/README.md"
+    },
+    {
+      "path": "docs/de/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "10a60e979ac7a829d44be91ec31cd883dca12b42",
+      "bytes": 14071,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/SKILL.md",
+      "sha256": "dea544f1459759e4ecf82581d41c89c9ab53800aada8b5dec4cd5db7468d58ee",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/SKILL.md"
+    },
+    {
+      "path": "docs/de/USAGE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5c0fe1f001cf13ee91ceeed63b26aff4c51115e5",
+      "bytes": 11425,
+      "source_url": "https://github.com/malkreide/socratic-method-skill/blob/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/USAGE.md",
+      "sha256": "8e060303c0120aa8fc848b4acc8f317e35b0975d4bfb738aca0b4740b3aa8394",
+      "status": "saved",
+      "raw_path": "raw/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232/docs/de/USAGE.md"
+    }
+  ]
+}

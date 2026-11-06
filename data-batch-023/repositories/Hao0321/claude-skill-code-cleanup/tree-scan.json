@@ -1,0 +1,9 @@
+{
+  "repository": "Hao0321/claude-skill-code-cleanup",
+  "commit_sha": "7be5e421a8c772d91ceafa0dbf07d0db90787f0e",
+  "tree_entries": 202,
+  "candidate_skill_paths": [
+    "code-cleanup-helper/SKILL.md",
+    "run-benchmark-driven-rd/SKILL.md"
+  ]
+}

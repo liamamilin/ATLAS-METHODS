@@ -1,0 +1,296 @@
+[
+  {
+    "entry_sha256": "05ec3512a9d20bbc1e63aebc1e721ecfc26be2c0332e3e9affb6e6975e3f657d",
+    "record_ids": [
+      "b6a634cce1a03aa124b0",
+      "b2490513ed623372d2de"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "microsoft/skills",
+        "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6",
+        "skill_path": ".github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts/SKILL.md"
+      },
+      {
+        "repository": "microsoft/skills",
+        "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6",
+        "skill_path": ".github/skills/applicationinsights-web-ts/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1f794aeb1e5110008980aff363197f8cf3e37c71eedc498d7c56dc8e7bfbc5a5",
+    "record_ids": [
+      "87dc9ed44ae7137406ce",
+      "e2aad9c214a1dd6a7659"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "vercel-labs/skills",
+        "commit_sha": "d3701c11b1101251af14c9d148f026e1a47ebe17",
+        "skill_path": ".automations/pr-labeling/skills/pr-labeling/SKILL.md"
+      },
+      {
+        "repository": "vercel-labs/skills",
+        "commit_sha": "d3701c11b1101251af14c9d148f026e1a47ebe17",
+        "skill_path": ".vc/automations/workflows/pr-labeling/skills/pr-labeling/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "252cc2e0e36235ceefd50bddac94062bdc89ac1b74cc9bff516ce64b5b36026d",
+    "record_ids": [
+      "d4dfc9232939d3683a34",
+      "0d9b4188f3d2c4e8c9aa",
+      "cc9d8b253f1649501865",
+      "1f981bbbf3c6c2faa256",
+      "80aa53782e9efc230229",
+      "8c266609f07169ead7fe",
+      "ab9ede795b229c813f27",
+      "439b168628ddff47c9af",
+      "d28d0ba56ec3d137e5bc",
+      "b9d299215ed7bd9e6c41"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "agent-plugins/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/codebuddy/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/cursor/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/claude-code-memory-plugin/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/codex-memory-plugin/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/dsh-memory-plugin/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/openclaw-plugin/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/opencode-plugin/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/pi-coding-agent-extension/skills/openviking-rule-search/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/skills/openviking-rule-search/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7acc32358ba98c8bde8ae8a711feb32b68adc50baeaca205702d9c45565067bd",
+    "record_ids": [
+      "ad2a959badc27d010aba",
+      "99451e61a200c48a81ee",
+      "3ab8401cc9d4d1a671b8",
+      "8db6c65568afd96dac55",
+      "07bd811fb9f5d8569356",
+      "2a883ab7cd2633bff5b6",
+      "23a90248061df4ac80ba",
+      "76e7fe85c9aab6393235"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/codebuddy/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/cursor/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/claude-code-memory-plugin/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/codex-memory-plugin/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/dsh-memory-plugin/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/opencode-plugin/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/pi-coding-agent-extension/skills/openviking-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/skills/openviking-memory/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "83d4d71573b9a6fad48443d457421958c5109b0eb024a7a64efb5dcca1634890",
+    "record_ids": [
+      "4a2c8083cbce11dcd5bf",
+      "704e9dea55105509f237",
+      "4bb21d314d5784f790fa",
+      "9a29bafa9d8424e00756",
+      "42a7c4b1e1109c3c25d1",
+      "37a14f4eb548e8df8184",
+      "e57c7adc987e66144566",
+      "60df13d21f332e0eb463",
+      "f99b9c490a935426422d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "agent-plugins/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/codebuddy/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/cursor/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/claude-code-memory-plugin/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/codex-memory-plugin/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/dsh-memory-plugin/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/opencode-plugin/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/pi-coding-agent-extension/skills/openviking-skills/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/skills/openviking-skills/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9490d86db2fcfa572e49bc0105f5916c1c4344f3691f74a0bc245a53045de7d8",
+    "record_ids": [
+      "f3a1efd3c53d63be3b52",
+      "d1a8bd9a4ba1a63efc41",
+      "021479e84dabe94812c7",
+      "c0d1e8b670fd019d475f",
+      "a460a8db6700920a899f",
+      "d9c245cf3572156ba39c",
+      "a08a81a1d68faba046dd",
+      "2b77eece63cfe0dbab38",
+      "22257bab378b2c2f49bf",
+      "b580ebd7cf9d9d578723"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "agent-plugins/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/codebuddy/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/agent-hook-plugin/hosts/cursor/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/claude-code-memory-plugin/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/codex-memory-plugin/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/dsh-memory-plugin/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/openclaw-plugin/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/opencode-plugin/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/pi-coding-agent-extension/skills/ov-experience-memory/SKILL.md"
+      },
+      {
+        "repository": "volcengine/OpenViking",
+        "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc",
+        "skill_path": "examples/skills/ov-experience-memory/SKILL.md"
+      }
+    ]
+  }
+]

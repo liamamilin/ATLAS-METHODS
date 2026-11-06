@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "NVIDIA/SkillSpector",
+      "commit_sha": "ab36c42f5c364cd828586c637e5f8f00425d465d"
+    }
+  ]
+}

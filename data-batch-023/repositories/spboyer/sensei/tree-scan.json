@@ -1,0 +1,11 @@
+{
+  "repository": "spboyer/sensei",
+  "commit_sha": "bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f",
+  "tree_entries": 171,
+  "candidate_skill_paths": [
+    ".ai-team-templates/skill.md",
+    ".ai-team-templates/skills/squad-conventions/SKILL.md",
+    "SKILL.md",
+    "demo-docs/sample-skill/SKILL.md"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "ConardLi/garden-skills",
+  "commit_sha": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+  "tree_entries": 743,
+  "candidate_skill_paths": [
+    "skills/beautiful-article/SKILL.md",
+    "skills/gpt-image-2/SKILL.md",
+    "skills/kb-retriever/SKILL.md",
+    "skills/motion-showreel/SKILL.md",
+    "skills/web-design-engineer/SKILL.md",
+    "skills/web-video-presentation/SKILL.md"
+  ]
+}

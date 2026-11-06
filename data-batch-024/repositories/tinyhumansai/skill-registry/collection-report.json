@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:52:53.321952+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "tinyhumansai/skill-registry",
+      "commit_sha": "52eb2d8f5f16d95e43014e01995f7c3e90985a45",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/tinyhumansai/skill-registry/52eb2d8f5f16d95e43014e01995f7c3e90985a45.json"
+    }
+  ],
+  "errors": []
+}

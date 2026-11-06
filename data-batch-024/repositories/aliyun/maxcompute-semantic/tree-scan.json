@@ -1,0 +1,15 @@
+{
+  "repository": "aliyun/maxcompute-semantic",
+  "commit_sha": "d09554d8df1dfe9c06ded046451cdb99fc81dce3",
+  "tree_entries": 397,
+  "candidate_skill_paths": [
+    "src/maxcompute_semantic/_skill/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/build/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/enrich/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/memory/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/onboarding/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/query/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/report-issue/SKILL.md",
+    "src/maxcompute_semantic/_skill_data/udf/SKILL.md"
+  ]
+}

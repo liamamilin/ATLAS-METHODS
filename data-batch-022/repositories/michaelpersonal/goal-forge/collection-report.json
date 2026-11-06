@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:38:26.360322+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "michaelpersonal/goal-forge",
+      "commit_sha": "8315c845acda9ced9ce2744fcafc90b6347950e7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 13,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "TheDecipherist/claude-code-mastery",
+      "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "repository": "jsmastery-pro/skills",
+  "commit_sha": "43b69e44c9ca905fe3a3418ccdf4102255e20d40",
+  "tree_entries": 83,
+  "candidate_skill_paths": [
+    "skills/architect/SKILL.md",
+    "skills/audit/SKILL.md",
+    "skills/check/SKILL.md",
+    "skills/debug/SKILL.md",
+    "skills/develop/SKILL.md",
+    "skills/document/SKILL.md",
+    "skills/scope/SKILL.md",
+    "skills/sync/SKILL.md",
+    "skills/test/SKILL.md"
+  ]
+}

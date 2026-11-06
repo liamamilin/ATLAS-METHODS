@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:30:48.793874+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 13,
+  "saved_skill_entries": 13,
+  "unique_entry_texts": 13,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "callstackincubator/agent-skills",
+      "commit_sha": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 149,
+      "files_not_exported": 28,
+      "repository_manifest": "manifests/callstackincubator/agent-skills/59e9d17446a248b21d86f078fcd0bd2d36db1ca4.json"
+    }
+  ],
+  "errors": []
+}

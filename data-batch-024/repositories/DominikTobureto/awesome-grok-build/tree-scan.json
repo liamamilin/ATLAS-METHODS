@@ -1,0 +1,20 @@
+{
+  "repository": "DominikTobureto/awesome-grok-build",
+  "commit_sha": "9125e026dddc2c3e5884f2db5cc56436c7e71665",
+  "tree_entries": 63,
+  "candidate_skill_paths": [
+    ".grok/skills/agentic-code-review/SKILL.md",
+    ".grok/skills/architecture-review/SKILL.md",
+    ".grok/skills/frontend-ux-engineer/SKILL.md",
+    ".grok/skills/git-github-flow/SKILL.md",
+    ".grok/skills/hooksmith/SKILL.md",
+    ".grok/skills/nextjs-fullstack/SKILL.md",
+    ".grok/skills/performance-optimizer/SKILL.md",
+    ".grok/skills/python-expert/SKILL.md",
+    ".grok/skills/refactor-master/SKILL.md",
+    ".grok/skills/repo-health-check/SKILL.md",
+    ".grok/skills/research-agent/SKILL.md",
+    ".grok/skills/security-audit/SKILL.md",
+    ".grok/skills/tdd-test-engineer/SKILL.md"
+  ]
+}

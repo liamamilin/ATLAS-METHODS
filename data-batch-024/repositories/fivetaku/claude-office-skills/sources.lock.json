@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "fivetaku/claude-office-skills",
+      "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab"
+    }
+  ]
+}

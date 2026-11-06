@@ -1,0 +1,25 @@
+{
+  "repository": "ProxymanApp/proxyman-SKILL.md",
+  "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+  "tree_entries": 86,
+  "candidate_skill_paths": [
+    "plugins/proxyman/skills/proxyman-app-settings/SKILL.md",
+    "plugins/proxyman/skills/proxyman-certificates-recovery/SKILL.md",
+    "plugins/proxyman/skills/proxyman-cli/SKILL.md",
+    "plugins/proxyman/skills/proxyman-debugging-tools/SKILL.md",
+    "plugins/proxyman/skills/proxyman-download-setup/SKILL.md",
+    "plugins/proxyman/skills/proxyman-https-capture/SKILL.md",
+    "plugins/proxyman/skills/proxyman-license-management/SKILL.md",
+    "plugins/proxyman/skills/proxyman-mcp-setup/SKILL.md",
+    "plugins/proxyman/skills/proxyman-traffic-debugging/SKILL.md",
+    "skills/proxyman-app-settings/SKILL.md",
+    "skills/proxyman-certificates-recovery/SKILL.md",
+    "skills/proxyman-cli/SKILL.md",
+    "skills/proxyman-debugging-tools/SKILL.md",
+    "skills/proxyman-download-setup/SKILL.md",
+    "skills/proxyman-https-capture/SKILL.md",
+    "skills/proxyman-license-management/SKILL.md",
+    "skills/proxyman-mcp-setup/SKILL.md",
+    "skills/proxyman-traffic-debugging/SKILL.md"
+  ]
+}

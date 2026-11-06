@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:17:19.620808+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 25,
+  "saved_skill_entries": 25,
+  "unique_entry_texts": 25,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "expo/skills",
+      "commit_sha": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 25,
+      "saved_skill_entries": 25,
+      "saved_text_files": 181,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/expo/skills/a9e5bd3fa00b4e61f632e43f85da73aee1942582.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "apify/agent-skills",
+      "commit_sha": "f22557f15941aa6a5bc7539f0408d509d4a32ab6"
+    }
+  ]
+}

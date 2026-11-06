@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:33:36.120886+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 14,
+  "saved_skill_entries": 14,
+  "unique_entry_texts": 14,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ciembor/agent-rules-books",
+      "commit_sha": "893a88a6fce3a80c565bf39ac65021b43a8b2990",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 200,
+      "files_not_exported": 15,
+      "repository_manifest": "manifests/ciembor/agent-rules-books/893a88a6fce3a80c565bf39ac65021b43a8b2990.json"
+    }
+  ],
+  "errors": []
+}

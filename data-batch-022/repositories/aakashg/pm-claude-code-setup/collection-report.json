@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:38:14.954897+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 6,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "aakashg/pm-claude-code-setup",
+      "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 15,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9.json"
+    }
+  ],
+  "errors": []
+}

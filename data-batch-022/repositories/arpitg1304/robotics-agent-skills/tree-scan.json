@@ -1,0 +1,17 @@
+{
+  "repository": "arpitg1304/robotics-agent-skills",
+  "commit_sha": "f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11",
+  "tree_entries": 51,
+  "candidate_skill_paths": [
+    "skills/docker-ros2-development/SKILL.md",
+    "skills/robot-bringup/SKILL.md",
+    "skills/robot-perception/SKILL.md",
+    "skills/robotics-design-patterns/SKILL.md",
+    "skills/robotics-security/SKILL.md",
+    "skills/robotics-software-principles/SKILL.md",
+    "skills/robotics-testing/SKILL.md",
+    "skills/ros1/SKILL.md",
+    "skills/ros2-web-integration/SKILL.md",
+    "skills/ros2/SKILL.md"
+  ]
+}

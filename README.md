@@ -6,15 +6,14 @@
 
 ## 当前状态
 
-- 2026-11-06 连续完成第 004—017 批，对现有 332 个队列来源全部执行了一次采集尝试，没有新增发现渠道或刷新历史来源。
-- 本轮新增 324 个有正文的来源、12,259 条已保存入口；本轮不同正文 10,355 种，其中净新增 10,322 种，33 种旧库已有。
-- 本轮结果：318 个文本入口完整、6 个部分保存、7 个固定版本无入口、1 个 Git 访问失败。29 个新入口为符号链接，按现有规则未导出，没有计入保存数。
-- 累计 373 个有正文的来源（365 个完整、8 个部分保存）、24,345 条已保存入口、16,357 种正文、4,627 个完全相同正文重复组；所有来源记录保留。历史 70 个未导出入口未追补，累计未导出入口为 99 个。
-- 所有已选批次的 `pending_sources` 均为 0；全局未扫描队列还剩 1 个访问失败来源 `cbrock84/headcount`，并非还有未尝试的来源。失败列表在 `sources.retry.json`，与全局队列重叠，不能相加。
-- 累计索引入口为 [data/cumulative/skills.jsonl](data/cumulative/skills.jsonl)，详情见 [本轮连续采集报告](docs/collection-run-004.md) 和 [运行记录](data/queue-run-004.json)。旧 12,156 条索引记录、已有原文及清单保留，没有重采历史材料。
-- 累计 289,814 个已保存文本文件通过固定版本 Git blob 逐字节核验。本轮沿用已有程序，无采集器、合并器或核验脚本改动。
-- 全部候选仍为 387 个。本轮原文保存在本机持久目录，只提交索引和报告，不公开批量上传上游材料。
-- 先前对话中的 4 份正文样本未纳入正式结果。没有安装或执行来源 Skill，没有进行方法有效性判断。
+- 2026-11-06 第 018—025 批共尝试 170 个来源：169 个通过既有 GitHub 搜索渠道补充的新候选，加 1 个原失败来源重试。旧成功来源没有刷新。
+- 本轮新增 150 个有正文的来源、31,358 条入口；本轮正文 30,456 种，其中净新增 29,700 种，756 种旧库已有。19 个固定版本无 SKILL.md，重试的 `cbrock84/headcount` 仍访问失败。
+- 累计 523 个有正文的来源（515 个入口完整、8 个历史部分保存）、55,703 条已保存入口、46,057 种正文。历史 99 个未导出入口继续保留，没有计入保存数。
+- 本轮修复真实的 Mac 文件名大小写覆盖：同一固定 commit 的 18 个冲突文件改用唯一存储路径，恢复 8 条先前被覆盖的不同正文；原始 Git 路径和正文不变，重采、5 项回归测试和批次核验通过。
+- 本轮所有批次的待处理均为 0；全局未扫描剩 1 个已尝试但无法访问的来源，`sources.next.json` 与 `sources.retry.json` 指向同一来源，不能相加。
+- 累计索引为 [skills.jsonl.gz](data/cumulative/skills.jsonl.gz)，本机仍保留完整 `data/cumulative/skills.jsonl`。因明文索引超过 GitHub 单文件限制，Git 仅跟踪字节无损的 gzip 交付文件；其余来源及批次索引继续保持原格式。
+- 详情见 [本轮报告](docs/collection-run-018.md)、[运行记录](data/queue-run-018.json)。旧 24,444 条索引记录、已有原文及清单保留。本轮采集材料仍只在本机持久目录，不批量公开上传。
+- 候选总数为 556。覆盖范围是已冻结的候选清单，不声称已覆盖整个 GitHub；没有安装或执行来源 Skill，没有进行分类、方法提炼、内容摘要或质量评分。
 
 接手任务见 [AGENTS.md](AGENTS.md)。
 
@@ -28,7 +27,8 @@
 | `sources.batch-003.json` | 第三批 24 个新仓库的实际固定 commit、发现出处和结果 |
 | `sources.candidates.json` / `sources.next.json` | 完整去重候选及尚未成功扫描的 1 个来源 |
 | `sources.batch-004.json` 至 `sources.batch-017.json` | 本轮连续批次的冻结清单、实际 commit 和结果 |
-| `sources.retry.json` / `data/queue-run-004.json` | 本轮失败来源及逐来源、逐批次进度 |
+| `sources.retry.json` / `data/queue-run-018.json` | 最近一轮失败来源及逐来源、逐批次进度 |
+| `sources.batch-018.json` 至 `sources.batch-025.json` | 本轮新候选、实际固定 commit 及结果 |
 | `merge_collections.py` | 简单合并已有索引，保留原文位置、失败及部分结果；不下载或迁移材料 |
 | `AGENTS.md` | 编码 Agent 的本阶段任务、边界和验收要求 |
 | `.gitignore` | 排除缓存、原始快照及临时文件；保留采集索引和报告 |
@@ -63,16 +63,16 @@ python3 collect_skills.py --sources sources.json --out data-batch-refresh --refr
 现有队列已经全部尝试。`cbrock84/headcount` 访问恢复后，可只重试该来源：
 
 ```bash
-python3 collect_skills.py --sources sources.retry.json --only cbrock84/headcount --out data-batch-007/repositories/cbrock84/headcount
+python3 collect_skills.py --sources sources.retry.json --only cbrock84/headcount --out data-batch-018/repositories/cbrock84/headcount
 ```
 
 重试后依据新报告更新对应批次的 `source-results.json` 和来源清单，再使用已有合并器累计，避免旧失败状态覆盖新结果。完整合并调用见本轮报告。
 
 首次采集会将实际 commit 写入该输出目录的 `sources.lock.json`。后续对同一来源复现时，将 `--sources` 指向该 lock 文件，继续使用同一输出目录。独立来源的输出不会覆盖其他来源；合并按仓库、commit、路径去重，版本快照数与独立路径数分别报告。
 
-报告中的 `pending_sources` 只表示已选入相应批次、尚未产生处理结果的来源，失败另计；它不是全局队列长度。`sources.next.json` 是尚未成功完成 Git 树扫描的全局来源队列，包含未开始的来源以及树扫描前失败的来源。批次报告中的 `global_unscanned_sources_at_checkpoint` 是该检查点的全局数量，当前数量应以 `sources.next.json` 为准。运行记录 `data/queue-run-004.json` 汇总连续批次进度；结束时 `sources.retry.json` 单列本轮失败来源，与全局队列可能重叠，不能简单相加。
+报告中的 `pending_sources` 只表示已选入相应批次、尚未产生处理结果的来源，失败另计；它不是全局队列长度。`sources.next.json` 是尚未成功完成 Git 树扫描的全局来源队列，包含未开始的来源以及树扫描前失败的来源。批次报告中的 `global_unscanned_sources_at_checkpoint` 是该检查点的全局数量，当前数量应以 `sources.next.json` 为准。运行记录 `data/queue-run-018.json` 汇总连续批次进度；结束时 `sources.retry.json` 单列本轮失败来源，与全局队列可能重叠，不能简单相加。
 
-累计索引中的 `raw_path`、`repository_manifest` 相对于 `data/cumulative/`；`collection_root` 指回实际保存该来源的目录。首批原文位于 `data/raw/`，后续原文位于 `data-batch-002/` 至 `data-batch-017/` 下各 `repositories/<owner>/<repo>/raw/`，可直接从本机目录取回。
+累计索引中的 `raw_path`、`repository_manifest` 相对于 `data/cumulative/`；`collection_root` 指回实际保存该来源的目录。首批原文位于 `data/raw/`，后续原文位于 `data-batch-002/` 至 `data-batch-025/` 下各 `repositories/<owner>/<repo>/raw/`，可直接从本机目录取回。
 
 ## 输出
 
@@ -82,7 +82,7 @@ data/
 ├── sources.lock.json          # 本次成功来源的实际 commit
 ├── duplicates.json            # 完全相同入口正文的分组，不删除来源
 ├── collection-report.json     # 实际数量、成功、失败和错误
-├── raw/<owner>/<repo>/<sha>/   # 仓库文本快照，保持原相对路径
+├── raw/<owner>/<repo>/<sha>/   # 仓库文本快照；实际位置以 raw_path 为准
 ├── manifests/<owner>/<repo>/  # 文件清单，含未导出文件
 └── .cache/                    # bare Git 缓存，不提交
 ```
@@ -96,6 +96,8 @@ data/
 ## 数据与去重边界
 
 记录包括仓库、文件路径、commit、不可变来源链接、Git blob SHA、SHA-256、原文路径、原始 frontmatter、目录内文件、未导出文件、许可候选路径和采集状态。
+
+通常保持原相对路径。若 Git 中的路径仅在大小写或 Unicode 规范化上不同，本机文件系统可能将它们覆盖为同一个文件；这类文件单独保存到同一快照的 `.atlas-path-collisions/` 下。`skill_path` 和清单的 `path` 仍是原始 Git 路径，`raw_path` 指向实际文件，`storage_path_reason` 记录映射原因。正文不改写，关联文件可通过清单定位。
 
 只对 **SKILL.md 字节级相同** 的正文分组。入口相同的两个目录仍可能有不同脚本和参考资料，不宣称它们是同一个完整 Skill 包，更不把它们当作同一个 Method。所有来源记录保留。
 
@@ -132,6 +134,26 @@ python3 tests/verify_collection.py --sources data/cumulative/sources.lock.json -
 ```
 
 核验需要本地 `data/raw/` 和 `data/.cache/`；从 GitHub 新拉取本项目后，先运行采集命令重建它们。核验脚本不会运行收集来的代码。
+
+## 压缩累计索引
+
+Git 中的累计交付文件是 `data/cumulative/skills.jsonl.gz`；本机完整 JSONL 不删除，仍供已有合并器和核验脚本使用。解压恢复原路径：
+
+```bash
+python3 - <<'PY'
+import gzip, shutil
+with gzip.open('data/cumulative/skills.jsonl.gz', 'rb') as src, open('data/cumulative/skills.jsonl', 'wb') as dst:
+    shutil.copyfileobj(src, dst)
+PY
+```
+
+每次累计合并后，提交前重新压缩，保持明文文件：
+
+```bash
+gzip -n -c data/cumulative/skills.jsonl > data/cumulative/skills.jsonl.gz
+```
+
+本轮已逐字节摘要验证 gzip 解压结果与明文一致。原文仍在各来源 `raw/` 目录；压缩的只有累计索引。
 
 ## 提交范围
 

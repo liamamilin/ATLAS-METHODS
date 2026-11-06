@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:42:58.701761+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 8,
+  "saved_skill_entries": 8,
+  "unique_entry_texts": 8,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ajhcs/healthcare-agents",
+      "commit_sha": "b00a51b654fc31331b005818c4bb1ec7f7817a9f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 639,
+      "files_not_exported": 7,
+      "repository_manifest": "manifests/ajhcs/healthcare-agents/b00a51b654fc31331b005818c4bb1ec7f7817a9f.json"
+    }
+  ],
+  "errors": []
+}

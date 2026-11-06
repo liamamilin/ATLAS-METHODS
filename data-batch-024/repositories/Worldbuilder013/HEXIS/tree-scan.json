@@ -1,0 +1,8 @@
+{
+  "repository": "Worldbuilder013/HEXIS",
+  "commit_sha": "96be2719ee79fc5071dc7eb2aeed816dc03aaa6c",
+  "tree_entries": 107,
+  "candidate_skill_paths": [
+    "src/hexis/examples/table_clean/SKILL.md"
+  ]
+}

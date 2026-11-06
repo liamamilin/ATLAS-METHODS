@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "evalstate/fast-agent",
+      "commit_sha": "337c5986c674d5bdebcee938cec727a01ef75cf7"
+    }
+  ]
+}

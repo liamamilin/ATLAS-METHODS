@@ -1,0 +1,171 @@
+{
+  "repository": "aakashg/pm-claude-code-setup",
+  "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+  "files": [
+    {
+      "path": ".claude/skills/competitive-analysis/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9801f63cbb1988c3d6de9b15816f5f5d865c4ad7",
+      "bytes": 2139,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/competitive-analysis/SKILL.md",
+      "sha256": "8a13dee5494915ec5858821afb175f2ce6535bcde68e881b2514203f1879f1a6",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/competitive-analysis/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/launch-checklist/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "42354c097c5d2e61e31b998b0549aaa17f2b450a",
+      "bytes": 2470,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/launch-checklist/SKILL.md",
+      "sha256": "8d9d7e276c11f45dcc28f8772b8cca2cf00f29a64adedc4d8e80b35dc9d2bef2",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/launch-checklist/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/metrics-definer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ecd725c468061635eaf1536fc41be73461c9d7ab",
+      "bytes": 2084,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/metrics-definer/SKILL.md",
+      "sha256": "9ce85739748e3e290d5560f57faa3b19ac92f1f61491cce33bb53b2522eaaf8b",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/metrics-definer/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/prd-writer/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3c69d512334c3b064902a272a1c15d4d975e9dfe",
+      "bytes": 12611,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/prd-writer/SKILL.md",
+      "sha256": "da055e0f1fac70b9ef81e64e5d435e456197cbfa65252ea3ebd47a395a0b24de",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/prd-writer/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/prd-writer/examples/sample-prd.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "aa3f2bb08539e74d8e0a95c73266ae2285ee64b3",
+      "bytes": 3610,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/prd-writer/examples/sample-prd.md",
+      "sha256": "2ddfed36eb460e5b907b2ccfa52de8f84b6e8b478fd8e2da7c336f5b510392e1",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/prd-writer/examples/sample-prd.md"
+    },
+    {
+      "path": ".claude/skills/sprint-planner/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fab0d6a864c48ba453d2639360b3df277588e0d9",
+      "bytes": 1993,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/sprint-planner/SKILL.md",
+      "sha256": "fa479ce332588486fc1eceea06c1b5687f8cfb3b99b7844b0dee05d1bc3b46d6",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/sprint-planner/SKILL.md"
+    },
+    {
+      "path": ".claude/skills/user-research/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "afda26db4d93c0c4caaad2f8d2d297cb11b4424b",
+      "bytes": 2484,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/user-research/SKILL.md",
+      "sha256": "70649a56d91c18e8a1ed17d9ebf63ff27c5320605f0105fd2e561318c5771a53",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/.claude/skills/user-research/SKILL.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3cd6504eebef4f574866093e528574ed872e49f3",
+      "bytes": 3025,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/CLAUDE.md",
+      "sha256": "69c42783d6bf62d754fc050882d2e58840d315a9e7469421c60052c8ff25d6b5",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/CLAUDE.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b260da2f43a496d5ee3867e993488a3d5be30f36",
+      "bytes": 1069,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/LICENSE",
+      "sha256": "122e579204e3f8c1c04e3dc97d4a9e0401258f6b9401d3de3a644b14ed0ab85c",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/LICENSE"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "333c8561d0f5c03fca3f91a5f4a3431f5ad3880c",
+      "bytes": 1578,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/QUICKSTART.md",
+      "sha256": "5af9e5440d2d2851aaccbe921660b645177e14b9f1a377add74d869305eb4307",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/QUICKSTART.md"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f4167bf632374b6d82a02ef3cecc3764dfbfb4d",
+      "bytes": 9732,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/README.md",
+      "sha256": "59c04464384424db9c5083cc98501abbc55f62281917e9466776a31271f68459",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/README.md"
+    },
+    {
+      "path": "templates/launch-plan.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b291c15b271d86910e367d14381b854e1e069ce7",
+      "bytes": 999,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/launch-plan.md",
+      "sha256": "b0ab639353e68be20bc27ec492b426a26daed46ad1e00ea14eea9ebc154302eb",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/launch-plan.md"
+    },
+    {
+      "path": "templates/okr-template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "bbbf9314842d34cda2035e3b3a14947032a5e1e4",
+      "bytes": 1002,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/okr-template.md",
+      "sha256": "4aeec35adbd561790bced91319a36d8c74001b57be031cfc6309cccf78c2ca5e",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/okr-template.md"
+    },
+    {
+      "path": "templates/prd-template.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "23187a83d5fc41882ab87ecd2535bfb2f2563871",
+      "bytes": 1035,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/prd-template.md",
+      "sha256": "729b16372e4e31592ca0bbecee5bd65331ee408f94933d02d555a67b4857e649",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/prd-template.md"
+    },
+    {
+      "path": "templates/sprint-review.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "71da9a1cf436babbe2a17ba354e4eaa4ea76c9a6",
+      "bytes": 799,
+      "source_url": "https://github.com/aakashg/pm-claude-code-setup/blob/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/sprint-review.md",
+      "sha256": "ea519e988f14d6655d4230d8e5ecf289351e55bc92f7d9f2cc435babb3fe452d",
+      "status": "saved",
+      "raw_path": "raw/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9/templates/sprint-review.md"
+    }
+  ]
+}

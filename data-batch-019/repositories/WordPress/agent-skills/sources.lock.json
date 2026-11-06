@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "WordPress/agent-skills",
+      "commit_sha": "7374e6f1c913b3b02b25465d266d9c0e0a04fc96"
+    }
+  ]
+}

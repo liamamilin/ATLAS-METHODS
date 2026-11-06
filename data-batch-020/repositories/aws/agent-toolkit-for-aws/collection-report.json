@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:23:05.949016+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 199,
+  "saved_skill_entries": 199,
+  "unique_entry_texts": 155,
+  "duplicate_entry_groups": 44,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "aws/agent-toolkit-for-aws",
+      "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 199,
+      "saved_skill_entries": 199,
+      "saved_text_files": 3656,
+      "files_not_exported": 1,
+      "repository_manifest": "manifests/aws/agent-toolkit-for-aws/e5b169de713857a5ffb4e8588a45e640525bd08a.json"
+    }
+  ],
+  "errors": []
+}

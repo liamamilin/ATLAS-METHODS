@@ -71,7 +71,7 @@
 - 旧原文：`data/raw/<owner>/<repo>/<commit>/`。
 - 新原文：`data-batch-002/repositories/<owner>/<repo>/raw/<owner>/<repo>/<commit>/`。
 - 发现索引原文：`data-batch-002/discovery/raw/`。
-- [累计入口索引](../data/cumulative/skills.jsonl)、[累计报告](../data/cumulative/collection-report.json)、[累计重复分组](../data/cumulative/duplicates.json)。
+- [累计入口索引](../data/cumulative/skills.jsonl.gz)、[累计报告](../data/cumulative/collection-report.json)、[累计重复分组](../data/cumulative/duplicates.json)。
 - [本批入口索引](../data-batch-002/skills.jsonl)、[本批报告](../data-batch-002/collection-report.json)、[逐来源结果](../data-batch-002/source-results.json)、[初次尝试和重试记录](../data-batch-002/collection-attempts.json)。
 
 直接打开或复制本机上述原文目录即可取回，无需再次从上游下载。累计索引的 `raw_path` 和 `repository_manifest` 相对于 `data/cumulative/`；`collection_root` 指向原始来源输出目录，清单内部的 `raw_path` 相对于该来源输出目录。合并没有搬迁或删除原始材料。

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:11:54.455596+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 210,
+  "saved_skill_entries": 210,
+  "unique_entry_texts": 209,
+  "duplicate_entry_groups": 1,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "microsoft/skills",
+      "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 210,
+      "saved_skill_entries": 210,
+      "saved_text_files": 2477,
+      "files_not_exported": 72,
+      "repository_manifest": "manifests/microsoft/skills/4f831bbbf54e004507758d8ef2ab420c77bb81b6.json"
+    }
+  ],
+  "errors": []
+}

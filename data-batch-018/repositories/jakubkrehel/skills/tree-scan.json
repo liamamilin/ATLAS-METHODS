@@ -1,0 +1,21 @@
+{
+  "repository": "jakubkrehel/skills",
+  "commit_sha": "60bf140e43c98b248e6594487384ec967e89d98a",
+  "tree_entries": 102,
+  "candidate_skill_paths": [
+    "skills/better-accessibility/SKILL.md",
+    "skills/better-colors/SKILL.md",
+    "skills/better-interface/SKILL.md",
+    "skills/better-layout/SKILL.md",
+    "skills/better-typography/SKILL.md",
+    "skills/better-ui/SKILL.md",
+    "skills/better-writing/SKILL.md",
+    "skills/break/SKILL.md",
+    "skills/build-design/SKILL.md",
+    "skills/explain-interface/SKILL.md",
+    "skills/interface-review/SKILL.md",
+    "skills/state-machine/SKILL.md",
+    "skills/teardown/SKILL.md",
+    "skills/variant/SKILL.md"
+  ]
+}

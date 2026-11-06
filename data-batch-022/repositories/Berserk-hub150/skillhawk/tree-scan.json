@@ -1,0 +1,20 @@
+{
+  "repository": "Berserk-hub150/skillhawk",
+  "commit_sha": "cbdbef03f2b006b25e725c014745521b9ed1f561",
+  "tree_entries": 106,
+  "candidate_skill_paths": [
+    "examples/safe-skill/SKILL.md",
+    "examples/unsafe-skill/SKILL.md",
+    "lab/challenge-01/SKILL.md",
+    "lab/challenge-02/SKILL.md",
+    "lab/challenge-03/SKILL.md",
+    "lab/challenge-04/SKILL.md",
+    "lab/challenge-05/SKILL.md",
+    "lab/challenge-06/SKILL.md",
+    "lab/challenge-07/SKILL.md",
+    "lab/challenge-08/SKILL.md",
+    "lab/challenge-09/SKILL.md",
+    "lab/challenge-10/SKILL.md",
+    "lab/weekly/current/SKILL.md"
+  ]
+}

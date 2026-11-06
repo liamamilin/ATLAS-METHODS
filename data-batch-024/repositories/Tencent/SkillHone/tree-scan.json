@@ -1,0 +1,10 @@
+{
+  "repository": "Tencent/SkillHone",
+  "commit_sha": "773d54d11aaa6c00d45720e2e501b6d8bfa8f590",
+  "tree_entries": 95,
+  "candidate_skill_paths": [
+    "skills/skillhone-auto-optimization/SKILL.md",
+    "skills/skillhone-benchmark-optimization/SKILL.md",
+    "skills/skillhone/SKILL.md"
+  ]
+}

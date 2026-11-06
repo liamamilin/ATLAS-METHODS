@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:11:14.028997+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 2,
+  "saved_skill_entries": 2,
+  "unique_entry_texts": 2,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "noobnooc/agent",
+      "commit_sha": "1f594b5dd4db0371bba49e8ca131d69b17218137",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 6,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/noobnooc/agent/1f594b5dd4db0371bba49e8ca131d69b17218137.json"
+    }
+  ],
+  "errors": []
+}

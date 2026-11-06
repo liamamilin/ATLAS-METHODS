@@ -1,0 +1,341 @@
+{
+  "repository": "TheDecipherist/claude-code-mastery",
+  "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "09e9ec6620a3541bde2ffccba26ea7c1ed39d5de",
+      "bytes": 292,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/.gitignore",
+      "sha256": "06397e83abfdf7b51258713e88cdd20490472ed81fe627b7bfafefebd58601b9",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/.gitignore"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "d77e41acef35f8653adbe0ee536be9436c790b00",
+      "bytes": 2984,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/CLAUDE.md",
+      "sha256": "56d40b52df1374d199ec60b9ccd1a1260d5d6d6363d5671cfe9f4d20808b7ac1",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/CLAUDE.md"
+    },
+    {
+      "path": "GUIDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c320d94b4374abf53f072769522208f9c3002bc8",
+      "bytes": 18566,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/GUIDE.md",
+      "sha256": "1948d9fdd9be181467f0d0f799de7a718b6f76ad2c5aa9ad6bbd87519f2445a8",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/GUIDE.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c91d94c424ad9058164d62a8c845809d15570971",
+      "bytes": 1071,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/LICENSE",
+      "sha256": "e3d84587edeb10341f0e635ab0d0ec60329047b21b0eb28da520292d63c6824f",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "18ec771af5403b70c79ed6e7bc4537549f793e52",
+      "bytes": 8944,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/README.md",
+      "sha256": "6286894eab2d4e4fd28eef6dba073bb6cbb63b6e58d3e1cc84c188f11bc9451e",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/README.md"
+    },
+    {
+      "path": "commands/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "353d29c22ff238d27a7ccab2b90aaef161995522",
+      "bytes": 2318,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/README.md",
+      "sha256": "fc84006589f13e9a5f63599f11a7af5c68da502456846230ee43160a2c9d3b99",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/README.md"
+    },
+    {
+      "path": "commands/explain.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e00fa96b191e451b98c6577ff59e3c6dc1f1fc42",
+      "bytes": 1799,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/explain.md",
+      "sha256": "99b50c9748972f50d26bc0455f3460a6af7a9d1782186e4f4a47ea382aeb988d",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/explain.md"
+    },
+    {
+      "path": "commands/pr.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6efb4a58040fa438cd1afcc873bb869b3fce9fe0",
+      "bytes": 2629,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/pr.md",
+      "sha256": "381002bcbed49ba676497bd2eaf17556ecdf3e6a12c31a5178b6a9335b37872e",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/pr.md"
+    },
+    {
+      "path": "commands/review.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f2666e9d009468efdeddf11f6f3c3f2dda2c6b3f",
+      "bytes": 1616,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/review.md",
+      "sha256": "4403eb353a5a30be754bcc19ed6e1eb5fd566f913719155fecfe50dfb6b94e19",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/review.md"
+    },
+    {
+      "path": "commands/test.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "114605015d9e53d74448b292ef9549f0f588f435",
+      "bytes": 2626,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/test.md",
+      "sha256": "98d947e5c4796710b6fb8696a62a8300adcda55134f21785d3a335199575e5ff",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/commands/test.md"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/.nojekyll"
+    },
+    {
+      "path": "docs/app.js",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "de4330c24d2fc21590c695ef9c3e319749ed93dc",
+      "bytes": 8356,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/app.js",
+      "sha256": "894f745535a8f3508b6a0757a0c91dad7f1c12b464f84f21ba6d34351852cb54",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/app.js"
+    },
+    {
+      "path": "docs/banner.webp",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1231d1df53a4be736ec2b4478fbed72c9400482e",
+      "bytes": 84476,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/banner.webp",
+      "sha256": "aac899f44af48ffa60c48ca77baf6565756c068d6b5007c5a52794c48f3346b9",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2b431d77f6a84d15e02fafbe1299f971a243069b",
+      "bytes": 11918,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/index.html",
+      "sha256": "919853182b0d5cbe186218c33912914263ff38397167fc7a33a2235e4b40040b",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/index.html"
+    },
+    {
+      "path": "docs/styles.css",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e8a1a205768f8aff963e5f95cda09ebdcb09279e",
+      "bytes": 20182,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/styles.css",
+      "sha256": "89a452a254d64adf026f5f98f385b54b299bfb10b93d35b45035868e456ea5b2",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/styles.css"
+    },
+    {
+      "path": "docs/thedecipherist.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2f0a4148b600c45d223e8a99c04a20c546df5f56",
+      "bytes": 169059,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/thedecipherist.png",
+      "sha256": "1ab776a527cd85a80672463b0ce609e8ee635655c079eaaf72310a2e5df5ef78",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "docs/thedecipherist.webp",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b59010a786a7547817750ee7fcb77f6332db8ab6",
+      "bytes": 119714,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/docs/thedecipherist.webp",
+      "sha256": "15223feff43eb2823196651efcd503f82cce7fbb298d85b0d51e1c5febf7bf9b",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "hooks/after-edit.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9242154ace4ab1d1642898af759dd295c8d60381",
+      "bytes": 2466,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/after-edit.sh",
+      "sha256": "c1044d764cd1575e7e8c44768ab328a8f0a16c5ac55cd7db1c6f9b186064a731",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/after-edit.sh"
+    },
+    {
+      "path": "hooks/block-dangerous-commands.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9b66731b7af894248a5a8fe7f6fd817e0d062c39",
+      "bytes": 4027,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/block-dangerous-commands.sh",
+      "sha256": "84b339195ac64c70bf94b9317d291bae8e7361b5f78d8829b4430c1a2f1730bb",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/block-dangerous-commands.sh"
+    },
+    {
+      "path": "hooks/block-secrets.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6c250b8fd7201ee7b15b60d9dd8281d276870c57",
+      "bytes": 7014,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/block-secrets.py",
+      "sha256": "035fd2fb6282343e9da22417c6a23adf995e3c56c9b9a5e251d1321d25052d98",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/block-secrets.py"
+    },
+    {
+      "path": "hooks/end-of-turn.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1e75c9df98bea5fe7ab19d6c7ea7257541140f20",
+      "bytes": 5981,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/end-of-turn.sh",
+      "sha256": "70730f25f5fb2b2e0b07efc67b9ec9e1fe3d4c5ddf2b9335974c73f4e37a0de0",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/end-of-turn.sh"
+    },
+    {
+      "path": "hooks/notify.sh",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a3951b388a941ba3306ca850dbd2edf4ec5510fc",
+      "bytes": 2741,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/notify.sh",
+      "sha256": "11d6ebc8cfccb7da5946d249a8c299e96afa529ea77f225ce07196e27ae3274d",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/hooks/notify.sh"
+    },
+    {
+      "path": "images/banner.webp",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1231d1df53a4be736ec2b4478fbed72c9400482e",
+      "bytes": 84476,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/images/banner.webp",
+      "sha256": "aac899f44af48ffa60c48ca77baf6565756c068d6b5007c5a52794c48f3346b9",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "images/thedecipherist.png",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2f0a4148b600c45d223e8a99c04a20c546df5f56",
+      "bytes": 169059,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/images/thedecipherist.png",
+      "sha256": "1ab776a527cd85a80672463b0ce609e8ee635655c079eaaf72310a2e5df5ef78",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "images/thedecipherist.webp",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b59010a786a7547817750ee7fcb77f6332db8ab6",
+      "bytes": 119714,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/images/thedecipherist.webp",
+      "sha256": "15223feff43eb2823196651efcd503f82cce7fbb298d85b0d51e1c5febf7bf9b",
+      "status": "non_utf8_or_binary_not_exported"
+    },
+    {
+      "path": "skills/commit-messages/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "e0bd4f120e131a375e6e3ef86cdf5c23bd3068e2",
+      "bytes": 3509,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/skills/commit-messages/SKILL.md",
+      "sha256": "a8c5797359d57561d8fae2549bf535841006c945a4a38e2512a6b749e1bdc95b",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/skills/commit-messages/SKILL.md"
+    },
+    {
+      "path": "skills/security-audit/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2b7e179ce7669a6c271d9768ff5f19a8c365b909",
+      "bytes": 5174,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/skills/security-audit/SKILL.md",
+      "sha256": "5d0b0f4740df2566e5858a3eb8a1b79e51581c3c5b3907ed5057a52957c6f35c",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/skills/security-audit/SKILL.md"
+    },
+    {
+      "path": "templates/.gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "30c54d6b8811587f2039163cca3738574d526f3c",
+      "bytes": 3015,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/.gitignore",
+      "sha256": "7acc192257a14963c3ff531b6a77b46056f79e1092ebf5418fd864067884e6d7",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/.gitignore"
+    },
+    {
+      "path": "templates/global-claude.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "fc062941fce9879d46b257b867167e83d062e20b",
+      "bytes": 4718,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/global-claude.md",
+      "sha256": "cb28b37d4892b32bdf76dd9d2d94d102ef46552e1bb6ba422afe1bb879589a97",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/global-claude.md"
+    },
+    {
+      "path": "templates/project-claude.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "3f7342c021347124ea5b7a8b6b0de4d15175e918",
+      "bytes": 3022,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/project-claude.md",
+      "sha256": "d04510fc3446aaa686d9a94421b11aae13c4e04f21e6d873ffc8a7a1882d0d18",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/project-claude.md"
+    },
+    {
+      "path": "templates/settings.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "9b0ac3d4bd683fc3d34627b3dee456dc2f681540",
+      "bytes": 1344,
+      "source_url": "https://github.com/TheDecipherist/claude-code-mastery/blob/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/settings.json",
+      "sha256": "0647dd7426b78869e2e92b403157f33f7aa76e6f3c26f7d5a19e34d49b83172d",
+      "status": "saved",
+      "raw_path": "raw/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee/templates/settings.json"
+    }
+  ]
+}

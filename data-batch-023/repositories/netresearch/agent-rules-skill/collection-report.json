@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:41:43.666620+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "netresearch/agent-rules-skill",
+      "commit_sha": "aa0ff50699a60d4a02de70be3af83182b766fe33",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 211,
+      "files_not_exported": 3,
+      "repository_manifest": "manifests/netresearch/agent-rules-skill/aa0ff50699a60d4a02de70be3af83182b766fe33.json"
+    }
+  ],
+  "errors": []
+}

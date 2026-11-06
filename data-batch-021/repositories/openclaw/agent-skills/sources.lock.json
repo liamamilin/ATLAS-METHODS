@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "openclaw/agent-skills",
+      "commit_sha": "02f3158379a7ec355d73c92bf97d432fafb2adc9"
+    }
+  ]
+}

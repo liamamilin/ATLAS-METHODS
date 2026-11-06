@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-11-06T12:44:15.658021+00:00",
+  "requested_sources": 24,
+  "completed_sources": 19,
+  "indexed_snapshots": 19,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 5,
+  "pending_sources": 0,
+  "candidate_skill_files": 20490,
+  "saved_skill_entries": 20490,
+  "distinct_skill_paths": 20490,
+  "unique_entry_texts": 20489,
+  "duplicate_entry_groups": 1,
+  "sources": [
+    {
+      "repository": "Hao0321/claude-skill-code-cleanup",
+      "commit_sha": "7be5e421a8c772d91ceafa0dbf07d0db90787f0e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 202,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/Hao0321/claude-skill-code-cleanup/manifests/Hao0321/claude-skill-code-cleanup/7be5e421a8c772d91ceafa0dbf07d0db90787f0e.json"
+    },
+    {
+      "repository": "Kulaxyz/self-learning-skills",
+      "commit_sha": "1304fce375b5d4c4508cab9eea05bbb8b95c38f6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 11,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/Kulaxyz/self-learning-skills/manifests/Kulaxyz/self-learning-skills/1304fce375b5d4c4508cab9eea05bbb8b95c38f6.json"
+    },
+    {
+      "repository": "O0000-code/paper-search-pro",
+      "commit_sha": "2b55e0853b8a42325b69cd20cb6d13e03b23695e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 266,
+      "files_not_exported": 19,
+      "repository_manifest": "repositories/O0000-code/paper-search-pro/manifests/O0000-code/paper-search-pro/2b55e0853b8a42325b69cd20cb6d13e03b23695e.json"
+    },
+    {
+      "repository": "OpenLinkSoftware/ai-agent-skills",
+      "commit_sha": "e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 44,
+      "saved_skill_entries": 44,
+      "saved_text_files": 1192,
+      "files_not_exported": 50,
+      "repository_manifest": "repositories/OpenLinkSoftware/ai-agent-skills/manifests/OpenLinkSoftware/ai-agent-skills/e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e.json"
+    },
+    {
+      "repository": "ThomasMoreAI/legal-skills-open",
+      "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20293,
+      "saved_skill_entries": 20293,
+      "saved_text_files": 41651,
+      "files_not_exported": 115,
+      "repository_manifest": "repositories/ThomasMoreAI/legal-skills-open/manifests/ThomasMoreAI/legal-skills-open/2896ce4c0ca1632b43efb29647c2811eadc89247.json"
+    },
+    {
+      "repository": "ajhcs/healthcare-agents",
+      "commit_sha": "b00a51b654fc31331b005818c4bb1ec7f7817a9f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 639,
+      "files_not_exported": 7,
+      "repository_manifest": "repositories/ajhcs/healthcare-agents/manifests/ajhcs/healthcare-agents/b00a51b654fc31331b005818c4bb1ec7f7817a9f.json"
+    },
+    {
+      "repository": "bergside/design-md-figma",
+      "commit_sha": "746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 29,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/bergside/design-md-figma/manifests/bergside/design-md-figma/746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590.json"
+    },
+    {
+      "repository": "bowenliang123/markdown-exporter",
+      "commit_sha": "398597a3d45d603e3dca36b843d4e894790e19f5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 169,
+      "files_not_exported": 25,
+      "repository_manifest": "repositories/bowenliang123/markdown-exporter/manifests/bowenliang123/markdown-exporter/398597a3d45d603e3dca36b843d4e894790e19f5.json"
+    },
+    {
+      "repository": "gadievron/raptor",
+      "commit_sha": "54336c2a8f01ef4c2004e3bdb1a11c96e499c3bc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 7764,
+      "files_not_exported": 9,
+      "repository_manifest": "repositories/gadievron/raptor/manifests/gadievron/raptor/54336c2a8f01ef4c2004e3bdb1a11c96e499c3bc.json"
+    },
+    {
+      "repository": "govardhanrekha/QA-Skill.md-files",
+      "commit_sha": "6cef000d8099688b2f34a155adbac44ae5903e69",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 14,
+      "saved_skill_entries": 14,
+      "saved_text_files": 21,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/govardhanrekha/QA-Skill.md-files/manifests/govardhanrekha/QA-Skill.md-files/6cef000d8099688b2f34a155adbac44ae5903e69.json"
+    },
+    {
+      "repository": "malkreide/socratic-method-skill",
+      "commit_sha": "7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 11,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/malkreide/socratic-method-skill/manifests/malkreide/socratic-method-skill/7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232.json"
+    },
+    {
+      "repository": "michaelshimeles/rstack",
+      "commit_sha": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 29,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/michaelshimeles/rstack/manifests/michaelshimeles/rstack/11b15767d7587bab11f6c4957507b5f26d1785c7.json"
+    },
+    {
+      "repository": "nearai/ironhub",
+      "commit_sha": "c49fd181a7bdd968ba5fe40eda12416e732c71ce",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 72,
+      "saved_skill_entries": 72,
+      "saved_text_files": 1107,
+      "files_not_exported": 45,
+      "repository_manifest": "repositories/nearai/ironhub/manifests/nearai/ironhub/c49fd181a7bdd968ba5fe40eda12416e732c71ce.json"
+    },
+    {
+      "repository": "netresearch/agent-rules-skill",
+      "commit_sha": "aa0ff50699a60d4a02de70be3af83182b766fe33",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 211,
+      "files_not_exported": 3,
+      "repository_manifest": "repositories/netresearch/agent-rules-skill/manifests/netresearch/agent-rules-skill/aa0ff50699a60d4a02de70be3af83182b766fe33.json"
+    },
+    {
+      "repository": "ooocooc/open-skill-sunset",
+      "commit_sha": "b703cf00712b21f12bfa41f1d3d0a6a9455fd954",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 45,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/ooocooc/open-skill-sunset/manifests/ooocooc/open-skill-sunset/b703cf00712b21f12bfa41f1d3d0a6a9455fd954.json"
+    },
+    {
+      "repository": "spboyer/sensei",
+      "commit_sha": "bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 170,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/spboyer/sensei/manifests/spboyer/sensei/bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f.json"
+    },
+    {
+      "repository": "tigerless-labs/paper-radar",
+      "commit_sha": "22e13f53d9b364e8f621c329436aa19309f7ba58",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 7,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/tigerless-labs/paper-radar/manifests/tigerless-labs/paper-radar/22e13f53d9b364e8f621c329436aa19309f7ba58.json"
+    },
+    {
+      "repository": "tmchow/agent-skills",
+      "commit_sha": "8e232f001fff3590b1420f2236923137ddc05bfe",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 18,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/tmchow/agent-skills/manifests/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe.json"
+    },
+    {
+      "repository": "zcashlabs/zcash-skills",
+      "commit_sha": "e5f639ebf9eac59ad9e6057e8f357ccdd99075b9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 47,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/zcashlabs/zcash-skills/manifests/zcashlabs/zcash-skills/e5f639ebf9eac59ad9e6057e8f357ccdd99075b9.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "royalpinto007/awesome-agent-skills",
+      "output_directory": "data-batch-023/repositories/royalpinto007/awesome-agent-skills",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:40:10.606111+00:00",
+      "commit_sha": "020e8e72d6e8f641050137b163441173c02a7c2e",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:40:15.228232+00:00"
+    },
+    {
+      "repository": "v1k22/skillhub-registry",
+      "output_directory": "data-batch-023/repositories/v1k22/skillhub-registry",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:41:32.227670+00:00",
+      "commit_sha": "592484948311747eefea04c7facc461b5c48cb97",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:41:38.071680+00:00"
+    },
+    {
+      "repository": "WenyuChiou/ai-research-skills",
+      "output_directory": "data-batch-023/repositories/WenyuChiou/ai-research-skills",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:42:05.521706+00:00",
+      "commit_sha": "b649037b02b800a635529055dd22acd8a0bd738d",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:42:14.204629+00:00"
+    },
+    {
+      "repository": "heyabhishekbajpai/SkillIssue",
+      "output_directory": "data-batch-023/repositories/heyabhishekbajpai/SkillIssue",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:43:30.664240+00:00",
+      "commit_sha": "5bbae62fde79701941c4d4789875232fc8c3ee00",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:43:38.913166+00:00"
+    },
+    {
+      "repository": "ithiria894/awesome-claude-code-workflows",
+      "output_directory": "data-batch-023/repositories/ithiria894/awesome-claude-code-workflows",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:43:38.921287+00:00",
+      "commit_sha": "553ac1546ba9b40882de0c4e0bc43694e66ad7ad",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:43:43.374385+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 27
+}

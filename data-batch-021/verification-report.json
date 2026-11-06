@@ -1,0 +1,236 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "9e7718b6ad3e0f2075455739b95f80c6716fae3b6abc2b74ac11db416e3949d9",
+  "sources": [
+    {
+      "repository": "K-Dense-AI/mimeo",
+      "commit_sha": "a4cea1842a24515cda354a3aa9eb9763677a3cdd",
+      "candidate_skill_entries": 22,
+      "skill_entries": 22,
+      "manifest_files": 283,
+      "statuses": {
+        "saved": 262,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 20
+      }
+    },
+    {
+      "repository": "SnailSploit/Claude-Red",
+      "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+      "candidate_skill_entries": 79,
+      "skill_entries": 79,
+      "manifest_files": 97,
+      "statuses": {
+        "saved": 95,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "Yusuke710/manim-skill",
+      "commit_sha": "a0048d9e265499038f34a9aa58ff16d306b5034c",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 14,
+      "statuses": {
+        "saved": 12,
+        "non_utf8_or_binary_not_exported": 2
+      }
+    },
+    {
+      "repository": "agent-sh/agnix",
+      "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+      "candidate_skill_entries": 88,
+      "skill_entries": 88,
+      "manifest_files": 40230,
+      "statuses": {
+        "saved": 40222,
+        "gitlink_not_exported": 1,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "alchaincyf/huashu-md-html",
+      "commit_sha": "5826f83f3050c19aa45acdd7f9405af48011736f",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 38,
+      "statuses": {
+        "saved": 30,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "bergside/awesome-design-skills",
+      "commit_sha": "f631a09b4fcc0166f2e2c1a8c81906ef680c57e8",
+      "candidate_skill_entries": 67,
+      "skill_entries": 67,
+      "manifest_files": 215,
+      "statuses": {
+        "saved": 137,
+        "non_utf8_or_binary_not_exported": 78
+      }
+    },
+    {
+      "repository": "blacktop/ipsw-skill",
+      "commit_sha": "1a797280aa27481e646be89f334784ad04d315c6",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 24,
+      "statuses": {
+        "saved": 24
+      }
+    },
+    {
+      "repository": "callstackincubator/agent-skills",
+      "commit_sha": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 177,
+      "statuses": {
+        "saved": 149,
+        "symlink_not_followed": 12,
+        "non_utf8_or_binary_not_exported": 15,
+        "over_size_limit": 1
+      }
+    },
+    {
+      "repository": "ciembor/agent-rules-books",
+      "commit_sha": "893a88a6fce3a80c565bf39ac65021b43a8b2990",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 215,
+      "statuses": {
+        "saved": 200,
+        "symlink_not_followed": 14,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "dhicoc/dsh-reverse-skill",
+      "commit_sha": "f1b61cf3deec370198ae81a23b8512338002d073",
+      "candidate_skill_entries": 88,
+      "skill_entries": 88,
+      "manifest_files": 539,
+      "statuses": {
+        "saved": 534,
+        "non_utf8_or_binary_not_exported": 5
+      }
+    },
+    {
+      "repository": "geekjourneyx/md2wechat-skill",
+      "commit_sha": "a8e2900033e5c9ee152a629e108fe57228ba31e6",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 372,
+      "statuses": {
+        "saved": 359,
+        "non_utf8_or_binary_not_exported": 13
+      }
+    },
+    {
+      "repository": "microsoft/SkillOpt",
+      "commit_sha": "eb959c3ba3f0b6bcfa23e485ee223e019eded3a3",
+      "candidate_skill_entries": 5,
+      "skill_entries": 5,
+      "manifest_files": 480,
+      "statuses": {
+        "saved": 474,
+        "non_utf8_or_binary_not_exported": 6
+      }
+    },
+    {
+      "repository": "mrhlaingbwardev/agentic-hacking-skills",
+      "commit_sha": "e1dc2759662155ba5a2d72e733a7d899ef4499ef",
+      "candidate_skill_entries": 28,
+      "skill_entries": 28,
+      "manifest_files": 36,
+      "statuses": {
+        "saved": 36
+      }
+    },
+    {
+      "repository": "mxyhi/ok-skills",
+      "commit_sha": "91108cf5c608edd1f00a8c5ac635f16504e08a35",
+      "candidate_skill_entries": 36,
+      "skill_entries": 36,
+      "manifest_files": 731,
+      "statuses": {
+        "saved": 574,
+        "over_size_limit": 6,
+        "non_utf8_or_binary_not_exported": 151
+      }
+    },
+    {
+      "repository": "open-legal-products/mike-workflows",
+      "commit_sha": "20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1",
+      "candidate_skill_entries": 169,
+      "skill_entries": 169,
+      "manifest_files": 232,
+      "statuses": {
+        "saved": 226,
+        "non_utf8_or_binary_not_exported": 6
+      }
+    },
+    {
+      "repository": "openclaw/agent-skills",
+      "commit_sha": "02f3158379a7ec355d73c92bf97d432fafb2adc9",
+      "candidate_skill_entries": 9,
+      "skill_entries": 9,
+      "manifest_files": 105,
+      "statuses": {
+        "saved": 104,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "shaom/brand-to-design-md-skill",
+      "commit_sha": "f7fe99e7a2985d4457d44bfab8399bb1cf1896c0",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 19,
+      "statuses": {
+        "saved": 13,
+        "non_utf8_or_binary_not_exported": 4,
+        "over_size_limit": 2
+      }
+    },
+    {
+      "repository": "tikoci/routeros-skills",
+      "commit_sha": "55941deb75fb02be34a802a214c669a3c7228227",
+      "candidate_skill_entries": 19,
+      "skill_entries": 19,
+      "manifest_files": 79,
+      "statuses": {
+        "saved": 79
+      }
+    },
+    {
+      "repository": "win4r/openclaw-workspace",
+      "commit_sha": "4e81a914b5f4ed52d88e0b31476354f92fcd4be7",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 5,
+      "statuses": {
+        "saved": 5
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 111269751,
+    "entries_with_license_candidates": 642,
+    "saved": 43535,
+    "over_size_limit": 11,
+    "non_utf8_or_binary_not_exported": 318,
+    "gitlink_not_exported": 1,
+    "symlink_not_followed": 26,
+    "entries_without_license_candidates": 2
+  },
+  "verified_candidate_entries": 644,
+  "verified_skill_entries": 644,
+  "unique_entry_texts": 642,
+  "duplicate_entry_groups": 2,
+  "entries_in_duplicate_groups": 4,
+  "duplicate_entries_beyond_first": 2
+}

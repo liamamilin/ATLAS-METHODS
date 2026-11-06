@@ -1,0 +1,9 @@
+{
+  "repository": "supabase/agent-skills",
+  "commit_sha": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+  "tree_entries": 61,
+  "candidate_skill_paths": [
+    "skills/supabase-postgres-best-practices/SKILL.md",
+    "skills/supabase/SKILL.md"
+  ]
+}

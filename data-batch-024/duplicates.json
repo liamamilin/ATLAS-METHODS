@@ -1,0 +1,2396 @@
+[
+  {
+    "entry_sha256": "084c16f3df11c2860504884843cc286f4396520e5a60ae23d37edc8afd9b354e",
+    "record_ids": [
+      "aba91d00ef3e826e749d",
+      "bdf3d8690ae04c579b8e",
+      "1f242509afe891985177"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/hermes-dojo/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/create-agent-skills/skills/hermes-dojo/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/skill-authoring-toolkit/skills/hermes-dojo/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0b083597bb2b16e616b335e9ac2f9a0339f9c112572efea21d27a135b84088aa",
+    "record_ids": [
+      "a8e637235e9a6b36108b",
+      "3b767f9619fe97f190eb",
+      "10f15bcd1f9965eeffd2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/handyperson/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/handyperson/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/handyperson/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0d14f6c6bad6af52c5bfb037c299adfb8660bc38c3c69ad882b8ec9d5ef3b166",
+    "record_ids": [
+      "e9eab07cf2e80e6ecbb1",
+      "95000298a07c1c29fece"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/expo-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/expo-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0dd57cb752f4d0141d591ef2228745d8d3913661e025c2b702aa452e9c69556b",
+    "record_ids": [
+      "4f9ea862e4a61701c9a2",
+      "86f2a89dc6a7638e43d9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/mcp-security-audit-pipeline/skills/pentest-tools/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/pentest-tools/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0e466100b08fa3caa377785db3606e87488794c07aa070ec29a75079d4f76fba",
+    "record_ids": [
+      "e8ef4d482e7bfbee0892",
+      "6d83d19dad61ecfb5ca9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/python-data-viz/skills/k-dense-ai-seaborn/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/python-data-viz/skills/lingxling-seaborn/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "0fd8f9f87310d23ff1705b2cee644947b0f9daf7930345417d323c9afd2041f6",
+    "record_ids": [
+      "8caef448f1320506afd3",
+      "da22635df605ec8222c9",
+      "682992964e57dc4f330a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/social-media-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/social-media-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/social-media-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "122dafd8682807da6ea11c81be18cc5f02afad65d306cd7aee117191e6a3ca0b",
+    "record_ids": [
+      "b0e786984f676f156d17",
+      "45c524b9cd93b9e8d24b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/code-audit/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/code-audit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "13802d9708dd7ea8959b3c3d022af161bd9ef817cc69ce96ce0c7d0a6c4acb65",
+    "record_ids": [
+      "73481fdb057b53854f76",
+      "3b738e82bd3dbbcdb0d2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/docs-generator/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/docs-generator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1429f8e89ba55b0d94b4b5ed72ab5e6a977e378fa604dc58f5f3a49397cf03f5",
+    "record_ids": [
+      "0d36068eb9c544a0f603",
+      "60a8c3438f1c204d4290"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/hyperframes-cli/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/hyperframes-cli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1a29372cc66e31d015bdd7423cb135a712d4b55fbfd0ed93cb0d5a00c0d507a5",
+    "record_ids": [
+      "00617529e6c010c69110",
+      "4036cadc6bf287cb4b82",
+      "35d5a7fb9b9f21c134ac"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/bookkeeping-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/bookkeeping-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/bookkeeping-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1c2ddf15262cc1684d7f1c159db442d4a08a3632f5753975f9225a5126c8a17e",
+    "record_ids": [
+      "0416bd02ff23bc609353",
+      "41d1760166c6e9a289f0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/gsd-browser/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/gsd-browser/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1d1a4810b62064804cec27cf63d189e3320f496f01e08861554b4a262e680fea",
+    "record_ids": [
+      "853ddc695a65beb56e1a",
+      "d0dd28d445d186f6c305",
+      "02c364e2e89cfbe2b4df",
+      "69982a80ea0396eeadcc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/figma/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/figma/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/figma/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/figma/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1ea3178ec26c26d5891a35896e983c15c2c615b55c5e51b5275d5673c3af7345",
+    "record_ids": [
+      "56138a1240df2e625f1a",
+      "0d0e8d7b4f4e085d4d4f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/mcp-builder/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/skill-authoring-toolkit/skills/mcp-builder/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1f5f8ab0839f8988b57af2eb919ffb0469793566fdad951280be91823e1e3d12",
+    "record_ids": [
+      "835ffe4518802ae82cf5",
+      "1a1223f8b0511a63c478"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/media-use/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/media-use/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "1fe178c2fe98a1d21e26bbf1384512fafe4cf8d49e6154bbb58d256f5f1af981",
+    "record_ids": [
+      "bea52096435f5d15f2bb",
+      "dc307648f85619eaf648"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/ads-math/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/ads-math/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2655408ba0eded91319a144bd8ada540ba66e4509ba347faf650baa40ff75d53",
+    "record_ids": [
+      "442e4d35d1902e5ad921",
+      "2a0b152f51c1af1ad3ab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/design/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/design/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "269270d59326697560fa7b18b8e5ff56986a2a62d8013584d83fd6c391c88bc0",
+    "record_ids": [
+      "1583eae4be231ac6a77a",
+      "1c4b993c002ed6ad8595"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/html-docs/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/html-docs/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "26ac56b35b4d53b2eafe34e655baa28ac0fd1911b7c9ff6ad530a41bc08a2c6b",
+    "record_ids": [
+      "bdef49f3094fcff731c3",
+      "4cc6cbe00d9c34302942",
+      "f73bcdbb5e118a23ead3",
+      "d590c3b5cda5cec06556"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/brand-identity-kit/skills/brand/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/brand/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/brand/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/brand/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "276fd634f0001ab4b33379064e463a46add0f3388c84614ef58db245eecd29e5",
+    "record_ids": [
+      "2e7ce13cb9d91ebb7336",
+      "15c0fdb9058b003a317d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/build-multi-agent-system-with-crewai/skills/crewai/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/build-multi-agent-system-with-crewai/skills/lingxling-crewai/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2a19cabb8f590fff3b88b44544d0a60dc4c6c9dd105c09411a3aa827bbc0034c",
+    "record_ids": [
+      "72ba61ecdad0616448ee",
+      "103be82ef478bb61c5bb"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/gemma-dev/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/gemma-dev/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "2dd7f64afc1a886d4d37336bd2cdd3a497dd8ec3852a61ccf33f2e9f07700177",
+    "record_ids": [
+      "7fa4fbfa482429ec6c56",
+      "022947e060e0e1d9a1a6",
+      "b26d5d350d8d771849c1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/ads-x/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/ads-x/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/ads-x/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "340bf7486b160e562031aa7ca14e23be939b78c4c8d460484b5516e0913b3f77",
+    "record_ids": [
+      "5227421c596c4716617e",
+      "978d249b10951ce910b1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/typescript-react-nextjs-patterns/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/typescript-react-nextjs-patterns/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "36a80ac368ad7e9ae1cf9792f7cd16b26a47d3be636f2e6d2ec94076c8c7771f",
+    "record_ids": [
+      "42aa42e2ec826d3a9018",
+      "3923a6b6503cfdf2b8a9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/fix-review/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/fix-review/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "37bd0ad28cc3c7444b7d51d67bc37e95ea6904ba13ce702a4fdbc9634c61bce8",
+    "record_ids": [
+      "c98673a57bffba43e66c",
+      "7171a0f3b03331458944",
+      "17671238ce7cd9440e24"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/tutor/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/tutor/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/tutor/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "38e253529d0a173a57ba87927bf50668be5c9e07fe21623c457e4d952c20ccd1",
+    "record_ids": [
+      "65b6c3f77ae765872ebc",
+      "58f5dabf745a89098303"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/create-agent-skills/skills/openclaw-docs/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/openclaw-docs/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "395ec0d86c77569b5c3a735ed39017625050c853ed47232a0ec733dc8314c1f4",
+    "record_ids": [
+      "399b35c797f045c8977f",
+      "33c3a2c9a98b9fb8a60b",
+      "233121255e52af21629c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/copywriter/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/copywriter/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/copywriter/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3a27111fe541968ad1a86f031f6926b7e3d342592e192e2622b8d826d5761a3c",
+    "record_ids": [
+      "273a814e9fbaa0e734f2",
+      "0d8aba61f3253e5c75cf"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/mav-slidecraft-skill/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/mav-slidecraft-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "3dc802f854d3cdff42c7b4a843a70fdc8ac7c63ecc9bf11a8ecff8fc73383645",
+    "record_ids": [
+      "84f8450629919bdf2af1",
+      "d8414630bdaf3326133d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-cli/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-cli/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "40c79d8c64fde692e7b43978b7aae6d7cbd05471d06074954624c62b65434dbb",
+    "record_ids": [
+      "b0bba73201c164550933",
+      "184653ba0c58dbf743d6",
+      "c52f4cf34c94ca4e7ac0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/surrealdb/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/surrealdb/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/surrealdb/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "416c8b605763a7c9d68199355a769ef871e9eb8a60bfecbd05dc5a4f7f120f63",
+    "record_ids": [
+      "1ef1fef9cb0573d8ed48",
+      "ff19983e903354c44f1a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/writingmate-mcp-video-and-image-generation/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/planning-product/skills/writingmate-mcp-video-and-image-generation/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4410cc30e60f73fc3192cf7e01b2d3b248514a855feac87c6ff103bba9e8eb15",
+    "record_ids": [
+      "c97e9385ce71bc69cd0e",
+      "6aaba0ba18214805284c",
+      "29f82f61ac7d52e5997f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/agentic-kaggle-skill/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/agentic-kaggle-skill/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/agentic-kaggle-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "45094522e1b322a2e8abba86b5ebac18b40e656a8d5ffe575f5b7141d48bb382",
+    "record_ids": [
+      "3d342d2607083c8a7537",
+      "4805a88ea333300f09e0"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/paid-ad-campaign-setup/skills/inskillflow-paid-ads/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/paid-ad-campaign-setup/skills/paid-ads/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "462c1c8ddebf2aa40fb6af96ad33495489843acddfbde92550d19c2d0b7308b4",
+    "record_ids": [
+      "a0fa1efc25efd55eaee9",
+      "01feecbdaf7f9a022280"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/ppt-creater-skill/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/ppt-creater-skill/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "46faededccbe7edf27bbb54827bff84669d5fb4432bb793686209ff9d4f95267",
+    "record_ids": [
+      "bb8190da5b4480cface2",
+      "6181007b5d51c9a6742e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/security-audit/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/security-audit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "4b97385a5353aed7e92af2f1b2622beac63dcc4e7969f4e788e71e9236971b39",
+    "record_ids": [
+      "83fe7e5b3086920741f0",
+      "94ef44aa76ab7fed8493"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/paid-ad-campaign-setup/skills/ads-test/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/ads-test/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "50a746e5fc378acdbdee173a98f117a7fb488f933530c11371eeb5c3fd1afc49",
+    "record_ids": [
+      "5517a23ea1df295e3511",
+      "1ac4001bcb6aa5309be2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/04-security/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/04-security/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5207e981e7a1c4ff4282e31478f265779e17ae61ac8782f31649fe7f4b5dfbe5",
+    "record_ids": [
+      "243291fbb68a8e1cdf64",
+      "3ca0353143aef95d2922"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/paid-ad-campaign-setup/skills/lucaspmarie-a11y-paid-ads/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/paid-ad-campaign-setup/skills/nimoqup046-collab-paid-ads/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "525673483f493fcc64af9b59d5975e510f22905519607f2b928a5b51dc37dc70",
+    "record_ids": [
+      "038defaac93c29e76db3",
+      "85bfbc78cd794ebe16c0",
+      "56b19b1e17916fc56afe"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/support-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/support-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/support-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5a1688bab462ca4898c1d27ceeb16b87c7b5e293028c236eb1d3a2689b6e642c",
+    "record_ids": [
+      "dcde28bea07655ebcc3d",
+      "c8bf0e791c979d471c96",
+      "345f32119b1aed9c609d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/create-prd-from-idea/skills/make-plan/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/make-plan/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/planning-product/skills/make-plan/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5a30e570fd372bcc7cd9c82e8ffc4054e247307374c9eb6d21251235008cdcb0",
+    "record_ids": [
+      "a5ce1ad183ddbd98cb50",
+      "a3b3076f6e5e68079409"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-app-settings/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-app-settings/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5a8ba55c66a9b83ac1221b4d0334d4cc923cd2cf7bc80202c58931a445ada6d6",
+    "record_ids": [
+      "71fc57486864b6e52c18",
+      "54f5ed2c9693ecd021a3",
+      "11bce05ac257a1a4a203"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/ui-designer/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/ui-designer/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/ui-designer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5ad26c94eb3d7fe477763ed0a314ca7731b264a2f1012e68d887843d72ef279e",
+    "record_ids": [
+      "8693b25d30af00db8309",
+      "a4c8b3de17394ef8e6a6",
+      "324e02532334c889760f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/api-security/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/mcp-security-audit-pipeline/skills/api-security/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/api-security/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "5fa994cb912cbedb2a752ac0aafa7c240da431e666494c21519aac6ece1b3baa",
+    "record_ids": [
+      "4304594bd43f53cc6e2c",
+      "90af7bd9100e9e21412b",
+      "0a92449d5aea13fdd8d3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/weekly-planner/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/weekly-planner/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/weekly-planner/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "64a348f911a19decbd2d120977fc445cea30b670966db5c601556d77966f5a95",
+    "record_ids": [
+      "151cf4f9b87818a1b7ed",
+      "ac325467b76475a86f80",
+      "0fd9586ac977a3bfa5d4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/b0/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/b0/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/b0/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "67e58a0ce3fd9681c9b7dd7fe016b682fe2c3476319339e862d630b1db6820ac",
+    "record_ids": [
+      "ebf753cda237d518980f",
+      "b0b79d6476a74d500b58"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-debugging-tools/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-debugging-tools/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6842a97731fc24a855276a5758f85087a39ecc87a054718d4f48da34990eb509",
+    "record_ids": [
+      "36078808536593699d80",
+      "7c92cbbef88b689272fa",
+      "534bcee9248f06339b38"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/bmw-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/bmw-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/bmw-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "693ad831c402567a3122fcaa629db981e42371091f90cf77a57b1378cad3d1dc",
+    "record_ids": [
+      "cdc8c0cf2c718a6ce776",
+      "cf609ec0edad20f89280",
+      "3f9340c648ab325da6ed"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/cafe-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/cafe-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/cafe-assistant/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6b18a4367eedfb4fd0d97e6ea6dd3590e0eb77f949eea9686fcc121bc68063f2",
+    "record_ids": [
+      "2a0184dac5916c09479c",
+      "a3dd85c4ae2984a62434"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/security-and-hardening/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/security-and-hardening/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6bc1e4f8a37c0d2678828297c54a3bad403f5bc24082d36b992242e69a00f1a8",
+    "record_ids": [
+      "afc5e91a59a0dbd7eee3",
+      "444b6084bcd1570c7747"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/claw-orchestrator/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/skill-authoring-toolkit/skills/claw-orchestrator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "6c34ff772aa837b22a631f1079e61916799842b4c7a5d9ac91d4a89975379a00",
+    "record_ids": [
+      "c724baaf72a406fa544a",
+      "5e418ad0788c7070396e",
+      "a48769778deacd9b7ac7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/booking-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/booking-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/booking-assistant/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "702aa6668e0f8d8519d1138b91a19b40797f8ca3619f83262c3bc1c15de505a4",
+    "record_ids": [
+      "2b6e3d85f099b7d31c42",
+      "5ce9f50277ce109cac64",
+      "3dad3fc4c872026b5c55"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-audit-and-remediation/skills/ollama-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/ollama-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/ollama-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7b0f6e64cd8468d18bd29847c72703a82eb7ecd168650ca1ebe7083c77ef1b5a",
+    "record_ids": [
+      "c63e98342914efb08854",
+      "f4c94080df3df781d213"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/brand-identity-kit/skills/minimax-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/minimax-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7b4ddc2c0ce8589aa0cdbd8c23f37a59012d5ca7b1473d5407c15f4df9da7a10",
+    "record_ids": [
+      "8cefc51d35a872a6003b",
+      "dcdfd8fd377af32cf7dc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/r00-alirezarezvani-claude-skills-seo/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/r00-alirezarezvani-claude-skills-seo/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7c2d2c03df4c864fc662d95f61e5e2f37689a60ebcf75488ad14cedfbb99af76",
+    "record_ids": [
+      "30b9cff5d1fbd686b072",
+      "b7fbeed945a3d5dcab85"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-certificates-recovery/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-certificates-recovery/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "7eeb6ab3e9683f13614399eadc067b337003c44ea9fae12fb661e8a65366fa48",
+    "record_ids": [
+      "467203d8856f5e1b9e1b",
+      "d6045b7b4c60dbd621d7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/reverse-skill-router/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/mcp-security-audit-pipeline/skills/reverse-skill-router/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "87004ee344608102492d5b44d3f4c9bde479f735da86abd97bbf8a549a348b00",
+    "record_ids": [
+      "9a22d14e83afd4006fb7",
+      "c434f04f5ba5313a9640"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/seo/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/seo/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8a6913adf21b2323a1f07757eca2c57fdc56ae38bed47cd9d6cc5d1bfdd3431b",
+    "record_ids": [
+      "517f6748c7c7cd0b2bb5",
+      "5514e4a91faf6523e09d"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/remotion-markup/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/remotion-markup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "8bf7c2896fc8f5273a50daea118be7872e068c4dea1c1298c4a4254a2a397888",
+    "record_ids": [
+      "11e823a5248ba61df7d4",
+      "1201e1ab442829ecbf96"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/civitai-mcp-ultimate/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/civitai-mcp-ultimate/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "917100822a6b9baf2e015eb8c68e9338a9465a4547e1261c4d092586a94b247c",
+    "record_ids": [
+      "846f4374f98114eb3e3d",
+      "4b81c73fe8d1173ad247"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/transitions-dev/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/transitions-dev/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "923fbb8baf29d17558ba9353cbf8658c17a6b8ce00921ea96f62e26439143bd6",
+    "record_ids": [
+      "0666d3e334321a027f9a",
+      "2dde28a7ce24969c71ab",
+      "64d4994fe89439da33f2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/patient-educator/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/patient-educator/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/patient-educator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "92ed23256d31d78811febda4f4a350f11445ee72784afb1cec9e002ea550e1e2",
+    "record_ids": [
+      "932916611ba15f555e80",
+      "c57d0931e1367e487f82",
+      "d0ef89a5f904eb411ab7"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/executive-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/executive-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/executive-assistant/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "93df21ba9590efc4894627a8adacf8af320f6507faff6d77e22ce5e7f28e69a1",
+    "record_ids": [
+      "32ad1c61ced3669711d1",
+      "5f98880c9a865ea0f7d1",
+      "8340b5d10bed6a691844"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/clinic-receptionist/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/clinic-receptionist/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/clinic-receptionist/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "967b842b342f32f7b721969409bdbf56bc1f5d8f846517b78ed7571c1ffc6f9f",
+    "record_ids": [
+      "791f23220d5ff366a836",
+      "3fe3b17fd66fbb0f396f",
+      "bad0d915a31fd14a1439",
+      "b13d49d2f1cba533078c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/agent-recall/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/agent-recall/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/agent-recall/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/agent-recall/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "971d57b5860f66c6f6df8baed3568259f39aa97a7f8f3eca4e4cd9cdd15fac3d",
+    "record_ids": [
+      "8451acfdc0b96cc03099",
+      "536c3fc329cb5c28b95a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/brand-identity-kit/skills/aica/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/aica/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "9f73345a6953dfec65f5144dbb96d6c88785a6561fc0fc9767a40f85b1644ea0",
+    "record_ids": [
+      "a73ffe624107497d9386",
+      "4a7b199f63d7837a39bb",
+      "c33047b0c9a91e21844a"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/teacher-s-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/teacher-s-assistant/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/teacher-s-assistant/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a0792f522cdd42bbf9bbe3baeeb00cfac9570bfe211ddffd973cdcd840b167d6",
+    "record_ids": [
+      "9658daeeef449c85ba99",
+      "9fb301d252612da58dc2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/miro-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/miro-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a1ceeff3b819f0bae95c30e61c84bdba4eb314ddc04831310dbd6346d1a61edd",
+    "record_ids": [
+      "5ca641c7cc1664e8467b",
+      "04d047740634cb21e2cc"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/create-agent-skills/skills/goal-loop/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/skill-authoring-toolkit/skills/goal-loop/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a43744996b6dff5c3d4ca3834877b23145908914fad062126e1a7d75cc0aa5fb",
+    "record_ids": [
+      "01d1e6649ec2160bf5b6",
+      "d50c1b893026db3d5ca3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/research-paper-figure-skill-factory/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/research-paper-figure-skill-factory/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "a4872d9d6df778400aad72a7b94cf22987e7c0279a239e83d6d57a9be62e2623",
+    "record_ids": [
+      "7d8eb82c3daad44294fc",
+      "e09231e4275345b8922d",
+      "3b080b37ba5a912e7310"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/slides/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/slides/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/slides/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "aa47f8b3dea69a05365269d3f13fc7131a7ceba2c822f3de2934a12790b3f3c2",
+    "record_ids": [
+      "030976ea4fd3390281cb",
+      "1438b41bd865e422b91c",
+      "71a4b8233ff38dee597c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/event-planner/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/event-planner/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/event-planner/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "aab803025ef2b2acd68cfe491c94ecce85e6cb62812ca7e1e30a65976b030197",
+    "record_ids": [
+      "181c84518402916819bb",
+      "6db7fb5b5e61780e719f"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-audit-and-remediation/skills/extract/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/extract/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ae21344dc6338ab516ff42da86a2a85937f2f0579a7f66b9abb2252f7e6bf251",
+    "record_ids": [
+      "39ba6f29ae7fa4102ff0",
+      "decf6d10859c164ea6ad"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/create-agent-skills/skills/agent-skill-creator/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/skill-authoring-toolkit/skills/agent-skill-creator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b169fa71a733aa26701d5d2df29e68327da26450aad10e99990a6c469f9d8aca",
+    "record_ids": [
+      "06467627f732ec7219e7",
+      "3f5548964275c4ada6e4",
+      "60feaca3b203d3e5800b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/ifq-design-skills/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/ifq-design-skills/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/ifq-design-skills/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b6d86922a4451c34ac44d6ef1ca8e521443598849e21e0d748616ac36d9d961c",
+    "record_ids": [
+      "6b9055b1904bb75e8f57",
+      "3736919fdc24cb012960",
+      "de8b0458642aeccca843"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/planning-product/skills/rpk/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/rpk/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/rpk/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b71652ed4f745463128ef79cc0168c7a55e918e1031dddd1920b29c603d734c0",
+    "record_ids": [
+      "b1cc535a309b8af87a36",
+      "c42588dc22f2b7f26a17",
+      "7b63905cbc4ca473a9a9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/html-anything/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/html-anything/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/html-anything/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b73de42f06d251f534a890afae78673f4b1c8c0f25cdb138a6d348d98cfd53fe",
+    "record_ids": [
+      "b8f0c65d196280e05bac",
+      "04c8502f335eaf8a7c3c"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/mcp-security-audit-pipeline/skills/js-reverse/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/social-media-scraping/skills/js-reverse/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "b870f2572da060d33ae6e2f206e08b1815a90cc491cdc0a2c766f857aeae8a8f",
+    "record_ids": [
+      "ebca90172870206059d3",
+      "aef2ba1c2c48ed8082b8"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/web-design/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/planning-product/skills/web-design/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c07b5c28b0ba90e9a8a19729cba556dab15a16258f6408ebc76b7de93c2a8956",
+    "record_ids": [
+      "3ea36dedbbefe2ef8181",
+      "cb390ec80f746d36bace"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/adp/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/adp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c45125917a7a114d60541f85458dd94edf1520d7f900f5a326e3e7405fa2e92e",
+    "record_ids": [
+      "bc098c9c9fe44656792a",
+      "cb2c07a8d0e8b8b8399e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/apk-reverse/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/apk-reverse/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c522b230bda780aab853dfc27f4fa8aac8b887308f460b716babb1403445bfa2",
+    "record_ids": [
+      "b4ea1eeba1ed8704cb5c",
+      "981cbca7dac44e12f33c",
+      "a20230b5b855560d8066"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/menu-writer/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/menu-writer/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/menu-writer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c5e5b857e417b6039c8fd93b0af1e9f4703b3431e2d77a6e7d910ed0af3dafd6",
+    "record_ids": [
+      "b60df5676e00b9b57682",
+      "b834ab964568dad941b2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/paper-to-course/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/paper-to-course/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c645a25d98470de7209f01f8480d620e5ed8a48bc6bc65b3e343a4b04ddb3688",
+    "record_ids": [
+      "5ec644d0b6d24d343bed",
+      "2d5dc70dcadf53b3d1b3"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-traffic-debugging/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-traffic-debugging/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c72ab3379139e7d8c0b250d8203e8c89c5d2e7b1abfef0cf10b4ed310709a03b",
+    "record_ids": [
+      "53092b27b60535bdbf17",
+      "1c0ff5aebf657b20f777"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/ads-report/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/ads-report/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "c98ac9359c102ddbfb0dcebbfca20cec3dd02fd864443775e5a0ce13408f56fa",
+    "record_ids": [
+      "d17028347adf96a8a27c",
+      "4ad5a3b4f3ced99b4c68",
+      "a75b9cb4300deffd59ff"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/nurse-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/nurse-agent/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/nurse-agent/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cd14a0dd37f548bbe41d6c8a272ed66850544360948753d06b4467581443d1e3",
+    "record_ids": [
+      "ba4b7493f3a78e83d94b",
+      "1875b9a912dbbdca2c8e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/ue/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/ue/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "cd8cc2bee816f4387a389a925dc661a692057aabf66a33a46c1fe4dea130e553",
+    "record_ids": [
+      "858734f7c1ddbbc12877",
+      "988cc0614435ebf4b019"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/bpmn-generator/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/bpmn-generator/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d00bba528f64f662568d802af739bcaafee7196c59c686cb43b5a7cb380f1901",
+    "record_ids": [
+      "a2db0d7773f5dc11d63b",
+      "29eb725302aa4504da66"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/forter-agentic-readiness-audit/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/forter-agentic-readiness-audit/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d06737ca16e618ce5d52c73903b8d6f9750b16a23cc1aa6f307041349c5c2b34",
+    "record_ids": [
+      "81a4b19f76a9d178d8be",
+      "5dc30d116c06daa5c7c1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/brand-identity-kit/skills/ferrari-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/ferrari-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d35920276d3521534cd770ad4454dbf2b0c83a9d33dabce76879c3b722004c88",
+    "record_ids": [
+      "fe52770ebf9a98462d76",
+      "18ae372cf861cf62b145",
+      "8966f01030861e3f2ab6"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/grok-designer/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/grok-designer/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/grok-designer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d73853f49622b4e8a61e22096f10afecf578cd0e6e21c29b9dcb264310b3dd5a",
+    "record_ids": [
+      "ea51e465b98c2f9219b3",
+      "2d374b1f09034507e5ab"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/gemma-trainer/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/data-ml/skills/gemma-trainer/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d7e207e843fe9834b0a13c34c8401f8e516ad12b42ebc0115bcd64c15f827f56",
+    "record_ids": [
+      "df8bd53d7115f7b92fe9",
+      "91e9e566ee88de521824"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/dotnet-reverse/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/dotnet-reverse/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "d897653a7f7d0abadf7d45ec48489dc79bd525f8520c9d311520cffab109cd04",
+    "record_ids": [
+      "7e83946687619452406d",
+      "69510718097eeaa9add2"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/docs-writing/skills/zan-html-to-ppt/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/frontend-ui/skills/zan-html-to-ppt/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e02fef0d4de095ff14d98fdffa6f57a1b2b297f6ef9086262410a9ef74155815",
+    "record_ids": [
+      "ccad7ef6578eb155329d",
+      "571155529147946585e4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/brand-identity-kit/skills/maxim-brand/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/maxim-brand/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e1aeca26dfd0211ce058cb014456a203954129bb0de860737f2572c5361c91aa",
+    "record_ids": [
+      "c712da91faa70cae4443",
+      "e1d3219b26a6907b2435"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/iota-agent-mcp/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/testing-quality/skills/iota-agent-mcp/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e24ad1563e8497b5d6f5369fba7ddfa3af74c4662b07b5c92a36acfbb920219e",
+    "record_ids": [
+      "bb23238b0112cb05def6",
+      "ffbb452e589002b2591e"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/ads-meta/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/ads-meta/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "e5cf35678eac4595ff67e270f04daf193c00a397f7d37ce0219b0b883cd63a67",
+    "record_ids": [
+      "f2623bc4f04c6c116e5e",
+      "1ee81ffede8cdc699492"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-license-management/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-license-management/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "ea531b5bf08012ade675caa6705f850e37be1ed26746a0b78828351ad81a9fec",
+    "record_ids": [
+      "47e1a94a01ae30402d87",
+      "e1d06ead4e4242ab6fd9"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-https-capture/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-https-capture/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "eb30de4965d65b2b9fee793c3282dacdc2967e2fd56f0573cd38b7a24a6b7462",
+    "record_ids": [
+      "7331d75f1565fb4be5cc",
+      "7712746709af003df8e1",
+      "509c51265c57e6f10a66"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/agents-mcp/skills/design-is/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design/skills/design-is/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/design-is/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f40d7ebabea82f9ed493ef8d2bcec8a3716177634d6e9b565e041e3489259a2d",
+    "record_ids": [
+      "6bd7d12f8dcd9fbca0b5",
+      "abc6b31524e5ec7ce53b"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/code-security-review-pipeline/skills/ai-engineering-standards/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/secure-code-review-pipeline/skills/ai-engineering-standards/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f4f059f57a6f877271318cf1349e09f73b9408cf7918ea9bcdc588a607b11258",
+    "record_ids": [
+      "aafa0ef99a0f315b7dc9",
+      "8c4dda3c754a2c3e6cdf",
+      "8399fa2cc52916f04132"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3/agents/no-code-builder/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-3b/agents/no-code-builder/SKILL.md"
+      },
+      {
+        "repository": "Helpercraft/helpercraft",
+        "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+        "skill_path": "tests/fixtures/team-4b/agents/no-code-builder/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f4f84f479d733b36c3799ac02fe7037aa1528d3ed19ce342a2abb587c073f57f",
+    "record_ids": [
+      "5c3473febf2fca1bf7e4",
+      "04d3f6a3c878d9388762"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-audit-and-remediation/skills/ux/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/ux/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f6846fc9d5aa7f40205e5f42684e0ca2e3e0dcd1b2e4064b226225072f61dfde",
+    "record_ids": [
+      "ed3bd78b26ddfb6313f3",
+      "4c841bcbb2d77945c871"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/cloud-devops/skills/ibm-design-analysis/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/ibm-design-analysis/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f83adbe9800b259058e9b9faa993e925813c946dab4ef58c229a6ad1cb8dc63a",
+    "record_ids": [
+      "e2a7fc4bc273025d31a0",
+      "80f4f41a6ce030de4347"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-audit-and-remediation/skills/design-system/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/design-system/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "f9aa104e3e8846c40ae171221e8bbd977ba47ba9820cb45398b061b9cae58b27",
+    "record_ids": [
+      "dd9fbc2484fec0eda55c",
+      "945bc931369c76fcc2a4"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-download-setup/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-download-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fa4949a29c49570609bf1df13de60490f243dceb2cc57cd7dc7b009aa207a988",
+    "record_ids": [
+      "75c74c46deb831708b18",
+      "bf083c8dad732e4ff2be"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "plugins/proxyman/skills/proxyman-mcp-setup/SKILL.md"
+      },
+      {
+        "repository": "ProxymanApp/proxyman-SKILL.md",
+        "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+        "skill_path": "skills/proxyman-mcp-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fa995b86d5da881c3319218e30bd33ce8aaf06a9c958c8fcddd0b4de649157bc",
+    "record_ids": [
+      "488c050626198ac291c4",
+      "ce1107761b2ea47fea31"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-audit-and-remediation/skills/design-setup/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/design-system-foundation/skills/design-setup/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fb8cf0baacd6cf6c212f92dd979ccd95cb59ea53a2ed0410132190a7dc736624",
+    "record_ids": [
+      "878360f675bcbd61be15",
+      "56734554c0c74826dff1"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/marketing-growth/skills/ads/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/security/skills/ads/SKILL.md"
+      }
+    ]
+  },
+  {
+    "entry_sha256": "fbacbb399578e4e455ac3ff967dd5f264f0c234277093916d185b60a401e37e4",
+    "record_ids": [
+      "9a1876d651a3ce04fe0a",
+      "04b56763654861645135"
+    ],
+    "scope": "entry_text_only; packages may differ",
+    "members": [
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/mcp-security-audit-pipeline/skills/browser-automation/SKILL.md"
+      },
+      {
+        "repository": "skillmds/skillmd",
+        "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+        "skill_path": "plugins/social-media-scraping/skills/browser-automation/SKILL.md"
+      }
+    ]
+  }
+]

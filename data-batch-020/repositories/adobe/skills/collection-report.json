@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:22:36.975032+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 184,
+  "saved_skill_entries": 184,
+  "unique_entry_texts": 184,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "adobe/skills",
+      "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 184,
+      "saved_skill_entries": 184,
+      "saved_text_files": 1998,
+      "files_not_exported": 23,
+      "repository_manifest": "manifests/adobe/skills/4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a.json"
+    }
+  ],
+  "errors": []
+}

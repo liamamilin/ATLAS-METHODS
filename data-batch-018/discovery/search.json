@@ -1,0 +1,1633 @@
+{
+  "queries": [
+    {
+      "query": "agent skills",
+      "page": 1,
+      "per_page": 100,
+      "is_error": false,
+      "repositories": [
+        {
+          "repository": "anthropics/skills",
+          "repository_url": "https://github.com/anthropics/skills",
+          "repository_id": "1061953414",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5488
+        },
+        {
+          "repository": "mattpocock/skills",
+          "repository_url": "https://github.com/mattpocock/skills",
+          "repository_id": "1148788086",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2267
+        },
+        {
+          "repository": "addyosmani/agent-skills",
+          "repository_url": "https://github.com/addyosmani/agent-skills",
+          "repository_id": "1158722119",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1943
+        },
+        {
+          "repository": "vercel-labs/skills",
+          "repository_url": "https://github.com/vercel-labs/skills",
+          "repository_id": "1134543109",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2307
+        },
+        {
+          "repository": "sickn33/agentic-awesome-skills",
+          "repository_url": "https://github.com/sickn33/agentic-awesome-skills",
+          "repository_id": "1134426800",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 452754
+        },
+        {
+          "repository": "Shubhamsaboo/awesome-llm-apps",
+          "repository_url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+          "repository_id": "793375104",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 222314
+        },
+        {
+          "repository": "google/skills",
+          "repository_url": "https://github.com/google/skills",
+          "repository_id": "1197652028",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5000
+        },
+        {
+          "repository": "obra/superpowers",
+          "repository_url": "https://github.com/obra/superpowers",
+          "repository_id": "1073224795",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8099
+        },
+        {
+          "repository": "K-Dense-AI/scientific-agent-skills",
+          "repository_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "repository_id": "1079456184",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 471540
+        },
+        {
+          "repository": "vercel-labs/agent-skills",
+          "repository_url": "https://github.com/vercel-labs/agent-skills",
+          "repository_id": "1112540808",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11754
+        },
+        {
+          "repository": "agentskills/agentskills",
+          "repository_url": "https://github.com/agentskills/agentskills",
+          "repository_id": "1117639997",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 765
+        },
+        {
+          "repository": "VoltAgent/awesome-agent-skills",
+          "repository_url": "https://github.com/VoltAgent/awesome-agent-skills",
+          "repository_id": "1084853233",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2500
+        },
+        {
+          "repository": "remotion-dev/skills",
+          "repository_url": "https://github.com/remotion-dev/skills",
+          "repository_id": "1137388347",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 626
+        },
+        {
+          "repository": "MengTo/Skills",
+          "repository_url": "https://github.com/MengTo/Skills",
+          "repository_id": "1148744000",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 81065
+        },
+        {
+          "repository": "noobnooc/agent",
+          "repository_url": "https://github.com/noobnooc/agent",
+          "repository_id": "320598037",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 27
+        },
+        {
+          "repository": "huggingface/skills",
+          "repository_url": "https://github.com/huggingface/skills",
+          "repository_id": "1102903896",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2131
+        },
+        {
+          "repository": "kepano/obsidian-skills",
+          "repository_url": "https://github.com/kepano/obsidian-skills",
+          "repository_id": "1126947080",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 44
+        },
+        {
+          "repository": "davidondrej/skills",
+          "repository_url": "https://github.com/davidondrej/skills",
+          "repository_id": "1279159149",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 675
+        },
+        {
+          "repository": "zhayujie/CowAgent",
+          "repository_url": "https://github.com/zhayujie/CowAgent",
+          "repository_id": "522158088",
+          "archived": false,
+          "default_branch": "master",
+          "size_kib": 22591
+        },
+        {
+          "repository": "BuilderIO/skills",
+          "repository_url": "https://github.com/BuilderIO/skills",
+          "repository_id": "1265265111",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5398
+        },
+        {
+          "repository": "microsoft/skills",
+          "repository_url": "https://github.com/microsoft/skills",
+          "repository_id": "1135891523",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 20017
+        },
+        {
+          "repository": "jakubkrehel/skills",
+          "repository_url": "https://github.com/jakubkrehel/skills",
+          "repository_id": "1296300799",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 741
+        },
+        {
+          "repository": "heilcheng/awesome-agent-skills",
+          "repository_url": "https://github.com/heilcheng/awesome-agent-skills",
+          "repository_id": "1124920990",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2372
+        },
+        {
+          "repository": "ConardLi/garden-skills",
+          "repository_url": "https://github.com/ConardLi/garden-skills",
+          "repository_id": "1216954187",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 76666
+        },
+        {
+          "repository": "volcengine/OpenViking",
+          "repository_url": "https://github.com/volcengine/OpenViking",
+          "repository_id": "1128123594",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 406026
+        },
+        {
+          "repository": "alirezarezvani/claude-skills",
+          "repository_url": "https://github.com/alirezarezvani/claude-skills",
+          "repository_id": "1079084637",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 24607
+        },
+        {
+          "repository": "antfu/skills",
+          "repository_url": "https://github.com/antfu/skills",
+          "repository_id": "1143952193",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1436
+        },
+        {
+          "repository": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+          "repository_url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+          "repository_id": "1120349776",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 37156
+        },
+        {
+          "repository": "tech-leads-club/agent-skills",
+          "repository_url": "https://github.com/tech-leads-club/agent-skills",
+          "repository_id": "1137515077",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 26888
+        },
+        {
+          "repository": "dotnet/skills",
+          "repository_url": "https://github.com/dotnet/skills",
+          "repository_id": "1149257427",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 541948
+        },
+        {
+          "repository": "wshobson/agents",
+          "repository_url": "https://github.com/wshobson/agents",
+          "repository_id": "1025856648",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5160
+        },
+        {
+          "repository": "NVIDIA/skills",
+          "repository_url": "https://github.com/NVIDIA/skills",
+          "repository_id": "1167034425",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 32302
+        },
+        {
+          "repository": "cisco-ai-defense/skill-scanner",
+          "repository_url": "https://github.com/cisco-ai-defense/skill-scanner",
+          "repository_id": "1144727401",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5006
+        },
+        {
+          "repository": "Leonxlnx/taste-skill",
+          "repository_url": "https://github.com/Leonxlnx/taste-skill",
+          "repository_id": "1162099055",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 102851
+        },
+        {
+          "repository": "cloudflare/skills",
+          "repository_url": "https://github.com/cloudflare/skills",
+          "repository_id": "1113922795",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1978
+        },
+        {
+          "repository": "liangdabiao/Seedance2-Storyboard-Generator",
+          "repository_url": "https://github.com/liangdabiao/Seedance2-Storyboard-Generator",
+          "repository_id": "1158953185",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 96827
+        },
+        {
+          "repository": "vuejs-ai/skills",
+          "repository_url": "https://github.com/vuejs-ai/skills",
+          "repository_id": "1138832642",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 811
+        },
+        {
+          "repository": "jsmastery-pro/skills",
+          "repository_url": "https://github.com/jsmastery-pro/skills",
+          "repository_id": "1239414821",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1029
+        },
+        {
+          "repository": "phuryn/pm-skills",
+          "repository_url": "https://github.com/phuryn/pm-skills",
+          "repository_id": "1170266927",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 23122
+        },
+        {
+          "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+          "repository_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+          "repository_id": "1278883735",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4483
+        },
+        {
+          "repository": "BankrBot/skills",
+          "repository_url": "https://github.com/BankrBot/skills",
+          "repository_id": "1142701705",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5813
+        },
+        {
+          "repository": "benjitaylor/skills",
+          "repository_url": "https://github.com/benjitaylor/skills",
+          "repository_id": "1433974029",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1172
+        },
+        {
+          "repository": "libukai/awesome-agent-skills",
+          "repository_url": "https://github.com/libukai/awesome-agent-skills",
+          "repository_id": "1120540348",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 36624
+        },
+        {
+          "repository": "coreyhaines31/marketingskills",
+          "repository_url": "https://github.com/coreyhaines31/marketingskills",
+          "repository_id": "1135212071",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 6248
+        },
+        {
+          "repository": "itsmostafa/aws-agent-skills",
+          "repository_url": "https://github.com/itsmostafa/aws-agent-skills",
+          "repository_id": "187398354",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 9030
+        },
+        {
+          "repository": "vibe-motion/skills",
+          "repository_url": "https://github.com/vibe-motion/skills",
+          "repository_id": "1184541668",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 63235
+        },
+        {
+          "repository": "browserbase/skills",
+          "repository_url": "https://github.com/browserbase/skills",
+          "repository_id": "1074669117",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 10605
+        },
+        {
+          "repository": "KKKKhazix/khazix-skills",
+          "repository_url": "https://github.com/KKKKhazix/khazix-skills",
+          "repository_id": "1202599845",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 251
+        },
+        {
+          "repository": "wondelai/skills",
+          "repository_url": "https://github.com/wondelai/skills",
+          "repository_id": "1145158024",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2911
+        },
+        {
+          "repository": "apify/agent-skills",
+          "repository_url": "https://github.com/apify/agent-skills",
+          "repository_id": "1129716674",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 551
+        },
+        {
+          "repository": "jjyaoao/HelloAgents",
+          "repository_url": "https://github.com/jjyaoao/HelloAgents",
+          "repository_id": "1054677274",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1912
+        },
+        {
+          "repository": "affaan-m/ECC",
+          "repository_url": "https://github.com/affaan-m/ECC",
+          "repository_id": "1136590548",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 62634
+        },
+        {
+          "repository": "google-labs-code/stitch-skills",
+          "repository_url": "https://github.com/google-labs-code/stitch-skills",
+          "repository_id": "1135847870",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 248
+        },
+        {
+          "repository": "revfactory/harness",
+          "repository_url": "https://github.com/revfactory/harness",
+          "repository_id": "1193082155",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 29980
+        },
+        {
+          "repository": "Jakeschincariol/instagram-agent-skill",
+          "repository_url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+          "repository_id": "1368447577",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 75
+        },
+        {
+          "repository": "WordPress/agent-skills",
+          "repository_url": "https://github.com/WordPress/agent-skills",
+          "repository_id": "1137891086",
+          "archived": false,
+          "default_branch": "trunk",
+          "size_kib": 285
+        },
+        {
+          "repository": "expo/skills",
+          "repository_url": "https://github.com/expo/skills",
+          "repository_id": "1106846196",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4645
+        },
+        {
+          "repository": "typesafe-ai/skills",
+          "repository_url": "https://github.com/typesafe-ai/skills",
+          "repository_id": "1345508845",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 10
+        },
+        {
+          "repository": "RKiding/Awesome-finance-skills",
+          "repository_url": "https://github.com/RKiding/Awesome-finance-skills",
+          "repository_id": "1146462485",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2166
+        },
+        {
+          "repository": "jihe520/MathModelAgent",
+          "repository_url": "https://github.com/jihe520/MathModelAgent",
+          "repository_id": "924706399",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 101913
+        },
+        {
+          "repository": "supabase/agent-skills",
+          "repository_url": "https://github.com/supabase/agent-skills",
+          "repository_id": "1135501937",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 855
+        },
+        {
+          "repository": "markdown-viewer/skills",
+          "repository_url": "https://github.com/markdown-viewer/skills",
+          "repository_id": "1146800670",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1536
+        },
+        {
+          "repository": "evalstate/fast-agent",
+          "repository_url": "https://github.com/evalstate/fast-agent",
+          "repository_id": "918778709",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 99136
+        },
+        {
+          "repository": "NousResearch/hermes-agent-self-evolution",
+          "repository_url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+          "repository_id": "1176753219",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 32
+        },
+        {
+          "repository": "zarazhangrui/frontend-slides",
+          "repository_url": "https://github.com/zarazhangrui/frontend-slides",
+          "repository_id": "1143767804",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 582
+        },
+        {
+          "repository": "titanwings/distilly",
+          "repository_url": "https://github.com/titanwings/distilly",
+          "repository_id": "1195828337",
+          "archived": false,
+          "default_branch": "dot-skill",
+          "size_kib": 21310
+        },
+        {
+          "repository": "https-deeplearning-ai/sc-agent-skills-files",
+          "repository_url": "https://github.com/https-deeplearning-ai/sc-agent-skills-files",
+          "repository_id": "1143744237",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 13103
+        },
+        {
+          "repository": "LeoYeAI/agent-master-skills",
+          "repository_url": "https://github.com/LeoYeAI/agent-master-skills",
+          "repository_id": "1170326509",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 97815
+        },
+        {
+          "repository": "github/awesome-copilot",
+          "repository_url": "https://github.com/github/awesome-copilot",
+          "repository_id": "1000362065",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 137400
+        },
+        {
+          "repository": "snyk/agent-scan",
+          "repository_url": "https://github.com/snyk/agent-scan",
+          "repository_id": "962024783",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 6210
+        },
+        {
+          "repository": "browser-act/skills",
+          "repository_url": "https://github.com/browser-act/skills",
+          "repository_id": "1151333143",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2533
+        },
+        {
+          "repository": "inference-sh/skills",
+          "repository_url": "https://github.com/inference-sh/skills",
+          "repository_id": "1146509126",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 825
+        },
+        {
+          "repository": "FrancyJGLisboa/agent-skills-platform",
+          "repository_url": "https://github.com/FrancyJGLisboa/agent-skills-platform",
+          "repository_id": "1078850969",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8305
+        },
+        {
+          "repository": "google/agents-cli",
+          "repository_url": "https://github.com/google/agents-cli",
+          "repository_id": "1205137520",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 14173
+        },
+        {
+          "repository": "PrathamLearnsToCode/paper2code",
+          "repository_url": "https://github.com/PrathamLearnsToCode/paper2code",
+          "repository_id": "1200426344",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 126
+        },
+        {
+          "repository": "memodb-io/Acontext",
+          "repository_url": "https://github.com/memodb-io/Acontext",
+          "repository_id": "1020834440",
+          "archived": true,
+          "default_branch": "main",
+          "size_kib": 29940
+        },
+        {
+          "repository": "Memento-Teams/Memento-Skills",
+          "repository_url": "https://github.com/Memento-Teams/Memento-Skills",
+          "repository_id": "1157386749",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 3762
+        },
+        {
+          "repository": "plugin87/ux-ui-agent-skills",
+          "repository_url": "https://github.com/plugin87/ux-ui-agent-skills",
+          "repository_id": "1183286798",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 25360
+        },
+        {
+          "repository": "softaworks/agent-toolkit",
+          "repository_url": "https://github.com/softaworks/agent-toolkit",
+          "repository_id": "1137485434",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 781
+        },
+        {
+          "repository": "coleam00/skills",
+          "repository_url": "https://github.com/coleam00/skills",
+          "repository_id": "1323419190",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1066
+        },
+        {
+          "repository": "blader/humanizer",
+          "repository_url": "https://github.com/blader/humanizer",
+          "repository_id": "1136666433",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 214
+        },
+        {
+          "repository": "NVIDIA/SkillSpector",
+          "repository_url": "https://github.com/NVIDIA/SkillSpector",
+          "repository_id": "1187630119",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 14771
+        },
+        {
+          "repository": "google/elephant-goldfish-model",
+          "repository_url": "https://github.com/google/elephant-goldfish-model",
+          "repository_id": "1368596582",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11081
+        },
+        {
+          "repository": "davila7/claude-code-templates",
+          "repository_url": "https://github.com/davila7/claude-code-templates",
+          "repository_id": "1013480284",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 303085
+        },
+        {
+          "repository": "Orchestra-Research/AI-Research-SKILLs",
+          "repository_url": "https://github.com/Orchestra-Research/AI-Research-SKILLs",
+          "repository_id": "1088558237",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 21171
+        },
+        {
+          "repository": "ReScienceLab/opc-skills",
+          "repository_url": "https://github.com/ReScienceLab/opc-skills",
+          "repository_id": "1136152017",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 14952
+        },
+        {
+          "repository": "adobe/skills",
+          "repository_url": "https://github.com/adobe/skills",
+          "repository_id": "1150753215",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 22858
+        },
+        {
+          "repository": "outsourc-e/hermes-workspace",
+          "repository_url": "https://github.com/outsourc-e/hermes-workspace",
+          "repository_id": "1182887460",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 110484
+        },
+        {
+          "repository": "aws/agent-toolkit-for-aws",
+          "repository_url": "https://github.com/aws/agent-toolkit-for-aws",
+          "repository_id": "1219009070",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 15705
+        },
+        {
+          "repository": "google-gemini/gemini-skills",
+          "repository_url": "https://github.com/google-gemini/gemini-skills",
+          "repository_id": "1151113612",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 339
+        },
+        {
+          "repository": "lsdefine/GenericAgent",
+          "repository_url": "https://github.com/lsdefine/GenericAgent",
+          "repository_id": "1135791677",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 47174
+        },
+        {
+          "repository": "0xNyk/awesome-hermes-agent",
+          "repository_url": "https://github.com/0xNyk/awesome-hermes-agent",
+          "repository_id": "1189234446",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 3640
+        },
+        {
+          "repository": "heygen-com/skills",
+          "repository_url": "https://github.com/heygen-com/skills",
+          "repository_id": "1140152286",
+          "archived": false,
+          "default_branch": "master",
+          "size_kib": 1152
+        },
+        {
+          "repository": "OpenSenseNova/SenseNova-Skills",
+          "repository_url": "https://github.com/OpenSenseNova/SenseNova-Skills",
+          "repository_id": "1210155353",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 149810
+        },
+        {
+          "repository": "numman-ali/openskills",
+          "repository_url": "https://github.com/numman-ali/openskills",
+          "repository_id": "1083829346",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 204
+        },
+        {
+          "repository": "deanpeters/Product-Manager-Skills",
+          "repository_url": "https://github.com/deanpeters/Product-Manager-Skills",
+          "repository_id": "1150205470",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8216
+        },
+        {
+          "repository": "yaklang/hack-skills",
+          "repository_url": "https://github.com/yaklang/hack-skills",
+          "repository_id": "1204024367",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2341
+        },
+        {
+          "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+          "repository_url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "repository_id": "1166506614",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 12737
+        },
+        {
+          "repository": "callstackincubator/agent-skills",
+          "repository_url": "https://github.com/callstackincubator/agent-skills",
+          "repository_id": "1134388286",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11849
+        },
+        {
+          "repository": "openclaw/agent-skills",
+          "repository_url": "https://github.com/openclaw/agent-skills",
+          "repository_id": "1246722622",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4819
+        }
+      ]
+    },
+    {
+      "query": "SKILL.md",
+      "page": 1,
+      "per_page": 100,
+      "is_error": false,
+      "repositories": [
+        {
+          "repository": "geekjourneyx/md2wechat-skill",
+          "repository_url": "https://github.com/geekjourneyx/md2wechat-skill",
+          "repository_id": "1132020002",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 141657
+        },
+        {
+          "repository": "bergside/awesome-design-skills",
+          "repository_url": "https://github.com/bergside/awesome-design-skills",
+          "repository_id": "1176668188",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 10489
+        },
+        {
+          "repository": "SnailSploit/Claude-Red",
+          "repository_url": "https://github.com/SnailSploit/Claude-Red",
+          "repository_id": "1172273835",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2428
+        },
+        {
+          "repository": "microsoft/skills",
+          "repository_url": "https://github.com/microsoft/skills",
+          "repository_id": "1135891523",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 20017
+        },
+        {
+          "repository": "microsoft/SkillOpt",
+          "repository_url": "https://github.com/microsoft/SkillOpt",
+          "repository_id": "1232669890",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 24219
+        },
+        {
+          "repository": "K-Dense-AI/mimeo",
+          "repository_url": "https://github.com/K-Dense-AI/mimeo",
+          "repository_id": "1217654363",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 36301
+        },
+        {
+          "repository": "mxyhi/ok-skills",
+          "repository_url": "https://github.com/mxyhi/ok-skills",
+          "repository_id": "1147757151",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 43966
+        },
+        {
+          "repository": "futantan/agent-skills.md",
+          "repository_url": "https://github.com/futantan/agent-skills.md",
+          "repository_id": "1124677702",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 829
+        },
+        {
+          "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+          "repository_url": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+          "repository_id": "1278883735",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4483
+        },
+        {
+          "repository": "EverMind-AI/SkillCorpus",
+          "repository_url": "https://github.com/EverMind-AI/SkillCorpus",
+          "repository_id": "1330431542",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11099
+        },
+        {
+          "repository": "win4r/openclaw-workspace",
+          "repository_url": "https://github.com/win4r/openclaw-workspace",
+          "repository_id": "1178470930",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 34
+        },
+        {
+          "repository": "agent-sh/agnix",
+          "repository_url": "https://github.com/agent-sh/agnix",
+          "repository_id": "1146336156",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 72700
+        },
+        {
+          "repository": "Yusuke710/manim-skill",
+          "repository_url": "https://github.com/Yusuke710/manim-skill",
+          "repository_id": "1134530785",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2285
+        },
+        {
+          "repository": "blacktop/ipsw-skill",
+          "repository_url": "https://github.com/blacktop/ipsw-skill",
+          "repository_id": "1122432165",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 104
+        },
+        {
+          "repository": "open-legal-products/mike-workflows",
+          "repository_url": "https://github.com/open-legal-products/mike-workflows",
+          "repository_id": "1292662844",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 737
+        },
+        {
+          "repository": "mrhlaingbwardev/agentic-hacking-skills",
+          "repository_url": "https://github.com/mrhlaingbwardev/agentic-hacking-skills",
+          "repository_id": "1441468008",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 224
+        },
+        {
+          "repository": "bergside/design-md-chrome",
+          "repository_url": "https://github.com/bergside/design-md-chrome",
+          "repository_id": "1210537388",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 52
+        },
+        {
+          "repository": "alchaincyf/huashu-md-html",
+          "repository_url": "https://github.com/alchaincyf/huashu-md-html",
+          "repository_id": "1233976060",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 7402
+        },
+        {
+          "repository": "ciembor/agent-rules-books",
+          "repository_url": "https://github.com/ciembor/agent-rules-books",
+          "repository_id": "1212718768",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5724
+        },
+        {
+          "repository": "tikoci/routeros-skills",
+          "repository_url": "https://github.com/tikoci/routeros-skills",
+          "repository_id": "1195707116",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 538
+        },
+        {
+          "repository": "dhicoc/dsh-reverse-skill",
+          "repository_url": "https://github.com/dhicoc/dsh-reverse-skill",
+          "repository_id": "1334214605",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2393
+        },
+        {
+          "repository": "vibeforge1111/vibeship-spawner-skills",
+          "repository_url": "https://github.com/vibeforge1111/vibeship-spawner-skills",
+          "repository_id": "1123732307",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 9599
+        },
+        {
+          "repository": "rohitg00/awesome-claude-design",
+          "repository_url": "https://github.com/rohitg00/awesome-claude-design",
+          "repository_id": "1214951658",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1396
+        },
+        {
+          "repository": "shaom/brand-to-design-md-skill",
+          "repository_url": "https://github.com/shaom/brand-to-design-md-skill",
+          "repository_id": "1219104134",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 9202
+        },
+        {
+          "repository": "TerminalSkills/skills",
+          "repository_url": "https://github.com/TerminalSkills/skills",
+          "repository_id": "1147994670",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 24165
+        },
+        {
+          "repository": "Berserk-hub150/skillhawk",
+          "repository_url": "https://github.com/Berserk-hub150/skillhawk",
+          "repository_id": "1335864397",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1662
+        },
+        {
+          "repository": "gapmiss/obsidian-plugin-skill",
+          "repository_url": "https://github.com/gapmiss/obsidian-plugin-skill",
+          "repository_id": "1081523808",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 334
+        },
+        {
+          "repository": "Narwhal-Lab/MagicSkills",
+          "repository_url": "https://github.com/Narwhal-Lab/MagicSkills",
+          "repository_id": "1124765513",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 155076
+        },
+        {
+          "repository": "machina-sports/sports-skills",
+          "repository_url": "https://github.com/machina-sports/sports-skills",
+          "repository_id": "1159009925",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8607
+        },
+        {
+          "repository": "TheDecipherist/claude-code-mastery",
+          "repository_url": "https://github.com/TheDecipherist/claude-code-mastery",
+          "repository_id": "1134445014",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 557
+        },
+        {
+          "repository": "wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+          "repository_url": "https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+          "repository_id": "1166239178",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 61
+        },
+        {
+          "repository": "sno-ai/mda",
+          "repository_url": "https://github.com/sno-ai/mda",
+          "repository_id": "965872694",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4806
+        },
+        {
+          "repository": "elementalsouls/Claude-OSINT",
+          "repository_url": "https://github.com/elementalsouls/Claude-OSINT",
+          "repository_id": "1221922293",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1520
+        },
+        {
+          "repository": "fernandotellado/ai-skills",
+          "repository_url": "https://github.com/fernandotellado/ai-skills",
+          "repository_id": "1156594766",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 364
+        },
+        {
+          "repository": "iannuttall/dotagents",
+          "repository_url": "https://github.com/iannuttall/dotagents",
+          "repository_id": "1129100081",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 83
+        },
+        {
+          "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+          "repository_url": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules",
+          "repository_id": "1248685391",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 35
+        },
+        {
+          "repository": "alpacahq/alpaca-skills",
+          "repository_url": "https://github.com/alpacahq/alpaca-skills",
+          "repository_id": "1271379258",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 206
+        },
+        {
+          "repository": "Jianing1117/jianing-skills",
+          "repository_url": "https://github.com/Jianing1117/jianing-skills",
+          "repository_id": "1229818152",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5152
+        },
+        {
+          "repository": "seb1n/awesome-ai-agent-skills",
+          "repository_url": "https://github.com/seb1n/awesome-ai-agent-skills",
+          "repository_id": "1155566591",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 864
+        },
+        {
+          "repository": "waynesutton/builder-skills",
+          "repository_url": "https://github.com/waynesutton/builder-skills",
+          "repository_id": "1133906703",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 353
+        },
+        {
+          "repository": "kvanland/ticktick-cli",
+          "repository_url": "https://github.com/kvanland/ticktick-cli",
+          "repository_id": "1142249769",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 134
+        },
+        {
+          "repository": "jzOcb/writing-style-skill",
+          "repository_url": "https://github.com/jzOcb/writing-style-skill",
+          "repository_id": "1191052245",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11
+        },
+        {
+          "repository": "aakashg/pm-claude-code-setup",
+          "repository_url": "https://github.com/aakashg/pm-claude-code-setup",
+          "repository_id": "1168031239",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 61
+        },
+        {
+          "repository": "Railly/tinte",
+          "repository_url": "https://github.com/Railly/tinte",
+          "repository_id": "703854926",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8744
+        },
+        {
+          "repository": "michaelpersonal/goal-forge",
+          "repository_url": "https://github.com/michaelpersonal/goal-forge",
+          "repository_id": "1226874555",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 40
+        },
+        {
+          "repository": "ythx-101/live-panel-skill",
+          "repository_url": "https://github.com/ythx-101/live-panel-skill",
+          "repository_id": "1403431984",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 36808
+        },
+        {
+          "repository": "arpitg1304/robotics-agent-skills",
+          "repository_url": "https://github.com/arpitg1304/robotics-agent-skills",
+          "repository_id": "1167626999",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 183
+        },
+        {
+          "repository": "veniceai/skills",
+          "repository_url": "https://github.com/veniceai/skills",
+          "repository_id": "1217103809",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 389
+        },
+        {
+          "repository": "pickle-an/md-to-docx-skill",
+          "repository_url": "https://github.com/pickle-an/md-to-docx-skill",
+          "repository_id": "1178550238",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 130
+        },
+        {
+          "repository": "bergside/design-md-figma",
+          "repository_url": "https://github.com/bergside/design-md-figma",
+          "repository_id": "1176803291",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 68
+        },
+        {
+          "repository": "royalpinto007/awesome-agent-skills",
+          "repository_url": "https://github.com/royalpinto007/awesome-agent-skills",
+          "repository_id": "1319092401",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 61
+        },
+        {
+          "repository": "prompt-security/clawsec",
+          "repository_url": "https://github.com/prompt-security/clawsec",
+          "repository_id": "1150883518",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 26254
+        },
+        {
+          "repository": "O0000-code/paper-search-pro",
+          "repository_url": "https://github.com/O0000-code/paper-search-pro",
+          "repository_id": "1248141334",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 24428
+        },
+        {
+          "repository": "ThomasMoreAI/legal-skills-open",
+          "repository_url": "https://github.com/ThomasMoreAI/legal-skills-open",
+          "repository_id": "1246688479",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 167440
+        },
+        {
+          "repository": "spboyer/sensei",
+          "repository_url": "https://github.com/spboyer/sensei",
+          "repository_id": "1148240440",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 629
+        },
+        {
+          "repository": "v1k22/skillhub-registry",
+          "repository_url": "https://github.com/v1k22/skillhub-registry",
+          "repository_id": "1124257069",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 468
+        },
+        {
+          "repository": "netresearch/agent-rules-skill",
+          "repository_url": "https://github.com/netresearch/agent-rules-skill",
+          "repository_id": "1078959689",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1287
+        },
+        {
+          "repository": "govardhanrekha/QA-Skill.md-files",
+          "repository_url": "https://github.com/govardhanrekha/QA-Skill.md-files",
+          "repository_id": "1331672210",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 45
+        },
+        {
+          "repository": "nearai/ironhub",
+          "repository_url": "https://github.com/nearai/ironhub",
+          "repository_id": "1222220231",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 25375
+        },
+        {
+          "repository": "tigerless-labs/paper-radar",
+          "repository_url": "https://github.com/tigerless-labs/paper-radar",
+          "repository_id": "1323375521",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 65
+        },
+        {
+          "repository": "WenyuChiou/ai-research-skills",
+          "repository_url": "https://github.com/WenyuChiou/ai-research-skills",
+          "repository_id": "1221061473",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 25439
+        },
+        {
+          "repository": "Hao0321/claude-skill-code-cleanup",
+          "repository_url": "https://github.com/Hao0321/claude-skill-code-cleanup",
+          "repository_id": "1236702897",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 990
+        },
+        {
+          "repository": "OpenLinkSoftware/ai-agent-skills",
+          "repository_url": "https://github.com/OpenLinkSoftware/ai-agent-skills",
+          "repository_id": "1119676524",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 39004
+        },
+        {
+          "repository": "bowenliang123/markdown-exporter",
+          "repository_url": "https://github.com/bowenliang123/markdown-exporter",
+          "repository_id": "918092521",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 61810
+        },
+        {
+          "repository": "Kulaxyz/self-learning-skills",
+          "repository_url": "https://github.com/Kulaxyz/self-learning-skills",
+          "repository_id": "1283308335",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 30
+        },
+        {
+          "repository": "ajhcs/healthcare-agents",
+          "repository_url": "https://github.com/ajhcs/healthcare-agents",
+          "repository_id": "1185818410",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 4904
+        },
+        {
+          "repository": "ooocooc/open-skill-sunset",
+          "repository_url": "https://github.com/ooocooc/open-skill-sunset",
+          "repository_id": "1346838955",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 6841
+        },
+        {
+          "repository": "malkreide/socratic-method-skill",
+          "repository_url": "https://github.com/malkreide/socratic-method-skill",
+          "repository_id": "1158519839",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 84
+        },
+        {
+          "repository": "zcashlabs/zcash-skills",
+          "repository_url": "https://github.com/zcashlabs/zcash-skills",
+          "repository_id": "1398288229",
+          "archived": false,
+          "default_branch": "add-initial-skills",
+          "size_kib": 1120
+        },
+        {
+          "repository": "michaelshimeles/rstack",
+          "repository_url": "https://github.com/michaelshimeles/rstack",
+          "repository_id": "1173738644",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 193
+        },
+        {
+          "repository": "tmchow/agent-skills",
+          "repository_url": "https://github.com/tmchow/agent-skills",
+          "repository_id": "1244264446",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 19497
+        },
+        {
+          "repository": "heyabhishekbajpai/SkillIssue",
+          "repository_url": "https://github.com/heyabhishekbajpai/SkillIssue",
+          "repository_id": "1165186291",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 5329
+        },
+        {
+          "repository": "ithiria894/awesome-claude-code-workflows",
+          "repository_url": "https://github.com/ithiria894/awesome-claude-code-workflows",
+          "repository_id": "1189327281",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 55
+        },
+        {
+          "repository": "gadievron/raptor",
+          "repository_url": "https://github.com/gadievron/raptor",
+          "repository_id": "1078171437",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 132721
+        },
+        {
+          "repository": "Worldbuilder013/HEXIS",
+          "repository_url": "https://github.com/Worldbuilder013/HEXIS",
+          "repository_id": "1374027278",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 6106
+        },
+        {
+          "repository": "GODGOD126/self-improving-for-codex",
+          "repository_url": "https://github.com/GODGOD126/self-improving-for-codex",
+          "repository_id": "1186635997",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 13
+        },
+        {
+          "repository": "LOGIN-TB/claude-skills",
+          "repository_url": "https://github.com/LOGIN-TB/claude-skills",
+          "repository_id": "1326586077",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 219
+        },
+        {
+          "repository": "wasp-lang/open-saas",
+          "repository_url": "https://github.com/wasp-lang/open-saas",
+          "repository_id": "726082384",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 141858
+        },
+        {
+          "repository": "feichanggege/ecommerce-visual-copywriting-skill",
+          "repository_url": "https://github.com/feichanggege/ecommerce-visual-copywriting-skill",
+          "repository_id": "1211089620",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 19071
+        },
+        {
+          "repository": "jeremylongshore/excel-analyst-pro-skill-md",
+          "repository_url": "https://github.com/jeremylongshore/excel-analyst-pro-skill-md",
+          "repository_id": "1084599830",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 181
+        },
+        {
+          "repository": "DominikTobureto/awesome-grok-build",
+          "repository_url": "https://github.com/DominikTobureto/awesome-grok-build",
+          "repository_id": "1249659243",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 84
+        },
+        {
+          "repository": "LukeRenton/explore-claude-code",
+          "repository_url": "https://github.com/LukeRenton/explore-claude-code",
+          "repository_id": "1173592029",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2389
+        },
+        {
+          "repository": "skillmds/skillmd",
+          "repository_url": "https://github.com/skillmds/skillmd",
+          "repository_id": "1346442038",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 8313
+        },
+        {
+          "repository": "tomkrikorian/visionOSAgents",
+          "repository_url": "https://github.com/tomkrikorian/visionOSAgents",
+          "repository_id": "1121591511",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1632
+        },
+        {
+          "repository": "dbwls99706/ros2-engineering-skills",
+          "repository_url": "https://github.com/dbwls99706/ros2-engineering-skills",
+          "repository_id": "1182813444",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1613
+        },
+        {
+          "repository": "adriannoes/awesome-agentic-ai",
+          "repository_url": "https://github.com/adriannoes/awesome-agentic-ai",
+          "repository_id": "1074836671",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 567043
+        },
+        {
+          "repository": "dgk-dev/dgk-gpt",
+          "repository_url": "https://github.com/dgk-dev/dgk-gpt",
+          "repository_id": "1178423889",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 90
+        },
+        {
+          "repository": "AIwithhassan/lets-scroll",
+          "repository_url": "https://github.com/AIwithhassan/lets-scroll",
+          "repository_id": "1334984194",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 64
+        },
+        {
+          "repository": "fivetaku/claude-office-skills",
+          "repository_url": "https://github.com/fivetaku/claude-office-skills",
+          "repository_id": "1204702862",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 241
+        },
+        {
+          "repository": "tigerless-labs/design-harness",
+          "repository_url": "https://github.com/tigerless-labs/design-harness",
+          "repository_id": "1292529733",
+          "archived": false,
+          "default_branch": "master",
+          "size_kib": 14995
+        },
+        {
+          "repository": "tizzy916/humanities-writing-companion",
+          "repository_url": "https://github.com/tizzy916/humanities-writing-companion",
+          "repository_id": "1233480477",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 1048
+        },
+        {
+          "repository": "Helpercraft/helpercraft",
+          "repository_url": "https://github.com/Helpercraft/helpercraft",
+          "repository_id": "1396873089",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 19196
+        },
+        {
+          "repository": "Tencent/SkillHone",
+          "repository_url": "https://github.com/Tencent/SkillHone",
+          "repository_id": "1263731684",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 3462
+        },
+        {
+          "repository": "frankxai/awesome-hermes-agent-skills",
+          "repository_url": "https://github.com/frankxai/awesome-hermes-agent-skills",
+          "repository_id": "1276791067",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 3366
+        },
+        {
+          "repository": "HunterisLive-1/mobile-maya-skills",
+          "repository_url": "https://github.com/HunterisLive-1/mobile-maya-skills",
+          "repository_id": "1310981814",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 11
+        },
+        {
+          "repository": "aliyun/maxcompute-semantic",
+          "repository_url": "https://github.com/aliyun/maxcompute-semantic",
+          "repository_id": "1262784746",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 3825
+        },
+        {
+          "repository": "ProxymanApp/proxyman-SKILL.md",
+          "repository_url": "https://github.com/ProxymanApp/proxyman-SKILL.md",
+          "repository_id": "1259159255",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 933
+        },
+        {
+          "repository": "tinyhumansai/skill-registry",
+          "repository_url": "https://github.com/tinyhumansai/skill-registry",
+          "repository_id": "1261773709",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 2
+        },
+        {
+          "repository": "qiye45/wechatDownload",
+          "repository_url": "https://github.com/qiye45/wechatDownload",
+          "repository_id": "673881338",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 102658
+        },
+        {
+          "repository": "FredAntB/Spec-Driven-Development",
+          "repository_url": "https://github.com/FredAntB/Spec-Driven-Development",
+          "repository_id": "1242697027",
+          "archived": false,
+          "default_branch": "main",
+          "size_kib": 100
+        }
+      ]
+    }
+  ],
+  "access_retry": {
+    "repository": "cbrock84/headcount",
+    "result": {
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest\",\"status\":\"404\"}",
+      "error_code": "NOT_FOUND",
+      "error_data": {
+        "message": "Not Found",
+        "documentation_url": "https://docs.github.com/rest",
+        "status": "404"
+      }
+    }
+  },
+  "note": "Existing discovery channels reused. Repository search hits are candidates, not proof of SKILL.md presence."
+}

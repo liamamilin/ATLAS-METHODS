@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:12:29.961142+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 6,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "ConardLi/garden-skills",
+      "commit_sha": "2b9a89340b70f632d31c0f1c69fce94a7912423e",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 706,
+      "files_not_exported": 37,
+      "repository_manifest": "manifests/ConardLi/garden-skills/2b9a89340b70f632d31c0f1c69fce94a7912423e.json"
+    }
+  ],
+  "errors": []
+}

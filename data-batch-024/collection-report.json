@@ -1,0 +1,266 @@
+{
+  "generated_at": "2026-11-06T12:52:53.629414+00:00",
+  "requested_sources": 24,
+  "completed_sources": 23,
+  "indexed_snapshots": 23,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 1,
+  "pending_sources": 0,
+  "candidate_skill_files": 1077,
+  "saved_skill_entries": 1077,
+  "distinct_skill_paths": 1077,
+  "unique_entry_texts": 930,
+  "duplicate_entry_groups": 108,
+  "sources": [
+    {
+      "repository": "AIwithhassan/lets-scroll",
+      "commit_sha": "a0605366e8e774b1596a993ecaf564b6de5916cc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 10,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/AIwithhassan/lets-scroll/manifests/AIwithhassan/lets-scroll/a0605366e8e774b1596a993ecaf564b6de5916cc.json"
+    },
+    {
+      "repository": "DominikTobureto/awesome-grok-build",
+      "commit_sha": "9125e026dddc2c3e5884f2db5cc56436c7e71665",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 63,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/DominikTobureto/awesome-grok-build/manifests/DominikTobureto/awesome-grok-build/9125e026dddc2c3e5884f2db5cc56436c7e71665.json"
+    },
+    {
+      "repository": "GODGOD126/self-improving-for-codex",
+      "commit_sha": "ae5004343368c7fb9d04691cec7e2df466354328",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 7,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/GODGOD126/self-improving-for-codex/manifests/GODGOD126/self-improving-for-codex/ae5004343368c7fb9d04691cec7e2df466354328.json"
+    },
+    {
+      "repository": "Helpercraft/helpercraft",
+      "commit_sha": "92047d0ea8faefcb257eb5f69675da38473ff493",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 86,
+      "saved_skill_entries": 86,
+      "saved_text_files": 230,
+      "files_not_exported": 36,
+      "repository_manifest": "repositories/Helpercraft/helpercraft/manifests/Helpercraft/helpercraft/92047d0ea8faefcb257eb5f69675da38473ff493.json"
+    },
+    {
+      "repository": "LOGIN-TB/claude-skills",
+      "commit_sha": "1bcf6c4bd4ed539ffa55e274cb7641b963d12276",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 16,
+      "saved_skill_entries": 16,
+      "saved_text_files": 49,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/LOGIN-TB/claude-skills/manifests/LOGIN-TB/claude-skills/1bcf6c4bd4ed539ffa55e274cb7641b963d12276.json"
+    },
+    {
+      "repository": "LukeRenton/explore-claude-code",
+      "commit_sha": "02245e611be86b8ce62b1ff5e9b4f6b16aa10f22",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 108,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/LukeRenton/explore-claude-code/manifests/LukeRenton/explore-claude-code/02245e611be86b8ce62b1ff5e9b4f6b16aa10f22.json"
+    },
+    {
+      "repository": "ProxymanApp/proxyman-SKILL.md",
+      "commit_sha": "8936e4115e4a92c92c285380718dae51586dfa42",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 18,
+      "saved_skill_entries": 18,
+      "saved_text_files": 85,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/ProxymanApp/proxyman-SKILL.md/manifests/ProxymanApp/proxyman-SKILL.md/8936e4115e4a92c92c285380718dae51586dfa42.json"
+    },
+    {
+      "repository": "Tencent/SkillHone",
+      "commit_sha": "773d54d11aaa6c00d45720e2e501b6d8bfa8f590",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 91,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/Tencent/SkillHone/manifests/Tencent/SkillHone/773d54d11aaa6c00d45720e2e501b6d8bfa8f590.json"
+    },
+    {
+      "repository": "Worldbuilder013/HEXIS",
+      "commit_sha": "96be2719ee79fc5071dc7eb2aeed816dc03aaa6c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 105,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Worldbuilder013/HEXIS/manifests/Worldbuilder013/HEXIS/96be2719ee79fc5071dc7eb2aeed816dc03aaa6c.json"
+    },
+    {
+      "repository": "adriannoes/awesome-agentic-ai",
+      "commit_sha": "e797ed58cfe6dd6453fe7632f89d7226d203f6f6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 408,
+      "saved_skill_entries": 408,
+      "saved_text_files": 15771,
+      "files_not_exported": 469,
+      "repository_manifest": "repositories/adriannoes/awesome-agentic-ai/manifests/adriannoes/awesome-agentic-ai/e797ed58cfe6dd6453fe7632f89d7226d203f6f6.json"
+    },
+    {
+      "repository": "aliyun/maxcompute-semantic",
+      "commit_sha": "d09554d8df1dfe9c06ded046451cdb99fc81dce3",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 393,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/aliyun/maxcompute-semantic/manifests/aliyun/maxcompute-semantic/d09554d8df1dfe9c06ded046451cdb99fc81dce3.json"
+    },
+    {
+      "repository": "dbwls99706/ros2-engineering-skills",
+      "commit_sha": "f0de84dfedd67b067ccc6d2851e681529606930c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 204,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/dbwls99706/ros2-engineering-skills/manifests/dbwls99706/ros2-engineering-skills/f0de84dfedd67b067ccc6d2851e681529606930c.json"
+    },
+    {
+      "repository": "dgk-dev/dgk-gpt",
+      "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 27,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/dgk-dev/dgk-gpt/manifests/dgk-dev/dgk-gpt/30243e91266ac2175bf2d02590b0066f469324c0.json"
+    },
+    {
+      "repository": "feichanggege/ecommerce-visual-copywriting-skill",
+      "commit_sha": "7fd4abaa5a280dddf414ccc1372d886bef702cba",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 34,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/feichanggege/ecommerce-visual-copywriting-skill/manifests/feichanggege/ecommerce-visual-copywriting-skill/7fd4abaa5a280dddf414ccc1372d886bef702cba.json"
+    },
+    {
+      "repository": "fivetaku/claude-office-skills",
+      "commit_sha": "039902691e7d0a735ef4e67ee007d7832da9fcab",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 9,
+      "saved_skill_entries": 9,
+      "saved_text_files": 25,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/fivetaku/claude-office-skills/manifests/fivetaku/claude-office-skills/039902691e7d0a735ef4e67ee007d7832da9fcab.json"
+    },
+    {
+      "repository": "frankxai/awesome-hermes-agent-skills",
+      "commit_sha": "1f1ae5bd11bffc525fb675836c34225f2f41c2e9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 36,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/frankxai/awesome-hermes-agent-skills/manifests/frankxai/awesome-hermes-agent-skills/1f1ae5bd11bffc525fb675836c34225f2f41c2e9.json"
+    },
+    {
+      "repository": "jeremylongshore/excel-analyst-pro-skill-md",
+      "commit_sha": "d4997388ed5243b9dbefdac409a7209a2d649a40",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 35,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/jeremylongshore/excel-analyst-pro-skill-md/manifests/jeremylongshore/excel-analyst-pro-skill-md/d4997388ed5243b9dbefdac409a7209a2d649a40.json"
+    },
+    {
+      "repository": "skillmds/skillmd",
+      "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 467,
+      "saved_skill_entries": 467,
+      "saved_text_files": 3224,
+      "files_not_exported": 17,
+      "repository_manifest": "repositories/skillmds/skillmd/manifests/skillmds/skillmd/1b0ba8642a56d8e14dc879c560158e6f3b4612df.json"
+    },
+    {
+      "repository": "tigerless-labs/design-harness",
+      "commit_sha": "9aca84e8c4721d4e7623df5f4d67153477ec40a5",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 156,
+      "files_not_exported": 13,
+      "repository_manifest": "repositories/tigerless-labs/design-harness/manifests/tigerless-labs/design-harness/9aca84e8c4721d4e7623df5f4d67153477ec40a5.json"
+    },
+    {
+      "repository": "tinyhumansai/skill-registry",
+      "commit_sha": "52eb2d8f5f16d95e43014e01995f7c3e90985a45",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 3,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/tinyhumansai/skill-registry/manifests/tinyhumansai/skill-registry/52eb2d8f5f16d95e43014e01995f7c3e90985a45.json"
+    },
+    {
+      "repository": "tizzy916/humanities-writing-companion",
+      "commit_sha": "e097ff629f6575af1b2ec129afa7b23f30d2a39c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 71,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/tizzy916/humanities-writing-companion/manifests/tizzy916/humanities-writing-companion/e097ff629f6575af1b2ec129afa7b23f30d2a39c.json"
+    },
+    {
+      "repository": "tomkrikorian/visionOSAgents",
+      "commit_sha": "c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 22,
+      "saved_skill_entries": 22,
+      "saved_text_files": 234,
+      "files_not_exported": 38,
+      "repository_manifest": "repositories/tomkrikorian/visionOSAgents/manifests/tomkrikorian/visionOSAgents/c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc.json"
+    },
+    {
+      "repository": "wasp-lang/open-saas",
+      "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 451,
+      "files_not_exported": 245,
+      "repository_manifest": "repositories/wasp-lang/open-saas/manifests/wasp-lang/open-saas/c2c6285bdb14b040584505372ad9bb062a0bca11.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "HunterisLive-1/mobile-maya-skills",
+      "output_directory": "data-batch-024/repositories/HunterisLive-1/mobile-maya-skills",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:52:26.956415+00:00",
+      "commit_sha": "5dd620a0f4f80b58d5432e2132eb50cda78c71a8",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:52:32.131980+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 3
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:47:57.551427+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 467,
+  "saved_skill_entries": 467,
+  "unique_entry_texts": 365,
+  "duplicate_entry_groups": 81,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "skillmds/skillmd",
+      "commit_sha": "1b0ba8642a56d8e14dc879c560158e6f3b4612df",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 467,
+      "saved_skill_entries": 467,
+      "saved_text_files": 3224,
+      "files_not_exported": 17,
+      "repository_manifest": "manifests/skillmds/skillmd/1b0ba8642a56d8e14dc879c560158e6f3b4612df.json"
+    }
+  ],
+  "errors": []
+}

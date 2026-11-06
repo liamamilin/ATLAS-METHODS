@@ -1,0 +1,9 @@
+{
+  "repository": "geekjourneyx/md2wechat-skill",
+  "commit_sha": "a8e2900033e5c9ee152a629e108fe57228ba31e6",
+  "tree_entries": 372,
+  "candidate_skill_paths": [
+    "platforms/openclaw/md2wechat/SKILL.md",
+    "skills/md2wechat/SKILL.md"
+  ]
+}

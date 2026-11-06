@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "elementalsouls/Claude-OSINT",
+      "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890"
+    }
+  ]
+}

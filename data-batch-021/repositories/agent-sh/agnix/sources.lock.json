@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "agent-sh/agnix",
+      "commit_sha": "4926685333ad34df98c6196d3508c466561b439c"
+    }
+  ]
+}

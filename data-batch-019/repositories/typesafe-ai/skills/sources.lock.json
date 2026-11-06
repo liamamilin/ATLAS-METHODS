@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "typesafe-ai/skills",
+      "commit_sha": "302eea662c54bca6730873fe245bec1d69ebc23d"
+    }
+  ]
+}

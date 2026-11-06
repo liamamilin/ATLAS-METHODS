@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:13:58.451482+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 8,
+  "saved_skill_entries": 8,
+  "unique_entry_texts": 8,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "vuejs-ai/skills",
+      "commit_sha": "198f0cd8f7f9c0a3d9b566ccc16de6677519ee78",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 211,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/vuejs-ai/skills/198f0cd8f7f9c0a3d9b566ccc16de6677519ee78.json"
+    }
+  ],
+  "errors": []
+}

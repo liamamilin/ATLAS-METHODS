@@ -1,0 +1,15 @@
+{
+  "repository": "vuejs-ai/skills",
+  "commit_sha": "198f0cd8f7f9c0a3d9b566ccc16de6677519ee78",
+  "tree_entries": 211,
+  "candidate_skill_paths": [
+    "skills/create-adaptable-composable/SKILL.md",
+    "skills/vue-best-practices/SKILL.md",
+    "skills/vue-debug-guides/SKILL.md",
+    "skills/vue-jsx-best-practices/SKILL.md",
+    "skills/vue-options-api-best-practices/SKILL.md",
+    "skills/vue-pinia-best-practices/SKILL.md",
+    "skills/vue-router-best-practices/SKILL.md",
+    "skills/vue-testing-best-practices/SKILL.md"
+  ]
+}

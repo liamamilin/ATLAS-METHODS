@@ -1,0 +1,15 @@
+{
+  "repository": "sno-ai/mda",
+  "commit_sha": "03a0f4126bf1ca0f9428618865c9b9dd65fada40",
+  "tree_entries": 245,
+  "candidate_skill_paths": [
+    "compat/claude-code/build/SKILL.md",
+    "compat/codex-cli/build/SKILL.md",
+    "compat/hermes/build/SKILL.md",
+    "compat/openclaw/build/SKILL.md",
+    "compat/opencode/build/SKILL.md",
+    "conformance/compile/46-basic-targets/expected/SKILL.md",
+    "examples/skill-md/intro/SKILL.md",
+    "examples/skill-md/node-tools/SKILL.md"
+  ]
+}

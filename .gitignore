@@ -6,6 +6,9 @@ data-batch-*/raw/
 data-batch-*/discovery/raw/
 data-batch-*/repositories/**/raw/
 
+# Local full index; Git stores the byte-identical gzip artifact once over 100 MiB.
+/data/cumulative/skills.jsonl
+
 # Python and local temporary files.
 __pycache__/
 *.py[cod]

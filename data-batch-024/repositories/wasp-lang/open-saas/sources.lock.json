@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "wasp-lang/open-saas",
+      "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11"
+    }
+  ]
+}

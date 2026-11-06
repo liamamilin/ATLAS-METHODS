@@ -1,0 +1,204 @@
+{
+  "repository": "tmchow/agent-skills",
+  "commit_sha": "8e232f001fff3590b1420f2236923137ddc05bfe",
+  "files": [
+    {
+      "path": ".github/clawhub-publishable.txt",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "a71c9c973ab0bcafb624249b77af207edd0062f9",
+      "bytes": 406,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/.github/clawhub-publishable.txt",
+      "sha256": "041ebc837e0ad9a7de608af8724c5ba849e75e0e2f04968df939f4c2c26e319f",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/.github/clawhub-publishable.txt"
+    },
+    {
+      "path": ".github/scripts/clawhub_version_state.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "35f3552a9103ab622dd6bfe753d72a56c95529de",
+      "bytes": 1297,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/.github/scripts/clawhub_version_state.py",
+      "sha256": "b2dc0ed2fc61a9b78b1bab0385302925fb28144c0c8ff57e2ab47cced8bfd8ad",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/.github/scripts/clawhub_version_state.py"
+    },
+    {
+      "path": ".github/scripts/skill_frontmatter_version.py",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "6292cb3df2aa6bad7742619548d6fab5ed735273",
+      "bytes": 1232,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/.github/scripts/skill_frontmatter_version.py",
+      "sha256": "5325d09aa783fc544dc50488b00fb535341a0fe48d705289b52ef9fa3751b218",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/.github/scripts/skill_frontmatter_version.py"
+    },
+    {
+      "path": ".github/workflows/publish-clawhub.yml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "c18b94ba9e18c29c2363cbcbdab947f8ee5df502",
+      "bytes": 5851,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/.github/workflows/publish-clawhub.yml",
+      "sha256": "ff75b91f751f8066f0bb347198f45ad8c399694c138ab7c6b7edebd5c717d108",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/.github/workflows/publish-clawhub.yml"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "f3e7b86256b94cd1f867eca31c47540722fe9edd",
+      "bytes": 123,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/.gitignore",
+      "sha256": "60d2e6641f3c18160f4f723d03eead4d78be0eb8f88363a68811ed1e788a45a5",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/.gitignore"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "2a87b068d9d511286aa853292b0f2a8d22bcc24a",
+      "bytes": 15184,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/AGENTS.md",
+      "sha256": "91be41560f64ac34fdf4a802b250dfce902b169cd02e9866ea8e3d04486a501e",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/AGENTS.md"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "bytes": 11,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/CLAUDE.md"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "460275e9f1689ecd1c60045bd1b06fc333766919",
+      "bytes": 1068,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/LICENSE",
+      "sha256": "d5c6b57f6897b3595086e1483e3dfdc2ebc9e2c00071c8a622b570f2f2a8835c",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "7f8fd50e789dfa8f4512e1c24a9a68c6d194a9c2",
+      "bytes": 4915,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/README.md",
+      "sha256": "e806d35de6f211a6c5fb3e9efbcbbc86b26a065cb3284ba773f73512d3499d1d",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/README.md"
+    },
+    {
+      "path": "camofox-cloaked-browser/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "59ab53e83943aeda95bd6c23c33b90df5b1cd07d",
+      "bytes": 2893,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/camofox-cloaked-browser/README.md",
+      "sha256": "41841ea93e019098c31783b5cf3ffaa18d78c023826ef0cc045818d9859aec36",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/camofox-cloaked-browser/README.md"
+    },
+    {
+      "path": "camofox-cloaked-browser/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "5ed1e57d8047ea2d1202baa320d9b919720cb935",
+      "bytes": 18936,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/camofox-cloaked-browser/SKILL.md",
+      "sha256": "128e212d3b2e1c665b5d4259b5a64f425c21b8d4d1cf2b220f66915f4d0f8b4c",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/camofox-cloaked-browser/SKILL.md"
+    },
+    {
+      "path": "clawpatch/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "98ce468900e5aff0b452e36cc8b35438c182e88a",
+      "bytes": 2918,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/clawpatch/README.md",
+      "sha256": "18eb658fa2d87d7eab21ac930a1410b5d65fdba95224b7b011fcddc42458d9ef",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/clawpatch/README.md"
+    },
+    {
+      "path": "clawpatch/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "74c9837e26c192727ed6834f95458fb1c0d3259e",
+      "bytes": 13517,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/clawpatch/SKILL.md",
+      "sha256": "a61c8b3bc0b5dbf64615a4b800cf2218ee6140917aac70aeb7f40ee684911c9b",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/clawpatch/SKILL.md"
+    },
+    {
+      "path": "vhs-terminal-recorder/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "ce35d7e191d11cb661252750b4fb98bc1fc7285e",
+      "bytes": 2346,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/vhs-terminal-recorder/README.md",
+      "sha256": "24942524b4d1e056e48e19d6e05fbdbc19a1b380a9d7aa771b94c5160980dece",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/vhs-terminal-recorder/README.md"
+    },
+    {
+      "path": "vhs-terminal-recorder/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "532723fcf49bf761da4ffaef908cd51f30ca6249",
+      "bytes": 8131,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/vhs-terminal-recorder/SKILL.md",
+      "sha256": "71259630ed7cd0a9b3d24bfa129cb5afba8945501280adcd906d20683205d22f",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/vhs-terminal-recorder/SKILL.md"
+    },
+    {
+      "path": "yt-dlp-cli/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "839235f315bab1b8b1ea70359c18c873c3cbf9a4",
+      "bytes": 2157,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/README.md",
+      "sha256": "e12fa92b74be0f3e30193fccd31c1d9e92fd521eec7ad87cd63a67b365e88e04",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/README.md"
+    },
+    {
+      "path": "yt-dlp-cli/SKILL.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "b0bb99f5695984ed789f68187fe77718d6a881ea",
+      "bytes": 6083,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/SKILL.md",
+      "sha256": "fd7713319bcc7c0e637acae4622a5b9681b8fd7a7f43164aecce5c51086b5ac6",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/SKILL.md"
+    },
+    {
+      "path": "yt-dlp-cli/references/youtube-auth.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_blob_sha": "1e57be423575f2cbbfc5486e1b6864682f4c3b55",
+      "bytes": 2976,
+      "source_url": "https://github.com/tmchow/agent-skills/blob/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/references/youtube-auth.md",
+      "sha256": "02149188c01f047716a1fe91aee7c94d40f6390f4ef978f4bd61923452a6141d",
+      "status": "saved",
+      "raw_path": "raw/tmchow/agent-skills/8e232f001fff3590b1420f2236923137ddc05bfe/yt-dlp-cli/references/youtube-auth.md"
+    }
+  ]
+}

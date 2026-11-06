@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:40:10.594051+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "bergside/design-md-figma",
+      "commit_sha": "746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 29,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/bergside/design-md-figma/746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590.json"
+    }
+  ],
+  "errors": []
+}

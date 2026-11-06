@@ -1,0 +1,14 @@
+{
+  "repository": "dgk-dev/dgk-gpt",
+  "commit_sha": "30243e91266ac2175bf2d02590b0066f469324c0",
+  "tree_entries": 27,
+  "candidate_skill_paths": [
+    "skills/cp/SKILL.md",
+    "skills/fd/SKILL.md",
+    "skills/ralph/SKILL.md",
+    "skills/re/SKILL.md",
+    "skills/rr/SKILL.md",
+    "skills/rrr/SKILL.md",
+    "skills/test/SKILL.md"
+  ]
+}

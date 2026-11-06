@@ -1,0 +1,29 @@
+{
+  "repository": "tomkrikorian/visionOSAgents",
+  "commit_sha": "c359c3a99ffe9ad9a46f1de2d4fbb7f16d4db2dc",
+  "tree_entries": 272,
+  "candidate_skill_paths": [
+    "skills/arkit-camera-access-providers/SKILL.md",
+    "skills/arkit-hand-tracking-provider/SKILL.md",
+    "skills/arkit-reference-tracking-providers/SKILL.md",
+    "skills/arkit-rendering-context-providers/SKILL.md",
+    "skills/arkit-spatial-tracking-providers/SKILL.md",
+    "skills/arkit-visionos-developer/SKILL.md",
+    "skills/coding-standards-enforcer/SKILL.md",
+    "skills/realitykit-animation-physics/SKILL.md",
+    "skills/realitykit-audio-spatial/SKILL.md",
+    "skills/realitykit-ecs-systems/SKILL.md",
+    "skills/realitykit-rendering-materials/SKILL.md",
+    "skills/realitykit-visionos-developer/SKILL.md",
+    "skills/shadergraph-editor/SKILL.md",
+    "skills/shareplay-developer/SKILL.md",
+    "skills/spatial-app-architecture/SKILL.md",
+    "skills/spatial-swiftui-developer/SKILL.md",
+    "skills/swiftui-chart3d-developer/SKILL.md",
+    "skills/tkr-skill-writer/SKILL.md",
+    "skills/usd-editor/SKILL.md",
+    "skills/usdkit-runtime-developer/SKILL.md",
+    "skills/visionos-immersive-media-developer/SKILL.md",
+    "skills/visionos-widgetkit-developer/SKILL.md"
+  ]
+}

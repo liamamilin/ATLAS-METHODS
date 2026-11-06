@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:51:30.853341+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 408,
+  "saved_skill_entries": 408,
+  "unique_entry_texts": 408,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "adriannoes/awesome-agentic-ai",
+      "commit_sha": "e797ed58cfe6dd6453fe7632f89d7226d203f6f6",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 408,
+      "saved_skill_entries": 408,
+      "saved_text_files": 15771,
+      "files_not_exported": 469,
+      "repository_manifest": "manifests/adriannoes/awesome-agentic-ai/e797ed58cfe6dd6453fe7632f89d7226d203f6f6.json"
+    }
+  ],
+  "errors": []
+}

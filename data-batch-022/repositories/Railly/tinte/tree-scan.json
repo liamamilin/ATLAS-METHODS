@@ -1,0 +1,10 @@
+{
+  "repository": "Railly/tinte",
+  "commit_sha": "7905be3e62819faa4db312d2cbcd0e2991326d0a",
+  "tree_entries": 748,
+  "candidate_skill_paths": [
+    "apps/web/public/plugin/skills/tinte-design/SKILL.md",
+    "skills/ray/SKILL.md",
+    "skills/tinte/SKILL.md"
+  ]
+}

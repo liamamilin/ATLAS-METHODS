@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "nearai/ironhub",
+      "commit_sha": "c49fd181a7bdd968ba5fe40eda12416e732c71ce"
+    }
+  ]
+}

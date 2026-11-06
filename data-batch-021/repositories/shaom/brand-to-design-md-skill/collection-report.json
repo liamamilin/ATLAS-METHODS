@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:34:14.788711+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "shaom/brand-to-design-md-skill",
+      "commit_sha": "f7fe99e7a2985d4457d44bfab8399bb1cf1896c0",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 13,
+      "files_not_exported": 6,
+      "repository_manifest": "manifests/shaom/brand-to-design-md-skill/f7fe99e7a2985d4457d44bfab8399bb1cf1896c0.json"
+    }
+  ],
+  "errors": []
+}

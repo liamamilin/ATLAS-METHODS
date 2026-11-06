@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "microsoft/skills",
+      "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6"
+    }
+  ]
+}

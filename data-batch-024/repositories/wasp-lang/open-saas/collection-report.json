@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:47:22.479311+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 3,
+  "saved_skill_entries": 3,
+  "unique_entry_texts": 3,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "wasp-lang/open-saas",
+      "commit_sha": "c2c6285bdb14b040584505372ad9bb062a0bca11",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 451,
+      "files_not_exported": 245,
+      "repository_manifest": "manifests/wasp-lang/open-saas/c2c6285bdb14b040584505372ad9bb062a0bca11.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+  "repository": "https-deeplearning-ai/sc-agent-skills-files",
+  "commit_sha": "438a5a51a68b86a6262835796ae7a671ece58e4f",
+  "tree_entries": 116,
+  "candidate_skill_paths": [
+    "L1-partI/skill/analyzing-marketing-campaign/SKILL.md",
+    "L3/brand_guidelines_skill/craftedwell-brand/SKILL.md",
+    "L3/updated_marketing_skill/analyzing-marketing-campaign/SKILL.md",
+    "L4/custom_skills/analyzing-time-series/SKILL.md",
+    "L4/custom_skills/generating-practice-questions/SKILL.md",
+    "L5/custom_skills/analyzing-time-series/SKILL.md",
+    "L5/custom_skills/generating-practice-questions/SKILL.md",
+    "L6/.claude/skills/adding-cli-command/SKILL.md",
+    "L6/.claude/skills/generating-cli-tests/SKILL.md",
+    "L6/.claude/skills/reviewing-cli-command/SKILL.md",
+    "L7/.claude/skills/learning-a-tool/SKILL.md"
+  ]
+}

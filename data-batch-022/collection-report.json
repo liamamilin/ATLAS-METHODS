@@ -1,0 +1,267 @@
+{
+  "generated_at": "2026-11-06T12:38:52.644862+00:00",
+  "requested_sources": 24,
+  "completed_sources": 22,
+  "indexed_snapshots": 22,
+  "partial_sources": 0,
+  "partial_results": [],
+  "failed_sources": 0,
+  "no_skill_sources": 2,
+  "pending_sources": 0,
+  "candidate_skill_files": 1353,
+  "saved_skill_entries": 1353,
+  "distinct_skill_paths": 1353,
+  "unique_entry_texts": 1351,
+  "duplicate_entry_groups": 2,
+  "sources": [
+    {
+      "repository": "Berserk-hub150/skillhawk",
+      "commit_sha": "cbdbef03f2b006b25e725c014745521b9ed1f561",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 13,
+      "saved_skill_entries": 13,
+      "saved_text_files": 104,
+      "files_not_exported": 2,
+      "repository_manifest": "repositories/Berserk-hub150/skillhawk/manifests/Berserk-hub150/skillhawk/cbdbef03f2b006b25e725c014745521b9ed1f561.json"
+    },
+    {
+      "repository": "Jianing1117/jianing-skills",
+      "commit_sha": "fc9bb033c6e2d64a1e8618cb42b28c311f5c651c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 7,
+      "saved_skill_entries": 7,
+      "saved_text_files": 49,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/Jianing1117/jianing-skills/manifests/Jianing1117/jianing-skills/fc9bb033c6e2d64a1e8618cb42b28c311f5c651c.json"
+    },
+    {
+      "repository": "Narwhal-Lab/MagicSkills",
+      "commit_sha": "00f3e8640445b0d91682a670b8ba7cc4465151cb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 150,
+      "files_not_exported": 17,
+      "repository_manifest": "repositories/Narwhal-Lab/MagicSkills/manifests/Narwhal-Lab/MagicSkills/00f3e8640445b0d91682a670b8ba7cc4465151cb.json"
+    },
+    {
+      "repository": "Railly/tinte",
+      "commit_sha": "7905be3e62819faa4db312d2cbcd0e2991326d0a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 3,
+      "saved_skill_entries": 3,
+      "saved_text_files": 721,
+      "files_not_exported": 27,
+      "repository_manifest": "repositories/Railly/tinte/manifests/Railly/tinte/7905be3e62819faa4db312d2cbcd0e2991326d0a.json"
+    },
+    {
+      "repository": "TerminalSkills/skills",
+      "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1111,
+      "saved_skill_entries": 1111,
+      "saved_text_files": 3196,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/TerminalSkills/skills/manifests/TerminalSkills/skills/0abb852010feb21984fa40f0bf52352a440ae6d4.json"
+    },
+    {
+      "repository": "TheDecipherist/claude-code-mastery",
+      "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 2,
+      "saved_skill_entries": 2,
+      "saved_text_files": 25,
+      "files_not_exported": 6,
+      "repository_manifest": "repositories/TheDecipherist/claude-code-mastery/manifests/TheDecipherist/claude-code-mastery/0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee.json"
+    },
+    {
+      "repository": "aakashg/pm-claude-code-setup",
+      "commit_sha": "9be80c62b3a49b3284bf07cd309f6c0add37d7c9",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 15,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/aakashg/pm-claude-code-setup/manifests/aakashg/pm-claude-code-setup/9be80c62b3a49b3284bf07cd309f6c0add37d7c9.json"
+    },
+    {
+      "repository": "alpacahq/alpaca-skills",
+      "commit_sha": "89d0943084f311db5199e63ebd77b29c6819d317",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 15,
+      "saved_skill_entries": 15,
+      "saved_text_files": 43,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/alpacahq/alpaca-skills/manifests/alpacahq/alpaca-skills/89d0943084f311db5199e63ebd77b29c6819d317.json"
+    },
+    {
+      "repository": "arpitg1304/robotics-agent-skills",
+      "commit_sha": "f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 51,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/arpitg1304/robotics-agent-skills/manifests/arpitg1304/robotics-agent-skills/f9bc5467ff9ee3d23f1a1b0b29a649843bb6ad11.json"
+    },
+    {
+      "repository": "elementalsouls/Claude-OSINT",
+      "commit_sha": "c359ec1b44d01d324ba98698277e96ccbcd3e890",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 10,
+      "saved_skill_entries": 10,
+      "saved_text_files": 84,
+      "files_not_exported": 3,
+      "repository_manifest": "repositories/elementalsouls/Claude-OSINT/manifests/elementalsouls/Claude-OSINT/c359ec1b44d01d324ba98698277e96ccbcd3e890.json"
+    },
+    {
+      "repository": "fernandotellado/ai-skills",
+      "commit_sha": "9d30564450b336a54d27e07991a4bf6a3f6526ea",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 5,
+      "saved_skill_entries": 5,
+      "saved_text_files": 31,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/fernandotellado/ai-skills/manifests/fernandotellado/ai-skills/9d30564450b336a54d27e07991a4bf6a3f6526ea.json"
+    },
+    {
+      "repository": "gapmiss/obsidian-plugin-skill",
+      "commit_sha": "017d9b22ef96b50aa50513d7141b1ff7e80cbb25",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 19,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/gapmiss/obsidian-plugin-skill/manifests/gapmiss/obsidian-plugin-skill/017d9b22ef96b50aa50513d7141b1ff7e80cbb25.json"
+    },
+    {
+      "repository": "jzOcb/writing-style-skill",
+      "commit_sha": "d94826e1cd48f5403b82a5a909efdfab96221259",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 4,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/jzOcb/writing-style-skill/manifests/jzOcb/writing-style-skill/d94826e1cd48f5403b82a5a909efdfab96221259.json"
+    },
+    {
+      "repository": "kvanland/ticktick-cli",
+      "commit_sha": "bac930df237127fe8e5680ca4341a04aeac0c549",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 23,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/kvanland/ticktick-cli/manifests/kvanland/ticktick-cli/bac930df237127fe8e5680ca4341a04aeac0c549.json"
+    },
+    {
+      "repository": "machina-sports/sports-skills",
+      "commit_sha": "48e17c0acdc0c62ae5ac811d7b9b005cd469fd04",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 30,
+      "saved_skill_entries": 30,
+      "saved_text_files": 589,
+      "files_not_exported": 1,
+      "repository_manifest": "repositories/machina-sports/sports-skills/manifests/machina-sports/sports-skills/48e17c0acdc0c62ae5ac811d7b9b005cd469fd04.json"
+    },
+    {
+      "repository": "michaelpersonal/goal-forge",
+      "commit_sha": "8315c845acda9ced9ce2744fcafc90b6347950e7",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 13,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/michaelpersonal/goal-forge/manifests/michaelpersonal/goal-forge/8315c845acda9ced9ce2744fcafc90b6347950e7.json"
+    },
+    {
+      "repository": "pickle-an/md-to-docx-skill",
+      "commit_sha": "7d8d49cb7690a5438313ba43ecc05d5ec43de8fb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 9,
+      "files_not_exported": 4,
+      "repository_manifest": "repositories/pickle-an/md-to-docx-skill/manifests/pickle-an/md-to-docx-skill/7d8d49cb7690a5438313ba43ecc05d5ec43de8fb.json"
+    },
+    {
+      "repository": "realrossmanngroup/no_ai_slop_writing_rules",
+      "commit_sha": "35e32ae45878148a6bd898572a9d15c96711affe",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 4,
+      "saved_skill_entries": 4,
+      "saved_text_files": 11,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/realrossmanngroup/no_ai_slop_writing_rules/manifests/realrossmanngroup/no_ai_slop_writing_rules/35e32ae45878148a6bd898572a9d15c96711affe.json"
+    },
+    {
+      "repository": "seb1n/awesome-ai-agent-skills",
+      "commit_sha": "75865a5d037a4cdaa7f409a4ec14ab9b0292920b",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 103,
+      "saved_skill_entries": 103,
+      "saved_text_files": 171,
+      "files_not_exported": 0,
+      "repository_manifest": "repositories/seb1n/awesome-ai-agent-skills/manifests/seb1n/awesome-ai-agent-skills/75865a5d037a4cdaa7f409a4ec14ab9b0292920b.json"
+    },
+    {
+      "repository": "sno-ai/mda",
+      "commit_sha": "03a0f4126bf1ca0f9428618865c9b9dd65fada40",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 8,
+      "saved_skill_entries": 8,
+      "saved_text_files": 237,
+      "files_not_exported": 8,
+      "repository_manifest": "repositories/sno-ai/mda/manifests/sno-ai/mda/03a0f4126bf1ca0f9428618865c9b9dd65fada40.json"
+    },
+    {
+      "repository": "waynesutton/builder-skills",
+      "commit_sha": "82d1ce23d8637f6d0301e6cac9dcdb124711f3b1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 19,
+      "saved_skill_entries": 19,
+      "saved_text_files": 105,
+      "files_not_exported": 37,
+      "repository_manifest": "repositories/waynesutton/builder-skills/manifests/waynesutton/builder-skills/82d1ce23d8637f6d0301e6cac9dcdb124711f3b1.json"
+    },
+    {
+      "repository": "ythx-101/live-panel-skill",
+      "commit_sha": "439c9addce7e7ac2b4e384aa847a351926c8f945",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 51,
+      "files_not_exported": 19,
+      "repository_manifest": "repositories/ythx-101/live-panel-skill/manifests/ythx-101/live-panel-skill/439c9addce7e7ac2b4e384aa847a351926c8f945.json"
+    }
+  ],
+  "errors": [],
+  "no_skill_results": [
+    {
+      "repository": "wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+      "output_directory": "data-batch-022/repositories/wilwaldon/Claude-Code-Frontend-Design-Toolkit",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:36:56.844556+00:00",
+      "commit_sha": "2a6d0958e6966e0003896f94ce5003466e89e91d",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:37:01.979992+00:00"
+    },
+    {
+      "repository": "iannuttall/dotagents",
+      "output_directory": "data-batch-022/repositories/iannuttall/dotagents",
+      "state": "no_skill_files",
+      "tree_scanned": true,
+      "started_at": "2026-11-06T12:37:24.689238+00:00",
+      "commit_sha": "7193a940e9b1ab01ab256f3465a0c96830e12b25",
+      "candidate_skill_files": 0,
+      "saved_skill_entries": 0,
+      "finished_at": "2026-11-06T12:37:31.100661+00:00"
+    }
+  ],
+  "pending_results": [],
+  "note": "Indexes merged by repository/commit/path. Raw paths and manifests are relative to this output directory. Versions are snapshots, not additional independent Skill paths.",
+  "pending_sources_scope": "Only unprocessed sources selected into this batch; not the global queue.",
+  "global_unscanned_sources_at_checkpoint": 51
+}

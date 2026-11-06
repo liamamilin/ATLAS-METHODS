@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:17:08.273878+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 20,
+  "saved_skill_entries": 20,
+  "unique_entry_texts": 20,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "WordPress/agent-skills",
+      "commit_sha": "7374e6f1c913b3b02b25465d266d9c0e0a04fc96",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 20,
+      "saved_skill_entries": 20,
+      "saved_text_files": 195,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/WordPress/agent-skills/7374e6f1c913b3b02b25465d266d9c0e0a04fc96.json"
+    }
+  ],
+  "errors": []
+}

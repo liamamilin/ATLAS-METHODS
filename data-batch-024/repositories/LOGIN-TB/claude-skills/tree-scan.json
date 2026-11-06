@@ -1,0 +1,23 @@
+{
+  "repository": "LOGIN-TB/claude-skills",
+  "commit_sha": "1bcf6c4bd4ed539ffa55e274cb7641b963d12276",
+  "tree_entries": 49,
+  "candidate_skill_paths": [
+    "skills/ai-seo/SKILL.md",
+    "skills/apple-hig/SKILL.md",
+    "skills/cold-email/SKILL.md",
+    "skills/competitor-profiling/SKILL.md",
+    "skills/competitors/SKILL.md",
+    "skills/content-strategy/SKILL.md",
+    "skills/copywriting/SKILL.md",
+    "skills/customer-research/SKILL.md",
+    "skills/image/SKILL.md",
+    "skills/lead-magnets/SKILL.md",
+    "skills/marketing-ideas/SKILL.md",
+    "skills/product-marketing/SKILL.md",
+    "skills/seo-audit/SKILL.md",
+    "skills/social/SKILL.md",
+    "skills/vermenschlichen/SKILL.md",
+    "skills/zustellbarkeit/SKILL.md"
+  ]
+}

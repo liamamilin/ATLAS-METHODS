@@ -1,0 +1,234 @@
+{
+  "result": "passed",
+  "verification": "Every saved file byte-compared with pinned Git blob; complete tree/manifest, provenance, counts and duplicate groups checked.",
+  "snapshot_sha256_excluding_run_timestamps": "90e0b15e8e9dbd3d00657ec271b23ff4398f05266800f92402a3f5b65420f529",
+  "sources": [
+    {
+      "repository": "Hao0321/claude-skill-code-cleanup",
+      "commit_sha": "7be5e421a8c772d91ceafa0dbf07d0db90787f0e",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 202,
+      "statuses": {
+        "saved": 202
+      }
+    },
+    {
+      "repository": "Kulaxyz/self-learning-skills",
+      "commit_sha": "1304fce375b5d4c4508cab9eea05bbb8b95c38f6",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 11,
+      "statuses": {
+        "saved": 11
+      }
+    },
+    {
+      "repository": "O0000-code/paper-search-pro",
+      "commit_sha": "2b55e0853b8a42325b69cd20cb6d13e03b23695e",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 285,
+      "statuses": {
+        "non_utf8_or_binary_not_exported": 14,
+        "saved": 266,
+        "over_size_limit": 3,
+        "font_not_exported": 2
+      }
+    },
+    {
+      "repository": "OpenLinkSoftware/ai-agent-skills",
+      "commit_sha": "e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e",
+      "candidate_skill_entries": 44,
+      "skill_entries": 44,
+      "manifest_files": 1242,
+      "statuses": {
+        "saved": 1192,
+        "non_utf8_or_binary_not_exported": 39,
+        "symlink_not_followed": 4,
+        "over_size_limit": 4,
+        "font_not_exported": 3
+      }
+    },
+    {
+      "repository": "ThomasMoreAI/legal-skills-open",
+      "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+      "candidate_skill_entries": 20293,
+      "skill_entries": 20293,
+      "manifest_files": 41766,
+      "statuses": {
+        "saved": 41651,
+        "non_utf8_or_binary_not_exported": 111,
+        "over_size_limit": 4
+      }
+    },
+    {
+      "repository": "ajhcs/healthcare-agents",
+      "commit_sha": "b00a51b654fc31331b005818c4bb1ec7f7817a9f",
+      "candidate_skill_entries": 8,
+      "skill_entries": 8,
+      "manifest_files": 646,
+      "statuses": {
+        "saved": 639,
+        "non_utf8_or_binary_not_exported": 7
+      }
+    },
+    {
+      "repository": "bergside/design-md-figma",
+      "commit_sha": "746501e4813df0dcf6f6a3bb8dac7b1a7dd4a590",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 29,
+      "statuses": {
+        "saved": 29
+      }
+    },
+    {
+      "repository": "bowenliang123/markdown-exporter",
+      "commit_sha": "398597a3d45d603e3dca36b843d4e894790e19f5",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 194,
+      "statuses": {
+        "saved": 169,
+        "non_utf8_or_binary_not_exported": 22,
+        "font_not_exported": 3
+      }
+    },
+    {
+      "repository": "gadievron/raptor",
+      "commit_sha": "54336c2a8f01ef4c2004e3bdb1a11c96e499c3bc",
+      "candidate_skill_entries": 13,
+      "skill_entries": 13,
+      "manifest_files": 7773,
+      "statuses": {
+        "saved": 7764,
+        "gitlink_not_exported": 1,
+        "over_size_limit": 8
+      }
+    },
+    {
+      "repository": "govardhanrekha/QA-Skill.md-files",
+      "commit_sha": "6cef000d8099688b2f34a155adbac44ae5903e69",
+      "candidate_skill_entries": 14,
+      "skill_entries": 14,
+      "manifest_files": 21,
+      "statuses": {
+        "saved": 21
+      }
+    },
+    {
+      "repository": "malkreide/socratic-method-skill",
+      "commit_sha": "7bf0d1d73d9e9b854c13b745fc87f4b0b66bb232",
+      "candidate_skill_entries": 2,
+      "skill_entries": 2,
+      "manifest_files": 11,
+      "statuses": {
+        "saved": 11
+      }
+    },
+    {
+      "repository": "michaelshimeles/rstack",
+      "commit_sha": "11b15767d7587bab11f6c4957507b5f26d1785c7",
+      "candidate_skill_entries": 7,
+      "skill_entries": 7,
+      "manifest_files": 29,
+      "statuses": {
+        "saved": 29
+      }
+    },
+    {
+      "repository": "nearai/ironhub",
+      "commit_sha": "c49fd181a7bdd968ba5fe40eda12416e732c71ce",
+      "candidate_skill_entries": 72,
+      "skill_entries": 72,
+      "manifest_files": 1152,
+      "statuses": {
+        "saved": 1107,
+        "non_utf8_or_binary_not_exported": 38,
+        "font_not_exported": 7
+      }
+    },
+    {
+      "repository": "netresearch/agent-rules-skill",
+      "commit_sha": "aa0ff50699a60d4a02de70be3af83182b766fe33",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 214,
+      "statuses": {
+        "saved": 211,
+        "symlink_not_followed": 3
+      }
+    },
+    {
+      "repository": "ooocooc/open-skill-sunset",
+      "commit_sha": "b703cf00712b21f12bfa41f1d3d0a6a9455fd954",
+      "candidate_skill_entries": 6,
+      "skill_entries": 6,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 45,
+        "over_size_limit": 1,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "spboyer/sensei",
+      "commit_sha": "bb4fabfd008d3c99794c34d3a9dafcb1ea4dbb8f",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 171,
+      "statuses": {
+        "saved": 170,
+        "non_utf8_or_binary_not_exported": 1
+      }
+    },
+    {
+      "repository": "tigerless-labs/paper-radar",
+      "commit_sha": "22e13f53d9b364e8f621c329436aa19309f7ba58",
+      "candidate_skill_entries": 1,
+      "skill_entries": 1,
+      "manifest_files": 7,
+      "statuses": {
+        "saved": 7
+      }
+    },
+    {
+      "repository": "tmchow/agent-skills",
+      "commit_sha": "8e232f001fff3590b1420f2236923137ddc05bfe",
+      "candidate_skill_entries": 4,
+      "skill_entries": 4,
+      "manifest_files": 18,
+      "statuses": {
+        "saved": 18
+      }
+    },
+    {
+      "repository": "zcashlabs/zcash-skills",
+      "commit_sha": "e5f639ebf9eac59ad9e6057e8f357ccdd99075b9",
+      "candidate_skill_entries": 15,
+      "skill_entries": 15,
+      "manifest_files": 47,
+      "statuses": {
+        "saved": 47
+      }
+    }
+  ],
+  "totals": {
+    "bytes_compared": 534445413,
+    "entries_with_license_candidates": 20473,
+    "saved": 53589,
+    "non_utf8_or_binary_not_exported": 233,
+    "over_size_limit": 20,
+    "font_not_exported": 15,
+    "symlink_not_followed": 7,
+    "gitlink_not_exported": 1,
+    "entries_without_license_candidates": 17
+  },
+  "verified_candidate_entries": 20490,
+  "verified_skill_entries": 20490,
+  "unique_entry_texts": 20489,
+  "duplicate_entry_groups": 1,
+  "entries_in_duplicate_groups": 2,
+  "duplicate_entries_beyond_first": 1
+}

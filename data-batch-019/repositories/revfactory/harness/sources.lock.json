@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "revfactory/harness",
+      "commit_sha": "92d9f1b29e7af81acebf51a9fcd1832e739a1414"
+    }
+  ]
+}

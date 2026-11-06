@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:38:52.291749+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1,
+  "saved_skill_entries": 1,
+  "unique_entry_texts": 1,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "pickle-an/md-to-docx-skill",
+      "commit_sha": "7d8d49cb7690a5438313ba43ecc05d5ec43de8fb",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1,
+      "saved_skill_entries": 1,
+      "saved_text_files": 9,
+      "files_not_exported": 4,
+      "repository_manifest": "manifests/pickle-an/md-to-docx-skill/7d8d49cb7690a5438313ba43ecc05d5ec43de8fb.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,10 @@
+{
+  "repository": "memodb-io/Acontext",
+  "commit_sha": "1ddfd903fd1004672ca9f9a70d92041153ba43d5",
+  "tree_entries": 1297,
+  "candidate_skill_paths": [
+    "landingpage/public/SKILL.md",
+    "src/server/api/go/configs/skill_templates/daily-logs/SKILL.md",
+    "src/server/api/go/configs/skill_templates/user-general-facts/SKILL.md"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "repository": "itsmostafa/aws-agent-skills",
+  "commit_sha": "3ee171adbe5ce02086fec9fde0b437a30958f34f",
+  "tree_entries": 52,
+  "candidate_skill_paths": [
+    "skills/api-gateway/SKILL.md",
+    "skills/bedrock/SKILL.md",
+    "skills/cloudformation/SKILL.md",
+    "skills/cloudwatch/SKILL.md",
+    "skills/cognito/SKILL.md",
+    "skills/dynamodb/SKILL.md",
+    "skills/ec2/SKILL.md",
+    "skills/ecs/SKILL.md",
+    "skills/eks/SKILL.md",
+    "skills/eventbridge/SKILL.md",
+    "skills/iam/SKILL.md",
+    "skills/lambda/SKILL.md",
+    "skills/rds/SKILL.md",
+    "skills/s3/SKILL.md",
+    "skills/secrets-manager/SKILL.md",
+    "skills/sns/SKILL.md",
+    "skills/sqs/SKILL.md",
+    "skills/step-functions/SKILL.md"
+  ]
+}

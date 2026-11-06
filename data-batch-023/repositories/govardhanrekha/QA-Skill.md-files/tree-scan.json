@@ -1,0 +1,21 @@
+{
+  "repository": "govardhanrekha/QA-Skill.md-files",
+  "commit_sha": "6cef000d8099688b2f34a155adbac44ae5903e69",
+  "tree_entries": 21,
+  "candidate_skill_paths": [
+    "stlc_manual_testing/01_jira-requirement-analyzer/SKILL.md",
+    "stlc_manual_testing/02_testplan-creater-via-jira_LIVE/SKILL.md",
+    "stlc_manual_testing/03-test-design/api-test-designer/SKILL.md",
+    "stlc_manual_testing/03-test-design/test-scenario-designer/SKILL.md",
+    "stlc_manual_testing/04-test-case-development/test-case-writer/SKILL.md",
+    "stlc_manual_testing/04-test-case-development/test-data-generator/SKILL.md",
+    "stlc_manual_testing/05-test-execution/automation-script-generator/SKILL.md",
+    "stlc_manual_testing/05-test-execution/regression-suite-selector/SKILL.md",
+    "stlc_manual_testing/05-test-execution/test-execution-tracker/SKILL.md",
+    "stlc_manual_testing/06-defect-management/bug-reporter/SKILL.md",
+    "stlc_manual_testing/06-defect-management/bug-triage-assistant/SKILL.md",
+    "stlc_manual_testing/06-defect-management/rca-analyzer/SKILL.md",
+    "stlc_manual_testing/07-test-closure/test-closure-reporter/SKILL.md",
+    "stlc_manual_testing/07-test-closure/test-coverage-analyzer/SKILL.md"
+  ]
+}

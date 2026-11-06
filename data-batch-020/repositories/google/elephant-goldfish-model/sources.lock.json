@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "google/elephant-goldfish-model",
+      "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7"
+    }
+  ]
+}

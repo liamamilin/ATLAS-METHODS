@@ -1,0 +1,12 @@
+{
+  "repository": "vercel-labs/skills",
+  "commit_sha": "d3701c11b1101251af14c9d148f026e1a47ebe17",
+  "tree_entries": 201,
+  "candidate_skill_paths": [
+    ".automations/pr-labeling/skills/pr-labeling/SKILL.md",
+    ".automations/triage/skills/triage/SKILL.md",
+    ".vc/automations/workflows/pr-labeling/skills/pr-labeling/SKILL.md",
+    ".vc/automations/workflows/triage/skills/triage/SKILL.md",
+    "skills/find-skills/SKILL.md"
+  ]
+}

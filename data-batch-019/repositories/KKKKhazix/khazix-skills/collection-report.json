@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:15:44.337433+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 6,
+  "saved_skill_entries": 6,
+  "unique_entry_texts": 6,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "KKKKhazix/khazix-skills",
+      "commit_sha": "35bd05b466ceb83a727b28afb54b45b69a6c3b0a",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 6,
+      "saved_skill_entries": 6,
+      "saved_text_files": 125,
+      "files_not_exported": 5,
+      "repository_manifest": "manifests/KKKKhazix/khazix-skills/35bd05b466ceb83a727b28afb54b45b69a6c3b0a.json"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,23 @@
+{
+  "repository": "google-labs-code/stitch-skills",
+  "commit_sha": "0337446dadde6f8c94210444e2aa9d546126480f",
+  "tree_entries": 88,
+  "candidate_skill_paths": [
+    "plugins/stitch-build/skills/react-components/SKILL.md",
+    "plugins/stitch-build/skills/react-native/SKILL.md",
+    "plugins/stitch-build/skills/react-vite-dashboard/SKILL.md",
+    "plugins/stitch-build/skills/remotion/SKILL.md",
+    "plugins/stitch-build/skills/shadcn-ui/SKILL.md",
+    "plugins/stitch-design/skills/code-to-design/SKILL.md",
+    "plugins/stitch-design/skills/extract-design-md/SKILL.md",
+    "plugins/stitch-design/skills/extract-static-html/SKILL.md",
+    "plugins/stitch-design/skills/generate-design/SKILL.md",
+    "plugins/stitch-design/skills/manage-design-system/SKILL.md",
+    "plugins/stitch-design/skills/upload-to-stitch/SKILL.md",
+    "plugins/stitch-utilities/skills/design-md/SKILL.md",
+    "plugins/stitch-utilities/skills/enhance-prompt/SKILL.md",
+    "plugins/stitch-utilities/skills/site-md/SKILL.md",
+    "plugins/stitch-utilities/skills/stitch-loop/SKILL.md",
+    "plugins/stitch-utilities/skills/taste-design/SKILL.md"
+  ]
+}

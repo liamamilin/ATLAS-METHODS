@@ -1,0 +1,9 @@
+{
+  "repository": "TheDecipherist/claude-code-mastery",
+  "commit_sha": "0f05fa1a384c6886b9c4cfda8a9a75be9b0448ee",
+  "tree_entries": 31,
+  "candidate_skill_paths": [
+    "skills/commit-messages/SKILL.md",
+    "skills/security-audit/SKILL.md"
+  ]
+}

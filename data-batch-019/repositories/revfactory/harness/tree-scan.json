@@ -1,0 +1,9 @@
+{
+  "repository": "revfactory/harness",
+  "commit_sha": "92d9f1b29e7af81acebf51a9fcd1832e739a1414",
+  "tree_entries": 29,
+  "candidate_skill_paths": [
+    "skills/evolve/SKILL.md",
+    "skills/harness/SKILL.md"
+  ]
+}

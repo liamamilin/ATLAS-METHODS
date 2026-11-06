@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:15:16.587911+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 18,
+  "saved_skill_entries": 18,
+  "unique_entry_texts": 18,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "itsmostafa/aws-agent-skills",
+      "commit_sha": "3ee171adbe5ce02086fec9fde0b437a30958f34f",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 18,
+      "saved_skill_entries": 18,
+      "saved_text_files": 52,
+      "files_not_exported": 0,
+      "repository_manifest": "manifests/itsmostafa/aws-agent-skills/3ee171adbe5ce02086fec9fde0b437a30958f34f.json"
+    }
+  ],
+  "errors": []
+}

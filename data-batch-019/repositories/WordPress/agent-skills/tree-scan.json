@@ -1,0 +1,27 @@
+{
+  "repository": "WordPress/agent-skills",
+  "commit_sha": "7374e6f1c913b3b02b25465d266d9c0e0a04fc96",
+  "tree_entries": 195,
+  "candidate_skill_paths": [
+    "skills/blueprint/SKILL.md",
+    "skills/wordpress-router/SKILL.md",
+    "skills/wp-abilities-api/SKILL.md",
+    "skills/wp-abilities-audit/SKILL.md",
+    "skills/wp-abilities-verify/SKILL.md",
+    "skills/wp-ability-development/SKILL.md",
+    "skills/wp-block-development/SKILL.md",
+    "skills/wp-block-themes/SKILL.md",
+    "skills/wp-env/SKILL.md",
+    "skills/wp-interactivity-api/SKILL.md",
+    "skills/wp-patterns/SKILL.md",
+    "skills/wp-performance/SKILL.md",
+    "skills/wp-phpstan/SKILL.md",
+    "skills/wp-playground/SKILL.md",
+    "skills/wp-plugin-development/SKILL.md",
+    "skills/wp-plugin-directory-guidelines/SKILL.md",
+    "skills/wp-project-triage/SKILL.md",
+    "skills/wp-rest-api/SKILL.md",
+    "skills/wp-wpcli-and-ops/SKILL.md",
+    "skills/wpds/SKILL.md"
+  ]
+}

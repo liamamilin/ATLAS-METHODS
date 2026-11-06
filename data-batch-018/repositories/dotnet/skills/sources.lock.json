@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "dotnet/skills",
+      "commit_sha": "d63a2a78358c7641821b62c5e7a6d36598f6ca79"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:16:24.008980+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 1068,
+  "saved_skill_entries": 1068,
+  "unique_entry_texts": 929,
+  "duplicate_entry_groups": 133,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "affaan-m/ECC",
+      "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 1068,
+      "saved_skill_entries": 1068,
+      "saved_text_files": 4655,
+      "files_not_exported": 46,
+      "repository_manifest": "manifests/affaan-m/ECC/b38be6a7f6350964d59328b52f0624e1d1d552d1.json"
+    }
+  ],
+  "errors": []
+}

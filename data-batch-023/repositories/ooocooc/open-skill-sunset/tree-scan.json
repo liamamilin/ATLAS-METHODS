@@ -1,0 +1,13 @@
+{
+  "repository": "ooocooc/open-skill-sunset",
+  "commit_sha": "b703cf00712b21f12bfa41f1d3d0a6a9455fd954",
+  "tree_entries": 47,
+  "candidate_skill_paths": [
+    "examples/cases/platform-specific-paths/SKILL.md",
+    "integrations/skill-sunset/SKILL.md",
+    "test/fixtures/sample-setup/.agents/skills/code-helper-copy/SKILL.md",
+    "test/fixtures/sample-setup/.agents/skills/code-helper/SKILL.md",
+    "test/fixtures/sample-setup/.agents/skills/large-skill/SKILL.md",
+    "test/fixtures/sample-setup/.agents/skills/medical-domain/SKILL.md"
+  ]
+}

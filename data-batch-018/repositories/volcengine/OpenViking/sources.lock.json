@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {
+      "repository": "volcengine/OpenViking",
+      "commit_sha": "b8e88959f3ab437b4d08514eceaa7221cca470dc"
+    }
+  ]
+}

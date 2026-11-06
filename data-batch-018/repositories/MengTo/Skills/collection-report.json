@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-11-06T12:11:08.787866+00:00",
+  "requested_sources": 1,
+  "completed_sources": 1,
+  "failed_sources": 0,
+  "candidate_skill_files": 181,
+  "saved_skill_entries": 181,
+  "unique_entry_texts": 181,
+  "duplicate_entry_groups": 0,
+  "note": "Entry-text counts are not method counts. No quality evaluation, taxonomy, or skill execution performed.",
+  "sources": [
+    {
+      "repository": "MengTo/Skills",
+      "commit_sha": "5ea1661a0e05d82b054553daaa6baf6d0233c33c",
+      "state": "text_snapshot_collected",
+      "candidate_skill_files": 181,
+      "saved_skill_entries": 181,
+      "saved_text_files": 1053,
+      "files_not_exported": 418,
+      "repository_manifest": "manifests/MengTo/Skills/5ea1661a0e05d82b054553daaa6baf6d0233c33c.json"
+    }
+  ],
+  "errors": []
+}

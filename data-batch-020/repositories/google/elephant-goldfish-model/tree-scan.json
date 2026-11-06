@@ -1,0 +1,21 @@
+{
+  "repository": "google/elephant-goldfish-model",
+  "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7",
+  "tree_entries": 282,
+  "candidate_skill_paths": [
+    "distributions/claude/skills/egm-bootstrap/SKILL.md",
+    "distributions/claude/skills/egm-brainstorm/SKILL.md",
+    "distributions/claude/skills/egm-draft/SKILL.md",
+    "distributions/claude/skills/egm-drift-report/SKILL.md",
+    "distributions/claude/skills/egm-resolve/SKILL.md",
+    "distributions/claude/skills/egm-review-loop/SKILL.md",
+    "distributions/claude/skills/egm-review/SKILL.md",
+    "skills/egm-bootstrap/SKILL.md",
+    "skills/egm-brainstorm/SKILL.md",
+    "skills/egm-draft/SKILL.md",
+    "skills/egm-drift-report/SKILL.md",
+    "skills/egm-resolve/SKILL.md",
+    "skills/egm-review-loop/SKILL.md",
+    "skills/egm-review/SKILL.md"
+  ]
+}

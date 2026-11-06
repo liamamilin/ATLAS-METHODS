@@ -1,0 +1,10 @@
+{
+  "repository": "zhayujie/CowAgent",
+  "commit_sha": "19e84350d6c5459133fc7d0c573d1b6600e55ff7",
+  "tree_entries": 1713,
+  "candidate_skill_paths": [
+    "skills/image-generation/SKILL.md",
+    "skills/knowledge-wiki/SKILL.md",
+    "skills/skill-creator/SKILL.md"
+  ]
+}
