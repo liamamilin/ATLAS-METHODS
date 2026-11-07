@@ -1,0 +1,565 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ATLAS SkillRecord v0.1.1",
+  "description": "A provenance-preserving intermediate representation between raw Skill packages and later bottom-up method discovery.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.1"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "collection_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Copy the id already emitted by collect_skills.py, not a model-invented id."
+        },
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "skill_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "git_blob_sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "entry_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "collection_id",
+        "repository",
+        "commit_sha",
+        "skill_path",
+        "git_blob_sha"
+      ],
+      "additionalProperties": false,
+      "description": "Mechanical provenance. Copy from the existing collection index. This record is keyed by collection_id plus commit_sha; never key a complete normalized skill solely by entry text hash."
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        },
+        "tasks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/task"
+          }
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rule"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resource"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "summary",
+        "evidence",
+        "tasks",
+        "rules",
+        "resources",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "description": "Faithful normalization of the source, not domain classification, method synthesis, improvement or execution."
+    },
+    "extraction": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "enum": [
+            "entry_only",
+            "entry_and_references"
+          ]
+        },
+        "files_read": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/read_file"
+          },
+          "minItems": 1
+        },
+        "gaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gap"
+          }
+        },
+        "review_status": {
+          "enum": [
+            "unreviewed",
+            "reviewed"
+          ]
+        },
+        "execution_status": {
+          "const": "not_executed"
+        },
+        "producer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "language",
+        "scope",
+        "files_read",
+        "gaps",
+        "review_status",
+        "execution_status"
+      ],
+      "additionalProperties": false,
+      "description": "Coverage of the conversion. Empty values mean not extracted, not proven absence. review_status concerns this conversion only, not method effectiveness."
+    }
+  },
+  "required": [
+    "schema_version",
+    "source",
+    "content",
+    "extraction"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Repository-relative path in source.commit_sha. This is a locator, not an execution instruction."
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "line_start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "line_end": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "section"
+          ]
+        },
+        {
+          "required": [
+            "line_start",
+            "line_end"
+          ]
+        }
+      ],
+      "dependentRequired": {
+        "line_start": [
+          "line_end"
+        ],
+        "line_end": [
+          "line_start"
+        ]
+      }
+    },
+    "step": {
+      "type": "object",
+      "properties": {
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "when": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "action",
+        "when",
+        "rationale"
+      ],
+      "additionalProperties": false,
+      "description": "Source-backed step. Evidence may inherit from the task. Array order is an exposition order, not an executable workflow. Put branches/repetition in action and when without inventing them."
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false,
+      "description": "A check prescribed by the source, never an assertion that this project executed it. Evidence may inherit from the task."
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "when": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/step"
+          }
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/check"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "goal",
+        "when",
+        "inputs",
+        "outputs",
+        "steps",
+        "checks",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "description": "One explicitly described task/mode. Do not expand every synonym into a new task. Missing procedures or checks remain empty."
+    },
+    "rule": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "when": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "text",
+        "when",
+        "rationale",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "description": "A source prescription, principle or restriction. Preserve its modality and scope; it is not an independently validated best practice."
+    },
+    "resource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "tool",
+            "script",
+            "reference",
+            "template",
+            "asset",
+            "environment",
+            "skill",
+            "other"
+          ]
+        },
+        "locator": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "usage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "name",
+        "kind",
+        "locator",
+        "usage",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "description": "A named dependency, not a claim of installation, availability or verified performance. locator is a repo-relative path, command, URL, or null when unknown."
+    },
+    "note": {
+      "type": "object",
+      "properties": {
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "topic",
+        "text",
+        "evidence"
+      ],
+      "additionalProperties": false,
+      "description": "Source-backed exceptions, examples, limitations or details that do not fit the main fields. Analyst concerns belong in extraction.gaps, not here."
+    },
+    "read_file": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "enum": [
+            "full",
+            "partial"
+          ]
+        },
+        "ranges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "line_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "line_end": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "line_start",
+              "line_end"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "description": "Actual 1-based inclusive line ranges delivered to the extractor. Set by the runner, not guessed by the model. Partial means incomplete delivery, not a judgment of understanding."
+        }
+      },
+      "required": [
+        "path",
+        "coverage"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "coverage": {
+            "const": "partial"
+          }
+        },
+        "required": [
+          "coverage"
+        ]
+      },
+      "then": {
+        "required": [
+          "ranges"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "ranges"
+          ]
+        }
+      },
+      "description": "One file at source.commit_sha. full means the entire file was actually delivered to the extractor. partial requires the ranges actually delivered. Checking ordered/in-bounds ranges and evidence containment is an application-level check."
+    },
+    "gap": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1,
+          "description": "JSON Pointer to the affected record field."
+        },
+        "reason": {
+          "enum": [
+            "not_stated",
+            "unread_dependency",
+            "ambiguous",
+            "conflicting",
+            "other"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "target",
+        "reason",
+        "detail"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

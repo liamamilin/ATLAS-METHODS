@@ -1,0 +1,75 @@
+{
+  "scope": "GitHub connector UTF-8 contents re-encoded and matched to returned Git blob SHA. Not independent attestation of GitHub or model delivery. Raw files retained only in this audit workspace; supplied corpus unchanged.",
+  "files": [
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "path": "skills/internal-comms/SKILL.md",
+      "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "bytes": 1511,
+      "line_count": 32,
+      "github_blob_match": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "path": "skills/internal-comms/examples/general-comms.md",
+      "git_blob_sha": "0ea977018ca8167d39bfc9adb253f80336819578",
+      "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47",
+      "bytes": 602,
+      "line_count": 16,
+      "github_blob_match": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "path": "skills/internal-comms/examples/3p-updates.md",
+      "git_blob_sha": "5329bfbf3b47035946a3995dd63025799b582f8c",
+      "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc",
+      "bytes": 3274,
+      "line_count": 47,
+      "github_blob_match": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "path": "skills/internal-comms/examples/company-newsletter.md",
+      "git_blob_sha": "4997a072b62ed7f65a9fd113903db3d9eba34b98",
+      "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5",
+      "bytes": 3295,
+      "line_count": 65,
+      "github_blob_match": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "path": "skills/internal-comms/examples/faq-answers.md",
+      "git_blob_sha": "395262a860636434593cd3c3da258000231ea4f6",
+      "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484",
+      "bytes": 2366,
+      "line_count": 30,
+      "github_blob_match": true
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": "skills/requesting-code-review/SKILL.md",
+      "git_blob_sha": "68d338a58ecdd8b77bfbb519b781ef223dbbb842",
+      "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+      "bytes": 2974,
+      "line_count": 95,
+      "github_blob_match": true
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "path": "skills/requesting-code-review/code-reviewer.md",
+      "git_blob_sha": "6d358b5d7d450c83cacbe450b7dbd4e673b694ad",
+      "sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb",
+      "bytes": 6449,
+      "line_count": 198,
+      "github_blob_match": true
+    }
+  ]
+}

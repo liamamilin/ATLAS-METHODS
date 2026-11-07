@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+AUDIT-REPORT.json
+test-report.json
+final-review-report.json
+convergence-tests-report.json
