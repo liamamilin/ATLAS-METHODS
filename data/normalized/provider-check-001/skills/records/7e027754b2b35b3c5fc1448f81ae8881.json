@@ -1,0 +1,467 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+    "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+    "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+  },
+  "content": {
+    "name": "grill-with-docs",
+    "title": "通过追问打磨方案并同步沉淀领域文档",
+    "summary": "围绕计划、决策或设计展开连续追问，形成对设计树的共同理解；在讨论过程中同步维护领域术语表与必要的架构决策记录。入口技能会调用 grilling 与 domain-modeling 两类做法。",
+    "evidence": [
+      {
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "line_start": 1,
+        "line_end": 7
+      },
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "line_start": 1,
+        "line_end": 30
+      },
+      {
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "line_start": 1,
+        "line_end": 74
+      }
+    ],
+    "tasks": [
+      {
+        "id": "grilling-session",
+        "goal": "通过多轮追问澄清计划、决策或想法，直到与用户达成共同理解且设计树前沿为空。",
+        "when": "用户希望压力测试自己的思路，或使用与“grill”相关的触发表达；也可作为 grill-with-docs 的组成部分。",
+        "inputs": [
+          "待讨论的计划、决策或想法",
+          "用户对每轮问题的回答",
+          "可用于查找事实的环境/工具（如需要）"
+        ],
+        "outputs": [
+          "按设计树组织的已澄清决策",
+          "每轮带编号的问题与推荐答案",
+          "在用户确认前不执行后续行动的共同理解状态"
+        ],
+        "steps": [
+          {
+            "action": "将讨论映射为设计树：把每个决策视为分支，并识别依赖于它的后续决策。",
+            "when": "开始访谈时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 6,
+                "line_end": 6
+              }
+            ]
+          },
+          {
+            "action": "按轮次推进。每轮找出当前 frontier（前置条件已确定、现在可以提问且无需猜测未回答内容的所有决策），将整个 frontier 的问题一次性提出；为每个问题编号、给出推荐答案，并等待用户回答后再进入下一轮。",
+            "when": "存在可提问的 frontier 时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 8,
+                "line_end": 8
+              },
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 26,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "按示例格式组织每轮问题：使用编号标题、问题正文（可含多段或多选项），并在箭头后给出推荐答案；措辞应使“yes”表示接受推荐答案。",
+            "when": "提出每轮问题时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 10,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "区分事实查找与决策：需要来自环境的事实（如文件系统、工具结果）时，由自己通过子代理在新上下文中查找，不要求用户代查；查找进行中视为前置条件未定，仅阻塞依赖该事实的问题，其余 frontier 问题照常提出。决策必须交由用户作出并等待回应。",
+            "when": "frontier 问题涉及可查证事实或需要用户决策时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 28,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "在用户确认已达成共同理解之前，不对讨论结果采取行动。",
+            "when": "frontier 为空（设计树各分支已访问、无未明说假设）之后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "本轮只包含当前 frontier 问题；答案依赖本轮其他未决问题的提问应留到后续轮次。",
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 26,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "text": "会话结束条件为 frontier 为空：设计树各分支已访问且没有未明说的假设。",
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 1,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "id": "domain-modeling",
+        "goal": "在设计讨论中主动建立并打磨项目领域模型，及时澄清术语、记录词汇表，并在满足条件时记录架构决策。",
+        "when": "讨论代码库术语、编写或编辑 GLOSSARY.md、记录或编辑 ADR，或在设计过程中需要改变领域模型时。",
+        "inputs": [
+          "用户使用的领域术语与设计陈述",
+          "现有 GLOSSARY.md / GLOSSARY-MAP.md / ADR（如存在）",
+          "相关代码行为（用于交叉核对）"
+        ],
+        "outputs": [
+          "更新后的 GLOSSARY.md",
+          "必要时新增的 ADR 文件",
+          "对术语冲突、模糊表述或代码矛盾的澄清"
+        ],
+        "steps": [
+          {
+            "action": "识别文件结构：单一上下文通常使用根目录 GLOSSARY.md 与 docs/adr/；若存在根目录 GLOSSARY-MAP.md，则表示多上下文，按映射定位各上下文的 GLOSSARY.md 与 docs/adr/。文件按需懒创建：首个术语确定时创建 GLOSSARY.md，首个 ADR 需要时创建 docs/adr/。",
+            "when": "开始处理领域建模产物时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 10,
+                "line_end": 40
+              }
+            ]
+          },
+          {
+            "action": "对照现有 GLOSSARY.md 挑战冲突术语；对模糊或重载用语提出精确的规范术语；在讨论领域关系时用具体场景（含边界/边缘情况）进行压力测试。",
+            "when": "用户使用与词汇表冲突、含糊或涉及概念边界的表述时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 44,
+                "line_end": 54
+              }
+            ]
+          },
+          {
+            "action": "当用户陈述系统如何工作时，检查代码是否一致；发现矛盾时明确指出并要求澄清哪一方正确。",
+            "when": "用户对行为的描述可能与实现不一致时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 56,
+                "line_end": 58
+              }
+            ]
+          },
+          {
+            "action": "术语一旦确定，立即就地更新 GLOSSARY.md，不批量积压；按 GLOSSARY-FORMAT.md 的格式编写（格式细节以该引用文件为准，本文未提供其内容）。",
+            "when": "某个术语的含义已澄清时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 60,
+                "line_end": 62
+              }
+            ]
+          },
+          {
+            "action": "仅在同时满足三个条件时提出创建 ADR：决策难以逆转、缺乏上下文会让未来读者困惑、且源自真实权衡并有明确选择理由。若任一条件不满足则跳过 ADR；创建时按 ADR-FORMAT.md 的格式编写（格式细节以该引用文件为准，本文未提供其内容）。",
+            "when": "讨论中出现可能需要记录的设计决策时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 66,
+                "line_end": 74
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "GLOSSARY.md 应完全不包含实现细节；不将其用作规格、草稿区或实现决策仓库。",
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 64,
+                "line_end": 64
+              }
+            ]
+          },
+          {
+            "text": "提出 ADR 前确认同时满足：难以逆转、缺乏上下文会令人困惑、源自真实权衡；缺一则不创建。",
+            "evidence": [
+              {
+                "path": "skills/engineering/domain-modeling/SKILL.md",
+                "line_start": 68,
+                "line_end": 74
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 1,
+            "line_end": 74
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "grill-with-docs 入口的作用是调用 Skill 工具两次，分别用于 grilling 与 domain-modeling。",
+        "when": "使用 grill-with-docs 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/grill-with-docs/SKILL.md",
+            "line_start": 3,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "text": "追问会话在用户确认已达成共同理解之前不得采取行动。",
+        "when": "grilling 会话结束或准备执行后续动作时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 30,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "text": "查找环境事实是助手的职责，不应要求用户查找自己能查到的信息；决策应交由用户。",
+        "when": "grilling 过程中遇到可查证事实或需要作出决策时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 28
+          }
+        ]
+      },
+      {
+        "text": "GLOSSARY.md 必须完全不包含实现细节，且不作为规格、草稿区或实现决策仓库。",
+        "when": "更新 GLOSSARY.md 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 64,
+            "line_end": 64
+          }
+        ]
+      },
+      {
+        "text": "仅在“难以逆转、缺乏上下文会令人困惑、源自真实权衡”三个条件同时满足时才创建 ADR；否则跳过。",
+        "when": "考虑是否记录 ADR 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 66,
+            "line_end": 74
+          }
+        ]
+      },
+      {
+        "text": "术语确定后应立即更新 GLOSSARY.md，不批量处理；领域建模文档按需懒创建。",
+        "when": "领域建模会话中出现已澄清术语或首次需要产物时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 40,
+            "line_end": 40
+          },
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 60,
+            "line_end": 62
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "grilling",
+        "kind": "skill",
+        "locator": "skills/productivity/grilling/SKILL.md",
+        "usage": "grill-with-docs 入口会调用该技能，用于对计划/决策/想法进行多轮追问。",
+        "evidence": [
+          {
+            "path": "skills/engineering/grill-with-docs/SKILL.md",
+            "line_start": 7,
+            "line_end": 7
+          },
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 1,
+            "line_end": 4
+          }
+        ]
+      },
+      {
+        "name": "domain-modeling",
+        "kind": "skill",
+        "locator": "skills/engineering/domain-modeling/SKILL.md",
+        "usage": "grill-with-docs 入口会调用该技能，用于在设计中维护领域模型、词汇表与 ADR。",
+        "evidence": [
+          {
+            "path": "skills/engineering/grill-with-docs/SKILL.md",
+            "line_start": 7,
+            "line_end": 7
+          },
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 1,
+            "line_end": 4
+          }
+        ]
+      },
+      {
+        "name": "GLOSSARY-FORMAT.md",
+        "kind": "reference",
+        "locator": "skills/engineering/GLOSSARY-FORMAT.md",
+        "usage": "domain-modeling 引用的词汇表格式说明；本文未提供其内容，具体格式以该文件为准。",
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 62,
+            "line_end": 62
+          }
+        ]
+      },
+      {
+        "name": "ADR-FORMAT.md",
+        "kind": "reference",
+        "locator": "skills/engineering/ADR-FORMAT.md",
+        "usage": "domain-modeling 引用的 ADR 格式说明；本文未提供其内容，具体格式以该文件为准。",
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 74,
+            "line_end": 74
+          }
+        ]
+      },
+      {
+        "name": "GLOSSARY.md / GLOSSARY-MAP.md / docs/adr/",
+        "kind": "template",
+        "locator": null,
+        "usage": "领域建模产物的常见位置：单上下文使用根目录 GLOSSARY.md 与 docs/adr/；多上下文由根目录 GLOSSARY-MAP.md 指向各上下文位置。按需懒创建。",
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 10,
+            "line_end": 40
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "grill-with-docs 的组合关系",
+        "text": "grill-with-docs 描述为“无情访谈以打磨计划或设计，并在过程中创建文档（ADR 和词汇表）”；其执行方式是分别调用 grilling 与 domain-modeling。文档未展开两者在同一会话中的具体交错时机，本记录按各自核心机制分别整理。",
+        "evidence": [
+          {
+            "path": "skills/engineering/grill-with-docs/SKILL.md",
+            "line_start": 3,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "topic": "domain-modeling 的主动性边界",
+        "text": "domain-modeling 强调主动改变领域模型（挑战术语、构造场景、写入词汇表/决策）；仅阅读 GLOSSARY.md 获取词汇不属于该技能。",
+        "evidence": [
+          {
+            "path": "skills/engineering/domain-modeling/SKILL.md",
+            "line_start": 8,
+            "line_end": 8
+          }
+        ]
+      },
+      {
+        "topic": "子代理查找与阻塞范围",
+        "text": "grilling 允许在需要环境事实时派发子代理查找；正在进行的查找视为未满足前置条件，因此仅阻塞依赖它的问题，其余 frontier 问题可继续提出。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 28
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/opencode-go/iceman-contributor-free",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T15:29:43.819029+00:00"
+  }
+}

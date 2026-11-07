@@ -1,0 +1,309 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/brand-guidelines/SKILL.md",
+    "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+    "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+  },
+  "content": {
+    "name": "brand-guidelines",
+    "title": "应用 Anthropic 品牌色彩与排版",
+    "summary": "在适用品牌色、样式指南、视觉格式或公司设计标准的产物上，应用 Anthropic 官方品牌色彩与排版资源，包括主色/强调色、标题与正文字体、字体回退与基于 python-pptx 的 RGB 颜色应用说明。",
+    "evidence": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "line_start": 1,
+        "line_end": 73
+      }
+    ],
+    "tasks": [
+      {
+        "id": "apply-anthropic-brand-styling",
+        "goal": "为适用 Anthropic 外观风格的产物应用官方品牌身份与样式资源。",
+        "when": "当品牌颜色或样式指南、视觉格式或公司设计标准适用，且产物可能受益于 Anthropic 的外观风格时。",
+        "inputs": [
+          "待应用品牌样式的产物或视觉材料",
+          "可用的系统字体环境（如已预装 Poppins、Lora 则效果更佳）"
+        ],
+        "outputs": [
+          "应用 Anthropic 品牌色彩与排版后的产物"
+        ],
+        "steps": [
+          {
+            "action": "确认适用范围：将本 Skill 用于访问和应用 Anthropic 官方品牌身份与样式资源，适用于品牌、企业身份、视觉身份、后处理、样式、品牌颜色、排版与视觉设计等场景。",
+            "when": "开始处理可能需要 Anthropic 品牌风格的产物时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 3,
+                "line_end": 14
+              }
+            ]
+          },
+          {
+            "action": "应用品牌颜色：主色使用 Dark `#141413`（主要文本和深色背景）、Light `#faf9f5`（浅色背景和深色上的文本）、Mid Gray `#b0aea5`（次要元素）、Light Gray `#e8e6dc`（微妙背景）；强调色使用 Orange `#d97757`（主要强调）、Blue `#6a9bcc`（次要强调）、Green `#788c5d`（第三强调）。文本样式需根据背景进行智能颜色选择；非文本形状使用强调色并在橙、蓝、绿之间循环。",
+            "when": "为产物设置颜色、文本样式或形状强调时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 17,
+                "line_end": 31
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 47,
+                "line_end": 58
+              }
+            ]
+          },
+          {
+            "action": "应用品牌排版：标题使用 Poppins（回退 Arial），正文使用 Lora（回退 Georgia）。智能字体应用将 Poppins 应用于标题（24pt 及以上）并将 Lora 应用于正文；若自定义字体不可用则自动回退到 Arial/Georgia。字体应在环境中预安装以获得最佳效果。",
+            "when": "为产物设置标题或正文样式时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 32,
+                "line_end": 37
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 40,
+                "line_end": 52
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 62,
+                "line_end": 67
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 1,
+            "line_end": 73
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "标题（24pt 及以上）使用 Poppins 字体，正文使用 Lora 字体。",
+        "when": "应用文本样式时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 34,
+            "line_end": 35
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 42,
+            "line_end": 43
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 49,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "text": "当 Poppins/Lora 不可用时，标题自动回退到 Arial，正文自动回退到 Georgia；不要求安装字体即可使用现有系统字体工作。",
+        "when": "自定义字体不可用时",
+        "rationale": "文档说明用于保持可读性并跨系统工作。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 34,
+            "line_end": 35
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 44,
+            "line_end": 45
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 64,
+            "line_end": 66
+          }
+        ]
+      },
+      {
+        "text": "为获得最佳效果，应在环境中预安装 Poppins 和 Lora 字体。",
+        "when": "准备应用品牌字体的环境时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 36,
+            "line_end": 36
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 67,
+            "line_end": 67
+          }
+        ]
+      },
+      {
+        "text": "非文本形状使用强调色，并在 Orange、Blue、Green 之间循环，以保持品牌一致的视觉兴趣。",
+        "when": "为非文本形状设置颜色时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 56,
+            "line_end": 58
+          }
+        ]
+      },
+      {
+        "text": "颜色应用使用 RGB 颜色值以实现精确的品牌匹配；文档说明通过 python-pptx 的 RGBColor 类应用。",
+        "when": "在支持 RGBColor 的技术实现中应用品牌颜色时",
+        "rationale": "文档说明用于保持不同系统间的颜色保真度。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 69,
+            "line_end": 73
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Poppins",
+        "kind": "asset",
+        "locator": null,
+        "usage": "用于标题（24pt 及以上）的品牌字体；优先使用系统已安装版本，文档建议预安装以获得最佳效果。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 34,
+            "line_end": 34
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 42,
+            "line_end": 42
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 64,
+            "line_end": 67
+          }
+        ]
+      },
+      {
+        "name": "Lora",
+        "kind": "asset",
+        "locator": null,
+        "usage": "用于正文的品牌字体；优先使用系统已安装版本，文档建议预安装以获得最佳效果。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 43,
+            "line_end": 43
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 64,
+            "line_end": 67
+          }
+        ]
+      },
+      {
+        "name": "python-pptx RGBColor",
+        "kind": "tool",
+        "locator": null,
+        "usage": "文档所述：颜色通过 python-pptx 的 RGBColor 类应用以实现精确品牌匹配；未提供该库的接入或实现细节。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 71,
+            "line_end": 72
+          }
+        ]
+      },
+      {
+        "name": "LICENSE.txt",
+        "kind": "reference",
+        "locator": "skills/brand-guidelines/LICENSE.txt",
+        "usage": "文档引用的完整许可条款文件；本次未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 4,
+            "line_end": 4
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "适用场景关键词",
+        "text": "文档列出的关键词包括 branding、corporate identity、visual identity、post-processing、styling、brand colors、typography、Anthropic brand、visual formatting、visual design。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "topic": "文档所述的样式行为",
+        "text": "文档描述智能字体应用和文本样式会保持可读性、文本层级与格式；颜色应用旨在跨不同系统保持颜色保真度。这些是来源中的功能/技术说明，非本次执行验证结果。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 45,
+            "line_end": 45
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 51,
+            "line_end": 52
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 73,
+            "line_end": 73
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/opencode-go/iceman-contributor-free",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T15:30:38.231157+00:00"
+  }
+}

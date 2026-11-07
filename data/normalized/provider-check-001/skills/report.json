@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-11-07T15:36:13.706655+00:00",
+  "schema_version": "0.1.1",
+  "model": "opencode-go/iceman-contributor-free",
+  "record_models": {
+    "opencode-go/iceman-contributor-free": 2
+  },
+  "routing_policy": null,
+  "selected": 2,
+  "succeeded": 2,
+  "failed": 0,
+  "pending": 0,
+  "invocation": {
+    "started_at": "2026-11-07T15:36:13.700113+00:00",
+    "attempted_items": 0,
+    "skipped_success": 2,
+    "skipped_failed": 0,
+    "finished_at": "2026-11-07T15:36:13.705200+00:00"
+  },
+  "deferred": 0,
+  "repositories": 2,
+  "review_status": "unreviewed; semantic spot checks reported separately",
+  "usage": {
+    "attempts_total": 2,
+    "opencode_sessions": 2,
+    "model_sessions": 2,
+    "pre_model_failures": 0,
+    "sessions_without_usage": 0,
+    "tokens": {
+      "input": 11062,
+      "output": 6629,
+      "reasoning": 1380,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "opencode_reported_cost": 0.0,
+    "by_model": {
+      "opencode-go/iceman-contributor-free": {
+        "sessions": 2,
+        "sessions_without_usage": 0,
+        "tokens": {
+          "input": 11062,
+          "output": 6629,
+          "reasoning": 1380,
+          "cache_read": 0,
+          "cache_write": 0
+        },
+        "opencode_reported_cost": 0.0
+      }
+    },
+    "billing_cost": null,
+    "cost_note": "Reported OpenCode estimate is not verified billing; cache/reasoning token categories may overlap input/output.",
+    "attempts": [
+      {
+        "path": "attempts/7e027754b2b35b3c5fc1448f81ae8881/001/metadata.json",
+        "session_id": "ses_e495fd935ffeceInr8QP0yQ4Kc",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "iceman-contributor-free",
+                "providerID": "opencode-go",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6060,
+                "output": 4106,
+                "reasoning": 511,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/cf60a00051207a8e7e6f45e26cb1adb0/001/metadata.json",
+        "session_id": "ses_e495ebdbaffe5RTGfNpVj1UxIk",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "iceman-contributor-free",
+                "providerID": "opencode-go",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5002,
+                "output": 2523,
+                "reasoning": 869,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      }
+    ]
+  }
+}

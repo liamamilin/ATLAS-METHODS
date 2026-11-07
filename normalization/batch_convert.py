@@ -22,6 +22,7 @@ import tempfile
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
 from export_response_schema import response_schema
+from model_routing import ModelDeferred, QuotaRouter, limit_signal, verify_free_model
 
 HERE = Path(__file__).resolve().parent
 
@@ -185,11 +186,15 @@ class OpenCodeClient:
                     'mode': 'primary',
                     'system': '只转换用户提供的研究材料为指定 JSON。不要使用任何工具。',
                     'permissions': [{'action': '*', 'resource': '*', 'effect': 'deny'}],
-                    'steps': 1,
+                    # steps=1 makes OpenCode inject a forced-summary instruction
+                    # into the first response. Allow a normal first JSON turn;
+                    # all tool permissions remain denied.
+                    'steps': 2,
                 }}})
             command = [self.executable, 'run', '--standalone', '--format', 'json',
-                       '--agent', 'atlas-normalizer', '--model', self.model, prompt]
-            proc = subprocess.Popen(command, cwd=work, env=env, stdout=subprocess.PIPE,
+                       '--agent', 'atlas-normalizer', '--title', 'ATLAS SkillRecord conversion',
+                       '--model', self.model, prompt]
+            proc = subprocess.Popen(command, cwd=work, env=env, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE, start_new_session=True)
             timed_out = False
             try:
@@ -213,7 +218,7 @@ class OpenCodeClient:
             if sid:
                 try:
                     exported = subprocess.run([self.executable, 'session', 'export', '--standalone', sid],
-                                              cwd=work, env=env, capture_output=True, timeout=60)
+                                              cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, timeout=60)
                     (attempt / 'session.json').write_bytes(exported.stdout)
                     session = strict_json_loads(exported.stdout.decode('utf-8'))
                     turns = [m.get('info', m) for m in session.get('messages', [])]
@@ -232,7 +237,8 @@ class OpenCodeClient:
             text = ''.join(e.get('part', {}).get('text', '') for e in events if e.get('type') == 'text')
             (attempt / 'response.txt').write_text(text, encoding='utf-8')
             # Preserve usage even when a request returned bad JSON or timed out.
-            reply = {'text': text, 'session_id': sid, 'usage': usage, 'finish': finish,
+            reply = {'text': text, 'session_id': sid, 'usage': usage, 'finish': finish, 'model': self.model,
+                     'limit': limit_signal(events),
                      'exit_code': proc.returncode, 'timed_out': timed_out,
                      'tool_events': [e.get('type') for e in events if 'tool' in e.get('type', '')]}
             if timed_out or proc.returncode != 0 or any(e.get('type') == 'error' for e in events):
@@ -258,7 +264,9 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
     attempts = args.out / 'attempts' / key
     attempts.mkdir(parents=True, exist_ok=True)
     seq = max([int(p.name) for p in attempts.iterdir() if p.is_dir() and p.name.isdigit()] + [0])
-    for retry in range(args.max_attempts):
+    normal_failures, quota_redirects = 0, 0
+    request_budget = args.max_attempts + int(bool(getattr(client, 'uses_fallback', False)))
+    for _ in range(request_budget):
         seq += 1
         attempt = attempts / f'{seq:03}'
         attempt.mkdir()
@@ -272,6 +280,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
             metadata.update(state='failed', error='prompt exceeds 120000-byte CLI argument budget; select explicit ranges', finished_at=now())
             write_json(attempt / 'metadata.json', metadata)
             return {**base, 'state': 'failed', 'failure_stage': 'input_budget', 'error': metadata['error']}
+        reply = {}
         try:
             reply = client.call(prompt, attempt)
             metadata.update({k:v for k,v in reply.items() if k != 'text'})
@@ -290,7 +299,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
                                      'scope': 'entry_only' if len(reads) == 1 else 'entry_and_references',
                                      'files_read': reads, 'gaps': response['gaps'],
                                      'review_status': 'unreviewed', 'execution_status': 'not_executed',
-                                     'producer': 'opencode/' + args.model,
+                                     'producer': 'opencode/' + metadata['model'],
                                      'prompt_version': 'target-first-' + digest((HERE / 'CONVERSION-PROMPT.md').read_bytes())[:12],
                                      'generated_at': now()}}
             checked = check_record(record, schema, source_texts=texts)
@@ -303,12 +312,21 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
             write_json(args.out / 'records' / (key + '.json'), record)
             return {**base, 'state': 'succeeded', 'record': f'records/{key}.json',
                     'attempt': f'attempts/{key}/{seq:03}', 'warnings': checked['warnings']}
+        except ModelDeferred as exc:
+            metadata.update(state='deferred', model=exc.model, error=str(exc), finished_at=now())
+            write_json(attempt / 'metadata.json', metadata)
+            return {**base, 'state': 'deferred', 'failure_stage': 'model_availability',
+                    'error': str(exc), 'attempt': f'attempts/{key}/{seq:03}'}
         except (OSError, ValueError, KeyError, subprocess.SubprocessError) as exc:
             error = str(exc)[:5000]
-            feedback = (review_feedback + '\n' + error).strip()
             metadata.update(state='failed', error=error, finished_at=now())
             write_json(attempt / 'metadata.json', metadata)
-            if retry + 1 < args.max_attempts:
+            if reply.get('retry_on_fallback') and quota_redirects == 0:
+                quota_redirects += 1
+                continue
+            feedback = (review_feedback + '\n' + error).strip()
+            normal_failures += 1
+            if normal_failures < args.max_attempts:
                 continue
             return {**base, 'state': 'failed', 'failure_stage': 'model_or_validation',
                     'error': error, 'attempt': f'attempts/{key}/{seq:03}'}
@@ -328,6 +346,7 @@ def summarize(args, selection, states, invocation):
     write_jsonl(args.out / 'failures.jsonl', failures)
     write_json(args.out / 'remaining.selection.json', {'items': remaining})
     totals = {'input': 0, 'output': 0, 'reasoning': 0, 'cache_read': 0, 'cache_write': 0}
+    by_model = {}
     sessions, model_sessions, pre_model_failures, unavailable, reported_cost = 0, 0, 0, 0, 0.0
     attempts = []
     attempt_paths = sorted((args.out / 'attempts').glob('*/*/metadata.json'))
@@ -337,6 +356,11 @@ def summarize(args, selection, states, invocation):
             continue
         sessions += 1
         usage = d.get('usage', {})
+        model_usage = by_model.setdefault(d.get('model', 'unknown'), {
+            'sessions': 0, 'sessions_without_usage': 0,
+            'tokens': {k: 0 for k in totals}, 'opencode_reported_cost': 0.0})
+        model_usage['sessions'] += 1
+        model_usage['sessions_without_usage'] += not usage.get('available', False)
         model_sessions += bool(usage.get('turns'))
         pre_model_failures += bool(usage.get('request_not_started'))
         unavailable += not usage.get('available', False)
@@ -344,19 +368,30 @@ def summarize(args, selection, states, invocation):
             t = turn['tokens']
             for k in ('input', 'output', 'reasoning'):
                 totals[k] += t.get(k, 0) or 0
+                model_usage['tokens'][k] += t.get(k, 0) or 0
             totals['cache_read'] += t.get('cache', {}).get('read', 0) or 0
             totals['cache_write'] += t.get('cache', {}).get('write', 0) or 0
+            model_usage['tokens']['cache_read'] += t.get('cache', {}).get('read', 0) or 0
+            model_usage['tokens']['cache_write'] += t.get('cache', {}).get('write', 0) or 0
             reported_cost += turn.get('cost', 0) or 0
+            model_usage['opencode_reported_cost'] += turn.get('cost', 0) or 0
         attempts.append({'path': path.relative_to(args.out).as_posix(), 'session_id': d['session_id'],
                          'state': d['state'], 'usage': usage})
+    record_models = {}
+    for record in records:
+        producer = record['extraction'].get('producer', 'unknown').removeprefix('opencode/')
+        record_models[producer] = record_models.get(producer, 0) + 1
     report = {'generated_at': now(), 'schema_version': '0.1.1', 'model': args.model,
+              'record_models': record_models, 'routing_policy': getattr(args, 'routing_policy', None),
               'selected': len(selection), 'succeeded': len(records), 'failed': len(failures),
               'pending': len(remaining) - len(failures), 'invocation': invocation,
+              'deferred': sum(states.get(key_of(i), {}).get('state') == 'deferred' for i in selection),
               'repositories': len({r['source']['repository'] for r in records}),
               'review_status': 'unreviewed; semantic spot checks reported separately',
               'usage': {'attempts_total': len(attempt_paths), 'opencode_sessions': sessions, 'model_sessions': model_sessions,
                         'pre_model_failures': pre_model_failures, 'sessions_without_usage': unavailable,
                         'tokens': totals, 'opencode_reported_cost': reported_cost,
+                        'by_model': by_model,
                         'billing_cost': None, 'cost_note': 'Reported OpenCode estimate is not verified billing; cache/reasoning token categories may overlap input/output.',
                         'attempts': attempts}}
     write_json(args.out / 'report.json', report)
@@ -400,7 +435,17 @@ def run_batch(args, client=None):
         if args.limit is None or len(todo) < args.limit:
             todo.append((item, row))
     write_json(state_path, states)
-    client = client or OpenCodeClient(args.opencode, args.model, args.timeout)
+    if client is None:
+        routing = getattr(args, 'routing_config', None)
+        config = strict_json_loads(routing.read_text()) if routing else None
+        if config and config['primary'] == args.model:
+            client = QuotaRouter(config, args.routing_state,
+                                 lambda model: OpenCodeClient(args.opencode, model, args.timeout),
+                                 lambda model: verify_free_model(args.opencode, model),
+                                 probe_timeout=args.timeout + 60)
+            args.routing_policy = {**config, 'state_path': str(args.routing_state)}
+        else:
+            client = OpenCodeClient(args.opencode, args.model, args.timeout)
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {pool.submit(convert_one, item, row, args, client, schema, contract,
                                states.get(key_of(item), {}).get('review_feedback') or
@@ -430,6 +475,10 @@ def main():
     p.add_argument('--selection', type=Path, required=True)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--model', default='open-design/deepseek-v4.1-flash')
+    p.add_argument('--routing-config', type=Path, default=HERE / 'model-routing.json',
+                   help='Quota fallback policy; applied only when --model matches its primary')
+    p.add_argument('--routing-state', type=Path, default=HERE.parent / 'data/normalized/.provider-routing-state.json',
+                   help='Persistent quota reset/probe state shared by batches')
     p.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')
     p.add_argument('--language', default='zh-CN')
     p.add_argument('--limit', type=int, help='Maximum new/retried items in this invocation')
@@ -448,7 +497,7 @@ def main():
             p.error('another batch process is using this output directory')
         report = run_batch(args)
     print(json.dumps({k:v for k,v in report.items() if k != 'usage'}, ensure_ascii=False, indent=2))
-    return int(report['failed'] > 0)
+    return int(report['failed'] > 0 or report['deferred'] > 0)
 
 
 if __name__ == '__main__':

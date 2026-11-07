@@ -1,0 +1,37 @@
+{
+  "tested_at": "2026-11-07T15:20:40.812344+00:00",
+  "model": "opencode-go/iceman-contributor-free",
+  "session_id": "ses_e4967194afferVsoFJCYFtbACD",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "iceman-contributor-free",
+          "providerID": "opencode-go",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 411,
+          "output": 27,
+          "reasoning": 41,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "strict_json_test_passed": true,
+  "response_sha256": "5537d560f092cb534793f728d47604a4ee5013e7edf092383d8b93ec8167b1fb"
+}

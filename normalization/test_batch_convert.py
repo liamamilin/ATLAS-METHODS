@@ -2,6 +2,7 @@ import argparse
 import gzip
 import hashlib
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -174,8 +175,10 @@ class BatchTests(unittest.TestCase):
 import json, os, sys
 from pathlib import Path
 assert Path(os.environ['PWD']).resolve() == Path.cwd().resolve()
+assert sys.stdin.read() == ''
 c=json.loads(Path('opencode.json').read_text())
 assert c['agents']['atlas-normalizer']['permissions'][-1] == {'action':'*','resource':'*','effect':'deny'}
+assert c['agents']['atlas-normalizer']['steps'] == 2
 if sys.argv[1]=='run':
     print(json.dumps({'type':'text','sessionID':'fixture-session','part':{'text':'{"content":{},"gaps":[]}'}}))
 else:
@@ -185,8 +188,18 @@ else:
             executable.chmod(0o755)
             attempt = root / 'attempt'
             attempt.mkdir()
-            with patch.dict('os.environ', {'PWD': '/a/different/project'}):
-                reply = OpenCodeClient(str(executable), 'open-design/fixture', 10).call('fixture prompt', attempt)
+            saved = os.dup(0)
+            reader, writer = os.pipe()
+            os.write(writer, b'parent heredoc must not reach the model\n')
+            os.close(writer)
+            try:
+                os.dup2(reader, 0)
+                os.close(reader)
+                with patch.dict('os.environ', {'PWD': '/a/different/project'}):
+                    reply = OpenCodeClient(str(executable), 'open-design/fixture', 10).call('fixture prompt', attempt)
+            finally:
+                os.dup2(saved, 0)
+                os.close(saved)
             self.assertEqual(reply['text'], '{"content":{},"gaps":[]}')
             self.assertEqual(reply['usage']['turns'][0]['tokens']['input'], 17)
             self.assertEqual(reply['finish'], 'stop')

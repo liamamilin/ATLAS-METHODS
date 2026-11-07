@@ -1,0 +1,79 @@
+{
+  "started_at": "2026-11-07T15:28:31.245160+00:00",
+  "source": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+    "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+    "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+  },
+  "model": "opencode-go/iceman-contributor-free",
+  "prompt_sha256": "8d063e720be99cbccb66b255d70cd32c0d29f549cc4935b8185d5ef1f57590a2",
+  "input_files": [
+    {
+      "path": "skills/engineering/grill-with-docs/SKILL.md",
+      "coverage": "full",
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "bytes": 247,
+      "source_lines": 7
+    },
+    {
+      "path": "skills/productivity/grilling/SKILL.md",
+      "coverage": "full",
+      "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "bytes": 2077,
+      "source_lines": 30
+    },
+    {
+      "path": "skills/engineering/domain-modeling/SKILL.md",
+      "coverage": "full",
+      "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "git_blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+      "bytes": 3346,
+      "source_lines": 74
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e495fd935ffeceInr8QP0yQ4Kc",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "iceman-contributor-free",
+          "providerID": "opencode-go",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6060,
+          "output": 4106,
+          "reasoning": 511,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "limit": null,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T15:29:43.821499+00:00"
+}

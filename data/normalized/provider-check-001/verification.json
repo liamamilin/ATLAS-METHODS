@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-11-07T15:36:15.009446+00:00",
+  "result": "passed",
+  "production": {
+    "result": "passed",
+    "checked_records": 40,
+    "distinct_source_files": 59,
+    "records_jsonl_sha256": "85d8bc17621f8137854be04f1e206359a8d9864a65a9e2db89924059a7b54800",
+    "resume": {
+      "exit_code": 0,
+      "skipped_success": 40,
+      "new_model_calls": 0,
+      "new_attempt_files": 0,
+      "same_records_bytes": true
+    },
+    "warnings": [
+      "section_locator_unresolved: /content -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4/steps/0 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4/steps/1 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/rules/9 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot"
+    ]
+  },
+  "go_comparison": {
+    "result": "passed",
+    "checked_records": 2,
+    "distinct_source_files": 4,
+    "records_jsonl_sha256": "17db4fbd3c3a0fab55043e988b3a8cd857088ba282bc5c80da148d2f8333663e",
+    "resume": {
+      "exit_code": 0,
+      "skipped_success": 2,
+      "new_model_calls": 0,
+      "new_attempt_files": 0,
+      "same_records_bytes": true
+    },
+    "warnings": []
+  },
+  "previous_38_records_retained_exactly": true,
+  "new_unique_production_records": 2,
+  "comparison_records_not_extra_sources": 2,
+  "unique_production_versions": 40,
+  "routing_live_observation": {
+    "primary_retry_at": 0,
+    "event_count": 0,
+    "note": "Primary was available in this live run. Quota fallback/recovery tested with offline provider-error fixtures, not by exhausting real quota."
+  },
+  "go_semantic_spot_checks": [
+    "Brand colors, 24pt heading rule and font fallbacks match supplied source.",
+    "Reference-led output preserves design-tree frontier prerequisites and all three ADR conditions; unread format documents are limited in step wording."
+  ],
+  "tests": {
+    "related_unittests": 27,
+    "routing_cases": 10,
+    "existing_regressions": 87,
+    "interval_oracle_trials": 1000
+  }
+}

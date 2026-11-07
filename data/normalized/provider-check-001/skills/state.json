@@ -1,0 +1,74 @@
+{
+  "7e027754b2b35b3c5fc1448f81ae8881": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "7e027754b2b35b3c5fc1448f81ae8881",
+    "updated_at": "2026-11-07T15:28:31.243258+00:00",
+    "source": {
+      "collection_id": "4efae2a88e2d4ec4ffe6",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+      "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "coverage": "full",
+        "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+        "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+        "bytes": 247,
+        "source_lines": 7
+      },
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "coverage": "full",
+        "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+        "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+        "bytes": 2077,
+        "source_lines": 30
+      },
+      {
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "coverage": "full",
+        "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+        "git_blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+        "bytes": 3346,
+        "source_lines": 74
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/7e027754b2b35b3c5fc1448f81ae8881.json",
+    "attempt": "attempts/7e027754b2b35b3c5fc1448f81ae8881/001",
+    "warnings": []
+  },
+  "cf60a00051207a8e7e6f45e26cb1adb0": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "cf60a00051207a8e7e6f45e26cb1adb0",
+    "updated_at": "2026-11-07T15:29:43.822280+00:00",
+    "source": {
+      "collection_id": "5efa4f962e732e9ecbf4",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/brand-guidelines/SKILL.md",
+      "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+      "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+    },
+    "inputs": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "coverage": "full",
+        "sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe",
+        "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+        "bytes": 2235,
+        "source_lines": 73
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/cf60a00051207a8e7e6f45e26cb1adb0.json",
+    "attempt": "attempts/cf60a00051207a8e7e6f45e26cb1adb0/001",
+    "warnings": []
+  }
+}

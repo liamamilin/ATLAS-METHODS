@@ -1,5 +1,7 @@
 # Open Design 批转换第 001 批
 
+> 本报告记录提交 `6fa204e` 时首次运行的 38/40 快照。后续续跑已补齐为 40/40，并加入 Go 免费回退；见 [后续实测报告](provider-check-001.report.md)。下方链接的运行文件会随续跑更新，首次快照可在该历史提交中回查。
+
 日期：2026-11-07（Asia/Shanghai）。从 main `a8e9636` 快进拉取后执行。沿用 SkillRecord **v0.1.1**、converged.1 检查器、目标优先转换约定及原采集数据，没有修改 Schema、检查器、响应 Schema 导出器或 CONVERSION-PROMPT.md，没有重新采集上游。
 
 ## 实际结果
@@ -96,4 +98,4 @@ python3 normalization/batch_convert.py --selection normalization/batches/batch-0
 - 对最终 38 条复用原 check_record 与响应 Schema，传入完整固定来源文本，结构及已检查的一致性通过。40 个选定入口及所选资料重新计算 Git blob；每条来源字段与实际索引一致，读取范围与输入清单一致。
 - 最终 content/gaps 与保留的模型响应逐项相等；每条请求摘要与本机 request.txt 相同，没有用模板或规则拼接代替模型。
 - 最后一次重跑跳过 **38 个成功、2 个失败**，新增模型调用 **0**，attempt 数量不变，records.jsonl 字节完全相同。该命令退出码 **1** 是两条已有失败仍在报告内，符合预期，没有将其抹掉或报为成功。
-- 当前 records.jsonl SHA-256：`abfce3e000f9016580583f9fd4de3d718f03117bb7763c15596d0d3923670549`。采集索引、原文、Schema、原检查器均未改动；未执行研究材料中的命令或脚本。
+- 首次运行的 records.jsonl SHA-256：`abfce3e000f9016580583f9fd4de3d718f03117bb7763c15596d0d3923670549`。采集索引、原文、Schema、原检查器均未改动；未执行研究材料中的命令或脚本。

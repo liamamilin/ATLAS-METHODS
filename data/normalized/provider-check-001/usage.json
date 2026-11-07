@@ -1,0 +1,44 @@
+{
+  "primary_this_run": {
+    "model": "open-design/deepseek-v4.1-flash",
+    "model_sessions": 2,
+    "tokens": {
+      "input": 12571,
+      "output": 7123,
+      "reasoning": 3307,
+      "cache_read": 0,
+      "cache_write": 0
+    }
+  },
+  "go_skill_comparisons": {
+    "model": "opencode-go/iceman-contributor-free",
+    "model_sessions": 2,
+    "tokens": {
+      "input": 11062,
+      "output": 6629,
+      "reasoning": 1380,
+      "cache_read": 0,
+      "cache_write": 0
+    }
+  },
+  "go_minimal_probes": {
+    "model_sessions": 3,
+    "tokens": {
+      "input": 1807,
+      "output": 720,
+      "reasoning": 247
+    },
+    "strict_json_results": [
+      false,
+      false,
+      true
+    ]
+  },
+  "all_available_tokens": {
+    "input": 25440,
+    "output": 14472,
+    "reasoning": 4934
+  },
+  "billing_cost": null,
+  "note": "Reasoning/cache may overlap input/output. OpenCode cost estimates are zero, not independently verified invoices. Go model zero pricing separately checked from current catalog."
+}

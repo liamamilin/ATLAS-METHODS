@@ -1,34 +1,60 @@
 {
-  "generated_at": "2026-11-07T15:04:24.993501+00:00",
+  "generated_at": "2026-11-07T15:36:10.853977+00:00",
   "schema_version": "0.1.1",
   "model": "open-design/deepseek-v4.1-flash",
+  "record_models": {
+    "open-design/deepseek-v4.1-flash": 40
+  },
+  "routing_policy": {
+    "primary": "open-design/deepseek-v4.1-flash",
+    "free_fallback": "opencode-go/iceman-contributor-free",
+    "primary_probe_seconds": 300,
+    "rate_probe_seconds": 30,
+    "note": "Prefer Open Design. Only provider quota/rate/concurrency limits enable fallback. Recheck the Go model's zero pricing before fallback, cached at most five minutes. Probe primary with a real pending task after reset/cooldown. No paid fallback or background watcher.",
+    "state_path": "/Users/milin/Documents/ChatGPT/ATLAS-METHODS/data/normalized/.provider-routing-state.json"
+  },
   "selected": 40,
-  "succeeded": 38,
-  "failed": 2,
+  "succeeded": 40,
+  "failed": 0,
   "pending": 0,
   "invocation": {
-    "started_at": "2026-11-07T15:04:24.854785+00:00",
+    "started_at": "2026-11-07T15:36:10.711291+00:00",
     "attempted_items": 0,
-    "skipped_success": 38,
-    "skipped_failed": 2,
-    "finished_at": "2026-11-07T15:04:24.971867+00:00"
+    "skipped_success": 40,
+    "skipped_failed": 0,
+    "finished_at": "2026-11-07T15:36:10.833191+00:00"
   },
+  "deferred": 0,
   "repositories": 7,
   "review_status": "unreviewed; semantic spot checks reported separately",
   "usage": {
-    "attempts_total": 75,
-    "opencode_sessions": 75,
-    "model_sessions": 60,
+    "attempts_total": 77,
+    "opencode_sessions": 77,
+    "model_sessions": 62,
     "pre_model_failures": 14,
     "sessions_without_usage": 1,
     "tokens": {
-      "input": 456155,
-      "output": 260171,
-      "reasoning": 182975,
+      "input": 468726,
+      "output": 267294,
+      "reasoning": 186282,
       "cache_read": 0,
       "cache_write": 0
     },
     "opencode_reported_cost": 0.0,
+    "by_model": {
+      "open-design/deepseek-v4.1-flash": {
+        "sessions": 77,
+        "sessions_without_usage": 1,
+        "tokens": {
+          "input": 468726,
+          "output": 267294,
+          "reasoning": 186282,
+          "cache_read": 0,
+          "cache_write": 0
+        },
+        "opencode_reported_cost": 0.0
+      }
+    },
     "billing_cost": null,
     "cost_note": "Reported OpenCode estimate is not verified billing; cache/reasoning token categories may overlap input/output.",
     "attempts": [
@@ -559,6 +585,37 @@
                 "input": 6211,
                 "output": 4081,
                 "reasoning": 3495,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/004/metadata.json",
+        "session_id": "ses_e495fc7b8ffeSxJeko4FNtopwu",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6343,
+                "output": 3632,
+                "reasoning": 1271,
                 "cache": {
                   "read": 0,
                   "write": 0
@@ -1639,6 +1696,37 @@
                 "input": 6073,
                 "output": 3847,
                 "reasoning": 1934,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/004/metadata.json",
+        "session_id": "ses_e495fc722ffeWzt219I0yJG64d",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6228,
+                "output": 3491,
+                "reasoning": 2036,
                 "cache": {
                   "read": 0,
                   "write": 0

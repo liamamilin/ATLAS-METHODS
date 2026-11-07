@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-11-07T15:28:35.696905+00:00",
+  "source": {
+    "collection_id": "e36d5d8a160259015b36",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/code-review/SKILL.md",
+    "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+    "entry_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "b653fd52983986cffdd381d2ad3ca9d1c1e4a92f8c9d58a81f689a3a513fbd05",
+  "input_files": [
+    {
+      "path": "skills/engineering/code-review/SKILL.md",
+      "coverage": "full",
+      "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+      "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+      "bytes": 6721,
+      "source_lines": 89
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e495fc722ffeWzt219I0yJG64d",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6228,
+          "output": 3491,
+          "reasoning": 2036,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "limit": null,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "routing": {
+    "selected": "primary",
+    "primary": "open-design/deepseek-v4.1-flash",
+    "free_fallback": "opencode-go/iceman-contributor-free",
+    "free_catalog_check": null
+  },
+  "retry_on_fallback": false,
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T15:29:10.765312+00:00"
+}

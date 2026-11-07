@@ -1,0 +1,461 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "e36d5d8a160259015b36",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/code-review/SKILL.md",
+    "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+    "entry_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+  },
+  "content": {
+    "name": "code-review",
+    "title": "双轴代码审查：Standards 与 Spec 并行审查同一 diff",
+    "summary": "对 HEAD 与用户指定固定点之间的 diff 做两条相互独立的审查：Standards 轴检查代码是否符合本仓库文档化的编码标准（并始终附带 Fowler 气味基线），Spec 轴检查代码是否忠实实现原始 issue/spec。两轴各由一个全新上下文的子代理并行执行、互不污染，最后由本 Skill 分别呈现两份报告，不合并、不跨轴重排。",
+    "evidence": [
+      {
+        "path": "skills/engineering/code-review/SKILL.md",
+        "section": "description",
+        "line_start": 3,
+        "line_end": 3
+      },
+      {
+        "path": "skills/engineering/code-review/SKILL.md",
+        "section": "Two-axis review intro",
+        "line_start": 6,
+        "line_end": 11
+      }
+    ],
+    "tasks": [
+      {
+        "id": "two-axis-code-review",
+        "goal": "在用户给定的固定点上，对 `HEAD` 到该固定点的 diff 同时产出 Standards 与 Spec 两份审查报告，并按轴分别汇总。",
+        "when": "用户想审查一个分支、PR、进行中的改动，或提出“review since X”时。",
+        "inputs": [
+          "用户指定的固定点（commit SHA、分支名、tag、`main`、`HEAD~5` 等）",
+          "仓库工作区与 `HEAD` 到固定点的 diff、commit 列表",
+          "原始 spec 来源（commit message 中的 issue 引用、用户传入的路径，或 `docs/`、`specs/`、`.scratch/` 下与分支/特性匹配的 spec 文件）",
+          "仓库中所有记录“代码应怎么写”的标准文档",
+          "issue tracker 文档（用于抓取 issue 内容的工作流）"
+        ],
+        "outputs": [
+          "`## Standards` 标题下的 Standards 审查报告",
+          "`## Spec` 标题下的 Spec 审查报告（无 spec 时改为注明无 spec）",
+          "一行总结：每轴发现数量，以及各轴内部最严重的问题"
+        ],
+        "steps": [
+          {
+            "action": "确定固定点：用户说的就是固定点（commit SHA、分支名、tag、`main`、`HEAD~5` 等）；用户没说就询问。",
+            "when": "审查开始时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 17,
+                "line_end": 19
+              }
+            ]
+          },
+          {
+            "action": "一次性捕获 diff 命令 `git diff <fixed-point>...HEAD`（三点，使比较基于 merge-base），并记录 commit 列表 `git log <fixed-point>..HEAD --oneline`。",
+            "when": "固定点确定后",
+            "rationale": "三点写法把比较对象定为 merge-base，而非固定点本身的最新状态。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 21,
+                "line_end": 21
+              }
+            ]
+          },
+          {
+            "action": "预检：确认固定点能解析（`git rev-parse <fixed-point>`）且 diff 非空；坏引用或空 diff 在此处失败。",
+            "when": "进入两个并行子代理之前",
+            "rationale": "让错误在单点暴露，而不是在并行子代理内部失败。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 23,
+                "line_end": 23
+              }
+            ]
+          },
+          {
+            "action": "定位 spec 来源，按顺序找：(1) commit message 中的 issue 引用（`#123`、`Closes #45`、GitLab `!67` 等），按 tracker 文档中的工作流抓取；(2) 用户作为参数传入的路径；(3) `docs/`、`specs/` 或 `.scratch/` 下与分支名或特性匹配的 spec 文件；(4) 都没有则询问用户 spec 在哪；用户说没有，则 Spec 子代理跳过并报告“no spec available”。",
+            "when": "预检通过后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 25,
+                "line_end": 32
+              }
+            ]
+          },
+          {
+            "action": "定位标准来源：搜索仓库中所有记录代码应如何编写的文件；存在 `CODING_STANDARDS.md` 或 `CONTRIBUTING.md` 时必须列入清单。在仓库自身文档之外，Standards 轴始终附带气味基线。",
+            "when": "准备 Standards 子代理输入时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 34,
+                "line_end": 38
+              }
+            ]
+          },
+          {
+            "action": "前台同时发出两个子代理调用并汇总其返回的报告。Standards 子代理的 prompt 含：完整 diff 命令与 commit 列表；第 3 步找到的标准文档清单，外加完整粘贴的气味基线（子代理无法以其他方式获得）；要求按文件/hunk 报告 (a) 每处违反文档化标准的地方（引用标准所在文件与该规则），(b) 发现的基线气味（命名并引用该 hunk），区分硬违规与判断性意见，跳过工具已强制检查的内容，400 词以内。",
+            "when": "标准来源与 spec 来源均确定后",
+            "rationale": "两轴并行且各用全新上下文，避免互相污染。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 11,
+                "line_end": 11
+              },
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 58,
+                "line_end": 66
+              }
+            ]
+          },
+          {
+            "action": "Spec 子代理的 prompt 含：diff 命令与 commit 列表；spec 的路径或抓取到的内容；要求报告 (a) spec 要求但缺失或只做了一部分的需求，(b) diff 中未被要求的行为（scope creep），(c) 看似实现但实现有误的需求，每条发现都引用对应的 spec 行，400 词以内。若 spec 缺失，跳过该子代理并在最终报告中注明。",
+            "when": "spec 存在时；spec 缺失则跳过并注明",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 68,
+                "line_end": 74
+              }
+            ]
+          },
+          {
+            "action": "在 `## Standards` 与 `## Spec` 标题下呈现两份报告，可原样或轻度整理；不要合并或重排发现。最后加一行总结：每轴的发现总数，以及各轴内部最严重的问题（若有）。",
+            "when": "两个子代理返回后",
+            "rationale": "两轴刻意分离，合并或跨轴重排会让一条轴掩盖另一条。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 76,
+                "line_end": 80
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "固定点必须能解析（`git rev-parse`），且 `git diff <fixed-point>...HEAD` 的 diff 非空；否则在启动子代理前即失败。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 23,
+                "line_end": 23
+              }
+            ]
+          },
+          {
+            "text": "若找不到 spec 且用户说没有，Spec 子代理跳过，并在最终报告中注明“no spec available”。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 32,
+                "line_end": 32
+              },
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 74,
+                "line_end": 74
+              }
+            ]
+          },
+          {
+            "text": "最终报告须按轴分开呈现，不跨轴挑选单一“最严重问题”；总结行只给每轴数量与各轴内部最严重项。",
+            "evidence": [
+              {
+                "path": "skills/engineering/code-review/SKILL.md",
+                "line_start": 78,
+                "line_end": 80
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "section": "Two-axis review intro",
+            "line_start": 6,
+            "line_end": 11
+          },
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "section": "Process",
+            "line_start": 15,
+            "line_end": 80
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "两轴审查必须各由一个全新上下文窗口的子代理执行，并行运行，再由本 Skill 汇总，以免两个子代理污染彼此的上下文。",
+        "when": "执行审查时",
+        "rationale": "上下文隔离是两轴分离的机制基础。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 11,
+            "line_end": 11
+          }
+        ]
+      },
+      {
+        "text": "Standards 轴在仓库文档之外始终附带固定的 Fowler 气味基线（《Refactoring》第 3 章），即使仓库什么都没写也适用。",
+        "when": "任何 Standards 审查",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 38,
+            "line_end": 38
+          }
+        ]
+      },
+      {
+        "text": "气味基线逐项按“是什么 → 怎么改”匹配 diff：Mysterious Name（名称不揭示其功能/内容 → 重命名；起不出诚实名字说明设计含混）；Duplicated Code（同一逻辑形状出现在改动中多个 hunk 或文件 → 抽取共享形状、两处调用）；Feature Envy（方法访问别的对象的数据多于自己的 → 把方法移到它所羡慕的数据上）；Data Clumps（少数几个字段/参数总是同行 → 打包成一个类型传递）；Primitive Obsession（用原始类型或字符串顶替值得独立类型的领域概念 → 给该概念一个小类型）；Repeated Switches（同一类型上的 switch/if 级联在改动中反复出现 → 换多态，或两处共用一个 map）；Shotgun Surgery（一次逻辑改动迫使跨多个文件零散修改 → 把总是一起变化的东西聚到一个模块）；Divergent Change（一个文件/模块因多个无关原因被改 → 拆分，使每个模块只因一个原因变化）；Speculative Generality（为 spec 并不存在的需要添加的抽象、参数或钩子 → 删除，内联回去直到出现真实需要）；Message Chains（调用方不该依赖的长 `a.b().c().d()` 导航 → 用第一个对象上的一个方法隐藏这段行走）；Middle Man（大多只是向下转发的类或函数 → 去掉，直接调用真实目标）；Refused Bequest（子类/实现者忽略或覆盖大部分继承内容 → 放弃继承，改用组合）。",
+        "when": "用气味基线比对 diff 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 43,
+            "line_end": 56
+          }
+        ]
+      },
+      {
+        "text": "仓库文档化的标准始终优先：基线会标出的做法若被仓库标准认可，就抑制该气味。",
+        "when": "仓库标准与基线冲突时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 40,
+            "line_end": 40
+          }
+        ]
+      },
+      {
+        "text": "每个气味都是有标签的启发式（如“possible Feature Envy”），永远不是硬违规；与这里的任何标准一样，工具已强制检查的内容跳过。",
+        "when": "报告基线气味时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 41,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "text": "报告中须区分硬违规与判断性意见：违反文档化标准可以是硬违规，但基线气味永远是判断性意见，且文档化的仓库标准覆盖基线。",
+        "when": "编写 Standards 子代理 brief 与最终报告时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 66,
+            "line_end": 66
+          }
+        ]
+      },
+      {
+        "text": "两个子代理的报告分别置于 `## Standards` 与 `## Spec` 下，不得合并或重排发现。",
+        "when": "汇总阶段",
+        "rationale": "两轴刻意分离：一处代码可能通过一轴而失败另一轴，分开报告可防止一轴掩盖另一轴。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 78,
+            "line_end": 80
+          },
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 84,
+            "line_end": 89
+          }
+        ]
+      },
+      {
+        "text": "不要在轴之间挑选单一冠军问题；这正是轴的分离要防止的重排。",
+        "when": "写总结行时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 80,
+            "line_end": 80
+          }
+        ]
+      },
+      {
+        "text": "issue tracker 本应已提供给执行者；若没有，告知用户运行 `/setup-matt-pocock-skills`。",
+        "when": "开始前发现缺少 issue tracker 上下文",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "text": "当 `CODING_STANDARDS.md` 或 `CONTRIBUTING.md` 存在时，它必须出现在 Standards 轴的标准来源清单中。",
+        "when": "收集标准来源时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 36,
+            "line_end": 36
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "git",
+        "kind": "tool",
+        "locator": "git",
+        "usage": "执行 `git diff <fixed-point>...HEAD`、`git log <fixed-point>..HEAD --oneline`、`git rev-parse <fixed-point>`。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 21,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "name": "issue tracker 文档",
+        "kind": "reference",
+        "locator": null,
+        "usage": "按其工作流抓取 commit message 中引用的 issue（`#123`、`Closes #45`、GitLab `!67` 等）。文档未随材料提供。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          },
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "name": "Fowler 气味基线（《Refactoring》第 3 章）",
+        "kind": "reference",
+        "locator": null,
+        "usage": "12 项固定代码气味的清单与修复方向；须完整粘贴进 Standards 子代理 prompt，因为子代理无法以其他方式获得。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 38,
+            "line_end": 65
+          }
+        ]
+      },
+      {
+        "name": "仓库编码标准文档",
+        "kind": "reference",
+        "locator": "CODING_STANDARDS.md、CONTRIBUTING.md",
+        "usage": "作为 Standards 轴的标准来源；需全仓搜索所有记录代码应如何编写的文件，此二者存在时必须列入。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 34,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "name": "spec 文件位置约定",
+        "kind": "reference",
+        "locator": "docs/、specs/、.scratch/",
+        "usage": "在前述来源都找不到 spec 时，按分支名或特性在这些目录下匹配 spec 文件。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      {
+        "name": "/setup-matt-pocock-skills",
+        "kind": "skill",
+        "locator": "/setup-matt-pocock-skills",
+        "usage": "issue tracker 未提供给执行者时，指示用户运行该命令。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "两轴为何分离",
+        "text": "一段改动可能通过一轴而失败另一轴：遵守全部标准但实现了错误的东西 → Standards 通过、Spec 失败；完全照 issue 要求做但违反项目惯例 → Spec 通过、Standards 失败。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 82,
+            "line_end": 89
+          }
+        ]
+      },
+      {
+        "topic": "报告篇幅约束",
+        "text": "两个子代理的 brief 都要求报告在 400 词以内。",
+        "evidence": [
+          {
+            "path": "skills/engineering/code-review/SKILL.md",
+            "line_start": 66,
+            "line_end": 72
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/engineering/code-review/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/steps/3",
+        "reason": "unread_dependency",
+        "detail": "第 29 行依赖“tracker doc”中的工作流来抓取 issue 内容，但该文档未随材料提供，无法确认具体抓取步骤；此处仅记录文档所述的来源优先级。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T15:29:10.763046+00:00"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "note": "Free Go model capability test on two already-normalized source versions. These comparison outputs do not add two new unique Skills.",
+  "items": [
+    {
+      "collection_id": "4efae2a88e2d4ec4ffe6",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+      "references": [
+        {
+          "path": "skills/productivity/grilling/SKILL.md"
+        },
+        {
+          "path": "skills/engineering/domain-modeling/SKILL.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "5efa4f962e732e9ecbf4",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/brand-guidelines/SKILL.md",
+      "references": []
+    }
+  ]
+}

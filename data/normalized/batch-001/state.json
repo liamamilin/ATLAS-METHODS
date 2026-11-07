@@ -325,7 +325,7 @@
     "collection_id": "e36d5d8a160259015b36",
     "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
     "key": "c0145739dd89ea0be92aa06bbaa2fe9c",
-    "updated_at": "2026-11-07T14:59:35.615419+00:00",
+    "updated_at": "2026-11-07T15:28:35.693459+00:00",
     "source": {
       "collection_id": "e36d5d8a160259015b36",
       "repository": "mattpocock/skills",
@@ -344,10 +344,10 @@
         "source_lines": 89
       }
     ],
-    "state": "failed",
-    "failure_stage": "model_or_validation",
-    "error": "['content']: Additional properties are not allowed ('gaps' was unexpected)\n[]: 'gaps' is a required property",
-    "attempt": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/003"
+    "state": "succeeded",
+    "record": "records/c0145739dd89ea0be92aa06bbaa2fe9c.json",
+    "attempt": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/004",
+    "warnings": []
   },
   "442409a9c3579dd11dd19e5121c0f3a2": {
     "collection_id": "3c4ca3c0ea22ca65b5c3",
@@ -1037,7 +1037,7 @@
     "collection_id": "5416b11c81efc2f9f021",
     "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
     "key": "3a5e358c8577cb9f70c5ba7231ed7c99",
-    "updated_at": "2026-11-07T15:00:48.646374+00:00",
+    "updated_at": "2026-11-07T15:28:35.693552+00:00",
     "source": {
       "collection_id": "5416b11c81efc2f9f021",
       "repository": "mattpocock/skills",
@@ -1056,10 +1056,10 @@
         "source_lines": 112
       }
     ],
-    "state": "failed",
-    "failure_stage": "model_or_validation",
-    "error": "['content', 'tasks', 0]: 'checks' is a required property\n['content', 'tasks', 0]: 'evidence' is a required property",
-    "attempt": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/003"
+    "state": "succeeded",
+    "record": "records/3a5e358c8577cb9f70c5ba7231ed7c99.json",
+    "attempt": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/004",
+    "warnings": []
   },
   "87eab0bdfb1ce693240f0f8ce6294c6d": {
     "collection_id": "6b9da56c4d7cc5e318ab",

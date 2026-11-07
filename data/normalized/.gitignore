@@ -7,3 +7,7 @@
 **/attempts/**/stderr.txt
 **/.run.lock
 **/execution.log
+# Local quota/cooldown state persists across batches; never a credential store.
+/.provider-routing-state.json
+/.provider-routing-state.lock
+/.provider-routing-state.tmp

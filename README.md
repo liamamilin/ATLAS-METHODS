@@ -8,7 +8,7 @@
 
 - 已接入：Schema、目标优先提示词、检查器，以及复用已有 OpenCode/Open Design 连接的可续跑批转换器。
 - 真实模型批次：[第 001 批状态与用量](data/normalized/batch-001/report.json)、[转换记录](data/normalized/batch-001/records.jsonl)；逐条保存，成功跳过，失败显式重试。
-- 2026-11-07 首批实际处理 7 个仓库的 40 条入口：保存 38 条，失败 2 条，待处理 0；[结果、失败原因和继续命令](normalization/batches/batch-001.report.md)。这些记录仍为未完整审阅、未执行。
+- 2026-11-07 首批实际处理 7 个仓库的 40 条入口：保存 40 条，失败 0 条，待处理 0。默认 Open Design 优先，额度限制时回退到实测 Go 免费模型、恢复后切回；[切换策略及实测报告](normalization/batches/provider-check-001.report.md)。这些记录仍为未完整审阅、未执行。
 - 人工样例是格式和内容参考，不是自动转换结果或方法有效性的证明。
 
 编码 Agent 先读 [AGENTS.md](AGENTS.md)，然后执行 [批转换任务](normalization/NEXT-TASK.md)。
