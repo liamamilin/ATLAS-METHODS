@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "90e0f870ac512f90e154",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/slack-gif-creator/SKILL.md",
+    "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+    "entry_sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22"
+  },
+  "files": [
+    {
+      "path": "skills/slack-gif-creator/SKILL.md",
+      "coverage": "full",
+      "sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22",
+      "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+      "bytes": 7841,
+      "source_lines": 254
+    }
+  ]
+}

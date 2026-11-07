@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-11-07T14:47:26.298404+00:00",
+  "source": {
+    "collection_id": "285ef5f2d449c3d93539",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/composition-patterns/SKILL.md",
+    "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+    "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "36d643e71415fe7d8cdcd7f806a15bdc786254d8371780196e441e69b9df4a42",
+  "input_files": [
+    {
+      "path": "skills/composition-patterns/SKILL.md",
+      "coverage": "full",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "bytes": 2886,
+      "source_lines": 89
+    },
+    {
+      "path": "skills/composition-patterns/AGENTS.md",
+      "coverage": "full",
+      "sha256": "89e3ddd58fcf99a53a50e25dfd21b8cde1be5f10b7df6bacd3dfa6796932f516",
+      "git_blob_sha": "558bf9aa1e36db2161f1633c9bfae14a819f0508",
+      "bytes": 22627,
+      "source_lines": 946
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498575e3ffe5KdcE1TXnlKyGq",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 13461,
+          "output": 3244,
+          "reasoning": 1775,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:47:59.026594+00:00"
+}

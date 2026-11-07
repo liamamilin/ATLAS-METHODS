@@ -1,0 +1,925 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "2dc2fa1b2e23631c348e",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/churn-prevention/SKILL.md",
+    "git_blob_sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+    "entry_sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355"
+  },
+  "content": {
+    "name": "churn-prevention",
+    "title": "SaaS 流失防治：取消流程、留存干预与支付催收",
+    "summary": "面向 SaaS 留存场景的做法集合：区分主动流失（客户主动取消）与非主动流失（扣款失败），按三种模式工作——从零设计取消流程、优化已有流程、搭建催款（dunning）恢复；并以风险信号与健康分做取消前的主动干预。核心机制是“按取消原因匹配挽留 offer”、按拒付类型决定重试策略，并用留存/恢复指标与 A/B 实验检验效果。",
+    "evidence": [
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "section": "How This Skill Works",
+        "line_start": 44,
+        "line_end": 61
+      },
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "section": "Cancel Flow Design",
+        "line_start": 63,
+        "line_end": 204
+      },
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "section": "Churn Prediction & Proactive Retention",
+        "line_start": 208,
+        "line_end": 270
+      },
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "section": "Involuntary Churn: Payment Recovery",
+        "line_start": 273,
+        "line_end": 334
+      },
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "section": "Metrics & Measurement",
+        "line_start": 338,
+        "line_end": 373
+      }
+    ],
+    "tasks": [
+      {
+        "id": "build-cancel-flow",
+        "goal": "从零设计一条取消流程，包含退出问卷、按原因匹配的动态挽留 offer、确认与取消后处理。",
+        "when": "用户要新建取消流程，或当前取消是即时生效、没有任何挽留环节时（该 Skill 的模式 1）。",
+        "inputs": [
+          "当前月度流失率（如已知，区分主动/非主动）",
+          "活跃订阅数、每客户平均 MRR",
+          "现有取消流程情况（是否有流程或即时取消）",
+          "计费服务商（Stripe、Chargebee、Paddle、Recurly、Braintree）与计费周期（月付/年付/两者）",
+          "是否支持暂停或降级，现有留存工具（Churnkey、ProsperStack、Raaft）",
+          "按用户的特征使用数据、参与度下滑识别能力、历史取消原因数据、激活指标",
+          "B2B 或 B2C、是否受自助取消法规约束、离站文案语气"
+        ],
+        "outputs": [
+          "取消流程：触发 → 问卷 → 动态 offer → 确认 → 取消后",
+          "退出问卷的原因选项集（含“其他”自由文本）",
+          "原因到主 offer/备选 offer 的映射表",
+          "取消后预期说明、重新激活路径与 win-back 触发"
+        ],
+        "steps": [
+          {
+            "action": "触发：客户在账户设置中点击“Cancel subscription”，进入流程。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 73,
+                "line_end": 74
+              }
+            ]
+          },
+          {
+            "action": "退出问卷：先问取消原因，用该原因决定后续展示哪个挽留 offer；原因为“业务关闭/变更”时跳过 offer。",
+            "when": "需要在多种挽留手段间做选择时",
+            "rationale": "问卷是整套流程的基础，offer 必须与原因匹配；对无法避免的处境应尊重而非推销。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 76,
+                "line_end": 77
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 100,
+                "line_end": 100
+              }
+            ]
+          },
+          {
+            "action": "按原因展示针对性的动态 offer（折扣、暂停、降级、功能解锁/试用延长、人工外联），只给一个主 offer 加一个备选。",
+            "when": null,
+            "rationale": "折扣救不了不用产品的人，路线图救不了付不起的人。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 79,
+                "line_end": 80
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 112,
+                "line_end": 124
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 199,
+                "line_end": 199
+              }
+            ]
+          },
+          {
+            "action": "若客户仍要取消，明确确认，并说明服务到当前计费周期结束为止。",
+            "when": "客户在 offer 后仍选择继续取消",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 82,
+                "line_end": 83
+              }
+            ]
+          },
+          {
+            "action": "取消后：设定预期、提供便捷的重新激活路径、触发 win-back 序列。",
+            "when": null,
+            "rationale": "部分流失用户之后会想回来。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 85,
+                "line_end": 86
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 388,
+                "line_end": 388
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "问卷为 1 个单选问题并带可选自由文本，原因选项不超过 5–8 个，最常见原因排前，且每季度按数据复核顺序。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 103,
+                "line_end": 106
+              }
+            ]
+          },
+          {
+            "text": "文案不制造愧疚感；用“帮助我们改进”式表述而非“你为什么离开”。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 107,
+                "line_end": 108
+              }
+            ]
+          },
+          {
+            "text": "UI 上“继续取消”入口始终可见（不做暗黑模式）；展示具体节省的美元金额而非抽象百分比；移动端可用。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 197,
+                "line_end": 202
+              }
+            ]
+          },
+          {
+            "text": "上线后跟踪取消流程挽留率与 offer 接受率，并与下表目标对照（挽留率 25–35%，接受率 15–25%）。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 346,
+                "line_end": 347
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "section": "Cancel Flow Design",
+            "line_start": 63,
+            "line_end": 204
+          }
+        ]
+      },
+      {
+        "id": "optimize-cancel-flow",
+        "goal": "分析已有取消数据，找出可改进点，提升挽留率与挽留质量。",
+        "when": "已有取消流程，需要按数据优化（该 Skill 的模式 2）。",
+        "inputs": [
+          "取消原因数据与历史流失记录",
+          "取消会话、offer 展示/接受数据",
+          "按获客渠道、套餐、任期、原因、offer 类型的队列数据",
+          "A/B 实验设计（可借助 ab-testing skill）"
+        ],
+        "outputs": [
+          "改进假设与单变量实验计划",
+          "按细分群体更新的原因- offer 映射",
+          "对“被挽留”客户后续 LTV 的评估"
+        ],
+        "steps": [
+          {
+            "action": "按获客渠道、套餐类型、任期（如 30/60/90 天）、取消原因、off er 类型做流失分群，找出增长中的原因和最有效的 offer。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 352,
+                "line_end": 359
+              }
+            ]
+          },
+          {
+            "action": "一次只测一个变量：折扣比例（20% vs 30%）、暂停时长（1 vs 3 个月）、问卷位置（offer 前/后）、呈现形式（弹窗 vs 整页）、文案语气（共情 vs 直接）。",
+            "when": "需要判断改动是否真的提升挽留时",
+            "rationale": "单变量便于归因。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 361,
+                "line_end": 371
+              }
+            ]
+          },
+          {
+            "action": "用 ab-testing skill 设计统计上严谨的测试；可用 PostHog 的 feature flags 在服务端分流不同流程，并用漏斗分析跟踪问卷→offer→接受/拒绝→确认各步。",
+            "when": "要做取消流程实验时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 373,
+                "line_end": 373
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "评估“被挽留”客户在 30 天后的留存/LTV：30 天后仍流失的客户不算真正被挽留。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 386,
+                "line_end": 386
+              }
+            ]
+          },
+          {
+            "text": "流程指标对照：取消流程挽留率 25–35%、offer 接受率 15–25%、暂停后再激活率 60–80%。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 346,
+                "line_end": 349
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 55,
+            "line_end": 59
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 338,
+            "line_end": 373
+          }
+        ]
+      },
+      {
+        "id": "setup-dunning",
+        "goal": "搭建非主动流失（扣款失败）的恢复体系：预催、按拒付类型的智能重试、催款邮件、宽限期与硬取消。",
+        "when": "要处理支付失败导致的流失（该 Skill 的模式 3）。",
+        "inputs": [
+          "计费服务商及其 Smart Retries / 催款邮件 / 卡更新能力",
+          "拒付类型数据（软拒付、硬拒付、需强验证）",
+          "年付计划的扣款时间",
+          "客户联系方式与支付更新页链接"
+        ],
+        "outputs": [
+          "催款栈：预催 → 智能重试 → 催款邮件 → 宽限期 → 硬取消",
+          "按拒付类型区分的重试计划",
+          "4 封催款邮件的时间、语气与内容"
+        ],
+        "steps": [
+          {
+            "action": "预催：卡到期前 30/15/7 天发提醒；注册时提示添加备用支付方式；接入卡更新服务（Visa/Mastercard 自动更新）；年付计划扣款前 3–5 天发预扣款通知。",
+            "when": null,
+            "rationale": "先防止失败发生，比事后追回更省力。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 283,
+                "line_end": 288
+              }
+            ]
+          },
+          {
+            "action": "按拒付类型分流：软拒付（余额不足、处理器超时）7–10 天内重试 3–5 次；硬拒付（卡被盗、账户关闭）不重试，直接要求换卡；需 3D Secure/SCA 验证的，引导客户更新支付方式。",
+            "when": "收到拒付时",
+            "rationale": "不同失败原因的可恢复性不同，统一重试会浪费机会。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 290,
+                "line_end": 298
+              }
+            ]
+          },
+          {
+            "action": "按节奏重试：失败后 24 小时、3 天、5 天、7 天（第 4 次配合催款邮件升级）；4 次之后硬取消并保留重新激活路径。可重试在原扣款成功的那一天（如原来 1 号成功就仍在 1 号重试），Stripe Smart Retries 会自动处理。",
+            "when": "执行软拒付重试时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 300,
+                "line_end": 307
+              }
+            ]
+          },
+          {
+            "action": "发送催款邮件序列：Day 0 友好提醒、Day 3 有帮助的提醒、Day 7 紧迫（“3 天后账户将被暂停”）、Day 10 最后警告。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 309,
+                "line_end": 316
+              }
+            ]
+          },
+          {
+            "action": "超过重试与邮件窗口后进入宽限期，再硬取消；取消时保留重新激活路径。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 279,
+                "line_end": 281
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 305,
+                "line_end": 305
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "催款邮件包含直达支付更新页的链接（尽量免登录），说明客户将失去什么（数据、团队访问），不指责客户，附支持联系方式，并优先用纯文本。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 318,
+                "line_end": 323
+              }
+            ]
+          },
+          {
+            "text": "用恢复基准自查：软拒付恢复 <40% 差 / 50–60% 平均 / 70%+ 好；硬拒付 <10% / 20–30% / 40%+；整体支付恢复 <30% / 40–50% / 60%+；预催防止 <无 / 10–15% / 20–30%。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 325,
+                "line_end": 332
+              }
+            ]
+          },
+          {
+            "text": "跟踪催款恢复率（已恢复/总失败支付），目标 50–60%。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 349,
+                "line_end": 349
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "section": "Involuntary Churn: Payment Recovery",
+            "line_start": 273,
+            "line_end": 334
+          }
+        ]
+      },
+      {
+        "id": "build-health-score",
+        "goal": "用加权风险信号构建 0–100 的客户健康分，并在取消发生前触发主动留存干预。",
+        "when": "希望在客户点击“取消”之前识别风险并干预时。",
+        "inputs": [
+          "登录频率、关键功能使用、支持情绪、账单健康、参与度等信号",
+          "每个原始信号到 0–100 分的产品特定映射",
+          "信号新鲜度窗口与最小覆盖策略",
+          "后续续费/流失结果（用于校验）"
+        ],
+        "outputs": [
+          "0–100 健康分与覆盖率（或“数据不足”判定）",
+          "分数区间到动作的对应（分级/干预）",
+          "干预触发器清单"
+        ],
+        "steps": [
+          {
+            "action": "先为每个组成项定义在同一个 0–100 尺度上的分数（越高越健康），并记录原始用法、情绪、账单位到分数的产品特定映射；不要直接把登录次数、1–5 情绪评分和百分比相加。",
+            "when": "构建健康分之前",
+            "rationale": "不同量纲直接相加没有意义。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 227,
+                "line_end": 229
+              }
+            ]
+          },
+          {
+            "action": "把缺失或过期信号视为不可用，而不是自动健康或记 0；在使用分数前设定新鲜度窗口和最小覆盖策略。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 231,
+                "line_end": 231
+              }
+            ]
+          },
+          {
+            "action": "若覆盖策略允许部分评分，按 sum(weight × observed score) / sum(observed weights) 计算，并同时报告覆盖率（已观测权重之和）；否则返回“数据不足”；全部不可用则不给分。",
+            "when": "存在缺失信号时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 231,
+                "line_end": 231
+              }
+            ]
+          },
+          {
+            "action": "按分数区间采取动作：80–100 健康（追加销售机会）、60–79 需关注（主动问候）、40–59 有风险（干预活动）、0–39 危急（人工外联）。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 251,
+                "line_end": 256
+              }
+            ]
+          },
+          {
+            "action": "按触发条件做主动干预：使用量两周内下降 >50% 发求助邮件；接近套餐上限做升级提示；14 天未登录发再激活邮件；NPS 贬损者（0–6）24 小时内人工跟进；支持工单超 48 小时未解决则升级并主动同步进展；年付续费前 30 天发价值回顾与续费确认。",
+            "when": null,
+            "rationale": "最好的挽留发生在客户点“取消”之前。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 210,
+                "line_end": 210
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 260,
+                "line_end": 269
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "跟踪前置信号（如登录频率下降 50%+、关键功能停用、工单先激增后归零、账单页访问增加、导出数据等），并按信号的风险等级与提前期排序使用。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 212,
+                "line_end": 225
+              }
+            ]
+          },
+          {
+            "text": "在投入运营前，用后续实际续费/流失结果校验分数映射与干预阈值；文档中的权重与分级只是示意起点，不是已验证的流失预测。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 229,
+                "line_end": 229
+              },
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 249,
+                "line_end": 249
+              }
+            ]
+          },
+          {
+            "text": "不要把个人推荐评分 0–6（贬损者）与聚合 NPS（−100 到 100）混为同一指标；不得在未满足覆盖策略时把部分分数当作健康账户处理。",
+            "evidence": [
+              {
+                "path": "skills/churn-prevention/SKILL.md",
+                "line_start": 231,
+                "line_end": 233
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "section": "Churn Prediction & Proactive Retention",
+            "line_start": 208,
+            "line_end": 270
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "流失分两类并分别处理：主动流失（客户选择取消）用取消流程、挽留 offer、退出问卷；非主动流失（支付失败）用催款邮件、智能重试、卡更新服务。",
+        "when": "规划整体留存策略时",
+        "rationale": "两类流失的成因不同，需要不同策略；主动流失通常占总流失 50–70%，非主动占 30–50%，但非主动往往更容易修复。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 46,
+            "line_end": 53
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 275,
+            "line_end": 275
+          }
+        ]
+      },
+      {
+        "text": "挽留 offer 必须匹配取消原因：太贵→折扣（20–30%，持续 2–3 个月）或降级；用得不够→暂停 1–3 个月或免费上手辅导；缺功能→路线图预览+时间表或替代方案；转向竞品→竞品对比+折扣或反馈沟通；技术问题→立即升级支持或补偿+优先修复；临时/季节性→暂停或临时降级；业务关闭→跳过 offer。",
+        "when": "展示动态挽留 offer 时",
+        "rationale": "折扣救不了不用产品的人，路线图救不了付不起的人。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 114,
+            "line_end": 124
+          }
+        ]
+      },
+      {
+        "text": "折扣避免 50% 以上（会把客户训练成等促销才取消再回来），限定有效期，并展示节省的美元金额而非只有百分比。",
+        "when": "使用折扣类挽留",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 128,
+            "line_end": 132
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 382,
+            "line_end": 382
+          }
+        ]
+      },
+      {
+        "text": "暂停最长 1–3 个月（超过 3 个月很少再激活），需保留客户数据与设置，并提前通知后自动重新激活。",
+        "when": "使用暂停类挽留",
+        "rationale": "文档称 60–80% 的暂停者最终会回到活跃状态。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 134,
+            "line_end": 138
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 387,
+            "line_end": 387
+          }
+        ]
+      },
+      {
+        "text": "降级挽留要展示保留什么、失去什么，用“把套餐调到合适规模”而非“降级”的表述，并保留便捷的回升路径。",
+        "when": "使用降级类挽留",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 140,
+            "line_end": 144
+          }
+        ]
+      },
+      {
+        "text": "高价值账户（按 MRR 排名前 10–20%）走人工外联：转客户成功团队电话沟通，小公司可由创始人发个人邮件。",
+        "when": "高价值账户出现取消意向时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 151,
+            "line_end": 154
+          }
+        ]
+      },
+      {
+        "text": "取消 UI 不做暗黑模式：保留可见的“继续取消”；一个主 offer 加一个备选，不堆一墙选项；尽量使用客户姓名与账户数据；移动端友好。",
+        "when": "设计取消页界面时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 197,
+            "line_end": 202
+          }
+        ]
+      },
+      {
+        "text": "健康分的权重是示意性起点（登录频率 ×0.30、功能使用 ×0.25、支持情绪 ×0.15、账单健康 ×0.15、参与度 ×0.15），不是经过验证的流失预测。",
+        "when": "构建健康分模型时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 229,
+            "line_end": 229
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 237,
+            "line_end": 247
+          }
+        ]
+      },
+      {
+        "text": "卡更新服务可减少硬拒付 30–50%；软拒付在 7–10 天内重试 3–5 次；硬拒付不重试，直接要求换卡。",
+        "when": "配置支付重试时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 287,
+            "line_end": 298
+          }
+        ]
+      },
+      {
+        "text": "一次只测一个变量；取消流程实验可用 PostHog 的 feature flags 与漏斗分析。",
+        "when": "做取消流程 A/B 测试时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 361,
+            "line_end": 373
+          }
+        ]
+      },
+      {
+        "text": "常见错误：完全没有取消流程（哪怕简单问卷加一个 offer 也能挽留 10–15%）；把取消入口藏起来（许多司法辖区要求易取消，如 FTC Click-to-Cancel 规则）；所有原因用同一个 offer；折扣过深；忽略非主动流失；没有催款邮件；愧疚式文案；不跟踪挽留 offer 的 LTV；暂停过久；没有取消后的回访路径。",
+        "when": "自查取消与留存体系时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 377,
+            "line_end": 388
+          }
+        ]
+      },
+      {
+        "text": "月度流失率目标 <5%（B2C）、<2%（B2B）；净收入流失应为负（净扩张）；“取消到生效”的天数作为趋势跟踪。",
+        "when": "设定流失指标时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 342,
+            "line_end": 350
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "references/cancel-flow-patterns.md",
+        "kind": "reference",
+        "locator": "skills/churn-prevention/references/cancel-flow-patterns.md",
+        "usage": "按行业与计费服务商划分的详细取消流程模式；本次未读取，能力仅限文档所述。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 204,
+            "line_end": 204
+          }
+        ]
+      },
+      {
+        "name": "references/dunning-playbook.md",
+        "kind": "reference",
+        "locator": "skills/churn-prevention/references/dunning-playbook.md",
+        "usage": "含服务商特定配置的完整催款手册；本次未读取，能力仅限文档所述。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 334,
+            "line_end": 334
+          }
+        ]
+      },
+      {
+        "name": "product-marketing context",
+        "kind": "reference",
+        "locator": ".agents/product-marketing.md（或 .claude/product-marketing.md、旧名 product-marketing-context.md）",
+        "usage": "开始前若存在则先读，用其产品营销上下文，只追问未覆盖或本任务特有的信息。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 14,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "name": "tools/REGISTRY.md",
+        "kind": "reference",
+        "locator": "tools/REGISTRY.md",
+        "usage": "实现阶段查询工具注册表。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 394,
+            "line_end": 394
+          }
+        ]
+      },
+      {
+        "name": "PostHog 集成指南",
+        "kind": "reference",
+        "locator": "tools/integrations/posthog.md",
+        "usage": "取消流程实验的 feature flags 与漏斗分析接入说明；本次未读取。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 373,
+            "line_end": 373
+          }
+        ]
+      },
+      {
+        "name": "Churnkey / ProsperStack / Raaft / Chargebee Retention",
+        "kind": "tool",
+        "locator": null,
+        "usage": "留存平台选项：完整取消流程+催款（Churnkey，宣称平均挽留率 34%）、带分析的规则引擎（ProsperStack，集成 Stripe/Chargebee）、简易搭建（Raaft）、Chargebee 原生集成（原 Brightback）。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 396,
+            "line_end": 403
+          }
+        ]
+      },
+      {
+        "name": "Stripe / Chargebee / Paddle / Recurly / Braintree",
+        "kind": "tool",
+        "locator": null,
+        "usage": "计费与催款能力对照：智能重试、催款邮件、卡更新为内置/手动/经网关等不同组合；Braintree 需手动配置重试与邮件。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 405,
+            "line_end": 413
+          }
+        ]
+      },
+      {
+        "name": "stripe / customer-io / posthog / mixpanel / ga4 / segment CLI",
+        "kind": "tool",
+        "locator": null,
+        "usage": "分别用于订阅与催款配置、催款邮件与留存活动、取消流程实验与漏斗、使用跟踪与流失信号分析、健康分事件路由。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 415,
+            "line_end": 423
+          }
+        ]
+      },
+      {
+        "name": "相关 Skills",
+        "kind": "skill",
+        "locator": null,
+        "usage": "emails（取消后 win-back 序列）、paywalls（应用内升级与试用到期）、pricing（套餐结构与年付折扣）、onboarding（激活以防早期流失）、analytics（流失信号事件）、ab-testing（统计严谨的流程实验）。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 427,
+            "line_end": 434
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "健康分部分数据计算示例",
+        "text": "仅有登录分 80（权重 0.30）与功能使用分 60（权重 0.25）时，部分分为 (0.30×80 + 0.25×60)/0.55 = 70.91，覆盖率 55%；该示例展示公式，不表示可据此当作健康账户处理。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 231,
+            "line_end": 231
+          }
+        ]
+      },
+      {
+        "topic": "取消流程 UI 示例",
+        "text": "示例界面演示“太贵”选择后展示“25% 折扣 3 个月、每月省 $XX”，并保留“不，谢谢，继续取消”与降级入口；这是示例形态，不是唯一实现。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 158,
+            "line_end": 195
+          }
+        ]
+      },
+      {
+        "topic": "基准数值的性质",
+        "text": "流失构成比例、恢复基准、指标目标等均为文档给出的参考区间/经验值，文档未说明其数据来源或验证方法。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 53,
+            "line_end": 53
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 325,
+            "line_end": 332
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 340,
+            "line_end": 350
+          }
+        ]
+      },
+      {
+        "topic": "供应商声明",
+        "text": "Churnkey 的“34% 平均挽留率”与卡更新服务“减少硬拒付 30–50%”等属于文档转述的供应商/资料说法，未经本 Skill 验证。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 287,
+            "line_end": 287
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 400,
+            "line_end": 400
+          }
+        ]
+      },
+      {
+        "topic": "法规与合规提示",
+        "text": "部分法规要求自助取消（文档提到 FTC Click-to-Cancel 规则），因此是否必须提供自助取消需按所在辖区确认；文档只作提示。",
+        "evidence": [
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 39,
+            "line_end": 39
+          },
+          {
+            "path": "skills/churn-prevention/SKILL.md",
+            "line_start": 380,
+            "line_end": 380
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks",
+        "reason": "unread_dependency",
+        "detail": "references/cancel-flow-patterns.md（按行业与计费服务商的流程模式）和 references/dunning-playbook.md（服务商特定配置的完整催款手册）未被读取；本记录中的流程与催款做法限于 SKILL.md 文档所述，细化到具体行业或服务商时需回查这两个文件。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:54:45.875883+00:00"
+  }
+}

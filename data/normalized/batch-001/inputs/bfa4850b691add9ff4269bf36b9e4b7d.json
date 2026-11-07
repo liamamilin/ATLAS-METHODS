@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "237b32583f4ed1a40f85",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/systematic-debugging/SKILL.md",
+    "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+    "entry_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+  },
+  "files": [
+    {
+      "path": "skills/systematic-debugging/SKILL.md",
+      "coverage": "full",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+      "bytes": 9530,
+      "source_lines": 283
+    }
+  ]
+}

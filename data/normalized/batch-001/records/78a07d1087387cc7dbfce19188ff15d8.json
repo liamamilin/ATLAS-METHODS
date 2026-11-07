@@ -1,0 +1,298 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "20e6303dc33a24a868aa",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/writing-guidelines/SKILL.md",
+    "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+    "entry_sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d"
+  },
+  "content": {
+    "name": "writing-guidelines",
+    "title": "写作规范合规审查（Writing Guidelines）",
+    "summary": "按需实时拉取最新的 Writing Guidelines 规范，读取用户指定的文件或模式，对照拉取内容中的全部规则检查文档或散文，并以简洁的 `file:line` 格式（遵循规范指定的输出格式）报告发现；未指定文件时先询问用户要审查哪些文件。",
+    "evidence": [
+      {
+        "path": "skills/writing-guidelines/SKILL.md",
+        "section": "How It Works",
+        "line_start": 14,
+        "line_end": 19
+      },
+      {
+        "path": "skills/writing-guidelines/SKILL.md",
+        "section": "Usage",
+        "line_start": 31,
+        "line_end": 39
+      }
+    ],
+    "tasks": [
+      {
+        "id": "review-writing-guidelines",
+        "goal": "审查指定文件（或文件模式）是否符合最新拉取的 Writing Guidelines，并输出定位到行的发现。",
+        "when": "用户要求审查文档/散文的写作规范合规性（如 “review my docs”、“check writing style”、“audit prose”、“review docs voice and tone”、“check this page against the writing handbook”），或提供文件/模式参数时。",
+        "inputs": [
+          "待审查文件或文件模式（argument-hint: <file-or-pattern>）",
+          "从规范来源 URL 实时拉取的 Writing Guidelines 内容"
+        ],
+        "outputs": [
+          "按规范指定格式输出的简洁 `file:line` 发现列表"
+        ],
+        "steps": [
+          {
+            "action": "从规范来源 URL 拉取最新的 Writing Guidelines 内容（使用 WebFetch）",
+            "when": "每次审查开始时",
+            "rationale": "来源说明拉取到的内容包含全部规则与输出格式指令。",
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 16,
+                "line_end": 16
+              },
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 23,
+                "line_end": 29
+              }
+            ]
+          },
+          {
+            "action": "读取用户指定的文件或按给定模式读取文件",
+            "when": "用户提供了文件或模式参数",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 17,
+                "line_end": 17
+              },
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 33,
+                "line_end": 35
+              }
+            ]
+          },
+          {
+            "action": "对照拉取到的规范中的全部规则检查文件",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 18,
+                "line_end": 18
+              },
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          },
+          {
+            "action": "以简洁的 `file:line` 格式输出发现，并遵循拉取规范中指定的输出格式",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 19,
+                "line_end": 19
+              },
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 37,
+                "line_end": 37
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "检查必须覆盖拉取规范中的全部规则，而不是只选其中一部分规则。",
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 18,
+                "line_end": 18
+              }
+            ]
+          },
+          {
+            "text": "发现须用简洁的 `file:line` 格式输出，并符合拉取规范指定的输出格式。",
+            "evidence": [
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 19,
+                "line_end": 19
+              },
+              {
+                "path": "skills/writing-guidelines/SKILL.md",
+                "line_start": 37,
+                "line_end": 37
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 14,
+            "line_end": 19
+          },
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 31,
+            "line_end": 39
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "每次审查前都要重新拉取最新的规范，不能复用旧的拉取结果。",
+        "when": "每次审查（before each review）",
+        "rationale": "来源说明拉取到的内容包含全部规则与输出格式指令。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 21,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "text": "必须对照拉取到的规范中的全部规则进行检查。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 18,
+            "line_end": 18
+          }
+        ]
+      },
+      {
+        "text": "输出发现使用简洁的 `file:line` 格式，并按拉取规范中指定的格式输出。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          },
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 37,
+            "line_end": 37
+          }
+        ]
+      },
+      {
+        "text": "用户未指定文件时，先询问用户要审查哪些文件，不自行决定审查对象。",
+        "when": "未提供文件或模式参数时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 39,
+            "line_end": 39
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Writing Guidelines 规范来源",
+        "kind": "reference",
+        "locator": "https://raw.githubusercontent.com/vercel-labs/writing-guidelines/main/command.md",
+        "usage": "每次审查前拉取最新规则；该内容包含全部规则与输出格式指令（本记录未获取该外部内容）。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 21,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "name": "WebFetch",
+        "kind": "tool",
+        "locator": "WebFetch",
+        "usage": "按文档所述用于检索最新规则；本记录未验证其可用性或实际返回内容。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "触发场景",
+        "text": "description 列出的适用请求包括 “review my docs”、“check writing style”、“audit prose”、“review docs voice and tone”、“check this page against the writing handbook”。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      {
+        "topic": "参数提示",
+        "text": "metadata 中的 argument-hint 为 `<file-or-pattern>`，表明该 Skill 期望接收文件或文件模式参数。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 4,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "topic": "规则不在本地文件",
+        "text": "本 SKILL.md 未列出具体写作规则，规则与输出格式细节均来自外部 command.md 的实时拉取内容。",
+        "evidence": [
+          {
+            "path": "skills/writing-guidelines/SKILL.md",
+            "line_start": 21,
+            "line_end": 29
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/writing-guidelines/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/rules",
+        "reason": "not_stated",
+        "detail": "具体写作规则不在本 SKILL.md 中，而由外部 URL 的实时拉取内容定义；固定来源未包含该内容，因此无法回查具体条款或其义务强度。"
+      },
+      {
+        "target": "/content/tasks/0/outputs",
+        "reason": "not_stated",
+        "detail": "输出格式的完整细节由拉取到的规范定义，本文件只约定 `file:line` 的简洁形式，无法从本地来源确定字段与结构。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:53:36.190492+00:00"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:48:55.151245+00:00",
+  "source": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/brand-guidelines/SKILL.md",
+    "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+    "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "a156be8d29d7c41af0a42798a5041be61218b7efa4d692e36b7dba54ed7fa38d",
+  "input_files": [
+    {
+      "path": "skills/brand-guidelines/SKILL.md",
+      "coverage": "full",
+      "sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe",
+      "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+      "bytes": 2235,
+      "source_lines": 73
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e49841ad2ffe3JwXpg3SIvvtYb",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 4892,
+          "output": 2186,
+          "reasoning": 1072,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:49:16.923868+00:00"
+}

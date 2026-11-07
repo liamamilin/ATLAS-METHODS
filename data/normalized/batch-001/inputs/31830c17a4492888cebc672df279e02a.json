@@ -1,0 +1,28 @@
+{
+  "source": {
+    "collection_id": "285ef5f2d449c3d93539",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/composition-patterns/SKILL.md",
+    "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+    "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+  },
+  "files": [
+    {
+      "path": "skills/composition-patterns/SKILL.md",
+      "coverage": "full",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "bytes": 2886,
+      "source_lines": 89
+    },
+    {
+      "path": "skills/composition-patterns/AGENTS.md",
+      "coverage": "full",
+      "sha256": "89e3ddd58fcf99a53a50e25dfd21b8cde1be5f10b7df6bacd3dfa6796932f516",
+      "git_blob_sha": "558bf9aa1e36db2161f1633c9bfae14a819f0508",
+      "bytes": 22627,
+      "source_lines": 946
+    }
+  ]
+}

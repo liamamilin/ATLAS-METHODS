@@ -1,0 +1,37 @@
+{
+  "started_at": "2026-11-07T14:48:48.366921+00:00",
+  "source": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/brand-guidelines/SKILL.md",
+    "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+    "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "ddbf123d03d2d51c338341934a04999c69f4185a0f173880429a24aa6cb59186",
+  "input_files": [
+    {
+      "path": "skills/brand-guidelines/SKILL.md",
+      "coverage": "full",
+      "sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe",
+      "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+      "bytes": 2235,
+      "source_lines": 73
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498434dffferDNFceoD3kvmu4",
+  "usage": {
+    "available": false,
+    "reason": "No session export with token counts"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:48:55.150752+00:00"
+}

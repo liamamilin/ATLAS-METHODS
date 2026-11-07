@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-11-07T14:45:28.997782+00:00",
+  "source": {
+    "collection_id": "443f91aa53a6736ff426",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/ab-testing/SKILL.md",
+    "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+    "entry_sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "3d6bf3b59afaf8d8a1f4c89bb6afee2cb11d23a2e7b687c5cdda279fdb0a63b8",
+  "input_files": [
+    {
+      "path": "skills/ab-testing/SKILL.md",
+      "coverage": "full",
+      "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+      "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+      "bytes": 13346,
+      "source_lines": 361
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4987401cffe82hBgJc1oU207K",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8064,
+          "output": 7980,
+          "reasoning": 3577,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "failed",
+  "error": "['content', 'resources', 1, 'evidence', 0]: {'path': 'skills/ab-testing/SKILL.md', 'line_start': 96} is not valid under any of the given schemas\n['content', 'resources', 1, 'evidence', 0]: 'line_end' is a dependency of 'line_start'\n['content', 'resources', 10, 'evidence', 0]: {'path': 'skills/ab-testing/SKILL.md', 'line_start': 359} is not valid under any of the given schemas\n['content', 'resources', 10, 'evidence', 0]: 'line_end' is a dependency of 'line_start'\n['content', 'resources', 11, 'evidence', 0]: {'path': 'skills/ab-testing/SKILL.md', 'line_start': 360} is not valid under any of the given schemas\n['content', 'resources', 11, 'evidence', 0]: 'line_end' is a dependency of 'line_start'\n['content', 'resources', 12, 'evidence', 0]: {'path': 'skills/ab-testing/SKILL.md', 'line_start': 361} is not valid under any of the given schemas\n['content', 'resources', 12, 'evidence', 0]: 'line_end' is a dependency of 'line_start'",
+  "finished_at": "2026-11-07T14:46:31.010810+00:00"
+}

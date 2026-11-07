@@ -1,0 +1,70 @@
+{
+  "started_at": "2026-11-07T14:50:07.198688+00:00",
+  "source": {
+    "collection_id": "3c4ca3c0ea22ca65b5c3",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-docs-write/SKILL.md",
+    "git_blob_sha": "4c903126fa2d9a0e2ba3feb129c8c8f5a6a50fbb",
+    "entry_sha256": "219028230078e0d14df314f2ae18b5918721fb5e298bba7d0a010937b2965045"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "130d58fb205c11a8666cff5e004f210d56a4d7581a4561a149cfdd62a2ab8c74",
+  "input_files": [
+    {
+      "path": "skills/gws-docs-write/SKILL.md",
+      "coverage": "full",
+      "sha256": "219028230078e0d14df314f2ae18b5918721fb5e298bba7d0a010937b2965045",
+      "git_blob_sha": "4c903126fa2d9a0e2ba3feb129c8c8f5a6a50fbb",
+      "bytes": 1137,
+      "source_lines": 50
+    },
+    {
+      "path": "skills/gws-shared/SKILL.md",
+      "coverage": "full",
+      "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+      "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+      "bytes": 2668,
+      "source_lines": 82
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e49830162ffeMn1oqtkV7XNox0",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 5624,
+          "output": 2462,
+          "reasoning": 2655,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:50:39.224291+00:00"
+}

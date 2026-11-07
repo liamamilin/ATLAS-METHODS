@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:49:53.227562+00:00",
+  "source": {
+    "collection_id": "443f91aa53a6736ff426",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/ab-testing/SKILL.md",
+    "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+    "entry_sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "a691cae4ac2fff8273ac6048c340e6ffc733e67e408b6492a6f5b07adda0df77",
+  "input_files": [
+    {
+      "path": "skills/ab-testing/SKILL.md",
+      "coverage": "full",
+      "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+      "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+      "bytes": 13346,
+      "source_lines": 361
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498337fbffe0kMBMwZBKX9mv5",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8186,
+          "output": 5861,
+          "reasoning": 8232,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:51:16.869271+00:00"
+}

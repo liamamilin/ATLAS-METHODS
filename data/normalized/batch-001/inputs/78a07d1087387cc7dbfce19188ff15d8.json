@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "20e6303dc33a24a868aa",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/writing-guidelines/SKILL.md",
+    "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+    "entry_sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d"
+  },
+  "files": [
+    {
+      "path": "skills/writing-guidelines/SKILL.md",
+      "coverage": "full",
+      "sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d",
+      "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+      "bytes": 1233,
+      "source_lines": 39
+    }
+  ]
+}

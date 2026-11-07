@@ -1,0 +1,358 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/brand-guidelines/SKILL.md",
+    "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+    "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+  },
+  "content": {
+    "name": "brand-guidelines",
+    "title": "应用 Anthropic 官方品牌配色与字体",
+    "summary": "为可能需要 Anthropic 品牌外观的工件套用官方主色、强调色与字体规范：标题（24pt 及以上）用 Poppins、正文用 Lora，自定义字体不可用时回退到 Arial/Georgia；非文本形状使用强调色并在橙、蓝、绿之间循环，颜色以 RGB 精确值通过 python-pptx 的 RGBColor 应用。",
+    "evidence": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "section": "Overview / Brand Guidelines / Features / Technical Details",
+        "line_start": 1,
+        "line_end": 73
+      }
+    ],
+    "tasks": [
+      {
+        "id": "apply-brand-styling",
+        "goal": "将 Anthropic 官方品牌配色与字体应用到需要体现该品牌外观的工件上。",
+        "when": "品牌色、样式指南、视觉格式或公司设计标准适用时；适用于任何可能受益于 Anthropic 外观的工件类型。",
+        "inputs": [
+          "待加工的工件（如演示文稿等由 python-pptx 处理的产物）",
+          "Anthropic 配色规范（主色与强调色的 RGB 值）",
+          "字体规范（Poppins / Lora 及回退字体）"
+        ],
+        "outputs": [
+          "已套用品牌主色/强调色与字体规则的工件",
+          "标题与正文按字号区分字体、非文本形状使用强调色的视觉结果"
+        ],
+        "steps": [
+          {
+            "action": "确定工件的文本层级与非文本形状，决定哪些元素属于标题、正文或装饰形状。",
+            "when": "开始套用样式时",
+            "rationale": "字体与颜色的选择依赖元素类别（标题/正文/形状）。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 47,
+                "line_end": 58
+              }
+            ]
+          },
+          {
+            "action": "为背景与文本选择主色：Dark `#141413` 用于正文和深色背景；Light `#faf9f5` 用于浅色背景及深色背景上的文字；Mid Gray `#b0aea5` 用于次级元素；Light Gray `#e8e6dc` 用于微弱背景。",
+            "when": "需要设置背景色或文字颜色时",
+            "rationale": "四个主色各自对应固定的使用场景。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 19,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "为非文本元素选择强调色：Orange `#d97757` 为主强调色，Blue `#6a9bcc` 为次强调色，Green `#788c5d` 为第三强调色。",
+            "when": "为非文本形状或多个强调元素配色时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 26,
+                "line_end": 30
+              }
+            ]
+          },
+          {
+            "action": "按字号套用字体：标题（24pt 及以上）使用 Poppins，正文使用 Lora。",
+            "when": "设置文本字体时",
+            "rationale": "字体规范以 24pt 为标题与正文的分界。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 34,
+                "line_end": 35
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 42,
+                "line_end": 43
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 49,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "当 Poppins / Lora 不可用时，标题回退到 Arial、正文回退到 Georgia，使用系统已安装字体完成。",
+            "when": "自定义字体在环境中不可用时",
+            "rationale": "无需安装字体即可工作，并保持跨系统的可读性。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 44,
+                "line_end": 45
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 64,
+                "line_end": 66
+              }
+            ]
+          },
+          {
+            "action": "对非文本形状使用强调色，并在橙色、蓝色、绿色之间循环分配。",
+            "when": "工件中存在一个或多个非文本形状时",
+            "rationale": "在保持品牌一致的同时维持视觉趣味。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 56,
+                "line_end": 58
+              }
+            ]
+          },
+          {
+            "action": "依据背景做颜色选择以保持文本层级与格式，并以 RGB 值通过 python-pptx 的 RGBColor 类精确应用品牌色。",
+            "when": "写入具体颜色值时",
+            "rationale": "使用 RGB 数值可精确匹配品牌色并保持跨系统颜色保真。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 51,
+                "line_end": 52
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 69,
+                "line_end": 73
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "字体不可用时回退到 Arial（标题）与 Georgia（正文），并保持所有系统上的可读性；无字体安装要求。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 44,
+                "line_end": 45
+              },
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 64,
+                "line_end": 67
+              }
+            ]
+          },
+          {
+            "text": "颜色应以 RGB 值应用，以维持精确品牌匹配与跨系统颜色保真。",
+            "evidence": [
+              {
+                "path": "skills/brand-guidelines/SKILL.md",
+                "line_start": 69,
+                "line_end": 73
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 3,
+            "line_end": 73
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "标题（24pt 及以上）使用 Poppins，正文使用 Lora。",
+        "when": "设置字号为 24pt 及以上的标题文本，或正文文本时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 47,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "text": "主色按固定用途分配：Dark `#141413` 用于正文与深色背景，Light `#faf9f5` 用于浅色背景和深色底上的文字，Mid Gray `#b0aea5` 用于次级元素，Light Gray `#e8e6dc` 用于微弱背景。",
+        "when": "为背景、正文、次级元素配色时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 19,
+            "line_end": 24
+          }
+        ]
+      },
+      {
+        "text": "强调色按优先级指定：Orange `#d97757` 为主强调，Blue `#6a9bcc` 为次强调，Green `#788c5d` 为第三强调；非文本形状使用强调色并在此三色间循环。",
+        "when": "为非文本形状或多处强调元素配色时",
+        "rationale": "保持视觉趣味的同时维持品牌一致性。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 26,
+            "line_end": 30
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 56,
+            "line_end": 58
+          }
+        ]
+      },
+      {
+        "text": "自定义字体不可用时自动回退到 Arial（标题）与 Georgia（正文），不需要安装字体。",
+        "when": "环境中缺少 Poppins 或 Lora 时",
+        "rationale": "确保在现有系统字体下仍可工作并保持可读性。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 64,
+            "line_end": 66
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Poppins",
+        "kind": "environment",
+        "locator": null,
+        "usage": "标题字体；需预安装在环境中以获得最佳效果，缺失时回退 Arial（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 34,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "name": "Lora",
+        "kind": "environment",
+        "locator": null,
+        "usage": "正文字体；需预安装在环境中以获得最佳效果，缺失时回退 Georgia（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 35,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "name": "Arial / Georgia",
+        "kind": "environment",
+        "locator": null,
+        "usage": "Poppins / Lora 不可用时的回退字体（标题 / 正文），依赖系统已安装字体。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 44,
+            "line_end": 45
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 65,
+            "line_end": 65
+          }
+        ]
+      },
+      {
+        "name": "python-pptx 的 RGBColor 类",
+        "kind": "tool",
+        "locator": "python-pptx",
+        "usage": "以 RGB 值写入品牌色以精确匹配（文档所述；未提供其实现细节）。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 71,
+            "line_end": 72
+          }
+        ]
+      },
+      {
+        "name": "LICENSE.txt",
+        "kind": "reference",
+        "locator": "LICENSE.txt",
+        "usage": "完整许可条款所在文件，原文未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 4,
+            "line_end": 4
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "字体预装建议",
+        "text": "文档建议在运行环境中预先安装 Poppins 与 Lora 字体以获得最佳效果；未预装时仍可通过回退字体工作。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 36,
+            "line_end": 36
+          },
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 66,
+            "line_end": 67
+          }
+        ]
+      },
+      {
+        "topic": "文档范围",
+        "text": "该 Skill 正文只给出配色值、字体规则与颜色应用方式，未包含脚本、模板或具体执行代码。",
+        "evidence": [
+          {
+            "path": "skills/brand-guidelines/SKILL.md",
+            "line_start": 1,
+            "line_end": 73
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks",
+        "reason": "not_stated",
+        "detail": "原文只陈述样式规则与应用机制，未给出可执行的操作流程或代码，也未说明除 python-pptx 产物之外的具体工件类型如何处理；步骤按文档所述规则归并，未补造实现细节。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:49:16.921955+00:00"
+  }
+}

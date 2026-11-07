@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "fec0dc3545f101253547",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/academy-guide/SKILL.md",
+    "git_blob_sha": "cefeaeb20cc29a803af0335d7c7155b066d8770f",
+    "entry_sha256": "f27992510c051355dfe68c92394d509af730da5298094ec86834ee40bbd31376"
+  },
+  "files": [
+    {
+      "path": "skills/academy-guide/SKILL.md",
+      "coverage": "full",
+      "sha256": "f27992510c051355dfe68c92394d509af730da5298094ec86834ee40bbd31376",
+      "git_blob_sha": "cefeaeb20cc29a803af0335d7c7155b066d8770f",
+      "bytes": 7755,
+      "source_lines": 147
+    }
+  ]
+}

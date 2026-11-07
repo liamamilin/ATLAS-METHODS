@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:55:01.827970+00:00",
+  "source": {
+    "collection_id": "ecf753893a5d0f9b58d4",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/product-marketing/SKILL.md",
+    "git_blob_sha": "3af463a602aa0233c4d5fc98c23ba13224aa8f6b",
+    "entry_sha256": "19ece0fa75c72a5a8b6e90db80f506586f54cc93bae6bffbb1bd2ef4ae7d603c"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "a90d2a822e71a583e19a5801a32de28eeb4f9d40aef278f6c3c1ac1440d08522",
+  "input_files": [
+    {
+      "path": "skills/product-marketing/SKILL.md",
+      "coverage": "full",
+      "sha256": "19ece0fa75c72a5a8b6e90db80f506586f54cc93bae6bffbb1bd2ef4ae7d603c",
+      "git_blob_sha": "3af463a602aa0233c4d5fc98c23ba13224aa8f6b",
+      "bytes": 13847,
+      "source_lines": 320
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497e827dffeoxJY9i1uCuLEv4",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8299,
+          "output": 3854,
+          "reasoning": 3548,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:55:47.571808+00:00"
+}

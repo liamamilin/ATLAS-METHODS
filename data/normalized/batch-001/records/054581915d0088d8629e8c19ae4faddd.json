@@ -1,0 +1,632 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "ecf753893a5d0f9b58d4",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/product-marketing/SKILL.md",
+    "git_blob_sha": "3af463a602aa0233c4d5fc98c23ba13224aa8f6b",
+    "entry_sha256": "19ece0fa75c72a5a8b6e90db80f506586f54cc93bae6bffbb1bd2ef4ae7d603c"
+  },
+  "content": {
+    "name": "product-marketing",
+    "title": "产品营销上下文文档（Product Marketing Context）",
+    "summary": "帮助用户创建并维护 `.agents/product-marketing.md` 这份基础营销上下文文档，记录产品、目标受众、痛点、竞争格局、差异化、异议、转换动力、客户语言、品牌声音、证明材料、目标，以及可选的付费广告设置，供其他营销 Skill 直接引用，避免重复询问。文档通过自动起草或逐节访谈生成，并以版本号和 Changelog 记录每次实质变更；上线后的测试结论另以 Learnings 表沉淀并在失效时退役。",
+    "evidence": [
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "intro",
+        "line_start": 8,
+        "line_end": 12
+      },
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "Workflow Step 1",
+        "line_start": 14,
+        "line_end": 32
+      },
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "Sections to Capture",
+        "line_start": 55,
+        "line_end": 139
+      },
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "Step 3 template",
+        "line_start": 143,
+        "line_end": 270
+      },
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "Step 4",
+        "line_start": 274,
+        "line_end": 287
+      },
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "section": "Maintaining Learnings",
+        "line_start": 291,
+        "line_end": 310
+      }
+    ],
+    "tasks": [
+      {
+        "id": "create-context",
+        "goal": "产出一份 `.agents/product-marketing.md`（v1），记录产品、受众、定位与品牌声音等基础上下文。",
+        "when": "项目中不存在该文档，用户要新建产品营销上下文时。",
+        "inputs": [
+          "`.agents/`、`.claude/` 下已有的上下文文件（含旧文件名 `product-marketing-context.md`）",
+          "代码库中的 README、落地页、营销文案、about 页面、meta 描述、package.json、既有文档（自动起草时）",
+          "用户对访谈问题的口述回答（从零开始时）"
+        ],
+        "outputs": [
+          "`.agents/product-marketing.md`，含 Document version、Last updated、各章节与初始 Changelog"
+        ],
+        "steps": [
+          {
+            "action": "检查 `.agents/product-marketing.md`，同时检查 `.claude/product-marketing.md` 和旧文件名 `product-marketing-context.md`（两个目录都可能存在）；若在规范位置之外找到，提出把它迁移到 `.agents/product-marketing.md`。",
+            "when": "开始创建前",
+            "rationale": "兼容旧有安装位置"
+          },
+          {
+            "action": "文档不存在时向用户提供两种方式：从代码库自动起草（推荐），或从零逐节访谈对话。",
+            "when": "确认文档不存在",
+            "rationale": "自动起草比从零开始更快，多数用户偏好该方式"
+          },
+          {
+            "action": "自动起草时读取 README、落地页、营销文案、about 页、meta 描述、package.json 及既有文档，据此起草全部章节；从零时逐节进行：先简要说明该节记录什么，再提相关问题，确认准确后进入下一节，不要一次抛出所有问题。",
+            "when": "用户选定创建方式后",
+            "rationale": null
+          },
+          {
+            "action": "展示草稿并问“哪些需要纠正？缺什么？”，按反馈迭代到用户满意。",
+            "when": "自动起草完成后",
+            "rationale": null
+          },
+          {
+            "action": "按模板结构组织文档：Document version、Last updated、第 1–14 节，以及 Learnings 表和 Changelog 表。",
+            "when": "信息收集完成",
+            "rationale": null
+          },
+          {
+            "action": "展示完整文档并询问是否需要调整；新文档设 `Document version: v1`，Changelog 只写一条 `- v1 ([today]) — Initial context.`；保存到 `.agents/product-marketing.md`。",
+            "when": "保存前",
+            "rationale": null
+          },
+          {
+            "action": "告知用户其他营销 Skill 此后会自动使用该上下文，Changelog 追踪每次修订，可随时运行 `/product-marketing` 更新。",
+            "when": "保存完成后",
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "逐节总结并确认后再进入下一节（validate as you go）。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "Tips",
+                "line_start": 319,
+                "line_end": 319
+              }
+            ]
+          },
+          {
+            "text": "草稿展示后明确询问需要纠正和缺失的内容。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "Step 2",
+                "line_start": 39,
+                "line_end": 39
+              }
+            ]
+          },
+          {
+            "text": "保存前展示完成稿并询问是否还需调整。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "Step 4",
+                "line_start": 276,
+                "line_end": 277
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 1",
+            "line_start": 16,
+            "line_end": 32
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 2",
+            "line_start": 34,
+            "line_end": 51
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 276,
+            "line_end": 287
+          }
+        ]
+      },
+      {
+        "id": "update-context",
+        "goal": "更新既有上下文文档的指定章节，并留下版本与变更记录，供下游 Skill 按新上下文生成。",
+        "when": "`.agents/product-marketing.md` 已存在，用户要修改其中部分内容时。",
+        "inputs": [
+          "现有 `.agents/product-marketing.md`",
+          "用户对要更新章节的回答"
+        ],
+        "outputs": [
+          "升级版本号、更新 Last updated、在 Changelog 顶部新增一条说明的文档"
+        ],
+        "steps": [
+          {
+            "action": "读取文档并总结已记录内容，特别注明当前 Document version 和最近几条 Changelog，让用户知道文档现状与近况。",
+            "when": "文档已存在",
+            "rationale": null
+          },
+          {
+            "action": "询问用户想更新哪些章节，只收集这些章节所需的信息。",
+            "when": "确认文档存在后",
+            "rationale": null
+          },
+          {
+            "action": "实质保存时递增版本（v2 → v3 …），把 Last updated 改为今天，并在列表顶部前置一条一句话 Changelog，说明改了什么、为什么；不重写或重排历史条目。",
+            "when": "发生任何实质变更",
+            "rationale": "所有其他营销 Skill 共读此文档，留日期化的变更痕迹有价值"
+          },
+          {
+            "action": "若是仅修正错别字，不升版本、不加条目，直接保存修正。",
+            "when": "改动仅为错别字",
+            "rationale": null
+          },
+          {
+            "action": "保存后告知用户下游 Skill 将按新上下文生成。",
+            "when": "保存完成",
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "Changelog 条目要写明涉及的章节和原因，而不是“updated the doc”。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "Step 4",
+                "line_start": 281,
+                "line_end": 281
+              }
+            ]
+          },
+          {
+            "text": "条目和 Last updated 用 ISO 格式日期（YYYY-MM-DD）。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "Step 4",
+                "line_start": 284,
+                "line_end": 284
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 1 existing",
+            "line_start": 20,
+            "line_end": 24
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 278,
+            "line_end": 287
+          }
+        ]
+      },
+      {
+        "id": "maintain-learnings",
+        "goal": "把上线后得到的决策与测试结论沉淀为 Learnings 表条目，并在失效时退役而非删除。",
+        "when": "任一 Skill 完成测试、活动或复盘并有可复用的结论时；含定时运行的循环。",
+        "inputs": [
+          "测试/活动结果，含数字与样本量",
+          "用户做出的带理由的决策",
+          "用户重复给出的纠正"
+        ],
+        "outputs": [
+          "Learnings 表新增行（Learning、Evidence、Applies to、Status）",
+          "状态改为 retired 的退役行及原因"
+        ],
+        "steps": [
+          {
+            "action": "提出一行条目：Learning 用一句具体到能改变草稿的话；Evidence 写测试、活动或来源，并带数字与样本量；Applies to 写受影响的渠道、细分或 Skill；Status 取 active、watch（仅一个数据点、值得复测）或 retired。",
+            "when": "有可入库的结论",
+            "rationale": null
+          },
+          {
+            "action": "把提议行展示给用户，获批准后加入，并像其他实质变更一样升版本、加一条 Changelog。",
+            "when": "提议行准备好时",
+            "rationale": null
+          },
+          {
+            "action": "定时运行的循环通过其会话结束步骤执行同样的提议流程（见 marketing-loops）。",
+            "when": "循环按计划运行时",
+            "rationale": null
+          },
+          {
+            "action": "判定条目失效时把状态改为 retired 并加一行说明原因，不删除；退役行移到底部，活动行超过约 20 行后归档。",
+            "when": "后续测试与之矛盾、产品或市场发生变化（新定价、新 ICP），或已两个季度不再相关",
+            "rationale": "避免他人重测已定论的问题"
+          }
+        ],
+        "checks": [
+          {
+            "text": "只有达到计划样本的测试结果、两次及以上活动中出现的同一模式、用户带理由的决策、用户重复多次的纠正才可入表。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "What earns a place",
+                "line_start": 301,
+                "line_end": 304
+              }
+            ]
+          },
+          {
+            "text": "单次轶事记为 watch 或不记；新异议归入 Objections，新客户用语归入 Customer Language，不作为 Learning。",
+            "evidence": [
+              {
+                "path": "skills/product-marketing/SKILL.md",
+                "section": "What doesn't",
+                "line_start": 306,
+                "line_end": 306
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Maintaining Learnings",
+            "line_start": 291,
+            "line_end": 310
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "收集客户语言时争取逐字原话，原话比润色过的描述更有价值。",
+        "when": "采集问题描述、解决方案描述等客户用语时",
+        "rationale": "原话反映客户实际的思考和说话方式，使文案更有共鸣。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 2",
+            "line_start": 51,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "text": "更新既有文档时只收集用户选定章节的信息。",
+        "when": "文档已存在并进入更新流程",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 1",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "text": "Changelog 最新在前，每条一行说明改了什么和为什么；永不重写或重排历史条目。",
+        "when": "任何实质变更保存时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 280,
+            "line_end": 280
+          }
+        ]
+      },
+      {
+        "text": "纯错别字修正不升版本、不加 Changelog 条目；其他任何变更都要升版本并加条目。",
+        "when": "保存文档变更时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 285,
+            "line_end": 285
+          }
+        ]
+      },
+      {
+        "text": "品牌声音应从已有表现良好的文案与创始人自己的写作中提炼，而不是从会议上挑出的形容词构建。",
+        "when": "填写 Brand Voice 一节时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Brand Voice",
+            "line_start": 117,
+            "line_end": 117
+          }
+        ]
+      },
+      {
+        "text": "品牌声音设 3–5 个属性，每个属性写明它意味着什么、不意味着什么，并给出现有文案中的真实一行。",
+        "when": "记录 Brand Voice 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Brand Voice",
+            "line_start": 113,
+            "line_end": 113
+          }
+        ]
+      },
+      {
+        "text": "Learnings 表保持约 20 条活动条目。",
+        "when": "维护 Learnings 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "template / retire",
+            "line_start": 262,
+            "line_end": 262
+          }
+        ]
+      },
+      {
+        "text": "不适用的章节可以跳过，例如 B2C 不需要 Personas，不投广告则不填 Paid Ads。",
+        "when": "确定文档章节时",
+        "rationale": "并非每个产品都需要全部章节。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Tips",
+            "line_start": 320,
+            "line_end": 320
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Paid Ads",
+            "line_start": 130,
+            "line_end": 130
+          }
+        ]
+      },
+      {
+        "text": "文档不存在时推荐“从代码库自动起草”这一方式。",
+        "when": "首次创建上下文文档",
+        "rationale": "比从零开始更快，多数用户偏好该方式。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 1",
+            "line_start": 28,
+            "line_end": 32
+          }
+        ]
+      },
+      {
+        "text": "版本条目和 Last updated 使用 ISO 格式日期（YYYY-MM-DD）。",
+        "when": "写入 Changelog 或更新时间戳",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 284,
+            "line_end": 284
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "产品营销上下文文档",
+        "kind": "template",
+        "locator": ".agents/product-marketing.md",
+        "usage": "目标文档路径；Step 3 给出完整 Markdown 结构与各章节表格，也是其他营销 Skill 读取的共享上下文。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "intro / Step 3",
+            "line_start": 12,
+            "line_end": 12
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 3 template",
+            "line_start": 145,
+            "line_end": 270
+          }
+        ]
+      },
+      {
+        "name": "brand-voice 参考",
+        "kind": "reference",
+        "locator": "skills/product-marketing/references/brand-voice.md",
+        "usage": "文档所述：声音提取步骤、一份完整示例档案、前后对比示例、按人设的声音指南；本次未读取该文件。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Brand Voice",
+            "line_start": 117,
+            "line_end": 117
+          }
+        ]
+      },
+      {
+        "name": "marketing-loops",
+        "kind": "skill",
+        "locator": null,
+        "usage": "定时运行的循环通过其会话结束步骤提议 Learnings 行；仅被提及。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Maintaining Learnings",
+            "line_start": 310,
+            "line_end": 310
+          }
+        ]
+      },
+      {
+        "name": "ads",
+        "kind": "skill",
+        "locator": null,
+        "usage": "读取 Paid Ads 一节，使用户不必每次会话重述账户信息。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Paid Ads",
+            "line_start": 131,
+            "line_end": 131
+          }
+        ]
+      },
+      {
+        "name": "起草类 Skill（copywriting、emails、ads、ad-creative、social）",
+        "kind": "skill",
+        "locator": null,
+        "usage": "写作前读取 Learnings，使下一份简报从已知结论出发。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Maintaining Learnings",
+            "line_start": 293,
+            "line_end": 293
+          }
+        ]
+      },
+      {
+        "name": "/product-marketing 命令",
+        "kind": "other",
+        "locator": "/product-marketing",
+        "usage": "用户随时运行以更新上下文文档。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 287,
+            "line_end": 287
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "竞品分类示例",
+        "text": "直接竞品=同一问题同一方案（Calendly vs SavvyCal）；次级竞品=同一问题不同方案（Calendly vs Superhuman 的排期功能）；间接竞品=冲突性做法（Calendly vs 私人助理）。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Competitive Landscape",
+            "line_start": 83,
+            "line_end": 85
+          }
+        ]
+      },
+      {
+        "topic": "Changelog 条目写法示例",
+        "text": "示例：`- v3 (2026-07-16) — Repositioned from \"email tool\" to \"deliverability platform\"; added RevOps to the ICP.`；`- v2 (2026-06-02) — Rewrote value prop and objections after 5 customer interviews; added competitor Acme.`",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Step 4",
+            "line_start": 282,
+            "line_end": 283
+          }
+        ]
+      },
+      {
+        "topic": "Learnings 初始状态",
+        "text": "Learnings 从空表开始，随工作上线逐步填充。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Learnings",
+            "line_start": 139,
+            "line_end": 139
+          }
+        ]
+      },
+      {
+        "topic": "Paid Ads 节的可代理范围",
+        "text": "Paid Ads 为可选节（仅当投广告时），记录目标 CPA/ROAS 与硬性下限、预算与日波动、有效转化及其价值、已知追踪缺陷、好线索与表单填写的区别；代理可读、比较、标记、起草、建议，未经批准不得改预算或出价、暂停或启动、改追踪、发布广告。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Paid Ads",
+            "line_start": 130,
+            "line_end": 136
+          },
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "template Paid Ads",
+            "line_start": 257,
+            "line_end": 259
+          }
+        ]
+      },
+      {
+        "topic": "访谈提问技巧",
+        "text": "提问要具体（如“带他们来找你的第一大挫折是什么？”而非“他们解决什么问题？”），并常用“能给我一个例子吗？”来获得更好回答。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "Tips",
+            "line_start": 316,
+            "line_end": 318
+          }
+        ]
+      },
+      {
+        "topic": "文档用途",
+        "text": "该文档是所有其他营销 Skill 共读的共享上下文，目的是让用户不必在不同营销任务中反复交代基础信息。",
+        "evidence": [
+          {
+            "path": "skills/product-marketing/SKILL.md",
+            "section": "intro",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:55:47.568786+00:00"
+  }
+}

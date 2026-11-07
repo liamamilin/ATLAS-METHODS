@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "2cca6e76006ddfe15d6e",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/debugging-and-error-recovery/SKILL.md",
+    "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+    "entry_sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610"
+  },
+  "files": [
+    {
+      "path": "skills/debugging-and-error-recovery/SKILL.md",
+      "coverage": "full",
+      "sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610",
+      "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+      "bytes": 10893,
+      "source_lines": 300
+    }
+  ]
+}

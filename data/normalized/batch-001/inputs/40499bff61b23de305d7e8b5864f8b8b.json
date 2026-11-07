@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "05d408b4284eb2738b8c",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/webapp-testing/SKILL.md",
+    "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+    "entry_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+  },
+  "files": [
+    {
+      "path": "skills/webapp-testing/SKILL.md",
+      "coverage": "full",
+      "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+      "bytes": 3913,
+      "source_lines": 96
+    }
+  ]
+}

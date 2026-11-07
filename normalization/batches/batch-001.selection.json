@@ -1,0 +1,362 @@
+{
+  "note": "40 fixed collected entries from seven repositories, round-robin across source shapes; explicit core references only. Manual examples are never imported as model outputs.",
+  "items": [
+    {
+      "collection_id": "b02dbd96699c235e7de5",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/internal-comms/SKILL.md",
+      "references": [
+        {
+          "path": "skills/internal-comms/examples/3p-updates.md"
+        },
+        {
+          "path": "skills/internal-comms/examples/company-newsletter.md"
+        },
+        {
+          "path": "skills/internal-comms/examples/faq-answers.md"
+        },
+        {
+          "path": "skills/internal-comms/examples/general-comms.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "0a2ef73281ba846578f5",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/brainstorming/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "4efae2a88e2d4ec4ffe6",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+      "references": [
+        {
+          "path": "skills/productivity/grilling/SKILL.md"
+        },
+        {
+          "path": "skills/engineering/domain-modeling/SKILL.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "443f91aa53a6736ff426",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/ab-testing/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "d9d222a50a3c94b5411c",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "repository": "addyosmani/agent-skills",
+      "skill_path": "skills/api-and-interface-design/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "ef75cb9667dd7cafebb6",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "repository": "googleworkspace/cli",
+      "skill_path": "skills/gws-calendar-insert/SKILL.md",
+      "references": [
+        {
+          "path": "skills/gws-shared/SKILL.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "285ef5f2d449c3d93539",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "repository": "vercel-labs/agent-skills",
+      "skill_path": "skills/composition-patterns/SKILL.md",
+      "references": [
+        {
+          "path": "skills/composition-patterns/AGENTS.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "5efa4f962e732e9ecbf4",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/brand-guidelines/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "237b32583f4ed1a40f85",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/systematic-debugging/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "e36d5d8a160259015b36",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/code-review/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "519f3648e61fbdf38442",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/copywriting/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "e7834a2573815a5a0871",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "repository": "addyosmani/agent-skills",
+      "skill_path": "skills/context-engineering/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "3c4ca3c0ea22ca65b5c3",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "repository": "googleworkspace/cli",
+      "skill_path": "skills/gws-docs-write/SKILL.md",
+      "references": [
+        {
+          "path": "skills/gws-shared/SKILL.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "87a239fc0fa43d9a8448",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "repository": "vercel-labs/agent-skills",
+      "skill_path": "skills/deploy-to-vercel/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "05d408b4284eb2738b8c",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/webapp-testing/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "a99162a0c1c8490d811b",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/test-driven-development/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "58fd72c919eeae5e01e1",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/implement/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "004bc9aeebee6129a44b",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/copy-editing/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "8a5610a28e2959388a11",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "repository": "addyosmani/agent-skills",
+      "skill_path": "skills/code-review-and-quality/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "4961bc5b0753ab497eb9",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "repository": "googleworkspace/cli",
+      "skill_path": "skills/gws-gmail-triage/SKILL.md",
+      "references": [
+        {
+          "path": "skills/gws-shared/SKILL.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "97165f61bb32af8c487d",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "repository": "vercel-labs/agent-skills",
+      "skill_path": "skills/web-design-guidelines/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "90e0f870ac512f90e154",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/slack-gif-creator/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "2d541286acded129f988",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/writing-plans/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "32b139ed74b0165baa3d",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/to-spec/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "e727eda991347a2fbc27",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/pricing/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "2cca6e76006ddfe15d6e",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "repository": "addyosmani/agent-skills",
+      "skill_path": "skills/debugging-and-error-recovery/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "8c24f718f48153dabecd",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "repository": "googleworkspace/cli",
+      "skill_path": "skills/gws-shared/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "20e6303dc33a24a868aa",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "repository": "vercel-labs/agent-skills",
+      "skill_path": "skills/writing-guidelines/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "46fa2ce238d972021b51",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/theme-factory/SKILL.md",
+      "references": [
+        {
+          "path": "skills/theme-factory/themes/arctic-frost.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/botanical-garden.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/desert-rose.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/forest-canopy.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/golden-hour.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/midnight-galaxy.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/modern-minimalist.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/ocean-depths.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/sunset-boulevard.md"
+        },
+        {
+          "path": "skills/theme-factory/themes/tech-innovation.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "3f9cca2922dc01418c96",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/verification-before-completion/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "5416b11c81efc2f9f021",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/triage/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "2dc2fa1b2e23631c348e",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/churn-prevention/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "e016d48a012cb04797b4",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/frontend-design/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "5d7cbcbbab764949735f",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "repository": "obra/superpowers",
+      "skill_path": "skills/finishing-a-development-branch/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "6b9da56c4d7cc5e318ab",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/productivity/grilling/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "ecf753893a5d0f9b58d4",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "repository": "coreyhaines31/marketingskills",
+      "skill_path": "skills/product-marketing/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "fec0dc3545f101253547",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/academy-guide/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "5f1e4728eaea2322c130",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/engineering/tdd/SKILL.md",
+      "references": []
+    },
+    {
+      "collection_id": "57b2f1ac086c8d30cddc",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "repository": "anthropics/skills",
+      "skill_path": "skills/mcp-builder/SKILL.md",
+      "references": [
+        {
+          "path": "skills/mcp-builder/reference/mcp_best_practices.md"
+        },
+        {
+          "path": "skills/mcp-builder/reference/python_mcp_server.md"
+        },
+        {
+          "path": "skills/mcp-builder/reference/evaluation.md"
+        }
+      ]
+    },
+    {
+      "collection_id": "506a73bbded4f67e3da3",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "repository": "mattpocock/skills",
+      "skill_path": "skills/productivity/handoff/SKILL.md",
+      "references": []
+    }
+  ]
+}

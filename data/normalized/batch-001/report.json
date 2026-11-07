@@ -1,0 +1,2060 @@
+{
+  "generated_at": "2026-11-07T15:04:24.993501+00:00",
+  "schema_version": "0.1.1",
+  "model": "open-design/deepseek-v4.1-flash",
+  "selected": 40,
+  "succeeded": 38,
+  "failed": 2,
+  "pending": 0,
+  "invocation": {
+    "started_at": "2026-11-07T15:04:24.854785+00:00",
+    "attempted_items": 0,
+    "skipped_success": 38,
+    "skipped_failed": 2,
+    "finished_at": "2026-11-07T15:04:24.971867+00:00"
+  },
+  "repositories": 7,
+  "review_status": "unreviewed; semantic spot checks reported separately",
+  "usage": {
+    "attempts_total": 75,
+    "opencode_sessions": 75,
+    "model_sessions": 60,
+    "pre_model_failures": 14,
+    "sessions_without_usage": 1,
+    "tokens": {
+      "input": 456155,
+      "output": 260171,
+      "reasoning": 182975,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "opencode_reported_cost": 0.0,
+    "billing_cost": null,
+    "cost_note": "Reported OpenCode estimate is not verified billing; cache/reasoning token categories may overlap input/output.",
+    "attempts": [
+      {
+        "path": "attempts/054581915d0088d8629e8c19ae4faddd/001/metadata.json",
+        "session_id": "ses_e497e827dffeoxJY9i1uCuLEv4",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8299,
+                "output": 3854,
+                "reasoning": 3548,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/063913bd0e8d80cde2ba98e05b4cd2f2/001/metadata.json",
+        "session_id": "ses_e497fd0faffe5MwsnvUHPsHkzH",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5402,
+                "output": 2341,
+                "reasoning": 1409,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/063913bd0e8d80cde2ba98e05b4cd2f2/002/metadata.json",
+        "session_id": "ses_e497f64b0ffekX4TCzT7p4eK7i",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5434,
+                "output": 2243,
+                "reasoning": 2334,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/06661f2846a1ecfbb8641bb20e60c7b8/001/metadata.json",
+        "session_id": "ses_e497f92deffe6tPJRPsIRAhXKk",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 10020,
+                "output": 6367,
+                "reasoning": 2746,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/129cbf6dfc284b6033599fb119fc9bfe/001/metadata.json",
+        "session_id": "ses_e498bc3a9ffe1p6Vvyvuvg028G",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/129cbf6dfc284b6033599fb119fc9bfe/002/metadata.json",
+        "session_id": "ses_e498bb50effe26HesIhzL7cGNy",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/129cbf6dfc284b6033599fb119fc9bfe/003/metadata.json",
+        "session_id": "ses_e498661abffee2SnQK8cLJZFj2",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5755,
+                "output": 2221,
+                "reasoning": 9812,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/1338a1b815e244bdefc046a89205b96b/001/metadata.json",
+        "session_id": "ses_e4981f134ffeGA5kE3Y8i3UkeK",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4367,
+                "output": 2501,
+                "reasoning": 878,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/13d7d99be47fae2d324e3a95cbef3b41/001/metadata.json",
+        "session_id": "ses_e497eef20ffeq8ELM2pnPShQGG",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6307,
+                "output": 3986,
+                "reasoning": 4898,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/1be988c69a5bb40c4fef79e3dfdbe024/001/metadata.json",
+        "session_id": "ses_e49811ff6ffe7YSRQUoswfoiDx",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6884,
+                "output": 2624,
+                "reasoning": 853,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/2734885e7f837f44d48e3eec07c99da9/001/metadata.json",
+        "session_id": "ses_e4981f4e9ffelpLjIhiWRdnNs9",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7571,
+                "output": 2890,
+                "reasoning": 3937,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/2db18ab47582c6ac894bbd32067a8ae4/001/metadata.json",
+        "session_id": "ses_e4981ed72ffe6NZX25rrcu61wt",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 9770,
+                "output": 8464,
+                "reasoning": 1923,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/31830c17a4492888cebc672df279e02a/001/metadata.json",
+        "session_id": "ses_e498baaa2fferSwFzv5UrBs4S9",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/31830c17a4492888cebc672df279e02a/002/metadata.json",
+        "session_id": "ses_e498b9c0affe3RECxQnX82xKKM",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/31830c17a4492888cebc672df279e02a/003/metadata.json",
+        "session_id": "ses_e49864dd9ffea539KS3kBzOqqM",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 13391,
+                "output": 4825,
+                "reasoning": 4130,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/31830c17a4492888cebc672df279e02a/004/metadata.json",
+        "session_id": "ses_e498575e3ffe5KdcE1TXnlKyGq",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 13461,
+                "output": 3244,
+                "reasoning": 1775,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/326ebaa35ac3e9da774b827d99a771a3/001/metadata.json",
+        "session_id": "ses_e4981972effeR9ZrGLwHnww06w",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5660,
+                "output": 2425,
+                "reasoning": 2163,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/001/metadata.json",
+        "session_id": "ses_e497fa950ffecz43h94CFXgqdy",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6086,
+                "output": 4172,
+                "reasoning": 1333,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/002/metadata.json",
+        "session_id": "ses_e497f24c9ffefZ1apB6A6MW6DN",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6120,
+                "output": 3725,
+                "reasoning": 2963,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/003/metadata.json",
+        "session_id": "ses_e497937b8ffejMvUKavcn2170q",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6211,
+                "output": 4081,
+                "reasoning": 3495,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/40499bff61b23de305d7e8b5864f8b8b/001/metadata.json",
+        "session_id": "ses_e4982248effe4aqU4F3xvJ5mVx",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5338,
+                "output": 2338,
+                "reasoning": 1589,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/429155c76d35291886bf1db6262ac805/001/metadata.json",
+        "session_id": "ses_e49806400ffeHCsSND1UneDwC5",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5118,
+                "output": 2382,
+                "reasoning": 2169,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/442409a9c3579dd11dd19e5121c0f3a2/001/metadata.json",
+        "session_id": "ses_e49830162ffeMn1oqtkV7XNox0",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5624,
+                "output": 2462,
+                "reasoning": 2655,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/001/metadata.json",
+        "session_id": "ses_e498be443ffesnmW6WmIclNwFZ",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/002/metadata.json",
+        "session_id": "ses_e498bd3c9ffeV5I8D1r2RPLve6",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/003/metadata.json",
+        "session_id": "ses_e49880f7fffeGe9l9JaSmxlHJp",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8032,
+                "output": 6563,
+                "reasoning": 2485,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/004/metadata.json",
+        "session_id": "ses_e4987401cffe82hBgJc1oU207K",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8064,
+                "output": 7980,
+                "reasoning": 3577,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/005/metadata.json",
+        "session_id": "ses_e498434edffeqL80SfdV50xSTn",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8152,
+                "output": 7000,
+                "reasoning": 4851,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/006/metadata.json",
+        "session_id": "ses_e498337fbffe0kMBMwZBKX9mv5",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8186,
+                "output": 5861,
+                "reasoning": 8232,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/53435ae3ea11604ab4849d1a705498c3/001/metadata.json",
+        "session_id": "ses_e4980ebf3ffe1wZufOqaPfsvMv",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5017,
+                "output": 2185,
+                "reasoning": 1195,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/53435ae3ea11604ab4849d1a705498c3/002/metadata.json",
+        "session_id": "ses_e49808ceaffeaMDvsCto82HQDu",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5036,
+                "output": 2138,
+                "reasoning": 1662,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/78a07d1087387cc7dbfce19188ff15d8/001/metadata.json",
+        "session_id": "ses_e498028eefferv6tVTkuOZXxEZ",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4566,
+                "output": 1554,
+                "reasoning": 1603,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/79fe827af7cac9992f445adb10d38444/001/metadata.json",
+        "session_id": "ses_e498c0354ffeOaa2Vn4yDVBV63",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/79fe827af7cac9992f445adb10d38444/002/metadata.json",
+        "session_id": "ses_e498bf32afferYnuK3zo5r5bXp",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/79fe827af7cac9992f445adb10d38444/003/metadata.json",
+        "session_id": "ses_e4989b61dffeUMyslOQYetIZEO",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7049,
+                "output": 6284,
+                "reasoning": 4113,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/79fe827af7cac9992f445adb10d38444/004/metadata.json",
+        "session_id": "ses_e4988cdb1ffe3iBleYzmYSlwQZ",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7137,
+                "output": 5313,
+                "reasoning": 2777,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/7c82d4d0a06850f0f20d8e1c880a0812/001/metadata.json",
+        "session_id": "ses_e4980c0b6ffeCDHBLpRk5W8605",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8039,
+                "output": 5125,
+                "reasoning": 6682,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/7e027754b2b35b3c5fc1448f81ae8881/001/metadata.json",
+        "session_id": "ses_e498be4a3ffediFE1aU62hV2Du",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/7e027754b2b35b3c5fc1448f81ae8881/002/metadata.json",
+        "session_id": "ses_e498bd551ffeCI0TEIrgXJQwYi",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/7e027754b2b35b3c5fc1448f81ae8881/003/metadata.json",
+        "session_id": "ses_e4988ab4effelCj97TUuxuaDsj",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5748,
+                "output": 3940,
+                "reasoning": 2156,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/7e027754b2b35b3c5fc1448f81ae8881/004/metadata.json",
+        "session_id": "ses_e498819acffe70l5cYIx4lvZ10",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5771,
+                "output": 3601,
+                "reasoning": 2958,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/87eab0bdfb1ce693240f0f8ce6294c6d/001/metadata.json",
+        "session_id": "ses_e497ec0c1ffeG4UghnS9OSOR2K",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4719,
+                "output": 1977,
+                "reasoning": 2257,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/88afaa0dff60b0214863e57df6db9962/001/metadata.json",
+        "session_id": "ses_e49807a97ffeLkrD01C41SXggw",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7437,
+                "output": 4465,
+                "reasoning": 5119,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/8a0b7467f41a46a839eda22f990c702c/001/metadata.json",
+        "session_id": "ses_e497dcfc2ffeJbyLcYWHVAe5UF",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 24392,
+                "output": 7882,
+                "reasoning": 3224,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/8a0b7467f41a46a839eda22f990c702c/002/metadata.json",
+        "session_id": "ses_e497cdb42ffeKRLu3kUHECI5Yx",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 24424,
+                "output": 9508,
+                "reasoning": 4541,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/9345b7a878395c64d5f6d01d4b829cc1/001/metadata.json",
+        "session_id": "ses_e497ee13affecuGn2EFjC3WYHd",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6836,
+                "output": 3931,
+                "reasoning": 1671,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/9345b7a878395c64d5f6d01d4b829cc1/002/metadata.json",
+        "session_id": "ses_e497e55e2ffe9ygdF477bd9mJL",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6879,
+                "output": 7661,
+                "reasoning": 5358,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/9345b7a878395c64d5f6d01d4b829cc1/003/metadata.json",
+        "session_id": "ses_e4978f279ffeF8hLQSI4YhYcp5",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6965,
+                "output": 3972,
+                "reasoning": 2534,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/97b715e5ab19a8a1e2349beb69f47d20/001/metadata.json",
+        "session_id": "ses_e49810d67ffeJcBlurHOj5iNtW",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7084,
+                "output": 5008,
+                "reasoning": 1570,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/a57447fad0185059629a866ff6dbbf70/001/metadata.json",
+        "session_id": "ses_e4981b9fcffex4Jc69F8ETX1am",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 9834,
+                "output": 5852,
+                "reasoning": 7404,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/a57b6366f6b710c638cf13c2cb4ff176/001/metadata.json",
+        "session_id": "ses_e497e0c3bffePE2PRpolQiENJU",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5072,
+                "output": 2383,
+                "reasoning": 1411,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/a9d4a2a6b18f6492e6eee1d32eacc15e/001/metadata.json",
+        "session_id": "ses_e497e4823ffeoG2nKWCieU7E1u",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6391,
+                "output": 3205,
+                "reasoning": 2025,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/b04908777a787ab973884ed705c42ab8/001/metadata.json",
+        "session_id": "ses_e498c0354ffep64JoJcWF1BgZ9",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/b04908777a787ab973884ed705c42ab8/002/metadata.json",
+        "session_id": "ses_e498bf336ffeY52f49LTXRQS3J",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/b04908777a787ab973884ed705c42ab8/003/metadata.json",
+        "session_id": "ses_e4989b61dffeXkYVj2Y9zhHvUM",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8433,
+                "output": 7224,
+                "reasoning": 3597,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/b04908777a787ab973884ed705c42ab8/004/metadata.json",
+        "session_id": "ses_e497a54ddffe2RsihZjenThYzc",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8724,
+                "output": 6792,
+                "reasoning": 6792,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/bfa4850b691add9ff4269bf36b9e4b7d/001/metadata.json",
+        "session_id": "ses_e498434ebffecRBfp3PWus5xxA",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7261,
+                "output": 4143,
+                "reasoning": 1637,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/001/metadata.json",
+        "session_id": "ses_e498434ebffe5yAGtvOY65eLl1",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 5974,
+                "output": 4161,
+                "reasoning": 3968,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/002/metadata.json",
+        "session_id": "ses_e49837d1bffeDKTFwhArjNIjaO",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6010,
+                "output": 3433,
+                "reasoning": 1333,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/003/metadata.json",
+        "session_id": "ses_e497a54e4ffeA8AK5RoEbpH84B",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 6073,
+                "output": 3847,
+                "reasoning": 1934,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/cf60a00051207a8e7e6f45e26cb1adb0/001/metadata.json",
+        "session_id": "ses_e498434dffferDNFceoD3kvmu4",
+        "state": "failed",
+        "usage": {
+          "available": false,
+          "reason": "No session export with token counts"
+        }
+      },
+      {
+        "path": "attempts/cf60a00051207a8e7e6f45e26cb1adb0/002/metadata.json",
+        "session_id": "ses_e49841ad2ffe3JwXpg3SIvvtYb",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4892,
+                "output": 2186,
+                "reasoning": 1072,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/cffb0ba61e7a9d0898a872183a46a2a1/001/metadata.json",
+        "session_id": "ses_e497feff1ffeJ1ke3Q19KNJrjd",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7090,
+                "output": 3365,
+                "reasoning": 1602,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/cffb0ba61e7a9d0898a872183a46a2a1/002/metadata.json",
+        "session_id": "ses_e497f795bffe9Ou24QP49FMdwV",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7260,
+                "output": 2625,
+                "reasoning": 3128,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/cffb0ba61e7a9d0898a872183a46a2a1/003/metadata.json",
+        "session_id": "ses_e4979ca63ffe4pPzd3Wv4GFoBY",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7493,
+                "output": 2256,
+                "reasoning": 2896,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/e6795a45fcd74c946cbb507a730293db/001/metadata.json",
+        "session_id": "ses_e4983a966ffeDG4eYv6mAVtlek",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8370,
+                "output": 5117,
+                "reasoning": 3334,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/e6795a45fcd74c946cbb507a730293db/002/metadata.json",
+        "session_id": "ses_e4982d259ffemvt6utqXhC30G5",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8406,
+                "output": 7791,
+                "reasoning": 2642,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/ece1ea30e887e1f44d56d686e04b4f7d/001/metadata.json",
+        "session_id": "ses_e49828441ffedmQVnlxZb6leR1",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 7266,
+                "output": 4646,
+                "reasoning": 1490,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/ef29a5e24a14b95c3cfc4d2e80bc9a7e/001/metadata.json",
+        "session_id": "ses_e497dc385ffefQCaHHV2PVyaR6",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4431,
+                "output": 1231,
+                "reasoning": 1100,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/ef63d40e528b180b70ce54a969f06e88/001/metadata.json",
+        "session_id": "ses_e4983c5beffeQVsAHR8wKQCXZp",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8849,
+                "output": 7000,
+                "reasoning": 3589,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/ef63d40e528b180b70ce54a969f06e88/002/metadata.json",
+        "session_id": "ses_e4982d665ffeubj7W1EfxPvlM6",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8889,
+                "output": 5099,
+                "reasoning": 1847,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/f6858ac345d5f246f850483a2d140131/001/metadata.json",
+        "session_id": "ses_e498137bcffegKd0scpQF2hTos",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 4563,
+                "output": 1536,
+                "reasoning": 918,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      },
+      {
+        "path": "attempts/fb5ee0831c268a1dce937cb3c380f08d/001/metadata.json",
+        "session_id": "ses_e498bc73fffepoNYYSWmz0oZjx",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/fb5ee0831c268a1dce937cb3c380f08d/002/metadata.json",
+        "session_id": "ses_e498bb8a2ffe1lMrESUBaZ2W8H",
+        "state": "failed",
+        "usage": {
+          "available": true,
+          "request_not_started": true,
+          "turns": [],
+          "reason": "OpenCode failed to resolve agent before a model turn"
+        }
+      },
+      {
+        "path": "attempts/fb5ee0831c268a1dce937cb3c380f08d/003/metadata.json",
+        "session_id": "ses_e49877c6affew8Fuaa0DHNuGai",
+        "state": "succeeded",
+        "usage": {
+          "available": true,
+          "source": "opencode session export",
+          "turns": [
+            {
+              "model": {
+                "id": "deepseek-v4.1-flash",
+                "providerID": "open-design",
+                "variant": "default"
+              },
+              "tokens": {
+                "input": 8523,
+                "output": 7186,
+                "reasoning": 6081,
+                "cache": {
+                  "read": 0,
+                  "write": 0
+                }
+              },
+              "cost": 0,
+              "finish": "stop",
+              "rawFinish": "stop"
+            }
+          ],
+          "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+        }
+      }
+    ]
+  }
+}

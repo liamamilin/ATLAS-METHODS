@@ -1,0 +1,358 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "6b9da56c4d7cc5e318ab",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/productivity/grilling/SKILL.md",
+    "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+    "entry_sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2"
+  },
+  "content": {
+    "name": "grilling",
+    "title": "设计树分轮逼问（Grilling）",
+    "summary": "把计划、决策或想法映射成一棵设计树：每个决策向下分支出依赖它的决策。每轮只问当前 frontier（前置条件已定、此刻无需猜测未听答案即可提出的决策），一次问完整个 frontier，逐题编号并给出推荐答案；回答会重塑树，需重算 frontier 再问下一轮。事实由代理自己查证（必要时派全新上下文的子代理），决策交用户拍板；frontier 为空且用户确认达成共享理解后才行动。",
+    "evidence": [
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "line_start": 6,
+        "line_end": 8
+      },
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "line_start": 26,
+        "line_end": 30
+      }
+    ],
+    "tasks": [
+      {
+        "id": "grill-design-tree",
+        "goal": "通过分轮的持续提问，就某个计划、决策或想法与用户达成共享理解，使设计树每个分支都被访问、没有隐式假设。",
+        "when": "用户想压力测试自己的思考，或使用任何 \"grill\" 触发短语时。",
+        "inputs": [
+          "用户提出的计划、决策或想法",
+          "用户对每轮问题的回答",
+          "frontier 问题所需的环境事实（文件系统、工具等）"
+        ],
+        "outputs": [
+          "逐轮编号、每题附推荐答案的问题清单",
+          "被逐层展开的设计树（frontier 逐步排空）",
+          "用户确认的共享理解"
+        ],
+        "steps": [
+          {
+            "action": "把议题映射为设计树：每个决策向下分支出挂在它之下的决策。",
+            "when": "整理开始时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 6,
+                "line_end": 6
+              }
+            ]
+          },
+          {
+            "action": "按轮次推进树；先确定 frontier，即所有前置条件已经确定的决策，也就是此刻无需猜测尚未听到的答案就能提问的问题。",
+            "when": "每一轮开始前。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          },
+          {
+            "action": "在一轮内问完整个 frontier：逐题编号，按「❓ **Qn** - **标题**: 正文（可多段、可含多选项）」「➡️ 推荐答案」以 --- 分隔的格式输出。",
+            "when": "每轮提问时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 8,
+                "line_end": 22
+              }
+            ]
+          },
+          {
+            "action": "为每个问题给出推荐答案，并措辞使回答\"yes\"即等同于接受该推荐答案。",
+            "when": "撰写每个问题时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 8,
+                "line_end": 8
+              },
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 24,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "等待用户回答本轮问题后再进入下一轮；据回答重塑树，已定决策把 frontier 向外推进并解锁依赖它们的问题，然后重算 frontier、提出下一轮。",
+            "when": "收到用户本轮回答后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 8,
+                "line_end": 8
+              },
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 26,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "把答案依赖本轮仍未决问题的提问留到后续轮次，而非折进当前轮。",
+            "when": "组织当前轮问题时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 26,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "frontier 问题需要来自环境（文件系统、工具等）的事实时就派发一个带全新上下文窗口的子代理去查；不因等待它而阻塞，只让依赖该探索的下游问题等待其报告，frontier 其余问题照常本轮提问。",
+            "when": "frontier 问题依赖可查证的事实时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 28,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "把每个决策提交给用户并等待其回答。",
+            "when": "问题涉及选择而非事实时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 28,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "frontier 为空时结束会话；在用户确认已达成共享理解之前，不对该计划/决策/想法采取行动。",
+            "when": "frontier 已排空时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "结束判据：frontier 为空，即设计树的每个分支都被访问过，没有任何事被静默假设。",
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          },
+          {
+            "text": "行动前置条件：用户确认已达成共享理解。",
+            "evidence": [
+              {
+                "path": "skills/productivity/grilling/SKILL.md",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 6,
+            "line_end": 8
+          },
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 24,
+            "line_end": 30
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "查找事实是代理的职责，绝不推给用户；不要向用户索取自己能查到的东西。",
+        "when": "frontier 问题需要事实时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 28
+          }
+        ]
+      },
+      {
+        "text": "每轮只问当前 frontier；答案依赖本轮仍开放问题的内容不得进入本轮。",
+        "when": "组织每轮问题时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 26,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "text": "每个问题都须附推荐答案，且回答\"yes\"应当被理解为接受该推荐答案。",
+        "when": "撰写每个问题时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 8,
+            "line_end": 8
+          },
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 24,
+            "line_end": 24
+          }
+        ]
+      },
+      {
+        "text": "决策归用户：逐个提交并等待；未获确认达成共享理解前不得执行。",
+        "when": "涉及选择，或 frontier 已排空时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "text": "不因等待探索中的子代理而停滞：只有依赖该探索的下游问题需要等待。",
+        "when": "有子代理正在查证事实时。",
+        "rationale": "运行中的探索属于未定的前置条件。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 28
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "设计树",
+        "kind": "other",
+        "locator": null,
+        "usage": "组织决策及其依赖关系的结构，用于计算 frontier 与判断是否每个分支都已访问。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 6,
+            "line_end": 6
+          }
+        ]
+      },
+      {
+        "name": "轮次格式模板",
+        "kind": "template",
+        "locator": "skills/productivity/grilling/SKILL.md",
+        "usage": "规定每轮的呈现形式：❓ **Qn** - **标题**: 正文（可多段、可含多选项）、➡️ 推荐答案、--- 分隔。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 12,
+            "line_end": 22
+          }
+        ]
+      },
+      {
+        "name": "带全新上下文窗口的子代理",
+        "kind": "tool",
+        "locator": null,
+        "usage": "用于查证 frontier 问题所需的环境事实；原文仅说明派发方式与等待策略，未指定具体接入实现。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 28,
+            "line_end": 28
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "触发条件",
+        "text": "description 指明除\"压力测试思考\"外，使用任何 \"grill\" 触发短语也适用本 Skill。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          }
+        ]
+      },
+      {
+        "topic": "frontier 的动态性",
+        "text": "每轮回答都会重塑树：已定决策把 frontier 向外推进并解锁原本依赖它们的问题，因此某问题可能本轮不出现而在后续轮才可问。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 26,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "topic": "问题体例",
+        "text": "问题正文可以有多段，也可以包含多个选项。",
+        "evidence": [
+          {
+            "path": "skills/productivity/grilling/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:55:16.756017+00:00"
+  }
+}

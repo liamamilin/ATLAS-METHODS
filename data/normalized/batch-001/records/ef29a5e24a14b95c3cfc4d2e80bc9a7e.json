@@ -1,0 +1,223 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "506a73bbded4f67e3da3",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/productivity/handoff/SKILL.md",
+    "git_blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+    "entry_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+  },
+  "content": {
+    "name": "handoff",
+    "title": "会话交接文档整理",
+    "summary": "把当前对话压缩成一份交接文档，使全新的 agent 能继续未完成的工作。文档写入操作系统的临时目录而不是当前工作区；需包含“suggested skills”一节，列出下一 agent 应通过 Skill 工具调用的 skill；对已存在于其他工件（specs、plans、ADRs、issues、commits、diffs）中的内容只引用路径或 URL，不重复；并脱敏敏感信息。若调用时传入了参数，则按参数描述调整文档重点。",
+    "evidence": [
+      {
+        "path": "skills/productivity/handoff/SKILL.md",
+        "line_start": 8,
+        "line_end": 16
+      }
+    ],
+    "tasks": [
+      {
+        "id": "draft-handoff-document",
+        "goal": "产出一份摘要当前会话的交接文档，供另一个 agent 在新会话中接续工作。",
+        "when": "需要把当前会话交给新的 agent 继续时；用户可传入参数说明下一会话的用途。",
+        "inputs": [
+          "当前会话内容",
+          "用户传入的参数（对下一会话关注点的描述，可选）"
+        ],
+        "outputs": [
+          "交接文档，保存到用户操作系统的临时目录",
+          "文档中的 suggested skills 章节，列明下一 agent 应调用的 skill"
+        ],
+        "steps": [
+          {
+            "action": "把交接文档写到用户操作系统的临时目录：优先 $TMPDIR，否则 /tmp；Windows 上使用 %TEMP%；不写入当前工作区。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "编写一份概括当前会话的交接文档。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "若用户传入了参数，将其视为对下一会话聚焦内容的描述，据此调整文档内容。",
+            "when": "调用时用户传入了参数",
+            "rationale": null
+          },
+          {
+            "action": "在文档中加入“suggested skills”章节，写明下一 agent 应通过 Skill 工具调用哪些 skill。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "对已记录在其他工件（specs、plans、ADRs、issues、commits、diffs）中的内容不再复制，改为用路径或 URL 引用。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "删除或遮蔽敏感信息，例如 API key、密码与个人可识别信息。",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认交接文档对已有工件内容采用路径或 URL 引用，而非重复其正文。",
+            "evidence": [
+              {
+                "path": "skills/productivity/handoff/SKILL.md",
+                "line_start": 12,
+                "line_end": 12
+              }
+            ]
+          },
+          {
+            "text": "确认文档中不含 API key、密码、个人可识别信息等敏感内容。",
+            "evidence": [
+              {
+                "path": "skills/productivity/handoff/SKILL.md",
+                "line_start": 14,
+                "line_end": 14
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 8,
+            "line_end": 16
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "交接文档应保存到操作系统的临时目录（$TMPDIR，否则 /tmp；Windows 用 %TEMP%），而不是当前工作区。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 8,
+            "line_end": 8
+          }
+        ]
+      },
+      {
+        "text": "不得重复其他工件（specs、plans、ADRs、issues、commits、diffs）中已记录的内容；应以路径或 URL 引用。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ]
+      },
+      {
+        "text": "必须遮蔽敏感信息，例如 API key、密码或可识别个人身份的信息。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 14,
+            "line_end": 14
+          }
+        ]
+      },
+      {
+        "text": "若用户传入了参数，应把参数当作下一会话关注内容的描述，并据此定制文档。",
+        "when": "用户调用时传入了参数",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Skill 工具",
+        "kind": "tool",
+        "locator": null,
+        "usage": "下一 agent 依据交接文档中的 suggested skills 章节，用它调用被点名的 skill。原文只说明该章节要列出应调用的 skill，未给出具体调用方式。",
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      },
+      {
+        "name": "操作系统临时目录",
+        "kind": "environment",
+        "locator": "$TMPDIR 或 /tmp；Windows 上为 %TEMP%",
+        "usage": "交接文档的写入位置，替代当前工作区。",
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 8,
+            "line_end": 8
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "调用方式",
+        "text": "frontmatter 设置 disable-model-invocation: true，即不由模型自动发起调用；并给出参数提示 “What will the next session be used for?”。",
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 2,
+            "line_end": 5
+          }
+        ]
+      },
+      {
+        "topic": "参数处理",
+        "text": "参数是可选的：只在用户传入时才用于定制文档重点。",
+        "evidence": [
+          {
+            "path": "skills/productivity/handoff/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/productivity/handoff/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/steps",
+        "reason": "not_stated",
+        "detail": "原文只要求文档包含 suggested skills 章节并避免重复其他工件，未规定交接文档的整体章节结构或模板，因此除这些约束外的组织方式不可从材料推得。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:56:10.797058+00:00"
+  }
+}

@@ -1,0 +1,408 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "46fa2ce238d972021b51",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/theme-factory/SKILL.md",
+    "git_blob_sha": "90dfceaf2ecdc191a4dcfb0069768a9560638998",
+    "entry_sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552"
+  },
+  "content": {
+    "name": "theme-factory",
+    "title": "Theme Factory：为幻灯片等作品套用预设主题或即时生成自定义主题",
+    "summary": "该 Skill 提供 10 套精选的专业字体与配色主题，每套含带十六进制色码的协调配色、标题与正文的互补字体配对，以及面向不同场景与受众的视觉标识。用于给演示幻灯片或其他作品（文档、报告、HTML 落地页等）应用一致的样式：先展示主题总览、由用户选定并明确确认，再按所选主题文件统一套用颜色与字体；当 10 套预设都不适用时，可依据提供的输入即时生成一个类似风格的新主题，展示审查后再套用。",
+    "evidence": [
+      {
+        "path": "skills/theme-factory/SKILL.md",
+        "line_start": 1,
+        "line_end": 17
+      },
+      {
+        "path": "skills/theme-factory/SKILL.md",
+        "line_start": 19,
+        "line_end": 26
+      },
+      {
+        "path": "skills/theme-factory/SKILL.md",
+        "line_start": 43,
+        "line_end": 59
+      }
+    ],
+    "tasks": [
+      {
+        "id": "apply-preset-theme",
+        "goal": "把选定的预设主题的颜色与字体一致地应用到幻灯片或其它作品上。",
+        "when": "需要给演示幻灯片或其他作品套用统一、专业样式时（材料以幻灯片为主要对象）。",
+        "inputs": [
+          "待处理的作品（幻灯片等）",
+          "theme-showcase.pdf 主题总览",
+          "所选主题在 themes/ 目录下的定义文件"
+        ],
+        "outputs": [
+          "应用了所选主题配色与字体、全篇视觉标识一致的作品"
+        ],
+        "steps": [
+          {
+            "action": "展示 `theme-showcase.pdf`，让用户可视化查看全部可用主题；仅用于查看，不做任何修改。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "询问用户要为作品套用哪一套主题。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "等待用户对所选主题给出明确确认。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "确认后从 `themes/` 目录读取所选主题对应的文件，取得其配色与字体规范。",
+            "when": "主题已选定并获得用户明确确认",
+            "rationale": null
+          },
+          {
+            "action": "把主题规定的颜色与字体一致地应用到整份作品。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "确保对比度与可读性，并在所有幻灯片上保持该主题的视觉标识一致。",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "应用后须确保对比度与可读性，并在全部幻灯片上保持主题视觉标识一致。",
+            "evidence": [
+              {
+                "path": "skills/theme-factory/SKILL.md",
+                "line_start": 52,
+                "line_end": 56
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 19,
+            "line_end": 26
+          },
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 50,
+            "line_end": 56
+          }
+        ]
+      },
+      {
+        "id": "create-custom-theme",
+        "goal": "当现有主题都不适合时，依据提供的输入生成一个新主题并经审查后套用。",
+        "when": "现有 10 套主题都不适用于某件作品时。",
+        "inputs": [
+          "待处理的作品",
+          "用户提供的基本描述（用于选择颜色与字体）"
+        ],
+        "outputs": [
+          "新主题（配色与字体规范）",
+          "经用户审查验证后套用该主题的作品"
+        ],
+        "steps": [
+          {
+            "action": "基于所提供的输入，生成一个与现有主题类似的新主题。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "给新主题起一个类似风格的名称，用以描述其字体/颜色组合代表什么。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "使用所提供的任一基本描述来选择合适的颜色与字体。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "生成后展示该主题，供用户审查与验证。",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "审查通过后，按预设主题的应用流程把该主题套用到作品上。",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "自定义主题生成后须先展示供审查与验证，之后再套用。",
+            "evidence": [
+              {
+                "path": "skills/theme-factory/SKILL.md",
+                "line_start": 58,
+                "line_end": 59
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 58,
+            "line_end": 59
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "每套主题都应包含：带十六进制色码的协调配色、标题与正文的互补字体配对，以及适合不同场景与受众的鲜明视觉标识。",
+        "when": "描述或生成主题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 14,
+            "line_end": 17
+          },
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 45,
+            "line_end": 48
+          }
+        ]
+      },
+      {
+        "text": "展示 `theme-showcase.pdf` 时不得对其做任何修改，只能原样展示给用户查看。",
+        "when": "进入主题选择环节时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "text": "必须取得用户对所选主题的明确确认后，才能开始套用主题。",
+        "when": "用户已看到主题总览并作出选择时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 24,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "text": "主题的颜色与字体应取自 `themes/` 目录中对应的主题文件，并在整份作品中一致应用，保持该主题的视觉标识。",
+        "when": "套用主题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 52,
+            "line_end": 56
+          }
+        ]
+      },
+      {
+        "text": "自定义生成的主题必须先展示供审查验证，通过后再按预设主题的应用方式套用。",
+        "when": "在预设主题均不适用、改为自定义主题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 58,
+            "line_end": 59
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "theme-showcase.pdf",
+        "kind": "asset",
+        "locator": "theme-showcase.pdf",
+        "usage": "可视化展示全部 10 套可用主题，供用户挑选；只作查看，不作修改（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 23,
+            "line_end": 23
+          },
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 30,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "name": "themes/ 主题定义目录",
+        "kind": "reference",
+        "locator": "skills/theme-factory/themes/",
+        "usage": "每个主题在此目录下以独立文件给出完整规范（配色与十六进制色码、标题/正文字体配对、适用场景）；选定主题后从这里读取对应文件（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 43,
+            "line_end": 48
+          },
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 53,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "name": "10 个预设主题定义文件",
+        "kind": "reference",
+        "locator": "skills/theme-factory/themes/（arctic-frost.md、botanical-garden.md、desert-rose.md、forest-canopy.md、golden-hour.md、midnight-galaxy.md、modern-minimalist.md、ocean-depths.md、sunset-boulevard.md、tech-innovation.md）",
+        "usage": "各文件以同名主题提供 4 个带色值与用途说明的颜色、标题与正文字体、以及适用场景举例，供套用时读取具体规范。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/themes/arctic-frost.md",
+            "line_start": 5,
+            "line_end": 19
+          },
+          {
+            "path": "skills/theme-factory/themes/ocean-depths.md",
+            "line_start": 5,
+            "line_end": 19
+          },
+          {
+            "path": "skills/theme-factory/themes/modern-minimalist.md",
+            "line_start": 5,
+            "line_end": 19
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "10 套预设主题及定位",
+        "text": "可用主题为：Ocean Depths（专业沉静的海事风）、Sunset Boulevard（温暖鲜艳的日落色）、Forest Canopy（自然的土色）、Modern Minimalist（干净的当代灰阶）、Golden Hour（浓郁温暖的秋色）、Arctic Frost（清冷利落的冬意）、Desert Rose（柔和雅致的灰调）、Tech Innovation（大胆现代的科技感）、Botanical Garden（清新有机的园艺色）、Midnight Galaxy（戏剧化的宇宙深色）。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 30,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "topic": "主题文件结构",
+        "text": "以 Arctic Frost 为例，主题文件按固定结构组织：先给主题定位描述，再列 4 个颜色（名称、十六进制色值、用途，如背景/强调/文字），随后给 Headers 与 Body Text 的字体，最后给“适用场景”举例。其它主题文件同构，如 Ocean Depths 用 DejaVu Sans 标题/正文，Botanical Garden 用 DejaVu Serif Bold 标题配 DejaVu Sans 正文。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/themes/arctic-frost.md",
+            "line_start": 1,
+            "line_end": 19
+          },
+          {
+            "path": "skills/theme-factory/themes/ocean-depths.md",
+            "line_start": 12,
+            "line_end": 19
+          },
+          {
+            "path": "skills/theme-factory/themes/botanical-garden.md",
+            "line_start": 12,
+            "line_end": 19
+          }
+        ]
+      },
+      {
+        "topic": "适用范围",
+        "text": "入口描述主要面向演示幻灯片，同时点名文档、报告、HTML 落地页等“已存在的作品”也可套用；具体应用步骤以幻灯片为叙述对象。",
+        "evidence": [
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "path": "skills/theme-factory/SKILL.md",
+            "line_start": 21,
+            "line_end": 21
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/theme-factory/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/arctic-frost.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/botanical-garden.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/desert-rose.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/forest-canopy.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/golden-hour.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/midnight-galaxy.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/modern-minimalist.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/ocean-depths.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/sunset-boulevard.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/theme-factory/themes/tech-innovation.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources/0/usage",
+        "reason": "unread_dependency",
+        "detail": "未提供 theme-showcase.pdf 的实际内容，只能确认它用于可视化总览主题；无法核对其排版或所列主题是否与正文的 10 套清单完全一致。"
+      },
+      {
+        "target": "/content/tasks/1/steps",
+        "reason": "ambiguous",
+        "detail": "自定义主题的生成标准只表述为“与现有主题类似”“使用所给的基本描述”，材料未给出配色数量、字体选择规则或色值推导方式，实际产出规范依赖执行者判断。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T15:00:48.643414+00:00"
+  }
+}

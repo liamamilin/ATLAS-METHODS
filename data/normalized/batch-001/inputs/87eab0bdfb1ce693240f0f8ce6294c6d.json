@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "6b9da56c4d7cc5e318ab",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/productivity/grilling/SKILL.md",
+    "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+    "entry_sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2"
+  },
+  "files": [
+    {
+      "path": "skills/productivity/grilling/SKILL.md",
+      "coverage": "full",
+      "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "bytes": 2077,
+      "source_lines": 30
+    }
+  ]
+}

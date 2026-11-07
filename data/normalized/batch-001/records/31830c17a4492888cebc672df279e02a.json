@@ -1,0 +1,494 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "285ef5f2d449c3d93539",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/composition-patterns/SKILL.md",
+    "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+    "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+  },
+  "content": {
+    "name": "vercel-composition-patterns",
+    "title": "React 组合模式（Composition Patterns）",
+    "summary": "面向 React 代码库的组合式组件做法：用显式变体组件、compound components 与 context/provider 取代以布尔 props 定制行为的单一巨型组件，并把状态管理上提到 provider、以 state/actions/meta 的通用 context 接口做依赖注入。入口按四类规则给出优先级，具体解释与错误/正确代码示例分布在各规则文件与编译文档 AGENTS.md 中；React 19 API 变更单列，仅适用 React 19+。",
+    "evidence": [
+      {
+        "path": "skills/composition-patterns/SKILL.md",
+        "line_start": 15,
+        "line_end": 30
+      },
+      {
+        "path": "skills/composition-patterns/SKILL.md",
+        "line_start": 32,
+        "line_end": 69
+      },
+      {
+        "path": "skills/composition-patterns/AGENTS.md",
+        "line_start": 15,
+        "line_end": 34
+      }
+    ],
+    "tasks": [
+      {
+        "id": "refactor-with-composition",
+        "goal": "用组合取代布尔 prop 蔓延，把复杂 React 组件重构/构建为可复用、可组合的组件（显式变体 + compound components + provider 注入状态）",
+        "when": "组件带有大量布尔 props；构建可复用组件库；设计灵活的组件 API；审查组件架构；使用 compound components 或 context providers",
+        "inputs": [
+          "待重构的 React 组件及其 props 定义",
+          "组件所需的状态来源与动作（如提交、更新输入）",
+          "目标 React 版本（是否 19+）"
+        ],
+        "outputs": [
+          "按用途划分的显式变体组件（如 ThreadComposer、EditComposer、ForwardMessageComposer）",
+          "共享 context 的 compound component 集合（Provider/Frame/Input/Footer/Submit 等）",
+          "承载状态实现的 provider 组件与通用 context 接口"
+        ],
+        "steps": [
+          {
+            "action": "找出用于定制行为的布尔 props（如 isThread、isEditing、isDMThread），识别其造成的条件分支",
+            "when": "组件通过布尔 props 切换渲染内容或行为",
+            "rationale": "每个布尔使可能状态翻倍，产生难以维护的条件逻辑",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 45,
+                "line_end": 53
+              }
+            ]
+          },
+          {
+            "action": "把每个变体写成显式组件（如 ChannelComposer、ThreadComposer、EditComposer），各自组合所需的头部/输入/底部子组件；共享内部子组件但不共享单一巨型父组件",
+            "when": "存在多种使用模式且原组件以布尔/开关组合区分",
+            "rationale": "每个变体显式说明其渲染内容，避免布尔组合带来的不可能状态",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 89,
+                "line_end": 142
+              }
+            ]
+          },
+          {
+            "action": "把复杂组件组织为 compound components：创建 context，将子组件导出为统一对象（如 Composer.Provider/Frame/Input/Submit/Footer），子组件从 context 读取 state/actions/meta，消费者只组合自己需要的部分",
+            "when": "组件需要在不做 prop drilling 的前提下灵活组合",
+            "rationale": "子组件通过共享 context 而非 props 获取共享状态，消费者显式组合所需部分，无隐藏条件分支",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 144,
+                "line_end": 252
+              }
+            ]
+          },
+          {
+            "action": "定义含 state、actions、meta 三部分的通用 context 接口，并让 UI 组件只消费该接口、不直接调用具体状态 hook",
+            "when": "同一套 UI 需要适配不同状态实现（本地 useState、全局同步状态等）",
+            "rationale": "接口作为契约，任何 provider 都可实现，从而把状态实现替换为依赖注入",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 375,
+                "line_end": 448
+              }
+            ]
+          },
+          {
+            "action": "将状态管理上提到专用 provider 组件，由 provider 成为唯一知道状态如何管理的地方；把需要共享状态的兄弟组件（如预览、提交按钮）放入同一 provider 内，而不是用 useEffect 向上同步或从 ref 读状态",
+            "when": "主 UI 之外的兄弟组件需要读取或修改组件状态",
+            "rationale": "provider 边界而非视觉嵌套决定状态可访问范围，避免 prop drilling、ref 读取和副作用同步",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 571,
+                "line_end": 696
+              }
+            ]
+          },
+          {
+            "action": "组合静态结构时使用 children；仅在父组件需要向子组件提供数据或状态时使用 render props",
+            "when": "设计 Composer.Frame / Composer.Footer 之类的容器组件",
+            "rationale": "children 更易读、可自然组合，且无需理解回调签名",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 808,
+                "line_end": 892
+              }
+            ]
+          },
+          {
+            "action": "在 React 19+ 中，将 ref 作为普通 prop 传入（不再包 forwardRef），并用 use() 取代 useContext()",
+            "when": "项目使用 React 19 或更高版本",
+            "rationale": "React 19 中 ref 已是普通 prop，use() 可替代 useContext() 且可条件调用",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 896,
+                "line_end": 938
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认组件中不再以布尔 props 定制行为，各变体为显式组件",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 798,
+                "line_end": 806
+              }
+            ]
+          },
+          {
+            "text": "确认同一套组合 UI 能配合不同 provider 工作（如本地临时状态 provider 与全局同步状态 provider），因为 UI 只依赖 context 接口",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 341,
+                "line_end": 373
+              },
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 491,
+                "line_end": 509
+              }
+            ]
+          },
+          {
+            "text": "确认 provider 之外没有用 useEffect 同步状态上提、或用 ref 读取状态再提交的替代写法",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 611,
+                "line_end": 644
+              }
+            ]
+          },
+          {
+            "text": "React 19+ 项目中确认没有 forwardRef 与 useContext 用法",
+            "evidence": [
+              {
+                "path": "skills/composition-patterns/AGENTS.md",
+                "line_start": 910,
+                "line_end": 936
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 22,
+            "line_end": 30
+          },
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 38,
+            "line_end": 43
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "不要为定制组件行为添加布尔 props；应改用组合。",
+        "when": "组件以 isThread、isEditing 等布尔 props 切换行为",
+        "rationale": "每个布尔使可能状态翻倍，产生难以维护的条件逻辑",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 45,
+            "line_end": 53
+          },
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 45,
+            "line_end": 46
+          }
+        ]
+      },
+      {
+        "text": "复杂组件应结构化为带共享 context 的 compound components，每个子组件通过 context 而非 props 访问共享状态。",
+        "when": "组件需要灵活组合且不想逐层传 props",
+        "rationale": "消费者可精确组合所需部件，无隐藏条件分支",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 144,
+            "line_end": 152
+          }
+        ]
+      },
+      {
+        "text": "provider 组件应是唯一知道状态如何管理的地方；UI 组件只消费 context 接口，不知道状态来自 useState、Zustand 还是服务端同步。",
+        "when": "存在多种状态来源或需要替换状态实现",
+        "rationale": "解耦后可在不修改 UI 的情况下替换状态实现",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 263,
+            "line_end": 271
+          }
+        ]
+      },
+      {
+        "text": "为组件 context 定义通用接口，包含 state、actions、meta 三部分，作为任何 provider 都可实现的契约。",
+        "when": "需要可依赖注入的状态接口",
+        "rationale": "同一 UI 组件可配合完全不同状态实现的 provider",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 375,
+            "line_end": 389
+          }
+        ]
+      },
+      {
+        "text": "把状态管理移入专用 provider 组件，使主 UI 之外的兄弟组件无需 prop drilling 或 awkward refs 即可访问和修改状态。",
+        "when": "兄弟组件需要共享状态",
+        "rationale": "state 提升到 provider 后，可访问范围由 provider 边界决定",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 571,
+            "line_end": 579
+          }
+        ]
+      },
+      {
+        "text": "用一个含多布尔 props 的组件改为显式变体组件，每个变体明确其使用的 provider/state、包含的 UI 元素和可用动作。",
+        "when": "同一组件存在多种模式",
+        "rationale": "代码自解释，无布尔组合需要推理，无不可能状态",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 707,
+            "line_end": 715
+          },
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 798,
+            "line_end": 806
+          }
+        ]
+      },
+      {
+        "text": "用 children 做组合，优先于 renderX props。",
+        "when": "组合静态结构",
+        "rationale": "children 更可读、可自然组合，不需要理解回调签名",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 808,
+            "line_end": 816
+          }
+        ]
+      },
+      {
+        "text": "render props 适用于父组件需要向子组件提供数据或状态的场景。",
+        "when": "父组件需向子组件回传数据/状态（如 renderItem）",
+        "rationale": "来源将其列为 render props 的适用情形，与静态结构组合区分",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 880,
+            "line_end": 892
+          }
+        ]
+      },
+      {
+        "text": "React 19+ 中不要使用 forwardRef；ref 作为普通 prop 传递。",
+        "when": "仅 React 19 及以上",
+        "rationale": "React 19 中 ref 已是普通 prop，无需包装",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 896,
+            "line_end": 924
+          }
+        ]
+      },
+      {
+        "text": "React 19+ 中用 use() 取代 useContext()。",
+        "when": "仅 React 19 及以上",
+        "rationale": "use() 可替代 useContext()，且可条件调用",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 926,
+            "line_end": 938
+          }
+        ]
+      },
+      {
+        "text": "组件需要共享状态时不必视觉嵌套，只要位于同一 provider 内即可。",
+        "when": "布局上分离但需共享状态的组件",
+        "rationale": "决定能否访问状态的是 provider 边界，而不是视觉嵌套",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 555,
+            "line_end": 565
+          },
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 694,
+            "line_end": 696
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "规则文件（rules/*.md）",
+        "kind": "reference",
+        "locator": "rules/architecture-avoid-boolean-props.md",
+        "usage": "逐条规则的详细说明，每个文件含为何重要、带解释的错误代码、带解释的正确代码、附加背景与引用；SKILL.md 举例列出 rules/architecture-avoid-boolean-props.md 与 rules/state-context-interface.md。本次未读取这些文件。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 71,
+            "line_end": 85
+          }
+        ]
+      },
+      {
+        "name": "AGENTS.md 完整编译文档",
+        "kind": "reference",
+        "locator": "skills/composition-patterns/AGENTS.md",
+        "usage": "包含全部规则展开的完整指南；SKILL.md 指向它作为完整文档",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 87,
+            "line_end": 89
+          }
+        ]
+      },
+      {
+        "name": "React 官方文档与 context/use 参考",
+        "kind": "reference",
+        "locator": "https://react.dev",
+        "usage": "来源列为参考链接：react.dev、passing-data-deeply-with-context、reference/react/use",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 942,
+            "line_end": 946
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "规则优先级",
+        "text": "四类规则按优先级排列：Component Architecture（HIGH，前缀 architecture-）、State Management（MEDIUM，state-）、Implementation Patterns（MEDIUM，patterns-）、React 19 APIs（MEDIUM，react19-）。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 32,
+            "line_end": 39
+          }
+        ]
+      },
+      {
+        "topic": "React 19 章节适用范围",
+        "text": "React 19 API 章节标注为仅 React 19+，使用 React 18 或更早版本时应跳过该节。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 65,
+            "line_end": 69
+          },
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 900,
+            "line_end": 906
+          }
+        ]
+      },
+      {
+        "topic": "规则文件结构",
+        "text": "每个规则文件包含：为何重要的简述、带解释的错误代码示例、带解释的正确代码示例、附加背景与引用。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 80,
+            "line_end": 85
+          }
+        ]
+      },
+      {
+        "topic": "use() 的条件调用",
+        "text": "use() 与 useContext() 不同，可以条件调用。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 938,
+            "line_end": 938
+          }
+        ]
+      },
+      {
+        "topic": "布尔 props 示例的范围",
+        "text": "SKILL.md 与 AGENTS.md 中的 Composer 系列代码（ChannelComposer/ThreadComposer/EditComposer 及 isThread/isDMThread/isEditing 等）是说明性示例，展示布尔组合导致的嵌套条件分支，并非穷举所有情形或强制命名。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 55,
+            "line_end": 87
+          },
+          {
+            "path": "skills/composition-patterns/SKILL.md",
+            "line_start": 57,
+            "line_end": 87
+          }
+        ]
+      },
+      {
+        "topic": "来源性质",
+        "text": "文档自述主要面向维护、生成或重构 React 代码库的 agents 与 LLM，人类也可用，但指引针对自动化与一致性做了优化。",
+        "evidence": [
+          {
+            "path": "skills/composition-patterns/AGENTS.md",
+            "line_start": 7,
+            "line_end": 11
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/composition-patterns/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/composition-patterns/AGENTS.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "rules/ 目录下各规则文件未读取，本记录依据入口 SKILL.md 与编译文档 AGENTS.md；各规则文件中的具体代码示例未逐一核验，也无法确认其与 AGENTS.md 展开内容是否完全一致。"
+      },
+      {
+        "target": "/content/tasks/0/checks",
+        "reason": "not_stated",
+        "detail": "来源未给出自动化检查、测试或度量方法；所列检查项均来自文档中模式对照（错误/正确示例）的要求，不代表已执行或已验证效果。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:47:59.023803+00:00"
+  }
+}

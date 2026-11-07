@@ -1,0 +1,736 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "2d541286acded129f988",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/writing-plans/SKILL.md",
+    "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+    "entry_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+  },
+  "content": {
+    "name": "writing-plans",
+    "title": "为多步骤实现编写可直接执行的实施计划（TDD、分任务、含自检与交接）",
+    "summary": "本 Skill 针对已有一份 spec 或需求、尚未动代码的多步骤任务，写一份给没看过该代码库或 spec 的工程师使用的实施计划：先做范围检查与文件结构设计，把任务切到带独立测试周期的最小单元、每步只含一个可检查动作；计划文档固定包含 Goal/Architecture/Tech Stack/Spec 路径、逐字抄录的全局约束与 Review Focus，任务块给出精确文件路径、接口签名与失败测试—通过测试—提交步骤；写完后按 5 项自检（覆盖、步粒度、类型一致、Review Focus、篇幅比例）就地修正，再交人类评审并选择执行方式（子代理驱动或本会话原生执行）。",
+    "evidence": [
+      {
+        "path": "skills/writing-plans/SKILL.md",
+        "section": "Overview",
+        "line_start": 8,
+        "line_end": 17
+      }
+    ],
+    "tasks": [
+      {
+        "id": "scope-and-file-structure",
+        "goal": "在定义任务前判断是否需要拆分计划，并先锁定文件级分解：哪些文件新建或修改、各自职责。",
+        "when": "有一份 spec/需求、任务是分多步实现、且尚未开始动代码时。",
+        "inputs": [
+          "已完成的 spec 或需求（含项目级要求）",
+          "目标代码库现状与既有模式"
+        ],
+        "outputs": [
+          "（必要时）拆分为每个子系统一份计划的建议",
+          "文件结构清单：将创建/修改的文件与各自职责"
+        ],
+        "steps": [
+          {
+            "action": "检查 spec 是否覆盖多个相互独立的子系统；若是，建议拆成多个独立计划，每个子系统一份。",
+            "when": "spec 涵盖多个独立子系统，且在头脑风暴阶段未拆分时。",
+            "rationale": "每份计划应能独立产出可运行、可测试的软件。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Scope Check",
+                "line_start": 19,
+                "line_end": 21
+              }
+            ]
+          },
+          {
+            "action": "在定义任务之前，先列出将创建或修改哪些文件，以及每个文件负责什么，以此锁定分解决策。",
+            "when": "每次写计划时。",
+            "rationale": "文件结构会决定任务分解，使每个任务产出可独立理解的改动。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "File Structure",
+                "line_start": 23,
+                "line_end": 32
+              }
+            ]
+          },
+          {
+            "action": "按职责划分文件：每个文件一个清晰职责，优先小而聚焦的文件而非承担过多的大文件；一起变化的文件放在一起，按职责而非按技术层拆分。",
+            "when": "设计文件结构时。",
+            "rationale": "能一次放在上下文中理解的代码推理效果最好，文件聚焦时改动更可靠。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "File Structure",
+                "line_start": 27,
+                "line_end": 29
+              }
+            ]
+          },
+          {
+            "action": "在既有代码库中沿用既有模式；不要单方面重构使用大文件的代码库，但若要修改的文件已变得难以维护，可以在计划中包含一次拆分。",
+            "when": "在既有代码库中设计文件结构时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "File Structure",
+                "line_start": 30,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每份计划都能独立产出可运行、可测试的软件。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Scope Check",
+                "line_start": 21,
+                "line_end": 21
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Scope Check / File Structure",
+            "line_start": 19,
+            "line_end": 32
+          }
+        ]
+      },
+      {
+        "id": "task-and-step-sizing",
+        "goal": "把工作切成合适大小的任务与步骤，使每个任务有可独立测试的交付物、每步只对应一个可检查动作。",
+        "when": "确定文件结构之后、撰写任务块内容时。",
+        "inputs": [
+          "文件结构清单",
+          "spec 中的需求"
+        ],
+        "outputs": [
+          "任务边界划分：每个任务带独立可测试交付物",
+          "每任务的步骤序列（TDD 式：写失败测试、运行确认失败、写最小实现、运行确认通过、提交）"
+        ],
+        "steps": [
+          {
+            "action": "以“承载自身测试周期、值得让一个新评审者把关的最小单元”作为任务边界：把搭建、配置、脚手架、文档步骤并入需要这些交付物的任务；只在评审者能有意义地拒绝其中一个任务而批准相邻任务处才拆分。",
+            "when": "划分任务边界时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Task Right-Sizing",
+                "line_start": 36,
+                "line_end": 41
+              }
+            ]
+          },
+          {
+            "action": "把每步写成只包含一个动作且结果可检查，例如依次为：写失败测试、运行确认它失败、实现让测试通过的最小代码、运行测试确认通过、提交。",
+            "when": "编写某任务的具体步骤时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Step Granularity",
+                "line_start": 43,
+                "line_end": 50
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每个任务以可独立测试的交付物结束。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Task Right-Sizing",
+                "line_start": 40,
+                "line_end": 41
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Task Right-Sizing / Step Granularity",
+            "line_start": 34,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "id": "write-plan-document",
+        "goal": "按固定文档结构与任务模板写出完整计划文件，包含全局约束、评审关注点、精确接口与可验证步骤。",
+        "when": "文件结构与任务切分完成后。",
+        "inputs": [
+          "spec/设计文档（及其逐字抄录的项目级要求）",
+          "文件结构清单与任务切分",
+          "代码库中的既有模式"
+        ],
+        "outputs": [
+          "保存于 docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md 的计划文件（用户指定的位置优先）",
+          "计划文档头（标题、Goal、Architecture、Tech Stack、Spec 路径、Global Constraints、Review Focus）",
+          "每任务的 Files/Interfaces 与勾选框步骤（测试代码、运行命令与预期输出、实现签名、提交命令）"
+        ],
+        "steps": [
+          {
+            "action": "按模板写计划文档头：功能名标题；一行说明辅助代理必须使用的执行子技能（subagent-driven-development 推荐，或 executing-plans）；Goal 用一句话；Architecture 2–3 句；Tech Stack；Spec 路径（计划依据 spec 论证，执行者两份都读）。",
+            "when": "开始撰写计划文件时。",
+            "rationale": "spec 是计划论证的依据，因此随计划一起传递。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Plan Document Header",
+                "line_start": 52,
+                "line_end": 90
+              }
+            ]
+          },
+          {
+            "action": "在 Global Constraints 中逐行列出 spec 的项目级要求（版本下限、依赖限制、命名与文案规则、平台要求），精确值逐字从 spec 复制；每个任务的要求隐式包含该段。",
+            "when": "spec 含项目级要求时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Global Constraints",
+                "line_start": 70,
+                "line_end": 75
+              }
+            ]
+          },
+          {
+            "action": "在 Review Focus 中一次性写出 spec 隐含、但没有任务测试覆盖、最可能让使用者出问题的五类输入或失败模式，每行指出输入/条件与合理预期行为，最可能者在前；然后为每一行在拥有相应代码的任务中以该任务自己的步骤风格补上测试。",
+            "when": "撰写文档头时，对着 spec 列出。",
+            "rationale": "spec 是愿景文档，只说明软件必须做什么；它对某输入的沉默不等于允许该输入破坏程序。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Review Focus",
+                "line_start": 77,
+                "line_end": 87
+              }
+            ]
+          },
+          {
+            "action": "按任务模板写每个任务块：Files 给出创建/修改（含行号区间）/测试的精确路径；Interfaces 写明本任务从早前任务消费的确切签名，以及后续任务依赖的确切函数名、参数与返回类型。",
+            "when": "撰写每个任务时。",
+            "rationale": "任务实现者只看到自己的任务，Interfaces 块是他们了解相邻任务命名与类型的途径。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Task Structure",
+                "line_start": 92,
+                "line_end": 106
+              }
+            ]
+          },
+          {
+            "action": "按 TDD 写步骤：勾选框步骤中给出失败测试代码（测试名与断言，使用 spec 的精确值）、运行该测试的命令与预期失败信息、实现步骤（精确签名、所在文件、spec 固定的具体值，函数体由实现者写）、运行测试确认通过的预期，以及提交命令。",
+            "when": "编写任务的步骤与代码块时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Task Structure",
+                "line_start": 108,
+                "line_end": 138
+              }
+            ]
+          },
+          {
+            "action": "按步骤类型只放使其无歧义所必需的内容：测试步给测试名与断言代码；代码步给精确签名、文件与 spec 固定的值，仅在签名和测试无法确定算法或 spec 固定了原文时给出函数体；验证步给命令与代表通过的输出；引用其他任务时只指向其 Interfaces 块，不重复代码。",
+            "when": "逐条检查每一步内容时。",
+            "rationale": "一步写完时实现者能写出恰好一件合理的事即可，要求是无歧义而非完整。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "What a Step Contains",
+                "line_start": 140,
+                "line_end": 155
+              }
+            ]
+          },
+          {
+            "action": "将计划保存到 docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md（用户对计划位置的偏好覆盖此默认）。",
+            "when": "计划内容写完后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Save plans to",
+                "line_start": 16,
+                "line_end": 17
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每一行 Review Focus 都在拥有相应代码的任务中补上了对应测试。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Review Focus",
+                "line_start": 84,
+                "line_end": 87
+              }
+            ]
+          },
+          {
+            "text": "计划中不应有不作任何决定的句子（“TBD”“处理边界情况”“加上适当的校验”“为以上写测试”、没有任何任务定义的类型或函数）；这类句子与“计划比它描述的代码还长”同属应当检出的反面失败。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "What a Step Contains",
+                "line_start": 157,
+                "line_end": 161
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Plan Document Header / Task Structure / What a Step Contains",
+            "line_start": 52,
+            "line_end": 161
+          }
+        ]
+      },
+      {
+        "id": "self-review",
+        "goal": "写完计划后自己按清单对照 spec 复核并就地修正问题。",
+        "when": "完整计划写完之后（这是自查清单，不是派发子代理）。",
+        "inputs": [
+          "已写完的完整计划",
+          "spec/设计文档"
+        ],
+        "outputs": [
+          "就地修正后的计划（补缺失任务、修正步粒度、统一类型命名、压缩篇幅）"
+        ],
+        "steps": [
+          {
+            "action": "检查 spec 覆盖：略读 spec 的每一节/每项要求，看能否指向实现它的任务，列出缺口。",
+            "when": "自查第 1 项。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 167,
+                "line_end": 167
+              }
+            ]
+          },
+          {
+            "action": "逐条扫描步骤：每步都应让实现者写出恰好一件合理的事，既不能不作决定，也不能包含签名与测试已确定的函数体；两类问题都修。",
+            "when": "自查第 2 项。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 169,
+                "line_end": 169
+              }
+            ]
+          },
+          {
+            "action": "检查类型一致性：后续任务使用的类型、方法签名与属性名要和早前任务定义的一致（如任务 3 叫 clearLayers() 而任务 7 叫 clearFullLayers() 即为缺陷）。",
+            "when": "自查第 3 项。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 171,
+                "line_end": 171
+              }
+            ]
+          },
+          {
+            "action": "核对 Review Focus：spec 隐含的每一类输入或失败模式是否都有任务的测试覆盖；把最可能出问题的五项写入 Review Focus，并把测试加到对应任务；该节为空表示已检查且未发现，而不是跳过检查。",
+            "when": "自查第 4 项。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 173,
+                "line_end": 173
+              }
+            ]
+          },
+          {
+            "action": "比较篇幅：把计划长度与 spec 长度对比，若计划比它实现的 spec 长出数倍，说明写成了程序的逐字记录；若代码块占了文档大部分，则把函数体换成签名、测试名与断言，并确认每步仍无歧义。",
+            "when": "自查第 5 项。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 175,
+                "line_end": 175
+              }
+            ]
+          },
+          {
+            "action": "发现问题就地修正，不需要重新复核；若发现 spec 有要求却没有对应任务，就补上任务。",
+            "when": "自查发现缺口时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 177,
+                "line_end": 177
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "五项自查（spec 覆盖、步扫描、类型一致、Review Focus、篇幅比例）已逐项执行。",
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Self-Review",
+                "line_start": 165,
+                "line_end": 175
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Self-Review",
+            "line_start": 163,
+            "line_end": 177
+          }
+        ]
+      },
+      {
+        "id": "execution-handoff",
+        "goal": "把已自查的计划交给人类评审，并确定执行方式后移交实现。",
+        "when": "计划保存并完成自查之后。",
+        "inputs": [
+          "已保存的计划文件",
+          "人类是否已明确给出执行方式"
+        ],
+        "outputs": [
+          "给人类的计划链接与评审请求",
+          "已确认的执行方式及对应的必需执行子技能"
+        ],
+        "steps": [
+          {
+            "action": "把计划链接给人类伙伴阅读；若对方此前已明确提供执行方式，请其评审计划并确认计划是否包含其所要内容，等到评审完成后再开始实现，并沿用已保留的方法。",
+            "when": "人类已明确给出执行方式时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Execution Handoff",
+                "line_start": 181,
+                "line_end": 185
+              },
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Execution Handoff",
+                "line_start": 196,
+                "line_end": 198
+              }
+            ]
+          },
+          {
+            "action": "若尚未提供执行方式，请其评审计划并选择执行方式，同时给出两个选项：子代理驱动（每个任务由新子代理实现、下一任务开始前由新评审者检查，最后做整分支评审；最彻底，每任务与每评审都要新上下文）与原生执行（本会话自行实现全部任务，最后由最强模型的一名新评审者检查整分支；最省最快，结束前无独立评审，因计划承载设计，配中档会话模型也能运行良好）。",
+            "when": "人类未指定执行方式时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Execution Handoff",
+                "line_start": 187,
+                "line_end": 192
+              }
+            ]
+          },
+          {
+            "action": "给出推荐：明确推荐两者之一，并用一句话说明理由（任务间接口依赖程度、任务数量、上线后出错的代价），然后询问计划是否包含所要内容、采用哪种方式。",
+            "when": "提供执行方式选项时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Execution Handoff",
+                "line_start": 194,
+                "line_end": 194
+              }
+            ]
+          },
+          {
+            "action": "按选择接入必需子技能：选子代理驱动则使用 superpowers:subagent-driven-development；选原生则使用 superpowers:executing-plans。",
+            "when": "人类确定执行方式后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/writing-plans/SKILL.md",
+                "section": "Execution Handoff",
+                "line_start": 200,
+                "line_end": 204
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Execution Handoff",
+            "line_start": 179,
+            "line_end": 204
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "面向没看过该代码库或 spec 的工程师写作：假定他们只要知道确切接口和确切测试就能用项目语言写出地道代码，并在计划留白处做合理选择；计划必须记录他们无法知道的决定——哪些文件、哪些名称与签名、spec 中的哪些值、哪些测试证明每个任务。",
+        "when": "撰写任何计划内容时。",
+        "rationale": "实现者无法知道的是作者已经做出的决定。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Overview",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      },
+      {
+        "text": "以小块任务给出完整计划，遵循 DRY、YAGNI、TDD 与频繁提交。",
+        "when": "组织计划与任务时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Overview",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      },
+      {
+        "text": "开始时须声明：“I'm using the writing-plans skill to create the implementation plan.”",
+        "when": "开始使用本 Skill 时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Overview",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ]
+      },
+      {
+        "text": "计划是“实现者无法独自做出的决定”的集合；比它所描述的代码还长的计划等于把代码写了一遍。",
+        "when": "判断计划篇幅与内容取舍时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "What a Step Contains",
+            "line_start": 157,
+            "line_end": 160
+          }
+        ]
+      },
+      {
+        "text": "代码步只给精确签名、所在文件与 spec 固定的值，函数体由实现者写；仅当签名与测试无法确定算法、或 spec 固定了需照抄的文本时才给出函数体。",
+        "when": "编写代码类步骤时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "What a Step Contains",
+            "line_start": 148,
+            "line_end": 151
+          }
+        ]
+      },
+      {
+        "text": "引用其他任务时，使用该任务的 Interfaces 块说明用什么，不在计划中重复该任务的代码。",
+        "when": "某步依赖早前任务时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "What a Step Contains",
+            "line_start": 154,
+            "line_end": 155
+          }
+        ]
+      },
+      {
+        "text": "在开始实现前等待人类对计划的评审；若执行方式已给定，则沿用该已保留的方法。",
+        "when": "计划已保存并自查后。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Execution Handoff",
+            "line_start": 181,
+            "line_end": 185
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "计划保存路径模板",
+        "kind": "template",
+        "locator": "docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md",
+        "usage": "计划文件的默认保存位置；用户对计划位置的偏好覆盖该默认。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Save plans to",
+            "line_start": 16,
+            "line_end": 17
+          }
+        ]
+      },
+      {
+        "name": "spec/设计文档",
+        "kind": "reference",
+        "locator": null,
+        "usage": "计划所实现的输入；其项目级要求在 Global Constraints 中逐字抄录，执行者同时阅读 spec 与计划。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Plan Document Header",
+            "line_start": 67,
+            "line_end": 75
+          }
+        ]
+      },
+      {
+        "name": "superpowers:subagent-driven-development",
+        "kind": "skill",
+        "locator": "superpowers:subagent-driven-development",
+        "usage": "选择子代理驱动执行方式时的必需子技能（文档所述，未在本材料中展开）。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Execution Handoff",
+            "line_start": 200,
+            "line_end": 201
+          }
+        ]
+      },
+      {
+        "name": "superpowers:executing-plans",
+        "kind": "skill",
+        "locator": "superpowers:executing-plans",
+        "usage": "选择原生执行方式时的必需子技能（文档所述，未在本材料中展开）。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Execution Handoff",
+            "line_start": 203,
+            "line_end": 204
+          }
+        ]
+      },
+      {
+        "name": "superpowers:using-git-worktrees",
+        "kind": "skill",
+        "locator": "superpowers:using-git-worktrees",
+        "usage": "若在隔离 worktree 中工作，该 worktree 应在执行阶段由本技能创建（文档所述，未展开）。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Context",
+            "line_start": 14,
+            "line_end": 14
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "Review Focus 的定位",
+        "text": "spec 被视为愿景文档：它说明软件必须做什么，而不是它将会遇到的一切；spec 对某输入的沉默不构成允许该输入破坏程序的许可。因此需在动笔时对着 spec 一次性列出最可能出问题的五类未覆盖输入或失败模式。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Review Focus",
+            "line_start": 77,
+            "line_end": 87
+          }
+        ]
+      },
+      {
+        "topic": "步骤示例的具体形式",
+        "text": "任务模板给出的示例是一条 TDD 循环：为具体行为写失败测试（含输入与期望值断言）、用 pytest 指定用例运行并预期“function not defined”失败、实现带类型签名的函数、再运行确认 PASS、最后用 git add/git commit 提交；这些是模板示例，不是唯一写法。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Task Structure",
+            "line_start": 108,
+            "line_end": 137
+          }
+        ]
+      },
+      {
+        "topic": "本地约定与用户偏好",
+        "text": "用户对计划位置的偏好优先于默认保存路径。",
+        "evidence": [
+          {
+            "path": "skills/writing-plans/SKILL.md",
+            "section": "Save plans to",
+            "line_start": 16,
+            "line_end": 17
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/writing-plans/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/3",
+        "reason": "ambiguous",
+        "detail": "Review Focus 要求挑出“最可能出问题的五类”未覆盖输入或失败模式，但原文只给判断依据（spec 隐含、无测试覆盖、最可能先出问题），未给可操作的选取标准或判定阈值，取舍依赖撰写者判断。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:58.542310+00:00"
+  }
+}

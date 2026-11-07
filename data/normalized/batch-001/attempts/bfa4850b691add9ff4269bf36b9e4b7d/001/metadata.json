@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:48:48.366418+00:00",
+  "source": {
+    "collection_id": "237b32583f4ed1a40f85",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/systematic-debugging/SKILL.md",
+    "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+    "entry_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "e543a2d2c0347d97e5243951d5cfea811d517859c624610d95d559c031718449",
+  "input_files": [
+    {
+      "path": "skills/systematic-debugging/SKILL.md",
+      "coverage": "full",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+      "bytes": 9530,
+      "source_lines": 283
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498434ebffecRBfp3PWus5xxA",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 7261,
+          "output": 4143,
+          "reasoning": 1637,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:49:24.179643+00:00"
+}

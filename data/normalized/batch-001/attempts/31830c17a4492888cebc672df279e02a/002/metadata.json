@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-11-07T14:40:43.306117+00:00",
+  "source": {
+    "collection_id": "285ef5f2d449c3d93539",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/composition-patterns/SKILL.md",
+    "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+    "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "43223d997bb43180c6fae0e76c7a990bef0965162d099b7c0d865189ce160124",
+  "input_files": [
+    {
+      "path": "skills/composition-patterns/SKILL.md",
+      "coverage": "full",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "bytes": 2886,
+      "source_lines": 89
+    },
+    {
+      "path": "skills/composition-patterns/AGENTS.md",
+      "coverage": "full",
+      "sha256": "89e3ddd58fcf99a53a50e25dfd21b8cde1be5f10b7df6bacd3dfa6796932f516",
+      "git_blob_sha": "558bf9aa1e36db2161f1633c9bfae14a819f0508",
+      "bytes": 22627,
+      "source_lines": 946
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498b9c0affe3RECxQnX82xKKM",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:46.916809+00:00"
+}

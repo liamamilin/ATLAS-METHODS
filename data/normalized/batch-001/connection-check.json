@@ -1,0 +1,30 @@
+{
+  "purpose": "Diagnose PWD-based Location selection using an OK-only request; not a converted Skill.",
+  "session_id": "ses_e498a53ddffeiMv0HrD9r6FY2t",
+  "usage_source": "opencode session export",
+  "turns": [
+    {
+      "model": {
+        "id": "deepseek-v4.1-flash",
+        "providerID": "open-design",
+        "variant": "default"
+      },
+      "tokens": {
+        "input": 708,
+        "output": 2,
+        "reasoning": 163,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "cost": 0,
+      "finish": "stop"
+    }
+  ],
+  "billing_cost": null,
+  "unauthenticated_http_probe": {
+    "http_status": 401,
+    "model_usage": "not returned; not counted as a successful inference"
+  }
+}

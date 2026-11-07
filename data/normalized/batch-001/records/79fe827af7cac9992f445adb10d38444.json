@@ -1,0 +1,874 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "b02dbd96699c235e7de5",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/internal-comms/SKILL.md",
+    "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+    "entry_sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475"
+  },
+  "content": {
+    "name": "internal-comms",
+    "title": "内部沟通写作：按类型选择指南并套用固定格式",
+    "summary": "该 Skill 是一套内部沟通写作资源：先从请求判断沟通类型（3P 更新、公司通讯、FAQ 等），再从 examples/ 载入对应指南，按其中的格式、语气与信息采集要求撰写；没有匹配指南时向用户澄清格式。3P 更新强调 30–60 秒可读、每节 1–3 句、数据驱动与严格固定版式；公司通讯强调 20–25 条要点、使用“we”人称、多链接并按板块归类；FAQ 强调面向全公司找共性困惑并基于官方信息作答。",
+    "evidence": [
+      {
+        "path": "skills/internal-comms/SKILL.md",
+        "section": "When to use this skill / How to use this skill",
+        "line_start": 7,
+        "line_end": 29
+      },
+      {
+        "path": "skills/internal-comms/examples/3p-updates.md",
+        "line_start": 1,
+        "line_end": 11
+      },
+      {
+        "path": "skills/internal-comms/examples/company-newsletter.md",
+        "line_start": 1,
+        "line_end": 7
+      },
+      {
+        "path": "skills/internal-comms/examples/faq-answers.md",
+        "line_start": 1,
+        "line_end": 7
+      },
+      {
+        "path": "skills/internal-comms/examples/general-comms.md",
+        "section": "## Instructions"
+      }
+    ],
+    "tasks": [
+      {
+        "id": "select-guideline",
+        "goal": "根据请求判断内部沟通类型，载入并遵循对应指南文件。",
+        "when": "收到任何内部沟通写作请求时",
+        "inputs": [
+          "用户的写作请求（沟通类型、对象、时间范围等）"
+        ],
+        "outputs": [
+          "选定的指南文件",
+          "按该指南撰写的沟通稿"
+        ],
+        "steps": [
+          {
+            "action": "从请求中识别沟通类型（3P 更新、公司通讯、FAQ、状态报告、领导层更新、项目更新、事故报告等）。",
+            "when": null,
+            "rationale": "类型决定后续载入哪份指南。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/SKILL.md",
+                "line_start": 7,
+                "line_end": 22
+              }
+            ]
+          },
+          {
+            "action": "从 examples/ 载入对应文件：3p-updates.md 对应进展/计划/问题团队更新；company-newsletter.md 对应全公司通讯；faq-answers.md 对应常见问题回答；general-comms.md 对应其他不明确匹配上述类型的内容。",
+            "when": null,
+            "rationale": "每份文件给出各自的格式、语气与信息采集要求。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/SKILL.md",
+                "line_start": 22,
+                "line_end": 27
+              }
+            ]
+          },
+          {
+            "action": "遵循所选文件中的具体格式、语气与内容采集说明撰写。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/SKILL.md",
+                "line_start": 27,
+                "line_end": 27
+              }
+            ]
+          },
+          {
+            "action": "若沟通类型不匹配任何现有指南，向用户询问澄清或补充期望格式的信息。",
+            "when": "类型无法归入现有指南时",
+            "rationale": "避免自行编造版式。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/SKILL.md",
+                "line_start": 29,
+                "line_end": 29
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "section": "How to use this skill",
+            "line_start": 17,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "id": "write-3p-update",
+        "goal": "撰写面向管理层与同事、30–60 秒可读完的 Progress/Plans/Problems 团队更新。",
+        "when": "请求为 3P 更新时",
+        "inputs": [
+          "团队名称",
+          "覆盖时间段（通常一周）",
+          "来自 Slack/Google Drive/Email/Calendar 或用户直接提供的素材"
+        ],
+        "outputs": [
+          "严格按固定版式排列的 3P 更新文本（含 emoji、团队名、日期范围与三节内容）"
+        ],
+        "steps": [
+          {
+            "action": "确认范围：团队名称与时间范围；团队名未给出时直接询问。Progress/Problems 通常取过去一周、Plans 取下一周。",
+            "when": null,
+            "rationale": "读者需要知道是哪个团队、覆盖哪段时间。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 11,
+                "line_end": 11
+              },
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 32,
+                "line_end": 33
+              }
+            ]
+          },
+          {
+            "action": "尽可能采集素材：Slack 中团队成员带更新的帖子（优先大频道、多反应者）；Google Drive 中关键成员撰写、浏览多的文档；回复多且相关的邮件；日历中产品评审等重要的非例会；只取覆盖目标时段的材料。",
+            "when": "有相应工具访问权限时",
+            "rationale": "让更新基于真实发生的工作。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 14,
+                "line_end": 25
+              }
+            ]
+          },
+          {
+            "action": "若没有工具访问权限，询问用户希望覆盖的内容；用户已直接提供素材时，主要做该格式的排版。",
+            "when": "缺少工具访问或用户已给素材时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 28,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "按固定版式起草：选一个有趣、贴合团队与本次更新氛围的 emoji，写团队名与覆盖日期，然后依次写 Progress、Plans、Problems 三行。",
+            "when": null,
+            "rationale": "该格式始终相同且非常严格。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 38,
+                "line_end": 45
+              }
+            ]
+          },
+          {
+            "action": "复查：确保简明（30–60 秒读完）且数据驱动。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每节不超过 1–3 句，清楚、切中要点。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 47,
+                "line_end": 47
+              }
+            ]
+          },
+          {
+            "text": "内容数据驱动，尽量包含指标。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 47,
+                "line_end": 47
+              }
+            ]
+          },
+          {
+            "text": "语气就事论事，不过度散文化。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 47,
+                "line_end": 47
+              }
+            ]
+          },
+          {
+            "text": "通读时间在 30–60 秒以内。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/3p-updates.md",
+                "line_start": 2,
+                "line_end": 2
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 1,
+            "line_end": 47
+          }
+        ]
+      },
+      {
+        "id": "write-company-newsletter",
+        "goal": "撰写覆盖全公司、适合 Slack 与邮件阅读的每周/每月通讯。",
+        "when": "请求为公司通讯（company-wide newsletter）时",
+        "inputs": [
+          "过去一周/一月公司动态素材（Slack、邮件、日历、文档、外部报道）"
+        ],
+        "outputs": [
+          "约 20–25 条要点、分板块、带链接的公司通讯文本"
+        ],
+        "steps": [
+          {
+            "action": "采集素材：Slack 中人多、反应或回复多的消息；高管发布全公司公告的邮件；大参会人数的会议（如 All-Hands）及其附件文档；近一两周发布且关注度高的新文档（公司愿景、下季度计划、关键高管撰写）；过去一周出现的媒体报道。",
+            "when": "有相应工具访问权限时",
+            "rationale": "通讯需要大量可点击的相关链接。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 9,
+                "line_end": 16
+              }
+            ]
+          },
+          {
+            "action": "若没有任何工具访问权限，询问用户想覆盖的内容，此时主要做润色并贴合该格式。",
+            "when": "无工具访问时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 18,
+                "line_end": 18
+              }
+            ]
+          },
+          {
+            "action": "把内容拆成同类聚合的板块（如产品研发/市场推广/财务，或招聘/执行/愿景，或外部新闻/内部新闻），确保公司各领域都有体现。",
+            "when": null,
+            "rationale": "公司规模 1000+ 人、团队与事项繁多，分板块更易读。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 20,
+                "line_end": 21
+              }
+            ]
+          },
+          {
+            "action": "按优先级取舍内容：全公司影响、领导层公告、重大里程碑、影响多数员工的信息、外部认可或报道；避免过于细碎的团队更新、只与小群体相关的信息、已沟通过的重复信息。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 23,
+                "line_end": 34
+              }
+            ]
+          },
+          {
+            "action": "按示例结构撰写：每个板块用 emoji 标题加要点列表（如公司公告、优先事项进展、领导层更新、社交动态）。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 36,
+                "line_end": 64
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "篇幅约 20–25 条要点，每条不超过约 1–2 句。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 2,
+                "line_end": 6
+              }
+            ]
+          },
+          {
+            "text": "包含较多链接（文档、重要 Slack 消息、全公司邮件、显著事件）。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 5,
+                "line_end": 5
+              }
+            ]
+          },
+          {
+            "text": "使用“we”人称，多数要点表述为“我们做了……” 。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "text": "内容适合通过 Slack 与邮件消费。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/company-newsletter.md",
+                "line_start": 2,
+                "line_end": 2
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 1,
+            "line_end": 64
+          }
+        ]
+      },
+      {
+        "id": "answer-faqs",
+        "goal": "汇总全公司范围内员工普遍困惑的问题，并给出简短的澄清性回答。",
+        "when": "请求为 FAQ / 常见问题回答时",
+        "inputs": [
+          "Slack 提问与反应、含 FAQ 的邮件、相关文档（如 Google Drive 文档、日历事件关联文档）"
+        ],
+        "outputs": [
+          "问题 + 回答列表（问题 1 句、回答 1–2 句）"
+        ],
+        "steps": [
+          {
+            "action": "找出对大量员工构成困惑、影响较大员工群体的问题，主题可涉及近期公司事件（融资、新高管）、即将发布、招聘进展、愿景或重点变化等。",
+            "when": null,
+            "rationale": "目标是让公司信息一致、减少困惑。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/faq-answers.md",
+                "line_start": 2,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "action": "从公司实际沟通与工作发生的工具中取材：Slack 中回复多、反应/点赞多的问题；邮件中直接写有的 FAQ；Google Drive 或日历事件链接的文档（可直接含 FAQ 或据内容推断）。",
+            "when": "有相应工具访问权限时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/faq-answers.md",
+                "line_start": 10,
+                "line_end": 14
+              }
+            ]
+          },
+          {
+            "action": "按基本格式撰写：*Question* 为 1 句话，*Answer* 为 1–2 句话。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/faq-answers.md",
+                "line_start": 16,
+                "line_end": 20
+              }
+            ]
+          },
+          {
+            "action": "回答尽量基于公司官方沟通；信息不确定时明确指出；链接权威来源（文档、公告、邮件）；语气专业但亲和；若问题需要高管输入或官方回应，予以标注。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/faq-answers.md",
+                "line_start": 25,
+                "line_end": 30
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "问题选取与回答覆盖全公司，而非只聚焦提问用户或其所在团队。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/faq-answers.md",
+                "line_start": 23,
+                "line_end": 23
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 1,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "id": "write-general-comms",
+        "goal": "撰写不属于 3P、通讯或 FAQ 标准格式的其他内部沟通。",
+        "when": "内部沟通请求不匹配标准格式时",
+        "inputs": [
+          "用户提供的目标受众、沟通目的、期望语气与格式要求"
+        ],
+        "outputs": [
+          "按通用原则撰写的内部沟通文本"
+        ],
+        "steps": [
+          {
+            "action": "动笔前向用户确认：目标受众、沟通目的、期望语气（正式/随意/紧急/告知性）、具体格式要求。",
+            "when": null,
+            "rationale": "非标准格式缺少既定模板，需要先锁定约束。",
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/general-comms.md",
+                "section": "## Instructions"
+              }
+            ]
+          },
+          {
+            "action": "按通用原则撰写：清晰简明、使用主动语态、最重要的信息放前面、包含相关链接与引用、匹配公司沟通风格。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/internal-comms/examples/general-comms.md",
+                "section": "## Instructions"
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/general-comms.md",
+            "section": "## Instructions"
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "3P 更新格式始终相同且非常严格，不得使用该格式以外的任何排版。",
+        "when": "撰写 3P 更新时",
+        "rationale": "原文明确“非常严格的固定格式”。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 40,
+            "line_end": 40
+          }
+        ]
+      },
+      {
+        "text": "3P 更新面向高管、领导层与同事，读者对该团队有一些但不多背景；须精简到 30–60 秒内可读完。",
+        "when": "撰写 3P 更新时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 2,
+            "line_end": 2
+          }
+        ]
+      },
+      {
+        "text": "3P 更新每个部分不超过 1–3 句，数据驱动并尽量给出指标，语气就事论事。",
+        "when": "撰写 3P 更新时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 47,
+            "line_end": 47
+          }
+        ]
+      },
+      {
+        "text": "团队规模越大，3P 更新中的任务颗粒度应越粗（团队级可用“发布功能/修 bug”，公司级可用“招了 20 人/签下 10 个新单”）。",
+        "when": "确定 3P 更新的详细程度时",
+        "rationale": "3P 可覆盖任意规模团队，直至整个公司。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 4,
+            "line_end": 4
+          }
+        ]
+      },
+      {
+        "text": "3P 的时间范围几乎总是一周；Progress 取一周前至今天、Plans 取今天至下一周、Problems 取一周前至今天。",
+        "when": "采集 3P 素材时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 6,
+            "line_end": 6
+          },
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 22,
+            "line_end": 25
+          }
+        ]
+      },
+      {
+        "text": "公司通讯约 20–25 条要点，每条约 1–2 句，使用“we”人称，并尽量多带链接。",
+        "when": "撰写公司通讯时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 2,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "text": "公司通讯聚焦全公司影响、领导层公告、重大里程碑、影响多数员工的信息与外部认可，避免细碎团队更新、小群体信息与重复内容。",
+        "when": "筛选公司通讯内容时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 23,
+            "line_end": 34
+          }
+        ]
+      },
+      {
+        "text": "FAQ 回答应基于公司官方沟通，信息不确定时明确说明，链接权威来源，语气专业但亲和，并标注需要高管输入或官方回应的问题。",
+        "when": "撰写 FAQ 回答时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 25,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "text": "FAQ 选题应尽量全面覆盖全公司，不要只聚焦提问用户或其所在团队。",
+        "when": "选取 FAQ 问题时",
+        "rationale": "目标是让全体员工信息一致。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "text": "非标准内部沟通动笔前先确认目标受众、沟通目的、期望语气与具体格式要求；正文遵循清晰简明、主动语态、重要信息前置、附链接、匹配公司风格。",
+        "when": "撰写 general comms 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/general-comms.md",
+            "section": "## Instructions"
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "3P 更新指南 examples/3p-updates.md",
+        "kind": "reference",
+        "locator": "skills/internal-comms/examples/3p-updates.md",
+        "usage": "撰写 Progress/Plans/Problems 团队更新时载入，提供受众、素材来源、时间窗口、工作流与严格固定版式。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "name": "公司通讯指南 examples/company-newsletter.md",
+        "kind": "reference",
+        "locator": "skills/internal-comms/examples/company-newsletter.md",
+        "usage": "撰写全公司通讯时载入，提供要点数量、语气、信息来源、板块划分、取舍标准与示例结构。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 24,
+            "line_end": 24
+          }
+        ]
+      },
+      {
+        "name": "FAQ 回答指南 examples/faq-answers.md",
+        "kind": "reference",
+        "locator": "skills/internal-comms/examples/faq-answers.md",
+        "usage": "撰写常见问题回答时载入，提供选题标准、信息来源、问答格式与回答准则。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 25,
+            "line_end": 25
+          }
+        ]
+      },
+      {
+        "name": "通用沟通指南 examples/general-comms.md",
+        "kind": "reference",
+        "locator": "skills/internal-comms/examples/general-comms.md",
+        "usage": "沟通类型不明确匹配 3P/通讯/FAQ 时载入，提供动笔前的澄清问题与通用写作原则。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 26,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "name": "Slack",
+        "kind": "tool",
+        "locator": null,
+        "usage": "3P/通讯/FAQ 素材来源：团队成员带更新的帖子、大频道与多反应/多回复消息、全公司公告与员工提问。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 16,
+            "line_end": 16
+          },
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 12,
+            "line_end": 12
+          },
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ]
+      },
+      {
+        "name": "Google Drive / 文档",
+        "kind": "tool",
+        "locator": null,
+        "usage": "3P 与通讯素材来源：关键成员撰写、浏览多的文档；新发布且关注度高的愿景/季度计划等文档。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 17,
+            "line_end": 17
+          },
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 15,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "name": "Email",
+        "kind": "tool",
+        "locator": null,
+        "usage": "素材来源：回复多且相关的邮件；高管发布全公司公告的邮件；正文直接写有 FAQ 的邮件。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 18,
+            "line_end": 18
+          },
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 13,
+            "line_end": 13
+          },
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "kind": "tool",
+        "locator": null,
+        "usage": "素材来源：产品评审等重要的非例会；参会人数多的大型会议（如 All-Hands）及其附件文档。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 19,
+            "line_end": 19
+          },
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 14,
+            "line_end": 14
+          }
+        ]
+      },
+      {
+        "name": "LICENSE.txt",
+        "kind": "reference",
+        "locator": "skills/internal-comms/LICENSE.txt",
+        "usage": "SKILL.md 声明完整许可条款见该文件；本次未读取，条款内容未知。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 4,
+            "line_end": 4
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "3P 三节含义",
+        "text": "Progress 写团队在上一时段完成的事（已发布、达成的里程碑、创建的任务等）；Plans 写下一时段要做的高优先事项；Problems 写拖慢团队的事项，如人手不足、阻碍进展的 bug 或阻塞、告吹的交易等。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 7,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "topic": "3P 示例结构",
+        "text": "版式示例为：[emoji] [Team Name] (Dates Covered, usually a week) / Progress: [1-3 sentences] / Plans: [1-3 sentences] / Problems: [1-3 sentences]。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/3p-updates.md",
+            "line_start": 42,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "topic": "通讯板块示例与公司规模",
+        "text": "公司被描述为 1000+ 人、团队与事项多样；示例板块标题包括 Company Announcements、Progress on Priorities（可含多层子项）、Leadership Updates、Social Updates，均为示例而非强制。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 21,
+            "line_end": 21
+          },
+          {
+            "path": "skills/internal-comms/examples/company-newsletter.md",
+            "line_start": 36,
+            "line_end": 64
+          }
+        ]
+      },
+      {
+        "topic": "FAQ 可能主题",
+        "text": "原文举例：近期公司事件（融资、新高管等）、即将发布、招聘进展、愿景或重点变化；此类主题仅为可能方向，不是必须覆盖清单。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/examples/faq-answers.md",
+            "line_start": 7,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "topic": "关键词",
+        "text": "SKILL.md 列出的关键词用于触发匹配：3P updates、company newsletter、company comms、weekly update、faqs、common questions、updates、internal comms。",
+        "evidence": [
+          {
+            "path": "skills/internal-comms/SKILL.md",
+            "line_start": 31,
+            "line_end": 32
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/internal-comms/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/internal-comms/examples/3p-updates.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/internal-comms/examples/company-newsletter.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/internal-comms/examples/faq-answers.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/internal-comms/examples/general-comms.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks",
+        "reason": "not_stated",
+        "detail": "SKILL.md 的适用清单包含状态报告、领导层更新、项目更新、事故报告，但 examples/ 下没有对应专用指南；原文未说明这些类型应套用 general-comms 还是逐次询问，仅能从“不明确匹配则用 general-comms / 否则询问”间接推断。"
+      },
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "LICENSE.txt 未提供/未读取，完整许可条款与再分发条件未知；不影响整理，但不能据此判断可否公开再分发。"
+      },
+      {
+        "target": "/content/tasks/1",
+        "reason": "not_stated",
+        "detail": "原文只说明“尽可能”使用 Slack/Drive/Email/Calendar，未给出这些工具的实际接入方式、查询语法或权限模型；素材采集的可执行细节缺失。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:44:35.888542+00:00"
+  }
+}

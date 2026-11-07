@@ -1,0 +1,356 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "58fd72c919eeae5e01e1",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/implement/SKILL.md",
+    "git_blob_sha": "bd49e472984c7b99aac40286fdae749bb955a842",
+    "entry_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d"
+  },
+  "content": {
+    "name": "implement",
+    "title": "按规格或工单实现工作并自检提交",
+    "summary": "根据用户提供的规格或工单实现所描述的工作：若给出工单引用则先取回并说明其标题，在可能的情况下于预先约定的接缝处调用 tdd，过程中定期运行类型检查与单个测试文件，全部完成后运行一次完整测试套件、调用 code-review 审查，并把工作提交到当前分支。",
+    "evidence": [
+      {
+        "path": "skills/engineering/implement/SKILL.md",
+        "section": "front matter 与正文",
+        "line_start": 1,
+        "line_end": 17
+      }
+    ],
+    "tasks": [
+      {
+        "id": "implement-work",
+        "goal": "实现用户规格或工单中描述的工作，并完成自检、审查与提交。",
+        "when": "用户提供了要实现的规格或工单（含工单引用）时。",
+        "inputs": [
+          "用户给出的规格或工单",
+          "（可选）issue tracker 中的工单引用"
+        ],
+        "outputs": [
+          "实现后的工作成果",
+          "提交到当前分支的 commit"
+        ],
+        "steps": [
+          {
+            "action": "实现用户规格或工单所描述的工作。",
+            "when": "已有明确的规格或工单时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 7,
+                "line_end": 7
+              }
+            ]
+          },
+          {
+            "action": "若用户传入了工单引用，从 issue tracker 获取该工单，并在开始工作前说明其标题；若该引用不明确，则向用户询问。",
+            "when": "用户以工单引用形式指定工作，或引用含义不明确时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 9,
+                "line_end": 9
+              }
+            ]
+          },
+          {
+            "action": "在可能的情况下，调用 Skill 工具的 \"tdd\" skill，并限定在预先约定的接缝处使用。",
+            "when": "存在可用的 tdd skill，且已事先约定好接缝时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 11,
+                "line_end": 11
+              }
+            ]
+          },
+          {
+            "action": "实现过程中定期运行类型检查，定期运行单个测试文件。",
+            "when": "实现进行期间。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "action": "在结束时运行一次完整测试套件。",
+            "when": "实现工作完成时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "action": "完成后调用 Skill 工具的 \"code-review\" 来审查本次工作。",
+            "when": "实现与测试完成之后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 15,
+                "line_end": 15
+              }
+            ]
+          },
+          {
+            "action": "将工作提交到当前分支。",
+            "when": "工作完成后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 17,
+                "line_end": 17
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "定期运行类型检查。",
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "text": "定期运行单个测试文件。",
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "text": "结束时运行一次完整测试套件。",
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "text": "完成后由 code-review skill 审查本次工作。",
+            "evidence": [
+              {
+                "path": "skills/engineering/implement/SKILL.md",
+                "section": "正文",
+                "line_start": 15,
+                "line_end": 15
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 7,
+            "line_end": 17
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "开始前必须先说明所取回工单的标题。",
+        "when": "用户传入了工单引用时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "text": "工单引用存在歧义时，应询问用户而不是自行猜测。",
+        "when": "工单引用不明确时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "text": "tdd 应“在可能的情况下”调用，且只用于预先约定的接缝处，不要求在任意位置全面采用。",
+        "when": "实现过程中决定是否使用 tdd skill 时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 11,
+            "line_end": 11
+          }
+        ]
+      },
+      {
+        "text": "完整测试套件只在最后运行一次，而非在整个过程中反复运行。",
+        "when": "安排测试运行时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "tdd skill（Skill 工具）",
+        "kind": "skill",
+        "locator": "tdd",
+        "usage": "文档所述：在可能的情况下，于预先约定的接缝处通过 Skill 工具调用；其具体内容未在本文件展开。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 11,
+            "line_end": 11
+          }
+        ]
+      },
+      {
+        "name": "code-review skill（Skill 工具）",
+        "kind": "skill",
+        "locator": "code-review",
+        "usage": "文档所述：工作完成后通过 Skill 工具调用来审查本次工作；其具体内容未在本文件展开。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 15,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "name": "issue tracker",
+        "kind": "tool",
+        "locator": null,
+        "usage": "文档所述：根据用户给出的工单引用获取工单，并取得其标题；具体系统与调用方式未说明。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "name": "类型检查与测试套件",
+        "kind": "environment",
+        "locator": null,
+        "usage": "需要项目中可运行的类型检查和测试运行方式（含单个测试文件与完整套件）；具体命令未给出。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "调用方式限制",
+        "text": "front matter 中 disable-model-invocation: true，表明该 skill 不由模型自动触发，需显式调用。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "front matter",
+            "line_start": 1,
+            "line_end": 5
+          }
+        ]
+      },
+      {
+        "topic": "提交范围",
+        "text": "提交目标是“当前分支”，原文未提及新建分支或其他分支策略。",
+        "evidence": [
+          {
+            "path": "skills/engineering/implement/SKILL.md",
+            "section": "正文",
+            "line_start": 17,
+            "line_end": 17
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/engineering/implement/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/inputs",
+        "reason": "not_stated",
+        "detail": "原文只说要按“规格或工单”实现，未说明规格的来源、格式或必备内容，也未给出 issue tracker 的具体系统。"
+      },
+      {
+        "target": "/content/tasks/0/steps/2",
+        "reason": "ambiguous",
+        "detail": "“预先约定的接缝”（pre-agreed seams）未定义如何确定，也未说明由谁、在何时约定。"
+      },
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "tdd 与 code-review 是被引用的其他 skill，其文件未提供，因此其具体步骤与检查无法在本记录中说明。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:51:39.908265+00:00"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "scope": "Targeted semantic spot checks, not full independent review or execution; all SkillRecords remain unreviewed.",
+  "samples": [
+    {
+      "source": {
+        "collection_id": "4efae2a88e2d4ec4ffe6",
+        "repository": "mattpocock/skills",
+        "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+        "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+        "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+        "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+      },
+      "record_sha256_at_observation": "496478e46567dac8e479b21b8e8b935223c2af8cca04b7453d52d44048052093",
+      "focus": "短入口补读 grilling 与 domain-modeling；核对 frontier 依赖与 ADR 三个条件必须同时满足。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "5efa4f962e732e9ecbf4",
+        "repository": "anthropics/skills",
+        "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+        "skill_path": "skills/brand-guidelines/SKILL.md",
+        "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+        "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+      },
+      "record_sha256_at_observation": "3515497e23944e3f0e84469a8e14c68adaca21f1dc8feb218769435c6f5ce604",
+      "focus": "普通规则型抽查；核对品牌颜色、24pt 标题、字体回退、原文规则归并的步骤。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "ef75cb9667dd7cafebb6",
+        "repository": "googleworkspace/cli",
+        "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+        "skill_path": "skills/gws-calendar-insert/SKILL.md",
+        "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+        "entry_sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e"
+      },
+      "record_sha256_at_observation": "446ae443f25ef08dafb771857378cbdde0b3f4ad3ffd1d4ec0194ec7eb595ee1",
+      "focus": "工具型入口补读 shared；核对 RFC3339、默认 primary、重复 attendee、写入前确认，未实际运行 gws。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "285ef5f2d449c3d93539",
+        "repository": "vercel-labs/agent-skills",
+        "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+        "skill_path": "skills/composition-patterns/SKILL.md",
+        "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+        "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+      },
+      "record_sha256_at_observation": "3f533a2b93ded57ebbe73b30d072cae40690cb9ce5121b8facc98e9fba6cdfbf",
+      "focus": "指南主导；已提供完整编译 AGENTS.md；核对 React 19+ 的限制和 children/render props 的条件。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "d9d222a50a3c94b5411c",
+        "repository": "addyosmani/agent-skills",
+        "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+        "skill_path": "skills/api-and-interface-design/SKILL.md",
+        "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+        "entry_sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
+      },
+      "record_sha256_at_observation": "6887a6ddc8eb893bdbab1894ee566222e2bf67598b885056ba07e9d43fbfaa20",
+      "focus": "长接口指南；抽查幂等键的原子占用、同键异载荷、进行中重复请求的三种选择与最长重试链保留期。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "0a2ef73281ba846578f5",
+        "repository": "obra/superpowers",
+        "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "skill_path": "skills/brainstorming/SKILL.md",
+        "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+        "entry_sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207"
+      },
+      "record_sha256_at_observation": "68c7e3d0bb176633d88ef40daa360b8bcbac86d22db44f43ca34539e1c6d539f",
+      "focus": "复杂流程的 opt-out / spike 例外；summary 错写唯一例外，需要模型修订；明细中两种例外已保留。",
+      "result": "model_revision_checked_against_source_exception_ranges",
+      "record_sha256_after_revision": "b4401f82faf57be9c9b6c6854705d23a84d936f0f366242a9b41c882b89286fd"
+    },
+    {
+      "source": {
+        "collection_id": "05d408b4284eb2738b8c",
+        "repository": "anthropics/skills",
+        "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+        "skill_path": "skills/webapp-testing/SKILL.md",
+        "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+        "entry_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+      },
+      "record_sha256_at_observation": "c900e556841ba93b1c834e0f0618eb61e3fb06d2b11aa53a5d5a23bb7039d7c3",
+      "focus": "工具流程抽查；核对静态/动态分支、networkidle 与 helper 黑盒边界，未读/执行脚本实现。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    },
+    {
+      "source": {
+        "collection_id": "b02dbd96699c235e7de5",
+        "repository": "anthropics/skills",
+        "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+        "skill_path": "skills/internal-comms/SKILL.md",
+        "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+        "entry_sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475"
+      },
+      "record_sha256_at_observation": "1afd8f9a82651ff81e0671bf3d4e4784570a7db1a74302e35c92eb255556b11a",
+      "focus": "入口分流及四份真实指南；核对 3P 的 30–60 秒、各段 1–3 句、时间窗与 general-comms 回退。",
+      "result": "targeted_checks_no_blocking_mismatch_found"
+    }
+  ],
+  "non_blocking_observations": [
+    "Some calibration outputs repeat rules across fields or add nonessential gaps; later prompts ask for concise core mechanisms and important gaps only."
+  ],
+  "required_revisions": [
+    {
+      "collection_id": "0a2ef73281ba846578f5",
+      "pointer": "/content/summary",
+      "issue": "Only spike named as an exception, although source lines 38–40 and 276–279 also exempt explicit opt-out.",
+      "state": "resolved_by_model",
+      "resolution": "New summary explicitly preserves both opt-out and throwaway spike exceptions; previous accepted record and original responses retained.",
+      "record_sha256": "b4401f82faf57be9c9b6c6854705d23a84d936f0f366242a9b41c882b89286fd"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "2dc2fa1b2e23631c348e",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/churn-prevention/SKILL.md",
+    "git_blob_sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+    "entry_sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355"
+  },
+  "files": [
+    {
+      "path": "skills/churn-prevention/SKILL.md",
+      "coverage": "full",
+      "sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355",
+      "git_blob_sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+      "bytes": 20037,
+      "source_lines": 434
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": {
+    "collection_id": "4961bc5b0753ab497eb9",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-gmail-triage/SKILL.md",
+    "git_blob_sha": "641a2d114105f9ad73cc229bef6edb5e757ac36d",
+    "entry_sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600"
+  },
+  "files": [
+    {
+      "path": "skills/gws-gmail-triage/SKILL.md",
+      "coverage": "full",
+      "sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600",
+      "git_blob_sha": "641a2d114105f9ad73cc229bef6edb5e757ac36d",
+      "bytes": 1219,
+      "source_lines": 51
+    },
+    {
+      "path": "skills/gws-shared/SKILL.md",
+      "coverage": "full",
+      "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+      "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+      "bytes": 2668,
+      "source_lines": 82
+    }
+  ]
+}

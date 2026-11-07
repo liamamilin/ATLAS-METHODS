@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "8c24f718f48153dabecd",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-shared/SKILL.md",
+    "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+    "entry_sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2"
+  },
+  "files": [
+    {
+      "path": "skills/gws-shared/SKILL.md",
+      "coverage": "full",
+      "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+      "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+      "bytes": 2668,
+      "source_lines": 82
+    }
+  ]
+}

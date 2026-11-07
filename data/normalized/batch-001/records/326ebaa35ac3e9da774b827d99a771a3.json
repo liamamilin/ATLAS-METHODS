@@ -1,0 +1,282 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "4961bc5b0753ab497eb9",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-gmail-triage/SKILL.md",
+    "git_blob_sha": "641a2d114105f9ad73cc229bef6edb5e757ac36d",
+    "entry_sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600"
+  },
+  "content": {
+    "name": "gws-gmail-triage",
+    "title": "Gmail 未读收件箱摘要（gws gmail +triage）",
+    "summary": "该 Skill 描述 gws CLI 的 gmail +triage 子命令：以只读方式列出收件箱邮件的摘要信息（发件人、主题、日期），默认查询为 is:unread、默认最多 20 条；可通过 --max、--query、--labels 调整范围与字段，并通过全局 --format 输出 json/table/yaml/csv。使用前提是 gws 二进制在 PATH 上并完成认证，认证与全局参数、安全规则记载于 gws-shared 参考中。",
+    "evidence": [
+      {
+        "path": "skills/gws-gmail-triage/SKILL.md",
+        "section": "Header and description",
+        "line_start": 14,
+        "line_end": 18
+      },
+      {
+        "path": "skills/gws-gmail-triage/SKILL.md",
+        "section": "Usage and Flags",
+        "line_start": 20,
+        "line_end": 32
+      },
+      {
+        "path": "skills/gws-gmail-triage/SKILL.md",
+        "section": "Tips / See Also",
+        "line_start": 43,
+        "line_end": 51
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "section": "Installation and Authentication",
+        "line_start": 15,
+        "line_end": 27
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "section": "Global Flags",
+        "line_start": 29,
+        "line_end": 35
+      }
+    ],
+    "tasks": [
+      {
+        "id": "triage-unread-inbox",
+        "goal": "查看收件箱邮件的未读摘要（发件人、主题、日期），可限定条数与搜索条件。",
+        "when": "需要快速了解未读邮件概况时；也可通过 --query 改为其他 Gmail 搜索条件。",
+        "inputs": [
+          "已安装并认证的 gws CLI",
+          "可选的 Gmail 搜索查询字符串（--query）",
+          "可选的最大显示条数（--max）"
+        ],
+        "outputs": [
+          "邮件摘要列表，每项含发件人、主题、日期",
+          "启用 --labels 时附带标签名",
+          "按 --format 选择的输出格式（json/table/yaml/csv）或保存到文件的内容"
+        ],
+        "steps": [
+          {
+            "action": "确认 gws 二进制位于 $PATH，并按需完成认证：交互式浏览器 OAuth 用 gws auth login，服务账号则 export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json。",
+            "when": "首次使用或凭据失效时",
+            "rationale": "命令依赖 gws 可执行文件与有效凭据；认证方式与全局参数记录在 gws-shared 参考中。"
+          },
+          {
+            "action": "运行 gws gmail +triage，默认查询为 is:unread，最多显示 20 条。",
+            "when": "只需默认的未读概览时",
+            "rationale": null
+          },
+          {
+            "action": "按需添加参数：--max 调整显示条数，--query 替换搜索条件（如 'from:boss'），--labels 在输出中包含标签名。",
+            "when": "需要缩小/扩大范围或补充标签信息时",
+            "rationale": null
+          },
+          {
+            "action": "需要程序化处理时追加全局 --format json（或 table/yaml/csv），并可用 jq 提取字段，例如 gws gmail +triage --format json | jq '.[].subject'。",
+            "when": "需要对输出做进一步筛选或解析时",
+            "rationale": null
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Usage / Flags / Examples / Tips",
+            "line_start": 20,
+            "line_end": 46
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "Installation / Authentication / Global Flags",
+            "line_start": 15,
+            "line_end": 35
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "该命令为只读操作，不会修改邮箱内容。",
+        "when": "使用 gws gmail +triage 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Tips",
+            "line_start": 45,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "text": "绝不直接输出密钥（API keys、tokens）等敏感信息。",
+        "when": "执行任何 gws 命令并展示输出时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "Security Rules",
+            "line_start": 57,
+            "line_end": 57
+          }
+        ]
+      },
+      {
+        "text": "使用该命令前应先阅读 gws-shared 参考以获取认证、全局参数和安全规则；若文件缺失，运行 gws generate-skills 生成。",
+        "when": "准备使用 gws-gmail-triage 时",
+        "rationale": "认证方式、全局 flag 与安全约束不在此 Skill 内重复定义。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Prerequisite",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "gws CLI",
+        "kind": "tool",
+        "locator": "gws",
+        "usage": "核心可执行程序，必须位于 $PATH；通过 gws auth login（浏览器 OAuth）或 GOOGLE_APPLICATION_CREDENTIALS（服务账号）认证。安装选项本文未列，仅指向项目 README。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "Installation / Authentication",
+            "line_start": 15,
+            "line_end": 27
+          }
+        ]
+      },
+      {
+        "name": "gws-shared SKILL",
+        "kind": "reference",
+        "locator": "skills/gws-shared/SKILL.md",
+        "usage": "前置必读：提供认证、全局 flag（--format、--dry-run、--sanitize）与安全规则。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Prerequisite / See Also",
+            "line_start": 16,
+            "line_end": 16
+          },
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "See Also",
+            "line_start": 50,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "name": "gws-gmail SKILL",
+        "kind": "reference",
+        "locator": "skills/gws-gmail/SKILL.md",
+        "usage": "被参见为所有收发与管理邮件命令的入口（文档所述，未读取）。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "See Also",
+            "line_start": 51,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "name": "jq",
+        "kind": "tool",
+        "locator": "jq",
+        "usage": "示例中用于从 --format json 输出里提取字段，如 '.[].subject'；属示例用法，非必需依赖。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Examples",
+            "line_start": 39,
+            "line_end": 39
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "默认输出格式的表述不一致",
+        "text": "triage 的 Tips 称默认使用 table 输出格式；共享参考称全局 --format 默认是 json。示例显式写 --format json 再交给 jq 处理。两处默认值表述不一致，实际默认格式需按所用版本确认。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Tips / Examples",
+            "line_start": 39,
+            "line_end": 46
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "Global Flags",
+            "line_start": 33,
+            "line_end": 33
+          }
+        ]
+      },
+      {
+        "topic": "显示字段与条数上限",
+        "text": "摘要按固定三项展示：发件人、主题、日期；--labels 额外附带标签名。--max 默认 20，文档未说明是否存在上限。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Description / Flags",
+            "line_start": 18,
+            "line_end": 32
+          }
+        ]
+      },
+      {
+        "topic": "查询条件可替换",
+        "text": "--query 默认 is:unread；示例用 'from:boss' 说明可替换为其他 Gmail 搜索表达式，从而跳过“仅未读”的限制。",
+        "evidence": [
+          {
+            "path": "skills/gws-gmail-triage/SKILL.md",
+            "section": "Flags / Examples",
+            "line_start": 31,
+            "line_end": 38
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/gws-gmail-triage/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/outputs",
+        "reason": "conflicting",
+        "detail": "默认输出格式在 triage 文档（table）与 shared 文档（json）之间表述不一致，影响读者对未指定 --format 时得到什么结果的判断。"
+      },
+      {
+        "target": "/content/resources/0/usage",
+        "reason": "unread_dependency",
+        "detail": "gws 的安装方式仅指向项目 README，未提供该文件，因此安装步骤与可用平台在材料中未知。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:10.414189+00:00"
+  }
+}

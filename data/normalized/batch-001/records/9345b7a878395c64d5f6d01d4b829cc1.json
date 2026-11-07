@@ -1,0 +1,588 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "5d7cbcbbab764949735f",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/finishing-a-development-branch/SKILL.md",
+    "git_blob_sha": "fa8aecaf8813f1b19d19996f7957d1b0121f2d9c",
+    "entry_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65"
+  },
+  "content": {
+    "name": "finishing-a-development-branch",
+    "title": "完成开发分支：测试、环境检测、整合选项与清理",
+    "summary": "在实现完成、需要决定如何整合工作时，先运行完整测试套件；失败则报告并停止。随后检测 Git 环境（普通仓库、命名分支 worktree 或分离 HEAD），确认工作所 fork 的基分支，按环境展示固定选项菜单，由人类伙伴选择整合方式。按选择执行本地合并、推送并创建 PR 或保留分支；仅当人类伙伴明确要求丢弃并逐字输入 discard 后才强制删除。清理只针对 .worktrees/ 或 worktrees/ 下由 Superpowers 创建的 worktree，删除被拒绝时须展示未提交文件并询问处理方式。",
+    "evidence": [
+      {
+        "path": "skills/finishing-a-development-branch/SKILL.md",
+        "section": "Overview",
+        "line_start": 10,
+        "line_end": 12
+      },
+      {
+        "path": "skills/finishing-a-development-branch/SKILL.md",
+        "section": "Quick Reference",
+        "line_start": 203,
+        "line_end": 210
+      }
+    ],
+    "tasks": [
+      {
+        "id": "finish-development-branch",
+        "goal": "在实现完成后，按固定流程确认测试通过、识别 Git 环境与基分支、向人类伙伴提供整合选项，并执行所选整合方式及相应清理。",
+        "when": "实现已完成，需要决定如何整合该分支的工作时。",
+        "inputs": [
+          "已完成的实现分支",
+          "项目完整测试命令",
+          "Git 仓库与 worktree 状态",
+          "计划、对话或分支上游中记录的基分支"
+        ],
+        "outputs": [
+          "完成的本地合并，或已推送分支与 PR URL，或保留分支的说明",
+          "按所选路径清理或保留的 worktree",
+          "向人类伙伴报告的最终状态"
+        ],
+        "steps": [
+          {
+            "action": "运行项目完整测试套件（如 npm test / cargo test / pytest / go test ./...）。",
+            "when": "开始完成流程时。",
+            "rationale": "整合菜单只在测试套件通过后出现。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 14,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "若测试失败，报告失败数量与具体失败内容并停止，不展示整合菜单。",
+            "when": "测试套件未通过时。",
+            "rationale": "失败的测试必须先修复才能继续完成流程。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 18,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "通过 git rev-parse 捕获 GIT_DIR、GIT_COMMON，并在仍位于工作区内时捕获 WORKTREE_PATH；据此判断是普通仓库、命名分支 worktree 还是分离 HEAD。",
+            "when": "测试通过后。",
+            "rationale": "该状态决定展示哪种菜单以及如何清理；WORKTREE_PATH 必须在后续改变目录前捕获。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 28,
+                "line_end": 44
+              }
+            ]
+          },
+          {
+            "action": "确定工作所 fork 的基分支，来源可以是计划、对话或分支上游；若未知，提出最佳猜测并向人类伙伴确认。",
+            "when": "需要选择合并或创建 PR 的目标分支前。",
+            "rationale": "合并到错误的基分支代价高昂且难以撤销。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 46,
+                "line_end": 51
+              }
+            ]
+          },
+          {
+            "action": "按环境展示固定菜单：普通仓库或命名分支 worktree 展示恰好 3 个选项（本地合并、推送并创建 PR、保留分支）；分离 HEAD 展示恰好 2 个选项（推送为新分支并创建 PR、保留原样），然后等待人类伙伴回答。",
+            "when": "基分支已确认，准备让人类伙伴决定整合方式时。",
+            "rationale": "整合决定属于人类伙伴，菜单应简洁且只包含列出的选项。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 53,
+                "line_end": 82
+              }
+            ]
+          },
+          {
+            "action": "若选择本地合并：切到主仓库根目录，检出基分支、拉取、合并功能分支，并在合并结果上运行测试；测试通过后先清理 worktree，再执行 git branch -d 删除功能分支。",
+            "when": "人类伙伴选择本地合并时。",
+            "rationale": "只有合并结果测试通过后才删除分支，避免在未验证状态下丢失可恢复状态。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 86,
+                "line_end": 111
+              }
+            ]
+          },
+          {
+            "action": "若选择推送并创建 PR：执行 git push -u origin <feature-branch>（分离 HEAD 时用 git push origin HEAD:refs/heads/<new-branch>），再按仓库模板与约定用 forge 工具或推送后给出的创建 URL 向基分支创建 PR，并向人类伙伴报告 URL；保留 worktree。",
+            "when": "人类伙伴选择推送并创建 PR 时。",
+            "rationale": "人类伙伴会在该 worktree 中继续处理 PR 反馈。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 113,
+                "line_end": 126
+              }
+            ]
+          },
+          {
+            "action": "若选择保留原样，报告保留的分支名与 worktree 路径。",
+            "when": "人类伙伴选择保留分支时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 128,
+                "line_end": 130
+              }
+            ]
+          },
+          {
+            "action": "仅当人类伙伴明确要求丢弃工作时：展示将被永久删除的分支、提交列表与 worktree 路径，等待逐字输入 discard 确认；确认后切到主仓库根目录，清理 worktree，并用 git branch -D 强制删除分支。",
+            "when": "人类伙伴明确要求丢弃工作时。",
+            "rationale": "丢弃路径只作为对人类伙伴明确请求的响应存在，且需要强确认。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 132,
+                "line_end": 157
+              }
+            ]
+          },
+          {
+            "action": "执行清理：普通仓库无需清理 worktree；WORKTREE_PATH 位于 .worktrees/ 或 worktrees/ 下时执行 git worktree remove 与 git worktree prune；删除被拒绝时展示未提交文件并让人类伙伴选择提交、移入主仓库根目录或删除；其他 worktree 由宿主环境管理，保持原位，平台提供退出工具时使用它。",
+            "when": "选择本地合并或确认丢弃后执行清理时。",
+            "rationale": "只有 Superpowers 创建的 worktree 才由本流程清理；未提交文件只存在于该 worktree，强制删除会永久破坏它们。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 159,
+                "line_end": 201
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "完整测试套件通过后才展示整合菜单；失败则报告具体失败并停止。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 16,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "text": "本地合并后必须在合并结果上重新运行测试；若失败则停止，分支与 worktree 保持原位以便排查。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 98,
+                "line_end": 104
+              }
+            ]
+          },
+          {
+            "text": "丢弃前必须收到人类伙伴逐字输入的 `discard` 确认。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 143,
+                "line_end": 146
+              }
+            ]
+          },
+          {
+            "text": "worktree 删除被拒绝时，用 git status --porcelain -uall 展示未提交文件，并询问是提交、移入主仓库根目录还是删除。",
+            "evidence": [
+              {
+                "path": "skills/finishing-a-development-branch/SKILL.md",
+                "line_start": 177,
+                "line_end": 198
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 14,
+            "line_end": 44
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 46,
+            "line_end": 82
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 84,
+            "line_end": 201
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "整合菜单必须按原文展示，选项只来自列出的清单，保持简洁。",
+        "when": "向人类伙伴展示选项时。",
+        "rationale": "完整菜单本身已经足够，不应自行增加或改写选项。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 78,
+            "line_end": 82
+          }
+        ]
+      },
+      {
+        "text": "丢弃工作只能作为对人类伙伴明确请求的响应；不得主动提议丢弃，也不得把“get rid of it”之类话语当作确认。",
+        "when": "考虑是否提供或执行丢弃操作时。",
+        "rationale": "只有逐字输入的 `discard` 授权删除。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 132,
+            "line_end": 135
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 218,
+            "line_end": 219
+          }
+        ]
+      },
+      {
+        "text": "展示菜单后必须等待人类伙伴回答；整合决定属于人类伙伴，不能因“他们显然想合并”而自行选择。",
+        "when": "展示选项之后。",
+        "rationale": "整合方式是人类的决定，不是代理的推断。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 81,
+            "line_end": 82
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 217,
+            "line_end": 217
+          }
+        ]
+      },
+      {
+        "text": "合并前必须确认基分支；若未知则询问，不能假定基分支显然是 main。",
+        "when": "准备合并或创建 PR 前。",
+        "rationale": "合并到错误的基分支代价高昂且难以撤销。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 46,
+            "line_end": 51
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 224,
+            "line_end": 224
+          }
+        ]
+      },
+      {
+        "text": "worktree 删除因存在已修改或未跟踪文件而被拒绝时，不得自行使用 --force；应展示风险并询问人类伙伴。",
+        "when": "git worktree remove 被拒绝时。",
+        "rationale": "拒绝意味着这些文件只存在于该 worktree，--force 会永久销毁它们。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 177,
+            "line_end": 198
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 222,
+            "line_end": 222
+          }
+        ]
+      },
+      {
+        "text": "只清理 .worktrees/ 或 worktrees/ 下的 worktree；其他 worktree 属于宿主环境，保持原位。",
+        "when": "执行清理时。",
+        "rationale": "只有这些路径下的 worktree 被认定为 Superpowers 创建并归本流程清理。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 169,
+            "line_end": 175
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 221,
+            "line_end": 221
+          }
+        ]
+      },
+      {
+        "text": "合并结果测试失败会停止一切后续操作，分支与 worktree 保持原位直到完成排查，不能假定失败只是偶发。",
+        "when": "在合并结果上运行测试后失败时。",
+        "rationale": "尚未推送，合并是本地且可恢复的，应保留现场排查。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 102,
+            "line_end": 104
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 223,
+            "line_end": 223
+          }
+        ]
+      },
+      {
+        "text": "推送被拒绝时表示远端已变化，应排查；只有人类伙伴明确要求时才可 force-push。",
+        "when": "推送失败或被拒绝时。",
+        "rationale": "强制推送会覆盖远端变化，需由人类伙伴明确授权。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 225,
+            "line_end": 225
+          }
+        ]
+      },
+      {
+        "text": "应在即将整合的代码树上运行完整测试套件，不能以本会话早先的通过结果代替。",
+        "when": "准备整合前。",
+        "rationale": "一次通过只证明当时运行的那棵树。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 216,
+            "line_end": 216
+          }
+        ]
+      },
+      {
+        "text": "创建 PR 后保留 worktree，直到工作真正落地；PR 反馈在该 worktree 中修复。",
+        "when": "选择推送并创建 PR 后。",
+        "rationale": "PR 尚未落地时 worktree 仍是处理反馈的工作区。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 126,
+            "line_end": 126
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 220,
+            "line_end": 220
+          }
+        ]
+      },
+      {
+        "text": "分离 HEAD 状态不提供合并选项，且该工作区由外部管理，清理时保持原位。",
+        "when": "检测到分离 HEAD 时。",
+        "rationale": "外部管理的工作区不归本流程删除。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 44,
+            "line_end": 44
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 67,
+            "line_end": 76
+          }
+        ]
+      },
+      {
+        "text": "选项 2 和选项 3 始终保留 worktree；清理步骤只对本地合并和已确认的丢弃执行。",
+        "when": "决定是否执行 Step 6 清理时。",
+        "rationale": "PR 反馈与后续工作仍需要该 worktree。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 159,
+            "line_end": 165
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Git CLI",
+        "kind": "tool",
+        "locator": "git",
+        "usage": "用于捕获 GIT_DIR/GIT_COMMON/WORKTREE_PATH、检出与合并、推送、删除分支以及移除和修剪 worktree。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 28,
+            "line_end": 36
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 88,
+            "line_end": 96
+          }
+        ]
+      },
+      {
+        "name": "项目测试套件",
+        "kind": "tool",
+        "locator": null,
+        "usage": "运行完整测试套件，文档给出的示例包括 npm test、cargo test、pytest、go test ./...；实际命令由项目决定。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      },
+      {
+        "name": "forge 工具或创建 URL",
+        "kind": "tool",
+        "locator": null,
+        "usage": "向基分支创建 pull/merge request；优先使用 forge 的 CLI，或使用推送后大多数 forge 输出的创建 URL，并遵循仓库 PR 模板与约定。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 121,
+            "line_end": 124
+          }
+        ]
+      },
+      {
+        "name": ".worktrees/ 与 worktrees/ 目录",
+        "kind": "environment",
+        "locator": ".worktrees/ 或 worktrees/",
+        "usage": "用于判断 worktree 是否由 Superpowers 创建、因而归本流程清理。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 169,
+            "line_end": 175
+          }
+        ]
+      },
+      {
+        "name": "计划、对话或分支上游中的基分支信息",
+        "kind": "reference",
+        "locator": null,
+        "usage": "用于确定工作所 fork 的基分支；未知时向人类伙伴确认。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 46,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "name": "平台的工作区退出工具",
+        "kind": "tool",
+        "locator": null,
+        "usage": "当 worktree 由宿主环境管理而保持原位时，如果平台提供该工具则使用它退出工作区。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 200,
+            "line_end": 201
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "分离 HEAD 的菜单差异",
+        "text": "分离 HEAD 被视为外部管理工作区，菜单减少为 2 个选项且不含本地合并；推送时需在远端命名新分支（git push origin HEAD:refs/heads/<new-branch>）。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 44,
+            "line_end": 44
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 67,
+            "line_end": 76
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 117,
+            "line_end": 118
+          }
+        ]
+      },
+      {
+        "topic": "清理归属判断",
+        "text": "WORKTREE_PATH 位于 .worktrees/ 或 worktrees/ 下时视为 Superpowers 创建、由本流程清理；否则工作区归宿主环境所有，保持原位。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 169,
+            "line_end": 175
+          },
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 200,
+            "line_end": 201
+          }
+        ]
+      },
+      {
+        "topic": "丢弃确认提示内容",
+        "text": "确认提示需列出将永久删除的分支、所有提交以及 worktree 路径，并要求输入 discard 才继续。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 137,
+            "line_end": 146
+          }
+        ]
+      },
+      {
+        "topic": "各选项对合并、推送、worktree 和分支清理的影响",
+        "text": "快捷表概括：本地合并会合并并清理分支；创建 PR 会推送并保留 worktree；保留原样仅保留 worktree；丢弃仅在明确请求下强制删除分支。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 203,
+            "line_end": 210
+          }
+        ]
+      },
+      {
+        "topic": "常见合理化借口与纠正",
+        "text": "文档列出若干借口及纠正，例如“本会话早先测试通过”不能替代在待整合树上重跑，“他们显然想合并”不能替代人类决定，“PR 已开所以 worktree 是杂物”不成立，“另一个 worktree 看起来过期”也不应顺手清理。",
+        "evidence": [
+          {
+            "path": "skills/finishing-a-development-branch/SKILL.md",
+            "line_start": 212,
+            "line_end": 225
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/finishing-a-development-branch/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T15:01:49.034198+00:00"
+  }
+}

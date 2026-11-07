@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-11-07T15:04:26.526432+00:00",
+  "result": "passed",
+  "checked_records": 38,
+  "selected_source_inputs_hash_checked": 40,
+  "selected_file_deliveries_prepared": 63,
+  "accepted_file_deliveries": 61,
+  "distinct_accepted_source_files": 57,
+  "source_mapping": "collection id and sha256 copied from actual index; pinned identity and Git blob hashes verified",
+  "record_content": "equals retained model response content/gaps; source and extraction metadata set by runner",
+  "structure_and_evidence_ranges": "original response contract and check_record with complete fixed-commit source texts passed",
+  "checks_scope": "structure, provenance, actual supplied ranges and hashes; semantic spot checks separate; no Skill execution",
+  "warnings": {
+    "section_locator_unresolved: /content -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot": 1,
+    "section_locator_unresolved: /content/tasks/4 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot": 1,
+    "section_locator_unresolved: /content/tasks/4/steps/0 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot": 1,
+    "section_locator_unresolved: /content/tasks/4/steps/1 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot": 1,
+    "section_locator_unresolved: /content/rules/9 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot": 1
+  },
+  "records_jsonl_sha256": "abfce3e000f9016580583f9fd4de3d718f03117bb7763c15596d0d3923670549",
+  "resume": {
+    "result": "passed",
+    "command": [
+      "normalization/batch_convert.py",
+      "--selection",
+      "normalization/batches/batch-001.selection.json",
+      "--out",
+      "data/normalized/batch-001",
+      "--workers",
+      "2"
+    ],
+    "exit_code": 1,
+    "exit_reason": "two retained failures; no new work attempted",
+    "skipped_success": 38,
+    "skipped_failed": 2,
+    "new_items_attempted": 0,
+    "new_attempt_files": 0,
+    "same_records_bytes": true
+  },
+  "last_model_run_invocation": {
+    "started_at": "2026-11-07T14:59:35.506872+00:00",
+    "attempted_items": 5,
+    "skipped_success": 35,
+    "skipped_failed": 0,
+    "finished_at": "2026-11-07T15:01:49.060595+00:00"
+  },
+  "tests": {
+    "existing_regressions": 87,
+    "interval_oracle_trials": 1000,
+    "batch_regressions": 8,
+    "result": "passed"
+  }
+}

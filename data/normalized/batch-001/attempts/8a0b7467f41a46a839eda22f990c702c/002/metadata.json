@@ -1,0 +1,86 @@
+{
+  "started_at": "2026-11-07T14:56:50.171106+00:00",
+  "source": {
+    "collection_id": "57b2f1ac086c8d30cddc",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/mcp-builder/SKILL.md",
+    "git_blob_sha": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
+    "entry_sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "bde4e5158b720b50e87c5e33b34fc882caa89dafb7cf922370a5c05b4a3ca778",
+  "input_files": [
+    {
+      "path": "skills/mcp-builder/SKILL.md",
+      "coverage": "full",
+      "sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c",
+      "git_blob_sha": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
+      "bytes": 11129,
+      "source_lines": 252
+    },
+    {
+      "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+      "coverage": "full",
+      "sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+      "git_blob_sha": "b9d343cc3ae89b1fc139dae96bdb2b7e29ba3648",
+      "bytes": 7330,
+      "source_lines": 249
+    },
+    {
+      "path": "skills/mcp-builder/reference/python_mcp_server.md",
+      "coverage": "full",
+      "sha256": "2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80",
+      "git_blob_sha": "cf7ec996d2e6e3655bc75ff6902738d03a37334e",
+      "bytes": 25099,
+      "source_lines": 719
+    },
+    {
+      "path": "skills/mcp-builder/reference/evaluation.md",
+      "coverage": "full",
+      "sha256": "8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427",
+      "git_blob_sha": "87e9bb78840fac113d93b4a27ab5b229a18cf226",
+      "bytes": 21663,
+      "source_lines": 602
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497cdb42ffeKRLu3kUHECI5Yx",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 24424,
+          "output": 9508,
+          "reasoning": 4541,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:58:01.298031+00:00"
+}

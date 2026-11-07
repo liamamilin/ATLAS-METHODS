@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "e36d5d8a160259015b36",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/code-review/SKILL.md",
+    "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+    "entry_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+  },
+  "files": [
+    {
+      "path": "skills/engineering/code-review/SKILL.md",
+      "coverage": "full",
+      "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+      "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+      "bytes": 6721,
+      "source_lines": 89
+    }
+  ]
+}

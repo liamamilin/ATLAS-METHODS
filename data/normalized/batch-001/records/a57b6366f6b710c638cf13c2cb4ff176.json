@@ -1,0 +1,405 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "5f1e4728eaea2322c130",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/tdd/SKILL.md",
+    "git_blob_sha": "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985",
+    "entry_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+  },
+  "content": {
+    "name": "tdd",
+    "title": "测试驱动开发：红—绿循环、测试接缝与反模式",
+    "summary": "该 Skill 将 TDD 界定为“红 → 绿”循环，并补充让循环产出值得保留的测试所需的约定：测试应通过公共接口验证行为、只写在事先与用户确认的接缝处、先写失败测试再写最小实现、一次只推进一个垂直切片；重构不属于该循环，而归入评审阶段。",
+    "evidence": [
+      {
+        "path": "skills/engineering/tdd/SKILL.md",
+        "line_start": 6,
+        "line_end": 10
+      },
+      {
+        "path": "skills/engineering/tdd/SKILL.md",
+        "line_start": 34,
+        "line_end": 38
+      }
+    ],
+    "tasks": [
+      {
+        "id": "red-green-cycle",
+        "goal": "在事先确认的公共接缝上，以一次一个垂直切片的方式完成“先写失败测试、再写最小实现”的 TDD 循环。",
+        "when": "用户希望以测试先行的方式构建功能或修复缺陷，或提到 red-green-refactor、集成测试时（依据来源描述）。",
+        "inputs": [
+          "待实现的用户面向能力或缺陷",
+          "公共接口与候选接缝",
+          "项目 GLOSSARY.md（若存在）",
+          "所触及区域的 ADR"
+        ],
+        "outputs": [
+          "位于已确认接缝上的失败测试",
+          "使该测试通过的最小实现"
+        ],
+        "steps": [
+          {
+            "action": "探索代码库时读取 GLOSSARY.md（若存在），使测试名与接口词汇匹配项目领域语言，并遵守所触及区域的 ADR。",
+            "when": "探索代码库时",
+            "rationale": "使测试名和接口词汇与项目领域语言一致。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 10,
+                "line_end": 10
+              }
+            ]
+          },
+          {
+            "action": "确定公共接口与应测试的接缝；在写任何测试之前写下被测接缝并与用户确认；为每个提议的接缝给出一行说明，指出它能捕获什么、遗漏什么。",
+            "when": "写任何测试之前",
+            "rationale": "不可能测试一切，提前约定接缝能让测试投入落在关键路径和复杂逻辑上，而不是每个边缘情况。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 22,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "当接口形态本身存疑（模块多深、接缝应在何处、接口应暴露什么）时，通过 Skill 工具调用 \"codebase-design\" 获取模块、接口、深度、接缝、适配器、杠杆与局部性等词汇，把它当作参考查阅而非要运行的会话。",
+            "when": "接口形态本身存疑时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 26,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "在已确认的接缝上先写失败测试（红）。",
+            "when": "每个循环开始时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          },
+          {
+            "action": "只写足以让该测试通过的代码（绿），不预判未来测试，也不添加投机性功能。",
+            "when": "失败测试写好之后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          },
+          {
+            "action": "每个循环只处理一个接缝、一个测试、一个最小实现；下一个测试作为“曳光弹”，根据上一轮循环的收获作出响应。",
+            "when": "每个循环",
+            "rationale": "批量先写测试会验证想象出来的行为，测试关注事物的形状而非用户面向行为，并在理解实现前就锁定测试结构。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 32,
+                "line_end": 32
+              },
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 37,
+                "line_end": 37
+              }
+            ]
+          },
+          {
+            "action": "把重构留给评审阶段（见 code-review skill），不放入红 → 绿实现循环。",
+            "when": "循环过程中出现重构需求时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 38,
+                "line_end": 38
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "测试通过公共接口验证行为，而非实现细节；好的测试读起来像规格说明，例如“用户能用有效购物车结账”。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 14,
+                "line_end": 14
+              }
+            ]
+          },
+          {
+            "text": "测试只写在公共边界（接缝）处，不针对内部实现。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 20,
+                "line_end": 20
+              }
+            ]
+          },
+          {
+            "text": "没有在未确认的接缝上写测试。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 22,
+                "line_end": 22
+              }
+            ]
+          },
+          {
+            "text": "每个环节（测试、接缝、反模式、循环规则）在每个循环都适用：在循环前和循环中查阅，而不是循环之后。",
+            "evidence": [
+              {
+                "path": "skills/engineering/tdd/SKILL.md",
+                "line_start": 8,
+                "line_end": 8
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 6,
+            "line_end": 8
+          },
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 34,
+            "line_end": 38
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "测试通过公共接口验证行为，而非实现细节；代码可以整体改变，测试不应改变。",
+        "when": "编写或评估任何测试时",
+        "rationale": "读起来像规格说明的测试能说明存在什么能力，并因不关心内部结构而在重构后依然有效。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 14,
+            "line_end": 14
+          }
+        ]
+      },
+      {
+        "text": "测试位于接缝处，绝不针对内部实现。",
+        "when": "决定测试位置时",
+        "rationale": "接缝是可在不深入内部的情况下观察行为的公共边界。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 20,
+            "line_end": 20
+          }
+        ]
+      },
+      {
+        "text": "只在事先约定的接缝写测试；未与用户确认的接缝不写测试。",
+        "when": "任何测试被编写前",
+        "rationale": "不能测试一切，提前约定接缝可将测试努力导向关键路径与复杂逻辑，而不是每个边缘情况。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 22,
+            "line_end": 22
+          }
+        ]
+      },
+      {
+        "text": "先红后绿：先写失败测试，再只写足以通过的代码；不预判未来测试，不添加投机功能。",
+        "when": "每个 TDD 循环",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 36,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "text": "一次一个切片：每轮一个接缝、一个测试、一个最小实现。",
+        "when": "每个 TDD 循环",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 37,
+            "line_end": 37
+          }
+        ]
+      },
+      {
+        "text": "重构不属于该循环，而归入评审阶段（code-review skill）。",
+        "when": "红 → 绿实现循环中",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 38,
+            "line_end": 38
+          }
+        ]
+      },
+      {
+        "text": "采用垂直切片而非水平切片：一次一个测试、一个实现，然后重复；不先写完全部测试再写全部实现。",
+        "when": "规划测试与实现的推进顺序时",
+        "rationale": "批量测试验证的是想象的行为，测试关注形状而非用户面向行为，会变得对真实变化不敏感，并在理解实现之前就锁定测试结构。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 32,
+            "line_end": 32
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "tests.md",
+        "kind": "reference",
+        "locator": "skills/engineering/tdd/tests.md",
+        "usage": "测试示例；本文仅指向该文件，未读取其内容。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      },
+      {
+        "name": "mocking.md",
+        "kind": "reference",
+        "locator": "skills/engineering/tdd/mocking.md",
+        "usage": "mock 使用指南；本文仅指向该文件，未读取其内容。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      },
+      {
+        "name": "GLOSSARY.md",
+        "kind": "reference",
+        "locator": "GLOSSARY.md",
+        "usage": "项目词汇表；若存在，在探索代码库时阅读，以使测试名与接口词汇匹配领域语言。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      },
+      {
+        "name": "codebase-design skill",
+        "kind": "skill",
+        "locator": "codebase-design",
+        "usage": "关于模块、接口、深度、接缝、适配器、杠杆与局部性的共享词汇；当接口形态存疑时通过 Skill 工具查阅，是参考而非要运行的会话。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 26,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "name": "ADRs",
+        "kind": "reference",
+        "locator": null,
+        "usage": "所触及区域的架构决策记录，探索代码库时应予遵守；未指明具体路径。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "实现耦合型反模式",
+        "text": "mock 内部协作者、测试私有方法，或通过侧信道验证（例如查数据库而不用接口）。识别信号：重构时测试失败，但行为并未改变。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 30,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "topic": "同义反复型反模式",
+        "text": "断言以与代码相同的方式重算期望值（如 expect(add(a, b)).toBe(a + b)、手工按同样方式推导的快照、常量与自身比较），因此按构造必然通过，永远无法与代码产生分歧；期望值必须来自独立的事实来源：已知良好字面量、手工演算示例或规格。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 31,
+            "line_end": 31
+          }
+        ]
+      },
+      {
+        "topic": "水平切片反模式",
+        "text": "先写全部测试再写全部实现属于水平切片；应改为垂直切片，每个测试是响应上一轮循环所学到的内容的“曳光弹”。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 32,
+            "line_end": 32
+          }
+        ]
+      },
+      {
+        "topic": "接缝的提问方式",
+        "text": "应询问：“公共接口是什么，我们该测试哪些接缝？”并为每个提议的接缝给出一行说明其捕获与遗漏。",
+        "evidence": [
+          {
+            "path": "skills/engineering/tdd/SKILL.md",
+            "line_start": 24,
+            "line_end": 24
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/engineering/tdd/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:56:00.314939+00:00"
+  }
+}

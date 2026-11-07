@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-11-07T14:49:24.186147+00:00",
+  "source": {
+    "collection_id": "e7834a2573815a5a0871",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/context-engineering/SKILL.md",
+    "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+    "entry_sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "df64dae8b545c020cbd9610a86b0cd835345e18588f19f752de38e063940b376",
+  "input_files": [
+    {
+      "path": "skills/context-engineering/SKILL.md",
+      "coverage": "full",
+      "sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b",
+      "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+      "bytes": 15514,
+      "source_lines": 353
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4983a966ffeDG4eYv6mAVtlek",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8370,
+          "output": 5117,
+          "reasoning": 3334,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "failed",
+  "error": "Expecting ',' delimiter: line 1 column 13884 (char 13883)",
+  "finished_at": "2026-11-07T14:50:19.239607+00:00"
+}

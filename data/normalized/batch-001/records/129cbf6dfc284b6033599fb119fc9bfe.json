@@ -1,0 +1,358 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "ef75cb9667dd7cafebb6",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-calendar-insert/SKILL.md",
+    "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+    "entry_sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e"
+  },
+  "content": {
+    "name": "gws-calendar-insert",
+    "title": "使用 gws CLI 创建 Google Calendar 事件",
+    "summary": "该 Skill 说明如何通过 `gws calendar +insert` 在 Google Calendar 中创建新事件：以 `--summary`、`--start`、`--end` 为必填参数，可选指定日历、地点、描述、参会者和 Google Meet 链接；使用前需阅读共享参考以完成认证并遵守安全规则，执行写入前必须向用户确认。",
+    "evidence": [
+      {
+        "path": "skills/gws-calendar-insert/SKILL.md",
+        "line_start": 14,
+        "line_end": 53
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "line_start": 13,
+        "line_end": 60
+      }
+    ],
+    "tasks": [
+      {
+        "id": "create-calendar-event",
+        "goal": "通过 gws calendar +insert 创建一个新的 Google Calendar 事件。",
+        "when": "需要新建日历事件时。",
+        "inputs": [
+          "事件标题（--summary）",
+          "开始时间（--start，ISO 8601；Tips 要求 RFC3339）",
+          "结束时间（--end，ISO 8601；Tips 要求 RFC3339）",
+          "可选：日历 ID（--calendar，默认 primary）",
+          "可选：地点（--location）",
+          "可选：描述（--description）",
+          "可选：一个或多个参会者邮箱（--attendee，可重复使用）",
+          "可选：是否添加 Google Meet 链接（--meet）"
+        ],
+        "outputs": [
+          "在 Google Calendar 中创建的新事件"
+        ],
+        "steps": [
+          {
+            "action": "阅读共享参考 `../gws-shared/SKILL.md`，了解认证、全局参数和安全规则；若该文件缺失，运行 `gws generate-skills` 生成。",
+            "when": "开始使用本 Skill 前。",
+            "rationale": "入口将其标为前置条件，认证与全局参数不在本文件中展开。",
+            "evidence": [
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 16,
+                "line_end": 16
+              }
+            ]
+          },
+          {
+            "action": "准备必填参数：用 `--summary` 指定事件标题，用 `--start` 和 `--end` 指定开始与结束时间；参数表说明时间使用 ISO 8601，Tips 进一步要求 RFC3339，例如 `2026-06-17T09:00:00-07:00`。",
+            "when": "构造创建事件的命令时。",
+            "rationale": "这三项在参数表中标为必填；Tips 要求时间使用 RFC3339。",
+            "evidence": [
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 28,
+                "line_end": 33
+              },
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 47,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "按需加入可选参数：`--calendar` 指定日历 ID（默认 `primary`），`--location` 指定地点，`--description` 指定描述，重复使用 `--attendee` 添加多个参会者邮箱，使用 `--meet` 自动添加 Google Meet 链接。",
+            "when": "需要设置非默认日历、地点、描述、参会者或视频会议链接时。",
+            "rationale": "参数表列出这些可选功能；Tips 说明 --meet 会自动添加 Meet 链接。",
+            "evidence": [
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 30,
+                "line_end": 37
+              },
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 49,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "执行 `gws calendar +insert --summary <TEXT> --start <TIME> --end <TIME>`，并附加已选的可选参数。",
+            "when": "参数准备完成且用户已确认写入操作后。",
+            "rationale": "Usage 给出基本命令形式；这是创建事件的执行动作。",
+            "evidence": [
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 20,
+                "line_end": 24
+              },
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 52,
+                "line_end": 53
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "执行前必须向用户确认：这是 write 命令，应在执行前与用户确认。",
+            "evidence": [
+              {
+                "path": "skills/gws-calendar-insert/SKILL.md",
+                "line_start": 52,
+                "line_end": 53
+              }
+            ]
+          },
+          {
+            "text": "执行写入命令前应确认用户同意；共享规则还要求绝不在输出中直接暴露密钥或令牌。",
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 55,
+                "line_end": 60
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 14,
+            "line_end": 53
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 15,
+            "line_end": 60
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "使用 `gws calendar +insert` 创建事件时，必须提供 `--summary`、`--start` 和 `--end`。",
+        "when": "创建事件时。",
+        "rationale": "参数表将这三项标记为必填。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 28,
+            "line_end": 33
+          }
+        ]
+      },
+      {
+        "text": "时间参数应使用 ISO 8601 格式；Tips 进一步要求使用 RFC3339，如 `2026-06-17T09:00:00-07:00`。",
+        "when": "填写 `--start` 或 `--end` 时。",
+        "rationale": "参数表说明 ISO 8601，Tips 明确要求 RFC3339。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 32,
+            "line_end": 32
+          },
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 49,
+            "line_end": 49
+          }
+        ]
+      },
+      {
+        "text": "该命令是 write 命令，执行前必须与用户确认。",
+        "when": "运行 `gws calendar +insert` 前。",
+        "rationale": "源文件以 CAUTION 明确提示。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 52,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "text": "绝不要直接输出密钥或令牌；执行写入或删除命令前始终与用户确认。",
+        "when": "使用 gws CLI（包括本创建事件命令）时。",
+        "rationale": "共享安全规则的要求。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 57,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "text": "对破坏性操作优先使用 `--dry-run` 进行验证。",
+        "when": "执行可能具有破坏性的操作时。",
+        "rationale": "共享安全规则建议先做本地验证。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 59,
+            "line_end": 59
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "gws",
+        "kind": "tool",
+        "locator": "gws",
+        "usage": "必须位于 `$PATH` 上，用于执行 `gws calendar +insert` 等命令。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 15,
+            "line_end": 17
+          },
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 20,
+            "line_end": 24
+          }
+        ]
+      },
+      {
+        "name": "gws-shared 参考",
+        "kind": "reference",
+        "locator": "skills/gws-shared/SKILL.md",
+        "usage": "提供认证、全局参数和安全规则；本 Skill 将其列为前置阅读材料。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 13,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "name": "gws-calendar 参考",
+        "kind": "reference",
+        "locator": "skills/gws-calendar/SKILL.md",
+        "usage": "See Also 指向的日历和事件命令总览；本记录不展开其内容。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 55,
+            "line_end": 58
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "认证方式",
+        "text": "共享参考给出两种认证方式：交互式浏览器 OAuth，运行 `gws auth login`；或使用服务账户，将 `GOOGLE_APPLICATION_CREDENTIALS` 指向密钥 JSON 文件。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 19,
+            "line_end": 27
+          }
+        ]
+      },
+      {
+        "topic": "全局输出参数",
+        "text": "`--format` 支持 json（默认）、table、yaml、csv；`--dry-run` 可在本地验证而不调用 API；`--sanitize` 可通过 Model Armor 筛查响应。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 29,
+            "line_end": 35
+          }
+        ]
+      },
+      {
+        "topic": "示例",
+        "text": "示例覆盖创建 Standup、带参会者的 Review 以及带 Google Meet 的 Meet 事件，展示必填与可选参数的组合，不是固定流程。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 39,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "topic": "默认日历与重复参数",
+        "text": "未指定 `--calendar` 时默认使用 `primary`；`--attendee` 可以多次使用以添加多个参会者。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 30,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "topic": "CLI 帮助",
+        "text": "元数据提供 `gws calendar +insert --help` 作为该子命令的帮助入口。",
+        "evidence": [
+          {
+            "path": "skills/gws-calendar-insert/SKILL.md",
+            "line_start": 11,
+            "line_end": 11
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/gws-calendar-insert/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/checks",
+        "reason": "not_stated",
+        "detail": "原文未给出创建成功后的验证方法（例如查询事件或检查事件 ID），也未说明 API 错误或权限失败时的处理步骤。"
+      },
+      {
+        "target": "/content/tasks/0/outputs",
+        "reason": "not_stated",
+        "detail": "原文只说明会创建新事件，未说明命令返回的具体结构、事件 ID 或成功提示格式。"
+      },
+      {
+        "target": "/content/tasks/0/steps/0",
+        "reason": "not_stated",
+        "detail": "认证步骤仅指向共享参考；原文未列出创建日历事件所需的具体 OAuth scopes 或服务账户权限。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:47:30.971606+00:00"
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "87a239fc0fa43d9a8448",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/deploy-to-vercel/SKILL.md",
+    "git_blob_sha": "f3bb68ba31294f0edf81fdb326ddc2666a24e0e0",
+    "entry_sha256": "418ca2a60d35c551e6cb645f4e82c1b704a8335486ffe74b1b3d0617a17504e5"
+  },
+  "content": {
+    "name": "deploy-to-vercel",
+    "title": "部署应用到 Vercel：状态检查与四条部署路径",
+    "summary": "先执行四项检查（git remote、是否已链接 Vercel、CLI 是否已认证、可用团队），再按“已链接/未链接 × 有无 git remote × CLI 是否认证”选择部署路径：git push 触发、`vercel deploy`、先 `vercel link` 再部署，或安装并登录 CLI 后部署；无法登录时改用 `--temporary` 临时部署并告知领取链接与过期时间。默认部署为 preview，仅在用户明确要求时部署 production；最终目标是把项目推进到“已链接 Vercel 且可通过 git push 部署”的长期状态。",
+    "evidence": [
+      {
+        "path": "skills/deploy-to-vercel/SKILL.md",
+        "line_start": 9,
+        "line_end": 13
+      }
+    ],
+    "tasks": [
+      {
+        "id": "gather-project-state",
+        "goal": "在决定部署方式前收集项目与账号状态",
+        "when": "每次部署前",
+        "inputs": [
+          "项目的 git 仓库目录",
+          "Vercel CLI（可能未安装或未认证）"
+        ],
+        "outputs": [
+          "是否存在 git remote",
+          "项目是否已链接 Vercel（`.vercel/project.json` 或 `.vercel/repo.json`）",
+          "CLI 是否已认证（`vercel whoami`）",
+          "可用团队列表"
+        ],
+        "steps": [
+          {
+            "action": "运行 `git remote get-url origin 2>/dev/null` 检查是否有 git remote",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "读取 `.vercel/project.json`，不存在则读取 `.vercel/repo.json`；任一文件存在即表示已链接",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "运行 `vercel whoami 2>/dev/null` 检查 CLI 是否已安装并认证",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "若已认证，运行 `vercel teams list --format json 2>/dev/null` 获取可用团队",
+            "when": "CLI 已认证",
+            "rationale": null
+          },
+          {
+            "action": "存在多个团队时，以项目符号列出所有团队 slug 并询问部署到哪个；用户选定后直接进入下一步，不再要求额外确认；后续所有 CLI 命令（`vercel deploy`、`vercel link`、`vercel inspect` 等）都带 `--scope <team-slug>`",
+            "when": "用户属于多个团队",
+            "rationale": null
+          },
+          {
+            "action": "项目已链接时，以 `.vercel/` 文件中的 `orgId` 确定团队，不再询问；只有一个团队或个人账号时跳过询问直接使用。以上四项检查全部运行后再选择部署方法",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "只有在任何目录都安全的是 `vercel whoami`；未链接目录中不要用 `vercel project inspect`、`vercel ls` 或 `vercel link` 探测状态，因为它们会交互式提示，或在加 `--yes` 时作为副作用静默完成链接",
+            "evidence": [
+              {
+                "path": "skills/deploy-to-vercel/SKILL.md",
+                "line_start": 51,
+                "line_end": 51
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 15,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "id": "deploy-via-git-push",
+        "goal": "通过提交并推送 git 触发 Vercel 构建（已链接且有 git remote 的理想状态）",
+        "when": "`.vercel/` 存在且存在 git remote",
+        "inputs": [
+          "已链接的 Vercel 项目",
+          "git remote",
+          "（可选）已认证的 Vercel CLI"
+        ],
+        "outputs": [
+          "由推送触发的部署",
+          "preview URL（或告知用户去哪里查看）"
+        ],
+        "steps": [
+          {
+            "action": "先征得用户明确同意再推送，例如说明项目通过 git 连接 Vercel、可提交并推送以触发部署并询问是否继续",
+            "when": "每次推送前",
+            "rationale": "绝不未经明确批准就推送"
+          },
+          {
+            "action": "执行 `git add .`、`git commit -m \"deploy: <变更描述>\"`、`git push`；Vercel 会自动从推送构建，非生产分支得到 preview 部署，生产分支（通常 `main`）得到 production 部署",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "CLI 已认证时，`sleep 5` 后运行 `vercel ls --format json`，在输出的 `deployments` 数组中取最新条目的 `url` 字段作为 preview URL",
+            "when": "CLI 已认证",
+            "rationale": null
+          },
+          {
+            "action": "CLI 未认证时，告知用户到 Vercel 仪表盘或其 git 提供方的提交状态检查中查看 preview URL",
+            "when": "CLI 未认证",
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "推送前必须获得用户明确批准",
+            "evidence": [
+              {
+                "path": "skills/deploy-to-vercel/SKILL.md",
+                "line_start": 59,
+                "line_end": 63
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 55,
+            "line_end": 80
+          }
+        ]
+      },
+      {
+        "id": "deploy-via-cli",
+        "goal": "用 Vercel CLI 直接部署已链接但无 git 仓库的项目",
+        "when": "`.vercel/` 存在但没有 git remote",
+        "inputs": [
+          "已链接的 Vercel 项目",
+          "Vercel CLI"
+        ],
+        "outputs": [
+          "部署 URL",
+          "构建状态"
+        ],
+        "steps": [
+          {
+            "action": "运行 `vercel deploy [path] -y --no-wait`；使用 `--no-wait` 让 CLI 立即返回部署 URL 而不是阻塞到构建完成（构建可能耗时较久）",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "用 `vercel inspect <deployment-url>` 检查部署状态",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "仅在用户明确要求时部署生产环境：`vercel deploy [path] --prod -y --no-wait`",
+            "when": "用户明确要求 production",
+            "rationale": null
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 84,
+            "line_end": 101
+          }
+        ]
+      },
+      {
+        "id": "link-then-deploy",
+        "goal": "先为未链接项目建立 Vercel 链接，再用最佳方式部署",
+        "when": "未链接且 CLI 已认证",
+        "inputs": [
+          "未链接的项目目录",
+          "已认证的 Vercel CLI",
+          "（可选）git remote",
+          "团队 slug"
+        ],
+        "outputs": [
+          "`.vercel/repo.json` 或 `.vercel/project.json`",
+          "部署与部署 URL"
+        ],
+        "steps": [
+          {
+            "action": "询问部署到哪个团队：把第 1 步得到的团队 slug 以项目符号列出；只有一个团队或个人账号时跳过",
+            "when": "存在多个团队",
+            "rationale": null
+          },
+          {
+            "action": "团队选定后直接进入链接，仅告知将发生什么而不另行请求确认（例如说明将把项目链接到某团队、创建 Vercel 项目并启用未来 git 推送的自动部署）",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "存在 git remote 时用 `vercel link --repo --scope <team-slug>`：读取 git remote URL 并匹配从该仓库部署的既有 Vercel 项目，生成 `.vercel/repo.json`",
+            "when": "存在 git remote",
+            "rationale": "比不带 `--repo` 的 `vercel link` 可靠得多，后者按目录名匹配，在本地文件夹与 Vercel 项目命名不同时常失败"
+          },
+          {
+            "action": "没有 git remote 时回退到 `vercel link --scope <team-slug>`，由用户选择或创建项目，生成 `.vercel/project.json`",
+            "when": "没有 git remote",
+            "rationale": null
+          },
+          {
+            "action": "随后按最佳可用方式部署：有 git remote 则提交并推送（见 git push 路径）；无 git remote 则 `vercel deploy [path] -y --no-wait --scope <team-slug>`，再用 `vercel inspect <url>` 检查状态",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 105,
+            "line_end": 131
+          }
+        ]
+      },
+      {
+        "id": "install-auth-link-deploy",
+        "goal": "在 CLI 完全未配置的环境完成安装、认证、链接与部署",
+        "when": "未链接且 CLI 未认证（但可交互登录）",
+        "inputs": [
+          "项目目录",
+          "Node/npm 环境",
+          "浏览器可完成的登录流程"
+        ],
+        "outputs": [
+          "已安装并认证的 Vercel CLI",
+          "已链接的项目",
+          "部署与部署 URL"
+        ],
+        "steps": [
+          {
+            "action": "如未安装则运行 `npm install -g vercel`",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "运行 `vercel login`，由用户在浏览器中完成认证；在无法登录的非交互环境中跳过，改用无认证回退方案",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "询问部署到哪个团队，把 `vercel teams list --format json` 的团队 slug 以项目符号列出；只有一个团队或个人账号时跳过，选定后立即继续",
+            "when": "存在多个团队",
+            "rationale": null
+          },
+          {
+            "action": "用所选团队 scope 链接项目：有 git remote 用 `vercel link --repo --scope <team-slug>`，否则用 `vercel link --scope <team-slug>`",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "按最佳可用方式部署：有 remote 则提交并推送，否则 `vercel deploy -y --no-wait --scope <team-slug>` 后用 `vercel inspect <url>` 检查状态",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 135,
+            "line_end": 158
+          }
+        ]
+      },
+      {
+        "id": "temporary-no-auth-fallback",
+        "goal": "在没有凭据且无法登录时完成临时部署",
+        "when": "CLI 没有凭据且 `vercel login` 不可行（沙箱、agent、非交互环境）",
+        "inputs": [
+          "项目目录",
+          "可访问 npm registry 与 Vercel 的网络"
+        ],
+        "outputs": [
+          "临时 production 部署 URL",
+          "claim URL",
+          "过期时间"
+        ],
+        "steps": [
+          {
+            "action": "直接运行 `npx vercel@latest deploy [path] --temporary -y`；不要先要求用户批准 CLI 登录或设备码",
+            "when": null,
+            "rationale": "无需账号；CLI 本地构建并部署到临时 production URL，打印 claim URL 和过期时间；在同一目录重跑会重新部署同一临时项目直到过期"
+          },
+          {
+            "action": "告知用户部署地址、过期时间与 claim URL，并提醒不要分享 claim 链接",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "只有在沙箱确实阻断网络调用时才以提升权限重跑部署命令",
+            "when": "沙箱阻止网络请求",
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "临时部署在 CI 中或已链接 Vercel 项目的目录中不可用",
+            "evidence": [
+              {
+                "path": "skills/deploy-to-vercel/SKILL.md",
+                "line_start": 172,
+                "line_end": 172
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 162,
+            "line_end": 176
+          }
+        ]
+      },
+      {
+        "id": "report-deployment-url",
+        "goal": "向用户报告部署结果",
+        "when": "任一部署路径完成后",
+        "inputs": [
+          "部署返回的 URL、claim URL 或过期时间"
+        ],
+        "outputs": [
+          "展示给用户的部署 URL 及必要说明"
+        ],
+        "steps": [
+          {
+            "action": "git push 路径：用 `vercel ls --format json` 找 preview URL；CLI 未认证时让用户查看 Vercel 仪表盘或提交状态检查",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "CLI 部署路径：展示 `vercel deploy --no-wait` 返回的 URL，并用 `vercel inspect <url>` 检查构建状态后报告",
+            "when": null,
+            "rationale": null
+          },
+          {
+            "action": "无认证回退：展示部署 URL、claim URL 和 CLI 打印的过期时间",
+            "when": null,
+            "rationale": null
+          }
+        ],
+        "checks": [
+          {
+            "text": "始终向用户展示部署 URL；不要 curl 或抓取已部署 URL 来验证其可用，只返回链接",
+            "evidence": [
+              {
+                "path": "skills/deploy-to-vercel/SKILL.md",
+                "line_start": 194,
+                "line_end": 200
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 192,
+            "line_end": 200
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "始终以 preview 方式部署，除非用户明确要求 production",
+        "when": "任何部署",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 11,
+            "line_end": 11
+          }
+        ]
+      },
+      {
+        "text": "以让用户进入最佳长期配置为目标：项目链接到 Vercel 并可通过 git push 部署；下方每种方法都应把用户推向该状态",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "text": "选定团队后，在所有后续 CLI 命令上通过 `--scope` 传入团队 slug",
+        "when": "用户选择了团队",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 35,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "text": "项目已链接时由 `.vercel/` 文件中的 `orgId` 决定团队，不再询问；只有一个团队或个人账号时跳过询问",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 43,
+            "line_end": 43
+          }
+        ]
+      },
+      {
+        "text": "不要在未链接目录用 `vercel project inspect`、`vercel ls` 或 `vercel link` 探测状态；只有 `vercel whoami` 在任何地方都安全",
+        "when": "目录没有 `.vercel/` 配置",
+        "rationale": "这些命令会交互式提示，或在 `--yes` 下作为副作用静默链接项目",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 51,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "text": "未经用户明确批准绝不推送",
+        "when": "git push 部署路径",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 59,
+            "line_end": 63
+          }
+        ]
+      },
+      {
+        "text": "存在 git remote 时优先用 `--repo` 做基于仓库的链接，而非按目录名匹配的普通 `vercel link`",
+        "when": null,
+        "rationale": "基于目录名匹配在本地文件夹与 Vercel 项目命名不同时常失败",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 117,
+            "line_end": 121
+          }
+        ]
+      },
+      {
+        "text": "CLI 部署用 `--no-wait`，使 CLI 立即返回部署 URL 而不阻塞到构建完成",
+        "when": null,
+        "rationale": "构建可能耗时较久",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 89,
+            "line_end": 92
+          }
+        ]
+      },
+      {
+        "text": "无认证回退时不要先请求用户批准 CLI 登录或设备码，而是直接尝试 `--temporary` 部署",
+        "when": "CLI 无凭据且无法登录",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 164,
+            "line_end": 168
+          }
+        ]
+      },
+      {
+        "text": "临时部署不会在 CI 中工作，也不会在已链接 Vercel 项目的目录中工作",
+        "when": "使用 `--temporary`",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 170,
+            "line_end": 172
+          }
+        ]
+      },
+      {
+        "text": "不要分享 claim 链接",
+        "when": "临时部署",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 174,
+            "line_end": 174
+          }
+        ]
+      },
+      {
+        "text": "只对实际部署命令升级网络权限，不要升级最初的 CLI 可用性检查",
+        "when": "沙箱环境出现网络失败",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 176,
+            "line_end": 176
+          },
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 218,
+            "line_end": 220
+          }
+        ]
+      },
+      {
+        "text": "不要 curl 或抓取已部署 URL 来验证其可用，直接返回链接",
+        "when": "报告部署结果",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 200,
+            "line_end": 200
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Vercel CLI",
+        "kind": "tool",
+        "locator": "vercel（安装：npm install -g vercel）",
+        "usage": "文档所述：用于 `whoami` 认证检查、`teams list` 团队列举、`link`/`link --repo` 项目链接、`deploy` 部署、`inspect` 查看部署状态、`ls` 列出部署",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 26,
+            "line_end": 30
+          },
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 139,
+            "line_end": 147
+          }
+        ]
+      },
+      {
+        "name": "npx vercel@latest",
+        "kind": "tool",
+        "locator": "npx vercel@latest deploy [path] --temporary -y",
+        "usage": "无认证环境下执行临时部署，无需安装全局 CLI 或账号",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 166,
+            "line_end": 170
+          }
+        ]
+      },
+      {
+        "name": "git",
+        "kind": "tool",
+        "locator": "git",
+        "usage": "检查 `git remote get-url origin`；git push 路径下执行 `git add`、`git commit`、`git push` 触发 Vercel 构建",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 19,
+            "line_end": 21
+          },
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 65,
+            "line_end": 71
+          }
+        ]
+      },
+      {
+        "name": ".vercel/project.json",
+        "kind": "other",
+        "locator": ".vercel/project.json",
+        "usage": "单项目链接（`vercel link`）生成；含 `projectId` 与 `orgId`；存在即表示项目已链接",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 45,
+            "line_end": 49
+          }
+        ]
+      },
+      {
+        "name": ".vercel/repo.json",
+        "kind": "other",
+        "locator": ".vercel/repo.json",
+        "usage": "基于仓库的链接（`vercel link --repo`）生成；含 `orgId`、`remoteName` 与把目录映射到 Vercel 项目 ID 的 `projects` 数组；存在即表示项目已链接",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 45,
+            "line_end": 49
+          }
+        ]
+      },
+      {
+        "name": "Vercel 无登录部署文档",
+        "kind": "reference",
+        "locator": "https://vercel.com/docs/deployments/deploy-without-logging-in",
+        "usage": "临时部署的补充说明（文档链接，未读取内容）",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 172,
+            "line_end": 172
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "`.vercel/` 两种链接文件",
+        "text": "已链接项目可能是单项目链接（`.vercel/project.json`）或仓库级链接（`.vercel/repo.json`），两种文件都要检查，任一存在即视为已链接。",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 45,
+            "line_end": 49
+          }
+        ]
+      },
+      {
+        "topic": "脚本代理适配",
+        "text": "Claude Code/终端类代理可直接使用 shell 和 CLI 按决策流程操作；在沙箱环境（claude.ai、Codex）先用 `vercel whoami` 判断是否已登录，已登录则走正常流程（含团队选择），未登录则使用无认证回退。",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 180,
+            "line_end": 188
+          }
+        ]
+      },
+      {
+        "topic": "claude.ai 网络出口限制",
+        "text": "若因 claude.ai 网络限制导致部署失败，提示用户到 https://claude.ai/settings/capabilities 将 `*.vercel.com` 与 `registry.npmjs.org` 加入允许域名后重试。",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 206,
+            "line_end": 216
+          }
+        ]
+      },
+      {
+        "topic": "Codex/沙箱网络升级提示",
+        "text": "沙箱中因超时、DNS 错误、连接重置等网络问题失败时，向用户说明可以提升权限重跑部署命令并征询是否继续；不要升级最初的 CLI 可用性检查。",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 218,
+            "line_end": 226
+          }
+        ]
+      },
+      {
+        "topic": "CLI 认证失败的处理",
+        "text": "若 `vercel login` 或 `vercel deploy` 因认证错误失败，改用无认证回退 `vercel deploy --temporary -y`。",
+        "evidence": [
+          {
+            "path": "skills/deploy-to-vercel/SKILL.md",
+            "line_start": 228,
+            "line_end": 230
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/deploy-to-vercel/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:51:15.917560+00:00"
+  }
+}

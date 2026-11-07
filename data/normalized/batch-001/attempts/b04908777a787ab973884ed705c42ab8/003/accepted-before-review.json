@@ -1,0 +1,974 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "0a2ef73281ba846578f5",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/brainstorming/SKILL.md",
+    "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+    "entry_sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207"
+  },
+  "content": {
+    "name": "brainstorming",
+    "title": "创意工作前的需求澄清、方案选择与设计文档审批流程",
+    "summary": "该 Skill 规定：在任何创造性工作（写功能、搭组件、加功能、改行为或规划新事物，软件内外皆可）开始实现之前，先弄清人类伙伴想要什么以及为什么，再摆出可选做法让其选择，写出相应规模的设计文档并取得批准，最后才进入计划编写。核心机制是：先读已有材料再提问；用开放式问题让对方自己描述动机；只问那些答案会改变构建内容的问题；按理解进度分段复述并邀请纠正；用单独一条消息呈现两三个具体方案及权衡；设计文档区分“对方已决定的”与“留给构建者的”；用硬性门禁阻止未获批就动手，唯一例外是对方明确同意的丢弃型 spike。",
+    "evidence": [
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "section": "frontmatter description",
+        "line_start": 3,
+        "line_end": 3
+      },
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "section": "Brainstorming 引言",
+        "line_start": 6,
+        "line_end": 15
+      },
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "section": "First: What Do You Actually Know?",
+        "line_start": 17,
+        "line_end": 40
+      },
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "section": "The Written Design / HARD-GATE",
+        "line_start": 229,
+        "line_end": 283
+      }
+    ],
+    "tasks": [
+      {
+        "id": "clarify-and-design",
+        "goal": "在动手实现前弄清人类伙伴真正想要什么及其原因，摆出可行做法让其选择，写出相应规模的设计文档并取得批准，然后转入计划编写。",
+        "when": "任何创造性工作之前（创建功能、构建组件、添加功能、修改行为或规划任何新事物，软件或非软件）；若请求已包含所有要紧信息且只有一种合理做法，可压缩为一条消息完成；若对方明确选择跳过提问，则本 Skill 结束。",
+        "inputs": [
+          "人类伙伴的请求（可为规格、计划、详细需求或一句话）",
+          "项目现有代码或材料",
+          "对方提到的规格、计划、交接文档、文件或早前对话",
+          "进一步侦察所得（代码库、对方文件与数据、网络）"
+        ],
+        "outputs": [
+          "两三个具体做法及各自权衡，以及被选中的方案",
+          "短设计文档（小改动）或完整设计文档（项目）",
+          "对方对设计文档的批准",
+          "对 superpowers:writing-plans 的调用"
+        ],
+        "steps": [
+          {
+            "action": "先自问：关于对方想要什么及其原因，我已知什么？若所有要紧信息都在请求里（如“把图标改成矢车菊蓝”），直接做并说明做了什么；若有非平凡信息缺失，开始对话。",
+            "when": "回复之前",
+            "rationale": "对需求的信念通常比感觉中更单薄，先找出真实意图可替对方做出他们未明说的一百个决定。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 6,
+                "line_end": 24
+              }
+            ]
+          },
+          {
+            "action": "先看再问：读对方指到的材料以及与之相连的代码或资料，持续读到能解释相关部分目前如何运作、本次改动会触及什么为止；不问项目或上下文已能回答的问题，不重开对方已决定的事。",
+            "when": "在已有项目中，或对方提供了规格、计划、交接、文件、早前对话等上下文时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 42,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "发出第一条消息（对方已说明想要什么时）：整条约 200 词，用自己的话复述其请求的形状——想要什么、给谁、为什么（就其所言）；补充你查到的相关现状与本次改动会触及之处；若发现对方可能未考虑、且会改变所要求内容或其构建方式的约束、冲突或更省路径，直接讲明；构建方式留到理解需求之后再谈；结尾用一行邀请纠正。随后若对方未说为什么想要，即便能猜到，也用一个不含选项的开放问题以其自己的语言询问原因；若已说明原因，则就“答案会改变构建内容”的最大未决点提一个问题，能命名选项时具体勾画每个选项及其权衡与你的选择；若没有这类未决点、只有一种合理做法，则在消息末尾给出简短设计（做法、一句为何其他不合适、几行设计）并请求批准。",
+            "when": "对方已给出规格、计划或详细请求时",
+            "rationale": "规格常常不完整，在其上构建前需确认。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 52,
+                "line_end": 77
+              }
+            ]
+          },
+          {
+            "action": "发出第一条消息（对方尚未说明想要什么时）：就请求中最未定的最大事项，以其自己的语言提一个开放问题，并说明为何问——该答案会如何改变你要构建的东西。",
+            "when": "需求非平凡且缺失时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 78,
+                "line_end": 83
+              }
+            ]
+          },
+          {
+            "action": "按对方是否要求 brainstorming 决定消息如何结尾：若其点名、调用或要求设计讨论，就停在该对话；若没有，则加一句轻量提议表示可以直接开工，如“或者你想让我直接上手，说一声”。若其接受，则本 Skill 结束：用一行平实说明任何重要的制作方式选择（平台、语言、媒介），再按正常流程做其要求的事。",
+            "when": "第一条消息结尾",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 85,
+                "line_end": 97
+              }
+            ]
+          },
+          {
+            "action": "在对话中：只有当答案会改变构建内容、且请求与项目都未回答时才提问；否则陈述你的判断与理由，作为可被纠正的提议，并推进工作。流程性步骤（写文档、文件放哪、是否继续查看、如何展示）始终由自己决定并告知。一次只问一个问题，使用平实语言，略高于对方当前水平，匹配其词汇，不用流程术语；无需向对方引用本 Skill。",
+            "when": "整个对话过程",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 99,
+                "line_end": 108
+              }
+            ]
+          },
+          {
+            "action": "让对方描述：在知道为什么之前，提开放式问题，不附示例答案，因为其本人才承载你的选项无法承载的意图；知道为什么之后，对可命名选项具体勾画每个选择、其权衡与你的倾向；当对方说“你猜”或“你怎么想”时，给出具体提议。",
+            "when": "对话中，视是否已知对方动机而定",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 114,
+                "line_end": 119
+              }
+            ]
+          },
+          {
+            "action": "处理“怎么做出来”：从对方言谈判断其想自己决定哪些选择（平台、语言、库、艺术媒介等）。提到怎么做或询问权衡的人，想要选项加你的选择；只谈结果的人则把怎么做的决定交给你——由你做这些决定，并各用一行说明；已有工作时沿用其现有技术。任何你做的选择在设计文档中记为你的决定，绝不写成对方已同意。",
+            "when": "涉及媒介、工具、材料、资源等制作方式选择时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 121,
+                "line_end": 129
+              }
+            ]
+          },
+          {
+            "action": "覆盖要谈的领域（视为范围而非脚本，绝不逐条念成问题）：这是什么类型的东西及其特别之处；为什么是现在、成功对对方意味着什么；目标、非目标、反目标（即便技术上可用也算失败的情形）；先例——对方在别处见过、喜欢或讨厌的；当前状态——现有什么、试过什么；对方在乎的细节。",
+            "when": "对话推进中",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 131,
+                "line_end": 140
+              }
+            ]
+          },
+          {
+            "action": "让每个问题都针对其项目与已说内容：像敏锐同事那样苏格拉底式提问，基于对方上一个回答或你发现的东西，帮其想清某个后果或遗漏的情形；当理由不明显时，说明你想了解什么或答案会改变什么；一个可被纠正的提议加理由常常胜过提问。",
+            "when": "每次提问时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 142,
+                "line_end": 150
+              },
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 146,
+                "line_end": 147
+              }
+            ]
+          },
+          {
+            "action": "做侦察：一旦有了基本立足点且进一步查看会有帮助，就去深入其代码库或项目、其文件与数据，或网络；说明你找了什么、发现了什么。",
+            "when": "需要更多事实支撑对话时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 152,
+                "line_end": 154
+              }
+            ]
+          },
+          {
+            "action": "摆出做法：在理解对方想要什么之后、写任何文档之前，用单独一条消息给出构建方式。先想出若干真实替代方案，淘汰弱项（包括违背其动机的、被现有工作排除的）；将剩下的两三个具体勾画到可想象的程度，扎根于项目实际所做之事，并说明各自权衡；推荐一个并说明理由，然后问对方想走哪条；若对方已把怎么做交给你，则说明你将采用自己的选择。若确实只有一种合理做法，就在该消息中说明并解释其他为何不合适，设计留到下一条消息。",
+            "when": "需求已理解、尚未写文档时",
+            "rationale": "这是关于如何构建；关于对方想要什么，应先让其描述。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 156,
+                "line_end": 167
+              }
+            ]
+          },
+          {
+            "action": "能看就别只说：凡看到比读到更有帮助时，用文字勾几行对方会看到的样子；当外观本身需由对方决定时，提供可视化伴随（见其条目）。对方接受后，用它做可反应的 mockup、并排选项、可点击的一次性原型。",
+            "when": "出现屏幕、页面、打印件、招牌、布局安排、流程或步骤序列、外观彼此不同的选项、看图比读文更易理解的结构等情形",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 169,
+                "line_end": 180
+              }
+            ]
+          },
+          {
+            "action": "边理解边回放：一旦某部分理解到足以描述（如它做什么、服务谁，或某块如何运作），就用约 200–300 词复述该部分，然后回到关于下一部分的问题；回放与提问在整个对话中交替，最后一段覆盖剩余内容。只有对方说过的内容作为其观点写入；你补充的任何内容都作为你的提议并附理由。每段结尾询问哪里不对或缺失。",
+            "when": "对话中每理解一部分时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 190,
+                "line_end": 200
+              }
+            ]
+          },
+          {
+            "action": "发送回放段前检查：它是否描述了对方会看到的东西（页面、屏幕、日程、打印件）？若是，在描述旁配文字草图；若外观本身由对方决定且其尚未见过可视化伴随提议，则改为单独发送提议消息，并把该段推迟到下一条消息；对方接受后，在描述旁配 mockup。",
+            "when": "每次发送回放段之前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 202,
+                "line_end": 207
+              }
+            ]
+          },
+          {
+            "action": "确定工作量规模：在理解需求且对方选定做法后，用平实语言说明工作有多大（小改动→短设计文档；项目→完整书面设计），对方可推翻。无论长短，设计文档都有“Approaches”部分：考虑过的两三种做法、各自权衡、对方选了哪个及为什么——对方在写文档之前于对话中选定。若中途变大，停下、说明，并升一档；若实为多个独立项目，说明并约定顺序，逐个 brainstorm。",
+            "when": "需求理解且方案已选后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 209,
+                "line_end": 227
+              }
+            ]
+          },
+          {
+            "action": "写完整设计文档：写成一份平实文档，使该领域有能力的构建者无需再找你的人类伙伴即可据此规划。覆盖：意图与原因；目标、非目标、反目标；约束；做法（上述）；对方已决定的“怎么做”部分（按其决定写）；留给构建者的部分。小改动则写短文档，同样几点各一两行，直接交给你的人类伙伴，不做 builder check。",
+            "when": "项目规模时（完整版）/小改动时（短版）",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 229,
+                "line_end": 243
+              }
+            ]
+          },
+          {
+            "action": "确定存放位置：软件仓库中放在 docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md 并提交；否则选一个合理位置并说明；人类伙伴的偏好覆盖以上两者。",
+            "when": "写设计文档时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 245,
+                "line_end": 248
+              }
+            ]
+          },
+          {
+            "action": "执行 builder check（项目规模）：用本目录的 builder-check-prompt.md 派发一个新的 subagent；告知人类伙伴你会写出来、会先由审阅者阅读、可能带着几个问题回来一次；检查返回前不交付文档。把 builder 提出的问题分成三堆：已由对话或项目回答的（把答案写进文档）、次要的（有能力的构建者可不改变构建内容自行决定——自己定，并在文档中标为你的决定）、属于对方的（只有人类伙伴能答且答案会改变构建内容）。把“属于对方”的一堆按重要性从高到低放进一条消息；用其回答更新文档，然后交付，并附一份你所作决定的简短清单供其阅读时核对。这是检查产生的唯一一轮问题。没有 subagent 工具时，自己以该 builder 的身份读文档。",
+            "when": "项目规模的设计文档写好后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 250,
+                "line_end": 267
+              }
+            ]
+          },
+          {
+            "action": "遵守硬门禁：设计文档获批前不得构建——构建包括写产品代码、脚手架、安装依赖、创建项目、调用实现类 Skill；阅读与探索可以。两个例外：对方选择跳过提问则本 Skill 结束、门禁随之结束；对方同意的 spike 可以构建，但须保持“丢弃品”标记，保留其产物属于新请求，需重新过此门。",
+            "when": "从对话到设计文档获批的整个阶段",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 269,
+                "line_end": 279
+              }
+            ]
+          },
+          {
+            "action": "设计文档获批后，下一步是计划：调用 superpowers:writing-plans，不调用其他 Skill。",
+            "when": "设计文档获批之后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 281,
+                "line_end": 282
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "消息长度自检：首次消息（对方已给出规格时）约 200 词；回放段约 200–300 词。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 58,
+                "line_end": 59
+              },
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 194,
+                "line_end": 196
+              }
+            ]
+          },
+          {
+            "text": "对照 Red Flags 表自检：不提供可能的选项菜单（先请对方描述）；默认值要说出声，未被听到的默认值等于对方无法拒绝；先摆出做法再写文档（或在开局无未决点时放进首条消息的短设计中）；不先解释流程而是直接提问；对方对想法的“听起来不错”只覆盖你展示过的内容，未写出的设计文档不算获批；spike 能用也不代表可在其上继续构建。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 285,
+                "line_end": 294
+              }
+            ]
+          },
+          {
+            "text": "builder check 未返回前不得把设计文档交给人类伙伴；交给时需附上你所做决定的简短清单。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 252,
+                "line_end": 267
+              }
+            ]
+          },
+          {
+            "text": "发送回放段前检查其中是否描述了会被观看的对象，若是则需配文字草图或（已接受时）mockup；外观由对方决定且未提供过可视化提议时，先单独发提议并推迟该段。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 202,
+                "line_end": 207
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 26,
+            "line_end": 40
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 269,
+            "line_end": 283
+          }
+        ]
+      },
+      {
+        "id": "spike",
+        "goal": "用一次性快速构建来了解人类伙伴想要什么，或验证某个做法是否可行，并把学到的东西带回对话。",
+        "when": "当快速的一次性构建是了解需求或验证可行性的最省成本方式时；或对方表示只想先 spike 时。",
+        "inputs": [
+          "对话中已形成的需求假设或待验证做法"
+        ],
+        "outputs": [
+          "带回对话的认识",
+          "标记为丢弃品的一次性产物"
+        ],
+        "steps": [
+          {
+            "action": "在有帮助时向对方提议做一次 spike；当对方只想 spike 时，让开不阻拦。",
+            "when": "探索阶段",
+            "rationale": "agentic 工作像瀑布但非常快，快速一次性构建常是了解需求或验证可行性的最便宜方式。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 182,
+                "line_end": 188
+              }
+            ]
+          },
+          {
+            "action": "让 spike 不写测试或只写最少测试，不追求结实可靠，跳过计划、实现与评审流程。",
+            "when": "执行 spike 时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 185,
+                "line_end": 188
+              }
+            ]
+          },
+          {
+            "action": "把 spike 学到的东西带回对话继续讨论。",
+            "when": "spike 结束后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 187,
+                "line_end": 188
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 182,
+            "line_end": 188
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 276,
+            "line_end": 279
+          }
+        ]
+      },
+      {
+        "id": "visual-companion",
+        "goal": "在“看到”比“读到”更有帮助时，用浏览器标签页展示 mockup、示意图和原型，作为工具而非模式。",
+        "when": "首次出现适合可视化的时机（对方会观看的东西、布局安排、流程或步骤序列、彼此外观不同的选项、看图更易理解的结构），或对方接受提议后。",
+        "inputs": [
+          "待展示的 mockup、布局、示意图或并排设计"
+        ],
+        "outputs": [
+          "浏览器中可反应的 mockup、并排选项或可点击原型"
+        ],
+        "steps": [
+          {
+            "action": "提供可视化伴随：在首次出现上述时机时提议，绝不预先提供；提议自成一则消息、不含其他内容，如“如果我展示给你看可能更容易。要我开个带几个 mockup 的浏览器标签页吗？”。若对方拒绝，留在文字形式，除非对方主动提起否则不再提议。",
+            "when": "首次出现可视化需求时",
+            "rationale": "它是工具而非模式：接受它并不意味着每个问题都转到浏览器。",
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 296,
+                "line_end": 308
+              }
+            ]
+          },
+          {
+            "action": "逐问题判断：对方看到是否会理解得更好？mockup、布局、示意图、并排设计放进浏览器；需求、范围、权衡、概念选择留在文字；UI 话题不自动等于视觉问题。",
+            "when": "每个问题",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 310,
+                "line_end": 313
+              }
+            ]
+          },
+          {
+            "action": "若对方接受，在启动服务器前阅读本目录下的 visual-companion.md。",
+            "when": "对方接受可视化提议后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/brainstorming/SKILL.md",
+                "line_start": 315,
+                "line_end": 316
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 296,
+            "line_end": 316
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "在任何创造性工作之前必须使用本流程：创建功能、构建组件、添加功能、修改行为或规划任何新事物，软件内外皆然。",
+        "when": "任何创造性工作开始前",
+        "rationale": "构建者自以为知道对方想要什么，但这种信念通常比感觉中更单薄。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 6,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "text": "开始实现前必须按顺序完成：① 用单独一条消息摆出做法并让对方选择；② 写设计文档（短或完整）；③ 取得对方对该文档的批准；④ 调用 superpowers:writing-plans。若写第一条消息时没有未决点且只有一种合理做法，步骤 ①②③ 可在该消息内完成。",
+        "when": "实现之前",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 26,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "text": "不算“实现”的两种情形：对方明确同意的 spike；对方选择退出提问后按其要求去做。",
+        "when": "判断门禁是否适用时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 38,
+            "line_end": 40
+          }
+        ]
+      },
+      {
+        "text": "不要询问项目或其上下文已回答的内容，也不要重开对方已经决定的事。",
+        "when": "已有项目或对方已提供上下文时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 48,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "text": "只在答案会改变构建内容、且请求与项目都未回答时提问；一次问一个；流程性步骤（写文档、文件位置、进一步查看、如何展示）始终由自己决定并执行后告知。",
+        "when": "整个对话过程",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 101,
+            "line_end": 106
+          }
+        ]
+      },
+      {
+        "text": "使用平实语言，略高于对方水平，匹配其词汇，不用流程术语；无需向对方引用本 Skill。",
+        "when": "与人类伙伴交流时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 106,
+            "line_end": 108
+          }
+        ]
+      },
+      {
+        "text": "清楚简洁，先说要紧的，避免术语；汇报发现时给出最重要的几条，其余提供备选。",
+        "when": "汇报发现时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 110,
+            "line_end": 112
+          }
+        ]
+      },
+      {
+        "text": "在知道对方为什么想要之前，只用开放式、不带示例答案的问题；知道之后，对有可命名选项的决定，具体勾画每个选项及其权衡和你的选择。对方说“随便猜”或“你觉得呢”时，给出具体提议。",
+        "when": "对话中",
+        "rationale": "对方自己的话承载着你的选项无法承载的意图。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 114,
+            "line_end": 119
+          }
+        ]
+      },
+      {
+        "text": "你做出的选择在设计文档中记为你的决定，绝不写成对方已同意的事。",
+        "when": "记录设计时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 127,
+            "line_end": 129
+          }
+        ]
+      },
+      {
+        "text": "Ground to cover 是讨论领域而非脚本，绝不把这些条目逐条念成问题。",
+        "when": "组织对话问题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 131,
+            "line_end": 132
+          }
+        ]
+      },
+      {
+        "text": "只有对方说过的内容算作对方的观点；你补充的内容作为提议提出并附上理由。",
+        "when": "回放与写文档时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 198,
+            "line_end": 199
+          }
+        ]
+      },
+      {
+        "text": "摆出做法时须先淘汰弱方案（违背对方动机的、现有工作排除的），剩余两三个具体到可想象并说明权衡，推荐其一并说明理由，再问对方选择。",
+        "when": "需求已理解、写文档之前",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 156,
+            "line_end": 167
+          }
+        ]
+      },
+      {
+        "text": "可视化伴随只在首次出现合适时机提供，且提议必须自成一则消息；对方拒绝后留在文字，除非其主动提起否则不再提。",
+        "when": "使用可视化伴随时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 302,
+            "line_end": 308
+          }
+        ]
+      },
+      {
+        "text": "不要把 UI 话题自动当成视觉问题：需求、范围、权衡和概念选择留在文字中。",
+        "when": "决定某问题是否送浏览器时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 310,
+            "line_end": 313
+          }
+        ]
+      },
+      {
+        "text": "小改动的短设计文档直接交给人类伙伴，不做 builder check；完整设计（项目）才需 builder check。",
+        "when": "按规模写文档时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 241,
+            "line_end": 243
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 250,
+            "line_end": 250
+          }
+        ]
+      },
+      {
+        "text": "人类伙伴对存放位置的偏好覆盖默认路径（docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md）与自选位置。",
+        "when": "确定设计文档位置时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 245,
+            "line_end": 248
+          }
+        ]
+      },
+      {
+        "text": "硬门禁：设计文档（小改动用短版、项目用完整版）获批前不得构建，包括写产品代码、脚手架、安装依赖、创建项目、调用实现类 Skill；阅读与探索允许。",
+        "when": "设计文档获批之前",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 269,
+            "line_end": 274
+          }
+        ]
+      },
+      {
+        "text": "保留 spike 的产物属于新请求，必须重新走设计门禁；spike 产物须始终保持“丢弃品”标记。",
+        "when": "spike 产生有用结果时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 276,
+            "line_end": 279
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 294,
+            "line_end": 294
+          }
+        ]
+      },
+      {
+        "text": "设计文档获批后，下一步只调用 superpowers:writing-plans，不调用其他 Skill。",
+        "when": "设计文档获批之后",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 281,
+            "line_end": 282
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "superpowers:writing-plans",
+        "kind": "skill",
+        "locator": "superpowers:writing-plans",
+        "usage": "设计文档获批后调用，作为进入计划的唯一后续 Skill。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 32,
+            "line_end": 32
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 281,
+            "line_end": 282
+          }
+        ]
+      },
+      {
+        "name": "builder-check-prompt.md",
+        "kind": "template",
+        "locator": "skills/brainstorming/builder-check-prompt.md",
+        "usage": "项目规模设计文档写好后，用该文件派发一个新的 subagent 做 builder check；本次未读取其内容。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 250,
+            "line_end": 252
+          }
+        ]
+      },
+      {
+        "name": "visual-companion.md",
+        "kind": "reference",
+        "locator": "skills/brainstorming/visual-companion.md",
+        "usage": "对方接受可视化伴随提议后、启动服务器前阅读；本次未读取其内容。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 315,
+            "line_end": 316
+          }
+        ]
+      },
+      {
+        "name": "可视化伴随浏览器标签页",
+        "kind": "tool",
+        "locator": null,
+        "usage": "用于展示 mockup、示意图和可点击的一次性原型，以及并排选项；是工具而非模式。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 179,
+            "line_end": 180
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 296,
+            "line_end": 300
+          }
+        ]
+      },
+      {
+        "name": "subagent 工具",
+        "kind": "tool",
+        "locator": null,
+        "usage": "用于派发新的 builder 子代理；若无此工具，则由自己以 builder 身份阅读文档。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 250,
+            "line_end": 251
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 266,
+            "line_end": 267
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "快速任务示例",
+        "text": "“把图标改成矢车菊蓝”被视为所有要紧信息都在请求中的快速清晰任务：直接做，并说明做了什么。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 22,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "topic": "首条消息示例",
+        "text": "对“给我的面包店做个网站”，示例回应是：“如果主要是给正在决定要不要来的人看，我会先放营业时间和今天柜台里有什么；接单则是另一个网站。你希望有人打开页面后做什么？”——先问最大的未定点，并说明答案会如何改变构建。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 80,
+            "line_end": 83
+          }
+        ]
+      },
+      {
+        "topic": "苏格拉底式提问示例",
+        "text": "“投票在会议前截止，而本月有两位成员加入。中途加入的人有投票权吗？”——基于已发现的事实追问可能被遗漏的后果。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 146,
+            "line_end": 147
+          }
+        ]
+      },
+      {
+        "topic": "多个独立项目",
+        "text": "若所谓一件事实为几个独立项目，应说明、约定顺序并逐个 brainstorm。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 226,
+            "line_end": 227
+          }
+        ]
+      },
+      {
+        "topic": "已有工作",
+        "text": "存在既有工作时，制作方式选择应建立在它已使用的技术之上。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 127,
+            "line_end": 128
+          }
+        ]
+      },
+      {
+        "topic": "工作量升档",
+        "text": "若任务中途变大，应停下、说明并升一档（例如从短设计升为完整设计）。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 224,
+            "line_end": 224
+          }
+        ]
+      },
+      {
+        "topic": "批准的范围",
+        "text": "对方对想法说“听起来不错”只等于批准你展示过的内容；尚未写出的设计文档不算获批。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 293,
+            "line_end": 293
+          }
+        ]
+      },
+      {
+        "topic": "无 subagent 工具时",
+        "text": "没有 subagent 工具时，自己以该构建者的身份阅读设计文档，以完成 builder check 的等效作用。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 266,
+            "line_end": 267
+          }
+        ]
+      },
+      {
+        "topic": "可视化接受后的用途",
+        "text": "接受可视化伴随后，它用于可反应的 mockup、并排选项和可点击的一次性原型；接受它并不把每个问题都转到浏览器。",
+        "evidence": [
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 179,
+            "line_end": 180
+          },
+          {
+            "path": "skills/brainstorming/SKILL.md",
+            "line_start": 298,
+            "line_end": 300
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "builder-check-prompt.md 与 visual-companion.md 仅被登记为路径和用途，本次未读取；其具体检查项、评分方式及可视化服务器的启动/使用步骤未知。"
+      },
+      {
+        "target": "/content/tasks/1/checks",
+        "reason": "not_stated",
+        "detail": "原文未规定 spike 的验收标准或如何判断 spike 已足够回答问题，只规定其不写或只写最少测试、跳过计划与评审。"
+      },
+      {
+        "target": "/content/tasks/0/steps/17",
+        "reason": "ambiguous",
+        "detail": "原文说 builder check“只产生一轮问题”，但未说明若更新后的文档仍被构建者质疑时如何处理，也未说明检查未通过（而非仅提出问题）时的处置。"
+      },
+      {
+        "target": "/content/notes",
+        "reason": "not_stated",
+        "detail": "description 声称适用于软件之外的场景（演讲、生意、装修），但正文的文档存放、构建者检查与示例主要面向软件项目；非软件场景除“选一个合理位置并说明”外未给具体差异做法。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:43:56.008587+00:00"
+  }
+}

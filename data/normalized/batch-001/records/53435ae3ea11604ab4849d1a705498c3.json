@@ -1,0 +1,370 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "32b139ed74b0165baa3d",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/to-spec/SKILL.md",
+    "git_blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+    "entry_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+  },
+  "content": {
+    "name": "to-spec",
+    "title": "把当前对话综合为 spec 并发布到 issue 跟踪器",
+    "summary": "该 skill 要求不做用户访谈，而是基于当前对话上下文与对代码库的理解，直接综合出一份 spec：先探索仓库、按项目领域词表与相关 ADR 起草测试接缝并与用户确认接缝，再按固定模板（问题陈述、解决方案、详尽用户故事、实现决策、测试决策、范围外、补充说明）撰写，最后发布到项目 issue 跟踪器并打上 `ready-for-agent` 标签。",
+    "evidence": [
+      {
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "line_start": 1,
+        "line_end": 9
+      },
+      {
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "line_start": 11,
+        "line_end": 19
+      },
+      {
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "line_start": 21,
+        "line_end": 75
+      }
+    ],
+    "tasks": [
+      {
+        "id": "synthesize-and-publish-spec",
+        "goal": "基于当前对话与代码库理解综合出 spec，并发布到项目 issue 跟踪器（附 triage 标签）。",
+        "when": "需要把当前对话中已讨论的内容固化为 spec 并发布时；此过程明确不进行用户访谈。",
+        "inputs": [
+          "当前对话上下文",
+          "对代码库的理解（必要时先探索仓库）",
+          "已提供的 issue tracker 与 triage 标签词汇",
+          "项目领域词表（domain glossary）",
+          "涉及区域的 ADR"
+        ],
+        "outputs": [
+          "按模板撰写的 spec",
+          "已发布到项目 issue 跟踪器的条目，带 `ready-for-agent` triage 标签"
+        ],
+        "steps": [
+          {
+            "action": "探索仓库以理解代码库当前状态（若此前尚未做过）；全程使用项目的领域词表，并遵守所触及区域的 ADR。",
+            "when": "尚未了解代码库当前状态时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/to-spec/SKILL.md",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "action": "勾画将要测试该功能的接缝（seams）：优先使用已有接缝而非新接缝，使用尽可能高的接缝；若确需新接缝，在能提出的最高点提出；接缝越少越好。",
+            "when": "撰写 spec 之前，确定测试切入点时",
+            "rationale": "代码库中的接缝越少越好，理想数量是一个。",
+            "evidence": [
+              {
+                "path": "skills/engineering/to-spec/SKILL.md",
+                "line_start": 15,
+                "line_end": 15
+              }
+            ]
+          },
+          {
+            "action": "与用户确认这些接缝符合其预期。",
+            "when": "接缝勾画完成后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/engineering/to-spec/SKILL.md",
+                "line_start": 17,
+                "line_end": 17
+              }
+            ]
+          },
+          {
+            "action": "按模板撰写 spec，然后发布到项目 issue 跟踪器，并应用 `ready-for-agent` triage 标签。",
+            "when": "接缝已确认后",
+            "rationale": "无需进行额外的 triage。",
+            "evidence": [
+              {
+                "path": "skills/engineering/to-spec/SKILL.md",
+                "line_start": 19,
+                "line_end": 19
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "与用户确认所勾画的测试接缝符合其预期。",
+            "evidence": [
+              {
+                "path": "skills/engineering/to-spec/SKILL.md",
+                "line_start": 17,
+                "line_end": 17
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 7,
+            "line_end": 19
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "不要访谈用户，只综合已经知道的内容。",
+        "when": "整个 spec 生成过程",
+        "rationale": "该 skill 的定位是把已发生的对话转为 spec，而非重新采集需求。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 3,
+            "line_end": 7
+          }
+        ]
+      },
+      {
+        "text": "项目 issue tracker 与 triage 标签词汇应当已被提供；若未提供，告知用户运行 `/setup-matt-pocock-skills`。",
+        "when": "开始处理该 skill 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "text": "spec 中始终使用项目的领域词表，并遵守所触及区域的 ADR。",
+        "when": "探索仓库与撰写 spec 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "text": "测试接缝应优先复用已有接缝、采用尽可能高的接缝；需要新接缝时在能提出的最高点提出；接缝数量越少越好。",
+        "when": "决定测试切入点时",
+        "rationale": "全库接缝越少越好，理想数量是一个。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 15,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "text": "发布 spec 时应用 `ready-for-agent` triage 标签，无需额外 triage。",
+        "when": "发布到 issue 跟踪器时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          }
+        ]
+      },
+      {
+        "text": "用户故事应为一份很长的编号列表，每条格式为 `As an <actor>, I want a <feature>, so that <benefit>`，且应极其详尽、覆盖该功能的所有方面。",
+        "when": "撰写 spec 的 User Stories 章节时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 33,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "text": "Implementation Decisions 中不要包含具体文件路径或代码片段。",
+        "when": "撰写 spec 的实现决策章节时",
+        "rationale": "它们可能很快就会过时。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 55,
+            "line_end": 55
+          }
+        ]
+      },
+      {
+        "text": "例外：若原型产出的片段比散文更精确地编码了某个决策（状态机、reducer、schema、类型形状），可将其内联在相关决策处，并简要注明来自原型；只保留决策密集部分，不是可运行的 demo。",
+        "when": "存在此类原型片段时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 57,
+            "line_end": 57
+          }
+        ]
+      },
+      {
+        "text": "Testing Decisions 需包含：何为好测试的描述（只测外部行为，不测实现细节）、哪些模块会被测试、测试的既有先例（即代码库中类似类型的测试）。",
+        "when": "撰写 spec 的测试决策章节时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 61,
+            "line_end": 65
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "spec 模板",
+        "kind": "template",
+        "locator": "skills/engineering/to-spec/SKILL.md",
+        "usage": "定义 spec 的固定章节结构：Problem Statement、Solution、User Stories、Implementation Decisions、Testing Decisions、Out of Scope、Further Notes。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 21,
+            "line_end": 75
+          }
+        ]
+      },
+      {
+        "name": "项目 issue 跟踪器",
+        "kind": "tool",
+        "locator": null,
+        "usage": "spec 撰写完成后发布到此处，并附加 triage 标签；来源未说明具体是哪种跟踪器。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          },
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          }
+        ]
+      },
+      {
+        "name": "/setup-matt-pocock-skills",
+        "kind": "skill",
+        "locator": "/setup-matt-pocock-skills",
+        "usage": "当 issue tracker 与 triage 标签词汇未被提供时，让用户运行该命令。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "name": "项目领域词表（domain glossary）",
+        "kind": "reference",
+        "locator": null,
+        "usage": "spec 全篇统一使用的术语来源。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "name": "ADR",
+        "kind": "reference",
+        "locator": null,
+        "usage": "所触及区域的架构决策记录，撰写 spec 时须遵守。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "调用方式",
+        "text": "frontmatter 中 `disable-model-invocation: true`，即不通过模型自动调用该 skill。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 4,
+            "line_end": 4
+          }
+        ]
+      },
+      {
+        "topic": "用户故事示例",
+        "text": "示例：`As a mobile bank customer, I want to see balance on my accounts, so that I can make better informed decisions about my spending`。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 37,
+            "line_end": 39
+          }
+        ]
+      },
+      {
+        "topic": "实现决策可涵盖的内容",
+        "text": "可包括将构建/修改的模块、这些模块将被修改的接口、来自开发者的技术澄清、架构决策、schema 变更、API 契约、具体交互。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 45,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "topic": "问题与解决方案的视角",
+        "text": "Problem Statement 与 Solution 都要求从用户视角描述。",
+        "evidence": [
+          {
+            "path": "skills/engineering/to-spec/SKILL.md",
+            "line_start": 23,
+            "line_end": 29
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/inputs",
+        "reason": "not_stated",
+        "detail": "来源只说 issue tracker 与 triage 标签词汇“应当已被提供”，未说明具体是哪种跟踪器、通过什么接口发布，也未给出标签词表的完整范围（仅明确需用 `ready-for-agent`）。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:53:13.670025+00:00"
+  }
+}

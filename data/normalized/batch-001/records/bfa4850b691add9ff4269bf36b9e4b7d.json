@@ -1,0 +1,610 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "237b32583f4ed1a40f85",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/systematic-debugging/SKILL.md",
+    "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+    "entry_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+  },
+  "content": {
+    "name": "systematic-debugging",
+    "title": "系统化调试：未查清根因前不得修复",
+    "summary": "面向任何技术问题（测试失败、生产缺陷、异常行为、性能、构建、集成问题）的一套强制流程：先完成根因调查，再做模式分析、单一假设验证，最后以失败测试驱动单一修复；若连续 3 次以上修复失败，应停止修症状并质疑架构。核心原则是“症状修复即失败”。",
+    "evidence": [
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "section": "Overview / The Iron Law",
+        "line_start": 8,
+        "line_end": 20
+      },
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "section": "When to Use",
+        "line_start": 22,
+        "line_end": 42
+      },
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "section": "The Four Phases",
+        "line_start": 44,
+        "line_end": 46
+      }
+    ],
+    "tasks": [
+      {
+        "id": "four-phase-root-cause-debugging",
+        "goal": "在提出并实施修复之前定位根因，按四个阶段完成调查、模式分析、假设验证与实现，最终消除问题而非压制症状。",
+        "when": "适用于任何技术问题：测试失败、生产环境缺陷、异常行为、性能问题、构建失败、集成问题；在时间压力下、看似存在“一次快速修复”、已尝试多次修复、上次修复无效或尚未完全理解问题时尤其适用。问题看似简单、时间紧迫或管理者要求立即修复时也不得跳过。",
+        "inputs": [
+          "完整错误信息、警告、堆栈跟踪（含行号、文件路径、错误码）",
+          "可复现的触发步骤",
+          "近期变更信息（git diff、提交、新依赖、配置、环境差异）",
+          "多组件系统中各组件边界的输入/输出与状态证据",
+          "同一代码库中相似的可用实现或参考实现",
+          "对相关依赖、配置、环境与假设的了解"
+        ],
+        "outputs": [
+          "对“是什么、为什么”的根因理解",
+          "工作实现与损坏实现之间的差异清单",
+          "被验证或推翻的单一假设",
+          "修复前即存在的最简失败测试用例",
+          "针对根因的单一修复及其验证结果"
+        ],
+        "steps": [
+          {
+            "action": "仔细阅读错误信息与警告，完整阅读堆栈跟踪，记录行号、文件路径与错误码。",
+            "when": "在尝试任何修复之前（阶段 1 起点）",
+            "rationale": "错误与警告常包含确切解法，跳过会丢失关键线索。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 48,
+                "line_end": 56
+              }
+            ]
+          },
+          {
+            "action": "一致地复现问题：确认能否可靠触发、确切步骤是什么、是否每次都发生；若不能复现，则收集更多数据而不是猜测。",
+            "when": "阶段 1",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 58,
+                "line_end": 62
+              }
+            ]
+          },
+          {
+            "action": "检查近期变更：哪些改动可能造成该问题，查看 git diff 与近期提交，检查新依赖、配置变更与环境差异。",
+            "when": "阶段 1",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 64,
+                "line_end": 68
+              }
+            ]
+          },
+          {
+            "action": "在多组件系统中，先增加诊断插桩：对每个组件边界记录进入与离开的数据、验证环境/配置的传递、检查各层状态；运行一次以取得“在哪一层断裂”的证据，再分析失败组件并针对该组件调查。",
+            "when": "系统包含多个组件，例如 CI → 构建 → 签名，或 API → 服务 → 数据库，且准备提出修复之前",
+            "rationale": "先取得证据可定位实际失败的层，避免在错误组件上猜测。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 70,
+                "line_end": 106
+              }
+            ]
+          },
+          {
+            "action": "追溯数据流：查明坏值从何处产生、是谁以坏值调用了此处，持续向上追溯直到找到源头，并在源头而非症状处修复；错误位于深层调用栈时，参见同目录 root-cause-tracing.md 的完整反向追溯技术（此处仅给出快速版本）。",
+            "when": "错误位于深层调用栈，或需要定位坏值来源时",
+            "rationale": "在源头修复才能消除症状的成因。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 108,
+                "line_end": 118
+              }
+            ]
+          },
+          {
+            "action": "做模式分析：在同一代码库中找到相似的可用代码；若在实现某个模式，则完整阅读参考实现（读每一行，不略读）；列出可用实现与损坏实现之间的每一处差异，不论多小；并弄清所需的其他组件、设置、配置、环境与所做假设。",
+            "when": "阶段 2，修复之前",
+            "rationale": "完整理解模式才能正确应用，部分理解会带来缺陷。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 120,
+                "line_end": 141
+              }
+            ]
+          },
+          {
+            "action": "形成单一假设并明确写出“我认为 X 是根因，因为 Y”，要具体而非含糊。",
+            "when": "阶段 3",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 143,
+                "line_end": 150
+              }
+            ]
+          },
+          {
+            "action": "做最小测试：以尽可能小的改动验证假设，一次只动一个变量，不同时修复多个问题。",
+            "when": "阶段 3",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 152,
+                "line_end": 155
+              }
+            ]
+          },
+          {
+            "action": "验证假设：成功则进入阶段 4；失败则形成新的假设，不在失败修复之上继续叠加修复；若确实不理解某处，就明说“我不理解 X”，不假装知道，寻求帮助或继续研究。",
+            "when": "阶段 3 结束时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 157,
+                "line_end": 166
+              }
+            ]
+          },
+          {
+            "action": "先创建失败测试用例：使用最简单的复现方式，尽量做成自动化测试，没有测试框架时可用一次性测试脚本；该用例必须在修复之前存在；编写规范的失败测试可借助 superpowers:test-driven-development skill。",
+            "when": "阶段 4，实施修复之前",
+            "rationale": "先有失败测试才能证明修复有效。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 168,
+                "line_end": 177
+              }
+            ]
+          },
+          {
+            "action": "实施单一修复：只针对已识别的根因，一次一个改动，不做“既然在这里就顺手改”的改进，不捆绑重构。",
+            "when": "阶段 4",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 179,
+                "line_end": 183
+              }
+            ]
+          },
+          {
+            "action": "验证修复：确认测试现在通过、没有破坏其他测试、问题确实已解决；在声称成功之前使用 superpowers:verification-before-completion skill。",
+            "when": "阶段 4",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 185,
+                "line_end": 189
+              }
+            ]
+          },
+          {
+            "action": "若修复无效则停止并计数已尝试的修复次数；少于 3 次时回到阶段 1，用新信息重新分析；达到 3 次及以上时停止，转入质疑架构，未经架构讨论不得尝试第 4 次修复。",
+            "when": "修复未生效时",
+            "rationale": "反复修补同一症状通常意味着假设或架构有误。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 191,
+                "line_end": 196
+              }
+            ]
+          },
+          {
+            "action": "出现“每次修复都在别处暴露新的共享状态/耦合/问题”“实施修复需要大规模重构”“每次修复都在其他地方产生新症状”等模式时，停止修补并质疑根本设计（该模式是否根本合理、是否只是惯性坚持、应重构架构还是继续修症状），并在尝试更多修复前与人类伙伴讨论。",
+            "when": "已尝试 3 次及以上修复仍失败时",
+            "rationale": "这并非失败的假设，而是错误的架构。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 198,
+                "line_end": 212
+              }
+            ]
+          },
+          {
+            "action": "若系统化调查确认问题确属环境、时序相关或外部因素：视流程已完成，记录调查过的内容，实施适当处理（重试、超时、错误信息），并为后续调查增加监控/日志。",
+            "when": "流程得出“无根因”结论时",
+            "rationale": "调查完备后的正确收尾是记录并采取针对性处理，而不是无限追溯。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 266,
+                "line_end": 275
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "阶段 1 未完成时，不得提出任何修复。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 20,
+                "line_end": 20
+              }
+            ]
+          },
+          {
+            "text": "每个阶段都必须完成后才能进入下一阶段。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 46,
+                "line_end": 46
+              }
+            ]
+          },
+          {
+            "text": "修复后检查：测试现在通过？没有破坏其他测试？问题确实解决？",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 185,
+                "line_end": 189
+              }
+            ]
+          },
+          {
+            "text": "在声称成功之前使用 superpowers:verification-before-completion skill 验证。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 189,
+                "line_end": 189
+              }
+            ]
+          },
+          {
+            "text": "出现红标想法时一律停止并回到阶段 1；若已有 3 次以上修复失败，则质疑架构。",
+            "evidence": [
+              {
+                "path": "skills/systematic-debugging/SKILL.md",
+                "line_start": 214,
+                "line_end": 231
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "section": "The Four Phases",
+            "line_start": 44,
+            "line_end": 212
+          },
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "section": "Quick Reference",
+            "line_start": 257,
+            "line_end": 264
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "没有先做根因调查就不得修复（铁律）；违反流程的字面即违反调试的精神。",
+        "when": "任何缺陷、测试失败或异常行为，包括看似简单的问题",
+        "rationale": "症状修复即失败；简单问题同样有根因。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 10,
+            "line_end": 20
+          }
+        ]
+      },
+      {
+        "text": "必须按四个阶段顺序推进，未完成当前阶段不得进入下一阶段。",
+        "when": "使用本流程时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 44,
+            "line_end": 46
+          }
+        ]
+      },
+      {
+        "text": "不得以问题简单、时间紧迫或管理者要求立即修复为由跳过流程；系统化调试比反复猜测尝试更快。",
+        "when": "想跳过流程的任何时候",
+        "rationale": "匆忙必然导致返工。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 39,
+            "line_end": 42
+          }
+        ]
+      },
+      {
+        "text": "一次只做一个改动、一次只验证一个变量，不把多个修复捆绑在一起。",
+        "when": "测试假设或实施修复时",
+        "rationale": "同时多个改动无法隔离哪个生效，并会引入新缺陷。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 152,
+            "line_end": 155
+          }
+        ]
+      },
+      {
+        "text": "不得在未追踪数据流前提出解决方案；看到症状不等于理解根因。",
+        "when": "准备提出修复时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 222,
+            "line_end": 225
+          }
+        ]
+      },
+      {
+        "text": "若不实现模式则不要自行改编：参考实现必须完整阅读，不得因“太长”而只做局部理解后套用。",
+        "when": "参照既有实现或模式时",
+        "rationale": "部分理解必然带来缺陷。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 128,
+            "line_end": 131
+          }
+        ]
+      },
+      {
+        "text": "不得假设某处差异“不可能有影响”，应列出每一处差异，无论多小。",
+        "when": "比较可用实现与损坏实现时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 133,
+            "line_end": 136
+          }
+        ]
+      },
+      {
+        "text": "修复失败时不得在其上继续叠加修复；必须形成新假设或回到阶段 1。",
+        "when": "假设验证未通过时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 157,
+            "line_end": 160
+          }
+        ]
+      },
+      {
+        "text": "已尝试 2 次以上修复后，不得再提“再来一次修复尝试”；3 次及以上失败应视为架构问题。",
+        "when": "修复已多次失败时",
+        "rationale": "3+ 次失败意味着模式有误，继续修只会扩散问题。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 193,
+            "line_end": 196
+          }
+        ]
+      },
+      {
+        "text": "不得在未先写出失败测试的情况下实施修复，也不得“先确认修复有效再补测试”。",
+        "when": "进入实现阶段时",
+        "rationale": "未经过测试的修复无法保持，测试先行才能证明问题存在与解决。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 172,
+            "line_end": 177
+          }
+        ]
+      },
+      {
+        "text": "修复不得夹带“顺手”改进或捆绑重构，只解决已识别的根因。",
+        "when": "实施修复时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 179,
+            "line_end": 183
+          }
+        ]
+      },
+      {
+        "text": "未与人类伙伴讨论前，不得在 3 次以上失败后继续尝试新的修复。",
+        "when": "架构层面的问题暴露时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 210,
+            "line_end": 210
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "root-cause-tracing.md",
+        "kind": "reference",
+        "locator": "skills/systematic-debugging/root-cause-tracing.md",
+        "usage": "文档所述：沿调用栈向后追溯缺陷以找到原始触发点的完整技术；SKILL.md 只给出快速版本，未展开其内容。本次未读取该文件。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 112,
+            "line_end": 112
+          },
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 281,
+            "line_end": 281
+          }
+        ]
+      },
+      {
+        "name": "defense-in-depth.md",
+        "kind": "reference",
+        "locator": "skills/systematic-debugging/defense-in-depth.md",
+        "usage": "文档所述：在找到根因之后，于多个层增加校验。本次未读取该文件，具体层级做法未知。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 282,
+            "line_end": 282
+          }
+        ]
+      },
+      {
+        "name": "condition-based-waiting.md",
+        "kind": "reference",
+        "locator": "skills/systematic-debugging/condition-based-waiting.md",
+        "usage": "文档所述：用条件轮询替代任意超时。本次未读取该文件，具体实现未知。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 283,
+            "line_end": 283
+          }
+        ]
+      },
+      {
+        "name": "superpowers:test-driven-development",
+        "kind": "skill",
+        "locator": null,
+        "usage": "用于编写规范的失败测试用例（阶段 4 第 1 步引用）。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 177,
+            "line_end": 177
+          }
+        ]
+      },
+      {
+        "name": "superpowers:verification-before-completion",
+        "kind": "skill",
+        "locator": null,
+        "usage": "在声称修复成功之前用于验证完成情况。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 189,
+            "line_end": 189
+          }
+        ]
+      },
+      {
+        "name": "git diff 与提交历史",
+        "kind": "tool",
+        "locator": "git diff",
+        "usage": "用于检查近期变更以寻找可能成因（阶段 1 第 3 步）。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 64,
+            "line_end": 68
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "红标信号",
+        "text": "一旦出现下列想法即表示应停止并回到阶段 1：“先快速修一下，之后再查”“先改 X 试试能不能好”“一次加多个改动再跑测试”“跳过测试，我手动验证”“大概是 X，我改掉它”“我不太懂但这样也许行”“模式说是 X，但我按自己的方式改编”“这些是主要问题（未调查就罗列修复）”、未追踪数据流即提出方案、已试 2+ 次仍想“再来一次修复”、每次修复都在不同地方引出新问题。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 214,
+            "line_end": 231
+          }
+        ]
+      },
+      {
+        "topic": "人类伙伴的纠偏信号",
+        "text": "“Is that not happening?”（未验证就假设）、“Will it show us…?”（本应增加证据收集）、“Stop guessing”（未理解就提修复）、“Ultra-think this”（应质疑根本而非仅症状）、“We're stuck?”（方式不奏效）；看到这些应停止并回到阶段 1。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 233,
+            "line_end": 242
+          }
+        ]
+      },
+      {
+        "topic": "常见辩解与反驳",
+        "text": "原文列出并反驳若干借口：问题简单不必走流程（简单问题也有根因，流程对简单缺陷很快）；紧急没时间（系统化调试比猜测-验证的反复折腾更快）；先试这个再调查（第一次修复会定下模式）；确认有效后再写测试（未经测试的修复不牢靠）；一次多个修复省时间（无法隔离哪个生效，且引入新缺陷）；参考太长只做改编（部分理解必然出错）；看到问题就修（看到症状≠理解根因）；再来一次修复（3+ 次失败即架构问题）。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 244,
+            "line_end": 255
+          }
+        ]
+      },
+      {
+        "topic": "四阶段速查",
+        "text": "阶段 1 根因：阅读错误、复现、检查变更、收集证据，成功标准是理解 WHAT 与 WHY；阶段 2 模式：找可用示例并比较，成功标准是识别差异；阶段 3 假设：形成理论并最小化测试，成功标准是确认或得到新假设；阶段 4 实现：创建测试、修复、验证，成功标准是缺陷解决且测试通过。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 257,
+            "line_end": 264
+          }
+        ]
+      },
+      {
+        "topic": "“无根因”结论的可信度",
+        "text": "原文声明 95% 的“无根因”案例属于调查不完整；只有系统化调查后才能把问题归为环境、时序或外部因素。该比例是作者论述，未提供测算依据。",
+        "evidence": [
+          {
+            "path": "skills/systematic-debugging/SKILL.md",
+            "line_start": 275,
+            "line_end": 275
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:49:24.176540+00:00"
+  }
+}

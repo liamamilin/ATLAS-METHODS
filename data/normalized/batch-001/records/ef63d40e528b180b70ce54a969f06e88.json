@@ -1,0 +1,742 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "519f3648e61fbdf38442",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/copywriting/SKILL.md",
+    "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+    "entry_sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee"
+  },
+  "content": {
+    "name": "copywriting",
+    "title": "营销文案写作与改写",
+    "summary": "面向首页、落地页、定价页、功能页、关于页等页面的营销文案撰写与改写方法：先判断输入属于空白或无观点、已有真实声音、还是定点修改，再按需补齐页面目的、受众、产品与流量背景；把页面拆成命名单元逐个起草候选并锁定，用三问门槛筛行，遵守无 AI 腔调、可支撑声明与 CTA 写作规则，最后交付分版块文案、选择说明、头条/CTA 备选与元内容。",
+    "evidence": [
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "section": "frontmatter",
+        "line_start": 1,
+        "line_end": 6
+      },
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "section": "Before Writing",
+        "line_start": 12,
+        "line_end": 38
+      },
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "section": "Diagnose the Situation First",
+        "line_start": 42,
+        "line_end": 60
+      },
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "section": "Output Format",
+        "line_start": 305,
+        "line_end": 329
+      }
+    ],
+    "tasks": [
+      {
+        "id": "draft-page-copy",
+        "goal": "为指定页面撰写或改写营销文案，使主张清晰、可证且能推动行动。",
+        "when": "用户要求为首页、落地页、定价页、功能页、关于页或产品页写文案、改写页面、改头条、写 CTA、写价值主张或标语，或说现有文案很弱、像 AI 写的。",
+        "inputs": [
+          "可选的产品营销上下文文件（.agents/product-marketing.md、.claude/product-marketing.md 或旧名 product-marketing-context.md），含 Learnings 章节",
+          "页面类型与唯一的首要行动",
+          "理想客户、其问题、异议与自述用语",
+          "产品/报价、差异化、关键转变或结果、证明点（数字、证言、案例）",
+          "流量来源与访客到达前的已知信息",
+          "用户提供的草稿或写作样本（若有）"
+        ],
+        "outputs": [
+          "一句话情境诊断及依据",
+          "按版块组织的页面文案：头条、副标题、CTA、各节标题与正文、次级 CTA",
+          "关键元素的选择说明与所应用原则",
+          "头条与 CTA 的 2-3 个备选及理由",
+          "相关时的页面标题与 meta description"
+        ],
+        "steps": [
+          {
+            "action": "先检查是否存在产品营销上下文文件并读取，然后只询问尚未覆盖或本任务特有的信息；起草前查看其 Learnings 章节，已测试过的角度与声明不再当作新想法提出，除非用户另有说明。",
+            "when": "开始撰写之前",
+            "rationale": "利用已有上下文，避免重复提出已被测试过的角度。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Before Writing",
+                "line_start": 14,
+                "line_end": 16
+              }
+            ]
+          },
+          {
+            "action": "收集四类背景：页面类型与唯一首要行动；受众（理想客户、待解决问题、异议、自述语言）；产品/报价（卖什么、与替代方案的差异、关键转变、证明点）；上下文（流量来源、访客已知信息）。",
+            "when": "信息未提供时询问补齐",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Before Writing",
+                "line_start": 18,
+                "line_end": 38
+              }
+            ]
+          },
+          {
+            "action": "判定所处情境并用一行话写出诊断与证据：A 空白或泛泛内容（一线式请求或无观点的公司套话，可自定角度但不得编造数据、客户或结果）；B 存在真实声音（草稿已含角度、观点或可辨识语气，即使执行粗糙，应恢复而非替换）；C 定点修改（只改被要求之处及使其成立所需的最小周边改动）。",
+            "when": "起草之前",
+            "rationale": "多数糟糕的 AI 文案源于把模型口味强加给已做出良好选择的市场人员，因此诊断决定允许改动的幅度。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Diagnose the Situation First",
+                "line_start": 42,
+                "line_end": 52
+              }
+            ]
+          },
+          {
+            "action": "在 B、C 情境中从输入读取品味：词汇是声音选择，用词不升级；着墨多寡是优先级选择，保留强调；省略的内容是范围选择，不加未要求的章节；角度即定位，只能深化不能替换。若给了写作样本，匹配其平均句长、标点习惯、段落开头和几个用户不会用的词；样本与默认声音冲突时以样本为准。",
+            "when": "情境为 B 或 C，或用户提供写作样本",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Read taste out of the input",
+                "line_start": 54,
+                "line_end": 60
+              }
+            ]
+          },
+          {
+            "action": "分解并锁定：不一次成稿，把页面拆为命名单元（头条、副标题、CTA、各节标题与正文、证明行）；每个单元写 2-3 个候选，保留最好的，修掉其最差缺陷后锁定；再组装并通读全页检查流畅度。B 情境中已经成立的行从一开始就锁定。",
+            "when": "正式起草阶段",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Drafting Protocol",
+                "line_start": 62,
+                "line_end": 64
+              }
+            ]
+          },
+          {
+            "action": "对每一行写或保留的文案过三问门槛：读者能否在脑中看见具体画面/场景/物件；声明能否被证真或证伪（不可证伪的最高级说法只是装饰）；竞争对手能否原句照搬（替换测试）。三问都过则保留；过两问则强化薄弱项；只过一问或全不过则依据事实重写，或用 [NEED: ...] 标出缺失信息。",
+            "when": "每写完或保留一行时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "The three-question gate",
+                "line_start": 66,
+                "line_end": 71
+              }
+            ]
+          },
+          {
+            "action": "节制力度：大多数行保持平实、具体、陈述式；整页只保留一到两个有力时刻，通常是头条和一个版块。",
+            "when": "整页语气分配时",
+            "rationale": "当每一行都想落在点上时，没有一行能落地，堆叠的修辞会读起来像 AI。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Ration the punch",
+                "line_start": 73,
+                "line_end": 73
+              }
+            ]
+          },
+          {
+            "action": "交付前逐项检查每处改动：是否可衡量地更好，还是只是不同；给不出理由的改动回退。此检查在 B、C 情境最重要。",
+            "when": "交付前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "The leave-it-alone test",
+                "line_start": 75,
+                "line_end": 75
+              }
+            ]
+          },
+          {
+            "action": "只写来源材料支持的声明。被请求的声明缺乏支撑时：不写、也不静默删除；指出该声明、说明为何不足、给出最接近的可支撑替代，并明确写出什么证据可解锁原声明（客户评论导出、书面保障政策、认证、可引用的研究或数据集）。",
+            "when": "遇到无法支撑的声明时",
+            "rationale": "带解锁路径的被拒声明是客户可执行的行动项，没有路径则是死路。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Claims Must Be Supportable — and Declines Must Name Their Unlock",
+                "line_start": 101,
+                "line_end": 108
+              }
+            ]
+          },
+          {
+            "action": "交付前自查 AI 腔调：搜索被禁模式、通读每个超过 20 词的句子、朗读一遍；从事实层面修复（换同义词会产生新的腔调标记），缺失证明用 [NEED: ...] 标出而不是编造。",
+            "when": "交出任何草稿之前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Check before delivering",
+                "line_start": 155,
+                "line_end": 157
+              }
+            ]
+          },
+          {
+            "action": "按版块组织交付页面文案（头条、副标题、CTA；各节标题与正文；次级 CTA），为关键元素写选择说明与所用原则，为头条和 CTA 提供 2-3 个带理由的备选，相关时附页面标题与 meta description。",
+            "when": "非定点修改的交付",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Output Format",
+                "line_start": 305,
+                "line_end": 329
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "三问门槛：可画面化、可证真伪、竞品不能照搬；按通过数决定保留、强化或重写。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 66,
+                "line_end": 71
+              }
+            ]
+          },
+          {
+            "text": "快速质量检查：有无 AI 腔调；有无让外行困惑的术语；句子是否承担过多；有无被动结构；有无感叹号（应删除）；有无无实质的营销流行词。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 123,
+                "line_end": 130
+              }
+            ]
+          },
+          {
+            "text": "自查：搜索黑名单模式、读每个超过 20 词的句子、朗读；从事实修复，缺失证明标 [NEED: ...]。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 155,
+                "line_end": 157
+              }
+            ]
+          },
+          {
+            "text": "替换测试：一句话若能原样用在竞品网站上即需重写；若缺少差异化依据，标注 [NEED: differentiator]。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 153,
+                "line_end": 153
+              }
+            ]
+          },
+          {
+            "text": "声明检查：只写来源支持的声明；被拒声明须命名、说明原因、给替代与解锁证据。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 101,
+                "line_end": 108
+              }
+            ]
+          },
+          {
+            "text": "逐处改动回看：可衡量更好才保留，给不出理由就回退。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 75,
+                "line_end": 75
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "section": "Before Writing",
+            "line_start": 12,
+            "line_end": 38
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "section": "Drafting Protocol",
+            "line_start": 62,
+            "line_end": 77
+          }
+        ]
+      },
+      {
+        "id": "point-edit",
+        "goal": "只修改用户指定的文案位置，并使改动处与上下文最低限度衔接。",
+        "when": "情境 C：用户说「改这个头条」「收紧这段话」等定点请求。",
+        "inputs": [
+          "被指定的原文与修改要求",
+          "理解该处所需的最小周边上下文"
+        ],
+        "outputs": [
+          "仅改动后的行",
+          "每行一句修改理由"
+        ],
+        "steps": [
+          {
+            "action": "把请求判定为情境 C，只改被要求之处及使其成立所需的最小周边改动，其余原样返回。",
+            "when": "请求是定点修改时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Diagnose the Situation First",
+                "line_start": 50,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "输出时只给改动后的行，每行附一句理由；除被要求外跳过注释与备选方案。",
+            "when": "定点修改交付时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "section": "Output Format",
+                "line_start": 307,
+                "line_end": 307
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "即使只改一行，也对该行执行三问门槛与 AI 腔调自查。",
+            "evidence": [
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 66,
+                "line_end": 71
+              },
+              {
+                "path": "skills/copywriting/SKILL.md",
+                "line_start": 155,
+                "line_end": 157
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 50,
+            "line_end": 50
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 307,
+            "line_end": 307
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "清晰优先于机巧：必须在清晰与创意之间选择时选清晰；读者需要解码句子时就已失去他们。",
+        "when": "措辞取舍时",
+        "rationale": "来源称清晰也能转化，并引用 Founding Marketing（第 3 章）把更清晰的定位与文案关联到 +81% 转化、38% 更短销售周期、28% 更低 CAC、175% 更多推荐（来源转述，未在本材料中验证）。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 83,
+            "line_end": 86
+          }
+        ]
+      },
+      {
+        "text": "利益优先于功能：功能是它做什么，利益是对客户意味着什么。",
+        "when": "描述产品或功能时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 88,
+            "line_end": 89
+          }
+        ]
+      },
+      {
+        "text": "具体优先于含糊：如把整周报告从 4 小时缩短到 15 分钟，而非笼统的节省工作流时间。",
+        "when": "写价值主张时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 91,
+            "line_end": 93
+          }
+        ]
+      },
+      {
+        "text": "客户语言优先于公司语言：模仿评论、访谈、支持工单中的客户原话。",
+        "when": "选词时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 95,
+            "line_end": 96
+          }
+        ]
+      },
+      {
+        "text": "每节一个观点：每个版块推进一个论点，沿页面形成逻辑流。",
+        "when": "组织结构时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 98,
+            "line_end": 99
+          }
+        ]
+      },
+      {
+        "text": "六条文体规则：简单不用复杂词；具体不用 streamline/optimize/innovative；主动不用被动；自信去掉 almost/very/really；展示而非告知（描述结果而非用副词）；诚实不夸大（编造统计或证言会侵蚀信任并带来法律责任）。",
+        "when": "逐句写作与润色时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 112,
+            "line_end": 122
+          }
+        ]
+      },
+      {
+        "text": "永不写六类 AI 腔调：对比揭示（不是 X，而是 Y）；否定清单；句尾堆叠从句；自问自答与冒号揭示；套话开头（如 In today's fast-paced world、Unlock the power of）；短文案中的破折号（头条、副标题、广告、社媒帖、主题行一律不用）。",
+        "when": "任何文案",
+        "rationale": "读者一旦识别出 AI 腔调，会连带怀疑周围的声明。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 136,
+            "line_end": 148
+          }
+        ]
+      },
+      {
+        "text": "限制使用：每节最多一个人碎片句和一个三项列表；seamless、robust、powerful、unlock、streamline 等词替换为它们所代表的事实；否定式真实缺失只在 CTA 附近说一次（如 No card required），其余转写为会发生什么。",
+        "when": "版块与 CTA 写作时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 143,
+            "line_end": 153
+          }
+        ]
+      },
+      {
+        "text": "CTA 公式：[动作动词] + [得到什么] + [必要限定]；避免 Submit、Sign Up、Learn More、Click Here、Get Started，改用 Start Free Trial、Get [具体物]、See [产品] in Action、Create Your First [物]、Download the Guide 一类。",
+        "when": "写按钮与 CTA 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 234,
+            "line_end": 251
+          }
+        ]
+      },
+      {
+        "text": "首屏结构：头条传达单一最重要信息与核心价值主张，副标题扩展并增加具体性、最多 1-2 句；主 CTA 说明用户得到什么（Start Free Trial 优于 Sign Up）。",
+        "when": "组织首屏时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 191,
+            "line_end": 217
+          }
+        ]
+      },
+      {
+        "text": "核心版块角色：社会证明建立可信度；问题/痛点显示理解；解决方案/利益连接结果（3-5 个关键利益）；如何运作降低复杂度（3-4 步）；异议处理用 FAQ、对比、保障；结尾 CTA 复述价值、重复 CTA、做风险反转。",
+        "when": "搭建页面骨架时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 219,
+            "line_end": 230
+          }
+        ]
+      },
+      {
+        "text": "页面类型各自的侧重：首页服务多类受众但不泛化、以最广价值主张开篇、给不同意图清晰路径；落地页单一信息单一 CTA、头条匹配广告或流量来源、在一页内完成论证；定价页帮助选择、回应「哪个适合我」的焦虑、让推荐方案显而易见；功能页按功能→利益→结果连接并给用例与试用路径；关于页讲为何存在、把使命连到客户利益，且仍要有 CTA。",
+        "when": "面对特定页面类型时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 255,
+            "line_end": 280
+          }
+        ]
+      },
+      {
+        "text": "写作前确定正式程度（随意/专业友好/正式企业）与品牌个性（活泼或严肃、大胆或低调、技术或通俗），保持一致但调节强度：头条可更大胆，正文更清晰，CTA 面向行动。",
+        "when": "确定语气时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 284,
+            "line_end": 301
+          }
+        ]
+      },
+      {
+        "text": "问句使用界限：以读者痛点为题的问句可以开篇；以读者口吻提问再给做法可以；用问句给自己的声明贴标签（The result? 3x faster.）是 AI 腔调。",
+        "when": "使用反问句时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 174,
+            "line_end": 179
+          }
+        ]
+      },
+      {
+        "text": "不要埋葬价值：直接给要点，不用大量限定语包裹。",
+        "when": "组织句子时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 167,
+            "line_end": 172
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "references/copy-frameworks.md",
+        "kind": "reference",
+        "locator": "references/copy-frameworks.md",
+        "usage": "文档所述：用于消息—市场契合工具（Now you can 测试、Human Action Model、Perception Gap、清晰度指标）、完整头条公式、版块类型与页面模板、首屏转化结构。本材料未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 86,
+            "line_end": 86
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 204,
+            "line_end": 206
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 230,
+            "line_end": 230
+          }
+        ]
+      },
+      {
+        "name": "references/ai-tells.md",
+        "kind": "reference",
+        "locator": "references/ai-tells.md",
+        "usage": "文档所述：完整黑名单与改写示例、the self-check 自查清单；完整重写时用于「build a writer」及识别第二代腔调（智慧句式、整齐收尾）。本材料未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 157,
+            "line_end": 161
+          }
+        ]
+      },
+      {
+        "name": "references/natural-transitions.md",
+        "kind": "reference",
+        "locator": "references/natural-transitions.md",
+        "usage": "文档所述：自然过渡短语，用于首屏与版块衔接。本材料未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 208,
+            "line_end": 208
+          }
+        ]
+      },
+      {
+        "name": "产品营销上下文文件",
+        "kind": "asset",
+        "locator": ".agents/product-marketing.md（或 .claude/product-marketing.md；旧版 product-marketing-context.md）",
+        "usage": "存在时先读取，用于页面与品牌背景；其 Learnings 章节记录已测试角度、声明与仍然生效的经验。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 14,
+            "line_end": 16
+          }
+        ]
+      },
+      {
+        "name": "copy-editing skill",
+        "kind": "skill",
+        "locator": null,
+        "usage": "草稿完成后的逐行审校；定点润色既有文案时使用。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 132,
+            "line_end": 132
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 335,
+            "line_end": 335
+          }
+        ]
+      },
+      {
+        "name": "cro skill",
+        "kind": "skill",
+        "locator": null,
+        "usage": "当问题在页面结构或策略而非文案本身时转用。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 336,
+            "line_end": 336
+          }
+        ]
+      },
+      {
+        "name": "emails / popups skills",
+        "kind": "skill",
+        "locator": null,
+        "usage": "分别处理邮件文案与弹窗/模态框文案，本 skill 不覆盖。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 3,
+            "line_end": 3
+          },
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 337,
+            "line_end": 338
+          }
+        ]
+      },
+      {
+        "name": "ab-testing skill",
+        "kind": "skill",
+        "locator": null,
+        "usage": "用于测试文案变体。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 339,
+            "line_end": 339
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "方法来源与改编",
+        "text": "情境诊断、三问门槛与「分解并锁定」改编自 Profound 的 improved-copywriting skill（skills-marketing-library，MIT），并按本 skill 重新表述。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 77,
+            "line_end": 77
+          }
+        ]
+      },
+      {
+        "topic": "头条示例公式",
+        "text": "示例公式包括：达成结果且无某痛点；面向某受众的某品类；再也不用经历某不快；以主要痛点提问。属于示例，不是穷尽规则，完整公式见 copy-frameworks.md。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 198,
+            "line_end": 204
+          }
+        ]
+      },
+      {
+        "topic": "首屏转化叙事",
+        "text": "首屏可按「当前不适→更好愿景→行动路径」组织，并对每条头条跑 Now you can 测试；具体工具说明在参考文件中。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 206,
+            "line_end": 206
+          }
+        ]
+      },
+      {
+        "topic": "改写深度",
+        "text": "去除腔调后文案可能干净但平淡；完整重写需先建立写作者（谁在写、熟记什么、会删什么、相信什么），并检查智慧句式、整齐收尾等第二代腔调。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 161,
+            "line_end": 161
+          }
+        ]
+      },
+      {
+        "topic": "其他允许与禁止的细节",
+        "text": "FAQ 问题与读者自己的问题（如 Need to share a screenshot?）不算自问自答；CTA 微文案与真实的三功能列表不受「每节一个碎片句/一个三项列表」限制。",
+        "evidence": [
+          {
+            "path": "skills/copywriting/SKILL.md",
+            "line_start": 145,
+            "line_end": 151
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "copy-frameworks.md、ai-tells.md、natural-transitions.md 未提供，故消息—市场契合工具、完整头条公式、版块模板与完整 AI 腔调黑名单只能按本文引用处概括，无法核对其具体判据。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:51:03.709149+00:00"
+  }
+}

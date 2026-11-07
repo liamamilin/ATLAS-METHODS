@@ -1,0 +1,791 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "d9d222a50a3c94b5411c",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/api-and-interface-design/SKILL.md",
+    "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+    "entry_sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
+  },
+  "content": {
+    "name": "api-and-interface-design",
+    "title": "API 与接口设计：契约优先、边界校验与幂等兑现",
+    "summary": "该 Skill 给出设计与演进公共接口的具体做法：先写契约再实现，用类型/接口声明每个操作的输入输出；统一错误语义（REST 用状态码加结构化错误体，500 不暴露内部细节）；只在系统边界校验并把第三方响应当作不可信数据；演进时只做加法、不破坏已有字段；用统一命名与 REST 资源化路由，列表端点必须分页，更新用 PATCH。文档用较大篇幅讲幂等键的兑现：key 从意图而非尝试派生，用唯一约束原子占用（避免先查后写的竞态），同一 key 配不同 body 要报错，进行中的重复请求要有意选择 409/等待/202，先记录意图以应对“未知”结果，保留期按最长重试链而非磁盘成本设定。适用于 REST API、模块边界、组件 props 等任何代码间的接口面；GraphQL 与版本化机制只有原则、没有展开。",
+    "evidence": [
+      {
+        "path": "skills/api-and-interface-design/SKILL.md",
+        "section": "Overview / When to Use",
+        "line_start": 8,
+        "line_end": 19
+      },
+      {
+        "path": "skills/api-and-interface-design/SKILL.md",
+        "section": "Core Principles",
+        "line_start": 20,
+        "line_end": 217
+      }
+    ],
+    "tasks": [
+      {
+        "id": "define-interface-contract",
+        "goal": "在实现之前定义稳定的接口契约：类型化的输入输出、单一错误语义、统一命名与边界校验，使接口难以被误用。",
+        "when": "设计新 API 端点、定义模块边界或跨团队契约、创建组件 props 接口、由数据库 schema 决定 API 形状，或修改现有公共接口时。",
+        "inputs": [
+          "调用方需求与使用场景",
+          "数据模型或数据库 schema",
+          "现有公共接口及其调用方"
+        ],
+        "outputs": [
+          "实现前写好的契约：接口/类型声明、错误响应结构、命名约定",
+          "与实现一同提交的 API 文档或类型"
+        ],
+        "steps": [
+          {
+            "action": "先写契约再写实现：声明每个操作的输入、输出与语义——创建返回含服务端生成字段的对象；列表返回分页结果；单个获取失败抛 NotFoundError；更新为部分更新；删除幂等，重复删除也成功。",
+            "when": "开始实现之前",
+            "rationale": "契约即规范，实现跟随契约；类型本身就是文档。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 37,
+                "line_end": 59
+              }
+            ]
+          },
+          {
+            "action": "选定一种错误策略并全局套用：REST 用 HTTP 状态码加统一错误体 { error: { code, message, details? } }，code 机器可读（如 VALIDATION_ERROR）、message 人类可读；500 不暴露内部细节。",
+            "when": "定义端点错误响应时",
+            "rationale": "若有的端点抛异常、有的返回 null、有的返回 { error }，调用方无法预测行为。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 61,
+                "line_end": 86
+              }
+            ]
+          },
+          {
+            "action": "只在系统边界校验：API 路由处理、表单提交处理、外部服务响应解析、环境变量加载；第三方响应一律视为不可信，先校验形状与内容再用于逻辑、渲染或决策。",
+            "when": "决定校验放在哪里时",
+            "rationale": "内部代码共享类型契约、可信；边界是外部输入进入处。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 88,
+                "line_end": 123
+              }
+            ]
+          },
+          {
+            "action": "演进接口时只做加法：追加可选字段，不修改已有字段类型、不删除字段。",
+            "when": "要给已有接口增加能力时",
+            "rationale": "改类型或删除字段会破坏现有消费者。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 125,
+                "line_end": 144
+              }
+            ]
+          },
+          {
+            "action": "按统一约定命名：REST 端点用复数名词、不带动词；query 参数与响应字段用 camelCase；布尔字段用 is/has/can 前缀；枚举值用 UPPER_SNAKE。",
+            "when": "命名端点、参数、字段、枚举时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 146,
+                "line_end": 155
+              }
+            ]
+          },
+          {
+            "action": "把 API 文档或类型与实现一同提交。",
+            "when": "契约定稿并落地实现时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 364,
+                "line_end": 364
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每个端点都有类型化的输入与输出 schema。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 358,
+                "line_end": 358
+              }
+            ]
+          },
+          {
+            "text": "所有错误响应遵循同一格式。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 359,
+                "line_end": 359
+              }
+            ]
+          },
+          {
+            "text": "校验只发生在系统边界。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 360,
+                "line_end": 360
+              }
+            ]
+          },
+          {
+            "text": "新增字段是可选的、向后兼容的（不改类型、不删字段）。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 362,
+                "line_end": 362
+              }
+            ]
+          },
+          {
+            "text": "所有端点的命名约定一致。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 363,
+                "line_end": 363
+              }
+            ]
+          },
+          {
+            "text": "API 文档或类型与实现一并提交。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 364,
+                "line_end": 364
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "section": "Core Principles（Contract First / Error Semantics / Validate at Boundaries / Addition Over Modification / Naming）",
+            "line_start": 37,
+            "line_end": 155
+          },
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "section": "Verification",
+            "line_start": 354,
+            "line_end": 369
+          }
+        ]
+      },
+      {
+        "id": "design-rest-endpoints",
+        "goal": "把资源映射为 REST 路由，并为列表端点提供分页、过滤与部分更新语义。",
+        "when": "设计 REST 端点或调整列表类接口时。",
+        "inputs": [
+          "资源模型与关系（如 task 与 comment）",
+          "对数据规模的预期"
+        ],
+        "outputs": [
+          "CRUD 与子资源路由表",
+          "分页请求参数与分页响应结构",
+          "过滤参数与 PATCH 更新语义"
+        ],
+        "steps": [
+          {
+            "action": "按资源映射路由：集合用 GET/POST，单资源用 GET/PATCH/DELETE；子资源嵌套，如 /api/tasks/:id/comments。",
+            "when": "定义路由表时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 219,
+                "line_end": 232
+              }
+            ]
+          },
+          {
+            "action": "列表端点分页：请求带 page、pageSize、sortBy、sortOrder，响应返回 data 与 pagination（page、pageSize、totalItems、totalPages）。",
+            "when": "存在列表端点时",
+            "rationale": "一旦有人拥有 100 条以上数据就会需要分页，所以从开始就加。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 234,
+                "line_end": 252
+              }
+            ]
+          },
+          {
+            "action": "过滤用 query 参数（如 status、assignee、createdAfter）。",
+            "when": "需要按条件筛选列表时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 254,
+                "line_end": 260
+              }
+            ]
+          },
+          {
+            "action": "更新用 PATCH，接受部分对象，只更新请求中提供的字段，其余保留。",
+            "when": "客户端只想改部分字段时",
+            "rationale": "PUT 每次要求完整对象，PATCH 才是客户端实际想要的。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 262,
+                "line_end": 270
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "列表端点支持分页并返回分页元数据。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 361,
+                "line_end": 361
+              }
+            ]
+          },
+          {
+            "text": "REST URL 中没有动词（不是 /api/createTask、/api/getUsers）。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 347,
+                "line_end": 347
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "section": "REST API Patterns",
+            "line_start": 219,
+            "line_end": 270
+          }
+        ]
+      },
+      {
+        "id": "design-typescript-types",
+        "goal": "用 TypeScript 类型表达接口变体、输入输出区分与 ID 区分，减少误用。",
+        "when": "以 TypeScript 定义模块边界、契约或组件 props 时。",
+        "inputs": [
+          "各状态/变体及其携带字段",
+          "调用方输入与服务端生成字段的划分",
+          "涉及的实体 ID 类型"
+        ],
+        "outputs": [
+          "判别联合类型",
+          "分离的 Input/Output 接口",
+          "品牌类型化的 ID"
+        ],
+        "steps": [
+          {
+            "action": "用判别联合表达变体：每个变体带字面量 type 字段与其专属数据，如 pending、in_progress{assignee, startedAt}、completed{completedAt, completedBy}、cancelled{reason, cancelledAt}；消费方按 type 收窄。",
+            "when": "状态有多种互斥形态时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 274,
+                "line_end": 293
+              }
+            ]
+          },
+          {
+            "action": "分离 Input 与 Output：Input 是调用方提供的字段（部分可选），Output 含服务端生成字段（id、createdAt、updatedAt、createdBy）。",
+            "when": "定义创建/读取模型时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 295,
+                "line_end": 313
+              }
+            ]
+          },
+          {
+            "action": "对 ID 使用品牌类型（type TaskId = string & { readonly __brand: 'TaskId' }），防止把 UserId 传到需要 TaskId 的位置。",
+            "when": "多个实体 ID 都是字符串时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 315,
+                "line_end": 323
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "section": "TypeScript Interface Patterns",
+            "line_start": 272,
+            "line_end": 323
+          }
+        ]
+      },
+      {
+        "id": "implement-idempotency",
+        "goal": "让改状态的端点在客户端重试下不重复产生副作用（如重复扣款），并明确进行中重复、未知结果与 key 保留的处理。",
+        "when": "端点会改状态（尤其涉及支付等外部副作用），且接受或需要 Idempotency-Key 时。",
+        "inputs": [
+          "客户端或发起事件生成的 Idempotency-Key",
+          "请求体（用于计算 requestHash）",
+          "能在一次操作中强制唯一性的存储"
+        ],
+        "outputs": [
+          "幂等记录（key、state、requestHash、response）",
+          "重试时的重放或拒绝响应（含 409/202/422 等）",
+          "按最长重试链设定的 key 保留期"
+        ],
+        "steps": [
+          {
+            "action": "从意图而非尝试派生 key：由客户端生成一次并在重试时复用，或由不可变标识派生（如 charge:v1:${orderId}）。不要用 crypto.randomUUID()、`${userId}:${amount}`、`${orderId}:${Date.now()}`。",
+            "when": "确定 Idempotency-Key 的来源时",
+            "rationale": "每次尝试生成新 key 等于每次重试都重新扣款；userId:amount 会把两笔合法的 $50 合并成一笔；时间戳只是换了件外衣的 randomUUID()。key 来自客户端或发起事件，绝不来自做重试的那一层。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 160,
+                "line_end": 171
+              }
+            ]
+          },
+          {
+            "action": "原子占用 key：直接以唯一约束插入 { key, state: 'in_progress', requestHash }，捕获唯一冲突后重放或拒绝；不写先 exists 再 charge 再 insert 的流程。",
+            "when": "处理并发到达的同一 key 时",
+            "rationale": "先查后写是 TOCTOU 竞态，两个并发重试都会读到“没见过”并各自扣款；唯一约束本身就是机制，无法在单次操作中强制唯一性的存储撑不起这套做法。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 173,
+                "line_end": 193
+              }
+            ]
+          },
+          {
+            "action": "校验 payload：同一 key 配不同请求体时返回 422 IDEMPOTENCY_KEY_REUSED，而不是把第一次的响应返回给第二个请求。",
+            "when": "命中已存在的 key 时",
+            "rationale": "同 key 不同 body 是客户端缺陷，必须显式失败。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 195,
+                "line_end": 203
+              }
+            ]
+          },
+          {
+            "action": "为进行中的重复请求做有意选择：409 拒绝（客户端可稍后重试，最简单最安全）、有界等待结果（调用方需同步拿到结果）、或 202 加状态 URL（长耗时副作用）。不能因为第一次“看起来卡住”就放行第二个。",
+            "when": "第一个请求仍在执行而第二个到达时（重试风暴下的常见情形）",
+            "rationale": "一次命运未知的停滞尝试，正是重复代价最大的时候。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 205,
+                "line_end": 213
+              }
+            ]
+          },
+          {
+            "action": "在调用外部之前先记录意图，把结果视为成功、失败、未知三种；超时不能说明副作用是否已生效，调用与响应之间的崩溃要留下待解决的证据。",
+            "when": "调用有外部副作用的服务前后",
+            "rationale": "否则会把一次未确认的扣款当作可安全静默重试。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 215,
+                "line_end": 215
+              }
+            ]
+          },
+          {
+            "action": "按最长重试链而非磁盘成本设定保留期：key 必须活过所有可能重复投递同一意图的路径，包括一周后才重放的死信队列与提供方争议窗口。",
+            "when": "确定 key 的 TTL 时",
+            "rationale": "24 小时的 key TTL 配 7 天死信队列，就是等着产生重复。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 217,
+                "line_end": 217
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "改状态的端点要么兑现幂等键，要么在文档中注明不可安全重试。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 365,
+                "line_end": 365
+              }
+            ]
+          },
+          {
+            "text": "key 在一次原子操作中占用，并由唯一约束保护。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 366,
+                "line_end": 366
+              }
+            ]
+          },
+          {
+            "text": "同一 key 配不同 payload 时显式失败，而不是重放错误响应。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 367,
+                "line_end": 367
+              }
+            ]
+          },
+          {
+            "text": "进行中重复请求的响应（409、等待或 202）是有意选定的，而不是碰巧形成的。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 368,
+                "line_end": 368
+              }
+            ]
+          },
+          {
+            "text": "key 保留期长于最长重试路径，包括死信重放。",
+            "evidence": [
+              {
+                "path": "skills/api-and-interface-design/SKILL.md",
+                "line_start": 369,
+                "line_end": 369
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "section": "Honouring an Idempotency Key",
+            "line_start": 156,
+            "line_end": 217
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "按 Hyrum 定律设计：用户足够多时，系统的所有可观察行为——包括未文档化的怪癖、错误消息文本、时序和顺序——都会成为事实契约。",
+        "when": "决定暴露什么、以及是否改动可观察行为时",
+        "rationale": "原文以此作为接口设计的第一原则。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 22,
+            "line_end": 26
+          }
+        ]
+      },
+      {
+        "text": "对暴露面保持刻意：每个可观察行为都是一份潜在承诺；可被观察到的实现细节会被依赖，因此不要泄漏。",
+        "when": "设计响应、错误信息与行为细节时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 28,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "text": "在设计阶段就规划弃用；测试不足以保护——即使有完美的契约测试，Hyrum 定律意味着“安全”变更也可能破坏依赖未文档化行为的真实用户。",
+        "when": "计划修改或移除公共行为时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 30,
+            "line_end": 31
+          }
+        ]
+      },
+      {
+        "text": "遵守单版本规则：不要让消费者在同一依赖或 API 的多个版本间选择；扩展而不是分叉，以避免菱形依赖问题。",
+        "when": "用户要求并存多个版本，或出现不同消费者需要不同版本时",
+        "rationale": "多版本会放大维护成本并制造菱形依赖。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 33,
+            "line_end": 35
+          }
+        ]
+      },
+      {
+        "text": "第三方 API 响应是不可信数据：在使用于任何逻辑、渲染或决策之前校验其形状与内容。",
+        "when": "解析外部服务返回时",
+        "rationale": "被攻破或行为异常的外部服务可能返回意外类型、恶意内容或类似指令的文本。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 118,
+            "line_end": 118
+          }
+        ]
+      },
+      {
+        "text": "不在内部函数之间（共享类型契约）、已被校验代码调用的工具函数、刚来自自有数据库的数据上做校验。",
+        "when": "考虑加校验时",
+        "rationale": "内部代码可信，重复校验只是噪声。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 120,
+            "line_end": 123
+          }
+        ]
+      },
+      {
+        "text": "500 响应绝不暴露内部细节。",
+        "when": "写服务端错误处理时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 83,
+            "line_end": 83
+          }
+        ]
+      },
+      {
+        "text": "列表端点从一开始就加分页。",
+        "when": "人觉得“现在还用不到分页”时",
+        "rationale": "一旦有人拥有 100 条以上数据就会立刻需要。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 330,
+            "line_end": 330
+          }
+        ]
+      },
+      {
+        "text": "没有版本化就做破坏性变更会破坏消费者；从一开始就为扩展而设计。",
+        "when": "打算“等需要时再管版本”时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 332,
+            "line_end": 332
+          }
+        ]
+      },
+      {
+        "text": "内部 API 同样需要契约：内部消费者也是消费者，契约能防止耦合、支持并行工作。",
+        "when": "认为内部接口可以省掉契约时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 335,
+            "line_end": 335
+          }
+        ]
+      },
+      {
+        "text": "接受 Idempotency-Key 头只是契约，把 key 与结果一起存储才是实现；接受却不兑现的 key 会让客户端误以为重试是安全的。",
+        "when": "端点声称支持幂等键时",
+        "rationale": "客户端会据此相信重试安全，而实际不是。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 158,
+            "line_end": 158
+          },
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 336,
+            "line_end": 336
+          }
+        ]
+      },
+      {
+        "text": "不假定队列提供 exactly-once：没有任何队列能跨消费者崩溃保证这一点——broker 的 ack 与你的副作用不在同一事务里；按 at-least-once 加幂等处理来设计。",
+        "when": "依赖消息队列投递语义时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 337,
+            "line_end": 337
+          }
+        ]
+      },
+      {
+        "text": "重复请求是相关的，不是稀少的：依赖降级时重试激增，正是重复最可能出现、代价也最大的时刻。",
+        "when": "评估是否值得做幂等时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 338,
+            "line_end": 338
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "deprecation-and-migration",
+        "kind": "skill",
+        "locator": null,
+        "usage": "原文在设计阶段规划弃用、以及安全移除用户依赖之物时指向该 skill；本次材料未提供其内容。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 30,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "kind": "environment",
+        "locator": null,
+        "usage": "接口、判别联合、品牌类型与边界校验示例以 TypeScript 表达；文档未限定实际实现语言。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 41,
+            "line_end": 59
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "HTTP 状态码映射",
+        "text": "400 客户端发送了无效数据；401 未认证；403 已认证但无权限；404 资源不存在；409 冲突（重复或版本不匹配）；422 校验失败（语义无效）；500 服务端错误，且不暴露内部细节。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 76,
+            "line_end": 84
+          }
+        ]
+      },
+      {
+        "topic": "保留期示例",
+        "text": "24 小时的 key TTL 配 7 天死信队列就是等着出重复；保留期须覆盖死信重放与提供方争议窗口。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 217,
+            "line_end": 217
+          }
+        ]
+      },
+      {
+        "topic": "示例的形态",
+        "text": "代码示例为 TypeScript 接口与 SQL 风格的幂等存储伪代码（唯一约束插入），并假定存在 schema 校验库（示例用 CreateTaskSchema.safeParse），但未指定具体框架、校验库或数据库。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 94,
+            "line_end": 109
+          },
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 175,
+            "line_end": 191
+          }
+        ]
+      },
+      {
+        "topic": "应视为缺陷的信号（Red Flags）",
+        "text": "端点按条件返回不同形状；错误格式跨端点不一致；校验散落在内部代码而非边界；对已有字段做破坏性变更（改类型、删除）；列表端点无分页；REST URL 含动词；第三方响应未校验或未净化就直接使用；用 SELECT 查幂等 key 再 INSERT（是竞态不是保护）；key 由 UUID、时间戳或任何每次尝试重生成的内容派生；同一 key 配不同 body 却静默返回第一次响应；保留窗口短于最长可重新投递路径。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 340,
+            "line_end": 352
+          }
+        ]
+      },
+      {
+        "topic": "常见辩解与对应事实",
+        "text": "“以后再写文档”——类型就是文档，先定义；“PATCH 太复杂就用 PUT”——PUT 每次要求完整对象，PATCH 才是客户端想要的；“没人用那个未文档化行为”——Hyrum 定律：可观察就有人依赖；“可以同时维护两个版本”——成本倍增并制造菱形依赖；这些是把常见捷径转成判断依据的清单。",
+        "evidence": [
+          {
+            "path": "skills/api-and-interface-design/SKILL.md",
+            "line_start": 325,
+            "line_end": 338
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/api-and-interface-design/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks",
+        "reason": "not_stated",
+        "detail": "frontmatter 提到设计 GraphQL 端点，但正文只给 REST 与 TypeScript 模式：没有 GraphQL schema 设计、resolver 边界、错误载荷或分页（连接式）的具体做法，该场景只能套用通用原则。"
+      },
+      {
+        "target": "/content/tasks",
+        "reason": "not_stated",
+        "detail": "版本化只有原则（单版本规则、避免破坏性变更、为扩展而设计），没有具体版本化机制（URL/请求头/媒体类型）或迁移步骤；弃用细节被外引到未提供的 skill。"
+      },
+      {
+        "target": "/content/tasks",
+        "reason": "not_stated",
+        "detail": "分页只给页码式（page/pageSize）示例与响应结构，未说明大数据集下是否应改用游标分页或如何选择；也未给默认 pageSize 上限。"
+      },
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "原文在弃用与安全移除处引用 deprecation-and-migration skill，本次材料未提供该文件，无法确认其具体方法。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:46:25.935773+00:00"
+  }
+}

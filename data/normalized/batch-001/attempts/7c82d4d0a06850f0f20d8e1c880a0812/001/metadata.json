@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:52:34.820369+00:00",
+  "source": {
+    "collection_id": "e727eda991347a2fbc27",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/pricing/SKILL.md",
+    "git_blob_sha": "7497dc500404081ed175c56db26b36de7264c246",
+    "entry_sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "58b03d7afcbf0ec008b1c661482f556d433635ca396b62f225791ed0e1477ad8",
+  "input_files": [
+    {
+      "path": "skills/pricing/SKILL.md",
+      "coverage": "full",
+      "sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25",
+      "git_blob_sha": "7497dc500404081ed175c56db26b36de7264c246",
+      "bytes": 13479,
+      "source_lines": 295
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4980c0b6ffeCDHBLpRk5W8605",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8039,
+          "output": 5125,
+          "reasoning": 6682,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:53:46.198385+00:00"
+}

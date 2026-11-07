@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:54:03.909665+00:00",
+  "source": {
+    "collection_id": "3f9cca2922dc01418c96",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/verification-before-completion/SKILL.md",
+    "git_blob_sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+    "entry_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "0c4adc01add5faecf1a712cdff37bfe66d57f78af81defcdc4e9bedfe7d3f8ce",
+  "input_files": [
+    {
+      "path": "skills/verification-before-completion/SKILL.md",
+      "coverage": "full",
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "git_blob_sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+      "bytes": 3646,
+      "source_lines": 120
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497f64b0ffekX4TCzT7p4eK7i",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 5434,
+          "output": 2243,
+          "reasoning": 2334,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:54:34.003184+00:00"
+}

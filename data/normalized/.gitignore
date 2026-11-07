@@ -1,0 +1,9 @@
+# Local complete prompts/transcripts can contain upstream material. Keep them on
+# this machine; publish derived records, provenance and usage metadata separately.
+**/attempts/**/request.txt
+**/attempts/**/response.txt
+**/attempts/**/events.jsonl
+**/attempts/**/session.json
+**/attempts/**/stderr.txt
+**/.run.lock
+**/execution.log

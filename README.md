@@ -4,10 +4,11 @@
 
 ## 当前重点
 
-采集阶段已有固定版本语料。下一步是用大模型把已有材料批量转换为 **SkillRecord v0.1.1**，不再继续设计 Schema。
+采集阶段已有固定版本语料。目前使用 Open Design 把已有材料批量转换为 **SkillRecord v0.1.1**，不再继续设计 Schema。
 
-- 已接入：Schema、目标优先转换提示词、响应 Schema 导出工具、检查器、测试和人工样例。
-- 待完成：接入实际模型调用、可续跑的批转换程序，并产出真实转换批次。
+- 已接入：Schema、目标优先提示词、检查器，以及复用已有 OpenCode/Open Design 连接的可续跑批转换器。
+- 真实模型批次：[第 001 批状态与用量](data/normalized/batch-001/report.json)、[转换记录](data/normalized/batch-001/records.jsonl)；逐条保存，成功跳过，失败显式重试。
+- 2026-11-07 首批实际处理 7 个仓库的 40 条入口：保存 38 条，失败 2 条，待处理 0；[结果、失败原因和继续命令](normalization/batches/batch-001.report.md)。这些记录仍为未完整审阅、未执行。
 - 人工样例是格式和内容参考，不是自动转换结果或方法有效性的证明。
 
 编码 Agent 先读 [AGENTS.md](AGENTS.md)，然后执行 [批转换任务](normalization/NEXT-TASK.md)。
@@ -21,6 +22,7 @@
 | [skill-record.v0.1.1.schema.json](normalization/skill-record.v0.1.1.schema.json) | 完整记录格式 |
 | [export_response_schema.py](normalization/export_response_schema.py) | 派生仅含 content/gaps 的模型响应结构 |
 | [check_record.py](normalization/check_record.py) | 结构及轻量一致性检查 |
+| [batch_convert.py](normalization/batch_convert.py) | 复用已有模型连接，批转换、逐条保存、续跑和失败重试 |
 
 从仓库根目录执行，建议使用现有项目虚拟环境：
 
@@ -31,7 +33,15 @@ python3 normalization/export_response_schema.py > /tmp/atlas-response.schema.jso
 python3 normalization/check_record.py normalization/examples.v0.1.1.jsonl
 ```
 
-这些命令验证格式和工具，不会调用模型、转换全库或执行上游 Skill。真正的批转换命令由下一项开发任务提供。
+上述命令仅验证格式和工具。以下命令实际调用本机 OpenCode 已连接的 Open Design；同一输出目录重跑时跳过已保存的成功来源版本：
+
+```bash
+python3 normalization/batch_convert.py \
+  --selection normalization/batches/batch-001.selection.json \
+  --out data/normalized/batch-001 --workers 2 --retry-failed
+```
+
+完整请求、原响应和会话留在本机，Git 只保存可公开派生记录、输入范围、用量元数据及报告；不执行上游 Skill。
 
 ## 采集成果保持不变
 

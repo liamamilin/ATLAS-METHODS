@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "e7834a2573815a5a0871",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/context-engineering/SKILL.md",
+    "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+    "entry_sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b"
+  },
+  "files": [
+    {
+      "path": "skills/context-engineering/SKILL.md",
+      "coverage": "full",
+      "sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b",
+      "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+      "bytes": 15514,
+      "source_lines": 353
+    }
+  ]
+}

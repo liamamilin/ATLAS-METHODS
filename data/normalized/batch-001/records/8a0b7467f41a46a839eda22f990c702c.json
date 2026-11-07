@@ -1,0 +1,1048 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "57b2f1ac086c8d30cddc",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/mcp-builder/SKILL.md",
+    "git_blob_sha": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
+    "entry_sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c"
+  },
+  "content": {
+    "name": "mcp-builder",
+    "title": "构建高质量 MCP 服务器：研究、实现、测试与评估流程",
+    "summary": "该指南给出创建 MCP（Model Context Protocol）服务器的四阶段流程：先研究 MCP 规范与目标 API、规划工具集；再搭建项目、实现共享基础设施与带 schema/注解的工具；随后做代码审查、构建与 Inspector 测试；最后编写 10 道只读、独立、复杂、答案稳定的评估题并自行验证。文档强调服务器质量以“能否让 LLM 完成真实任务”衡量，并给出命名、分页、响应格式、传输、安全与错误处理等具体约定。",
+    "evidence": [
+      {
+        "path": "skills/mcp-builder/SKILL.md",
+        "section": "Overview",
+        "line_start": 7,
+        "line_end": 11
+      },
+      {
+        "path": "skills/mcp-builder/SKILL.md",
+        "section": "High-Level Workflow",
+        "line_start": 17,
+        "line_end": 21
+      },
+      {
+        "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+        "section": "Quick Reference",
+        "line_start": 3,
+        "line_end": 27
+      },
+      {
+        "path": "skills/mcp-builder/reference/evaluation.md",
+        "section": "Overview",
+        "line_start": 3,
+        "line_end": 16
+      }
+    ],
+    "tasks": [
+      {
+        "id": "research-and-plan",
+        "goal": "理解 MCP 设计要点与目标服务 API，选定语言/SDK/传输并规划要实现哪些工具。",
+        "when": "开始新建 MCP 服务器时（第一阶段）。",
+        "inputs": [
+          "MCP 协议规范",
+          "目标服务的 API 文档",
+          "所选 SDK 的框架文档"
+        ],
+        "outputs": [
+          "待实现的端点/工具清单（从最常用操作开始）",
+          "选定的语言、SDK 版本与传输方式"
+        ],
+        "steps": [
+          {
+            "action": "从 MCP 规范 sitemap（https://modelcontextprotocol.io/sitemap.xml）入手，随后按 `.md` 后缀抓取具体页面；重点阅读规范总览与架构、传输机制（streamable HTTP、stdio）以及 tool、resource、prompt 的定义。",
+            "when": "设计服务器前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 41,
+                "line_end": 48
+              }
+            ]
+          },
+          {
+            "action": "在“完整 API 覆盖”与“专用工作流工具”之间权衡：工作流工具对特定任务更方便，完整覆盖让 agent 可自行组合操作；性能因客户端而异（有的客户端受益于组合基础工具的代码执行，有的更适合高层工作流）；不确定时优先完整 API 覆盖。",
+            "when": "决定工具粒度时",
+            "rationale": "不同客户端对代码执行与高层工作流的受益程度不同。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 25,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "选择实现栈：语言默认 TypeScript；远程服务器用 Streamable HTTP 且采用无状态 JSON，本地服务器用 stdio；加载对应 SDK 与框架文档。",
+            "when": "确定技术栈时",
+            "rationale": "文档称 TypeScript 有高质量 SDK 支持、在 MCPB 等执行环境兼容性好，且模型擅长生成 TS 代码；无状态 JSON 更易扩展与维护。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 52,
+                "line_end": 58
+              }
+            ]
+          },
+          {
+            "action": "确定 TypeScript SDK 版本：新服务器用 v2（`@modelcontextprotocol/server`）；仅当项目 `package.json` 已依赖 v1（`@modelcontextprotocol/sdk`）时用 v1，并用一两句话告知用户 v2 是当前稳定版、v1 只收 bug 与安全修复、可用 `npx @modelcontextprotocol/codemod@latest v1-to-v2 .` 迁移；除非用户要求迁移，否则继续用 v1。",
+            "when": "TypeScript 项目",
+            "rationale": "避免在同一项目中混用 v1 与 v2（v1 的 import 写法不适用于 v2）。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 60,
+                "line_end": 72
+              }
+            ]
+          },
+          {
+            "action": "阅读服务 API 文档，识别关键端点、认证需求与数据模型（必要时用 web search 和 WebFetch）；列出待实现端点，从最常见的操作开始。",
+            "when": "规划工具清单时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 80,
+                "line_end": 84
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 21,
+            "line_end": 84
+          }
+        ]
+      },
+      {
+        "id": "implement-server",
+        "goal": "搭建项目结构，实现共享基础设施与各工具的输入/输出 schema、描述、实现与注解。",
+        "when": "规划完成后（第二阶段）。",
+        "inputs": [
+          "语言特定实现指南",
+          "目标 API 的端点、认证与数据模型",
+          "SDK 文档"
+        ],
+        "outputs": [
+          "可构建的 MCP 服务器代码",
+          "带 Pydantic/Zod 输入校验、outputSchema、描述与 annotations 的工具"
+        ],
+        "steps": [
+          {
+            "action": "按语言特定指南建立项目结构与依赖（TypeScript 见 v2 指南，v1 项目见 v1 指南；Python 见 Python 指南）。",
+            "when": "开始编码时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 92,
+                "line_end": 94
+              }
+            ]
+          },
+          {
+            "action": "创建共享基础设施：带认证的 API 客户端、错误处理辅助、响应格式化（JSON/Markdown）、分页支持。",
+            "when": "实现工具前",
+            "rationale": "避免在各工具中重复实现同类逻辑。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 98,
+                "line_end": 102
+              },
+              {
+                "path": "skills/mcp-builder/reference/python_mcp_server.md",
+                "line_start": 227,
+                "line_end": 244
+              }
+            ]
+          },
+          {
+            "action": "为每个工具定义输入 schema：TypeScript 用 Zod、Python 用 Pydantic；包含约束和清晰描述，并在字段描述中加入示例。",
+            "when": "逐工具实现时",
+            "rationale": "由 schema 承担输入校验，避免手写校验。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 108,
+                "line_end": 111
+              },
+              {
+                "path": "skills/mcp-builder/reference/python_mcp_server.md",
+                "line_start": 68,
+                "line_end": 93
+              }
+            ]
+          },
+          {
+            "action": "尽可能定义 `outputSchema` 以描述结构化数据，并在工具响应中使用 `structuredContent`（TypeScript SDK 特性），帮助客户端理解与处理输出。",
+            "when": "工具返回结构化数据时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 113,
+                "line_end": 116
+              }
+            ]
+          },
+          {
+            "action": "编写工具描述（功能简要摘要、参数说明、返回类型 schema）与实现：I/O 使用 async/await，错误处理给出可操作消息，适用处支持分页，使用现代 SDK 时同时返回文本内容与结构化数据。",
+            "when": "实现工具逻辑时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 118,
+                "line_end": 127
+              }
+            ]
+          },
+          {
+            "action": "为工具设置注解：`readOnlyHint`、`destructiveHint`、`idempotentHint`、`openWorldHint` 各取 true/false。",
+            "when": "注册工具时",
+            "rationale": "帮助客户端理解工具行为；但这些只是提示，不是安全保证。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 129,
+                "line_end": 133
+              },
+              {
+                "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+                "line_start": 190,
+                "line_end": 201
+              }
+            ]
+          },
+          {
+            "action": "按接口类型选择 Resources 或 Tools：简单参数的数据访问（URI 模板）用 resources；需要校验与业务逻辑的复杂操作用 tools。",
+            "when": "决定暴露为 resource 还是 tool 时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/python_mcp_server.md",
+                "line_start": 527,
+                "line_end": 552
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "Python 质量清单要求：所有工具在装饰器中写明 name 与 annotations；所有输入用 Pydantic BaseModel 与带约束的 Field；docstring 含完整输入/输出类型与 dict/JSON 返回 schema；网络操作使用 async/await；公共逻辑抽取为复用函数。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/python_mcp_server.md",
+                "line_start": 668,
+                "line_end": 719
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 88,
+            "line_end": 133
+          }
+        ]
+      },
+      {
+        "id": "review-and-test",
+        "goal": "审查代码质量，完成构建与 Inspector 测试。",
+        "when": "实现完成后（第三阶段）。",
+        "inputs": [
+          "已实现的服务器代码"
+        ],
+        "outputs": [
+          "通过编译/语法检查的服务器",
+          "Inspector 测试结果"
+        ],
+        "steps": [
+          {
+            "action": "审查代码：无重复代码（DRY）、错误处理一致、完整类型覆盖、工具描述清晰。",
+            "when": "提交测试前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 139,
+                "line_end": 145
+              }
+            ]
+          },
+          {
+            "action": "TypeScript 运行 `npm run build` 验证编译；v2 项目再对构建产物运行 v2 指南中的自检脚本。Python 用 `python -m py_compile your_server.py` 验证语法。",
+            "when": "构建/静态检查时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 147,
+                "line_end": 156
+              }
+            ]
+          },
+          {
+            "action": "用 MCP Inspector 测试服务器。",
+            "when": "构建通过后",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 152,
+                "line_end": 152
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "TypeScript：`npm run build` 须通过编译；v2 项目须对构建后的服务器运行 v2 指南的自检脚本。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 149,
+                "line_end": 151
+              }
+            ]
+          },
+          {
+            "text": "Python：`python -m py_compile your_server.py` 验证语法，并用 MCP Inspector 测试。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 154,
+                "line_end": 156
+              }
+            ]
+          },
+          {
+            "text": "测试应覆盖功能、集成、安全（认证、输入净化、限流）、性能（负载与超时）与错误处理。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+                "line_start": 231,
+                "line_end": 239
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 137,
+            "line_end": 158
+          }
+        ]
+      },
+      {
+        "id": "create-evaluations",
+        "goal": "创建 10 道只读、独立、复杂、真实且答案可字符串比对且稳定的评估题，并自行解题验证；需要时用评估脚本运行。",
+        "when": "服务器实现完成后（第四阶段）。",
+        "inputs": [
+          "目标 API 文档",
+          "MCP 工具列表及其输入/输出 schema、docstring",
+          "只读探索得到的真实内容"
+        ],
+        "outputs": [
+          "XML 评估文件（`<evaluation>` 内多个 `<qa_pair>`）",
+          "可选：评估报告"
+        ],
+        "steps": [
+          {
+            "action": "先明确评估目的：用评估测试 LLM 能否仅凭该 MCP 服务器回答真实、复杂的问题；服务器质量不看工具实现覆盖度，而看这些实现（输入/输出 schema、docstring/描述、功能）是否让无其他上下文的 LLM 能作答。",
+            "when": "设计评估前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 168,
+                "line_end": 170
+              },
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 30,
+                "line_end": 32
+              }
+            ]
+          },
+          {
+            "action": "检查文档与工具：阅读目标 API 文档（可并行），列出 MCP 工具并理解其输入/输出 schema、docstring 与描述；此阶段不调用工具，也不阅读 MCP 服务器实现代码。",
+            "when": "评估准备阶段",
+            "rationale": "保持对工具实际可用性的外部视角，而不是依据实现细节出题。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 174,
+                "line_end": 198
+              }
+            ]
+          },
+          {
+            "action": "用只读、非破坏、幂等操作探索真实内容，为出题确定具体对象；采用增量、小范围、目标明确的调用，所有请求用 `limit` 限制结果（<10），并使用分页，避免上下文耗尽。",
+            "when": "内容探索阶段",
+            "rationale": "部分工具会返回大量数据。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 200,
+                "line_end": 212
+              }
+            ]
+          },
+          {
+            "action": "生成 10 道人类可读的问题；题面可含歧义或需要艰难选择工具，但仍须有唯一可验证答案。",
+            "when": "任务生成阶段",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 172,
+                "line_end": 189
+              },
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 214,
+                "line_end": 218
+              }
+            ]
+          },
+          {
+            "action": "按 XML 结构输出：每个 `<qa_pair>` 含 `<question>` 与 `<answer>`。",
+            "when": "保存评估时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/SKILL.md",
+                "line_start": 191,
+                "line_end": 203
+              }
+            ]
+          },
+          {
+            "action": "自己用 MCP 服务器和工具并行求解每道题以核对答案；标记需要写/破坏性操作的题；汇总正确 答案并替换文件中错误答案；删除需要写/破坏性操作的 `<qa_pair>`。",
+            "when": "验证阶段",
+            "rationale": "确保答案可复现且评估本身不改变状态。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 354,
+                "line_end": 364
+              }
+            ]
+          },
+          {
+            "action": "需要运行评估时，用 `scripts/evaluation.py`：stdio 传输由脚本自动启动并管理服务器（不要手动运行），sse/http 传输须先自行启动服务器再连接指定 URL；可用 `-o` 将报告写入文件。",
+            "when": "已生成评估文件并要实际运行",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 420,
+                "line_end": 472
+              },
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 519,
+                "line_end": 528
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每题须独立、只读、非破坏且幂等，真实、清晰、简洁、复杂（可能需数十次工具调用），并且有单一的预先验证答案。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 11,
+                "line_end": 16
+              },
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 36,
+                "line_end": 55
+              }
+            ]
+          },
+          {
+            "text": "答案须能通过直接字符串比较验证；若答案可有多种格式，在问题中明确输出格式（如 YYYY/MM/DD、True/False、A/B/C/D）。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 118,
+                "line_end": 135
+              }
+            ]
+          },
+          {
+            "text": "答案须稳定：不要依赖会变化的“当前状态”（如帖子反应数、回复数、频道成员数）；应基于已结束/已完成的封闭内容，必要时指定固定时间窗。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 101,
+                "line_end": 114
+              },
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 146,
+                "line_end": 151
+              }
+            ]
+          },
+          {
+            "text": "答案不应是复杂结构（列表、对象、ID 列表或自然语言长文本），除非能用直接字符串比较且可现实复现；答案应尽量人类可读且形式多样。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 137,
+                "line_end": 172
+              }
+            ]
+          },
+          {
+            "text": "问题不应能靠精确关键词搜索解决；应使用同义词、相关概念或改写，要求多次搜索、分析多项相关内容并推导答案。",
+            "evidence": [
+              {
+                "path": "skills/mcp-builder/reference/evaluation.md",
+                "line_start": 73,
+                "line_end": 76
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 162,
+            "line_end": 203
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "服务器命名：Python 用 `{service}_mcp`（小写+下划线），Node/TypeScript 用 `{service}-mcp-server`（小写+连字符）；名称应通用、描述所集成的服务、易从任务推断，且不带版本号。",
+        "when": "创建服务器时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 5,
+            "line_end": 12
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 31,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "text": "工具命名用 snake_case，带服务前缀，建议格式 `{service}_{action}_{resource}`（如 `slack_send_message`、`github_create_issue`）；以动词开头、具体且避免与其他服务器冲突。",
+        "when": "定义工具时",
+        "rationale": "MCP 服务器可能与其他服务器同时使用，需预先避免命名冲突。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 9,
+            "line_end": 12
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 47,
+            "line_end": 54
+          }
+        ]
+      },
+      {
+        "text": "工具描述必须狭窄、无歧义地说明功能，并精确匹配实际行为；工具操作应聚焦、原子化。",
+        "when": "编写工具描述/设计工具时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 56,
+            "line_end": 61
+          }
+        ]
+      },
+      {
+        "text": "所有返回数据的工具应支持多种格式：JSON（`response_format=\"json\"`）返回完整结构化数据供程序处理；Markdown（`response_format=\"markdown\"`，通常为默认）供人阅读，可用标题/列表、将时间戳转为人类可读格式、显示名后括注 ID、省略冗长元数据。",
+        "when": "工具返回数据时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 14,
+            "line_end": 17
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 65,
+            "line_end": 80
+          }
+        ]
+      },
+      {
+        "text": "列表类工具须始终遵守 `limit` 参数，实现 offset 或游标分页，返回 `has_more`、`next_offset`/`next_cursor`、`total_count`；默认限制通常为 20–50 条；不要把全部结果载入内存。",
+        "when": "实现列表/搜索类工具时",
+        "rationale": "大结果集会耗尽上下文与内存。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 19,
+            "line_end": 22
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 84,
+            "line_end": 92
+          }
+        ]
+      },
+      {
+        "text": "传输选择：远程服务器、Web 服务、多客户端场景用 Streamable HTTP；本地集成、命令行工具、单用户单会话用 stdio；避免 SSE（已被 streamable HTTP 取代）。",
+        "when": "部署/选择传输时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 24,
+            "line_end": 27
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 141,
+            "line_end": 148
+          }
+        ]
+      },
+      {
+        "text": "stdio 服务器不得向 stdout 写日志，日志应走 stderr。",
+        "when": "实现 stdio 服务器时",
+        "rationale": "stdout 是协议通信通道。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 139,
+            "line_end": 139
+          }
+        ]
+      },
+      {
+        "text": "认证与授权：使用来自受认可机构的证书的 OAuth 2.1；处理请求前验证 access token；只接受专门发给本服务器的 token；API key 存环境变量而非代码中，启动时校验，认证失败给清晰错误。",
+        "when": "服务器访问受保护的外部服务时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 154,
+            "line_end": 164
+          }
+        ]
+      },
+      {
+        "text": "输入校验：净化文件路径以防目录穿越，校验 URL 与外部标识符，检查参数大小与范围，防止系统调用中的命令注入，并对所有输入做 schema 校验（Pydantic/Zod）。",
+        "when": "处理外部输入时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 166,
+            "line_end": 172
+          }
+        ]
+      },
+      {
+        "text": "错误处理：使用标准 JSON-RPC 错误码；工具错误报告在 result 对象内而非协议级错误；给出有帮助且具体的消息与建议的下一步；不暴露内部实现细节；错误后清理资源。",
+        "when": "实现错误处理时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 174,
+            "line_end": 179
+          },
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 205,
+            "line_end": 211
+          }
+        ]
+      },
+      {
+        "text": "本地运行的 streamable HTTP 服务器应启用 DNS rebinding 保护、校验所有入站连接的 `Origin` 头，并绑定到 `127.0.0.1` 而非 `0.0.0.0`。",
+        "when": "本地运行 streamable HTTP 服务器时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 181,
+            "line_end": 186
+          }
+        ]
+      },
+      {
+        "text": "注解只是提示，不是安全保证；客户端不应仅凭注解做安全关键决策。",
+        "when": "使用或依赖工具 annotations 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 201,
+            "line_end": 201
+          }
+        ]
+      },
+      {
+        "text": "评估题必须只读、独立、非破坏、幂等：不得要求修改状态，不得依赖其他题的答案或假设先前写过数据。",
+        "when": "编写评估题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 45,
+            "line_end": 55
+          }
+        ]
+      },
+      {
+        "text": "不要让 MCP 服务器现有能力限制出题范围：应创建挑战性、复杂的问题，有些可能当前工具无法解答；题目可要求特定输出格式或数十次工具调用。",
+        "when": "设计评估题时",
+        "rationale": "评估目的是测试服务器上限，而非迁就现状。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 110,
+            "line_end": 114
+          }
+        ]
+      },
+      {
+        "text": "创建评估的整个过程中不得阅读 MCP 服务器实现代码；只依据文档、工具 schema/描述与实际只读调用结果。",
+        "when": "进行文档/工具检查与内容探索时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 197,
+            "line_end": 198
+          },
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 206,
+            "line_end": 206
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "MCP Best Practices",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/reference/mcp_best_practices.md",
+        "usage": "核心通用规范：服务器/工具命名、响应格式、分页、传输选择、安全与错误处理、测试与文档要求。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 58,
+            "line_end": 58
+          },
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 215,
+            "line_end": 220
+          }
+        ]
+      },
+      {
+        "name": "Python 实现指南",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/reference/python_mcp_server.md",
+        "usage": "Python/FastMCP 的服务器初始化、Pydantic v2 校验、`@mcp.tool` 注册、分页与错误处理、完整示例、Context/资源/lifespan 与质量清单。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 74,
+            "line_end": 76
+          },
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 228,
+            "line_end": 233
+          }
+        ]
+      },
+      {
+        "name": "评估指南",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/reference/evaluation.md",
+        "usage": "评估题与答案的全部要求、出题流程、好坏示例、验证流程，以及评估脚本的运行方式与报告内容。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 166,
+            "line_end": 166
+          },
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 247,
+            "line_end": 252
+          }
+        ]
+      },
+      {
+        "name": "TypeScript 实现指南（SDK v2）",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/reference/node_mcp_server_v2.md",
+        "usage": "SKILL.md 指向的 TS 项目结构、Zod 4 schema、输出格式、分页、错误、stdio/Streamable HTTP 示例、bearer 认证、自检脚本与 v1→v2 迁移表；本次未提供该文件内容，以下仅在文档所述范围内登记。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 235,
+            "line_end": 242
+          }
+        ]
+      },
+      {
+        "name": "TypeScript 实现指南（SDK v1）",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/reference/node_mcp_server.md",
+        "usage": "面向已使用 `@modelcontextprotocol/sdk` 的既有项目的等价指南；本次未提供该文件内容（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 244,
+            "line_end": 244
+          }
+        ]
+      },
+      {
+        "name": "v1→v2 迁移 codemod",
+        "kind": "tool",
+        "locator": "npx @modelcontextprotocol/codemod@latest v1-to-v2 .",
+        "usage": "把既有 TypeScript v1 项目迁移到 v2；仅在用户要求迁移时使用。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 64,
+            "line_end": 66
+          }
+        ]
+      },
+      {
+        "name": "MCP Inspector",
+        "kind": "tool",
+        "locator": "npx @modelcontextprotocol/inspector",
+        "usage": "构建后用于测试 MCP 服务器。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 152,
+            "line_end": 156
+          }
+        ]
+      },
+      {
+        "name": "评估脚本",
+        "kind": "script",
+        "locator": "skills/mcp-builder/scripts/evaluation.py",
+        "usage": "文档所述：按 XML 评估文件运行评估，支持 stdio/sse/http 三种传输；stdio 由脚本启动服务器，sse/http 需先启动服务器；可指定模型、环境变量、URL、头部与输出报告文件。脚本实现本身未读取。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 418,
+            "line_end": 499
+          }
+        ]
+      },
+      {
+        "name": "评估脚本依赖清单",
+        "kind": "reference",
+        "locator": "skills/mcp-builder/scripts/requirements.txt",
+        "usage": "文档所述：`pip install -r scripts/requirements.txt` 安装评估所需依赖（也可手动 `pip install anthropic mcp`）。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 384,
+            "line_end": 393
+          }
+        ]
+      },
+      {
+        "name": "MCP 协议规范站点",
+        "kind": "reference",
+        "locator": "https://modelcontextprotocol.io/sitemap.xml",
+        "usage": "从 sitemap 导航到规范页面，抓取时在 URL 后加 `.md` 获得 markdown；重点看架构、传输、tool/resource/prompt 定义。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 41,
+            "line_end": 48
+          }
+        ]
+      },
+      {
+        "name": "Python SDK 文档",
+        "kind": "reference",
+        "locator": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md",
+        "usage": "用 WebFetch 加载完整 Python SDK 文档。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 75,
+            "line_end": 75
+          }
+        ]
+      },
+      {
+        "name": "TypeScript SDK 文档（v2）",
+        "kind": "reference",
+        "locator": "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md",
+        "usage": "用 WebFetch 加载 v2 SDK README；完整文档索引为 https://ts.sdk.modelcontextprotocol.io/v2/llms.txt。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 70,
+            "line_end": 70
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "TypeScript v1 与 v2 不可混用",
+        "text": "v1 代码示例（从 `@modelcontextprotocol/sdk/...` 导入）不适用于 v2；同一项目不要混用两版。v1 只接收 bug 与安全修复，v2 为当前稳定版。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 62,
+            "line_end": 68
+          }
+        ]
+      },
+      {
+        "topic": "推荐 TypeScript 的理由",
+        "text": "文档给出的理由包括：SDK 支持质量高、在许多执行环境（如 MCPB）兼容性好、广泛使用与静态类型及良好 lint 工具使 AI 模型更擅长生成 TS 代码。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/SKILL.md",
+            "line_start": 52,
+            "line_end": 54
+          }
+        ]
+      },
+      {
+        "topic": "工具注解默认值",
+        "text": "`readOnlyHint` 默认 false（工具不修改环境）、`destructiveHint` 默认 true（可能做破坏性更新）、`idempotentHint` 默认 false（相同参数重复调用无额外效果）、`openWorldHint` 默认 true（与外部实体交互）。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+            "line_start": 192,
+            "line_end": 199
+          }
+        ]
+      },
+      {
+        "topic": "评估题可含歧义",
+        "text": "题目可以是有歧义的，或需要艰难决定调用哪些工具，迫使 LLM 可能犯错或误读；但即便有歧义，仍须存在单一可验证答案。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 96,
+            "line_end": 99
+          }
+        ]
+      },
+      {
+        "topic": "应避免的差题",
+        "text": "差题示例包括：答案随当前状态变化（如当前未关闭 issue 数）、可用精确标题关键词直接搜到、以及答案为顺序不定的列表（难以字符串比对）。更好的是问某个聚合值（计数）或极值（最多星标）。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 312,
+            "line_end": 352
+          }
+        ]
+      },
+      {
+        "topic": "评估运行默认模型与超时处理",
+        "text": "评估脚本默认模型为 `claude-3-7-sonnet-20250219`；若任务超时，文档建议改用更强模型、检查工具是否返回过多数据、验证分页，并考虑简化复杂问题。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 487,
+            "line_end": 488
+          },
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 596,
+            "line_end": 602
+          }
+        ]
+      },
+      {
+        "topic": "低准确率时的排查方向",
+        "text": "若大量评估失败，文档建议阅读每题 agent 反馈，检查工具描述是否清晰完整、输入参数是否充分记录，考虑工具返回数据过多或过少，并确保错误消息可操作。",
+        "evidence": [
+          {
+            "path": "skills/mcp-builder/reference/evaluation.md",
+            "line_start": 587,
+            "line_end": 594
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/mcp-builder/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/mcp-builder/reference/python_mcp_server.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/mcp-builder/reference/evaluation.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/1",
+        "reason": "unread_dependency",
+        "detail": "SKILL.md 把 TypeScript 列为推荐语言，但核心的 TypeScript 项目结构、Zod 4 schema 写法、自检脚本与 v1→v2 迁移细节位于未提供的 reference/node_mcp_server_v2.md 与 node_mcp_server.md；因此本记录只整理了 Python 实现细节与 TS 的选型/版本约定。"
+      },
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "评估运行部分只依据 evaluation.md 的文档说明整理；scripts/evaluation.py 与 scripts/requirements.txt 的实际实现和依赖版本未提供，报告字段与运行行为未核验。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:58:01.292227+00:00"
+  }
+}

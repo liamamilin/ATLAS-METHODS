@@ -1,8 +1,10 @@
 # SkillRecord 标准化
 
-格式固定为 **v0.1.1**，检查器为 **converged.1**。本目录提供标准格式、转换约定、校验工具和样例；**尚未实现实际模型调用与可续跑批转换程序**。
+格式固定为 **v0.1.1**，检查器为 **converged.1**。`batch_convert.py` 复用本机 OpenCode 中已连接的 Open Design，逐条生成、检查并保存真实模型转换结果；Schema 和检查器保持不变。
 
 当前操作规则以 [CONVERSION-PROMPT.md](CONVERSION-PROMPT.md) 为准。下一项任务见 [NEXT-TASK.md](NEXT-TASK.md)。不叠加历史审查文件作为门禁，不重做 Schema。
+
+第 001 批已实际处理 40 条，保存 38 条、失败 2 条、待处理 0。见 [实际结果与用量](batches/batch-001.report.md)，历史人工样例不计入这 38 条。
 
 ## 运行
 
@@ -35,7 +37,38 @@ CLI 输入为一行一条记录的 UTF-8 JSONL，不是多行美化 JSON。退�
 
 累计索引是 `data/cumulative/skills.jsonl` 或其无损 gzip 版本；可直接流式读取 gzip。累计记录中的 `raw_path`、`repository_manifest` 相对于索引目录。已有路径冲突映射必须沿用，不根据入口文件名猜正文位置。
 
-原文不在当前环境时记录缺失，优先处理可访问材料。新结果放到 `data/normalized/`，不覆盖原文或累计索引。单条及时保存、已成功来源版本跳过、失败可重试；这些批处理能力仍需按 NEXT-TASK 实现。
+原文不在当前环境时记录缺失，优先处理可访问材料。新结果放到 `data/normalized/`，不覆盖原文或累计索引。单条及时保存、已成功来源版本跳过、失败可重试；这些批处理能力由 `batch_convert.py` 提供。
+
+## 实际批转换与续跑
+
+沿用本机 OpenCode 的连接与认证，默认模型为 `open-design/deepseek-v4.1-flash`。无需将 API key 写进项目。先确认 `opencode` 在 PATH 中，或用 `--opencode /absolute/path/to/opencode` 指定。当前适配器针对实测的 OpenCode v2.2.2 `run` JSON 事件及 `session export` 格式。
+
+```bash
+python3 normalization/batch_convert.py \
+  --selection normalization/batches/batch-001.selection.json \
+  --out data/normalized/batch-001 --workers 4
+
+# 同一命令继续未处理项；失败项需要显式重试
+python3 normalization/batch_convert.py \
+  --selection normalization/batches/batch-001.selection.json \
+  --out data/normalized/batch-001 --workers 4 --retry-failed
+
+python3 -m unittest discover -s normalization -p test_batch_convert.py
+```
+
+选择文件的 `items` 使用真实 `collection_id` 与固定 `commit_sha`；`references` 只列解决核心理解缺口所需的仓库路径。需要部分文件时可显式设置 `entry_ranges` 或参考项 `ranges`（LF 一基闭区间），不要默默截断。`--limit N` 仅限制本次新处理/重试项，不将其余项标为失败。默认每条最多两次尝试（可设 1—3），每次调用有超时；单条失败继续下一条。
+
+程序使用采集清单的实际 `raw_path` 读文件，发送前验证入口 SHA-256 和所有输入文件的 Git blob 哈希。`files_read` 仅记录实际嵌入请求的文件与范围，完整文本在内存中不代表全部送给模型。模型仅生成 `content/gaps`；来源、状态、时间和读取范围由程序合入，再调用原响应 Schema 和完整检查器。记录保持 `unreviewed` / `not_executed`。
+
+输出包含：
+
+- `records/<身份键>.json` 和汇总 `records.jsonl`：通过检查的实际转换；按 collection_id + commit 续跑跳过，不按正文哈希合并来源。
+- `state.json`、`failures.jsonl`、`remaining.selection.json`：逐条进度、最后失败及剩余清单。成功标记缺少实际文件时不算完成；保存文件后中断可从文件恢复。输出目录带运行锁，避免两个批进程同时写入。
+- `inputs/`、`attempts/*/*/metadata.json`：实际输入路径、范围、哈希、请求摘要、检查结果、模型会话 ID 和用量，包括失败请求。
+- `report.json`：累计结果、当前调用的跳过/尝试数和可取得的用量。OpenCode 的 cost 只是其报告的估计；0 不证明免费，未核实账单费用保持未知。reasoning/cache 可能与 input/output 重叠，不机械相加。
+- `attempts/` 中的完整请求、原响应、事件、会话和 stderr：持久保留本地并由 `.gitignore` 排除，避免把请求内上游原文批量公开。
+
+每次转换启动独立临时 OpenCode Location，设置 cwd 与 PWD 一致，使用禁止全部工具操作的专用 primary agent，不加载本项目为编码任务。没有运行上游命令、脚本或 hooks；不会让模型自行取文件或补造阅读范围。权限字段依据 [OpenCode permissions](https://opencode.ai/docs/permissions/)，实际配置加载及 JSON/用量解析另有回归测试。
 
 ## 格式和校验边界
 

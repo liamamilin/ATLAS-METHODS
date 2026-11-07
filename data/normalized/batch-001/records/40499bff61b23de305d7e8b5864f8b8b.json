@@ -1,0 +1,416 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "05d408b4284eb2738b8c",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/webapp-testing/SKILL.md",
+    "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+    "entry_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+  },
+  "content": {
+    "name": "webapp-testing",
+    "title": "用 Playwright 脚本测试本地 Web 应用",
+    "summary": "该 Skill 面向本地 Web 应用的功能验证、UI 调试、截图与控制台日志采集，做法是编写原生 Python Playwright 脚本；先按页面类型分流：静态 HTML 直接读文件取选择器，动态应用则按“先侦察后行动”在 networkidle 后从渲染状态识别选择器再执行动作；服务器生命周期可用捆绑脚本 with_server.py 以黑盒方式管理（含多服务器），脚本应先 --help 再直接调用。",
+    "evidence": [
+      {
+        "path": "skills/webapp-testing/SKILL.md",
+        "section": "Web Application Testing",
+        "line_start": 7,
+        "line_end": 14
+      }
+    ],
+    "tasks": [
+      {
+        "id": "static-html-selectors",
+        "goal": "对静态 HTML 页面，直接读取 HTML 文件确定选择器，并据此编写 Playwright 脚本。",
+        "when": "用户任务对应的是静态 HTML 页面。",
+        "inputs": [
+          "静态 HTML 文件"
+        ],
+        "outputs": [
+          "使用已识别选择器的 Playwright 自动化脚本"
+        ],
+        "steps": [
+          {
+            "action": "直接读取 HTML 文件以识别选择器。",
+            "when": "页面为静态 HTML",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 19,
+                "line_end": 22
+              }
+            ]
+          },
+          {
+            "action": "使用读到的选择器编写 Playwright 脚本。",
+            "when": "从 HTML 文件成功识别出选择器",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 21,
+                "line_end": 21
+              }
+            ]
+          },
+          {
+            "action": "按动态 Web 应用处理，转入侦察—行动流程。",
+            "when": "直接读取 HTML 失败或信息不完整",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 22,
+                "line_end": 22
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "只有直接从静态 HTML 读取出选择器，才用这些选择器驱动脚本；读取失败或不完整时不得沿用静态假设。",
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 19,
+                "line_end": 23
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 16,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "id": "dynamic-app-recon",
+        "goal": "对动态本地 Web 应用，在页面渲染完成后再侦察并执行操作，完成验证、调试、截图或日志采集。",
+        "when": "页面不是静态 HTML（动态 Web 应用）。",
+        "inputs": [
+          "本地 Web 应用（已在运行或需启动）",
+          "Playwright Python 脚本"
+        ],
+        "outputs": [
+          "自动化操作结果",
+          "页面截图、渲染后 DOM 内容或控制台日志"
+        ],
+        "steps": [
+          {
+            "action": "先运行 `python scripts/with_server.py --help` 查看用法，再用该 helper 启动服务器并运行简化的 Playwright 脚本。",
+            "when": "服务器尚未运行",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 24,
+                "line_end": 26
+              }
+            ]
+          },
+          {
+            "action": "自动化脚本只包含 Playwright 逻辑，服务器由 helper 自动管理；例如以 `python scripts/with_server.py --server \"npm run dev\" --port 5173 -- python your_automation.py` 形式调用，多服务器则重复 `--server/--port` 参数。",
+            "when": "使用 with_server.py 管理服务器",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 39,
+                "line_end": 52
+              }
+            ]
+          },
+          {
+            "action": "在同步 API 下以 headless 模式启动 chromium，打开页面并等待 `networkidle` 后再继续。",
+            "when": "编写动态应用自动化脚本",
+            "rationale": "等待 JS 执行完成，否则后续 DOM 检查可能不反映真实渲染状态。",
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 54,
+                "line_end": 60
+              },
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 78,
+                "line_end": 81
+              }
+            ]
+          },
+          {
+            "action": "对渲染后的页面做侦察：截图（如 `page.screenshot(path='/tmp/inspect.png', full_page=True)`）、读取 `page.content()`、用 `page.locator('button').all()` 枚举元素。",
+            "when": "需要确定页面结构或选择器",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 65,
+                "line_end": 72
+              }
+            ]
+          },
+          {
+            "action": "从侦察结果中识别选择器，再用这些已发现的选择器执行具体动作。",
+            "when": "页面为动态渲染",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 74,
+                "line_end": 76
+              }
+            ]
+          },
+          {
+            "action": "任务结束时关闭浏览器。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 86,
+                "line_end": 87
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "动态应用不得在等待 `networkidle` 之前检查 DOM；应先 `page.wait_for_load_state('networkidle')` 再检查。",
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 78,
+                "line_end": 81
+              }
+            ]
+          },
+          {
+            "text": "脚本中使用描述性选择器（`text=`、`role=`、CSS 选择器或 ID），并按需加入 `page.wait_for_selector()` 或 `page.wait_for_timeout()` 等待。",
+            "evidence": [
+              {
+                "path": "skills/webapp-testing/SKILL.md",
+                "line_start": 88,
+                "line_end": 89
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 16,
+            "line_end": 33
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "始终先用 `--help` 运行捆绑脚本；在运行过脚本且确认确实需要定制方案之前，不要读其源码。",
+        "when": "使用 `scripts/` 中的任何捆绑脚本",
+        "rationale": "这些脚本可能非常大，读入会污染上下文窗口；它们被设计为可直接调用的黑盒脚本。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 14,
+            "line_end": 14
+          },
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 85,
+            "line_end": 85
+          }
+        ]
+      },
+      {
+        "text": "测试本地 Web 应用时应编写原生 Python Playwright 脚本。",
+        "when": "测试本地 Web 应用",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "text": "始终以 headless 模式启动 chromium。",
+        "when": "启动浏览器",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 57,
+            "line_end": 57
+          }
+        ]
+      },
+      {
+        "text": "同步脚本使用 `sync_playwright()`；任务完成后始终关闭浏览器。",
+        "when": "编写或收尾 Playwright 脚本",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 86,
+            "line_end": 87
+          }
+        ]
+      },
+      {
+        "text": "不要在动态应用等待 `networkidle` 之前检查 DOM。",
+        "when": "动态应用侦察",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 80,
+            "line_end": 81
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "with_server.py",
+        "kind": "script",
+        "locator": "skills/webapp-testing/scripts/with_server.py",
+        "usage": "管理服务器生命周期（支持多个服务器）；先 `--help` 查看用法，再以 `python scripts/with_server.py --server ... --port ... -- python your_automation.py` 直接调用，不要先读源码。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 11,
+            "line_end": 14
+          },
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 37,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "name": "Playwright Python（playwright.sync_api）",
+        "kind": "environment",
+        "locator": "playwright.sync_api",
+        "usage": "编写同步自动化脚本：启动 chromium、导航、等待 `networkidle`、截图、读取 DOM、执行动作。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          },
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 54,
+            "line_end": 62
+          }
+        ]
+      },
+      {
+        "name": "element_discovery.py",
+        "kind": "reference",
+        "locator": "skills/webapp-testing/examples/element_discovery.py",
+        "usage": "示例：发现页面上的按钮、链接和输入框；文件内容未读取，用途据文档所述。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 91,
+            "line_end": 96
+          }
+        ]
+      },
+      {
+        "name": "static_html_automation.py",
+        "kind": "reference",
+        "locator": "skills/webapp-testing/examples/static_html_automation.py",
+        "usage": "示例：对本地 HTML 使用 file:// URL；文件内容未读取，用途据文档所述。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 94,
+            "line_end": 95
+          }
+        ]
+      },
+      {
+        "name": "console_logging.py",
+        "kind": "reference",
+        "locator": "skills/webapp-testing/examples/console_logging.py",
+        "usage": "示例：在自动化过程中捕获控制台日志；文件内容未读取，用途据文档所述。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 96,
+            "line_end": 96
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "服务器启动命令示例",
+        "text": "文档给出单服务器（如 `--server \"npm run dev\" --port 5173`）与多服务器（后端 3000 + 前端 5173，各自带 `--server`/`--port`）两类调用形式，属于示例而非唯一规则。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 39,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "topic": "脚本骨架与启动假设",
+        "text": "示例脚本假设调用时服务器已在运行并已就绪，因此直接 `page.goto('http://localhost:5173')`，随后等待 `networkidle`。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 56,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "topic": "侦察输出示例",
+        "text": "文档示例的截图写入 `/tmp/inspect.png`，并设置 `full_page=True` 以截取整页。",
+        "evidence": [
+          {
+            "path": "skills/webapp-testing/SKILL.md",
+            "line_start": 69,
+            "line_end": 69
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/webapp-testing/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/steps/2/when",
+        "reason": "ambiguous",
+        "detail": "原文未给出“直接读取 HTML 失败/不完整”的具体判据（如缺少所需选择器或结构依赖 JS 渲染），仅指明应转为动态应用处理。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:51:31.002032+00:00"
+  }
+}

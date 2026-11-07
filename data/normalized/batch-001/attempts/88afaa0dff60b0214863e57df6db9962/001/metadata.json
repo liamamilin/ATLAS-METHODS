@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:52:52.712527+00:00",
+  "source": {
+    "collection_id": "2cca6e76006ddfe15d6e",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/debugging-and-error-recovery/SKILL.md",
+    "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+    "entry_sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "cac45575e593b16ce6c58cd0cd110fbb39f318ba29b41a4ae63376d49eb4688b",
+  "input_files": [
+    {
+      "path": "skills/debugging-and-error-recovery/SKILL.md",
+      "coverage": "full",
+      "sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610",
+      "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+      "bytes": 10893,
+      "source_lines": 300
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e49807a97ffeLkrD01C41SXggw",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 7437,
+          "output": 4465,
+          "reasoning": 5119,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:53:52.080408+00:00"
+}

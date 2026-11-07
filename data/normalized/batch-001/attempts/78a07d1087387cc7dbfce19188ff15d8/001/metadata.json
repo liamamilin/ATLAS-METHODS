@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:53:13.679742+00:00",
+  "source": {
+    "collection_id": "20e6303dc33a24a868aa",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/writing-guidelines/SKILL.md",
+    "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+    "entry_sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "6b11eb8e904b45b5f2be1e5f8fd2063d2705cc23fb0b27dbe485561d8eecd642",
+  "input_files": [
+    {
+      "path": "skills/writing-guidelines/SKILL.md",
+      "coverage": "full",
+      "sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d",
+      "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+      "bytes": 1233,
+      "source_lines": 39
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498028eefferv6tVTkuOZXxEZ",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 4566,
+          "output": 1554,
+          "reasoning": 1603,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:53:36.191948+00:00"
+}

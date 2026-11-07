@@ -1,0 +1,800 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "8a5610a28e2959388a11",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/code-review-and-quality/SKILL.md",
+    "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+    "entry_sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797"
+  },
+  "content": {
+    "name": "code-review-and-quality",
+    "title": "多轴代码审查与合并前质量门禁",
+    "summary": "对合并前的代码变更进行正确性、可读性与简洁性、架构、安全、性能五个维度的审查；要求按严重度标注发现、优先处理高杠杆问题、为结构问题提出具体重构动作，并覆盖变更拆分、变更描述、验证故事、死代码清理、审查节奏、分歧处理、依赖升级和最终验证清单。",
+    "evidence": [
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "line_start": 1,
+        "line_end": 12
+      },
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "line_start": 22,
+        "line_end": 86
+      },
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "line_start": 140,
+        "line_end": 207
+      },
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "line_start": 283,
+        "line_end": 302
+      },
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "line_start": 306,
+        "line_end": 352
+      }
+    ],
+    "tasks": [
+      {
+        "id": "pre-merge-five-axis-review",
+        "goal": "在合并前对代码变更进行五轴审查，给出按严重度标注的发现、结构整改建议和合并结论。",
+        "when": "合并任何 PR 或变更前；功能实现完成后；需要评估其他 agent 或模型生成的代码时；重构现有代码时；任何 bug 修复后（同时审查修复和回归测试）。",
+        "inputs": [
+          "待审查的 diff 或 PR",
+          "规格或任务要求，以及预期行为变化",
+          "变更包含的测试",
+          "作者的验证说明（运行了哪些测试、构建是否通过、是否手动验证、UI 变更是否有截图、是否有前后对比）"
+        ],
+        "outputs": [
+          "按严重度标注的审查意见",
+          "结构问题的具体重构建议",
+          "Approve 或 Request changes 的结论",
+          "必要时列出死代码清单并询问是否删除"
+        ],
+        "steps": [
+          {
+            "action": "先理解变更意图：它要实现什么、对应哪个规格或任务、预期行为如何变化。",
+            "when": "开始看代码之前",
+            "rationale": "先理解意图才能判断实现是否符合目标。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 142,
+                "line_end": 150
+              }
+            ]
+          },
+          {
+            "action": "先审查测试：确认是否存在测试、测试行为而非实现细节、覆盖边界情况、命名具有描述性，并判断代码改变时测试能否捕获回归。最后一项要通过实验回答：反转变更新增的一个条件（去掉否定、把 && 换成 ||），运行测试套件，然后从副本恢复文件；如果变异后测试仍然通过，就把缺失的测试用例记为发现。",
+            "when": "审查实现之前",
+            "rationale": "测试揭示意图和覆盖范围；实验比只读测试更能发现覆盖缺口。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 152,
+                "line_end": 164
+              }
+            ]
+          },
+          {
+            "action": "逐个文件按五个维度走查实现：正确性、可读性、架构、安全、性能。",
+            "when": "审查具体代码时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 166,
+                "line_end": 177
+              }
+            ]
+          },
+          {
+            "action": "报告发现前，先对照到达被改代码的调用方、守卫和测试进行核实；如果这些信息能排除该问题，就丢弃该发现。把基线中已存在的缺陷与本次变更引入的回归分开标注；零发现是合法结果，不要为了凑数编造发现。",
+            "when": "归类审查发现时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 179,
+                "line_end": 181
+              }
+            ]
+          },
+          {
+            "action": "给每条评论标注严重度和作者需要采取的行动：无前缀表示必须修改，合并前必须处理；Critical 表示阻塞合并（安全漏洞、数据丢失、功能损坏）；Nit 表示次要且可选；Optional 或 Consider 表示建议，作者可自行决定；FYI 表示仅提供信息，无需行动。",
+            "when": "撰写审查评论时",
+            "rationale": "避免作者把所有反馈都当成强制要求，把时间浪费在可选建议上。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 183,
+                "line_end": 193
+              }
+            ]
+          },
+          {
+            "action": "按影响力排序发现：正确性和安全优先，其次是结构回归和遗漏的简化，最后才是其他问题；不要让表面小问题淹没真正的问题。",
+            "when": "组织审查意见时",
+            "rationale": "少量高置信度评论比一长串小问题更有价值；如果有一个结构问题加十个 nit，结构问题就是这次审查的重点。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 195,
+                "line_end": 195
+              }
+            ]
+          },
+          {
+            "action": "核查作者的验证说明：运行了哪些测试、构建是否通过、是否手动测试、UI 变更是否有截图、是否有前后对比。",
+            "when": "确认变更是否经过验证时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 197,
+                "line_end": 207
+              }
+            ]
+          },
+          {
+            "action": "重构或实现变更后，识别并明确列出不再可达或不再使用的代码，删除前询问作者，例如“是否现在删除这些不再使用的元素：[清单]？”；不要静默删除不确定的内容。",
+            "when": "任何重构或实现变更后",
+            "rationale": "死代码会迷惑后续读者和 agent，但不确定的代码不应擅自删除。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 235,
+                "line_end": 243
+              }
+            ]
+          },
+          {
+            "action": "完成审查后核对验证清单：所有 Critical 问题已解决；所有 Required（无前缀）修改已解决，或明确延期并说明理由；测试通过；构建成功；验证故事已记录（改了什么、如何验证）；依赖升级已按 changelog 审查、按包隔离、由绿测验证，并审查了 lockfile diff。",
+            "when": "审查收尾时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 389,
+                "line_end": 398
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "正确性：变更符合规格或任务要求；边界情况（null、空、边界值）和错误路径已处理，而不仅是 happy path；测试确实测试了正确的东西；没有 off-by-one、竞态条件或状态不一致。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 26,
+                "line_end": 34
+              }
+            ]
+          },
+          {
+            "text": "可读性与简洁性：命名具有描述性并符合项目约定（不使用无上下文的 temp、data、result）；控制流直接，避免嵌套三元和深层回调；代码组织符合逻辑；没有应被简化的“聪明”技巧；如果 100 行能完成却写了 1000 行，视为失败；抽象在第三个用例出现前不应泛化；只为非显然意图添加注释，不为显然代码添加注释；没有 no-op 变量（如 _unused）、向后兼容垫片或“// removed”注释；新增条件被硬塞进无关流程属于设计异味，应把逻辑放进自己的 helper、状态或策略；同一形状的重复条件通常意味着缺少模型或 dispatcher，“临时”分支往往是永久债务。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 36,
+                "line_end": 49
+              }
+            ]
+          },
+          {
+            "text": "架构：遵循现有模式，若引入新模式则说明其合理性；保持清晰的模块边界；避免应共享的重复代码；依赖方向正确，没有循环依赖；抽象层级适当，既不过度工程也不太耦合；重构应降低复杂度而非转移复杂度——数一数读者理解变更需要持有多少概念，如果“更干净”的版本没有减少这个数量，就不算更干净，优先选择让整条分支、模式或层消失的重构，并优先删除抽象而不是打磨抽象；特性逻辑不得泄漏到共享或通用模块，应留在拥有该概念的层，复用已有的规范 helper 而不是近似重复，也不要把架构漂移正常化；类型边界应显式，质疑无必要的 any、unknown、optional、类型断言以及掩盖不清晰不变量的静默回退。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 51,
+                "line_end": 62
+              }
+            ]
+          },
+          {
+            "text": "安全：用户输入经过验证和净化；密钥不出现在代码、日志和版本控制中；需要时检查认证和授权；SQL 查询参数化，不用字符串拼接；输出编码以防 XSS；依赖来自可信来源且没有已知漏洞；来自外部来源的数据（API、日志、用户内容、配置文件）被视为不可信；外部数据流在进入逻辑或渲染前于系统边界验证。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 64,
+                "line_end": 75
+              }
+            ]
+          },
+          {
+            "text": "性能：没有 N+1 查询；没有无界循环或不受限的数据获取；没有本应异步的同步操作；UI 组件没有不必要的重渲染；列表端点有分页；热点路径没有创建大对象。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 77,
+                "line_end": 86
+              }
+            ]
+          },
+          {
+            "text": "验证：测试通过、构建成功；适用时已完成手动验证；按照清单给出 Approve（可合并）或 Request changes（问题必须处理）的结论。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 344,
+                "line_end": 351
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 14,
+            "line_end": 24
+          },
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 140,
+            "line_end": 207
+          },
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 306,
+            "line_end": 352
+          }
+        ]
+      },
+      {
+        "id": "dependency-review",
+        "goal": "审查新增或升级依赖，控制供应链风险和升级风险。",
+        "when": "变更引入新依赖，或升级现有依赖（尤其是批量“bump deps”式变更）时。",
+        "inputs": [
+          "现有技术栈与依赖清单",
+          "package.json 与 lockfile diff",
+          "依赖的 changelog 和迁移说明",
+          "测试套件结果",
+          "依赖大小、维护状态、已知漏洞和许可证信息（如通过 npm audit 检查）"
+        ],
+        "outputs": [
+          "是否添加依赖的判断",
+          "按包隔离的升级变更",
+          "升级前后测试结果与 lockfile diff 审查结论",
+          "覆盖不足时需要补充的测试"
+        ],
+        "steps": [
+          {
+            "action": "添加任何依赖前依次评估：现有技术栈是否已能解决（通常可以）；依赖有多大（检查打包体积影响）；是否活跃维护（检查最后提交和 open issues）；是否有已知漏洞（npm audit）；许可证是否与项目兼容。",
+            "when": "准备新增依赖时",
+            "rationale": "每个依赖都是负债，优先标准库和现有工具。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 287,
+                "line_end": 294
+              }
+            ]
+          },
+          {
+            "action": "升级现有依赖时先读 changelog，而不只看版本号；semver 是维护者可能没有遵守的承诺，patch 版本也可能带有行为变化；major 升级要读迁移说明并找出会破坏什么。",
+            "when": "升级依赖时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 298,
+                "line_end": 298
+              }
+            ]
+          },
+          {
+            "action": "每个变更只升级一个依赖，或只升级一小组相关依赖；批量 bump 导致构建失败时很难判断是哪个包造成的，单包变更能让原因更明显、回滚更干净。",
+            "when": "安排依赖升级变更时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 299,
+                "line_end": 299
+              }
+            ]
+          },
+          {
+            "action": "用升级前和升级后都通过的绿测来验证升级，而不是以“安装成功”为准；如果围绕该依赖行为的覆盖很薄，这个缺口本身就是发现，应先补测试。",
+            "when": "验证依赖升级时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 300,
+                "line_end": 300
+              }
+            ]
+          },
+          {
+            "action": "审查 lockfile diff 而不只是 package.json；一个直接依赖升级可能带入几十个间接变化。提交 lockfile、审查它的 diff，绝不手工编辑，因为它才是实际锁定发布内容的文件。",
+            "when": "审查依赖变更时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 301,
+                "line_end": 302
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "升级是否阅读了 changelog 和迁移说明，而不是只看版本号。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 298,
+                "line_end": 298
+              }
+            ]
+          },
+          {
+            "text": "依赖升级是否按包隔离，避免批量 bump 掩盖故障来源。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 299,
+                "line_end": 299
+              }
+            ]
+          },
+          {
+            "text": "升级前后是否有通过的测试套件作为验证依据。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 300,
+                "line_end": 300
+              }
+            ]
+          },
+          {
+            "text": "lockfile diff 是否经过审查、已提交且未被手工编辑。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 301,
+                "line_end": 302
+              }
+            ]
+          },
+          {
+            "text": "最终验证清单是否确认：依赖升级已按 changelog 审查、按包隔离、由绿测验证，并审查了 lockfile diff。",
+            "evidence": [
+              {
+                "path": "skills/code-review-and-quality/SKILL.md",
+                "line_start": 398,
+                "line_end": 398
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 283,
+            "line_end": 304
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "每个变更在合并前都必须接受审查，没有例外。",
+        "when": "合并任何 PR 或变更前",
+        "rationale": "审查是合并前的质量门禁。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 10,
+            "line_end": 10
+          }
+        ]
+      },
+      {
+        "text": "当变更确实改善整体代码健康时就批准，即使它并不完美；不要因为写法与自己不同而阻塞；只要变更改善代码库并遵循项目约定就批准。",
+        "when": "作出批准决定时",
+        "rationale": "完美代码不存在，目标是持续改进。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ]
+      },
+      {
+        "text": "每次审查都评估五个维度：正确性、可读性与简洁性、架构、安全、性能。",
+        "when": "任何代码审查中",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 22,
+            "line_end": 24
+          }
+        ]
+      },
+      {
+        "text": "标记结构问题时必须提出具体重构动作，而不只是说“这里很复杂”；可使用：用类型模型或显式 dispatcher 替换条件链；合并重复分支；分离编排与业务逻辑；把特性逻辑移出共享模块；复用规范 helper 而非定制的近似实现；显式化类型边界以消除下游分支；删除只增加间接层而不澄清 API 的透传包装；提取 helper 或把大文件拆成聚焦模块。",
+        "when": "报告中出现结构性问题时",
+        "rationale": "只说“复杂”会让作者不知道该怎么改。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 90,
+            "line_end": 99
+          }
+        ]
+      },
+      {
+        "text": "优先选择移除活动部件的补救，而不是把同样的复杂度分散到别处。",
+        "when": "在多个重构方案之间选择时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 101,
+            "line_end": 101
+          }
+        ]
+      },
+      {
+        "text": "变更规模目标：约 100 行改动为良好，可一次审查完；约 300 行若属于单一逻辑变更可接受；约 1000 行太大，应拆分。",
+        "when": "评估变更大小时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 105,
+            "line_end": 111
+          }
+        ]
+      },
+      {
+        "text": "关注文件大小而不只是 diff 大小：单文件约 1000 总行是常见检查信号，不是硬上限；当变更显著增大本已很大的文件时，先考虑提取 helper、子组件或模块，再继续添加，即先分解再添加。",
+        "when": "变更会增大已有大文件时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 113,
+            "line_end": 113
+          }
+        ]
+      },
+      {
+        "text": "“一个变更”指单一自包含修改：只解决一件事、包含相关测试、提交后系统仍可用；它是特性的一部分，而不是整个特性。",
+        "when": "判断变更是否应拆分时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 115,
+            "line_end": 115
+          }
+        ]
+      },
+      {
+        "text": "变更过大时可按以下策略拆分：依赖顺序的 stack（先提交小变更，再基于它做下一个）；按文件组拆分给不同审查者；水平拆分（先建共享代码或桩，再接消费者）；垂直拆分（拆成更小的全栈特性切片）。",
+        "when": "变更过大时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 117,
+            "line_end": 124
+          }
+        ]
+      },
+      {
+        "text": "完整文件删除和自动重构可作为大变更的例外，因为审查者只需验证意图，不必逐行检查。",
+        "when": "判断大变更是否可接受时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 126,
+            "line_end": 126
+          }
+        ]
+      },
+      {
+        "text": "重构与功能工作分开提交；小型清理（如变量重命名）可由审查者酌情包含。",
+        "when": "组织提交内容时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 128,
+            "line_end": 128
+          }
+        ]
+      },
+      {
+        "text": "变更描述首行应简短、使用祈使句、可独立理解；正文说明改什么和为什么，包含代码中不可见的上下文、决策与理由，相关时链接 bug 号、基准结果或设计文档，并承认方法缺陷。避免“Fix bug”“Fix build”“Add patch”“Moving code from A to B”“Phase 1”“Add convenience functions”等反模式。",
+        "when": "撰写变更描述时",
+        "rationale": "描述应能在版本控制历史中独立成立。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 132,
+            "line_end": 138
+          }
+        ]
+      },
+      {
+        "text": "删除死代码前先识别、明确列出并询问，例如“是否现在删除这些不再使用的元素：[清单]？”；不要静默删除不确定的内容。",
+        "when": "重构或实现变更后发现孤立代码时",
+        "rationale": "死代码会迷惑后续读者和 agent，但不确定的代码不应擅自删除。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 235,
+            "line_end": 243
+          }
+        ]
+      },
+      {
+        "text": "审查应在一个工作日内回复，这是上限而不是目标；理想情况下在收到审查请求后不久回复，除非正深度专注于编码；典型变更应能在一天内完成多轮审查；优先保证快速个别反馈，而不是快速最终批准；大变更应要求作者拆分，而不是整体审查。",
+        "when": "安排审查响应节奏时",
+        "rationale": "慢审查会阻塞整个团队，切换上下文审查的成本低于让别人等待的成本。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 253,
+            "line_end": 260
+          }
+        ]
+      },
+      {
+        "text": "分歧处理层级：技术事实和数据高于意见与偏好；风格指南是风格问题的绝对权威；软件设计应按工程原则评估，而不是个人偏好；代码库一致性若不降低整体健康则可接受。",
+        "when": "解决审查分歧时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 264,
+            "line_end": 269
+          }
+        ]
+      },
+      {
+        "text": "不接受“我以后会清理”；经验表明延迟清理很少发生，除非真正紧急，否则要求提交前清理；若周边问题无法在当前变更解决，要求开 bug 并自指派。",
+        "when": "作者提出延期清理时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 271,
+            "line_end": 271
+          }
+        ]
+      },
+      {
+        "text": "审查要诚实：不要无证据地 LGTM；不要淡化真问题；尽可能量化问题；对有明显缺陷的方法直接指出并提出替代方案；作者有完整上下文并不同意时可优雅接受推翻；评论代码而非人。",
+        "when": "撰写审查意见时",
+        "rationale": "奉承是审查中的失败模式，无证据的通过不能帮助任何人。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 275,
+            "line_end": 281
+          }
+        ]
+      },
+      {
+        "text": "优先使用标准库和现有工具而非新增依赖；每个依赖都是负债。",
+        "when": "决定是否引入依赖时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 294,
+            "line_end": 294
+          }
+        ]
+      },
+      {
+        "text": "升级依赖的纪律：读 changelog 而不只看版本号（semver 可能未被遵守，patch 也可能带行为变化；major 要读迁移说明）；每个变更只升级一个依赖或一小组相关依赖；用升级前后的绿测验证；注意传递依赖图，审查 lockfile diff 而不只是 package.json；提交 lockfile、审查其 diff、绝不手工编辑。",
+        "when": "升级现有依赖时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 296,
+            "line_end": 302
+          }
+        ]
+      },
+      {
+        "text": "以下为推定阻塞项：转移复杂度而非降低复杂度的重构；把文件推过大小边界却不做分解；向共享模块加入特性逻辑；与现有规范 helper 近乎重复；掩盖不清晰不变量的静默回退。对每一项应提出更简单的设计；只有当变更确实使结构变差时才升级为 Required。",
+        "when": "审查出现上述结构问题时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 400,
+            "line_end": 400
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "审查清单模板",
+        "kind": "template",
+        "locator": "skills/code-review-and-quality/SKILL.md",
+        "usage": "文档内提供的 Review Checklist，按上下文、正确性、可读性、架构、安全、性能、验证和结论分项勾选。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 306,
+            "line_end": 352
+          }
+        ]
+      },
+      {
+        "name": "安全审查清单",
+        "kind": "reference",
+        "locator": "../../references/security-checklist.md",
+        "usage": "文档指向的更详细安全审查指引；本次未读取该文件内容。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 353,
+            "line_end": 356
+          }
+        ]
+      },
+      {
+        "name": "性能审查清单",
+        "kind": "reference",
+        "locator": "../../references/performance-checklist.md",
+        "usage": "文档指向的性能审查检查项；本次未读取该文件内容。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 353,
+            "line_end": 356
+          }
+        ]
+      },
+      {
+        "name": "security-and-hardening",
+        "kind": "skill",
+        "locator": null,
+        "usage": "文档所述：提供详细安全审查指引、npm audit 发现分级和供应链风险（仿冒包、维护者被攻陷）处理；本次未读取该 Skill。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 66,
+            "line_end": 66
+          },
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 304,
+            "line_end": 304
+          }
+        ]
+      },
+      {
+        "name": "performance-optimization",
+        "kind": "skill",
+        "locator": null,
+        "usage": "文档所述：提供详细性能分析和优化指引；本次未读取该 Skill。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 79,
+            "line_end": 79
+          }
+        ]
+      },
+      {
+        "name": "constraint-driven-development",
+        "kind": "skill",
+        "locator": null,
+        "usage": "文档所述：用于获取项目级变异测试得分；本次未读取该 Skill。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 164,
+            "line_end": 164
+          }
+        ]
+      },
+      {
+        "name": "npm audit",
+        "kind": "tool",
+        "locator": "npm audit",
+        "usage": "文档建议用于检查依赖的已知漏洞。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 291,
+            "line_end": 291
+          }
+        ]
+      },
+      {
+        "name": "审查 agent 提示示例",
+        "kind": "template",
+        "locator": "skills/code-review-and-quality/SKILL.md",
+        "usage": "文档提供的示例提示：要求按正确性、安全性和项目约定审查代码，说明规格和预期行为，并按 Critical、Required、Optional、Nit 标注问题。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 228,
+            "line_end": 233
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "多模型审查模式",
+        "text": "可使用不同模型获得不同审查视角：模型 A 写代码，模型 B 审查正确性和架构，模型 A 处理反馈，最后由人做决定；不同模型有不同盲点，这种模式能捕获单一模型可能漏掉的问题。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 209,
+            "line_end": 226
+          }
+        ]
+      },
+      {
+        "topic": "常见合理化与反驳",
+        "text": "文档列出若干需要反驳的合理化：测试通过是必要的但不充分，不能发现架构、安全或可读性问题；AI 生成代码需要更多而不是更少审查；重构若让读者仍需持有相同数量的概念，就没有降低复杂度；小 diff 仍可能把文件推过健康大小或把分支硬塞进无关流程；“只是版本升级”仍是未由作者编写的行为变更，semver 不保证不破坏；批量升级导致构建失败时无法判断是哪个包造成的。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 360,
+            "line_end": 370
+          }
+        ]
+      },
+      {
+        "topic": "审查红旗",
+        "text": "无审查即合并；只检查测试是否通过而忽略其他维度；没有实际审查证据的 LGTM；安全敏感变更没有安全专项审查；大到无法正确审查的 PR；bug 修复没有回归测试；审查评论没有严重度标签；接受“以后再修”；只移动代码而不减少读者需持有概念数的重构；增大已很大文件而不分解；新条件散落到无关代码路径；重复已有规范 helper 的定制 helper 或把特性逻辑放进共享模块；没有 changelog 审查和按包隔离的批量依赖 bump；lockfile 被手工编辑、未提交或未审 diff 就合并。",
+        "evidence": [
+          {
+            "path": "skills/code-review-and-quality/SKILL.md",
+            "line_start": 372,
+            "line_end": 387
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources",
+        "reason": "unread_dependency",
+        "detail": "SKILL 指向的 references/security-checklist.md、references/performance-checklist.md 以及 security-and-hardening、performance-optimization、constraint-driven-development 三个 Skill 未提供或未读取；这些材料中的详细检查项、供应链风险分级和变异测试用法无法在本记录中展开。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:52.701631+00:00"
+  }
+}

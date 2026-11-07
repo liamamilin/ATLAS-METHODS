@@ -1,0 +1,421 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "3c4ca3c0ea22ca65b5c3",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-docs-write/SKILL.md",
+    "git_blob_sha": "4c903126fa2d9a0e2ba3feb129c8c8f5a6a50fbb",
+    "entry_sha256": "219028230078e0d14df314f2ae18b5918721fb5e298bba7d0a010937b2965045"
+  },
+  "content": {
+    "name": "gws-docs-write",
+    "title": "用 gws CLI 向 Google 文档末尾追加纯文本",
+    "summary": "通过 `gws docs +write --document <ID> --text <TEXT>` 把纯文本插入已有 Google 文档正文的末尾。文档 ID 与文本为必填参数；该命令只处理纯文本，富格式需改用原始 batchUpdate API。作为写命令，执行前须与用户确认；认证、全局 flag 与安全规则来自共享参考 gws-shared。",
+    "evidence": [
+      {
+        "path": "skills/gws-docs-write/SKILL.md",
+        "line_start": 14,
+        "line_end": 45
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "line_start": 13,
+        "line_end": 60
+      }
+    ],
+    "tasks": [
+      {
+        "id": "append-plain-text",
+        "goal": "在已有 Google 文档的正文末尾追加一段纯文本。",
+        "when": "需要向 Google Docs 文档追加纯文本内容时；需要富格式时改走 raw batchUpdate API，不在本任务范围内。",
+        "inputs": [
+          "文档 ID（--document）",
+          "要追加的纯文本（--text）"
+        ],
+        "outputs": [
+          "文本被插入文档正文末尾后的文档"
+        ],
+        "steps": [
+          {
+            "action": "阅读 `../gws-shared/SKILL.md` 获取认证方式、全局 flag 与安全规则；若该文件缺失，运行 `gws generate-skills` 生成。",
+            "when": "开始使用 docs +write 之前",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-docs-write/SKILL.md",
+                "line_start": 16,
+                "line_end": 16
+              }
+            ]
+          },
+          {
+            "action": "执行 `gws docs +write --document <ID> --text <TEXT>`，其中 `--document` 填文档 ID、`--text` 填纯文本，两者均必填。",
+            "when": "已完成前置参考阅读并确认要追加的内容",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-docs-write/SKILL.md",
+                "line_start": 22,
+                "line_end": 31
+              }
+            ]
+          },
+          {
+            "action": "执行前先与用户确认该写操作（可使用 --dry-run 在本地校验而不调用 API）。",
+            "when": "即将实际执行写命令时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-docs-write/SKILL.md",
+                "line_start": 44,
+                "line_end": 45
+              },
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 58,
+                "line_end": 59
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "这是 write 命令，执行前须与用户确认。",
+            "evidence": [
+              {
+                "path": "skills/gws-docs-write/SKILL.md",
+                "line_start": 44,
+                "line_end": 45
+              }
+            ]
+          },
+          {
+            "text": "写/删命令执行前始终与用户确认；破坏性操作优先使用 --dry-run 做本地校验。",
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 58,
+                "line_end": 59
+              },
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 34,
+                "line_end": 34
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 14,
+            "line_end": 45
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "`--document` 与 `--text` 均为必填参数：前者为文档 ID，后者为要追加的纯文本。",
+        "when": "调用 `docs +write` 时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 28,
+            "line_end": 31
+          }
+        ]
+      },
+      {
+        "text": "文本被插入文档正文（body）的末尾。",
+        "when": "使用 `docs +write` 追加文本时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 41,
+            "line_end": 41
+          }
+        ]
+      },
+      {
+        "text": "需要富格式时不要用本命令，改用原始 batchUpdate API。",
+        "when": "需要富文本格式时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 42,
+            "line_end": 42
+          }
+        ]
+      },
+      {
+        "text": "该命令是 write 命令，执行前必须与用户确认。",
+        "when": "执行 `docs +write` 前",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 44,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "text": "绝不直接输出密钥（API keys、tokens）。",
+        "when": "任何 gws 调用及其输出时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 57,
+            "line_end": 57
+          }
+        ]
+      },
+      {
+        "text": "执行 write/delete 命令前始终与用户确认；破坏性操作优先使用 `--dry-run`。",
+        "when": "涉及写、删或破坏性操作时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 58,
+            "line_end": 59
+          }
+        ]
+      },
+      {
+        "text": "使用 `--sanitize <TEMPLATE>` 通过 Model Armor 对响应做 PII/内容安全筛查。",
+        "when": "需要对返回内容做 PII 或内容安全筛查时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 60,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "text": "全局输出格式由 `--format <FORMAT>` 控制，默认 `json`，可选 `table`、`yaml`、`csv`。",
+        "when": "需要调整 CLI 输出格式时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 33,
+            "line_end": 33
+          }
+        ]
+      },
+      {
+        "text": "zsh 中形如 `Sheet1!A1` 的 `!` 会触发历史展开，应使用双引号并转义内层引号，而不是单引号。",
+        "when": "在 zsh 下传入含 `!` 的范围参数时",
+        "rationale": "zsh 会把 `!` 解释为历史展开并破坏参数。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 64,
+            "line_end": 71
+          }
+        ]
+      },
+      {
+        "text": "`--params` 与 `--json` 的值用单引号包裹，避免 shell 解释内层双引号。",
+        "when": "传入 JSON 形式的参数或请求体时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 72,
+            "line_end": 75
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "gws CLI",
+        "kind": "tool",
+        "locator": "gws",
+        "usage": "`gws` 二进制必须位于 `$PATH`；本 skill 的 `docs +write` 依赖它，安装选项见项目 README。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 15,
+            "line_end": 17
+          }
+        ]
+      },
+      {
+        "name": "gws-shared 共享参考",
+        "kind": "skill",
+        "locator": "skills/gws-shared/SKILL.md",
+        "usage": "提供认证、全局 flag 与安全规则，是使用 docs +write 的前置阅读材料（原文已完整提供）。",
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          },
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 49,
+            "line_end": 49
+          }
+        ]
+      },
+      {
+        "name": "gws-docs 命令参考",
+        "kind": "reference",
+        "locator": "skills/gws-docs/SKILL.md",
+        "usage": "列为“另见”，用于查找全部 Google Docs 读写命令；本次未读取其内容。",
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 50,
+            "line_end": 50
+          }
+        ]
+      },
+      {
+        "name": "gws generate-skills",
+        "kind": "tool",
+        "locator": "gws generate-skills",
+        "usage": "当 `../gws-shared/SKILL.md` 缺失时运行，以生成该共享 skill 文件。",
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 16,
+            "line_end": 16
+          }
+        ]
+      },
+      {
+        "name": "原始 batchUpdate API",
+        "kind": "other",
+        "locator": null,
+        "usage": "需要富格式时替代 `docs +write` 的路径；原文只提及存在该替代方式，未给出参数或步骤。",
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 42,
+            "line_end": 42
+          }
+        ]
+      },
+      {
+        "name": "Model Armor（--sanitize）",
+        "kind": "tool",
+        "locator": "--sanitize <TEMPLATE>",
+        "usage": "全局 flag，用于把响应经 Model Armor 做 PII/内容安全筛查。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 60,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "name": "Google 凭据",
+        "kind": "environment",
+        "locator": "GOOGLE_APPLICATION_CREDENTIALS",
+        "usage": "认证两种方式之一：交互式浏览器 OAuth（`gws auth login`）或服务账号（把环境变量指向 key.json）。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 19,
+            "line_end": 27
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "认证方式",
+        "text": "提供两条认证路径：交互式浏览器 OAuth 用 `gws auth login`；服务账号则 `export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json`。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 21,
+            "line_end": 27
+          }
+        ]
+      },
+      {
+        "topic": "示例命令",
+        "text": "原文示例：`gws docs +write --document DOC_ID --text 'Hello, world!'`，属示例取值，不是唯一允许的文档 ID 或文本格式。",
+        "evidence": [
+          {
+            "path": "skills/gws-docs-write/SKILL.md",
+            "line_start": 35,
+            "line_end": 37
+          }
+        ]
+      },
+      {
+        "topic": "全局 CLI 语法与通用 flag",
+        "text": "通用语法为 `gws <service> <resource> [sub-resource] <method> [flags]`；shared 还定义了 `--params`、`--json`、`-o/--output`、`--upload`、`--page-all`、`--page-limit`（默认 10）、`--page-delay`（默认 100 毫秒）等通用 flag，本 skill 的追加操作未使用它们。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 39,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "topic": "社区与反馈礼仪",
+        "text": "鼓励用户在觉得项目有用时给仓库点 star；bug 或功能需求引导到仓库 issue 列表；新建 issue 前须先搜索已有 issue，若已存在匹配项，则在该线程补充上下文而不是新建重复 issue。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 77,
+            "line_end": 82
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_and_references",
+    "files_read": [
+      {
+        "path": "skills/gws-docs-write/SKILL.md",
+        "coverage": "full"
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/0/steps",
+        "reason": "not_stated",
+        "detail": "原文只说明富格式需改用原始 batchUpdate API，未给出该路径的参数或步骤；本记录仅覆盖纯文本追加这一分支，不能视为 docs 写入的全部能力。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:50:39.222133+00:00"
+  }
+}

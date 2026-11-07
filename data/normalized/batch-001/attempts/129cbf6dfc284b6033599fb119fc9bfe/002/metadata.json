@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-11-07T14:40:36.762151+00:00",
+  "source": {
+    "collection_id": "ef75cb9667dd7cafebb6",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-calendar-insert/SKILL.md",
+    "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+    "entry_sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "3908ddb611f303ee7e998208bf230f3216243334a192168ba7d462a3d1e0be8c",
+  "input_files": [
+    {
+      "path": "skills/gws-calendar-insert/SKILL.md",
+      "coverage": "full",
+      "sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e",
+      "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+      "bytes": 1793,
+      "source_lines": 58
+    },
+    {
+      "path": "skills/gws-shared/SKILL.md",
+      "coverage": "full",
+      "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+      "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+      "bytes": 2668,
+      "source_lines": 82
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498bb50effe26HesIhzL7cGNy",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:40.468145+00:00"
+}

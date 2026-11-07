@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-11-07T14:54:37.562991+00:00",
+  "source": {
+    "collection_id": "5d7cbcbbab764949735f",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/finishing-a-development-branch/SKILL.md",
+    "git_blob_sha": "fa8aecaf8813f1b19d19996f7957d1b0121f2d9c",
+    "entry_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "2735b74c8dc11147cf82269fc60e1421a658db44565075375d5290f4c1339515",
+  "input_files": [
+    {
+      "path": "skills/finishing-a-development-branch/SKILL.md",
+      "coverage": "full",
+      "sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+      "git_blob_sha": "fa8aecaf8813f1b19d19996f7957d1b0121f2d9c",
+      "bytes": 7781,
+      "source_lines": 225
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497ee13affecuGn2EFjC3WYHd",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6836,
+          "output": 3931,
+          "reasoning": 1671,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "failed",
+  "error": "['content']: Additional properties are not allowed ('gaps' was unexpected)\n[]: 'gaps' is a required property",
+  "finished_at": "2026-11-07T14:55:13.241273+00:00"
+}

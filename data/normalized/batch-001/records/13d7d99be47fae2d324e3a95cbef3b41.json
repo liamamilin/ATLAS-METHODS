@@ -1,0 +1,631 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "e016d48a012cb04797b4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/frontend-design/SKILL.md",
+    "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+    "entry_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+  },
+  "content": {
+    "name": "frontend-design",
+    "title": "前端视觉设计：以主题为依据的差异化界面设计",
+    "summary": "以“设计工作室设计主管”的角色，指导新建或改造 UI 时做出有意、有主见的视觉设计：先确认产品主题与受众，再制定色彩、字体、布局与原则组成的设计方案，并对照 brief 审校其独特性，之后才写代码实现并自我批判。来源同时给出字体排印、结构信息、动效、界面文案的判断标准，以及需要避开的“AI 生成感”默认套路。",
+    "evidence": [
+      {
+        "path": "skills/frontend-design/SKILL.md",
+        "section": "Frontend Design",
+        "line_start": 7,
+        "line_end": 9
+      }
+    ],
+    "tasks": [
+      {
+        "id": "ground-subject",
+        "goal": "在开始设计前明确产品主题、受众与页面的主要任务，使视觉选择来自主题本身。",
+        "when": "brief 未点明产品或主题，或需要确认设计语境时。",
+        "inputs": [
+          "客户的 design brief",
+          "记忆中客户的偏好或其构建内容的上下文（若有）"
+        ],
+        "outputs": [
+          "具体主题、设计受众与设计主要任务的提案"
+        ],
+        "steps": [
+          {
+            "action": "若 brief 未说明产品或主题，先自行确定一个具体主题，并与客户确认。",
+            "when": "brief 缺少产品或主题信息",
+            "rationale": "主题的行业、题材、材料与语汇正是独特视觉选择的来源。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "action": "可提出一个具体主题、设计受众与设计主要任务作为提案；若记忆中有客户的偏好或关于其正在构建内容的上下文，将其作为提示使用。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          },
+          {
+            "action": "后续设计全程使用 brief 的真实内容与主题进行构建。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认视觉方向与主题、受众相符；原文举例：为 8–11 岁女孩设计的玩具与为金融分析师设计的仪表盘，审美上应非常不同。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 13,
+                "line_end": 13
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "section": "Ground your designs in the subject matter",
+            "line_start": 11,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "id": "design-plan",
+        "goal": "先完成一轮设计规划，产出紧凑的设计 token 系统，涵盖色彩、字体、布局与原则。",
+        "when": "已明确 brief 与主题，开始构思设计方案时。",
+        "inputs": [
+          "客户的 design brief"
+        ],
+        "outputs": [
+          "设计方案：色彩、字体、布局、原则组成的 token 系统"
+        ],
+        "steps": [
+          {
+            "action": "色彩：将核心基础色板描述为 4–6 个具名 hex 值。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 48,
+                "line_end": 48
+              }
+            ]
+          },
+          {
+            "action": "字体：列出所用字体及其各自角色。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 49,
+                "line_end": 49
+              }
+            ]
+          },
+          {
+            "action": "布局：用一句话散文描述布局概念，并用 ASCII 线框来构思和比较；包含对齐指引（内容应左对齐、居中还是两端对齐）。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 50,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "原则：写出使该页面独特的高层指引。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 51,
+                "line_end": 51
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "section": "Process: plan, review against the brief, build, critique",
+            "line_start": 47,
+            "line_end": 51
+          }
+        ]
+      },
+      {
+        "id": "review-plan",
+        "goal": "在写代码前对照 brief 审校设计方案，把通用默认替换为针对本 brief 的选择。",
+        "when": "设计规划完成后、开始编写代码前。",
+        "inputs": [
+          "设计规划（token 系统）",
+          "客户的 design brief"
+        ],
+        "outputs": [
+          "修订后的设计方案",
+          "对修改内容与原因的说明",
+          "可进入编码的确认"
+        ],
+        "steps": [
+          {
+            "action": "逐部分检查方案是否像对任何类似页面都会产出的通用默认：用一个相似提示走一遍，看是否得到相近结果。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 53,
+                "line_end": 53
+              }
+            ]
+          },
+          {
+            "action": "对读起来像通用默认、而非针对本 brief 做出的部分进行修订，并说明改动了什么、为什么。",
+            "when": "方案某部分缺乏针对本 brief 的独特性",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 53,
+                "line_end": 53
+              }
+            ]
+          },
+          {
+            "action": "只有在确认方案的相对独特性之后，才按修订后的方案开始写代码。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 53,
+                "line_end": 53
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认设计方案的相对独特性后才进入编码阶段。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 53,
+                "line_end": 53
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "section": "Process: plan, review against the brief, build, critique",
+            "line_start": 53,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "id": "implement",
+        "goal": "按修订后的方案实现界面，并在构建过程中自我批判、守住质量下限。",
+        "when": "设计方案已通过审校后。",
+        "inputs": [
+          "修订后的设计方案",
+          "brief 的真实内容"
+        ],
+        "outputs": [
+          "前端实现代码"
+        ],
+        "steps": [
+          {
+            "action": "编写代码时注意 CSS 选择器特异性，避免相互抵消的类（尤其像 .section 这类基于类型的选择器与 .cta 这类基于元素的选择器）；该问题常出现在区块之间的 padding/margin 上。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 55,
+                "line_end": 55
+              }
+            ]
+          },
+          {
+            "action": "把大胆集中在一处：让一个元素成为值得记住的点，周围保持安静克制，删掉任何不为 brief 服务的装饰。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 59,
+                "line_end": 59
+              }
+            ]
+          },
+          {
+            "action": "不声张地达到质量下限：响应式到移动端、键盘焦点可见、尊重减少动效、视觉可访问、色彩和谐。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 59,
+                "line_end": 59
+              }
+            ]
+          },
+          {
+            "action": "构建过程中批判自己的作品；若环境支持，截图审阅（原文称“一图胜千 token”）；若有地方可快速记下尝试过什么，会在后续轮次中有所帮助。",
+            "when": "执行环境支持截图或可记录尝试笔记时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 59,
+                "line_end": 59
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "检查实现是否满足质量下限：移动端响应式、可见键盘焦点、尊重减少动效、视觉可访问、配色和谐。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 59,
+                "line_end": 59
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "section": "Process / Restraint and self-critique",
+            "line_start": 55,
+            "line_end": 59
+          }
+        ]
+      },
+      {
+        "id": "write-copy",
+        "goal": "为设计撰写清晰、有意、最少化的界面文案或占位内容，使其帮助理解与使用。",
+        "when": "brief 不含真实内容、需要自行提供文案与占位内容，或设计中需要文字时。",
+        "inputs": [
+          "设计主题与受众",
+          "品牌与受众的语气要求"
+        ],
+        "outputs": [
+          "界面文案或占位内容"
+        ],
+        "steps": [
+          {
+            "action": "动笔前先问设计需要说什么、怎样最能帮助人导航体验；以对待间距和色彩同等的有意性与极简性对待文案。",
+            "when": null,
+            "rationale": "词语出现在设计中的唯一理由是让人更容易理解和使用，是设计内容而非装饰。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 63,
+                "line_end": 63
+              }
+            ]
+          },
+          {
+            "action": "从终端用户视角命名事物，用用户能懂的简单语言而非系统实现方式（如“管理通知”而非“webhook config”）；平实描述事物是什么或做什么而非推销；具体、对新用户清晰优于聪明。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 65,
+                "line_end": 65
+              }
+            ]
+          },
+          {
+            "action": "默认使用主动语态：CTA 准确说明使用后会发生什么（“Save changes”而非“Submit”）；同一动作在整个流程保持同一名称（“Publish”按钮产生“Published.”提示）。",
+            "when": null,
+            "rationale": "界面词汇是导航产品的路标，连贯一致让人学会使用。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 67,
+                "line_end": 67
+              }
+            ]
+          },
+          {
+            "action": "把失败与空状态当作指引的时刻而非情绪：解释出了什么错、如何修复，使用界面语气而非个人语气；错误不道歉、绝不含糊；空屏是行动邀请。",
+            "when": "设计错误提示或空状态时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 69,
+                "line_end": 69
+              }
+            ]
+          },
+          {
+            "action": "保持口语化语气：平实动词、sentence case、无填充，语气匹配品牌与受众；每个书面元素只做一件事。",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 71,
+                "line_end": 71
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "检查同一动作名称在全流程一致，且每个书面元素只承担一项职责。",
+            "evidence": [
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 67,
+                "line_end": 67
+              },
+              {
+                "path": "skills/frontend-design/SKILL.md",
+                "line_start": 71,
+                "line_end": 71
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "section": "More on writing in design",
+            "line_start": 61,
+            "line_end": 71
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "以设计工作室设计主管的立场处理任务：就该 brief 对调色板、字体与布局做出有意、有主见的选择，必要时承担审美风险。",
+        "when": "为新建 UI 或改造既有 UI 做视觉设计时",
+        "rationale": "该客户已拒绝显得陈词滥调或模板化的提案，并为独特的观点付费。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 9,
+            "line_end": 9
+          }
+        ]
+      },
+      {
+        "text": "网页设计中 hero 是访客首先看到的内容：以主题世界中最具特征的事物开场，形式取最合适者（标题、图片、动画、实时演示、交互时刻或其他处理）。“大数字配小标签、支撑性统计、渐变点缀”是默认处理，只有确实最合适时才使用。",
+        "when": "设计网页首屏时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 17,
+            "line_end": 17
+          }
+        ]
+      },
+      {
+        "text": "字体承载页面个性：显示或标题文字与正文不必使用不同字体，用一个或两个字族即可；若用两个，需明显区分。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          }
+        ]
+      },
+      {
+        "text": "有意选择字体，不用任何其他项目都会顺手取用的默认字族；依 The Elements of Typographic Style 的默认指引设定清晰字阶，并采用有意的字重、字宽与字距。字体作为标题或视觉元素时，让字体处理本身成为设计的主动部分，而非内容的中性载体。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 21,
+            "line_end": 21
+          }
+        ]
+      },
+      {
+        "text": "默认行长小于 80 字符；衬线字体可略长；衬线正文的行高应略高于无衬线。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "text": "避免三种默认字体处理：在标题中只给单个词或短语加斜体/粗体或换色；标签使用全大写；在内容上方加不必要的排版标签。",
+        "when": null,
+        "rationale": "这三种是生成页面最常见的破绽。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 25,
+            "line_end": 28
+          }
+        ]
+      },
+      {
+        "text": "轮廓、边框、编号、eyebrow、分隔线、标签等结构装置应编码关于内容的有用信息，而非装饰。编号标记（01 / 02 / 03）只在内容确实是序列（如分步流程、时间线）时使用；添加前先核实内容确为序列。",
+        "when": "考虑添加结构装置时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 30,
+            "line_end": 30
+          }
+        ]
+      },
+      {
+        "text": "少而有意地使用非用户触发的动效，仅用于吸引注意；一个编排好的时刻（一次页面加载序列或一次揭示）比分散效果更好。逐区块淡入上滑、每张卡片 hover 过渡是通用默认、读起来像 AI 生成；响应用户动作并展示变化的动效（打开、展开、确认）是受欢迎的。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 32,
+            "line_end": 32
+          }
+        ]
+      },
+      {
+        "text": "当 brief 明确了视觉方向时严格遵循，brief 自己的话总是优先，包括它要求采用下文的某种常见外观时；当 brief 让某一维度自由时，不要把这份自由花在这些默认外观上。",
+        "when": "brief 对视觉方向有明确要求或留有自由维度时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 45,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "text": "设计 brief 常不含真实内容，需要自行拟定文案与占位内容；文案可能让设计显得和设计本身一样模板化，因此须按写作章节的要求处理。",
+        "when": "brief 缺少真实内容时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 34,
+            "line_end": 34
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "The Elements of Typographic Style",
+        "kind": "reference",
+        "locator": null,
+        "usage": "文档所述：按其默认指引设定清晰的字体层级（字阶）、字重、字宽与字距。该书内容本次未提供、未读取。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 21,
+            "line_end": 21
+          }
+        ]
+      },
+      {
+        "name": "截图审阅能力（执行环境）",
+        "kind": "environment",
+        "locator": null,
+        "usage": "文档所述：若环境支持截图，用于在构建过程中审阅自己的作品。来源未说明具体接入方式。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 59,
+            "line_end": 59
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "AI 生成设计的校准特征",
+        "text": "原文列出当前 AI 生成设计聚集的几类特征，供对照校准：(1) 暖奶油色背景（近 #F4F1EA）、高对比衬线显示字与陶土/暖粘土色点缀（常接近 #D97757，即 Anthropic 自身 Claude 交互点缀色，用在用户 brief 上会被读成破绽）；(2) 近黑背景配单一亮酸绿或朱红点缀；(3) 大报式布局，发丝细线、零圆角、密集报纸式分栏；(4) SaaS 卡片套件：内容切成相同圆角卡片、所有层级共用同一圆角、每张卡片同一柔和灰影 rgba(0,0,0,.1)、以渐变洗色作装饰；(5) 不论主题都出现的模板化装饰：每个标题上方带字距拉开的全大写 eyebrow 标签、用中点连接的元信息（'A · B · C'）、'WORD — fragment' 式标签、以带色近黑（#0B0B0B、#111）代替纯黑、小数据标签用等宽字体、链接与按钮文字后追加 '→'。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 38,
+            "line_end": 43
+          }
+        ]
+      },
+      {
+        "topic": "默认特征的性质",
+        "text": "上述特征对某些 brief 是合法的，但它们是默认而非选择，且不论主题都会出现；brief 若明确要求其中某种外观则照办，否则不应把自由维度花在这些默认上。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 45,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "topic": "克制的比喻",
+        "text": "原文引用 Chanel 的建议作克制原则的比喻：出门前照镜子，摘掉一件配饰。",
+        "evidence": [
+          {
+            "path": "skills/frontend-design/SKILL.md",
+            "line_start": 59,
+            "line_end": 59
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/frontend-design/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/rules",
+        "reason": "unread_dependency",
+        "detail": "第 21 行要求按 The Elements of Typographic Style 的默认指引设定字阶与字重、字宽、字距，但该书内容未随来源提供，具体比例与细则无法回查。"
+      },
+      {
+        "target": "/content/tasks/3/checks",
+        "reason": "not_stated",
+        "detail": "“质量下限”仅列出响应式到移动端、可见键盘焦点、尊重减少动效、视觉可访问、色彩和谐等项，来源未给出具体断点、对比度阈值或验收标准。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:55:32.088606+00:00"
+  }
+}

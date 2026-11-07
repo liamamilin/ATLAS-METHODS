@@ -1,0 +1,300 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "97165f61bb32af8c487d",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/web-design-guidelines/SKILL.md",
+    "git_blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+    "entry_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+  },
+  "content": {
+    "name": "web-design-guidelines",
+    "title": "按 Web Interface Guidelines 审查 UI 代码",
+    "summary": "该 Skill 定义一种 UI 代码合规审查流程：每次审查前从固定 URL 取回最新的 Web Interface Guidelines 规则，读取用户指定的文件或模式，逐条对照取回的全部规则检查，并按 `file:line` 简洁格式输出发现。具体规则清单和输出格式说明不在本文件中，而由取回的外部文档提供；未指定文件时先询问用户要审查哪些文件。",
+    "evidence": [
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "line_start": 10,
+        "line_end": 12
+      },
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "line_start": 14,
+        "line_end": 19
+      },
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "line_start": 21,
+        "line_end": 29
+      },
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "line_start": 31,
+        "line_end": 39
+      }
+    ],
+    "tasks": [
+      {
+        "id": "review-ui-compliance",
+        "goal": "对照最新的 Web Interface Guidelines 规则审查指定 UI 文件，并输出格式化的发现。",
+        "when": "用户要求\"review my UI\"、\"check accessibility\"、\"audit design\"、\"review UX\"，或要求按最佳实践检查站点时。",
+        "inputs": [
+          "文件路径或文件匹配模式（参数 <file-or-pattern>）",
+          "从指定 URL 取回的最新指南内容"
+        ],
+        "outputs": [
+          "按 `file:line` 简洁格式列出的审查发现"
+        ],
+        "steps": [
+          {
+            "action": "用 WebFetch 从指南源 URL 取回最新规则。",
+            "when": "每次审查之前。",
+            "rationale": "确保使用最新的指南规则，而非缓存或旧版规则。",
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 23,
+                "line_end": 29
+              }
+            ]
+          },
+          {
+            "action": "读取指定的文件；若用户未指定文件，则询问要审查哪些文件。",
+            "when": "用户提供了文件或模式参数时读取；没有指定时先询问。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 16,
+                "line_end": 17
+              },
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 33,
+                "line_end": 39
+              }
+            ]
+          },
+          {
+            "action": "将读到的文件对照取回指南中的全部规则进行检查。",
+            "when": "已取得指南与待审文件后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 18,
+                "line_end": 18
+              },
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          },
+          {
+            "action": "按取回指南所规定的格式输出发现；SKILL.md 自身说明采用简洁的 `file:line` 格式。",
+            "when": "检查完成后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 19,
+                "line_end": 19
+              },
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 37,
+                "line_end": 37
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "审查须对照取回指南中的全部规则，而不只是一部分规则。",
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 18,
+                "line_end": 18
+              },
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 36,
+                "line_end": 36
+              }
+            ]
+          },
+          {
+            "text": "输出采用指南规定格式，SKILL.md 所述为简洁的 `file:line` 格式。",
+            "evidence": [
+              {
+                "path": "skills/web-design-guidelines/SKILL.md",
+                "line_start": 19,
+                "line_end": 19
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 2,
+            "line_end": 3
+          },
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 10,
+            "line_end": 19
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "每次审查前都应重新取回指南，不能沿用旧版本。",
+        "when": "任何一次审查开始时。",
+        "rationale": "指南源被视为可能更新，需使用最新规则。",
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 23,
+            "line_end": 23
+          },
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "text": "必须应用取回指南中的全部规则。",
+        "when": "执行检查时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 18,
+            "line_end": 18
+          },
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 36,
+            "line_end": 36
+          }
+        ]
+      },
+      {
+        "text": "未指定文件时必须询问用户要审查哪些文件，不能自行假定目标。",
+        "when": "用户未提供文件或模式参数时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 39,
+            "line_end": 39
+          }
+        ]
+      },
+      {
+        "text": "输出发现使用简洁的 `file:line` 格式。",
+        "when": "输出审查结果时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Web Interface Guidelines command.md",
+        "kind": "reference",
+        "locator": "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md",
+        "usage": "文档所述：审查前取回该文档，其中包含全部规则和输出格式说明。",
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 21,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "name": "WebFetch",
+        "kind": "tool",
+        "locator": null,
+        "usage": "文档所述：用于取回指南源的最新规则。",
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "规则与格式的外部化",
+        "text": "SKILL.md 只规定流程与指南源 URL；具体规则清单和输出格式细节由取回的外部文档给出，本文件不复述。",
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 18,
+            "line_end": 19
+          },
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "topic": "参数提示",
+        "text": "元数据声明参数提示为 `<file-or-pattern>`，即接受文件或模式。",
+        "evidence": [
+          {
+            "path": "skills/web-design-guidelines/SKILL.md",
+            "line_start": 7,
+            "line_end": 7
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/rules",
+        "reason": "unread_dependency",
+        "detail": "具体审查规则集与输出格式说明位于外部 command.md，未随本材料提供，因此无法整理逐条规则内容，只能记录\"对照全部取回规则\"这一要求。"
+      },
+      {
+        "target": "/content/tasks/0/checks",
+        "reason": "not_stated",
+        "detail": "由于规则清单不在原文中，各规则的判定标准与具体检查项未知，现有检查项仅能表达\"对照全部规则\"与输出格式要求。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:23.750670+00:00"
+  }
+}

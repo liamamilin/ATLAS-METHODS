@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-11-07T14:40:32.240092+00:00",
+  "source": {
+    "collection_id": "d9d222a50a3c94b5411c",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/api-and-interface-design/SKILL.md",
+    "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+    "entry_sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "ce76cdad5bf5a9eb975c3317d1435b7fca1082225d022fe946fac8edfad9bea2",
+  "input_files": [
+    {
+      "path": "skills/api-and-interface-design/SKILL.md",
+      "coverage": "full",
+      "sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
+      "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+      "bytes": 14938,
+      "source_lines": 369
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498bc73fffepoNYYSWmz0oZjx",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:35.920793+00:00"
+}

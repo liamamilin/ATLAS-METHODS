@@ -1,0 +1,36 @@
+{
+  "source": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+    "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+    "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+  },
+  "files": [
+    {
+      "path": "skills/engineering/grill-with-docs/SKILL.md",
+      "coverage": "full",
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "bytes": 247,
+      "source_lines": 7
+    },
+    {
+      "path": "skills/productivity/grilling/SKILL.md",
+      "coverage": "full",
+      "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "bytes": 2077,
+      "source_lines": 30
+    },
+    {
+      "path": "skills/engineering/domain-modeling/SKILL.md",
+      "coverage": "full",
+      "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "git_blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+      "bytes": 3346,
+      "source_lines": 74
+    }
+  ]
+}

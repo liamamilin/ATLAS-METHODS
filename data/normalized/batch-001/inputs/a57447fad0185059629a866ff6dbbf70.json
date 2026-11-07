@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "8a5610a28e2959388a11",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/code-review-and-quality/SKILL.md",
+    "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+    "entry_sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797"
+  },
+  "files": [
+    {
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "coverage": "full",
+      "sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797",
+      "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+      "bytes": 21263,
+      "source_lines": 400
+    }
+  ]
+}

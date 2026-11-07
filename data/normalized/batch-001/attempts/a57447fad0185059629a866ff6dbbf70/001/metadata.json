@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:51:31.010410+00:00",
+  "source": {
+    "collection_id": "8a5610a28e2959388a11",
+    "repository": "addyosmani/agent-skills",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "skill_path": "skills/code-review-and-quality/SKILL.md",
+    "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+    "entry_sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "54635312bc94d51f2a11f3cce26bce5bceaa654c3fc72aa8111c09dd3c1fd946",
+  "input_files": [
+    {
+      "path": "skills/code-review-and-quality/SKILL.md",
+      "coverage": "full",
+      "sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797",
+      "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+      "bytes": 21263,
+      "source_lines": 400
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4981b9fcffex4Jc69F8ETX1am",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 9834,
+          "output": 5852,
+          "reasoning": 7404,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:52:52.706226+00:00"
+}

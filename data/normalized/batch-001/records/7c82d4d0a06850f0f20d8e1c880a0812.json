@@ -1,0 +1,907 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "e727eda991347a2fbc27",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/pricing/SKILL.md",
+    "git_blob_sha": "7497dc500404081ed175c56db26b36de7264c246",
+    "entry_sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25"
+  },
+  "content": {
+    "name": "pricing",
+    "title": "SaaS 定价策略与定价页审计",
+    "summary": "面向 SaaS 定价、包装与变现策略的整理：先读取产品营销上下文，并收集业务、价值与竞争、当前表现、目标信息；以包装、计价指标、价格点三轴和价值定价为原则；覆盖首次定价（约 $10/$100/$1,000 经验分桶、避开 $9 陷阱、直接定价获取信号）、价值指标选择、好-更好-最好分层、Van Westendorp/MaxDiff 研究、涨价信号与分批推行、定价页最佳实践，以及从人类买家体验与 AI 可读性两轴拆解定价页的方法。",
+    "evidence": [
+      {
+        "path": "skills/pricing/SKILL.md",
+        "section": "Pricing Strategy（全文）",
+        "line_start": 1,
+        "line_end": 295
+      }
+    ],
+    "tasks": [
+      {
+        "id": "context-gathering",
+        "goal": "在开始定价工作前读取已有产品营销上下文，并补齐本任务所需的背景信息",
+        "when": "开始任何定价、包装或变现任务前",
+        "inputs": [
+          "产品营销上下文文件（若存在）",
+          "用户提供的业务、价值与竞争、当前表现与目标信息"
+        ],
+        "outputs": [
+          "补充后的定价背景上下文"
+        ],
+        "steps": [
+          {
+            "action": "先检查并读取产品营销上下文文件：.agents/product-marketing.md，或 .claude/product-marketing.md，或旧版 product-marketing-context.md；只询问未被覆盖或本任务特有的信息",
+            "when": "开始前",
+            "rationale": "避免重复提问并复用已有上下文",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 14,
+                "line_end": 15
+              }
+            ]
+          },
+          {
+            "action": "收集业务背景：产品类型（SaaS/市场/电商/服务）、当前定价、目标市场（SMB/中端/企业）、进入市场方式（自助/销售主导/混合）",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 19,
+                "line_end": 23
+              }
+            ]
+          },
+          {
+            "action": "收集价值与竞争信息：主要交付价值、客户考虑的替代方案、竞品如何定价",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 25,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "收集当前表现：转化率、ARPU 与流失率、客户/潜在客户对定价的反馈",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 30,
+                "line_end": 33
+              }
+            ]
+          },
+          {
+            "action": "收集目标：优化增长、收入还是利润；是向上还是向下市场扩展",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 35,
+                "line_end": 37
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 12,
+            "line_end": 38
+          }
+        ]
+      },
+      {
+        "id": "initial-pricing",
+        "goal": "在缺乏数据时为新产品选定一个可从中学习信号的初始价格",
+        "when": "还没有价格可供优化、需要在第一天定价时",
+        "inputs": [
+          "目标客户类型",
+          "所交付价值的量级"
+        ],
+        "outputs": [
+          "一个初始价格点",
+          "来自真实买家的支付信号"
+        ],
+        "steps": [
+          {
+            "action": "按服务对象与价值量级选择数量级分桶：约 $10/月（个人/高量低接触）、约 $100/月（SMB/团队工具，SaaS 默认）、约 $1,000/月（中端市场/业务关键/销售辅助）；先取接近的整数，获得信号后可在桶内快速调整",
+            "when": "没有任何参照时",
+            "rationale": "初始价格的目标是学习而非精确",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 78,
+                "line_end": 86
+              }
+            ]
+          },
+          {
+            "action": "避免为降低摩擦而定超低价（如 $9/月）：超低价会制造虚假增长（来自永远不会付真实价格的人），且日后涨价 5–10 倍远难于一开始定高，最便宜的客户流失最多、抱怨最响",
+            "when": "考虑用低价降低购买摩擦时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 88,
+                "line_end": 94
+              }
+            ]
+          },
+          {
+            "action": "在建模停滞时直接定价并根据真实反应调整（例如“就收 $50 看看会发生什么”）：若人们毫不犹豫付费则提价，若无人购买则用一周而非一个季度的成本获得信息",
+            "when": "早期对定价反复纠结时",
+            "rationale": "停止建模，先获取真实信号",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 96,
+                "line_end": 98
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 74,
+            "line_end": 100
+          }
+        ]
+      },
+      {
+        "id": "value-metric-selection",
+        "goal": "确定按什么计量收费，使价格随客户获得的价值扩展",
+        "when": "设计或调整收费结构时",
+        "inputs": [
+          "产品使用方式",
+          "价值随使用增长的假设"
+        ],
+        "outputs": [
+          "选定的价值指标",
+          "对应的收费模型方向"
+        ],
+        "steps": [
+          {
+            "action": "从常见价值指标中选择：按用户/席位（协作工具）、按用量（可变消费）、按功能（模块化产品）、按联系人/记录（CRM、邮件工具）、按交易（支付、市场）、固定费用（简单产品）",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 116,
+                "line_end": 125
+              }
+            ]
+          },
+          {
+            "action": "确定价值指标后，再选择收费模型（flat、usage、tier、user、feature、credit、outcome 或混合），详见 references/pricing-models.md",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 133,
+                "line_end": 133
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "问：“当客户使用更多[指标]时，他们是否获得更多价值？”若是，则是好指标；若否，说明价格与价值不对齐",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 129,
+                "line_end": 131
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 104,
+            "line_end": 133
+          }
+        ]
+      },
+      {
+        "id": "tier-structure",
+        "goal": "用 Good-Better-Best 框架设计套餐分层并明确各层差异",
+        "when": "需要构建或调整定价层级时",
+        "inputs": [
+          "目标客户人群",
+          "功能与用量清单"
+        ],
+        "outputs": [
+          "三层套餐及层间差异"
+        ],
+        "steps": [
+          {
+            "action": "按 Good-Better-Best 设置三层：Entry 为核心功能、有限用量、低价格；Recommended 为全功能、合理限制、锚定价格；Premium 为全部功能加高级功能，价格约为 Better 的 2–3 倍",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 139,
+                "line_end": 143
+              }
+            ]
+          },
+          {
+            "action": "通过功能门控（基础 vs 高级功能）、用量限制（相同功能不同额度）、支持级别（邮件→优先→专属）、访问权限（API、SSO、自定义品牌）区分层级",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 145,
+                "line_end": 150
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 137,
+            "line_end": 152
+          }
+        ]
+      },
+      {
+        "id": "pricing-research",
+        "goal": "用结构化的支付意愿研究识别可接受价格区间与客户最看重的功能",
+        "when": "需要为定价或分层提供研究依据时",
+        "inputs": [
+          "客户/潜在客户样本",
+          "功能清单"
+        ],
+        "outputs": [
+          "可接受价格区间与候选价格",
+          "功能重要性排序"
+        ],
+        "steps": [
+          {
+            "action": "用 Van Westendorp 四问识别可接受价格范围：太贵（不会考虑）、太便宜（质疑质量）、贵但可能考虑、划算",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 158,
+                "line_end": 165
+              }
+            ]
+          },
+          {
+            "action": "用四问的交点识别感知价格可接受度与待测试的候选价格",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 166,
+                "line_end": 166
+              }
+            ]
+          },
+          {
+            "action": "用 MaxDiff 向客户展示功能集，询问最重要与最不重要，结果用于指导分层包装",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 168,
+                "line_end": 173
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "“最优价格点”只是调查交点，不是收入或利润最大化的证明；四个问题本身不估计新价格下的转化、流失或需求",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 166,
+                "line_end": 166
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 156,
+            "line_end": 175
+          }
+        ]
+      },
+      {
+        "id": "price-increase",
+        "goal": "判断何时该涨价，并以分批方式降低涨价风险地推行",
+        "when": "出现市场、业务或产品涨价信号时",
+        "inputs": [
+          "转化率、流失率、单位经济数据",
+          "竞品与客户反馈",
+          "现有客户分层"
+        ],
+        "outputs": [
+          "涨价决策",
+          "涨价策略与分批推行计划"
+        ],
+        "steps": [
+          {
+            "action": "识别信号：市场方面为竞品已涨价、潜在客户不因价格犹豫、“太便宜了”反馈；业务方面为转化率 >40%、月流失 <3%、单位经济强；产品方面为自上次定价以来价值显著增加、产品更成熟稳定",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 181,
+                "line_end": 195
+              }
+            ]
+          },
+          {
+            "action": "选择涨价策略：仅对新客户涨（保留老客户）、提前 3–6 个月宣布延迟上涨、涨价同时增加功能、彻底重构套餐",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 197,
+                "line_end": 202
+              }
+            ]
+          },
+          {
+            "action": "按 rollout 顺序推进：先只对新客户提价并观察转化；不反射性永久保留旧价，把 grandfathering 当过渡并核算缺口；先把 5–10% 老客户迁到新价，观察一个周期的流失与支持量后再分批扩大；提前数月沟通原因，并提供锁定旧价换年付、延长宽限、一次性抵扣等慷慨选项",
+            "when": "决定涨价后",
+            "rationale": "分批推行可控制影响范围，并在流失激增时留有退路",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 204,
+                "line_end": 211
+              }
+            ]
+          },
+          {
+            "action": "预期并接受部分流失：因合理涨价离开的多是最不赚钱、支持成本最高、最价格敏感的客户",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 213,
+                "line_end": 213
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "分批推行时观察一个周期的流失与支持量，再决定是否扩大迁移范围",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 210,
+                "line_end": 210
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 179,
+            "line_end": 213
+          }
+        ]
+      },
+      {
+        "id": "pricing-page",
+        "goal": "按最佳实践设计定价页的结构、元素与定价心理呈现",
+        "when": "设计或改版定价页时",
+        "inputs": [
+          "套餐与价格",
+          "各层目标人群"
+        ],
+        "outputs": [
+          "定价页布局与元素清单"
+        ],
+        "steps": [
+          {
+            "action": "首屏放置：清晰的层间对比表、突出推荐层、月付/年付切换、每层的主 CTA",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 219,
+                "line_end": 223
+              }
+            ]
+          },
+          {
+            "action": "常见元素包括：功能对比表、每层适用对象说明、FAQ、年付折扣提示（17–20%）、退款保证、客户 logo/信任信号",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 225,
+                "line_end": 231
+              }
+            ]
+          },
+          {
+            "action": "运用定价心理：锚定（先展示更高价选项）、诱饵效应（中间层应为最佳价值）、魅力定价 $49 vs $50（面向价值导向客户）、整数定价 $50 vs $49（面向高端客户）",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 233,
+                "line_end": 237
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 217,
+            "line_end": 237
+          }
+        ]
+      },
+      {
+        "id": "pricing-page-teardown",
+        "goal": "从人类买家体验与 AI 代理可用性两轴审计现有定价页，并给出按优先级排序的修复建议",
+        "when": "有人要审计现有定价页的清晰度、透明度与 AI 可读性时（不是审计定价策略本身，也不是做转化率优化）",
+        "inputs": [
+          "定价页 URL 或渲染后的页面文本"
+        ],
+        "outputs": [
+          "两轴评分",
+          "按优先级排序的修复建议"
+        ],
+        "steps": [
+          {
+            "action": "明确范围：拆解关注定价页的清晰度、透明度与 AI 可读性，而非定价策略本身，也不是转化率优化（那属于 cro）",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 241,
+                "line_end": 243
+              }
+            ]
+          },
+          {
+            "action": "从人类买家体验评分：价值主张清晰度、方案差异、认知负荷、信任信号、定价心理、价格透明度",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 245,
+                "line_end": 245
+              }
+            ]
+          },
+          {
+            "action": "从 AI 代理可用性评分：价格是否机器可读（不在图片中、不藏在“联系我们”后）、FAQ/异议覆盖是否可提取、每层深度是否以文本陈述、是否有结构化数据",
+            "when": null,
+            "rationale": "买家会先问 ChatGPT/Perplexity/Claude 再访问网站，agent 无法解析的定价页会丢失看不见的成交",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 246,
+                "line_end": 246
+              }
+            ]
+          },
+          {
+            "action": "运行 paste test：把定价 URL 交给可浏览的 AI（Perplexity、带搜索的 ChatGPT、带网页的 Claude），或粘贴渲染后的页面文本，询问“有哪些方案和价格？”",
+            "when": null,
+            "rationale": "干净的失败意味着抓取页面的 agent 也可能吃力",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 248,
+                "line_end": 248
+              }
+            ]
+          },
+          {
+            "action": "把 AI 可读性修复交给 schema（Product/Offer JSON-LD）与 ai-seo（可提取性、AI-bot 访问、llms.txt）实现",
+            "when": null,
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 250,
+                "line_end": 250
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "paste test 是启发式，不能证明每个 agent 都会失败",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 248,
+                "line_end": 248
+              }
+            ]
+          },
+          {
+            "text": "完整的 10 维评分量表、打分与报告模板见 references/pricing-page-teardown.md",
+            "evidence": [
+              {
+                "path": "skills/pricing/SKILL.md",
+                "line_start": 252,
+                "line_end": 252
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 241,
+            "line_end": 252
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "定价应基于交付的价值：价格落在“次优替代”（差异化底线）与客户感知价值（上限）之间；服务成本只是基线，不是定价依据",
+        "when": "设计或调整价格时",
+        "rationale": "价值与差异化决定价格",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 57,
+            "line_end": 70
+          }
+        ]
+      },
+      {
+        "text": "不要以竞争对手价格为定价目标：匹配竞品价格复制的是其策略而非其经济结构，竞品价格只是数据点",
+        "when": "考虑对标竞品定价时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 68,
+            "line_end": 70
+          }
+        ]
+      },
+      {
+        "text": "首次定价不要为降低摩擦而定超低价（如 $9/月）：超低价制造虚假增长信号，且日后难以上调 5–10 倍",
+        "when": "首次定价或考虑低价获客时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 88,
+            "line_end": 94
+          }
+        ]
+      },
+      {
+        "text": "老客户保留（grandfathering）应作为过渡/宽限期，而非永久豁免，否则会长期补贴整个客户群",
+        "when": "涨价涉及现有客户时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 208,
+            "line_end": 209
+          }
+        ]
+      },
+      {
+        "text": "涨价分批推进：先只对新客户提价并观察转化，再把 5–10% 老客户迁到新价、观察一个周期后分批扩大",
+        "when": "推行涨价时",
+        "rationale": "控制影响范围并保留退路",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 208,
+            "line_end": 210
+          }
+        ]
+      },
+      {
+        "text": "Van Westendorp 的“最优价格点”是调查交点，不等于收入或利润最大化；四问不估计转化、流失或需求",
+        "when": "使用 Van Westendorp 结果时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 166,
+            "line_end": 166
+          }
+        ]
+      },
+      {
+        "text": "好-更好-最好分层中，Best 层价格可为 Better 层的 2–3 倍",
+        "when": "设置三层套餐价格时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 139,
+            "line_end": 143
+          }
+        ]
+      },
+      {
+        "text": "AI 可读性修复通常高影响、低投入：把价格放进文本、添加 Offer 结构化数据",
+        "when": "审计定价页的 AI 可用性时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 250,
+            "line_end": 250
+          }
+        ]
+      },
+      {
+        "text": "定价页拆解只评审清晰度、透明度与 AI 可读性，不评审定价策略本身，也不做转化率优化（属 cro）",
+        "when": "确定拆解范围时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 241,
+            "line_end": 243
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "pricing-models.md",
+        "kind": "reference",
+        "locator": "skills/pricing/references/pricing-models.md",
+        "usage": "文档所述：八种收费结构（flat、usage、tier、user、feature、credit、outcome、hybrid）与价值/价格比、低价留存；未读取内容",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 100,
+            "line_end": 100
+          },
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 92,
+            "line_end": 92
+          }
+        ]
+      },
+      {
+        "name": "tier-structure.md",
+        "kind": "reference",
+        "locator": "skills/pricing/references/tier-structure.md",
+        "usage": "文档所述：详细分层结构与众数人群包装；未读取内容",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 152,
+            "line_end": 152
+          }
+        ]
+      },
+      {
+        "name": "research-methods.md",
+        "kind": "reference",
+        "locator": "skills/pricing/references/research-methods.md",
+        "usage": "文档所述：详细定价研究方法；未读取内容",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 175,
+            "line_end": 175
+          }
+        ]
+      },
+      {
+        "name": "pricing-page-teardown.md",
+        "kind": "reference",
+        "locator": "skills/pricing/references/pricing-page-teardown.md",
+        "usage": "文档所述：完整 10 维评分量表、打分与报告模板；未读取内容",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 252,
+            "line_end": 252
+          }
+        ]
+      },
+      {
+        "name": "product-marketing 上下文文件",
+        "kind": "reference",
+        "locator": ".agents/product-marketing.md（或 .claude/product-marketing.md / product-marketing-context.md）",
+        "usage": "开始前读取的产品营销上下文；仅在存在时使用",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 14,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "name": "schema",
+        "kind": "skill",
+        "locator": null,
+        "usage": "承接定价页 AI 可读性修复：Product/Offer JSON-LD 结构化数据",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 250,
+            "line_end": 250
+          }
+        ]
+      },
+      {
+        "name": "ai-seo",
+        "kind": "skill",
+        "locator": null,
+        "usage": "承接定价页可提取/可引用修复：可提取性、AI-bot 访问、llms.txt",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 250,
+            "line_end": 250
+          }
+        ]
+      },
+      {
+        "name": "cro",
+        "kind": "skill",
+        "locator": null,
+        "usage": "定价页转化率优化；不在本 Skill 的拆解范围内",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 243,
+            "line_end": 243
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "初始定价的经验分桶",
+        "text": "$10/$100/$1,000 是经验法则，用于没有依据时按“客户是谁、交付多少价值”选择数量级，再在桶内快速调整",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 78,
+            "line_end": 86
+          }
+        ]
+      },
+      {
+        "topic": "涨价缺口算例",
+        "text": "一个付 $50/月、本应 $250/月的客户是每年 $2,400 的缺口，即在整个客户群上每月无限期补贴 $200",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 209,
+            "line_end": 209
+          }
+        ]
+      },
+      {
+        "topic": "涨价信号阈值",
+        "text": "高转化为 >40%，低流失为月流失 <3%；这些是“该考虑涨价”的信号阈值",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 183,
+            "line_end": 195
+          }
+        ]
+      },
+      {
+        "topic": "定价页具体数值与心理",
+        "text": "年付折扣提示为 17–20%；魅力定价与整数定价分别适用于价值导向与高端定位",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 229,
+            "line_end": 237
+          }
+        ]
+      },
+      {
+        "topic": "paste test 的性质",
+        "text": "paste test 给出的是启发式判断，不是“每个 agent 都会失败”的证明",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 248,
+            "line_end": 248
+          }
+        ]
+      },
+      {
+        "topic": "AI 可读性视角的来源",
+        "text": "拆解中的 AI-agent-readiness 视角改编自 Kyle Poyar / Growth Unhinged",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 252,
+            "line_end": 252
+          }
+        ]
+      },
+      {
+        "topic": "定价检查清单",
+        "text": "定价前检查：目标客户人群、竞品定价、价值指标、支付意愿研究、功能映射到层级；结构检查：层数、层间差异、研究依据的价格点、年付折扣策略、企业/定制层计划",
+        "evidence": [
+          {
+            "path": "skills/pricing/SKILL.md",
+            "line_start": 256,
+            "line_end": 270
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/pricing/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks",
+        "reason": "unread_dependency",
+        "detail": "入口引用的 references/pricing-models.md、tier-structure.md、research-methods.md 与 pricing-page-teardown.md 未提供：八种收费结构的具体用法、详细分层与人群包装、研究方法细节、10 维拆解评分与报告模板只在入口点到，需回查这些文件才能获得完整做法。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:53:46.193787+00:00"
+  }
+}

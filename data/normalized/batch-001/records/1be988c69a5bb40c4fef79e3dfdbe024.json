@@ -1,0 +1,394 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "90e0f870ac512f90e154",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/slack-gif-creator/SKILL.md",
+    "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+    "entry_sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22"
+  },
+  "content": {
+    "name": "slack-gif-creator",
+    "title": "为 Slack 制作动画 GIF：约束、绘制与优化",
+    "summary": "该 Skill 提供一套工具和知识，用于制作适配 Slack 的动画 GIF：用 GIFBuilder 组装 PIL 绘制的帧，按 Slack 的尺寸、FPS、颜色数和时长约束保存；附带校验器、缓动函数与帧辅助函数，并给出常见动画效果（抖动、脉冲、弹跳、旋转、淡入淡出、滑动、缩放、粒子爆发）的实现思路。核心动画逻辑需由使用者用 PIL 图元自行编写，不提供成品模板或图形库。",
+    "evidence": [
+      {
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "line_start": 1,
+        "line_end": 20
+      },
+      {
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "line_start": 22,
+        "line_end": 43
+      },
+      {
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "line_start": 234,
+        "line_end": 254
+      }
+    ],
+    "tasks": [
+      {
+        "id": "create-slack-gif",
+        "goal": "用 GIFBuilder 和 PIL 图元制作一个满足 Slack 约束的动画 GIF 文件。",
+        "when": "用户请求为 Slack 制作动画 GIF，例如“make me a GIF of X doing Y for Slack”。",
+        "inputs": [
+          "动画内容与动作描述",
+          "可选的用户上传图片"
+        ],
+        "outputs": [
+          "动画 GIF 文件（emoji 用 128x128，消息用 480x480）"
+        ],
+        "steps": [
+          {
+            "action": "创建 GIFBuilder，指定 width、height、fps；emoji 使用 128x128，消息使用 480x480，fps 在 10-30 之间。",
+            "when": "开始制作 GIF 时。",
+            "rationale": "尺寸、FPS、颜色数和时长需符合 Slack 要求；较低 FPS 文件更小。"
+          },
+          {
+            "action": "逐帧生成 PIL Image，用 ImageDraw 的 ellipse、polygon、line、rectangle 等图元绘制动画，并调用 builder.add_frame(frame) 加入构建器（也可用 add_frames 批量加入）。",
+            "when": "生成每一帧时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/slack-gif-creator/SKILL.md",
+                "line_start": 60,
+                "line_end": 80
+              }
+            ]
+          },
+          {
+            "action": "调用 builder.save('output.gif', num_colors=48, optimize_for_emoji=True) 保存；可选 remove_duplicates=True。",
+            "when": "帧全部加入后。",
+            "rationale": "num_colors 取 48-128，颜色越少文件越小；optimize_for_emoji 会自动优化。"
+          },
+          {
+            "action": "用 core.validators 的 validate_gif 或 is_slack_ready 检查产出是否满足 Slack 要求。",
+            "when": "生成 GIF 之后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/slack-gif-creator/SKILL.md",
+                "line_start": 122,
+                "line_end": 133
+              }
+            ]
+          },
+          {
+            "action": "仅当用户要求缩小文件时，才采用降低 FPS 或缩短时长、减少颜色（如 48 而非 128）、缩小尺寸（128x128 而非 480x480）、remove_duplicates=True、optimize_for_emoji=True 中的若干项。",
+            "when": "用户明确要求减小文件大小时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/slack-gif-creator/SKILL.md",
+                "line_start": 214,
+                "line_end": 232
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "用 validate_gif('my.gif', is_emoji=True, verbose=True) 做详细校验，或用 is_slack_ready('my.gif') 做快速检查。",
+            "evidence": [
+              {
+                "path": "skills/slack-gif-creator/SKILL.md",
+                "line_start": 122,
+                "line_end": 133
+              }
+            ]
+          },
+          {
+            "text": "产出需满足：emoji GIF 128x128（推荐）、消息 GIF 480x480；FPS 10-30；颜色 48-128；emoji GIF 时长保持在 3 秒以内。",
+            "evidence": [
+              {
+                "path": "skills/slack-gif-creator/SKILL.md",
+                "line_start": 11,
+                "line_end": 20
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 22,
+            "line_end": 43
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "emoji GIF 采用 128x128（推荐），消息 GIF 采用 480x480。",
+        "when": "选择输出尺寸时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 13,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "text": "FPS 取 10-30，较低 FPS 文件更小。",
+        "when": "设置帧率时。",
+        "rationale": "较低 FPS 会产生更小的文件。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 18,
+            "line_end": 18
+          }
+        ]
+      },
+      {
+        "text": "颜色数取 48-128，颜色越少文件越小。",
+        "when": "保存 GIF 并选择 num_colors 时。",
+        "rationale": "更少的颜色产生更小的文件。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 19,
+            "line_end": 19
+          }
+        ]
+      },
+      {
+        "text": "emoji GIF 时长保持在 3 秒以内。",
+        "when": "设计 emoji GIF 时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 20,
+            "line_end": 20
+          }
+        ]
+      },
+      {
+        "text": "轮廓和线条应设置 width=2 或更高；width=1 的细线看起来粗糙、业余。",
+        "when": "绘制轮廓或线条时。",
+        "rationale": "细线视觉效果差。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 88,
+            "line_end": 88
+          }
+        ]
+      },
+      {
+        "text": "不要使用 emoji 字体（跨平台不可靠），也不要假定本 Skill 内置了预制图形。",
+        "when": "绘制图形或选择素材时。",
+        "rationale": "emoji 字体在不同平台表现不可靠；本 Skill 不提供预制图形库。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 82,
+            "line_end": 82
+          }
+        ]
+      },
+      {
+        "text": "脉冲效果按 math.sin(t * frequency * 2 * math.pi) 缩放；心跳为两次快速脉冲后停顿（调整正弦波），缩放范围取基础尺寸的 0.8 到 1.2。",
+        "when": "实现脉冲或心跳动画时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 170,
+            "line_end": 174
+          }
+        ]
+      },
+      {
+        "text": "缩放效果：放大时从 0.1 缩放到 2.0 并裁剪中心；缩小时从 2.0 缩放到 1.0。",
+        "when": "实现 zoom 动画时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 201,
+            "line_end": 205
+          }
+        ]
+      },
+      {
+        "text": "仅在用户要求缩小文件时，才实施若干优化手段。",
+        "when": "用户提出文件大小要求时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 216,
+            "line_end": 216
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "GIFBuilder",
+        "kind": "tool",
+        "locator": "core.gif_builder",
+        "usage": "组装 PIL 帧并按 Slack 需求优化；构造参数为 width、height、fps，方法有 add_frame、add_frames、save(num_colors, optimize_for_emoji, remove_duplicates)。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 113,
+            "line_end": 120
+          }
+        ]
+      },
+      {
+        "name": "Validators",
+        "kind": "tool",
+        "locator": "core.validators",
+        "usage": "validate_gif(path, is_emoji=..., verbose=...) 做详细校验并返回 (passes, info)；is_slack_ready(path) 做快速检查。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 122,
+            "line_end": 133
+          }
+        ]
+      },
+      {
+        "name": "Easing Functions",
+        "kind": "tool",
+        "locator": "core.easing",
+        "usage": "interpolate(start, end, t, easing=...) 用于平滑运动；可用 easing：linear、ease_in、ease_out、ease_in_out、bounce_out、elastic_out、back_out。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 135,
+            "line_end": 148
+          }
+        ]
+      },
+      {
+        "name": "Frame Helpers",
+        "kind": "tool",
+        "locator": "core.frame_composer",
+        "usage": "提供 create_blank_frame、create_gradient_background、draw_circle、draw_text、draw_star 等便捷函数。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 150,
+            "line_end": 160
+          }
+        ]
+      },
+      {
+        "name": "Pillow (PIL)",
+        "kind": "environment",
+        "locator": "pip install pillow",
+        "usage": "提供 Image、ImageDraw 图元与 rotate、blend 等图像操作，用于逐帧绘制动画。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 250,
+            "line_end": 254
+          }
+        ]
+      },
+      {
+        "name": "imageio",
+        "kind": "environment",
+        "locator": "pip install imageio",
+        "usage": "依赖项之一，文档未展开具体用法。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 250,
+            "line_end": 254
+          }
+        ]
+      },
+      {
+        "name": "numpy",
+        "kind": "environment",
+        "locator": "pip install numpy",
+        "usage": "依赖项之一，文档未展开具体用法。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 250,
+            "line_end": 254
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "动画效果思路",
+        "text": "文档给出抖动（sin/cos 偏移加随机变化）、脉冲/心跳、弹跳（bounce_out 落地、ease_in 下落、逐帧增加 y 速度模拟重力）、旋转（image.rotate(angle, resample=Image.BICUBIC)，摆动时用正弦波角度）、淡入淡出（RGBA alpha 或 Image.blend，alpha 从 0 到 1 或反之）、滑动（从画面外到目标位置，ease_out 平滑停止，back_out 过冲）、缩放、粒子爆发（随机角度与速度，x+=vx、y+=vy，vy+=gravity_constant，粒子逐渐降低 alpha）等实现要点。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 162,
+            "line_end": 212
+          }
+        ]
+      },
+      {
+        "topic": "用户上传图片",
+        "text": "若用户上传图片，先判断意图：直接使用（如“animate this”“split this into frames”）还是仅作灵感参考（如“make something like this”）；用 PIL 的 Image.open 加载后按需求处理。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 47,
+            "line_end": 58
+          },
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 246,
+            "line_end": 246
+          }
+        ]
+      },
+      {
+        "topic": "视觉质量建议",
+        "text": "图形应有打磨与创意：用渐变背景、叠加多层形状、给形状加高光/环/图案、用鲜艳互补色并制造明暗对比；复杂形状（心形、雪花）用多边形与椭圆组合并仔细计算对称点。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 84,
+            "line_end": 109
+          }
+        ]
+      },
+      {
+        "topic": "能力边界",
+        "text": "该 Skill 提供 Slack 要求与动画概念知识、GIFBuilder/校验器/缓动函数等工具，以及用 PIL 图元自行实现动画的灵活性；不提供固定的动画模板或预制函数、emoji 字体渲染，也不内置预制图形库。鼓励组合多个概念（如弹跳+旋转、脉冲+滑动）。",
+        "evidence": [
+          {
+            "path": "skills/slack-gif-creator/SKILL.md",
+            "line_start": 234,
+            "line_end": 248
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:34.806649+00:00"
+  }
+}

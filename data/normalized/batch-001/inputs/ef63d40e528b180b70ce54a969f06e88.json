@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "519f3648e61fbdf38442",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/copywriting/SKILL.md",
+    "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+    "entry_sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee"
+  },
+  "files": [
+    {
+      "path": "skills/copywriting/SKILL.md",
+      "coverage": "full",
+      "sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee",
+      "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+      "bytes": 15553,
+      "source_lines": 339
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:54:34.010470+00:00",
+  "source": {
+    "collection_id": "e016d48a012cb04797b4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/frontend-design/SKILL.md",
+    "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+    "entry_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "d01d74ffd787c01f7fc0d4e579e814f107d8a9264656ec8e35836f0543919154",
+  "input_files": [
+    {
+      "path": "skills/frontend-design/SKILL.md",
+      "coverage": "full",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "bytes": 9390,
+      "source_lines": 71
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497eef20ffeq8ELM2pnPShQGG",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6307,
+          "output": 3986,
+          "reasoning": 4898,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:55:32.091662+00:00"
+}

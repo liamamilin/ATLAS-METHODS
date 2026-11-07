@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:55:50.719021+00:00",
+  "source": {
+    "collection_id": "506a73bbded4f67e3da3",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/productivity/handoff/SKILL.md",
+    "git_blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+    "entry_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "ac9ea06210f4e00565fd11d544d2ecc0edfed8c31858b38f95dd662268817059",
+  "input_files": [
+    {
+      "path": "skills/productivity/handoff/SKILL.md",
+      "coverage": "full",
+      "sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+      "git_blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+      "bytes": 940,
+      "source_lines": 16
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497dc385ffefQCaHHV2PVyaR6",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 4431,
+          "output": 1231,
+          "reasoning": 1100,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:56:10.798159+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "97165f61bb32af8c487d",
+    "repository": "vercel-labs/agent-skills",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "skill_path": "skills/web-design-guidelines/SKILL.md",
+    "git_blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+    "entry_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+  },
+  "files": [
+    {
+      "path": "skills/web-design-guidelines/SKILL.md",
+      "coverage": "full",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "git_blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+      "bytes": 1231,
+      "source_lines": 39
+    }
+  ]
+}

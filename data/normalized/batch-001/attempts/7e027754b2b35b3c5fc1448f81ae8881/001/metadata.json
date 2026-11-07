@@ -1,0 +1,55 @@
+{
+  "started_at": "2026-11-07T14:40:24.691009+00:00",
+  "source": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+    "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+    "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "9f91b63364c9fcdfa9221a59ababdb5d7f181a07e2eb77c87d97c40c6b038986",
+  "input_files": [
+    {
+      "path": "skills/engineering/grill-with-docs/SKILL.md",
+      "coverage": "full",
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "bytes": 247,
+      "source_lines": 7
+    },
+    {
+      "path": "skills/productivity/grilling/SKILL.md",
+      "coverage": "full",
+      "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "bytes": 2077,
+      "source_lines": 30
+    },
+    {
+      "path": "skills/engineering/domain-modeling/SKILL.md",
+      "coverage": "full",
+      "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "git_blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+      "bytes": 3346,
+      "source_lines": 74
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498be4a3ffediFE1aU62hV2Du",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:28.484318+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-11-07T14:49:16.933745+00:00",
+  "source": {
+    "collection_id": "519f3648e61fbdf38442",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/copywriting/SKILL.md",
+    "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+    "entry_sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "00f245d23e7e1b801e4c93c73a9e47f84a9506dde56917d3cd625600860a5fb0",
+  "input_files": [
+    {
+      "path": "skills/copywriting/SKILL.md",
+      "coverage": "full",
+      "sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee",
+      "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+      "bytes": 15553,
+      "source_lines": 339
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4983c5beffeQVsAHR8wKQCXZp",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 8849,
+          "output": 7000,
+          "reasoning": 3589,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "failed",
+  "error": "Expecting ',' delimiter: line 1 column 19480 (char 19479)",
+  "finished_at": "2026-11-07T14:50:18.200333+00:00"
+}

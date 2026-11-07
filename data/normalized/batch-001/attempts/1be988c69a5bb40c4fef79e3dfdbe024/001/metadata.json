@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:52:10.422538+00:00",
+  "source": {
+    "collection_id": "90e0f870ac512f90e154",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/slack-gif-creator/SKILL.md",
+    "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+    "entry_sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "298386ce467d3960260450a8c2ef4796a2ec37461b293eb7dd9f00651c8a2b34",
+  "input_files": [
+    {
+      "path": "skills/slack-gif-creator/SKILL.md",
+      "coverage": "full",
+      "sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22",
+      "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+      "bytes": 7841,
+      "source_lines": 254
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e49811ff6ffe7YSRQUoswfoiDx",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6884,
+          "output": 2624,
+          "reasoning": 853,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:52:34.808842+00:00"
+}

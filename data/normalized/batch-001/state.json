@@ -1,0 +1,1312 @@
+{
+  "b04908777a787ab973884ed705c42ab8": {
+    "collection_id": "0a2ef73281ba846578f5",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "b04908777a787ab973884ed705c42ab8",
+    "updated_at": "2026-11-07T14:59:35.615311+00:00",
+    "source": {
+      "collection_id": "0a2ef73281ba846578f5",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/brainstorming/SKILL.md",
+      "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+      "entry_sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207"
+    },
+    "inputs": [
+      {
+        "path": "skills/brainstorming/SKILL.md",
+        "coverage": "full",
+        "sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207",
+        "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+        "bytes": 15190,
+        "source_lines": 316
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/b04908777a787ab973884ed705c42ab8.json",
+    "attempt": "attempts/b04908777a787ab973884ed705c42ab8/004",
+    "warnings": []
+  },
+  "79fe827af7cac9992f445adb10d38444": {
+    "collection_id": "b02dbd96699c235e7de5",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "79fe827af7cac9992f445adb10d38444",
+    "updated_at": "2026-11-07T14:42:47.667849+00:00",
+    "source": {
+      "collection_id": "b02dbd96699c235e7de5",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/internal-comms/SKILL.md",
+      "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+      "entry_sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475"
+    },
+    "inputs": [
+      {
+        "path": "skills/internal-comms/SKILL.md",
+        "coverage": "full",
+        "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+        "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+        "bytes": 1511,
+        "source_lines": 32
+      },
+      {
+        "path": "skills/internal-comms/examples/3p-updates.md",
+        "coverage": "full",
+        "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc",
+        "git_blob_sha": "5329bfbf3b47035946a3995dd63025799b582f8c",
+        "bytes": 3274,
+        "source_lines": 47
+      },
+      {
+        "path": "skills/internal-comms/examples/company-newsletter.md",
+        "coverage": "full",
+        "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5",
+        "git_blob_sha": "4997a072b62ed7f65a9fd113903db3d9eba34b98",
+        "bytes": 3295,
+        "source_lines": 65
+      },
+      {
+        "path": "skills/internal-comms/examples/faq-answers.md",
+        "coverage": "full",
+        "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484",
+        "git_blob_sha": "395262a860636434593cd3c3da258000231ea4f6",
+        "bytes": 2366,
+        "source_lines": 30
+      },
+      {
+        "path": "skills/internal-comms/examples/general-comms.md",
+        "coverage": "full",
+        "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47",
+        "git_blob_sha": "0ea977018ca8167d39bfc9adb253f80336819578",
+        "bytes": 602,
+        "source_lines": 16
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/79fe827af7cac9992f445adb10d38444.json",
+    "attempt": "attempts/79fe827af7cac9992f445adb10d38444/004",
+    "warnings": [
+      "section_locator_unresolved: /content -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4/steps/0 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/tasks/4/steps/1 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot",
+      "section_locator_unresolved: /content/rules/9 -> skills/internal-comms/examples/general-comms.md; use line ranges or resolve the section against the snapshot"
+    ]
+  },
+  "7e027754b2b35b3c5fc1448f81ae8881": {
+    "collection_id": "4efae2a88e2d4ec4ffe6",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "7e027754b2b35b3c5fc1448f81ae8881",
+    "updated_at": "2026-11-07T14:43:56.015076+00:00",
+    "source": {
+      "collection_id": "4efae2a88e2d4ec4ffe6",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/grill-with-docs/SKILL.md",
+      "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+      "entry_sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "coverage": "full",
+        "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+        "git_blob_sha": "62b9efb6f991d1b229adee7506962f13ced0c499",
+        "bytes": 247,
+        "source_lines": 7
+      },
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "coverage": "full",
+        "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+        "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+        "bytes": 2077,
+        "source_lines": 30
+      },
+      {
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "coverage": "full",
+        "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+        "git_blob_sha": "a4438c6879c517d1a08e2b5fbca049b632688dfe",
+        "bytes": 3346,
+        "source_lines": 74
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/7e027754b2b35b3c5fc1448f81ae8881.json",
+    "attempt": "attempts/7e027754b2b35b3c5fc1448f81ae8881/004",
+    "warnings": []
+  },
+  "4a2f273cd8bd596e8e062ec90a8b8a0e": {
+    "collection_id": "443f91aa53a6736ff426",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "4a2f273cd8bd596e8e062ec90a8b8a0e",
+    "updated_at": "2026-11-07T14:48:48.353390+00:00",
+    "source": {
+      "collection_id": "443f91aa53a6736ff426",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/ab-testing/SKILL.md",
+      "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+      "entry_sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9"
+    },
+    "inputs": [
+      {
+        "path": "skills/ab-testing/SKILL.md",
+        "coverage": "full",
+        "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+        "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+        "bytes": 13346,
+        "source_lines": 361
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/4a2f273cd8bd596e8e062ec90a8b8a0e.json",
+    "attempt": "attempts/4a2f273cd8bd596e8e062ec90a8b8a0e/006",
+    "warnings": []
+  },
+  "fb5ee0831c268a1dce937cb3c380f08d": {
+    "collection_id": "d9d222a50a3c94b5411c",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "key": "fb5ee0831c268a1dce937cb3c380f08d",
+    "updated_at": "2026-11-07T14:45:13.551906+00:00",
+    "source": {
+      "collection_id": "d9d222a50a3c94b5411c",
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "skill_path": "skills/api-and-interface-design/SKILL.md",
+      "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+      "entry_sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
+    },
+    "inputs": [
+      {
+        "path": "skills/api-and-interface-design/SKILL.md",
+        "coverage": "full",
+        "sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
+        "git_blob_sha": "ce58d72ed0ee6568400f36564c94becfaeede717",
+        "bytes": 14938,
+        "source_lines": 369
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/fb5ee0831c268a1dce937cb3c380f08d.json",
+    "attempt": "attempts/fb5ee0831c268a1dce937cb3c380f08d/003",
+    "warnings": []
+  },
+  "129cbf6dfc284b6033599fb119fc9bfe": {
+    "collection_id": "ef75cb9667dd7cafebb6",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "key": "129cbf6dfc284b6033599fb119fc9bfe",
+    "updated_at": "2026-11-07T14:46:25.940587+00:00",
+    "source": {
+      "collection_id": "ef75cb9667dd7cafebb6",
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "skill_path": "skills/gws-calendar-insert/SKILL.md",
+      "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+      "entry_sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e"
+    },
+    "inputs": [
+      {
+        "path": "skills/gws-calendar-insert/SKILL.md",
+        "coverage": "full",
+        "sha256": "5c54f18a615b9706a364815f9e3c0ef8c83bba8a67adf217e25dd7c829e2119e",
+        "git_blob_sha": "dd2989d8cd738e3c8fe5335f49e4dc55d3a50f38",
+        "bytes": 1793,
+        "source_lines": 58
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full",
+        "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+        "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+        "bytes": 2668,
+        "source_lines": 82
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/129cbf6dfc284b6033599fb119fc9bfe.json",
+    "attempt": "attempts/129cbf6dfc284b6033599fb119fc9bfe/003",
+    "warnings": []
+  },
+  "31830c17a4492888cebc672df279e02a": {
+    "collection_id": "285ef5f2d449c3d93539",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "key": "31830c17a4492888cebc672df279e02a",
+    "updated_at": "2026-11-07T14:46:31.011176+00:00",
+    "source": {
+      "collection_id": "285ef5f2d449c3d93539",
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "skill_path": "skills/composition-patterns/SKILL.md",
+      "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+      "entry_sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3"
+    },
+    "inputs": [
+      {
+        "path": "skills/composition-patterns/SKILL.md",
+        "coverage": "full",
+        "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+        "git_blob_sha": "d07025bf943345bc1cf15eb923594f889ff881f0",
+        "bytes": 2886,
+        "source_lines": 89
+      },
+      {
+        "path": "skills/composition-patterns/AGENTS.md",
+        "coverage": "full",
+        "sha256": "89e3ddd58fcf99a53a50e25dfd21b8cde1be5f10b7df6bacd3dfa6796932f516",
+        "git_blob_sha": "558bf9aa1e36db2161f1633c9bfae14a819f0508",
+        "bytes": 22627,
+        "source_lines": 946
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/31830c17a4492888cebc672df279e02a.json",
+    "attempt": "attempts/31830c17a4492888cebc672df279e02a/004",
+    "warnings": []
+  },
+  "cf60a00051207a8e7e6f45e26cb1adb0": {
+    "collection_id": "5efa4f962e732e9ecbf4",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "cf60a00051207a8e7e6f45e26cb1adb0",
+    "updated_at": "2026-11-07T14:48:48.353499+00:00",
+    "source": {
+      "collection_id": "5efa4f962e732e9ecbf4",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/brand-guidelines/SKILL.md",
+      "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+      "entry_sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe"
+    },
+    "inputs": [
+      {
+        "path": "skills/brand-guidelines/SKILL.md",
+        "coverage": "full",
+        "sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe",
+        "git_blob_sha": "47c72c607bdb5dd81bdea5de2b5e4f3992a5fd59",
+        "bytes": 2235,
+        "source_lines": 73
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/cf60a00051207a8e7e6f45e26cb1adb0.json",
+    "attempt": "attempts/cf60a00051207a8e7e6f45e26cb1adb0/002",
+    "warnings": []
+  },
+  "bfa4850b691add9ff4269bf36b9e4b7d": {
+    "collection_id": "237b32583f4ed1a40f85",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "bfa4850b691add9ff4269bf36b9e4b7d",
+    "updated_at": "2026-11-07T14:48:48.353618+00:00",
+    "source": {
+      "collection_id": "237b32583f4ed1a40f85",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/systematic-debugging/SKILL.md",
+      "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+      "entry_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+    },
+    "inputs": [
+      {
+        "path": "skills/systematic-debugging/SKILL.md",
+        "coverage": "full",
+        "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+        "git_blob_sha": "62fc752aaef59a8bbed5d305f4cadc60f8ae07ed",
+        "bytes": 9530,
+        "source_lines": 283
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/bfa4850b691add9ff4269bf36b9e4b7d.json",
+    "attempt": "attempts/bfa4850b691add9ff4269bf36b9e4b7d/001",
+    "warnings": []
+  },
+  "c0145739dd89ea0be92aa06bbaa2fe9c": {
+    "collection_id": "e36d5d8a160259015b36",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "c0145739dd89ea0be92aa06bbaa2fe9c",
+    "updated_at": "2026-11-07T14:59:35.615419+00:00",
+    "source": {
+      "collection_id": "e36d5d8a160259015b36",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/code-review/SKILL.md",
+      "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+      "entry_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/code-review/SKILL.md",
+        "coverage": "full",
+        "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+        "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+        "bytes": 6721,
+        "source_lines": 89
+      }
+    ],
+    "state": "failed",
+    "failure_stage": "model_or_validation",
+    "error": "['content']: Additional properties are not allowed ('gaps' was unexpected)\n[]: 'gaps' is a required property",
+    "attempt": "attempts/c0145739dd89ea0be92aa06bbaa2fe9c/003"
+  },
+  "442409a9c3579dd11dd19e5121c0f3a2": {
+    "collection_id": "3c4ca3c0ea22ca65b5c3",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "key": "442409a9c3579dd11dd19e5121c0f3a2",
+    "updated_at": "2026-11-07T14:50:07.194150+00:00",
+    "source": {
+      "collection_id": "3c4ca3c0ea22ca65b5c3",
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "skill_path": "skills/gws-docs-write/SKILL.md",
+      "git_blob_sha": "4c903126fa2d9a0e2ba3feb129c8c8f5a6a50fbb",
+      "entry_sha256": "219028230078e0d14df314f2ae18b5918721fb5e298bba7d0a010937b2965045"
+    },
+    "inputs": [
+      {
+        "path": "skills/gws-docs-write/SKILL.md",
+        "coverage": "full",
+        "sha256": "219028230078e0d14df314f2ae18b5918721fb5e298bba7d0a010937b2965045",
+        "git_blob_sha": "4c903126fa2d9a0e2ba3feb129c8c8f5a6a50fbb",
+        "bytes": 1137,
+        "source_lines": 50
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full",
+        "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+        "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+        "bytes": 2668,
+        "source_lines": 82
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/442409a9c3579dd11dd19e5121c0f3a2.json",
+    "attempt": "attempts/442409a9c3579dd11dd19e5121c0f3a2/001",
+    "warnings": []
+  },
+  "ef63d40e528b180b70ce54a969f06e88": {
+    "collection_id": "519f3648e61fbdf38442",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "ef63d40e528b180b70ce54a969f06e88",
+    "updated_at": "2026-11-07T14:49:16.924687+00:00",
+    "source": {
+      "collection_id": "519f3648e61fbdf38442",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/copywriting/SKILL.md",
+      "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+      "entry_sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee"
+    },
+    "inputs": [
+      {
+        "path": "skills/copywriting/SKILL.md",
+        "coverage": "full",
+        "sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee",
+        "git_blob_sha": "2453731ab7a5e52535b7cf29beccbebe687d5a62",
+        "bytes": 15553,
+        "source_lines": 339
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/ef63d40e528b180b70ce54a969f06e88.json",
+    "attempt": "attempts/ef63d40e528b180b70ce54a969f06e88/002",
+    "warnings": []
+  },
+  "ece1ea30e887e1f44d56d686e04b4f7d": {
+    "collection_id": "87a239fc0fa43d9a8448",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "key": "ece1ea30e887e1f44d56d686e04b4f7d",
+    "updated_at": "2026-11-07T14:50:39.225423+00:00",
+    "source": {
+      "collection_id": "87a239fc0fa43d9a8448",
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "skill_path": "skills/deploy-to-vercel/SKILL.md",
+      "git_blob_sha": "f3bb68ba31294f0edf81fdb326ddc2666a24e0e0",
+      "entry_sha256": "418ca2a60d35c551e6cb645f4e82c1b704a8335486ffe74b1b3d0617a17504e5"
+    },
+    "inputs": [
+      {
+        "path": "skills/deploy-to-vercel/SKILL.md",
+        "coverage": "full",
+        "sha256": "418ca2a60d35c551e6cb645f4e82c1b704a8335486ffe74b1b3d0617a17504e5",
+        "git_blob_sha": "f3bb68ba31294f0edf81fdb326ddc2666a24e0e0",
+        "bytes": 9721,
+        "source_lines": 230
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/ece1ea30e887e1f44d56d686e04b4f7d.json",
+    "attempt": "attempts/ece1ea30e887e1f44d56d686e04b4f7d/001",
+    "warnings": []
+  },
+  "e6795a45fcd74c946cbb507a730293db": {
+    "collection_id": "e7834a2573815a5a0871",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "key": "e6795a45fcd74c946cbb507a730293db",
+    "updated_at": "2026-11-07T14:49:24.180825+00:00",
+    "source": {
+      "collection_id": "e7834a2573815a5a0871",
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "skill_path": "skills/context-engineering/SKILL.md",
+      "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+      "entry_sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b"
+    },
+    "inputs": [
+      {
+        "path": "skills/context-engineering/SKILL.md",
+        "coverage": "full",
+        "sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b",
+        "git_blob_sha": "abdfe2732255de944db13d0312a1634a425c7c5d",
+        "bytes": 15514,
+        "source_lines": 353
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/e6795a45fcd74c946cbb507a730293db.json",
+    "attempt": "attempts/e6795a45fcd74c946cbb507a730293db/002",
+    "warnings": []
+  },
+  "40499bff61b23de305d7e8b5864f8b8b": {
+    "collection_id": "05d408b4284eb2738b8c",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "40499bff61b23de305d7e8b5864f8b8b",
+    "updated_at": "2026-11-07T14:51:03.714113+00:00",
+    "source": {
+      "collection_id": "05d408b4284eb2738b8c",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/webapp-testing/SKILL.md",
+      "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+      "entry_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+    },
+    "inputs": [
+      {
+        "path": "skills/webapp-testing/SKILL.md",
+        "coverage": "full",
+        "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+        "git_blob_sha": "4726215301db64a0cc4d41fc3219c61f37a30f4a",
+        "bytes": 3913,
+        "source_lines": 96
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/40499bff61b23de305d7e8b5864f8b8b.json",
+    "attempt": "attempts/40499bff61b23de305d7e8b5864f8b8b/001",
+    "warnings": []
+  },
+  "1338a1b815e244bdefc046a89205b96b": {
+    "collection_id": "58fd72c919eeae5e01e1",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "1338a1b815e244bdefc046a89205b96b",
+    "updated_at": "2026-11-07T14:51:16.870442+00:00",
+    "source": {
+      "collection_id": "58fd72c919eeae5e01e1",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/implement/SKILL.md",
+      "git_blob_sha": "bd49e472984c7b99aac40286fdae749bb955a842",
+      "entry_sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/implement/SKILL.md",
+        "coverage": "full",
+        "sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d",
+        "git_blob_sha": "bd49e472984c7b99aac40286fdae749bb955a842",
+        "bytes": 622,
+        "source_lines": 17
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/1338a1b815e244bdefc046a89205b96b.json",
+    "attempt": "attempts/1338a1b815e244bdefc046a89205b96b/001",
+    "warnings": []
+  },
+  "2734885e7f837f44d48e3eec07c99da9": {
+    "collection_id": "a99162a0c1c8490d811b",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "2734885e7f837f44d48e3eec07c99da9",
+    "updated_at": "2026-11-07T14:51:15.921834+00:00",
+    "source": {
+      "collection_id": "a99162a0c1c8490d811b",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/test-driven-development/SKILL.md",
+      "git_blob_sha": "46838cc9e893c06259e3bdad0fc2425b36242f15",
+      "entry_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+    },
+    "inputs": [
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "coverage": "full",
+        "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+        "git_blob_sha": "46838cc9e893c06259e3bdad0fc2425b36242f15",
+        "bytes": 9578,
+        "source_lines": 330
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/2734885e7f837f44d48e3eec07c99da9.json",
+    "attempt": "attempts/2734885e7f837f44d48e3eec07c99da9/001",
+    "warnings": []
+  },
+  "326ebaa35ac3e9da774b827d99a771a3": {
+    "collection_id": "4961bc5b0753ab497eb9",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "key": "326ebaa35ac3e9da774b827d99a771a3",
+    "updated_at": "2026-11-07T14:51:39.910917+00:00",
+    "source": {
+      "collection_id": "4961bc5b0753ab497eb9",
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "skill_path": "skills/gws-gmail-triage/SKILL.md",
+      "git_blob_sha": "641a2d114105f9ad73cc229bef6edb5e757ac36d",
+      "entry_sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600"
+    },
+    "inputs": [
+      {
+        "path": "skills/gws-gmail-triage/SKILL.md",
+        "coverage": "full",
+        "sha256": "48b0512b3ffa718ab382c3d816d6945cbc9ec6139b50eff0427498a645580600",
+        "git_blob_sha": "641a2d114105f9ad73cc229bef6edb5e757ac36d",
+        "bytes": 1219,
+        "source_lines": 51
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full",
+        "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+        "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+        "bytes": 2668,
+        "source_lines": 82
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/326ebaa35ac3e9da774b827d99a771a3.json",
+    "attempt": "attempts/326ebaa35ac3e9da774b827d99a771a3/001",
+    "warnings": []
+  },
+  "2db18ab47582c6ac894bbd32067a8ae4": {
+    "collection_id": "004bc9aeebee6129a44b",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "2db18ab47582c6ac894bbd32067a8ae4",
+    "updated_at": "2026-11-07T14:51:17.823156+00:00",
+    "source": {
+      "collection_id": "004bc9aeebee6129a44b",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/copy-editing/SKILL.md",
+      "git_blob_sha": "7769981ddf9b2d2816a28e3fa2bb341e77503568",
+      "entry_sha256": "cec5a771ce37ade292f7f1f6b418e8a6ce6ec3f50163fa5e664afbcb03e085fc"
+    },
+    "inputs": [
+      {
+        "path": "skills/copy-editing/SKILL.md",
+        "coverage": "full",
+        "sha256": "cec5a771ce37ade292f7f1f6b418e8a6ce6ec3f50163fa5e664afbcb03e085fc",
+        "git_blob_sha": "7769981ddf9b2d2816a28e3fa2bb341e77503568",
+        "bytes": 18458,
+        "source_lines": 491
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/2db18ab47582c6ac894bbd32067a8ae4.json",
+    "attempt": "attempts/2db18ab47582c6ac894bbd32067a8ae4/001",
+    "warnings": []
+  },
+  "f6858ac345d5f246f850483a2d140131": {
+    "collection_id": "97165f61bb32af8c487d",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "key": "f6858ac345d5f246f850483a2d140131",
+    "updated_at": "2026-11-07T14:52:04.348451+00:00",
+    "source": {
+      "collection_id": "97165f61bb32af8c487d",
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "skill_path": "skills/web-design-guidelines/SKILL.md",
+      "git_blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+      "entry_sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    "inputs": [
+      {
+        "path": "skills/web-design-guidelines/SKILL.md",
+        "coverage": "full",
+        "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+        "git_blob_sha": "ceae92ab319216a68274168fba9b63b998b65997",
+        "bytes": 1231,
+        "source_lines": 39
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/f6858ac345d5f246f850483a2d140131.json",
+    "attempt": "attempts/f6858ac345d5f246f850483a2d140131/001",
+    "warnings": []
+  },
+  "1be988c69a5bb40c4fef79e3dfdbe024": {
+    "collection_id": "90e0f870ac512f90e154",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "1be988c69a5bb40c4fef79e3dfdbe024",
+    "updated_at": "2026-11-07T14:52:10.416300+00:00",
+    "source": {
+      "collection_id": "90e0f870ac512f90e154",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/slack-gif-creator/SKILL.md",
+      "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+      "entry_sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22"
+    },
+    "inputs": [
+      {
+        "path": "skills/slack-gif-creator/SKILL.md",
+        "coverage": "full",
+        "sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22",
+        "git_blob_sha": "16660d8ceb77af47986bba1c9176c2ff3f287a91",
+        "bytes": 7841,
+        "source_lines": 254
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/1be988c69a5bb40c4fef79e3dfdbe024.json",
+    "attempt": "attempts/1be988c69a5bb40c4fef79e3dfdbe024/001",
+    "warnings": []
+  },
+  "a57447fad0185059629a866ff6dbbf70": {
+    "collection_id": "8a5610a28e2959388a11",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "key": "a57447fad0185059629a866ff6dbbf70",
+    "updated_at": "2026-11-07T14:51:31.005069+00:00",
+    "source": {
+      "collection_id": "8a5610a28e2959388a11",
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "skill_path": "skills/code-review-and-quality/SKILL.md",
+      "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+      "entry_sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797"
+    },
+    "inputs": [
+      {
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "coverage": "full",
+        "sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797",
+        "git_blob_sha": "15ea44c93c61dcec705720342c1fd78755702f85",
+        "bytes": 21263,
+        "source_lines": 400
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/a57447fad0185059629a866ff6dbbf70.json",
+    "attempt": "attempts/a57447fad0185059629a866ff6dbbf70/001",
+    "warnings": []
+  },
+  "97b715e5ab19a8a1e2349beb69f47d20": {
+    "collection_id": "2d541286acded129f988",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "97b715e5ab19a8a1e2349beb69f47d20",
+    "updated_at": "2026-11-07T14:52:15.172554+00:00",
+    "source": {
+      "collection_id": "2d541286acded129f988",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/writing-plans/SKILL.md",
+      "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+      "entry_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+    },
+    "inputs": [
+      {
+        "path": "skills/writing-plans/SKILL.md",
+        "coverage": "full",
+        "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+        "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+        "bytes": 10335,
+        "source_lines": 204
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/97b715e5ab19a8a1e2349beb69f47d20.json",
+    "attempt": "attempts/97b715e5ab19a8a1e2349beb69f47d20/001",
+    "warnings": []
+  },
+  "53435ae3ea11604ab4849d1a705498c3": {
+    "collection_id": "32b139ed74b0165baa3d",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "53435ae3ea11604ab4849d1a705498c3",
+    "updated_at": "2026-11-07T14:52:23.752930+00:00",
+    "source": {
+      "collection_id": "32b139ed74b0165baa3d",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/to-spec/SKILL.md",
+      "git_blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+      "entry_sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "coverage": "full",
+        "sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+        "git_blob_sha": "3f52599ae2a4347aee5a07432c2707518e691a7f",
+        "bytes": 3043,
+        "source_lines": 75
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/53435ae3ea11604ab4849d1a705498c3.json",
+    "attempt": "attempts/53435ae3ea11604ab4849d1a705498c3/002",
+    "warnings": []
+  },
+  "429155c76d35291886bf1db6262ac805": {
+    "collection_id": "8c24f718f48153dabecd",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "key": "429155c76d35291886bf1db6262ac805",
+    "updated_at": "2026-11-07T14:52:58.546756+00:00",
+    "source": {
+      "collection_id": "8c24f718f48153dabecd",
+      "repository": "googleworkspace/cli",
+      "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+      "skill_path": "skills/gws-shared/SKILL.md",
+      "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+      "entry_sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2"
+    },
+    "inputs": [
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full",
+        "sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2",
+        "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+        "bytes": 2668,
+        "source_lines": 82
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/429155c76d35291886bf1db6262ac805.json",
+    "attempt": "attempts/429155c76d35291886bf1db6262ac805/001",
+    "warnings": []
+  },
+  "78a07d1087387cc7dbfce19188ff15d8": {
+    "collection_id": "20e6303dc33a24a868aa",
+    "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+    "key": "78a07d1087387cc7dbfce19188ff15d8",
+    "updated_at": "2026-11-07T14:53:13.672611+00:00",
+    "source": {
+      "collection_id": "20e6303dc33a24a868aa",
+      "repository": "vercel-labs/agent-skills",
+      "commit_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "skill_path": "skills/writing-guidelines/SKILL.md",
+      "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+      "entry_sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d"
+    },
+    "inputs": [
+      {
+        "path": "skills/writing-guidelines/SKILL.md",
+        "coverage": "full",
+        "sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d",
+        "git_blob_sha": "63facf310252a990d154bed12b3dcdd295ba771a",
+        "bytes": 1233,
+        "source_lines": 39
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/78a07d1087387cc7dbfce19188ff15d8.json",
+    "attempt": "attempts/78a07d1087387cc7dbfce19188ff15d8/001",
+    "warnings": []
+  },
+  "7c82d4d0a06850f0f20d8e1c880a0812": {
+    "collection_id": "e727eda991347a2fbc27",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "7c82d4d0a06850f0f20d8e1c880a0812",
+    "updated_at": "2026-11-07T14:52:34.809669+00:00",
+    "source": {
+      "collection_id": "e727eda991347a2fbc27",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/pricing/SKILL.md",
+      "git_blob_sha": "7497dc500404081ed175c56db26b36de7264c246",
+      "entry_sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25"
+    },
+    "inputs": [
+      {
+        "path": "skills/pricing/SKILL.md",
+        "coverage": "full",
+        "sha256": "b0318f64140e60a28d0cf71b1a6bf2aa214b96ef2bc3253c60d16ae480367d25",
+        "git_blob_sha": "7497dc500404081ed175c56db26b36de7264c246",
+        "bytes": 13479,
+        "source_lines": 295
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/7c82d4d0a06850f0f20d8e1c880a0812.json",
+    "attempt": "attempts/7c82d4d0a06850f0f20d8e1c880a0812/001",
+    "warnings": []
+  },
+  "88afaa0dff60b0214863e57df6db9962": {
+    "collection_id": "2cca6e76006ddfe15d6e",
+    "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+    "key": "88afaa0dff60b0214863e57df6db9962",
+    "updated_at": "2026-11-07T14:52:52.707443+00:00",
+    "source": {
+      "collection_id": "2cca6e76006ddfe15d6e",
+      "repository": "addyosmani/agent-skills",
+      "commit_sha": "301b02b12bff98e4688e6984af6556802322bbde",
+      "skill_path": "skills/debugging-and-error-recovery/SKILL.md",
+      "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+      "entry_sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610"
+    },
+    "inputs": [
+      {
+        "path": "skills/debugging-and-error-recovery/SKILL.md",
+        "coverage": "full",
+        "sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610",
+        "git_blob_sha": "13c1a431626c23270542c7b570d7193ba79c3a96",
+        "bytes": 10893,
+        "source_lines": 300
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/88afaa0dff60b0214863e57df6db9962.json",
+    "attempt": "attempts/88afaa0dff60b0214863e57df6db9962/001",
+    "warnings": []
+  },
+  "063913bd0e8d80cde2ba98e05b4cd2f2": {
+    "collection_id": "3f9cca2922dc01418c96",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "063913bd0e8d80cde2ba98e05b4cd2f2",
+    "updated_at": "2026-11-07T14:53:36.192716+00:00",
+    "source": {
+      "collection_id": "3f9cca2922dc01418c96",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/verification-before-completion/SKILL.md",
+      "git_blob_sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+      "entry_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+    },
+    "inputs": [
+      {
+        "path": "skills/verification-before-completion/SKILL.md",
+        "coverage": "full",
+        "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "git_blob_sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+        "bytes": 3646,
+        "source_lines": 120
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/063913bd0e8d80cde2ba98e05b4cd2f2.json",
+    "attempt": "attempts/063913bd0e8d80cde2ba98e05b4cd2f2/002",
+    "warnings": []
+  },
+  "cffb0ba61e7a9d0898a872183a46a2a1": {
+    "collection_id": "46fa2ce238d972021b51",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "cffb0ba61e7a9d0898a872183a46a2a1",
+    "updated_at": "2026-11-07T15:00:11.090579+00:00",
+    "source": {
+      "collection_id": "46fa2ce238d972021b51",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/theme-factory/SKILL.md",
+      "git_blob_sha": "90dfceaf2ecdc191a4dcfb0069768a9560638998",
+      "entry_sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552"
+    },
+    "inputs": [
+      {
+        "path": "skills/theme-factory/SKILL.md",
+        "coverage": "full",
+        "sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552",
+        "git_blob_sha": "90dfceaf2ecdc191a4dcfb0069768a9560638998",
+        "bytes": 3124,
+        "source_lines": 59
+      },
+      {
+        "path": "skills/theme-factory/themes/arctic-frost.md",
+        "coverage": "full",
+        "sha256": "868a75a8fb5b2a61d0f0ab87c437fe632d3cbab6371c418f06aa2816ac109ae0",
+        "git_blob_sha": "e9f1eb0574e377ec8be59a71a1c206958f8b253e",
+        "bytes": 544,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/botanical-garden.md",
+        "coverage": "full",
+        "sha256": "222cb8e7496abc9b75b29453c809fb9839e7e4b01fa45deecdd896b38d087765",
+        "git_blob_sha": "0c95bf7349c26996c7d43d6c0276a285287a9ffe",
+        "bytes": 519,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/desert-rose.md",
+        "coverage": "full",
+        "sha256": "bd065b8629be3b64655183927e248e3d892a27b8d184b009cfba89c96102744f",
+        "git_blob_sha": "ea7c74eb80794fe15f870e12c5588b2a988f77a1",
+        "bytes": 496,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/forest-canopy.md",
+        "coverage": "full",
+        "sha256": "ecb722efa24688e808b5bf323c334ca2349e989cfddd72ce8400ce5d4c4bd3e7",
+        "git_blob_sha": "90c2b26518d8d7ff1d58981def5e93e2eca01780",
+        "bytes": 506,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/golden-hour.md",
+        "coverage": "full",
+        "sha256": "3444a00df971d3c2f06b665e21a2e9eb5d7d7d6f6281f2758773b8345776a139",
+        "git_blob_sha": "ed8fc256f4e9b2dfffd46e82fdc451c32f87dbb1",
+        "bytes": 528,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/midnight-galaxy.md",
+        "coverage": "full",
+        "sha256": "0e134c4c0324df41e34ac314269aa6829cd378cf3c304b31858d0cd158d2f944",
+        "git_blob_sha": "97e1c5f380eba51cd8956ec96114629c6540b76e",
+        "bytes": 513,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/modern-minimalist.md",
+        "coverage": "full",
+        "sha256": "b8bc572b75948d4df69c401af703b9262ed6820a3ceb270da30a529e92763614",
+        "git_blob_sha": "6bd26a29beb09e663a1c049f5f8ec86189ae2db2",
+        "bytes": 549,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/ocean-depths.md",
+        "coverage": "full",
+        "sha256": "a7ad8eec85341dbfcb2665da827a4b6a4baee08ab3335ac02421f18e6b46b2e2",
+        "git_blob_sha": "b675126f53c49af7b6c3e00793a6d4773fb77af6",
+        "bytes": 555,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/sunset-boulevard.md",
+        "coverage": "full",
+        "sha256": "658af11ab04be4923692571081ffb42a428141ae537703117b9236d9f8ee22a3",
+        "git_blob_sha": "df799a0cc0e61c9226e52725afb45a1c6388f242",
+        "bytes": 558,
+        "source_lines": 19
+      },
+      {
+        "path": "skills/theme-factory/themes/tech-innovation.md",
+        "coverage": "full",
+        "sha256": "183648163026dd5eeba3df5effa335b55ba333c3ee1fe215278605e55f40a52a",
+        "git_blob_sha": "e029a435fb02647e6fd0b440618ae21f326d35e1",
+        "bytes": 547,
+        "source_lines": 19
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/cffb0ba61e7a9d0898a872183a46a2a1.json",
+    "attempt": "attempts/cffb0ba61e7a9d0898a872183a46a2a1/003",
+    "warnings": []
+  },
+  "06661f2846a1ecfbb8641bb20e60c7b8": {
+    "collection_id": "2dc2fa1b2e23631c348e",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "06661f2846a1ecfbb8641bb20e60c7b8",
+    "updated_at": "2026-11-07T14:53:52.081302+00:00",
+    "source": {
+      "collection_id": "2dc2fa1b2e23631c348e",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/churn-prevention/SKILL.md",
+      "git_blob_sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+      "entry_sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355"
+    },
+    "inputs": [
+      {
+        "path": "skills/churn-prevention/SKILL.md",
+        "coverage": "full",
+        "sha256": "425497b9c3415fa91a5cc4a7140a1bee727d3b6398beed1bb4fa4880503c0355",
+        "git_blob_sha": "2cb8beed89c105207c10b88bc5371848b140f838",
+        "bytes": 20037,
+        "source_lines": 434
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/06661f2846a1ecfbb8641bb20e60c7b8.json",
+    "attempt": "attempts/06661f2846a1ecfbb8641bb20e60c7b8/001",
+    "warnings": []
+  },
+  "3a5e358c8577cb9f70c5ba7231ed7c99": {
+    "collection_id": "5416b11c81efc2f9f021",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "3a5e358c8577cb9f70c5ba7231ed7c99",
+    "updated_at": "2026-11-07T15:00:48.646374+00:00",
+    "source": {
+      "collection_id": "5416b11c81efc2f9f021",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/triage/SKILL.md",
+      "git_blob_sha": "3fd5617e906cf9b71a6b17424791adb905fc248b",
+      "entry_sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/triage/SKILL.md",
+        "coverage": "full",
+        "sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf",
+        "git_blob_sha": "3fd5617e906cf9b71a6b17424791adb905fc248b",
+        "bytes": 6558,
+        "source_lines": 112
+      }
+    ],
+    "state": "failed",
+    "failure_stage": "model_or_validation",
+    "error": "['content', 'tasks', 0]: 'checks' is a required property\n['content', 'tasks', 0]: 'evidence' is a required property",
+    "attempt": "attempts/3a5e358c8577cb9f70c5ba7231ed7c99/003"
+  },
+  "87eab0bdfb1ce693240f0f8ce6294c6d": {
+    "collection_id": "6b9da56c4d7cc5e318ab",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "87eab0bdfb1ce693240f0f8ce6294c6d",
+    "updated_at": "2026-11-07T14:54:45.882043+00:00",
+    "source": {
+      "collection_id": "6b9da56c4d7cc5e318ab",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/productivity/grilling/SKILL.md",
+      "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+      "entry_sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2"
+    },
+    "inputs": [
+      {
+        "path": "skills/productivity/grilling/SKILL.md",
+        "coverage": "full",
+        "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+        "git_blob_sha": "d2f09a18e6a6c65c55f1271ba08dfeaf06f0bed3",
+        "bytes": 2077,
+        "source_lines": 30
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/87eab0bdfb1ce693240f0f8ce6294c6d.json",
+    "attempt": "attempts/87eab0bdfb1ce693240f0f8ce6294c6d/001",
+    "warnings": []
+  },
+  "13d7d99be47fae2d324e3a95cbef3b41": {
+    "collection_id": "e016d48a012cb04797b4",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "13d7d99be47fae2d324e3a95cbef3b41",
+    "updated_at": "2026-11-07T14:54:34.004017+00:00",
+    "source": {
+      "collection_id": "e016d48a012cb04797b4",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/frontend-design/SKILL.md",
+      "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "entry_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+    },
+    "inputs": [
+      {
+        "path": "skills/frontend-design/SKILL.md",
+        "coverage": "full",
+        "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+        "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+        "bytes": 9390,
+        "source_lines": 71
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/13d7d99be47fae2d324e3a95cbef3b41.json",
+    "attempt": "attempts/13d7d99be47fae2d324e3a95cbef3b41/001",
+    "warnings": []
+  },
+  "054581915d0088d8629e8c19ae4faddd": {
+    "collection_id": "ecf753893a5d0f9b58d4",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "key": "054581915d0088d8629e8c19ae4faddd",
+    "updated_at": "2026-11-07T14:55:01.817978+00:00",
+    "source": {
+      "collection_id": "ecf753893a5d0f9b58d4",
+      "repository": "coreyhaines31/marketingskills",
+      "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "skill_path": "skills/product-marketing/SKILL.md",
+      "git_blob_sha": "3af463a602aa0233c4d5fc98c23ba13224aa8f6b",
+      "entry_sha256": "19ece0fa75c72a5a8b6e90db80f506586f54cc93bae6bffbb1bd2ef4ae7d603c"
+    },
+    "inputs": [
+      {
+        "path": "skills/product-marketing/SKILL.md",
+        "coverage": "full",
+        "sha256": "19ece0fa75c72a5a8b6e90db80f506586f54cc93bae6bffbb1bd2ef4ae7d603c",
+        "git_blob_sha": "3af463a602aa0233c4d5fc98c23ba13224aa8f6b",
+        "bytes": 13847,
+        "source_lines": 320
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/054581915d0088d8629e8c19ae4faddd.json",
+    "attempt": "attempts/054581915d0088d8629e8c19ae4faddd/001",
+    "warnings": []
+  },
+  "a9d4a2a6b18f6492e6eee1d32eacc15e": {
+    "collection_id": "fec0dc3545f101253547",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "a9d4a2a6b18f6492e6eee1d32eacc15e",
+    "updated_at": "2026-11-07T14:55:16.758542+00:00",
+    "source": {
+      "collection_id": "fec0dc3545f101253547",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/academy-guide/SKILL.md",
+      "git_blob_sha": "cefeaeb20cc29a803af0335d7c7155b066d8770f",
+      "entry_sha256": "f27992510c051355dfe68c92394d509af730da5298094ec86834ee40bbd31376"
+    },
+    "inputs": [
+      {
+        "path": "skills/academy-guide/SKILL.md",
+        "coverage": "full",
+        "sha256": "f27992510c051355dfe68c92394d509af730da5298094ec86834ee40bbd31376",
+        "git_blob_sha": "cefeaeb20cc29a803af0335d7c7155b066d8770f",
+        "bytes": 7755,
+        "source_lines": 147
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/a9d4a2a6b18f6492e6eee1d32eacc15e.json",
+    "attempt": "attempts/a9d4a2a6b18f6492e6eee1d32eacc15e/001",
+    "warnings": []
+  },
+  "a57b6366f6b710c638cf13c2cb4ff176": {
+    "collection_id": "5f1e4728eaea2322c130",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "a57b6366f6b710c638cf13c2cb4ff176",
+    "updated_at": "2026-11-07T14:55:32.092586+00:00",
+    "source": {
+      "collection_id": "5f1e4728eaea2322c130",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/engineering/tdd/SKILL.md",
+      "git_blob_sha": "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985",
+      "entry_sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+    },
+    "inputs": [
+      {
+        "path": "skills/engineering/tdd/SKILL.md",
+        "coverage": "full",
+        "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+        "git_blob_sha": "01eadaa34e7c9a63a67d6dc3cce1cc81b0e49985",
+        "bytes": 3629,
+        "source_lines": 38
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/a57b6366f6b710c638cf13c2cb4ff176.json",
+    "attempt": "attempts/a57b6366f6b710c638cf13c2cb4ff176/001",
+    "warnings": []
+  },
+  "ef29a5e24a14b95c3cfc4d2e80bc9a7e": {
+    "collection_id": "506a73bbded4f67e3da3",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "key": "ef29a5e24a14b95c3cfc4d2e80bc9a7e",
+    "updated_at": "2026-11-07T14:55:50.713962+00:00",
+    "source": {
+      "collection_id": "506a73bbded4f67e3da3",
+      "repository": "mattpocock/skills",
+      "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "skill_path": "skills/productivity/handoff/SKILL.md",
+      "git_blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+      "entry_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+    },
+    "inputs": [
+      {
+        "path": "skills/productivity/handoff/SKILL.md",
+        "coverage": "full",
+        "sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+        "git_blob_sha": "a224edc643a20ddb989f9bca1547440169159810",
+        "bytes": 940,
+        "source_lines": 16
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/ef29a5e24a14b95c3cfc4d2e80bc9a7e.json",
+    "attempt": "attempts/ef29a5e24a14b95c3cfc4d2e80bc9a7e/001",
+    "warnings": []
+  },
+  "9345b7a878395c64d5f6d01d4b829cc1": {
+    "collection_id": "5d7cbcbbab764949735f",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "key": "9345b7a878395c64d5f6d01d4b829cc1",
+    "updated_at": "2026-11-07T15:01:06.369941+00:00",
+    "source": {
+      "collection_id": "5d7cbcbbab764949735f",
+      "repository": "obra/superpowers",
+      "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "skill_path": "skills/finishing-a-development-branch/SKILL.md",
+      "git_blob_sha": "fa8aecaf8813f1b19d19996f7957d1b0121f2d9c",
+      "entry_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65"
+    },
+    "inputs": [
+      {
+        "path": "skills/finishing-a-development-branch/SKILL.md",
+        "coverage": "full",
+        "sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+        "git_blob_sha": "fa8aecaf8813f1b19d19996f7957d1b0121f2d9c",
+        "bytes": 7781,
+        "source_lines": 225
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/9345b7a878395c64d5f6d01d4b829cc1.json",
+    "attempt": "attempts/9345b7a878395c64d5f6d01d4b829cc1/003",
+    "warnings": []
+  },
+  "8a0b7467f41a46a839eda22f990c702c": {
+    "collection_id": "57b2f1ac086c8d30cddc",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "key": "8a0b7467f41a46a839eda22f990c702c",
+    "updated_at": "2026-11-07T14:55:47.572700+00:00",
+    "source": {
+      "collection_id": "57b2f1ac086c8d30cddc",
+      "repository": "anthropics/skills",
+      "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "skill_path": "skills/mcp-builder/SKILL.md",
+      "git_blob_sha": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
+      "entry_sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c"
+    },
+    "inputs": [
+      {
+        "path": "skills/mcp-builder/SKILL.md",
+        "coverage": "full",
+        "sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c",
+        "git_blob_sha": "d61a9056202a0f8b2d064c896e62f415c45b1bf1",
+        "bytes": 11129,
+        "source_lines": 252
+      },
+      {
+        "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+        "coverage": "full",
+        "sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+        "git_blob_sha": "b9d343cc3ae89b1fc139dae96bdb2b7e29ba3648",
+        "bytes": 7330,
+        "source_lines": 249
+      },
+      {
+        "path": "skills/mcp-builder/reference/python_mcp_server.md",
+        "coverage": "full",
+        "sha256": "2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80",
+        "git_blob_sha": "cf7ec996d2e6e3655bc75ff6902738d03a37334e",
+        "bytes": 25099,
+        "source_lines": 719
+      },
+      {
+        "path": "skills/mcp-builder/reference/evaluation.md",
+        "coverage": "full",
+        "sha256": "8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427",
+        "git_blob_sha": "87e9bb78840fac113d93b4a27ab5b229a18cf226",
+        "bytes": 21663,
+        "source_lines": 602
+      }
+    ],
+    "state": "succeeded",
+    "record": "records/8a0b7467f41a46a839eda22f990c702c.json",
+    "attempt": "attempts/8a0b7467f41a46a839eda22f990c702c/002",
+    "warnings": []
+  }
+}

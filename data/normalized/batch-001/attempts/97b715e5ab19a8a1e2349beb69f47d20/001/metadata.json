@@ -1,0 +1,62 @@
+{
+  "started_at": "2026-11-07T14:52:15.177919+00:00",
+  "source": {
+    "collection_id": "2d541286acded129f988",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/writing-plans/SKILL.md",
+    "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+    "entry_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "f4a88cee7c0238f407b7269b6298b5b1da9f063bd3f9b111fd419d29da026e35",
+  "input_files": [
+    {
+      "path": "skills/writing-plans/SKILL.md",
+      "coverage": "full",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+      "bytes": 10335,
+      "source_lines": 204
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e49810d67ffeJcBlurHOj5iNtW",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 7084,
+          "output": 5008,
+          "reasoning": 1570,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T14:52:58.545820+00:00"
+}

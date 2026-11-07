@@ -1,0 +1,428 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "a99162a0c1c8490d811b",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/test-driven-development/SKILL.md",
+    "git_blob_sha": "46838cc9e893c06259e3bdad0fc2425b36242f15",
+    "entry_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+  },
+  "content": {
+    "name": "test-driven-development",
+    "title": "测试驱动开发（TDD）：先让测试失败，再写最小实现",
+    "summary": "该 Skill 要求在写任何生产代码前先写一个会失败的最小测试，并亲眼确认其失败原因；随后只写让该测试通过的最简代码，确认本测试与项目整套测试全部通过且输出干净，再在保持测试全部通过的前提下重构，然后进入下一个测试。适用于新功能、bug 修复、重构与行为变更；一次性原型、生成代码、配置文件属于例外，需先征询人类搭档。",
+    "evidence": [
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "section": "Overview",
+        "line_start": 10,
+        "line_end": 14
+      },
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "section": "The Iron Law",
+        "line_start": 31,
+        "line_end": 45
+      },
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "section": "Red-Green-Refactor",
+        "line_start": 47,
+        "line_end": 206
+      }
+    ],
+    "tasks": [
+      {
+        "id": "tdd-cycle",
+        "goal": "在写生产代码前先写会失败的测试，按 RED→GREEN→REFACTOR 循环推进，最终得到覆盖新行为、且项目整套测试全部通过的实现。",
+        "when": "实现任何新功能、修复 bug、重构或改变行为时；一次性原型、生成代码、配置文件为例外，需先征询人类搭档。",
+        "inputs": [
+          "期望的行为或期望的 API 设想",
+          "项目现有测试命令与测试套件",
+          "（若有）可复现 bug 的失败场景"
+        ],
+        "outputs": [
+          "每个新函数/方法对应的测试",
+          "让测试通过的最小生产代码",
+          "保持测试全部通过的重构后代码",
+          "按名列出所有失败的测试报告（含非本次改动导致的失败）"
+        ],
+        "steps": [
+          {
+            "action": "写一个最小测试表达期望行为：名称描述行为、只测一件事（名称里出现“and”就拆分）、使用真实代码，mock 仅在不可避免时使用。",
+            "when": "每个新行为或新功能开始实现前",
+            "rationale": "测试先行，才能证明该测试能够捕获缺失的功能",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 71,
+                "line_end": 111
+              },
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 208,
+                "line_end": 214
+              }
+            ]
+          },
+          {
+            "action": "运行该测试并确认它失败：失败信息符合预期、原因是功能缺失而非拼写错误；若测试直接通过，说明测的是已有行为，应修改测试；若测试报错，先修复错误并重跑，直到它以正确方式失败。",
+            "when": "写好 RED 测试后（强制，不得跳过）",
+            "rationale": "没有亲眼看到失败，就不知道测试是否测对了东西",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 12,
+                "line_end": 12
+              },
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 113,
+                "line_end": 128
+              }
+            ]
+          },
+          {
+            "action": "写刚好能让测试通过的最简代码；不添加测试之外的功能，不顺手重构其他代码，也不做超出测试的“改进”。",
+            "when": "RED 已按预期验证失败后",
+            "rationale": "让实现受测试约束，避免过度设计（YAGNI）",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 130,
+                "line_end": 166
+              }
+            ]
+          },
+          {
+            "action": "再次运行测试：确认本测试通过、其他测试仍通过、输出干净（无错误与警告）；本测试失败就修改代码，不要修改测试；其他测试失败应立即修复。随后运行项目的完整测试命令（如 pytest、npm test、cargo test，取决于仓库），即使任务只点名一个测试文件；报告须按名列出该次运行暴露的任何失败，包括并非由本次改动引起的失败。",
+            "when": "GREEN 实现之后（强制）",
+            "rationale": "单个测试通过不等于整套测试通过；看到了失败却在报告中不提，等于用省略伪造报告",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 168,
+                "line_end": 193
+              }
+            ]
+          },
+          {
+            "action": "仅在测试全部通过后重构：消除重复、改进命名、抽取辅助函数；保持测试全部通过，不新增行为。",
+            "when": "GREEN 且项目整套测试通过之后",
+            "rationale": "在测试保护下清理代码，同时不改变已有行为",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 195,
+                "line_end": 202
+              }
+            ]
+          },
+          {
+            "action": "为下一个功能写下一个失败测试，重复 RED→GREEN→REFACTOR 循环；若验证失败原因不对则回到 RED，GREEN 未通过则继续改代码，重构后仍需回到验证保持测试全部通过，再进入下一个测试。",
+            "when": "当前循环完成或某一步验证未通过时",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 47,
+                "line_end": 69
+              },
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 204,
+                "line_end": 206
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "RED 阶段必须确认：测试失败（而非报错）、失败信息符合预期、失败原因是功能缺失而非拼写错误；测试直接通过应修改测试，测试报错应修复后重跑。",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 121,
+                "line_end": 128
+              }
+            ]
+          },
+          {
+            "text": "GREEN 阶段必须确认：本测试通过、其他测试仍通过、输出干净无错误与警告；其他测试指项目整套测试，任务范围只界定交付物，不界定验证范围。",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 176,
+                "line_end": 193
+              }
+            ]
+          },
+          {
+            "text": "完成前逐项核对：每个新函数/方法都有测试；亲眼看过每个测试先失败；每个测试按预期原因失败；为每个测试写了最小实现；全部测试通过；输出干净；测试使用真实代码（mock 仅在不可避免时）；覆盖边界情况与错误。有未勾选项即说明跳过了 TDD，需从头开始。",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 293,
+                "line_end": 306
+              }
+            ]
+          },
+          {
+            "text": "出现以下红旗即停止并重新开始：先写代码后写测试、实现后补测试、测试立即通过、说不清测试为何失败、“以后再补测试”、合理化“就这一次”、“我已手工测过”、“测试后写目的相同”、“重在精神不在仪式”、“留作参考/改造现有代码”、“已花 X 小时删掉浪费”、“TDD 教条我在务实”、“这次不一样”。",
+            "evidence": [
+              {
+                "path": "skills/test-driven-development/SKILL.md",
+                "line_start": 238,
+                "line_end": 254
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "section": "Overview",
+            "line_start": 10,
+            "line_end": 14
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "section": "Red-Green-Refactor",
+            "line_start": 71,
+            "line_end": 206
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "section": "Verification Checklist",
+            "line_start": 293,
+            "line_end": 306
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "没有失败的测试就不写生产代码（Iron Law）。",
+        "when": "任何生产代码变更",
+        "rationale": "核心原则：若未观察测试失败，就不知道测试是否测对了东西",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 12,
+            "line_end": 12
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 31,
+            "line_end": 35
+          }
+        ]
+      },
+      {
+        "text": "若在测试之前写了代码：删除它并从头开始；不得留作“参考”、不得在写测试时“改造”它、不得查看它。删除就是删除。",
+        "when": "发现实现先于测试存在",
+        "rationale": "保留它会诱导测试后补，实质仍是测试后写",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 37,
+            "line_end": 45
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 230,
+            "line_end": 231
+          }
+        ]
+      },
+      {
+        "text": "TDD 始终适用于新功能、bug 修复、重构与行为变更；一次性原型、生成代码、配置文件属于例外，但需先询问人类搭档。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 16,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "text": "除人类搭档许可外没有例外；“就这一次跳过 TDD”的念头被视为合理化。",
+        "when": null,
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 29,
+            "line_end": 29
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 330,
+            "line_end": 330
+          }
+        ]
+      },
+      {
+        "text": "测试质量要求：只测一个行为、名称清晰、使用真实代码（除非不可避免，不用 mock）。",
+        "when": "编写或修改测试时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 108,
+            "line_end": 111
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 208,
+            "line_end": 214
+          }
+        ]
+      },
+      {
+        "text": "写或改任何测试时：先说出会使该测试失败的生产改动；只断言真实行为，绝不断言 mock 行为；测试专用代码放在测试工具中，不放进生产类；mock 依赖前先理解其副作用。",
+        "when": "编写或修改测试时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 216,
+            "line_end": 220
+          }
+        ]
+      },
+      {
+        "text": "发现 bug 时先写复现该 bug 的失败测试，再按 TDD 循环修复；没有测试不得修复 bug。",
+        "when": "调试或修复 bug 时",
+        "rationale": "测试既证明修复有效，也防止回归",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 317,
+            "line_end": 321
+          }
+        ]
+      },
+      {
+        "text": "不能把“测试难写”作为跳过 TDD 的理由：难测试意味着设计或接口难用，应简化设计/接口。",
+        "when": "测试难以编写时",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 233,
+            "line_end": 233
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 312,
+            "line_end": 315
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "writing-good-tests.md",
+        "kind": "reference",
+        "locator": "skills/test-driven-development/writing-good-tests.md",
+        "usage": "写或修改任何测试时阅读，用于获得“让测试诚实”的规则：写测试前说出会使它失败的生产改动、只断言真实行为、测试专用代码放测试工具、mock 前理解依赖副作用。本次未读取该文件，以上仅为文档所述。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 216,
+            "line_end": 220
+          }
+        ]
+      },
+      {
+        "name": "项目测试命令",
+        "kind": "environment",
+        "locator": null,
+        "usage": "用于运行单个测试文件（文档示例：npm test path/to/test.test.ts），并在收尾时运行项目完整测试命令（pytest、npm test、cargo test 等，取决于仓库）。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 117,
+            "line_end": 119
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 172,
+            "line_end": 174
+          },
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 185,
+            "line_end": 193
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "常见合理化与回应",
+        "text": "原文以表格反驳常见借口：太简单不用测——简单代码也会坏，测试只需 30 秒；之后补测试——后补测试会立即通过，什么也证明不了，且受已写代码影响；“已手工测过”——手工测试是临时的、无覆盖记录、代码一变就要重测；“删掉数小时代码浪费”——沉没成本，真正的选择是用 TDD 重写（高信心）还是保留并事后补测试（低信心、可能有 bug）；“需要先探索”——可以，但探索结果丢弃后用 TDD 重来。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 222,
+            "line_end": 236
+          }
+        ]
+      },
+      {
+        "topic": "bug 修复示例",
+        "text": "以“空邮箱被接受”为例：RED 写 rejects empty email 测试，断言结果为 Email required；验证 RED 时运行 npm test 得到 expected 'Email required', got undefined；GREEN 只在 submitForm 中加入 !data.email?.trim() 的最小校验；验证为 PASS；REFACTOR 时如有需要再抽取多字段校验。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 256,
+            "line_end": 291
+          }
+        ]
+      },
+      {
+        "topic": "GREEN 的最小实现对比",
+        "text": "示例把仅够通过的循环重试函数标为 Good，把带 maxRetries、backoff、onRetry 选项的版本标为过度设计（YAGNI）。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 130,
+            "line_end": 164
+          }
+        ]
+      },
+      {
+        "topic": "卡住时的处理",
+        "text": "不知道如何测试——先写期望的 API、先写断言，或询问人类搭档；测试太复杂——说明设计太复杂，简化接口；必须 mock 一切——说明代码耦合过高，使用依赖注入；测试准备代码过多——抽取辅助函数，仍复杂则简化设计。",
+        "evidence": [
+          {
+            "path": "skills/test-driven-development/SKILL.md",
+            "line_start": 308,
+            "line_end": 315
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/test-driven-development/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:04.345033+00:00"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "2d541286acded129f988",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/writing-plans/SKILL.md",
+    "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+    "entry_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+  },
+  "files": [
+    {
+      "path": "skills/writing-plans/SKILL.md",
+      "coverage": "full",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "git_blob_sha": "4cf0275d88d67aa4ef09f4bbca9970ed6ff74a00",
+      "bytes": 10335,
+      "source_lines": 204
+    }
+  ]
+}

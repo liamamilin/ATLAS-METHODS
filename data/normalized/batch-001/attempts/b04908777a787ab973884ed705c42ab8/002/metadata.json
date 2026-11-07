@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-11-07T14:40:20.940240+00:00",
+  "source": {
+    "collection_id": "0a2ef73281ba846578f5",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/brainstorming/SKILL.md",
+    "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+    "entry_sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "06d17890463e65b2f34a52cbd9badfda8bfd4c87e3b46a8b79abe63ce8221ecb",
+  "input_files": [
+    {
+      "path": "skills/brainstorming/SKILL.md",
+      "coverage": "full",
+      "sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207",
+      "git_blob_sha": "9eb0edc7fedf26e1d3e2f3f223e5bcc5058aed6a",
+      "bytes": 15190,
+      "source_lines": 316
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498bf336ffeY52f49LTXRQS3J",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:24.685685+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-11-07T14:40:24.781795+00:00",
+  "source": {
+    "collection_id": "443f91aa53a6736ff426",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/ab-testing/SKILL.md",
+    "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+    "entry_sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "5cb42ba02740c50c844aeeb182b76e9a73b59457cdefb4c5de05f39b7cd778b3",
+  "input_files": [
+    {
+      "path": "skills/ab-testing/SKILL.md",
+      "coverage": "full",
+      "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+      "git_blob_sha": "c9deeb82ba70977fbdf6eae4a7a4e0a818afec9e",
+      "bytes": 13346,
+      "source_lines": 361
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498be443ffesnmW6WmIclNwFZ",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:29.019145+00:00"
+}

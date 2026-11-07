@@ -1,0 +1,926 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "004bc9aeebee6129a44b",
+    "repository": "coreyhaines31/marketingskills",
+    "commit_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+    "skill_path": "skills/copy-editing/SKILL.md",
+    "git_blob_sha": "7769981ddf9b2d2816a28e3fa2bb341e77503568",
+    "entry_sha256": "cec5a771ce37ade292f7f1f6b418e8a6ce6ec3f50163fa5e664afbcb03e085fc"
+  },
+  "content": {
+    "name": "copy-editing",
+    "title": "既有营销文案的七轮扫读编辑与 AI 痕迹清理",
+    "summary": "针对用户已有的营销/转化文案做改进而非从零重写：先判断编辑模式（空白或 AI 味重的重建、有真实声音的复原、单点修改），点编辑跳过七轮扫读只改被要求处；完整模式按清晰度、语气、So What、证据、具体性、情绪、零风险七轮顺序扫读，每轮后回查前序轮次，最后跑 AI 痕迹检查。高价值文案可加 3-5 人专家面板 1-10 分打分，迭代到各人 7 分以上且均分 8 分以上。快速场景用词级/句级/段级检查替代完整流程；内容衰退时另有刷新框架。",
+    "evidence": [
+      {
+        "path": "skills/copy-editing/SKILL.md",
+        "section": "entry / Core Philosophy",
+        "line_start": 1,
+        "line_end": 31
+      }
+    ],
+    "tasks": [
+      {
+        "id": "pick-edit-mode",
+        "goal": "在动手前判断输入属于哪种编辑模式，并据此决定是否跑完整七轮扫读。",
+        "when": "每次接到编辑/审阅/润色既有文案的请求时，先做模式判断。",
+        "inputs": [
+          "待编辑的既有文案",
+          "若存在则读取的产品营销上下文（品牌声音、客户用语）"
+        ],
+        "outputs": [
+          "选定的模式（A 空白或 AI 味重、B 有真实声音、C 单点修改）",
+          "对应的编辑路径"
+        ],
+        "steps": [
+          {
+            "action": "先检查是否存在 .agents/product-marketing.md（或 .claude/product-marketing.md，老配置下为 product-marketing-context.md），存在则读取，用其中的品牌声音与客户语言指导编辑。",
+            "when": "开始编辑之前。",
+            "rationale": "让编辑贴合品牌语域与客户实际用语。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Core Philosophy",
+                "line_start": 14,
+                "line_end": 15
+              }
+            ]
+          },
+          {
+            "action": "诊断输入：A 为空白或充满 AI 味（从事实重建）；B 为有真实声音（恢复它并保留其论点与用词）；C 为单点修改（一行、一个词或一个段落）。",
+            "when": "模式判断阶段。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Core Philosophy",
+                "line_start": 25,
+                "line_end": 25
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认所选模式与输入相符；A、B 需跑完整七轮扫读，C 跳过七轮扫读。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Core Philosophy",
+                "line_start": 25,
+                "line_end": 25
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Core Philosophy",
+            "line_start": 14,
+            "line_end": 25
+          }
+        ]
+      },
+      {
+        "id": "point-edit",
+        "goal": "对只需改一行、一个词或一个段落的请求做最小改动。",
+        "when": "模式诊断为 C，例如用户只要求修正某一行。",
+        "inputs": [
+          "待改文案",
+          "用户指出的具体位置"
+        ],
+        "outputs": [
+          "仅改动过的行",
+          "每处改动的理由"
+        ],
+        "steps": [
+          {
+            "action": "只改被要求的内容加上其最小邻近范围，其余保持原样；返回改动行并说明理由。",
+            "when": "点编辑模式。",
+            "rationale": "避免把局部请求扩大成全面改写。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Core Philosophy",
+                "line_start": 25,
+                "line_end": 25
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Core Philosophy",
+            "line_start": 25,
+            "line_end": 25
+          }
+        ]
+      },
+      {
+        "id": "seven-sweeps",
+        "goal": "按七个维度顺序扫读文案，每次只聚焦一个维度，并保证前序维度的成果不被后续编辑破坏。",
+        "when": "模式为 A（空白或 AI 味重）或 B（有真实声音）时；点编辑不适用。",
+        "inputs": [
+          "待编辑文案",
+          "产品营销上下文（如有）",
+          "作者原有论点与用词（B 模式）"
+        ],
+        "outputs": [
+          "逐轮标记的问题点与具体修改建议",
+          "经七轮并回查后的编辑稿"
+        ],
+        "steps": [
+          {
+            "action": "清晰度轮：快速通读并标出不清楚处，先只记录问题不改，之后给出具体修改建议并确认修改保持原意；检查含混句式、代词指代不明、行话、歧义陈述、缺上下文。",
+            "when": "第一轮。",
+            "rationale": "句子承载过多、抽象、假设读者已知、把重点埋在限定语里都会损害清晰度。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 1: Clarity",
+                "line_start": 33,
+                "line_end": 54
+              }
+            ]
+          },
+          {
+            "action": "语气与声音轮：朗读以听出不一致，标记语气突变处，建议平滑过渡的改法并保持人格贯穿；检查正式/随意切换、品牌人格不一致、忽幽默忽严肃、技术语言随机出现、\"we\" 与 \"the company\" 混用。",
+            "when": "第二轮。",
+            "rationale": "声音不一致会让文案读起来割裂。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 2: Voice and Tone",
+                "line_start": 60,
+                "line_end": 80
+              }
+            ]
+          },
+          {
+            "action": "So What 轮：对每条主张逐句问\"那又怎样？\"，标出没有回答的，补上利益桥接或更深含义，并确认利益对接读者真实诉求；重点检查只有功能没有利益、有主张无后果、缺\"which means...\"衔接。",
+            "when": "第三轮。",
+            "rationale": "不回答\"为什么要在意\"的主张对读者无意义。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 3: So What",
+                "line_start": 88,
+                "line_end": 113
+              }
+            ]
+          },
+          {
+            "action": "证据轮：识别每条需要佐证的主张，查看附近是否已有证据，标记无支撑断言，建议补证据或弱化主张；可寻找的证据包括具名且有细节的证言、案例引用、统计数据、第三方背书、保证与风险逆转、客户 logo、评分。",
+            "when": "第四轮。",
+            "rationale": "\"Trusted by thousands\"/\"Industry-leading\" 这类说法缺少可核实的支撑。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 4: Prove It",
+                "line_start": 119,
+                "line_end": 148
+              }
+            ]
+          },
+          {
+            "action": "具体性轮：标出模糊词与短语，追问能否更具体，补数字、时间范围或例子；无法变具体的内容删除，视其为填充。",
+            "when": "第五轮。",
+            "rationale": "形容词在做名词该做的事、利益没有量化、结果没有时间范围都会削弱说服力。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 5: Specificity",
+                "line_start": 154,
+                "line_end": 184
+              }
+            ]
+          },
+          {
+            "action": "情绪轮：判断文案是否有情感冲击，找出本应共鸣却平淡的段落，在不失真的前提下加情绪质地，确保情绪服务于信息而非操纵；可用的情绪维度包括现状之痛、对替代方案的不满、错失恐惧、转变渴望、明智选择的骄傲、问题解决的解脱；手法包括生动描绘\"之前\"、感官语言、微故事、共同经历、引发反思的提问。",
+            "when": "第六轮。",
+            "rationale": "平铺直叙的信息语言让痛点只被提到而未被感受到。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 6: Heightened Emotion",
+                "line_start": 190,
+                "line_end": 219
+              }
+            ]
+          },
+          {
+            "action": "零风险轮：聚焦 CTA 附近，列出每个可能让人犹豫的理由，逐条检查文案是否回应，按需补风险逆转或信任信号；检查 CTA 附近摩擦、未回答的异议、缺信任信号、下一步不清、隐藏成本。",
+            "when": "第七轮。",
+            "rationale": "行动前的每个未解疑虑都是转化障碍。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 7: Zero Risk",
+                "line_start": 225,
+                "line_end": 255
+              }
+            ]
+          },
+          {
+            "action": "第七轮结束后按相反顺序把之前各轮再完整走一遍：情绪→具体性→证据→So What→语气→清晰度。",
+            "when": "七轮全部完成后。",
+            "rationale": "后续编辑可能破坏前序维度，需整体回检。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 7: Zero Risk / 循环回查",
+                "line_start": 257,
+                "line_end": 257
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "每轮结束后回查前序轮次，确认未被破坏（如语气轮后回到清晰度轮，情绪轮后回到具体性、证据、So What、语气、清晰度）。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "The Seven Sweeps Framework",
+                "line_start": 29,
+                "line_end": 31
+              }
+            ]
+          },
+          {
+            "text": "清晰度轮后确认\"Rule of One\"（每节一个主要观点）与\"You Rule\"（文案对读者说话）仍然成立。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sweep 1: Clarity",
+                "line_start": 56,
+                "line_end": 56
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "The Seven Sweeps Framework",
+            "line_start": 29,
+            "line_end": 257
+          }
+        ]
+      },
+      {
+        "id": "expert-panel-scoring",
+        "goal": "在七轮扫读之后再加一道多人视角质量闸门，针对高风险文案收集可执行的批评并迭代修订。",
+        "when": "高风险文案（落地页、发布邮件、销售页）；使用强度见规则中的分级。",
+        "inputs": [
+          "已过七轮扫读的文案",
+          "与文案类型匹配的 3-5 个专家角色"
+        ],
+        "outputs": [
+          "各角色 1-10 分与具体批评",
+          "按最低分优先修订后的稿件与复评分"
+        ],
+        "steps": [
+          {
+            "action": "组织 3-5 个与文案类型相关的专家角色。",
+            "when": "进入专家面板环节。",
+            "rationale": "多角色审阅能捕捉单一视角遗漏的问题。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Expert Panel Scoring",
+                "line_start": 263,
+                "line_end": 267
+              }
+            ]
+          },
+          {
+            "action": "每个角色按各自专长给文案打 1-10 分，并收集具体批评（不只是分数，还要说明改什么）。",
+            "when": "评分阶段。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "How It Works",
+                "line_start": 268,
+                "line_end": 269
+              }
+            ]
+          },
+          {
+            "action": "按反馈修订，优先处理得分最低的方面。",
+            "when": "收到评分与批评后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "How It Works",
+                "line_start": 270,
+                "line_end": 270
+              }
+            ]
+          },
+          {
+            "action": "修订后重新打分，迭代直到所有角色都 7 分以上且面板平均 8 分以上。",
+            "when": "每轮修订后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "How It Works",
+                "line_start": 271,
+                "line_end": 271
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "以 9-10 可发布、7-8 强仅需微调、5-6 可用但明显有缺口需再走一轮、3-4 重大问题需大改、1-2 根本性失效重想方案的分级解读分数。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Scoring Rubric",
+                "line_start": 293,
+                "line_end": 301
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Expert Panel Scoring",
+            "line_start": 261,
+            "line_end": 308
+          }
+        ]
+      },
+      {
+        "id": "quick-pass",
+        "goal": "在不跑完整七轮时做较快的词级、句级、段级检查。",
+        "when": "不需要完整七轮流程的快速审阅。",
+        "inputs": [
+          "待审文案"
+        ],
+        "outputs": [
+          "词级替换/删除建议",
+          "句段结构调整建议"
+        ],
+        "steps": [
+          {
+            "action": "词级：删减弱化词与填充词，把 utilize/leverage 换成 use、implement 换成 set up、facilitate 换成 help；对 innovative/cutting-edge、robust、seamless 这类词改为写出其代表的事实；留意副词、被动语态、名词化（如\"make a decision\"改\"decide\"）。",
+            "when": "快速通道开始时。",
+            "rationale": "同义替换只会造出新的 AI 痕迹，应回到事实。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Word-Level Checks",
+                "line_start": 316,
+                "line_end": 345
+              }
+            ]
+          },
+          {
+            "action": "句级：一句一个观点，长短句交错，重要信息前置，每句最多 3 个连词，通常不超过 25 词。",
+            "when": "词级检查后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Sentence-Level Checks",
+                "line_start": 347,
+                "line_end": 353
+              }
+            ]
+          },
+          {
+            "action": "段级：一段一个主题，网页段落保持 2-4 句，开门句有力，段间逻辑连贯，留白便于扫读。",
+            "when": "句级检查后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Paragraph-Level Checks",
+                "line_start": 355,
+                "line_end": 361
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Quick-Pass Editing Checks",
+            "line_start": 312,
+            "line_end": 361
+          }
+        ]
+      },
+      {
+        "id": "ai-tell-check",
+        "goal": "清除会被读者识别为 AI 生成的句式痕迹，避免读者因看出痕迹而连带怀疑文案中的主张。",
+        "when": "每次编辑之后（在七轮扫读之后）都要跑。",
+        "inputs": [
+          "编辑后的文案"
+        ],
+        "outputs": [
+          "按模式逐条重写的句子",
+          "事实缺失处的 [NEED: ...] 标记"
+        ],
+        "steps": [
+          {
+            "action": "逐类修正模式：对比揭示（\"It's not X, it's Y.\"）改为直接陈述 Y 并给理由；否定列表（\"No X, no Y, no Z\"）改为说明实际发生什么，必要时只保留一个缺失项；尾随堆叠（\"..., no exports, no spreadsheets.\"）在主张处收句，把利益另开一句；自问自答（\"The result? 3x faster.\"）删问句留答案；冒号揭示（\"The best part: it learns.\"）改写为普通句；套话开头（\"In today's fast-paced world,\" 等）删除并从读者问题或事实开头；短文案中的 em dash（标题、副标题、CTA、广告、社交帖、邮件主题）改用句号、逗号或冒号。",
+            "when": "AI 痕迹检查阶段。",
+            "rationale": "识别出 AI 痕迹的读者往往会怀疑其周围的主张；句式结构比单词更容易暴露。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "AI-Tell Check",
+                "line_start": 365,
+                "line_end": 377
+              }
+            ]
+          },
+          {
+            "action": "修正时回到事实（机制、数字、客户、步骤）重写；事实拿不到时标 [NEED: ...] 而不编造；保留品牌语域，正式但具体的句子是允许的。",
+            "when": "每条痕迹的修复。",
+            "rationale": "换同义词只会产生新的痕迹。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "AI-Tell Check",
+                "line_start": 381,
+                "line_end": 381
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "确认每个列出的痕迹模式实例都已修正；每节最多保留一个片段句和一个三项列表。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "AI-Tell Check",
+                "line_start": 367,
+                "line_end": 379
+              }
+            ]
+          },
+          {
+            "text": "确认以下内容未被误删：FAQ 问句、CTA 旁单个 \"No card required\"、确实有三个功能的三项列表、逗号后补充新事实的从句（如 \"Imports run nightly, keeping your existing IDs\"）。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "AI-Tell Check / Leave these alone",
+                "line_start": 383,
+                "line_end": 383
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check",
+            "line_start": 363,
+            "line_end": 385
+          }
+        ]
+      },
+      {
+        "id": "collaborative-sweeps",
+        "goal": "与作者协作逐轮推进编辑，并保留作者对文案的最终决定权。",
+        "when": "协作编辑场景。",
+        "inputs": [
+          "文案",
+          "作者的反馈与最终决定"
+        ],
+        "outputs": [
+          "每轮发现与具体修改建议",
+          "作者更新后的稿件"
+        ],
+        "steps": [
+          {
+            "action": "跑一轮并把发现呈现给作者，说明发现了什么、为什么是问题。",
+            "when": "每轮开始。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Working with Copy Sweeps",
+                "line_start": 437,
+                "line_end": 439
+              }
+            ]
+          },
+          {
+            "action": "给出具体修改建议而不只是指出问题；请作者提供更新后的文案，由其做最终决定。",
+            "when": "呈现发现之后。",
+            "rationale": "尊重作者对文案的所有权。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Working with Copy Sweeps",
+                "line_start": 440,
+                "line_end": 441
+              }
+            ]
+          },
+          {
+            "action": "每轮修改后复检之前各轮，重复直到某一完整轮次不再发现新问题。",
+            "when": "作者返回更新稿后。",
+            "rationale": "迭代确保每次修改不制造新问题。",
+            "evidence": [
+              {
+                "path": "skills/copy-editing/SKILL.md",
+                "section": "Working with Copy Sweeps",
+                "line_start": 442,
+                "line_end": 445
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Working with Copy Sweeps",
+            "line_start": 435,
+            "line_end": 445
+          }
+        ]
+      },
+      {
+        "id": "content-refresh",
+        "goal": "在流量下滑、数据过时或产品已变时刷新既有页面而非直接重写。",
+        "when": "流量下滑、数据过时或产品发生变化时。",
+        "inputs": [
+          "衰退的既有页面"
+        ],
+        "outputs": [],
+        "steps": [],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Content Refresh Editing",
+            "line_start": 457,
+            "line_end": 461
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "不要改动核心信息，编辑的目标是增强它。",
+        "when": "任何编辑模式。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Key principles",
+            "line_start": 20,
+            "line_end": 20
+          }
+        ]
+      },
+      {
+        "text": "多次聚焦的通读优于一次无焦点的全面审阅。",
+        "when": "选择编辑方式时。",
+        "rationale": "试图一次修好所有东西会漏掉问题。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Key principles",
+            "line_start": 17,
+            "line_end": 21
+          }
+        ]
+      },
+      {
+        "text": "每处编辑都应有明确理由。",
+        "when": "提出任何修改时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Key principles",
+            "line_start": 22,
+            "line_end": 22
+          }
+        ]
+      },
+      {
+        "text": "保留作者声音，同时提升清晰度。",
+        "when": "任何编辑模式。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Key principles",
+            "line_start": 23,
+            "line_end": 23
+          }
+        ]
+      },
+      {
+        "text": "点编辑跳过七轮扫读：只改被要求的内容加上最小邻近范围，只返回改动行及理由，其余保持原样。",
+        "when": "用户只要求修正一行或一个词。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Core Philosophy",
+            "line_start": 25,
+            "line_end": 25
+          }
+        ]
+      },
+      {
+        "text": "AI 痕迹清单中的每种模式都要逐个修正，而不仅是抽样。",
+        "when": "每次编辑后的 AI 痕迹检查。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check",
+            "line_start": 367,
+            "line_end": 367
+          }
+        ]
+      },
+      {
+        "text": "每节（一个 hero、一个页面区块或一条短帖）最多一个片段句和一个三项列表；seamless、robust、powerful、streamline、empower 视为占位词，能替换就替换为所代表的事实，同一段出现两个则重写该段。",
+        "when": "AI 痕迹检查与具体性编辑时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check / cap these",
+            "line_start": 379,
+            "line_end": 379
+          }
+        ]
+      },
+      {
+        "text": "短文案（标题、副标题、CTA、广告、社交帖、邮件主题）中不用 em dash；长文案每页最多 1-2 个。",
+        "when": "AI 痕迹检查。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check",
+            "line_start": 377,
+            "line_end": 377
+          }
+        ]
+      },
+      {
+        "text": "事实不可得时标 [NEED: ...]，不得编造；不得用同义词替换冒充修复。",
+        "when": "重写 AI 痕迹或补具体性而手上没有事实时。",
+        "rationale": "同义替换会造出新的痕迹。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check / How to fix",
+            "line_start": 381,
+            "line_end": 381
+          }
+        ]
+      },
+      {
+        "text": "专家面板的通过条件：所有角色 7 分以上且面板平均 8 分以上。",
+        "when": "使用专家面板评分时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "How It Works",
+            "line_start": 271,
+            "line_end": 271
+          }
+        ]
+      },
+      {
+        "text": "面板使用强度：发布文案、定价页、高流量落地页总是使用；邮件序列、销售页、广告推荐使用；博客、社交内容、内部文档可选；快速更新、小修与低风险内容跳过。",
+        "when": "决定是否加专家面板时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "When to Use",
+            "line_start": 305,
+            "line_end": 308
+          }
+        ]
+      },
+      {
+        "text": "写新文案不属于本 Skill：应从零写作时用 copywriting，本 Skill 用于初稿完成后的编辑；结构性/策略性页面调整用 cro。",
+        "when": "用户没有现成文案或要求整体重写时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "When to Use Each Skill",
+            "line_start": 484,
+            "line_end": 491
+          }
+        ]
+      },
+      {
+        "text": "快速通道词级处理：删 very/really/extremely/incredibly（弱化词）、just/actually/basically（填充）、in order to（用 to）、常可省略的 that、things/stuff（含糊）；utilize/leverage→use，implement→set up，facilitate→help。",
+        "when": "快速通道词级检查。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Word-Level Checks",
+            "line_start": 318,
+            "line_end": 332
+          }
+        ]
+      },
+      {
+        "text": "句级约束：每句一个观点、长短句交错、重要信息前置、每句最多 3 个连词、通常不超过 25 词。",
+        "when": "快速通道句级检查。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Sentence-Level Checks",
+            "line_start": 349,
+            "line_end": 353
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "Copy Editing Checklist",
+        "kind": "reference",
+        "locator": "skills/copy-editing/references/checklist.md",
+        "usage": "交付前的完整 QA 清单，覆盖七轮扫读、开始前事项与终检项；也用其 #pick-the-edit-mode 一节辅助模式判断。未读取正文，具体条目为文档所述。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Copy Editing Checklist / References",
+            "line_start": 389,
+            "line_end": 391
+          }
+        ]
+      },
+      {
+        "name": "Plain English Alternatives",
+        "kind": "reference",
+        "locator": "skills/copy-editing/references/plain-english-alternatives.md",
+        "usage": "把复杂词替换为更简单的说法。未读取正文。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "References",
+            "line_start": 451,
+            "line_end": 451
+          }
+        ]
+      },
+      {
+        "name": "Content Refresh",
+        "kind": "reference",
+        "locator": "skills/copy-editing/references/content-refresh.md",
+        "usage": "内容刷新框架：SERP 差距分析、完整刷新清单、刷新与重写的决策矩阵、节奏指南。未读取正文，细节为文档所述。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "References / Content Refresh Editing",
+            "line_start": 452,
+            "line_end": 461
+          }
+        ]
+      },
+      {
+        "name": "产品营销上下文文件",
+        "kind": "environment",
+        "locator": ".agents/product-marketing.md（或 .claude/product-marketing.md；旧配置为 product-marketing-context.md）",
+        "usage": "编辑前读取，用其中的品牌声音与客户用语指导修改；文件不存在则跳过。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Core Philosophy",
+            "line_start": 14,
+            "line_end": 15
+          }
+        ]
+      },
+      {
+        "name": "copywriting skill 的 AI-tells 参考",
+        "kind": "skill",
+        "locator": "copywriting 技能",
+        "usage": "需要带示例的完整 AI 痕迹黑名单时改用该参考。未读取。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "AI-Tell Check",
+            "line_start": 385,
+            "line_end": 385
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "专家面板构成",
+        "text": "落地页：转化文案、UX 写作、目标客户角色、品牌策略；邮件序列：邮件营销、文案、垃圾邮件过滤分析、目标客户角色；销售页/长文：直复文案、怀疑型买家角色、编辑、SEO 专家。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Recommended Expert Panels",
+            "line_start": 275,
+            "line_end": 291
+          }
+        ]
+      },
+      {
+        "topic": "具体性升级示例（示例，非唯一规则）",
+        "text": "save time→save 4 hours every week；many customers→2,847 teams；fast results→results in 14 days；improve your workflow→cut your reporting time in half；great support→response within 2 hours。这些是示范替换方向，不是必须照抄的数值。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Specificity upgrades",
+            "line_start": 164,
+            "line_end": 172
+          }
+        ]
+      },
+      {
+        "topic": "常见问题与对应修法",
+        "text": "功能墙→每个功能后加\"which means...\"桥接利益；企业腔→问\"人会怎么说这句\"并改用那些词；弱开头→以读者的问题或期望结果开篇；CTA 被埋→让 CTA 明显、靠前并重复；无证据→补具体证言、数字或案例；泛泛主张→说清对谁、怎么做、提升多少；受众混杂→选一个受众直接对写；读起来像 AI→跑 AI 痕迹检查并从事实重写；功能过载→聚焦对受众最重要的 3-5 个关键利益。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Common Copy Problems & Fixes",
+            "line_start": 395,
+            "line_end": 431
+          }
+        ]
+      },
+      {
+        "topic": "编辑前可向用户确认的信息",
+        "text": "文案目标（认知/转化/留存）、希望读者采取的行动、已知的具体顾虑或问题、可用的证据、是新文案还是既有内容刷新。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Task-Specific Questions",
+            "line_start": 465,
+            "line_end": 471
+          }
+        ]
+      },
+      {
+        "topic": "相关技能边界",
+        "text": "copywriting 用于从零写作；cro 用于文案之外的整体页面优化；marketing-psychology 解释某些编辑为何改善转化；ab-testing 用于测试文案变体。这些是列出的关联技能，正文未给出接入方式。",
+        "evidence": [
+          {
+            "path": "skills/copy-editing/SKILL.md",
+            "section": "Related Skills",
+            "line_start": 475,
+            "line_end": 480
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/copy-editing/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/tasks/7",
+        "reason": "unread_dependency",
+        "detail": "内容刷新任务只给出触发条件与入口，SERP 差距分析、完整刷新清单、刷新与重写决策矩阵、节奏指南都在 references/content-refresh.md 中，本次未读取，因此该任务没有可复述的步骤。"
+      },
+      {
+        "target": "/content/tasks/2",
+        "reason": "not_stated",
+        "detail": "七轮扫读只给出每轮的问题类型与处理方式，未规定逐句标注格式、修改稿呈现形式或完成轮次的判定细节，这些依赖 references/checklist.md（未读取）。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:52:15.167013+00:00"
+  }
+}

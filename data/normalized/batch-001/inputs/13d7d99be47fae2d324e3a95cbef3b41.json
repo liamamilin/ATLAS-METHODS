@@ -1,0 +1,20 @@
+{
+  "source": {
+    "collection_id": "e016d48a012cb04797b4",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/frontend-design/SKILL.md",
+    "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+    "entry_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3"
+  },
+  "files": [
+    {
+      "path": "skills/frontend-design/SKILL.md",
+      "coverage": "full",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "git_blob_sha": "a5333457c414d20d625f307df945842c0952ecc3",
+      "bytes": 9390,
+      "source_lines": 71
+    }
+  ]
+}

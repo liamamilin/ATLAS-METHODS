@@ -1,0 +1,58 @@
+{
+  "started_at": "2026-11-07T14:59:35.619364+00:00",
+  "source": {
+    "collection_id": "e36d5d8a160259015b36",
+    "repository": "mattpocock/skills",
+    "commit_sha": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+    "skill_path": "skills/engineering/code-review/SKILL.md",
+    "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+    "entry_sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "0ae489e9447387745ecd89f45bfedcc0c01a2426d5c223f053cf198c2d1153a8",
+  "input_files": [
+    {
+      "path": "skills/engineering/code-review/SKILL.md",
+      "coverage": "full",
+      "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+      "git_blob_sha": "83183e0ad36fd0eef25d37c7e483284b7e34c1f0",
+      "bytes": 6721,
+      "source_lines": 89
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e497a54e4ffeA8AK5RoEbpH84B",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 6073,
+          "output": 3847,
+          "reasoning": 1934,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "failed",
+  "error": "['content']: Additional properties are not allowed ('gaps' was unexpected)\n[]: 'gaps' is a required property",
+  "finished_at": "2026-11-07T15:00:11.090241+00:00"
+}

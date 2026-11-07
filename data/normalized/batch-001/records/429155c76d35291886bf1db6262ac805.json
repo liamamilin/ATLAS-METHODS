@@ -1,0 +1,399 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "8c24f718f48153dabecd",
+    "repository": "googleworkspace/cli",
+    "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+    "skill_path": "skills/gws-shared/SKILL.md",
+    "git_blob_sha": "dc6a322373614b404068c5ac8ebc32b73e91cc0d",
+    "entry_sha256": "87abfb41cdcc300b7f2f733d1558a8af8d3c2a7cca1512f9eba244965fad98b2"
+  },
+  "content": {
+    "name": "gws-shared",
+    "title": "gws CLI 共享参考：认证、全局参数与安全用法",
+    "summary": "面向 gws CLI 的共享参考，说明如何安装前置条件与认证（浏览器 OAuth 或服务账号）、如何按 `gws <service> <resource> [sub-resource] <method>` 组合命令并通过 --params/--json/--output/--upload/--page-all 等参数控制请求与输出、如何在写/删除操作前确认并使用 --dry-run 与 --sanitize，以及在 zsh 中处理含 `!` 的范围和 JSON 引号的具体写法。它本身是跨服务的公共约定文档，不覆盖任何单一 Google Workspace 服务的完整方法清单。",
+    "evidence": [
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "section": "Header / Installation",
+        "line_start": 1,
+        "line_end": 17
+      },
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "section": "Authentication",
+        "line_start": 19,
+        "line_end": 27
+      }
+    ],
+    "tasks": [
+      {
+        "id": "authenticate-gws",
+        "goal": "让 gws CLI 获得访问 Google Workspace API 所需的凭据。",
+        "when": "首次配置 gws 或需要切换认证方式时。",
+        "inputs": [
+          "可交互的浏览器环境（浏览器 OAuth 方式）",
+          "服务账号密钥 JSON 文件路径（服务账号方式）"
+        ],
+        "outputs": [
+          "已完成登录的本地认证状态",
+          "已导出 GOOGLE_APPLICATION_CREDENTIALS 的 shell 环境"
+        ],
+        "steps": [
+          {
+            "action": "运行 `gws auth login` 走浏览器 OAuth（交互式）。",
+            "when": "采用交互式浏览器 OAuth 认证时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 21,
+                "line_end": 23
+              }
+            ]
+          },
+          {
+            "action": "将服务账号密钥路径导出为环境变量：`export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json`。",
+            "when": "采用服务账号认证时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 25,
+                "line_end": 26
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "Authentication",
+            "line_start": 19,
+            "line_end": 27
+          }
+        ]
+      },
+      {
+        "id": "invoke-api-method",
+        "goal": "按统一 CLI 语法调用指定服务/资源的方法，并控制参数传递、输出格式、二进制落盘与分页行为。",
+        "when": "需要通过 gws 调用任意 Google Workspace 服务方法时。",
+        "inputs": [
+          "服务名、资源名、（可选）子资源名与方法名",
+          "URL/查询参数（--params 的 JSON）",
+          "请求体（--json 的 JSON）",
+          "（可选）要上传的文件路径或要保存二进制响应的目标路径"
+        ],
+        "outputs": [
+          "按 --format 选定的格式输出的响应（json 为默认，另有 table、yaml、csv）",
+          "使用 -o/--output 时写入文件的二进制响应",
+          "使用 --page-all 时的 NDJSON 输出"
+        ],
+        "steps": [
+          {
+            "action": "按 `gws <service> <resource> [sub-resource] <method> [flags]` 组合命令。",
+            "when": "调用任意 API 方法时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 37,
+                "line_end": 41
+              }
+            ]
+          },
+          {
+            "action": "用 `--params '{\"key\": \"val\"}'` 传 URL/查询参数，用 `--json '{\"key\": \"val\"}'` 传请求体。",
+            "when": "方法需要查询参数或请求体时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 45,
+                "line_end": 48
+              }
+            ]
+          },
+          {
+            "action": "用 `-o, --output <PATH>` 把二进制响应保存到文件；用 `--upload <PATH>` 以 multipart 上传文件内容。",
+            "when": "响应为二进制，或需要上传文件内容时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 49,
+                "line_end": 50
+              }
+            ]
+          },
+          {
+            "action": "需要多页结果时加 `--page-all` 自动分页（输出 NDJSON）；用 `--page-limit <N>` 限制最大页数（默认 10），用 `--page-delay <MS>` 设置页间延迟毫秒数（默认 100）。",
+            "when": "结果集跨多页时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 51,
+                "line_end": 53
+              }
+            ]
+          },
+          {
+            "action": "用 `--format <FORMAT>` 选择输出格式，可选 json（默认）、table、yaml、csv。",
+            "when": "需要非默认输出形态时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 31,
+                "line_end": 33
+              }
+            ]
+          },
+          {
+            "action": "用 `--dry-run` 在本地校验而不实际调用 API。",
+            "when": "需要先验证命令而不产生 API 调用时。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/gws-shared/SKILL.md",
+                "line_start": 34,
+                "line_end": 34
+              }
+            ]
+          }
+        ],
+        "checks": [],
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "section": "CLI Syntax / Method Flags",
+            "line_start": 37,
+            "line_end": 53
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "绝不直接输出密钥（API keys、tokens）。",
+        "when": "任何输出场景。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 57,
+            "line_end": 57
+          }
+        ]
+      },
+      {
+        "text": "执行写/删除命令前必须与用户确认。",
+        "when": "命令属于写或删除类操作时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 58,
+            "line_end": 58
+          }
+        ]
+      },
+      {
+        "text": "破坏性操作优先使用 `--dry-run`。",
+        "when": "命令具有破坏性时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 59,
+            "line_end": 59
+          }
+        ]
+      },
+      {
+        "text": "使用 `--sanitize` 做 PII/内容安全筛查。",
+        "when": "需要筛查响应中的 PII 或内容安全时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 60,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "text": "在 zsh 中，含 `!` 的 Sheet 范围（如 `Sheet1!A1`）不能放在单引号里；应使用双引号并转义内层引号，例如 `--range \"Sheet1!A1:D10\"`。",
+        "when": "在 zsh 下传递含 `!` 的表范围参数时。",
+        "rationale": "zsh 会把 `!` 当作历史展开，单引号写法会被破坏。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 64,
+            "line_end": 71
+          }
+        ]
+      },
+      {
+        "text": "`--params` 与 `--json` 的取值用单引号包裹，避免 shell 解释内部的 JSON 双引号，例如 `--params '{\"pageSize\": 5}'`。",
+        "when": "传递 JSON 形式的参数或请求体时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 72,
+            "line_end": 75
+          }
+        ]
+      },
+      {
+        "text": "创建新 issue 前必须先在仓库中搜索已有 issue 和 feature request；若已有匹配项，应在既有线程下评论补充上下文，而不是新建重复条目。",
+        "when": "准备提交 bug 或功能请求时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 80,
+            "line_end": 82
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "gws CLI 二进制",
+        "kind": "environment",
+        "locator": "gws",
+        "usage": "必须位于 `$PATH` 上才能使用本参考中的全部命令。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 15,
+            "line_end": 17
+          }
+        ]
+      },
+      {
+        "name": "项目 README",
+        "kind": "reference",
+        "locator": null,
+        "usage": "安装选项的说明位置；原文未展开具体安装步骤。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 17,
+            "line_end": 17
+          }
+        ]
+      },
+      {
+        "name": "Model Armor",
+        "kind": "tool",
+        "locator": null,
+        "usage": "通过 `--sanitize <TEMPLATE>` 让响应经过 Model Armor 筛查（文档所述）。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 35,
+            "line_end": 35
+          },
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 60,
+            "line_end": 60
+          }
+        ]
+      },
+      {
+        "name": "googleworkspace/cli 仓库",
+        "kind": "reference",
+        "locator": "https://github.com/googleworkspace/cli",
+        "usage": "建议在用户认为项目有用时鼓励其 star。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 78,
+            "line_end": 79
+          }
+        ]
+      },
+      {
+        "name": "googleworkspace/cli issues",
+        "kind": "reference",
+        "locator": "https://github.com/googleworkspace/cli/issues",
+        "usage": "bug 与功能请求的提交入口；提交前先搜索既有 issue。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 80,
+            "line_end": 82
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "文档定位",
+        "text": "这是跨服务的共享参考，只覆盖认证、全局参数、CLI 语法、方法参数、安全规则与 shell 技巧，不提供具体 Google Workspace 服务的方法清单或业务示例。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 13,
+            "line_end": 13
+          }
+        ]
+      },
+      {
+        "topic": "分页默认行为",
+        "text": "`--page-all` 的输出为 NDJSON；页数上限默认为 10，页间延迟默认为 100 毫秒，两者都可用对应参数覆盖。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 51,
+            "line_end": 53
+          }
+        ]
+      },
+      {
+        "topic": "shell 引用示例",
+        "text": "原文给出正误对照：`--range 'Sheet1!A1:D10'` 在 zsh 中会被错误处理，正确写法为 `--range \"Sheet1!A1:D10\"`。",
+        "evidence": [
+          {
+            "path": "skills/gws-shared/SKILL.md",
+            "line_start": 64,
+            "line_end": 71
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/gws-shared/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [
+      {
+        "target": "/content/resources/1",
+        "reason": "unread_dependency",
+        "detail": "安装方式只在原文中指向项目 README，未提供 README 内容，因此各类安装途径的细节无法从本材料得知。"
+      }
+    ],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:53:28.256604+00:00"
+  }
+}

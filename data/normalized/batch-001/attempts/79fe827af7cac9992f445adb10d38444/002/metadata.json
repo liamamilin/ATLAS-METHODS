@@ -1,0 +1,71 @@
+{
+  "started_at": "2026-11-07T14:40:20.954443+00:00",
+  "source": {
+    "collection_id": "b02dbd96699c235e7de5",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/internal-comms/SKILL.md",
+    "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+    "entry_sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "a2929b5cf4a107e93f21b60a14f7f82df4a507f6ea760a429e5e7d449ea5fb40",
+  "input_files": [
+    {
+      "path": "skills/internal-comms/SKILL.md",
+      "coverage": "full",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "git_blob_sha": "56ea935b74f371bfeb4c7d3c19d5139df866e73b",
+      "bytes": 1511,
+      "source_lines": 32
+    },
+    {
+      "path": "skills/internal-comms/examples/3p-updates.md",
+      "coverage": "full",
+      "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc",
+      "git_blob_sha": "5329bfbf3b47035946a3995dd63025799b582f8c",
+      "bytes": 3274,
+      "source_lines": 47
+    },
+    {
+      "path": "skills/internal-comms/examples/company-newsletter.md",
+      "coverage": "full",
+      "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5",
+      "git_blob_sha": "4997a072b62ed7f65a9fd113903db3d9eba34b98",
+      "bytes": 3295,
+      "source_lines": 65
+    },
+    {
+      "path": "skills/internal-comms/examples/faq-answers.md",
+      "coverage": "full",
+      "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484",
+      "git_blob_sha": "395262a860636434593cd3c3da258000231ea4f6",
+      "bytes": 2366,
+      "source_lines": 30
+    },
+    {
+      "path": "skills/internal-comms/examples/general-comms.md",
+      "coverage": "full",
+      "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47",
+      "git_blob_sha": "0ea977018ca8167d39bfc9adb253f80336819578",
+      "bytes": 602,
+      "source_lines": 16
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e498bf32afferYnuK3zo5r5bXp",
+  "usage": {
+    "available": true,
+    "request_not_started": true,
+    "turns": [],
+    "reason": "OpenCode failed to resolve agent before a model turn"
+  },
+  "finish": null,
+  "exit_code": 1,
+  "timed_out": false,
+  "tool_events": [],
+  "transport_error": "OpenCode request failed; see local events/stderr",
+  "state": "failed",
+  "error": "OpenCode request failed; see local events/stderr",
+  "finished_at": "2026-11-07T14:40:24.773518+00:00"
+}

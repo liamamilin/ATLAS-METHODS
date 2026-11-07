@@ -1,0 +1,391 @@
+{
+  "schema_version": "0.1.1",
+  "source": {
+    "collection_id": "3f9cca2922dc01418c96",
+    "repository": "obra/superpowers",
+    "commit_sha": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skill_path": "skills/verification-before-completion/SKILL.md",
+    "git_blob_sha": "7d45333cc4a49c57a80df6c1fe2fa777a207afbc",
+    "entry_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+  },
+  "content": {
+    "name": "verification-before-completion",
+    "title": "完成前先验证：以新鲜证据约束完成声明",
+    "summary": "该 Skill 规定在任何成功、完成或通过声明之前，必须先运行能证明该声明的完整验证命令，读取完整输出、检查退出码并统计失败数，再依据输出决定如何陈述。核心原则是证据先于断言；若未在当前消息中运行验证，就不得声称通过。文档还列出了常见声明的充分证据、需要停止的红旗信号、常见借口及其现实反驳，以及适用时机。",
+    "evidence": [
+      {
+        "path": "skills/verification-before-completion/SKILL.md",
+        "line_start": 10,
+        "line_end": 20
+      }
+    ],
+    "tasks": [
+      {
+        "id": "verify-before-claiming-completion",
+        "goal": "在做出任何成功、完成、修复或通过声明之前，取得并核对新鲜的验证证据，再按实际输出陈述状态。",
+        "when": "即将声称工作完成、已修复或通过，或在提交、创建 PR、任务完成、转到下一任务、委派 agent 之前。",
+        "inputs": [
+          "待声明的状态或结论",
+          "能够证明该声明的验证命令"
+        ],
+        "outputs": [
+          "附带验证证据的成功声明",
+          "或依据实际输出说明未通过/实际状态"
+        ],
+        "steps": [
+          {
+            "action": "明确哪条命令能够证明当前要做的声明。",
+            "when": "在表达任何状态或满意之前。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 25,
+                "line_end": 29
+              }
+            ]
+          },
+          {
+            "action": "执行完整的验证命令，要求新鲜且完整，不复用旧运行结果。",
+            "when": "在做出声明之前。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 28,
+                "line_end": 28
+              }
+            ]
+          },
+          {
+            "action": "读取完整输出，检查退出码并统计失败数。",
+            "when": "命令执行之后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 29,
+                "line_end": 29
+              }
+            ]
+          },
+          {
+            "action": "判断输出是否确实支持该声明；若不支持，按证据陈述实际状态；若支持，则连同证据一起陈述声明。",
+            "when": "读取输出之后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 30,
+                "line_end": 32
+              }
+            ]
+          },
+          {
+            "action": "只有完成上述步骤后，才做出声明。",
+            "when": "验证与判断完成之后。",
+            "rationale": null,
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 33,
+                "line_end": 33
+              }
+            ]
+          }
+        ],
+        "checks": [
+          {
+            "text": "未在本条消息中运行验证命令，就不得声称其通过。",
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 20,
+                "line_end": 20
+              }
+            ]
+          },
+          {
+            "text": "跳过门槛函数中的任一环节即视为撒谎，而非验证。",
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 35,
+                "line_end": 35
+              }
+            ]
+          },
+          {
+            "text": "不得以 agent 报告成功替代独立验证；应检查 VCS diff 并核验改动后再报告实际状态。",
+            "evidence": [
+              {
+                "path": "skills/verification-before-completion/SKILL.md",
+                "line_start": 100,
+                "line_end": 104
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 22,
+            "line_end": 36
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "text": "没有新鲜的验证证据，就不得做出完成声明。",
+        "when": "任何完成、修复或通过的声明之前。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 14,
+            "line_end": 18
+          }
+        ]
+      },
+      {
+        "text": "违反规则的文字就是违反规则的精神。",
+        "when": "评估是否适用该规则时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ]
+      },
+      {
+        "text": "测试通过的声明需要测试命令输出显示 0 个失败；上一次运行结果或“应该通过”不充分。",
+        "when": "声明测试通过时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 42,
+            "line_end": 42
+          }
+        ]
+      },
+      {
+        "text": "linter 干净的声明需要 linter 输出显示 0 个错误；部分检查或外推不充分。",
+        "when": "声明 linter 干净时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 43,
+            "line_end": 43
+          }
+        ]
+      },
+      {
+        "text": "构建成功的声明需要构建命令退出码为 0；linter 通过或日志看起来正常不充分。",
+        "when": "声明构建成功时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 44,
+            "line_end": 44
+          }
+        ]
+      },
+      {
+        "text": "缺陷已修复的声明需要针对原始症状的测试通过；仅改动代码并假定已修复不充分。",
+        "when": "声明缺陷已修复时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 45,
+            "line_end": 45
+          }
+        ]
+      },
+      {
+        "text": "回归测试有效的声明需要验证 red-green 循环；测试只通过一次不充分。",
+        "when": "声明回归测试有效时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 46,
+            "line_end": 46
+          }
+        ]
+      },
+      {
+        "text": "agent 已完成的声明需要 VCS diff 显示改动；agent 自称成功不充分。",
+        "when": "声明委派任务完成时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 47,
+            "line_end": 47
+          }
+        ]
+      },
+      {
+        "text": "需求已满足的声明需要逐行清单核对；测试通过不充分。",
+        "when": "声明需求已满足时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 48,
+            "line_end": 48
+          }
+        ]
+      },
+      {
+        "text": "出现使用“should”“probably”“seems to”、验证前表达满意、未验证就提交/推送/创建 PR、信任 agent 成功报告、依赖部分验证、认为“就这一次”、因疲惫想收工，或任何暗示成功却未运行验证的措辞时，应停止。",
+        "when": "任何即将做出成功或完成表述时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 50,
+            "line_end": 59
+          }
+        ]
+      },
+      {
+        "text": "不得以“应该能行”“我有信心”“就这一次”“linter 过了”“agent 说成功”“我累了”“部分检查够了”“换个说法规则不适用”为由跳过验证；信心不等于证据，部分检查不能证明什么，规则按精神而非字面适用。",
+        "when": "产生跳过验证的念头或借口时。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 61,
+            "line_end": 72
+          }
+        ]
+      },
+      {
+        "text": "必须在任何成功/完成声明的变体、任何满意表达、任何关于工作状态的正向陈述、提交/创建 PR/任务完成、转到下一任务、委派 agent 之前应用本规则；规则适用于精确措辞、转述与同义词、成功暗示，以及任何暗示完成或正确的沟通。",
+        "when": "上述任一情形出现之前。",
+        "rationale": null,
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 106,
+            "line_end": 120
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "验证命令（测试/linter/build 等）",
+        "kind": "tool",
+        "locator": null,
+        "usage": "文档所述：按要证明的声明选择并完整运行相应命令；原文未指定具体命令或工具。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 27,
+            "line_end": 29
+          }
+        ]
+      },
+      {
+        "name": "VCS diff",
+        "kind": "tool",
+        "locator": null,
+        "usage": "文档所述：在 agent 报告成功后检查 VCS diff，以核验实际改动。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 47,
+            "line_end": 47
+          },
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 100,
+            "line_end": 104
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "topic": "测试声明的示例",
+        "text": "正面示例是先运行测试命令、看到 34/34 通过，再说“所有测试通过”；反面示例是“现在应该通过了”或“看起来正确”。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 76,
+            "line_end": 80
+          }
+        ]
+      },
+      {
+        "topic": "回归测试的 red-green 示例",
+        "text": "完整循环为：写测试 → 运行（通过）→ 回退修复 → 运行（必须失败）→ 恢复修复 → 运行（通过）。仅声称“我写了回归测试”而没有 red-green 验证不充分。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 82,
+            "line_end": 86
+          }
+        ]
+      },
+      {
+        "topic": "构建声明的示例",
+        "text": "正面示例是运行构建并看到退出码 0 后说“构建通过”；反面示例是以“linter 通过”代替构建验证，因为 linter 不检查编译。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 88,
+            "line_end": 92
+          }
+        ]
+      },
+      {
+        "topic": "需求声明的示例",
+        "text": "正面做法是重读计划、创建清单、逐项验证，然后报告缺口或完成；反面示例是以“测试通过，阶段完成”代替需求核对。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 94,
+            "line_end": 98
+          }
+        ]
+      },
+      {
+        "topic": "委派任务的示例",
+        "text": "正面做法是 agent 报告成功后检查 VCS diff、核验改动并报告实际状态；反面做法是直接信任 agent 报告。",
+        "evidence": [
+          {
+            "path": "skills/verification-before-completion/SKILL.md",
+            "line_start": 100,
+            "line_end": 104
+          }
+        ]
+      }
+    ]
+  },
+  "extraction": {
+    "language": "zh-CN",
+    "scope": "entry_only",
+    "files_read": [
+      {
+        "path": "skills/verification-before-completion/SKILL.md",
+        "coverage": "full"
+      }
+    ],
+    "gaps": [],
+    "review_status": "unreviewed",
+    "execution_status": "not_executed",
+    "producer": "opencode/open-design/deepseek-v4.1-flash",
+    "prompt_version": "target-first-5dd8d63aa657",
+    "generated_at": "2026-11-07T14:54:34.001142+00:00"
+  }
+}

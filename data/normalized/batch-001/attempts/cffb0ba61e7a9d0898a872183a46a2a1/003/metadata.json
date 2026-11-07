@@ -1,0 +1,142 @@
+{
+  "started_at": "2026-11-07T15:00:11.104583+00:00",
+  "source": {
+    "collection_id": "46fa2ce238d972021b51",
+    "repository": "anthropics/skills",
+    "commit_sha": "ca45fc496a3436251f191354091d557da31c15b5",
+    "skill_path": "skills/theme-factory/SKILL.md",
+    "git_blob_sha": "90dfceaf2ecdc191a4dcfb0069768a9560638998",
+    "entry_sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552"
+  },
+  "model": "open-design/deepseek-v4.1-flash",
+  "prompt_sha256": "3e855d3bafe4b2ef886147f178bb966f8b208c003bf6db4b8cd38d0630944720",
+  "input_files": [
+    {
+      "path": "skills/theme-factory/SKILL.md",
+      "coverage": "full",
+      "sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552",
+      "git_blob_sha": "90dfceaf2ecdc191a4dcfb0069768a9560638998",
+      "bytes": 3124,
+      "source_lines": 59
+    },
+    {
+      "path": "skills/theme-factory/themes/arctic-frost.md",
+      "coverage": "full",
+      "sha256": "868a75a8fb5b2a61d0f0ab87c437fe632d3cbab6371c418f06aa2816ac109ae0",
+      "git_blob_sha": "e9f1eb0574e377ec8be59a71a1c206958f8b253e",
+      "bytes": 544,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/botanical-garden.md",
+      "coverage": "full",
+      "sha256": "222cb8e7496abc9b75b29453c809fb9839e7e4b01fa45deecdd896b38d087765",
+      "git_blob_sha": "0c95bf7349c26996c7d43d6c0276a285287a9ffe",
+      "bytes": 519,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/desert-rose.md",
+      "coverage": "full",
+      "sha256": "bd065b8629be3b64655183927e248e3d892a27b8d184b009cfba89c96102744f",
+      "git_blob_sha": "ea7c74eb80794fe15f870e12c5588b2a988f77a1",
+      "bytes": 496,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/forest-canopy.md",
+      "coverage": "full",
+      "sha256": "ecb722efa24688e808b5bf323c334ca2349e989cfddd72ce8400ce5d4c4bd3e7",
+      "git_blob_sha": "90c2b26518d8d7ff1d58981def5e93e2eca01780",
+      "bytes": 506,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/golden-hour.md",
+      "coverage": "full",
+      "sha256": "3444a00df971d3c2f06b665e21a2e9eb5d7d7d6f6281f2758773b8345776a139",
+      "git_blob_sha": "ed8fc256f4e9b2dfffd46e82fdc451c32f87dbb1",
+      "bytes": 528,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/midnight-galaxy.md",
+      "coverage": "full",
+      "sha256": "0e134c4c0324df41e34ac314269aa6829cd378cf3c304b31858d0cd158d2f944",
+      "git_blob_sha": "97e1c5f380eba51cd8956ec96114629c6540b76e",
+      "bytes": 513,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/modern-minimalist.md",
+      "coverage": "full",
+      "sha256": "b8bc572b75948d4df69c401af703b9262ed6820a3ceb270da30a529e92763614",
+      "git_blob_sha": "6bd26a29beb09e663a1c049f5f8ec86189ae2db2",
+      "bytes": 549,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/ocean-depths.md",
+      "coverage": "full",
+      "sha256": "a7ad8eec85341dbfcb2665da827a4b6a4baee08ab3335ac02421f18e6b46b2e2",
+      "git_blob_sha": "b675126f53c49af7b6c3e00793a6d4773fb77af6",
+      "bytes": 555,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/sunset-boulevard.md",
+      "coverage": "full",
+      "sha256": "658af11ab04be4923692571081ffb42a428141ae537703117b9236d9f8ee22a3",
+      "git_blob_sha": "df799a0cc0e61c9226e52725afb45a1c6388f242",
+      "bytes": 558,
+      "source_lines": 19
+    },
+    {
+      "path": "skills/theme-factory/themes/tech-innovation.md",
+      "coverage": "full",
+      "sha256": "183648163026dd5eeba3df5effa335b55ba333c3ee1fe215278605e55f40a52a",
+      "git_blob_sha": "e029a435fb02647e6fd0b440618ae21f326d35e1",
+      "bytes": 547,
+      "source_lines": 19
+    }
+  ],
+  "response_schema_sha256": "d7dc15dda211ad3baa56ac10242a5cd571e349cf67ce77a1333487b5be29a1e7",
+  "session_id": "ses_e4979ca63ffe4pPzd3Wv4GFoBY",
+  "usage": {
+    "available": true,
+    "source": "opencode session export",
+    "turns": [
+      {
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "providerID": "open-design",
+          "variant": "default"
+        },
+        "tokens": {
+          "input": 7493,
+          "output": 2256,
+          "reasoning": 2896,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        },
+        "cost": 0,
+        "finish": "stop",
+        "rawFinish": "stop"
+      }
+    ],
+    "cost_note": "OpenCode estimate only; billing price/cost not independently known"
+  },
+  "finish": "stop",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_events": [],
+  "state": "succeeded",
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "checks_scope": "structure and declared-read metadata only; line bounds checked only for supplied full-file texts; Git/index provenance, actual delivery, semantic fidelity and skill execution not checked"
+  },
+  "finished_at": "2026-11-07T15:00:48.645481+00:00"
+}
