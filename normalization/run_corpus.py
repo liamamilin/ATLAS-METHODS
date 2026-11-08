@@ -7,6 +7,7 @@ import argparse
 from collections import Counter, deque
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 import fcntl
+import gzip
 import hashlib
 import json
 import os
@@ -23,6 +24,7 @@ from batch_convert import (HERE, accept_future, build_parser, convert_one, finis
                            load_selection, make_client, now, prepare_run, selected_rows,
                            source_of, summarize, write_json, write_jsonl)
 from check_record import check_record, strict_json_loads
+from model_routing import limit_signal
 
 BASELINE = HERE.parent / 'data/normalized/batch-001'
 
@@ -121,6 +123,86 @@ def wait_for_batch(directory):
     if lock_path.exists():
         with lock_path.open('a') as lock:
             fcntl.flock(lock, fcntl.LOCK_EX)
+
+
+def recover_quota_failures(args, router=None):
+    """Requeue only provider-quota rejections proved by retained error events.
+
+    Keep original attempts unchanged and archive complete old states locally
+    before publishing corrected states/reports. Must hold the queue lock.
+    """
+    config = json.loads((HERE/'model-routing.json').read_text())
+    plan = []
+    for path in sorted((args.out/'batches').glob('*/state.json')):
+        for key, state in json.loads(path.read_text()).items():
+            if state.get('state') != 'failed' or (path.parent/'records'/(key+'.json')).exists():
+                continue
+            attempt = path.parent/state.get('attempt', '')
+            if not (attempt/'events.jsonl').is_file() or not (attempt/'metadata.json').is_file():
+                continue
+            metadata = json.loads((attempt/'metadata.json').read_text())
+            if metadata.get('model') != config['primary'] or metadata.get('source') != state.get('source'):
+                continue
+            events = []
+            for line in (attempt/'events.jsonl').read_text().splitlines():
+                try:
+                    events.append(strict_json_loads(line))
+                except ValueError:
+                    continue
+            signal = limit_signal(events)
+            if signal and signal['kind'] == 'quota':
+                plan.append((path, key, state, signal))
+    if not plan:
+        print(json.dumps({'recovered_quota_failures':0}))
+        return {'recovered_quota_failures':0}
+    journal = args.out/'recoveries'/('quota-'+str(time.time_ns()))
+    journal.mkdir(parents=True)
+    with gzip.open(journal/'previous-states.jsonl.gz', 'wt', encoding='utf-8') as archive:
+        for path, key, state, signal in plan:
+            archive.write(json.dumps({'batch':path.parent.name, 'key':key, 'state':state}, ensure_ascii=False)+'\n')
+    write_jsonl(journal/'requeued.jsonl', [
+        {'collection_id':s['collection_id'], 'commit_sha':s['commit_sha'],
+         'state_path':os.path.relpath(p, journal), 'state_key':key, 'previous_attempt':s['attempt'],
+         'previous_state_sha256':hashlib.sha256(json.dumps(s, sort_keys=True).encode()).hexdigest(),
+         'limit':limit, 'action':'deferred'} for p,key,s,limit in plan])
+    grouped = {}
+    for path,key,state,signal in plan:
+        grouped.setdefault(path,[]).append((key,state))
+    for path, changes in grouped.items():
+        with (path.parent/'.run.lock').open('a') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX|fcntl.LOCK_NB)
+            states = json.loads(path.read_text())
+            for key, previous in changes:
+                if states.get(key) != previous or (path.parent/'records'/(key+'.json')).exists():
+                    raise ValueError('State changed during quota recovery; retained archive: '+str(journal))
+                states[key] = {**previous, 'state':'deferred', 'failure_stage':'model_availability',
+                               'error':'Provider quota rejection; pending model availability',
+                               'updated_at':now(), 'recovered_from':os.path.relpath(journal/'requeued.jsonl', path.parent)}
+            write_json(path, states)
+            old = json.loads((path.parent/'report.json').read_text())
+            batch_args = build_parser().parse_args(['--selection',str(path.parent/'selection.json'),
+                                                   '--out',str(path.parent),'--index',str(args.index)])
+            batch_args.routing_policy = old.get('routing_policy')
+            summarize(batch_args, load_selection(batch_args.selection), states, old['invocation'])
+    # This is a real observed provider limit, not a simulated production flag.
+    router = router or make_client(batch_args)
+    observed = max((x[3] for x in plan), key=lambda x:x.get('retry_at',0))
+    router.observe(config['primary'], None, {'limit':observed})
+    batches = {}
+    for p in (args.out/'batches').glob('*/report.json'):
+        report = json.loads(p.read_text());batches[str(int(p.parent.name))] = {
+            k:report[k] for k in ('selected','succeeded','failed','pending')}
+    progress = json.loads((args.out/'progress.json').read_text()) if (args.out/'progress.json').exists() else {}
+    progress.update(status='ready_to_resume', updated_at=now(), batches=batches,
+                    failed=sum(v['failed'] for v in batches.values()),
+                    new_succeeded=sum(v['succeeded'] for v in batches.values()))
+    write_json(args.out/'progress.json', progress)
+    result = {'recovered_at':now(), 'recovered_quota_failures':len(plan), 'batches':len(grouped),
+              'remaining_content_failures':progress['failed'], 'preserved_full_run_successes':progress['new_succeeded'],
+              'observed_limit':observed, 'archive':'previous-states.jsonl.gz', 'manifest':'requeued.jsonl'}
+    write_json(journal/'report.json', result)
+    print(json.dumps({**result,'journal':str(journal)},ensure_ascii=False,indent=2))
+    return result
 
 
 def snapshot(args):
@@ -348,7 +430,7 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                     submitted = time.monotonic()
                     future = pool.submit(convert_one, item, row, context['args'], client,
                                          context['schema'], context['contract'],
-                                         old.get('review_feedback') or old.get('error', ''))
+                                         old.get('review_feedback') or (old.get('error', '') if old.get('state') == 'failed' else ''))
                     futures[future] = (n, item, row, submitted)
                     context['active'] += 1
                     context['unscheduled'] -= 1
@@ -396,6 +478,7 @@ def main():
     p.add_argument('--max-batches', type=int)
     p.add_argument('--retry-failed', action='store_true', help='One finite additional pass over recorded failures')
     p.add_argument('--snapshot', help='Write an immutable provenance-only checkpoint, without model calls')
+    p.add_argument('--recover-quota-failures', action='store_true', help='Requeue retained primary quota rejections; preserve all original attempts')
     args = p.parse_args()
     args.out = args.out.resolve();args.index = args.index.resolve();args.queue = args.queue.resolve()
     args.baseline = args.baseline.resolve()
@@ -407,6 +490,9 @@ def main():
         p.error('batch-size and workers must be positive')
     with (args.out / '.run.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if args.recover_quota_failures:
+            recover_quota_failures(args)
+            return
         stop = threading.Event()
         old_handlers = {s: signal.signal(s, lambda *_: stop.set()) for s in (signal.SIGTERM, signal.SIGINT)}
         try:

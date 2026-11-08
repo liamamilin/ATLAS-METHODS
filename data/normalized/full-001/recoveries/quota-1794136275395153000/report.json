@@ -1,0 +1,14 @@
+{
+  "recovered_at": "2026-11-08T11:11:20.231873+00:00",
+  "recovered_quota_failures": 8450,
+  "batches": 339,
+  "remaining_content_failures": 11,
+  "preserved_full_run_successes": 309,
+  "observed_limit": {
+    "kind": "quota",
+    "code": "insufficient_balance",
+    "retry_at": 1794138736.0
+  },
+  "archive": "previous-states.jsonl.gz",
+  "manifest": "requeued.jsonl"
+}

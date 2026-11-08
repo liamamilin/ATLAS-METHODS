@@ -7,10 +7,12 @@ import tempfile
 import fcntl
 import threading
 import unittest
+from types import SimpleNamespace
+import gzip
 
 import test_batch_convert as fixtures
 from batch_convert import build_parser, key_of, run_batch, write_json, write_jsonl
-from run_corpus import baseline_records, plan_references, prepare_batch, read_queue, run, snapshot, wait_for_batch
+from run_corpus import baseline_records, plan_references, prepare_batch, read_queue, recover_quota_failures, run, snapshot, wait_for_batch
 from model_routing import ModelDeferred
 
 
@@ -223,6 +225,38 @@ class CorpusTests(unittest.TestCase):
             self.assertTrue(finished.is_set());self.assertEqual(errors,[])
             self.assertEqual(client.calls,[])
             self.assertEqual(json.loads((args.out/'progress.json').read_text())['new_succeeded'],2)
+
+    def test_quota_recovery_requires_retained_evidence_preserves_history_and_only_requeues_quota(self):
+        class OldClient(fixtures.FakeClient):
+            def call(self,prompt,attempt):
+                identity=json.loads((attempt/'metadata.json').read_text())['source']['collection_id']
+                if identity=='fixture-1':
+                    event={'type':'error','error':{'type':'provider.quota','status':402,
+                           'message':'[code=insufficient_balance] Coding Plan quota is exhausted; resets at 2030-01-01T00:00:00Z'}}
+                    (attempt/'events.jsonl').write_text(json.dumps(event)+'\n')
+                    (attempt/'response.txt').write_text('')
+                    return {'text':'','transport_error':'old unrecognized provider error','model':'open-design/deepseek-v4.1-flash'}
+                if identity=='fixture-2':
+                    (attempt/'response.txt').write_text('invalid JSON')
+                    return {'text':'invalid JSON','model':'open-design/deepseek-v4.1-flash'}
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t),count=4,workers=1);run(args,OldClient())
+            previous={str(p):p.read_bytes() for p in args.out.glob('batches/*/attempts/*/*/metadata.json')}
+            original_records={str(p):p.read_bytes() for p in args.out.glob('batches/*/records/*.json')}
+            observations=[];router=SimpleNamespace(observe=lambda *x:observations.append(x))
+            result=recover_quota_failures(args,router)
+            self.assertEqual((result['recovered_quota_failures'],result['remaining_content_failures']),(1,1))
+            self.assertEqual(observations[0][2]['limit']['code'],'insufficient_balance')
+            archive=next(args.out.glob('recoveries/*/previous-states.jsonl.gz'))
+            with gzip.open(archive,'rt') as f:old=json.loads(f.read())
+            self.assertEqual(old['state']['state'],'failed')
+            self.assertTrue(all(Path(p).read_bytes()==data for p,data in previous.items()))
+            self.assertEqual(recover_quota_failures(args,router)['recovered_quota_failures'],0)
+            resumed=fixtures.FakeClient();run(args,resumed)
+            self.assertEqual(len(resumed.calls),1)
+            self.assertNotIn('Provider quota rejection',resumed.calls[0])
+            self.assertTrue(all(Path(p).read_bytes()==data for p,data in original_records.items()))
 
 
 if __name__=='__main__':unittest.main()

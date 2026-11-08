@@ -98,13 +98,46 @@ class RoutingTests(unittest.TestCase):
             b.observe(PRIMARY, new_probe, healthy())
             self.assertEqual(b.choose()[0], PRIMARY)
 
-    def test_auth_or_other_transport_error_does_not_enable_fallback(self):
+    def test_auth_or_other_transport_error_defers_without_enabling_fallback(self):
         with tempfile.TemporaryDirectory() as t:
             root = Path(t)
             router = self.router(root, {PRIMARY: [{'transport_error': 'authentication failed'}]})
-            self.assertNotIn('limit', router.call('fixture', root))
+            with self.assertRaises(ModelDeferred):
+                router.call('fixture', root)
             self.assertEqual(router.call('fixture', root)['model'], PRIMARY)
             self.assertNotIn(FREE, self.calls)
+
+    def test_actual_v2_insufficient_balance_quota_and_reset_are_recognized(self):
+        event={'type':'error','error':{'type':'provider.quota','status':402,
+              'message':'[code=insufficient_balance] Coding Plan quota is exhausted and wallet balance is insufficient. Coding Plan quota resets at 2026-11-08T11:52:16Z; this does not replenish your wallet.'}}
+        signal=limit_signal([event])
+        self.assertEqual((signal['kind'],signal['code']),('quota','insufficient_balance'))
+        self.assertEqual(signal['retry_at'],1794138736)
+        self.assertIsNone(limit_signal([{'type':'error','error':{'status':402,'message':'invalid API key'}}]))
+        self.assertEqual(limit_signal([{'type':'error','error':{'status':429}}])['kind'],'rate')
+
+    def test_free_provider_limit_defers_and_retains_actual_attempt_usage(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);args,rows,items=fixtures.BatchTests().fixture(root,1)
+            router=self.router(root,{PRIMARY:[limited()],FREE:[limited()]})
+            report=run_batch(args,router)
+            self.assertEqual((report['succeeded'],report['failed'],report['pending'],report['deferred']),(0,0,1,1))
+            self.assertEqual(self.calls,[PRIMARY,FREE])
+            attempts=sorted(args.out.glob('attempts/*/*/metadata.json'))
+            last=json.loads(attempts[-1].read_text())
+            self.assertEqual(last['model'],FREE)
+            self.assertEqual(last['session_id'],'limited')
+            self.assertEqual(last['state'],'deferred')
+            self.assertIn('usage',last)
+
+    def test_input_specific_errors_and_timeouts_still_fail_per_item_without_fallback(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);router=self.router(root,{PRIMARY:[
+                {'transport_error':'context length exceeded','input_error':True},
+                {'transport_error':'timeout','timed_out':True}]})
+            self.assertTrue(router.call('fixture',root)['input_error'])
+            self.assertTrue(router.call('fixture',root)['timed_out'])
+            self.assertEqual(self.calls,[PRIMARY,PRIMARY])
 
     def test_known_reset_time_is_respected(self):
         with tempfile.TemporaryDirectory() as t:

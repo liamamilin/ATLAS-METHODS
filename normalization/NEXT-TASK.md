@@ -21,3 +21,5 @@
 全队列已由 `run_corpus.py` 启动，冻结清单为 `batches/full-001.queue.jsonl`。先查看本机 `data/normalized/full-001/progress.json`、`runtime.json` 和 `worker.log`，确认已有进程状态；若已退出，运行 `python3 -u normalization/run_corpus.py --workers 10` 继续。2026-11-08 15:43 按用户要求从 4 路调整为 10 路，通过等待旧批次子进程锁安全交接，保留在途请求。不要并发启动同一队列，不重采、不刷新版本，不重复转换原 40 条或已保存的新结果。当前可公开检查点见 `batches/full-001.report.md`，正文与原响应仍在本机持久目录。
 
 16:06 已接入跨批次滚动补位、临时转换目录禁用 MCP、格式错误提示增强，保持 10 路和原 Schema。批次目录仍为原来的每批 25 条；不要改 batch-size 来迁移已有批次。新进程收到 SIGTERM/SIGINT 会停止领取任务并等待在途任务保存后退出，切换时等待排空，不再按旧薄父进程的方式直接交接。优化实测见 `batches/optimization-001.report.md`；保留成功结果、原始响应与失败记录，继续同一队列。
+
+19:02 检查发现 Open Design 已耗尽额度，V2 的 `provider.quota/insufficient_balance` 漏分类导致回退没有触发；现已修复。8,450 条日志确认的额度拒绝恢复为 deferred，旧状态和原始 attempt 保留，349 条原成功文件未变。19:12 已以同一命令恢复 10 路，实际使用已实时核验免费的 Go，19:15 检查点累计成功 361 条。服务端给出的主模型重置时间为 19:52:16（UTC+8），等待真实任务探测，不预称已恢复。详情及剩余清单见 `batches/quota-incident-001.report.md`。当前计数以本机文件为准，不沿用故障时数千条误归类的内容失败数量。

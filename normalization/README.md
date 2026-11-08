@@ -124,6 +124,17 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 python3 -m unittest discover -s normalization -p 'test_*.py'
 ```
 
+2026-11-08 实际遇到 V2 `provider.quota`、HTTP `status: 402`、`insufficient_balance` 组合，现已纳入额度分类并解析服务端重置时间。Go 自身受限或普通连接/认证请求失败时保存 deferred 并暂停领取，保留实际响应与用量，不将整库快速写成材料失败；认证失败不因此启用其他模型。明确的上下文输入错误和单请求超时继续按条有限重试。
+
+旧版本误记的额度失败已按保留事件恢复，见 [实际故障与恢复报告](batches/quota-incident-001.report.md)。仅在同类历史问题需要修正且队列进程已排空退出时运行：
+
+```bash
+python3 normalization/run_corpus.py --recover-quota-failures
+python3 -u normalization/run_corpus.py --workers 10
+```
+
+恢复命令只处理保留日志能证明的主模型额度拒绝；不碰成功文件，不重新归类普通格式失败。完整旧 state 压缩备份保留本地，原 attempt 不改，Git 交付逐来源恢复清单。生产路由状态依据真实额度事件恢复，不混入测试额度标记；已恢复来源再次执行该命令不会重复恢复。可用模型连接故障不作为模型的内容修正反馈。
+
 ## 格式和校验边界
 
 `source` 保留固定来源；`content` 包含任务、规则、资源、说明和证据；`extraction` 保留真实阅读范围与重要缺口。

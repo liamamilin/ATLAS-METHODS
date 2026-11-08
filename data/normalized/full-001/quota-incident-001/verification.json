@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-08T11:20:05.634048+00:00",
+  "original_success_files_unchanged": 349,
+  "archived_original_states_verified": 8450,
+  "remaining_original_content_failures": 11,
+  "checkpoint": "20261108-quota-recovery-001",
+  "checkpoint_record_paths_and_sha256_verified": 361,
+  "remaining_identities_verified": 55342,
+  "successes_and_remaining_disjoint": true,
+  "actual_free_model_check": {
+    "model": "opencode-go/iceman-contributor-free",
+    "checked_at": "2026-11-08T11:12:16.732664+00:00",
+    "source": "opencode api model.list",
+    "cost": [
+      {
+        "input": 0,
+        "output": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    ],
+    "status": "active",
+    "enabled": true,
+    "limit": {
+      "context": 262144,
+      "output": 131072
+    }
+  },
+  "schema_suite": "87 plus 1000 oracle passed",
+  "related_tests": "46 passed",
+  "schema_and_original_checker_unchanged": true
+}

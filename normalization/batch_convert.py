@@ -283,6 +283,10 @@ class OpenCodeClient:
                      'limit': limit_signal(events),
                      'exit_code': proc.returncode, 'timed_out': timed_out,
                      'tool_events': [e.get('type') for e in events if 'tool' in e.get('type', '')]}
+            error_text = '\n'.join(json.dumps(e.get('error', {})).lower() for e in events if e.get('type') == 'error')
+            reply['input_error'] = any(s in error_text for s in (
+                'context_length_exceeded', 'context length', 'context window', 'maximum context',
+                'input too long', 'content_filter', 'content_policy_violation'))
             if timed_out or proc.returncode != 0 or any(e.get('type') == 'error' for e in events):
                 reply['transport_error'] = 'OpenCode timeout' if timed_out else 'OpenCode request failed; see local events/stderr'
             return reply
@@ -351,6 +355,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
             return {**base, 'state': 'succeeded', 'record': f'records/{key}.json',
                     'attempt': f'attempts/{key}/{seq:03}', 'warnings': checked['warnings']}
         except ModelDeferred as exc:
+            metadata.update({k:v for k,v in exc.reply.items() if k != 'text'})
             metadata.update(state='deferred', model=exc.model, error=str(exc), finished_at=now())
             write_json(attempt / 'metadata.json', metadata)
             return {**base, 'state': 'deferred', 'failure_stage': 'model_availability',
@@ -523,7 +528,8 @@ def run_batch(args, client=None):
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {pool.submit(convert_one, item, row, args, client, context['schema'], context['contract'],
                                context['states'].get(key_of(item), {}).get('review_feedback') or
-                               context['states'].get(key_of(item), {}).get('error', '')): item
+                               (context['states'].get(key_of(item), {}).get('error', '')
+                                if context['states'].get(key_of(item), {}).get('state') == 'failed' else '')): item
                    for item, row in context['todo']}
         for future in as_completed(futures):
             accept_future(context, futures[future], future)

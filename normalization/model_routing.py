@@ -12,9 +12,10 @@ import uuid
 
 
 class ModelDeferred(Exception):
-    def __init__(self, message, model):
+    def __init__(self, message, model, reply=None):
         super().__init__(message)
         self.model = model
+        self.reply = reply or {}
 
 
 def limit_signal(events):
@@ -23,18 +24,24 @@ def limit_signal(events):
         if event.get('type') != 'error':
             continue
         error = event.get('error', {})
-        message = str(error.get('message', ''))
+        if not isinstance(error, dict):
+            continue
+        data = error.get('data', error)
+        if not isinstance(data, dict):
+            data = error
+        message = str(data.get('message', error.get('message', '')))
         explicit = re.search(r'\[code=([\w.-]+)\]', message)
-        code = error.get('code') or (explicit.group(1) if explicit else '')
+        code = data.get('code') or error.get('code') or (explicit.group(1) if explicit else '')
         lower = message.lower()
         if any(s in lower for s in ('context length', 'context window', 'maximum context', 'invalid api key')):
             continue
-        status = error.get('statusCode')
+        status = data.get('statusCode', data.get('status', error.get('statusCode', error.get('status'))))
         codes = {'tier_limit_exceeded', 'quota_exceeded', 'insufficient_quota',
                  'rate_limit_exceeded', 'usage_limit_exceeded', 'insufficient_credits',
-                 'credit_balance_exhausted', 'budget_exceeded'}
-        if code not in codes and status != 429 and not any(s in lower for s in (
-                'quota exhausted', 'quota exceeded', 'rate limit exceeded', 'too many requests',
+                 'credit_balance_exhausted', 'budget_exceeded', 'insufficient_balance'}
+        typed_quota = error.get('type') == 'provider.quota'
+        if code not in codes and status != 429 and not typed_quota and not any(s in lower for s in (
+                'quota exhausted', 'quota is exhausted', 'quota exceeded', 'rate limit exceeded', 'too many requests',
                 'membership concurrency limit', 'insufficient credits')):
             continue
         kind = 'concurrency' if 'concurrency' in lower else ('rate' if status == 429 or 'rate_limit' in code or 'rate limit' in lower else 'quota')
@@ -45,7 +52,7 @@ def limit_signal(events):
                 result['retry_at'] = datetime.fromisoformat(reset.group(1).replace('Z', '+00:00')).timestamp()
             except ValueError:
                 pass
-        after = error.get('retryAfter')
+        after = data.get('retryAfter', error.get('retryAfter'))
         if isinstance(after, (int, float)) and after > 0:
             result['retry_after_seconds'] = after
         return result
@@ -168,8 +175,16 @@ class QuotaRouter:
             self.observe(model, probe, {'transport_error': 'client exception'})
             raise
         self.observe(model, probe, reply)
-        return {**reply, 'model': model, 'routing': {
+        reply = {**reply, 'model': model, 'routing': {
             'selected': 'primary_probe' if probe else ('primary' if model == self.primary else 'free_fallback'),
             'primary': self.primary, 'free_fallback': self.fallback,
             'free_catalog_check': evidence},
             'retry_on_fallback': model == self.primary and bool(reply.get('limit'))}
+        if model == self.fallback and reply.get('limit'):
+            raise ModelDeferred('Free fallback limited; waiting for model availability', model, reply)
+        if (reply.get('transport_error') and not reply.get('limit') and
+                not reply.get('timed_out') and not reply.get('input_error')):
+            # A provider/connection failure is not evidence that the Skill is
+            # invalid. Pause the queue rather than fail thousands of sources.
+            raise ModelDeferred('Model request unavailable; see retained events/stderr', model, reply)
+        return reply

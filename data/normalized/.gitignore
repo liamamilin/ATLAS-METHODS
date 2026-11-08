@@ -16,3 +16,4 @@
 /full-*/worker.log
 /full-*/progress.json
 /full-*/runtime.json
+/full-*/recoveries/*/previous-states.jsonl.gz
