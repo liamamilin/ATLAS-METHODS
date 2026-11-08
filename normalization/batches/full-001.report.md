@@ -57,13 +57,13 @@
 当前进程仍运行，不要并发启动。进程退出后，从项目根目录续跑：
 
 ```bash
-python3 -u normalization/run_corpus.py
+python3 -u normalization/run_corpus.py --workers 10
 ```
 
 首轮结束后对失败项再作一次有限重试，成功项继续复用：
 
 ```bash
-python3 -u normalization/run_corpus.py --retry-failed
+python3 -u normalization/run_corpus.py --workers 10 --retry-failed
 ```
 
 生成新时间点的来源/进度检查点（不调用模型，使用新的目录名）：
@@ -81,3 +81,9 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 - `git diff --exit-code -- normalization/skill-record.v0.1.1.schema.json normalization/check_record.py normalization/export_response_schema.py normalization/CONVERSION-PROMPT.md data/cumulative/skills.jsonl.gz data/normalized/batch-001`：通过，Schema、转换约定、原检查器、采集索引及旧 40 条均未改动。
 
 全队列仍在进行；最终完成、失败重试和未来用量应依据后续实际结果更新，不将本报告快照当作整库完成。
+
+## 15:43 并发调整
+
+按用户要求，使用既有参数 `--workers 10` 续跑，保持每批 25 条，不修改转换器、Schema 或模型策略。仅停止旧队列父进程 `67378`，保留其在途批次与模型请求；新父进程 `93624` 在 15:43:06 启动，等待第三批子进程释放文件锁后接续。已经完成的来源继续复用，未手工修改或放宽失败结果。此处操作记录不改变上方 15:21 检查点的统计口径。
+
+15:43:59 已自动接续第四批；15:44 实查批次子进程 `94379` 下有 **10 个直接 OpenCode 请求进程**，同时存在 10 个未结束 attempt，确认实际并发已生效。当时路由状态没有额度/并发限制事件，仍使用 Open Design；15:45:25 第四批已实际保存 3 条成功结果，尚无失败或 deferred。并发增大后的有效吞吐尚需后续批次测量，不将并发倍数当作已实现的速度倍数。续跑命令已同步保留 `--workers 10`。

@@ -47,7 +47,7 @@ python3 normalization/batch_convert.py \
 全队列进程退出后的续跑命令（进程仍运行时无需重复启动）：
 
 ```bash
-python3 -u normalization/run_corpus.py
+python3 -u normalization/run_corpus.py --workers 10
 ```
 
 ## 采集成果保持不变

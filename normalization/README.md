@@ -77,15 +77,15 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 从项目根目录启动或在进程退出后继续同一队列：
 
 ```bash
-python3 -u normalization/run_corpus.py
+python3 -u normalization/run_corpus.py --workers 10
 ```
 
-默认每批 25 条、4 个 worker，不设置批次数上限、不逐批等待确认。已完成批次复用，记录失败后继续后续批次；额度导致模型不可用时，保存 deferred/pending 并等待再试。重启的队列父进程会等待尚在运行的批转换子进程锁，避免重复在途请求。
+程序默认每批 25 条、4 个 worker；本机按用户要求在 2026-11-08 15:43 改为显式 `--workers 10`，续跑时保留此参数。不设置批次数上限、不逐批等待确认。已完成批次复用，记录失败后继续后续批次；额度导致模型不可用时，保存 deferred/pending 并等待再试。重启的队列父进程会等待尚在运行的批转换子进程锁，避免重复在途请求。
 
 首轮结束后，对失败项再执行一次有限重试（成功项仍跳过）：
 
 ```bash
-python3 -u normalization/run_corpus.py --retry-failed
+python3 -u normalization/run_corpus.py --workers 10 --retry-failed
 ```
 
 新批次只从已保存清单解析入口直接引用的本地 Markdown/文本指南，不递归爬取整个包。选择至多四份、合计 40,000 字节的直接指南，优先显式提到的编译指南；未提供路径及原因写入冻结 selection 和模型输入备注，核心缺口由模型按现有约定简短说明。原入口保持完整；不声称整包覆盖或方法有效。
