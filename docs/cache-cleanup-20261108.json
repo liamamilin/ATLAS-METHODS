@@ -1,0 +1,2811 @@
+{
+  "operation": "remove_collection_git_caches",
+  "completed_at": "2026-11-08T23:52:50.642851+08:00",
+  "verified_at": "2026-11-08T23:59:51.105513+08:00",
+  "removed_cache_directories": 552,
+  "removed_bare_repositories": 556,
+  "removed_cache_allocated_bytes": 6289850368,
+  "project_disk_usage_before_bytes": 16166969344,
+  "project_disk_usage_after_bytes": 9885925376,
+  "disk_usage_note": "Project du -x -k -s measurements; concurrent model output may increase non-cache files. No claim is made about unrelated filesystem free-space changes.",
+  "preservation_checks": {
+    "protected_materials_and_indexes": {
+      "files": 505995,
+      "logical_bytes": 6380505438,
+      "path_size_mtime_inode_fingerprint": "5f9589dd451dfd8fe8a6eebb9cdc3010ce06a3d6016b6c79deb9ffa7f005bc20"
+    },
+    "index_references": {
+      "accessible_saved_entries": 55703,
+      "accessible_manifests": 523,
+      "all_index_paths_outside_deleted_caches": true
+    },
+    "preserved_completed_records": 1609,
+    "all_old_record_sha256_unchanged": true,
+    "normalizer_runtime_unchanged": true,
+    "deleted_cache_paths_absent": true
+  },
+  "normalizer": {
+    "pid_before": 91845,
+    "pid_after": 91845,
+    "started_at_unchanged": true,
+    "restarted_for_cleanup": false,
+    "workers": 10,
+    "status_at_report": "running",
+    "in_flight_at_report": 10,
+    "actual_saved_records_at_report": 1623
+  },
+  "scope_checks": {
+    "no_active_collection_process_observed": true,
+    "only_allowlisted_real_cache_directories": true,
+    "all_children_verified_bare_git_repositories": true,
+    "no_tracked_files_or_project_git_selected": true,
+    "no_material_or_index_reference_points_into_deleted_caches": true
+  },
+  "validation": {
+    "normalization_run_tests": "87 cases and 1000 interval oracle passed",
+    "code_changes": false
+  },
+  "errors": [],
+  "cache_directories": [
+    {
+      "path": "data/.cache",
+      "bare_repositories": 6,
+      "allocated_bytes": 254300160
+    },
+    {
+      "path": "data-batch-002/.cache",
+      "bare_repositories": 2,
+      "allocated_bytes": 1118208
+    },
+    {
+      "path": "data-batch-002/repositories/trycourier/courier-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 278528
+    },
+    {
+      "path": "data-batch-002/repositories/tech-leads-club/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4644864
+    },
+    {
+      "path": "data-batch-002/repositories/modem-dev/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-002/repositories/firecrawl/cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 557056
+    },
+    {
+      "path": "data-batch-002/repositories/Orchestra-Research/AI-Research-SKILLs/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 18333696
+    },
+    {
+      "path": "data-batch-002/repositories/Leonxlnx/taste-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 29855744
+    },
+    {
+      "path": "data-batch-002/repositories/sickn33/agentic-awesome-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 83947520
+    },
+    {
+      "path": "data-batch-002/repositories/chuspeeism/dashi-ppt-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 26628096
+    },
+    {
+      "path": "data-batch-002/repositories/angular/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 184320
+    },
+    {
+      "path": "data-batch-002/repositories/muratcankoylan/Agent-Skills-for-Context-Engineering/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7614464
+    },
+    {
+      "path": "data-batch-002/repositories/cathrynlavery/diagram-design/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 21737472
+    },
+    {
+      "path": "data-batch-002/repositories/alirezarezvani/claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 11882496
+    },
+    {
+      "path": "data-batch-002/repositories/github/awesome-copilot/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 108978176
+    },
+    {
+      "path": "data-batch-002/repositories/officialzeroxyz/zero-plugins/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 172032
+    },
+    {
+      "path": "data-batch-002/repositories/Jeffallan/claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2486272
+    },
+    {
+      "path": "data-batch-002/repositories/vercel-labs/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1073152
+    },
+    {
+      "path": "data-batch-002/repositories/crawlbase/n8n-nodes-crawlbase/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 196608
+    },
+    {
+      "path": "data-batch-002/repositories/crawlbase/langchain-crawlbase/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 122880
+    },
+    {
+      "path": "data-batch-002/repositories/crawlbase/crawlbase-mcp/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 151552
+    },
+    {
+      "path": "data-batch-002/repositories/LambdaTest/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1024000
+    },
+    {
+      "path": "data-batch-002/repositories/serpapi/serpapi-search-tools-python/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 868352
+    },
+    {
+      "path": "data-batch-002/repositories/serpapi/serpapi-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 237568
+    },
+    {
+      "path": "data-batch-002/repositories/veniceai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 307200
+    },
+    {
+      "path": "data-batch-002/repositories/wshobson/agents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2801664
+    },
+    {
+      "path": "data-batch-003/repositories/zilliztech/milvus-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 122880
+    },
+    {
+      "path": "data-batch-003/repositories/CosmoBlk/email-marketing-bible/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 225280
+    },
+    {
+      "path": "data-batch-003/repositories/wshuyi/x-article-publisher-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 139264
+    },
+    {
+      "path": "data-batch-003/repositories/MohamedAbdallah-14/unslop/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 19808256
+    },
+    {
+      "path": "data-batch-003/repositories/redis/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 409600
+    },
+    {
+      "path": "data-batch-003/repositories/realkimbarrett/advertising-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 118784
+    },
+    {
+      "path": "data-batch-003/repositories/google/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4362240
+    },
+    {
+      "path": "data-batch-003/repositories/AgriciDaniel/claude-seo/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3137536
+    },
+    {
+      "path": "data-batch-003/repositories/appeeky/aso-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2031616
+    },
+    {
+      "path": "data-batch-003/repositories/cloudflare/security-audit-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "data-batch-003/repositories/blader/humanizer/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-003/repositories/SHADOWPR0/beautiful_prose/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 106496
+    },
+    {
+      "path": "data-batch-003/repositories/makenotion/notion-cookbook/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4288512
+    },
+    {
+      "path": "data-batch-003/repositories/makenotion/claude-code-notion-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1753088
+    },
+    {
+      "path": "data-batch-003/repositories/NVIDIA/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 16261120
+    },
+    {
+      "path": "data-batch-003/repositories/cypress-io/ai-toolkit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 241664
+    },
+    {
+      "path": "data-batch-003/repositories/deanpeters/Product-Manager-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4571136
+    },
+    {
+      "path": "data-batch-003/repositories/qdrant/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 450560
+    },
+    {
+      "path": "data-batch-003/repositories/phuryn/pm-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5750784
+    },
+    {
+      "path": "data-batch-003/repositories/BrianRWagner/ai-marketing-claude-code-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 315392
+    },
+    {
+      "path": "data-batch-003/repositories/smixs/creative-director-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1798144
+    },
+    {
+      "path": "data-batch-003/repositories/resend/resend-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 294912
+    },
+    {
+      "path": "data-batch-003/repositories/Xquik-dev/x-twitter-scraper/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1773568
+    },
+    {
+      "path": "data-batch-003/repositories/Xquik-dev/tweetclaw/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 389120
+    },
+    {
+      "path": "data-batch-004/repositories/mailtrap/mailtrap-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-004/repositories/infrasity-labs/dev-gtm-claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 68157440
+    },
+    {
+      "path": "data-batch-004/repositories/SupercmoHQ/superCMO-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1171456
+    },
+    {
+      "path": "data-batch-004/repositories/Nanako0129/sepia/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 376832
+    },
+    {
+      "path": "data-batch-004/repositories/explorium-ai/vibeprospecting-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 159744
+    },
+    {
+      "path": "data-batch-004/repositories/nowork-studio/notfair-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 729088
+    },
+    {
+      "path": "data-batch-004/repositories/Bomx/distribb-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 344064
+    },
+    {
+      "path": "data-batch-004/repositories/ilyautov/humanizer-ru/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2818048
+    },
+    {
+      "path": "data-batch-004/repositories/indranilbanerjee/digital-marketing-pro/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3248128
+    },
+    {
+      "path": "data-batch-004/repositories/ScrapeCreators/social-media-research-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-004/repositories/heygen-com/hyperframes/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 71483392
+    },
+    {
+      "path": "data-batch-004/repositories/vanshyadav1408/Omentir/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 44851200
+    },
+    {
+      "path": "data-batch-004/repositories/degausai/wonda/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2420736
+    },
+    {
+      "path": "data-batch-004/repositories/taisly/agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 274432
+    },
+    {
+      "path": "data-batch-004/repositories/gitroomhq/postiz-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 217088
+    },
+    {
+      "path": "data-batch-004/repositories/YannisKiefer/dark-psychology-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "data-batch-004/repositories/socai-io/jev-social/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8015872
+    },
+    {
+      "path": "data-batch-004/repositories/AIDevGTM/gtm-cofounder/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 180224
+    },
+    {
+      "path": "data-batch-004/repositories/citlyze/citlyze-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-004/repositories/sandbaseai/sandbase-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 684032
+    },
+    {
+      "path": "data-batch-004/repositories/gooseworks-ai/goose-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 17113088
+    },
+    {
+      "path": "data-batch-004/repositories/aaron-he-zhu/aaron-marketing-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3670016
+    },
+    {
+      "path": "data-batch-004/repositories/Vladimir-Human/humanizer-ru/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1425408
+    },
+    {
+      "path": "data-batch-004/repositories/sergebulaev/linkedin-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1257472
+    },
+    {
+      "path": "data-batch-005/repositories/shalintripathi/saas-marketing-agents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2736128
+    },
+    {
+      "path": "data-batch-005/repositories/gokapso/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 286720
+    },
+    {
+      "path": "data-batch-005/repositories/nagameTW/formosa-humanizer/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-005/repositories/sujunmin/agy-ppt/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12378112
+    },
+    {
+      "path": "data-batch-005/repositories/op7418/NanoBanana-PPT-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2834432
+    },
+    {
+      "path": "data-batch-005/repositories/Aboudjem/humanizer-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2629632
+    },
+    {
+      "path": "data-batch-005/repositories/karero/croftweaver/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5423104
+    },
+    {
+      "path": "data-batch-005/repositories/PleasePrompto/notebooklm-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 286720
+    },
+    {
+      "path": "data-batch-005/repositories/zarazhangrui/frontend-slides/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 716800
+    },
+    {
+      "path": "data-batch-005/repositories/PSPDFKit-labs/nutrient-agent-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2142208
+    },
+    {
+      "path": "data-batch-005/repositories/emotixco/claude-skills-founder/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 323584
+    },
+    {
+      "path": "data-batch-005/repositories/zhuyansen/new-term-radar/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2420736
+    },
+    {
+      "path": "data-batch-005/repositories/yuwen-cool/yuwen-publish-precheck/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 184320
+    },
+    {
+      "path": "data-batch-005/repositories/coupler-io/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 794624
+    },
+    {
+      "path": "data-batch-005/repositories/Upload-Post/upload-post-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-005/repositories/open-salesblink/skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 196608
+    },
+    {
+      "path": "data-batch-005/repositories/checkout-page/ecommerce-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 245760
+    },
+    {
+      "path": "data-batch-005/repositories/posteyai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 421888
+    },
+    {
+      "path": "data-batch-005/repositories/AbubakrChan/product-launch-motion/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 24764416
+    },
+    {
+      "path": "data-batch-005/repositories/Hyacehila/humanizer-zh-next/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 163840
+    },
+    {
+      "path": "data-batch-005/repositories/apify/awesome-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 634880
+    },
+    {
+      "path": "data-batch-005/repositories/arcmira/mcp/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 385024
+    },
+    {
+      "path": "data-batch-005/repositories/publora/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1019904
+    },
+    {
+      "path": "data-batch-005/repositories/dreammis/social-auto-upload/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4583424
+    },
+    {
+      "path": "data-batch-006/repositories/SeanZoR/claude-speed-reader/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2183168
+    },
+    {
+      "path": "data-batch-006/repositories/EveryInc/charlie-cfo-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-006/repositories/Sendmux/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1040384
+    },
+    {
+      "path": "data-batch-006/repositories/op7418/Youtube-clipper-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 163840
+    },
+    {
+      "path": "data-batch-006/repositories/JimmySadek/video-fetcher-to-markdown/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1781760
+    },
+    {
+      "path": "data-batch-006/repositories/tjboudreaux/cc-thinking-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2736128
+    },
+    {
+      "path": "data-batch-006/repositories/zapier/zapier-mcp/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1359872
+    },
+    {
+      "path": "data-batch-006/repositories/hanfang/claude-memory-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-006/repositories/obra/superpowers-lab/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 131072
+    },
+    {
+      "path": "data-batch-006/repositories/wrsmith108/linear-claude-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 307200
+    },
+    {
+      "path": "data-batch-006/repositories/Linked-API/linkedin-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 200704
+    },
+    {
+      "path": "data-batch-006/repositories/openaccountants/openaccountants/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 365514752
+    },
+    {
+      "path": "data-batch-006/repositories/ReScienceLab/opc-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 14901248
+    },
+    {
+      "path": "data-batch-006/repositories/Paramchoudhary/ResumeSkills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 208896
+    },
+    {
+      "path": "data-batch-006/repositories/deusyu/translate-book/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 11943936
+    },
+    {
+      "path": "data-batch-006/repositories/bevibing/tutor-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-006/repositories/NeoLabHQ/context-engineering-kit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6504448
+    },
+    {
+      "path": "data-batch-006/repositories/mvanhorn/last30days-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 28180480
+    },
+    {
+      "path": "data-batch-006/repositories/ognjengt/founder-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1986560
+    },
+    {
+      "path": "data-batch-006/repositories/career-ops-hq/career-ops/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25661440
+    },
+    {
+      "path": "data-batch-006/repositories/Charlie85270/Dorothy/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 61186048
+    },
+    {
+      "path": "data-batch-006/repositories/pattern-ai-labs/agentcall/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 352256
+    },
+    {
+      "path": "data-batch-006/repositories/Digidai/product-manager-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "data-batch-006/repositories/xberg-io/xberg/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 49283072
+    },
+    {
+      "path": "data-batch-007/repositories/vaibhavarora14/job-application-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2883584
+    },
+    {
+      "path": "data-batch-007/repositories/GiaSip/giasip-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 360448
+    },
+    {
+      "path": "data-batch-007/repositories/wgwtest/novel-writing/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 274432
+    },
+    {
+      "path": "data-batch-007/repositories/voygr-tech/placecall/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 172032
+    },
+    {
+      "path": "data-batch-007/repositories/arifszn/slide-wright/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 172032
+    },
+    {
+      "path": "data-batch-007/repositories/manavmishra/ZeroSlop/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8613888
+    },
+    {
+      "path": "data-batch-007/repositories/MSG91/m91-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-007/repositories/radres/call-me/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 692224
+    },
+    {
+      "path": "data-batch-007/repositories/teableio/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 262144
+    },
+    {
+      "path": "data-batch-007/repositories/OneWave-AI/claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4567040
+    },
+    {
+      "path": "data-batch-007/repositories/Atomic-Mail/atomic-mail-agentic/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8871936
+    },
+    {
+      "path": "data-batch-007/repositories/bablobanov/hermes-agent-telegram-checklist/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1318912
+    },
+    {
+      "path": "data-batch-007/repositories/chrisryugj/kordoc/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10756096
+    },
+    {
+      "path": "data-batch-007/repositories/luchasarie/bro-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-007/repositories/ysskrishna/ai-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 253952
+    },
+    {
+      "path": "data-batch-007/repositories/dmoshehun-prog/learn-from-materials/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13152256
+    },
+    {
+      "path": "data-batch-007/repositories/cyperx84/claude-skills-mental-models/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-007/repositories/AugustusW/audio-tldr-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1806336
+    },
+    {
+      "path": "data-batch-007/repositories/kgraph57/mckinsey-style-visualization-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 16224256
+    },
+    {
+      "path": "data-batch-007/repositories/forjd/better-writing/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 466944
+    },
+    {
+      "path": "data-batch-007/repositories/Neeeophytee/finding-unknowns-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 221184
+    },
+    {
+      "path": "data-batch-007/repositories/tronghieu/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1941504
+    },
+    {
+      "path": "data-batch-007/repositories/cbrock84/headcount/.cache",
+      "bare_repositories": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data-batch-007/repositories/siril9/presentation-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 30633984
+    },
+    {
+      "path": "data-batch-008/repositories/coderabbitai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 266240
+    },
+    {
+      "path": "data-batch-008/repositories/truongduy2611/app-store-preflight-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-008/repositories/ramzesenok/iOS-Accessibility-Audit-Skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-008/repositories/woniu9524/open-web-bridge/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 491520
+    },
+    {
+      "path": "data-batch-008/repositories/777genius/agent-notifications/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12857344
+    },
+    {
+      "path": "data-batch-008/repositories/hedralab/eskill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-008/repositories/kklimuk/docx-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5238784
+    },
+    {
+      "path": "data-batch-008/repositories/ibelick/ui-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1486848
+    },
+    {
+      "path": "data-batch-008/repositories/sanjay3290/ai-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 425984
+    },
+    {
+      "path": "data-batch-008/repositories/pachca/openapi/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9785344
+    },
+    {
+      "path": "data-batch-008/repositories/MetcalfSolutions/Satori/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 774144
+    },
+    {
+      "path": "data-batch-008/repositories/conorluddy/ios-simulator-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 376832
+    },
+    {
+      "path": "data-batch-008/repositories/antonbabenko/terraform-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 286720
+    },
+    {
+      "path": "data-batch-008/repositories/rootlyhq/rootly-mcp-server/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7184384
+    },
+    {
+      "path": "data-batch-008/repositories/robzolkos/skill-rails-upgrade/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-008/repositories/lackeyjb/playwright-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 131072
+    },
+    {
+      "path": "data-batch-008/repositories/jthack/ffuf_claude_skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 118784
+    },
+    {
+      "path": "data-batch-008/repositories/kochetkov-ma/claude-brewcode/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25014272
+    },
+    {
+      "path": "data-batch-008/repositories/salemalem/npmscan-mcp-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 540672
+    },
+    {
+      "path": "data-batch-008/repositories/zxkane/aws-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 344064
+    },
+    {
+      "path": "data-batch-008/repositories/duyunzhoudyz/dyz-gongwen-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13680640
+    },
+    {
+      "path": "data-batch-008/repositories/Koloyaaa/foreign-academic-translator-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 15609856
+    },
+    {
+      "path": "data-batch-008/repositories/VoDaiLocz/kilo-kit-mcp/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5283840
+    },
+    {
+      "path": "data-batch-008/repositories/QingYunA/answer-me-with-html/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4468736
+    },
+    {
+      "path": "data-batch-009/repositories/efremidze/swift-patterns-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 221184
+    },
+    {
+      "path": "data-batch-009/repositories/rorkai/app-store-connect-cli-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 217088
+    },
+    {
+      "path": "data-batch-009/repositories/zscole/model-hierarchy-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 118784
+    },
+    {
+      "path": "data-batch-009/repositories/alinaqi/maggy/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2142208
+    },
+    {
+      "path": "data-batch-009/repositories/massimodeluisa/recursive-decomposition-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1060864
+    },
+    {
+      "path": "data-batch-009/repositories/testdino-hq/playwright-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 663552
+    },
+    {
+      "path": "data-batch-009/repositories/yusufkaraaslan/Skill_Seekers/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 11464704
+    },
+    {
+      "path": "data-batch-009/repositories/NoizAI/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 651264
+    },
+    {
+      "path": "data-batch-009/repositories/muthuishere/hand-drawn-diagrams/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1052672
+    },
+    {
+      "path": "data-batch-009/repositories/omkamal/pypict-claude-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-009/repositories/AvdLee/SwiftUI-Agent-Skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 712704
+    },
+    {
+      "path": "data-batch-009/repositories/fvadicamo/dev-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 262144
+    },
+    {
+      "path": "data-batch-009/repositories/nextlevelbuilder/ui-ux-pro-max-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6946816
+    },
+    {
+      "path": "data-batch-009/repositories/ehmo/platform-design-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2568192
+    },
+    {
+      "path": "data-batch-009/repositories/uucz/moyu/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1028096
+    },
+    {
+      "path": "data-batch-009/repositories/wrsmith108/varlock-claude-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-009/repositories/wendylabsinc/claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 421888
+    },
+    {
+      "path": "data-batch-009/repositories/mukul975/Anthropic-Cybersecurity-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9117696
+    },
+    {
+      "path": "data-batch-009/repositories/Kayforkind/reimagine-it/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 57491456
+    },
+    {
+      "path": "data-batch-009/repositories/scarletkc/vexor/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2195456
+    },
+    {
+      "path": "data-batch-009/repositories/rameerez/claude-code-startup-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-009/repositories/Kevin7Qi/codex-collab/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 917504
+    },
+    {
+      "path": "data-batch-009/repositories/CloudAI-X/threejs-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 208896
+    },
+    {
+      "path": "data-batch-009/repositories/ZhangHanDong/makepad-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 294912
+    },
+    {
+      "path": "data-batch-010/repositories/hqhq1025/skill-optimizer/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 147456
+    },
+    {
+      "path": "data-batch-010/repositories/superdesigndev/superdesign-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 208896
+    },
+    {
+      "path": "data-batch-010/repositories/csthink/dashmotion/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3104768
+    },
+    {
+      "path": "data-batch-010/repositories/baskduf/FableCodex/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 204800
+    },
+    {
+      "path": "data-batch-010/repositories/krisyangdev/motionboard/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10252288
+    },
+    {
+      "path": "data-batch-010/repositories/mcollina/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 401408
+    },
+    {
+      "path": "data-batch-010/repositories/foryourhealth111-pixel/Vibe-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13639680
+    },
+    {
+      "path": "data-batch-010/repositories/browser-act/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2306048
+    },
+    {
+      "path": "data-batch-010/repositories/Simon-He95/markstream-vue/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8765440
+    },
+    {
+      "path": "data-batch-010/repositories/reliefeai/browser-relay/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 884736
+    },
+    {
+      "path": "data-batch-010/repositories/eduardo-sl/go-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2899968
+    },
+    {
+      "path": "data-batch-010/repositories/Maksim-Burtsev/simple-man/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3067904
+    },
+    {
+      "path": "data-batch-010/repositories/agiwhitelist/auteur/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2818048
+    },
+    {
+      "path": "data-batch-010/repositories/aeonfun/aeon/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 15646720
+    },
+    {
+      "path": "data-batch-010/repositories/plasma-ai/fractal/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2691072
+    },
+    {
+      "path": "data-batch-010/repositories/ethos-link/rails-conventions/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-010/repositories/drogers0/gh-image/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 253952
+    },
+    {
+      "path": "data-batch-010/repositories/dembrandt/dembrandt-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1097728
+    },
+    {
+      "path": "data-batch-010/repositories/JasonColapietro/suede-creator-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 33230848
+    },
+    {
+      "path": "data-batch-010/repositories/squirrelscan/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-010/repositories/metalbear-co/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1253376
+    },
+    {
+      "path": "data-batch-010/repositories/Egonex-AI/Understand-Anything/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 23732224
+    },
+    {
+      "path": "data-batch-010/repositories/GanyuanRan/Aegis/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3706880
+    },
+    {
+      "path": "data-batch-010/repositories/KhazP/vibe-coding-prompt-template/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 307200
+    },
+    {
+      "path": "data-batch-011/repositories/d1vai/d1v-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 446464
+    },
+    {
+      "path": "data-batch-011/repositories/lindblomstefan/skills-library/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 368640
+    },
+    {
+      "path": "data-batch-011/repositories/unbrowse-ai/unbrowse/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1163264
+    },
+    {
+      "path": "data-batch-011/repositories/hasuwini77/3d-logo-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 18923520
+    },
+    {
+      "path": "data-batch-011/repositories/szarkans/multi/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 430080
+    },
+    {
+      "path": "data-batch-011/repositories/allxsmith/bestax/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 31096832
+    },
+    {
+      "path": "data-batch-011/repositories/fishzjp/qa-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1773568
+    },
+    {
+      "path": "data-batch-011/repositories/Continuum-AI-Corp/OrcaReplay/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3575808
+    },
+    {
+      "path": "data-batch-011/repositories/dannwaneri/spec-writer/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 110592
+    },
+    {
+      "path": "data-batch-011/repositories/marvkr/better-design/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1515520
+    },
+    {
+      "path": "data-batch-011/repositories/lukstei/slop-grader/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1445888
+    },
+    {
+      "path": "data-batch-011/repositories/rainmanjam/poka-yoke/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3051520
+    },
+    {
+      "path": "data-batch-011/repositories/hermes-labs-ai/little-canary/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2363392
+    },
+    {
+      "path": "data-batch-011/repositories/hermes-labs-ai/lintlang/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2134016
+    },
+    {
+      "path": "data-batch-011/repositories/kensaurus/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2965504
+    },
+    {
+      "path": "data-batch-011/repositories/exadel-inc/agentic-readiness-assessment/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 270336
+    },
+    {
+      "path": "data-batch-011/repositories/ollygarden/opentelemetry-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1036288
+    },
+    {
+      "path": "data-batch-011/repositories/scarletkc/agents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 282624
+    },
+    {
+      "path": "data-batch-011/repositories/kulchankas/paranoid/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 315392
+    },
+    {
+      "path": "data-batch-011/repositories/fujibee/agmsg/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 15536128
+    },
+    {
+      "path": "data-batch-011/repositories/UiPath/coder_eval/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9719808
+    },
+    {
+      "path": "data-batch-011/repositories/tt-a1i/archify/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 40894464
+    },
+    {
+      "path": "data-batch-011/repositories/gongdear/cline-pilot/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 139264
+    },
+    {
+      "path": "data-batch-011/repositories/saleh-alhaddad/itqan-engineering/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 323584
+    },
+    {
+      "path": "data-batch-012/repositories/laolaoshiren/claude-code-skills-zh/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 303104
+    },
+    {
+      "path": "data-batch-012/repositories/Aurite-ai/agent-verifier/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3346432
+    },
+    {
+      "path": "data-batch-012/repositories/sno-ai/sno-station-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1085440
+    },
+    {
+      "path": "data-batch-012/repositories/supercorp-ai/supercov/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5758976
+    },
+    {
+      "path": "data-batch-012/repositories/edonadei/caliper/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 794624
+    },
+    {
+      "path": "data-batch-012/repositories/Cap-go/capgo-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 700416
+    },
+    {
+      "path": "data-batch-012/repositories/celo-org/celopedia-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 417792
+    },
+    {
+      "path": "data-batch-012/repositories/0design/unslop-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 290816
+    },
+    {
+      "path": "data-batch-012/repositories/prisma/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 229376
+    },
+    {
+      "path": "data-batch-012/repositories/oil-oil/oil-ui/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1474560
+    },
+    {
+      "path": "data-batch-012/repositories/9929y/mesh-gradient-generation/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1478656
+    },
+    {
+      "path": "data-batch-012/repositories/mobbin/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 180224
+    },
+    {
+      "path": "data-batch-012/repositories/first-fluke/oh-my-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 31260672
+    },
+    {
+      "path": "data-batch-012/repositories/beastlabai/multi-llm-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9760768
+    },
+    {
+      "path": "data-batch-012/repositories/ScrapingBee/scrapingbee-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 655360
+    },
+    {
+      "path": "data-batch-012/repositories/finom/vovk/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 47333376
+    },
+    {
+      "path": "data-batch-012/repositories/skymanbp/cc-tree/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 360448
+    },
+    {
+      "path": "data-batch-012/repositories/gal-a/qikly/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3948544
+    },
+    {
+      "path": "data-batch-012/repositories/rlaope/oh-my-hermes/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 56262656
+    },
+    {
+      "path": "data-batch-012/repositories/EricJujianZou/rederive/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 897024
+    },
+    {
+      "path": "data-batch-012/repositories/GAURAV-1313/codecall/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 675840
+    },
+    {
+      "path": "data-batch-012/repositories/moxno/privacyscrubber-mcp/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1056768
+    },
+    {
+      "path": "data-batch-012/repositories/tushaarmehtaa/tushar-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7331840
+    },
+    {
+      "path": "data-batch-012/repositories/fullselfbrowsing/FSB/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 34680832
+    },
+    {
+      "path": "data-batch-013/repositories/vshulcz/deja-vu/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 11800576
+    },
+    {
+      "path": "data-batch-013/repositories/zilliztech/mfs/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1470464
+    },
+    {
+      "path": "data-batch-013/repositories/RAKKUNN/vicem/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 18391040
+    },
+    {
+      "path": "data-batch-013/repositories/archcore-ai/archcore/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 413696
+    },
+    {
+      "path": "data-batch-013/repositories/ohad6k/emulo/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10813440
+    },
+    {
+      "path": "data-batch-013/repositories/awrshift/agent-memory-kit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12587008
+    },
+    {
+      "path": "data-batch-013/repositories/orziz/odai/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25157632
+    },
+    {
+      "path": "data-batch-013/repositories/k-kolomeitsev/data-structure-protocol/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 221184
+    },
+    {
+      "path": "data-batch-013/repositories/stjbrown/agent-knowledge/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6451200
+    },
+    {
+      "path": "data-batch-013/repositories/amirkiarafiei/subagent-cli-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9093120
+    },
+    {
+      "path": "data-batch-013/repositories/dankofly/perfectify/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 303104
+    },
+    {
+      "path": "data-batch-013/repositories/Qiuner/birdview/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12935168
+    },
+    {
+      "path": "data-batch-013/repositories/Panniantong/Agent-Reach/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 720896
+    },
+    {
+      "path": "data-batch-013/repositories/Tubo2333/obsidian-knowledge-brain/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 233472
+    },
+    {
+      "path": "data-batch-013/repositories/JayPokale/Chisle/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2142208
+    },
+    {
+      "path": "data-batch-013/repositories/oliver-zehentleitner/keep-the-why/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13451264
+    },
+    {
+      "path": "data-batch-013/repositories/khendzel/skills-janitor/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 851968
+    },
+    {
+      "path": "data-batch-013/repositories/thousandflowers/skillreaper/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1806336
+    },
+    {
+      "path": "data-batch-013/repositories/rebelytics/one-skill-to-rule-them-all/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 466944
+    },
+    {
+      "path": "data-batch-013/repositories/chrono-meta/forge-harness/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9986048
+    },
+    {
+      "path": "data-batch-013/repositories/thedotmack/claude-mem/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 21065728
+    },
+    {
+      "path": "data-batch-013/repositories/swiftlysingh/excalidraw-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 569344
+    },
+    {
+      "path": "data-batch-013/repositories/ruslanlap/cavemenko/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 192512
+    },
+    {
+      "path": "data-batch-013/repositories/sametbrr/llm-wiki-manager/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 212992
+    },
+    {
+      "path": "data-batch-014/repositories/honeydew-ai/honeydew-ai-coding-agents-plugins/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 237568
+    },
+    {
+      "path": "data-batch-014/repositories/video-db/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 241664
+    },
+    {
+      "path": "data-batch-014/repositories/raintree-technology/hig-doctor/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10031104
+    },
+    {
+      "path": "data-batch-014/repositories/talkstream/ru-text/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1445888
+    },
+    {
+      "path": "data-batch-014/repositories/HeshamFS/materials-simulation-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 962560
+    },
+    {
+      "path": "data-batch-014/repositories/frmoretto/clarity-gate/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 290816
+    },
+    {
+      "path": "data-batch-014/repositories/ZeKaiNie/universal-examprep-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3940352
+    },
+    {
+      "path": "data-batch-014/repositories/shouldnotappearcalm/a-share-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 348160
+    },
+    {
+      "path": "data-batch-014/repositories/helius-labs/core-ai/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1212416
+    },
+    {
+      "path": "data-batch-014/repositories/BehiSecc/VibeSec-Skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 122880
+    },
+    {
+      "path": "data-batch-014/repositories/prompt-security/clawsec/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 21540864
+    },
+    {
+      "path": "data-batch-014/repositories/more-io/claude-apple-bridges/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 180224
+    },
+    {
+      "path": "data-batch-014/repositories/wanshuiyin/Auto-claude-code-research-in-sleep/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25366528
+    },
+    {
+      "path": "data-batch-014/repositories/SHADOWPR0/security-bluebook-builder/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 106496
+    },
+    {
+      "path": "data-batch-014/repositories/tinqiao-oss/engramory/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5328896
+    },
+    {
+      "path": "data-batch-014/repositories/transloadit/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3866624
+    },
+    {
+      "path": "data-batch-014/repositories/takechanman1228/claude-ecom/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8081408
+    },
+    {
+      "path": "data-batch-014/repositories/hanhuark/mechanical-engineering-research-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 348160
+    },
+    {
+      "path": "data-batch-014/repositories/lawve-ai/awesome-legal-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 24473600
+    },
+    {
+      "path": "data-batch-014/repositories/huifer/WellAlly-health/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1507328
+    },
+    {
+      "path": "data-batch-014/repositories/komal-SkyNET/claude-skill-homeassistant/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 454656
+    },
+    {
+      "path": "data-batch-014/repositories/Ericyoung-183/alpha-insights/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4149248
+    },
+    {
+      "path": "data-batch-014/repositories/vmware-skills/VMware-AIops/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 847872
+    },
+    {
+      "path": "data-batch-014/repositories/NotMyself/claude-win11-speckit-update-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 999424
+    },
+    {
+      "path": "data-batch-015/repositories/bitwize-music-studio/claude-ai-music-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5316608
+    },
+    {
+      "path": "data-batch-015/repositories/Optim-Agent/optim-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2580480
+    },
+    {
+      "path": "data-batch-015/repositories/MartinDelophy/ai-video-editor/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 36319232
+    },
+    {
+      "path": "data-batch-015/repositories/morluto/rea/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 23953408
+    },
+    {
+      "path": "data-batch-015/repositories/OptimNow/cloud-finops-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1687552
+    },
+    {
+      "path": "data-batch-015/repositories/GarethManning/education-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2871296
+    },
+    {
+      "path": "data-batch-015/repositories/Orkas-AI/Orkas-VideoStudio/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 569344
+    },
+    {
+      "path": "data-batch-015/repositories/perso-ai/perso-dubbing-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 41070592
+    },
+    {
+      "path": "data-batch-015/repositories/ilyautov/small-business-ru/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1867776
+    },
+    {
+      "path": "data-batch-015/repositories/ZeroPointRepo/youtube-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 294912
+    },
+    {
+      "path": "data-batch-015/repositories/meodai/skill.color-expert/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1122304
+    },
+    {
+      "path": "data-batch-015/repositories/swaylq/humanize-chinese/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1220608
+    },
+    {
+      "path": "data-batch-015/repositories/AceDataCloud/Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1576960
+    },
+    {
+      "path": "data-batch-015/repositories/yang0/handraw-style/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 54882304
+    },
+    {
+      "path": "data-batch-015/repositories/apitube/news-api-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 118784
+    },
+    {
+      "path": "data-batch-015/repositories/Tencent/AI-Infra-Guard/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 90095616
+    },
+    {
+      "path": "data-batch-015/repositories/zincio/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-015/repositories/aklofas/kicad-happy/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1810432
+    },
+    {
+      "path": "data-batch-015/repositories/elithril/blender-kiln/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 26415104
+    },
+    {
+      "path": "data-batch-015/repositories/Alisa0808/vibe-creating-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6311936
+    },
+    {
+      "path": "data-batch-015/repositories/eatmoreduck/boss-zhipin-scraper/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2387968
+    },
+    {
+      "path": "data-batch-015/repositories/renezander030/capcut-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 14557184
+    },
+    {
+      "path": "data-batch-015/repositories/wiltodelta/remove-ai-watermarks/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 551141376
+    },
+    {
+      "path": "data-batch-015/repositories/HUANGCHIHHUNGLeo/claude-real-video/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 35938304
+    },
+    {
+      "path": "data-batch-016/repositories/op7418/guizang-social-card-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2162688
+    },
+    {
+      "path": "data-batch-016/repositories/nexscope-ai/eCommerce-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1269760
+    },
+    {
+      "path": "data-batch-016/repositories/KalarisLabs/research-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 14581760
+    },
+    {
+      "path": "data-batch-016/repositories/devanasolver/ai-seo-toolkit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 331776
+    },
+    {
+      "path": "data-batch-016/repositories/virgiliojr94/book-to-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1552384
+    },
+    {
+      "path": "data-batch-016/repositories/zubair-trabzada/geo-seo-claude/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 348160
+    },
+    {
+      "path": "data-batch-016/repositories/jgsystemsconsulting/jgs-se-knowledge-packs/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5382144
+    },
+    {
+      "path": "data-batch-016/repositories/wheresryan22/anatomy/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13320192
+    },
+    {
+      "path": "data-batch-016/repositories/mblode/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1277952
+    },
+    {
+      "path": "data-batch-016/repositories/hyperb1iss/unifly/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9060352
+    },
+    {
+      "path": "data-batch-016/repositories/teng-lin/notebooklm-py/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12996608
+    },
+    {
+      "path": "data-batch-016/repositories/Bhanunamikaze/Agentic-SEO-Skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 823296
+    },
+    {
+      "path": "data-batch-016/repositories/federicodeponte/opendraft/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 16678912
+    },
+    {
+      "path": "data-batch-016/repositories/snyk/agent-scan/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1867776
+    },
+    {
+      "path": "data-batch-016/repositories/kepano/obsidian-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-016/repositories/verdikta/verdikta-applications/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3055616
+    },
+    {
+      "path": "data-batch-016/repositories/antvis/AVA/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6238208
+    },
+    {
+      "path": "data-batch-016/repositories/MetaMask/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 229376
+    },
+    {
+      "path": "data-batch-016/repositories/Kinprove/genealogy-research-recipes/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1736704
+    },
+    {
+      "path": "data-batch-016/repositories/danoszz/penthera/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 12107776
+    },
+    {
+      "path": "data-batch-016/repositories/ChatCut-Inc/agent-plugin/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 761856
+    },
+    {
+      "path": "data-batch-016/repositories/czlonkowski/n8n-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2662400
+    },
+    {
+      "path": "data-batch-016/repositories/zenstory-ai/oh-story-claudecode/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7417856
+    },
+    {
+      "path": "data-batch-016/repositories/assafkip/claudemy/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4042752
+    },
+    {
+      "path": "data-batch-017/repositories/latent-spaces/brag/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 51347456
+    },
+    {
+      "path": "data-batch-017/repositories/googleworkspace/cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1286144
+    },
+    {
+      "path": "data-batch-017/repositories/nidhinjs/prompt-master/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 139264
+    },
+    {
+      "path": "data-batch-017/repositories/hesreallyhim/awesome-claude-code/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2375680
+    },
+    {
+      "path": "data-batch-017/repositories/open-gitagent/opengap/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25317376
+    },
+    {
+      "path": "data-batch-017/repositories/OthmanAdi/planning-with-files/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 23818240
+    },
+    {
+      "path": "data-batch-017/repositories/iOfficeAI/OfficeCLI/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 78557184
+    },
+    {
+      "path": "data-batch-017/repositories/0xNyk/council-of-high-intelligence/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6062080
+    },
+    {
+      "path": "data-batch-017/repositories/ayghri/i-have-adhd/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 364544
+    },
+    {
+      "path": "data-batch-017/repositories/KiWi233333/JiwuChat/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 55427072
+    },
+    {
+      "path": "data-batch-017/repositories/coreyhaines31/makerskills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 483328
+    },
+    {
+      "path": "data-batch-017/repositories/go-musicfox/go-musicfox/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 33472512
+    },
+    {
+      "path": "data-batch-017/repositories/ComposioHQ/awesome-claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3682304
+    },
+    {
+      "path": "data-batch-017/repositories/pengchujin/jzsub/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 557056
+    },
+    {
+      "path": "data-batch-017/repositories/Vincentwei1021/video-shotcraft/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 44453888
+    },
+    {
+      "path": "data-batch-017/repositories/travisvn/awesome-claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-017/repositories/bazel-contrib/bazel-gazelle/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3026944
+    },
+    {
+      "path": "data-batch-017/repositories/VoltAgent/awesome-codex-subagents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 315392
+    },
+    {
+      "path": "data-batch-017/repositories/VoltAgent/awesome-openclaw-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 425984
+    },
+    {
+      "path": "data-batch-017/repositories/composio-community/awesome-codex-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4616192
+    },
+    {
+      "path": "data-batch-018/repositories/ConardLi/garden-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 24522752
+    },
+    {
+      "path": "data-batch-018/repositories/antfu/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 491520
+    },
+    {
+      "path": "data-batch-018/repositories/cisco-ai-defense/skill-scanner/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3530752
+    },
+    {
+      "path": "data-batch-018/repositories/microsoft/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9121792
+    },
+    {
+      "path": "data-batch-018/repositories/MengTo/Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 72929280
+    },
+    {
+      "path": "data-batch-018/repositories/zhayujie/CowAgent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5926912
+    },
+    {
+      "path": "data-batch-018/repositories/cloudflare/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 417792
+    },
+    {
+      "path": "data-batch-018/repositories/volcengine/OpenViking/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 70012928
+    },
+    {
+      "path": "data-batch-018/repositories/dotnet/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4956160
+    },
+    {
+      "path": "data-batch-018/repositories/vuejs-ai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 462848
+    },
+    {
+      "path": "data-batch-018/repositories/remotion-dev/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 368640
+    },
+    {
+      "path": "data-batch-018/repositories/davidondrej/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 348160
+    },
+    {
+      "path": "data-batch-018/repositories/gamedev-skills/awesome-gamedev-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2785280
+    },
+    {
+      "path": "data-batch-018/repositories/noobnooc/agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-018/repositories/vercel-labs/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 569344
+    },
+    {
+      "path": "data-batch-018/repositories/agentskills/agentskills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 753664
+    },
+    {
+      "path": "data-batch-018/repositories/liangdabiao/Seedance2-Storyboard-Generator/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 38891520
+    },
+    {
+      "path": "data-batch-018/repositories/huggingface/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 765952
+    },
+    {
+      "path": "data-batch-018/repositories/Shubhamsaboo/awesome-llm-apps/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 71585792
+    },
+    {
+      "path": "data-batch-018/repositories/jakubkrehel/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 331776
+    },
+    {
+      "path": "data-batch-018/repositories/BuilderIO/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4558848
+    },
+    {
+      "path": "data-batch-018/repositories/jsmastery-pro/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 364544
+    },
+    {
+      "path": "data-batch-018/repositories/heilcheng/awesome-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1339392
+    },
+    {
+      "path": "data-batch-018/repositories/cbrock84/headcount/.cache",
+      "bare_repositories": 0,
+      "allocated_bytes": 0
+    },
+    {
+      "path": "data-batch-019/repositories/RKiding/Awesome-finance-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2117632
+    },
+    {
+      "path": "data-batch-019/repositories/KKKKhazix/khazix-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 282624
+    },
+    {
+      "path": "data-batch-019/repositories/markdown-viewer/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 897024
+    },
+    {
+      "path": "data-batch-019/repositories/WordPress/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 389120
+    },
+    {
+      "path": "data-batch-019/repositories/Jakeschincariol/instagram-agent-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 180224
+    },
+    {
+      "path": "data-batch-019/repositories/vibe-motion/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 35274752
+    },
+    {
+      "path": "data-batch-019/repositories/jihe520/MathModelAgent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 43102208
+    },
+    {
+      "path": "data-batch-019/repositories/evalstate/fast-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 57114624
+    },
+    {
+      "path": "data-batch-019/repositories/browserbase/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 630784
+    },
+    {
+      "path": "data-batch-019/repositories/affaan-m/ECC/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 34586624
+    },
+    {
+      "path": "data-batch-019/repositories/jjyaoao/HelloAgents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1060864
+    },
+    {
+      "path": "data-batch-019/repositories/google-labs-code/stitch-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 294912
+    },
+    {
+      "path": "data-batch-019/repositories/titanwings/distilly/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1380352
+    },
+    {
+      "path": "data-batch-019/repositories/revfactory/harness/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 21221376
+    },
+    {
+      "path": "data-batch-019/repositories/typesafe-ai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 118784
+    },
+    {
+      "path": "data-batch-019/repositories/expo/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3481600
+    },
+    {
+      "path": "data-batch-019/repositories/BankrBot/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4591616
+    },
+    {
+      "path": "data-batch-019/repositories/supabase/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 229376
+    },
+    {
+      "path": "data-batch-019/repositories/benjitaylor/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1314816
+    },
+    {
+      "path": "data-batch-019/repositories/libukai/awesome-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 6369280
+    },
+    {
+      "path": "data-batch-019/repositories/NousResearch/hermes-agent-self-evolution/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 172032
+    },
+    {
+      "path": "data-batch-019/repositories/apify/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 204800
+    },
+    {
+      "path": "data-batch-019/repositories/itsmostafa/aws-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 253952
+    },
+    {
+      "path": "data-batch-019/repositories/wondelai/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2555904
+    },
+    {
+      "path": "data-batch-020/repositories/outsourc-e/hermes-workspace/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 55640064
+    },
+    {
+      "path": "data-batch-020/repositories/OpenSenseNova/SenseNova-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 46981120
+    },
+    {
+      "path": "data-batch-020/repositories/FrancyJGLisboa/agent-skills-platform/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5984256
+    },
+    {
+      "path": "data-batch-020/repositories/lsdefine/GenericAgent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 25464832
+    },
+    {
+      "path": "data-batch-020/repositories/google/elephant-goldfish-model/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2154496
+    },
+    {
+      "path": "data-batch-020/repositories/google/agents-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 3686400
+    },
+    {
+      "path": "data-batch-020/repositories/0xNyk/awesome-hermes-agent/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2596864
+    },
+    {
+      "path": "data-batch-020/repositories/inference-sh/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 454656
+    },
+    {
+      "path": "data-batch-020/repositories/PrathamLearnsToCode/paper2code/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 233472
+    },
+    {
+      "path": "data-batch-020/repositories/plugin87/ux-ui-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 19587072
+    },
+    {
+      "path": "data-batch-020/repositories/heygen-com/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 389120
+    },
+    {
+      "path": "data-batch-020/repositories/adobe/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7098368
+    },
+    {
+      "path": "data-batch-020/repositories/NVIDIA/SkillSpector/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2809856
+    },
+    {
+      "path": "data-batch-020/repositories/google-gemini/gemini-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 167936
+    },
+    {
+      "path": "data-batch-020/repositories/softaworks/agent-toolkit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 851968
+    },
+    {
+      "path": "data-batch-020/repositories/LeoYeAI/agent-master-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 100876288
+    },
+    {
+      "path": "data-batch-020/repositories/numman-ali/openskills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 200704
+    },
+    {
+      "path": "data-batch-020/repositories/Memento-Teams/Memento-Skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2981888
+    },
+    {
+      "path": "data-batch-020/repositories/aws/agent-toolkit-for-aws/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10133504
+    },
+    {
+      "path": "data-batch-020/repositories/coleam00/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1347584
+    },
+    {
+      "path": "data-batch-020/repositories/memodb-io/Acontext/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 14532608
+    },
+    {
+      "path": "data-batch-020/repositories/yaklang/hack-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2269184
+    },
+    {
+      "path": "data-batch-020/repositories/davila7/claude-code-templates/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 40914944
+    },
+    {
+      "path": "data-batch-020/repositories/https-deeplearning-ai/sc-agent-skills-files/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1273856
+    },
+    {
+      "path": "data-batch-021/repositories/win4r/openclaw-workspace/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-021/repositories/openclaw/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 675840
+    },
+    {
+      "path": "data-batch-021/repositories/geekjourneyx/md2wechat-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8683520
+    },
+    {
+      "path": "data-batch-021/repositories/dhicoc/dsh-reverse-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2289664
+    },
+    {
+      "path": "data-batch-021/repositories/microsoft/SkillOpt/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2326528
+    },
+    {
+      "path": "data-batch-021/repositories/SnailSploit/Claude-Red/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2314240
+    },
+    {
+      "path": "data-batch-021/repositories/shaom/brand-to-design-md-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9523200
+    },
+    {
+      "path": "data-batch-021/repositories/ciembor/agent-rules-books/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1200128
+    },
+    {
+      "path": "data-batch-021/repositories/agent-sh/agnix/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4509696
+    },
+    {
+      "path": "data-batch-021/repositories/blacktop/ipsw-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 143360
+    },
+    {
+      "path": "data-batch-021/repositories/bergside/awesome-design-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10747904
+    },
+    {
+      "path": "data-batch-021/repositories/bergside/design-md-chrome/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 147456
+    },
+    {
+      "path": "data-batch-021/repositories/vibeforge1111/vibeship-spawner-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7561216
+    },
+    {
+      "path": "data-batch-021/repositories/Yusuke710/manim-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1216512
+    },
+    {
+      "path": "data-batch-021/repositories/alchaincyf/huashu-md-html/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7647232
+    },
+    {
+      "path": "data-batch-021/repositories/EverMind-AI/SkillCorpus/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1015808
+    },
+    {
+      "path": "data-batch-021/repositories/tikoci/routeros-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 385024
+    },
+    {
+      "path": "data-batch-021/repositories/mxyhi/ok-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 40206336
+    },
+    {
+      "path": "data-batch-021/repositories/callstackincubator/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 10641408
+    },
+    {
+      "path": "data-batch-021/repositories/futantan/agent-skills.md/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 499712
+    },
+    {
+      "path": "data-batch-021/repositories/K-Dense-AI/mimeo/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 37085184
+    },
+    {
+      "path": "data-batch-021/repositories/open-legal-products/mike-workflows/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 757760
+    },
+    {
+      "path": "data-batch-021/repositories/mrhlaingbwardev/agentic-hacking-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 335872
+    },
+    {
+      "path": "data-batch-021/repositories/rohitg00/awesome-claude-design/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1146880
+    },
+    {
+      "path": "data-batch-022/repositories/iannuttall/dotagents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-022/repositories/Jianing1117/jianing-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4378624
+    },
+    {
+      "path": "data-batch-022/repositories/sno-ai/mda/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4460544
+    },
+    {
+      "path": "data-batch-022/repositories/elementalsouls/Claude-OSINT/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1273856
+    },
+    {
+      "path": "data-batch-022/repositories/wilwaldon/Claude-Code-Frontend-Design-Toolkit/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-022/repositories/machina-sports/sports-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2281472
+    },
+    {
+      "path": "data-batch-022/repositories/kvanland/ticktick-cli/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-022/repositories/pickle-an/md-to-docx-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 217088
+    },
+    {
+      "path": "data-batch-022/repositories/gapmiss/obsidian-plugin-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 180224
+    },
+    {
+      "path": "data-batch-022/repositories/michaelpersonal/goal-forge/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-022/repositories/waynesutton/builder-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 282624
+    },
+    {
+      "path": "data-batch-022/repositories/jzOcb/writing-style-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-022/repositories/Narwhal-Lab/MagicSkills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135495680
+    },
+    {
+      "path": "data-batch-022/repositories/arpitg1304/robotics-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 266240
+    },
+    {
+      "path": "data-batch-022/repositories/seb1n/awesome-ai-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 684032
+    },
+    {
+      "path": "data-batch-022/repositories/aakashg/pm-claude-code-setup/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-022/repositories/Railly/tinte/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1359872
+    },
+    {
+      "path": "data-batch-022/repositories/TheDecipherist/claude-code-mastery/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 524288
+    },
+    {
+      "path": "data-batch-022/repositories/realrossmanngroup/no_ai_slop_writing_rules/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-022/repositories/fernandotellado/ai-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 262144
+    },
+    {
+      "path": "data-batch-022/repositories/alpacahq/alpaca-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 229376
+    },
+    {
+      "path": "data-batch-022/repositories/TerminalSkills/skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 9854976
+    },
+    {
+      "path": "data-batch-022/repositories/ythx-101/live-panel-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 22163456
+    },
+    {
+      "path": "data-batch-022/repositories/Berserk-hub150/skillhawk/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1654784
+    },
+    {
+      "path": "data-batch-023/repositories/tigerless-labs/paper-radar/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-023/repositories/ithiria894/awesome-claude-code-workflows/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-023/repositories/O0000-code/paper-search-pro/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 13524992
+    },
+    {
+      "path": "data-batch-023/repositories/WenyuChiou/ai-research-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 8962048
+    },
+    {
+      "path": "data-batch-023/repositories/ThomasMoreAI/legal-skills-open/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 159330304
+    },
+    {
+      "path": "data-batch-023/repositories/bowenliang123/markdown-exporter/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 34742272
+    },
+    {
+      "path": "data-batch-023/repositories/govardhanrekha/QA-Skill.md-files/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-023/repositories/tmchow/agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 143360
+    },
+    {
+      "path": "data-batch-023/repositories/royalpinto007/awesome-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 126976
+    },
+    {
+      "path": "data-batch-023/repositories/spboyer/sensei/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 421888
+    },
+    {
+      "path": "data-batch-023/repositories/michaelshimeles/rstack/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 172032
+    },
+    {
+      "path": "data-batch-023/repositories/bergside/design-md-figma/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-023/repositories/ooocooc/open-skill-sunset/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7053312
+    },
+    {
+      "path": "data-batch-023/repositories/v1k22/skillhub-registry/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 557056
+    },
+    {
+      "path": "data-batch-023/repositories/Hao0321/claude-skill-code-cleanup/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 634880
+    },
+    {
+      "path": "data-batch-023/repositories/Kulaxyz/self-learning-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 122880
+    },
+    {
+      "path": "data-batch-023/repositories/heyabhishekbajpai/SkillIssue/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 5079040
+    },
+    {
+      "path": "data-batch-023/repositories/netresearch/agent-rules-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 409600
+    },
+    {
+      "path": "data-batch-023/repositories/gadievron/raptor/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 33619968
+    },
+    {
+      "path": "data-batch-023/repositories/malkreide/socratic-method-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 135168
+    },
+    {
+      "path": "data-batch-023/repositories/zcashlabs/zcash-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 249856
+    },
+    {
+      "path": "data-batch-023/repositories/nearai/ironhub/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 23863296
+    },
+    {
+      "path": "data-batch-023/repositories/OpenLinkSoftware/ai-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 15912960
+    },
+    {
+      "path": "data-batch-023/repositories/ajhcs/healthcare-agents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4177920
+    },
+    {
+      "path": "data-batch-024/repositories/DominikTobureto/awesome-grok-build/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 163840
+    },
+    {
+      "path": "data-batch-024/repositories/tigerless-labs/design-harness/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4243456
+    },
+    {
+      "path": "data-batch-024/repositories/Helpercraft/helpercraft/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 15405056
+    },
+    {
+      "path": "data-batch-024/repositories/aliyun/maxcompute-semantic/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 2002944
+    },
+    {
+      "path": "data-batch-024/repositories/tomkrikorian/visionOSAgents/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1454080
+    },
+    {
+      "path": "data-batch-024/repositories/ProxymanApp/proxyman-SKILL.md/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1015808
+    },
+    {
+      "path": "data-batch-024/repositories/HunterisLive-1/mobile-maya-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-024/repositories/dgk-dev/dgk-gpt/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 147456
+    },
+    {
+      "path": "data-batch-024/repositories/tinyhumansai/skill-registry/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 106496
+    },
+    {
+      "path": "data-batch-024/repositories/jeremylongshore/excel-analyst-pro-skill-md/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 155648
+    },
+    {
+      "path": "data-batch-024/repositories/dbwls99706/ros2-engineering-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 843776
+    },
+    {
+      "path": "data-batch-024/repositories/feichanggege/ecommerce-visual-copywriting-skill/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1368064
+    },
+    {
+      "path": "data-batch-024/repositories/tizzy916/humanities-writing-companion/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 397312
+    },
+    {
+      "path": "data-batch-024/repositories/Tencent/SkillHone/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 1060864
+    },
+    {
+      "path": "data-batch-024/repositories/wasp-lang/open-saas/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 85221376
+    },
+    {
+      "path": "data-batch-024/repositories/AIwithhassan/lets-scroll/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 159744
+    },
+    {
+      "path": "data-batch-024/repositories/GODGOD126/self-improving-for-codex/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 114688
+    },
+    {
+      "path": "data-batch-024/repositories/Worldbuilder013/HEXIS/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 4440064
+    },
+    {
+      "path": "data-batch-024/repositories/adriannoes/awesome-agentic-ai/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 580669440
+    },
+    {
+      "path": "data-batch-024/repositories/fivetaku/claude-office-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 282624
+    },
+    {
+      "path": "data-batch-024/repositories/skillmds/skillmd/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 7700480
+    },
+    {
+      "path": "data-batch-024/repositories/LukeRenton/explore-claude-code/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 536576
+    },
+    {
+      "path": "data-batch-024/repositories/LOGIN-TB/claude-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 323584
+    },
+    {
+      "path": "data-batch-024/repositories/frankxai/awesome-hermes-agent-skills/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 286720
+    },
+    {
+      "path": "data-batch-025/repositories/FredAntB/Spec-Driven-Development/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 184320
+    },
+    {
+      "path": "data-batch-025/repositories/qiye45/wechatDownload/.cache",
+      "bare_repositories": 1,
+      "allocated_bytes": 105046016
+    }
+  ]
+}
