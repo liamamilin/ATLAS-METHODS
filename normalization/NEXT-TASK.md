@@ -17,3 +17,5 @@
 交付可重复运行的批转换命令、实际记录、成功/失败/待处理数量、几条可读结果、主要内容问题以及可取得的用量记录。完成后提交必要代码和可公开结果并推送，原文/令牌/缓存不上传。
 
 本项任务的完成标志是模型实际产出了可用记录，不是只写完一个调用接口。`batch_convert.py` 现已实现，复用 OpenCode 中的 Open Design 连接；第 001 批实际结果和用量见 `data/normalized/batch-001/report.json`，续跑命令见本目录 README。后续继续使用显式来源版本清单处理未转换材料，不重新设计 Schema；本批的失败与待处理以实际报告为准。
+
+全队列已由 `run_corpus.py` 启动，冻结清单为 `batches/full-001.queue.jsonl`。先查看本机 `data/normalized/full-001/progress.json`、`runtime.json` 和 `worker.log`，确认已有进程状态；若已退出，运行 `python3 -u normalization/run_corpus.py` 继续。不要并发启动同一队列，不重采、不刷新版本，不重复转换原 40 条或已保存的新结果。当前可公开检查点见 `batches/full-001.report.md`，正文与原响应仍在本机持久目录。

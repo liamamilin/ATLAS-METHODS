@@ -68,7 +68,38 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 - `report.json`：累计结果、当前调用的跳过/尝试数和可取得的用量。OpenCode 的 cost 只是其报告的估计；0 不证明免费，未核实账单费用保持未知。reasoning/cache 可能与 input/output 重叠，不机械相加。
 - `attempts/` 中的完整请求、原响应、事件、会话和 stderr：持久保留本地并由 `.gitignore` 排除，避免把请求内上游原文批量公开。
 
-每次转换启动独立临时 OpenCode Location，设置 cwd 与 PWD 一致，使用禁止全部工具操作的专用 primary agent，不加载本项目为编码任务。标准输入设为 DEVNULL，避免 OpenCode 将父进程 heredoc 追加给模型；允许正常首轮回复，避免 steps=1 触发强制总结，工具仍全部禁止。固定 CLI 会话标题，不要求辅助模型生成标题。没有运行上游命令、脚本或 hooks；不会让模型自行取文件或补造阅读范围。权限字段依据 [OpenCode permissions](https://opencode.ai/docs/permissions/)，实际配置加载及 JSON/用量解析另有回归测试。
+每次转换启动独立临时 OpenCode Location，设置 cwd 与 PWD 一致，使用禁止全部工具操作的专用 primary agent，不加载本项目为编码任务。短请求的标准输入设为 DEVNULL；超过 120,000 字节的长请求通过单独受控管道传入完整提示词，避免命令行参数长度限制，不截断入口，也不继承父进程 heredoc。允许正常首轮回复，避免 steps=1 触发强制总结，工具仍全部禁止。固定 CLI 会话标题，不要求辅助模型生成标题。没有运行上游命令、脚本或 hooks；不会让模型自行取文件或补造阅读范围。权限字段依据 [OpenCode permissions](https://opencode.ai/docs/permissions/)，实际配置加载及 JSON/用量解析另有回归测试。
+
+## 全语料连续分批
+
+`run_corpus.py` 是现有转换器的文件队列循环。冻结的 [full-001.queue.jsonl](batches/full-001.queue.jsonl) 包含剩余 55,663 个固定来源版本；已完成的 40 条从队列排除，实际结果文件可访问且结构核验通过后才复用。所有已保存原文共 55,703 条，历史 99 条未导出入口单独保留在 [unavailable.jsonl](batches/full-001.unavailable.jsonl)，不当作已转换。
+
+从项目根目录启动或在进程退出后继续同一队列：
+
+```bash
+python3 -u normalization/run_corpus.py
+```
+
+默认每批 25 条、4 个 worker，不设置批次数上限、不逐批等待确认。已完成批次复用，记录失败后继续后续批次；额度导致模型不可用时，保存 deferred/pending 并等待再试。重启的队列父进程会等待尚在运行的批转换子进程锁，避免重复在途请求。
+
+首轮结束后，对失败项再执行一次有限重试（成功项仍跳过）：
+
+```bash
+python3 -u normalization/run_corpus.py --retry-failed
+```
+
+新批次只从已保存清单解析入口直接引用的本地 Markdown/文本指南，不递归爬取整个包。选择至多四份、合计 40,000 字节的直接指南，优先显式提到的编译指南；未提供路径及原因写入冻结 selection 和模型输入备注，核心缺口由模型按现有约定简短说明。原入口保持完整；不声称整包覆盖或方法有效。
+
+`data/normalized/full-001/batches/` 中的原响应、结果和详细错误均持久保留本机，不因处理完成就全部公开。来源许可未知不阻止本地处理；Git 只交付不含正文的来源索引、进度检查点及剩余清单。模型对照样例不算新增来源。
+
+```bash
+# 不调用模型，对当前已实际保存的结果生成不可变检查点
+python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
+```
+
+检查点位于 `data/normalized/full-001/checkpoints/`。index 中 record_path、剩余项 detail_path 均相对于该检查点目录，指向真实本机文件；摘要核对原索引 source、记录结构和保留的模型响应。remaining 包含尚未成功的来源（包括失败、在途、未开始及额度延期）；快照数字带 as_of 时间，后台工作继续时不会假装它是实时值。用量只累计该次全语料运行的新请求，不重复计算复用 40 条的历史用量，未返回请求不虚构 token 或费用。
+
+实时进度和日志在本机 `data/normalized/full-001/progress.json`、`runtime.json`、`worker.log`。进程仍运行时不要重复启动；若退出，原命令续跑。这里只持续执行已授权的全队列任务，没有另建数据库、网站或定时服务。
 
 ## Open Design 优先与免费回退
 

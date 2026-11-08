@@ -1,0 +1,14 @@
+{
+  "checkpoint": "20261108-001",
+  "index_records_verified": 83,
+  "remaining_identities_verified": 55620,
+  "all_record_paths_accessible": true,
+  "record_sha256_matches": true,
+  "source_mapping_matches_collection": true,
+  "successes_and_remaining_disjoint": true,
+  "baseline_files_unchanged_in_git": true,
+  "snapshot_schema_and_model_response_equality_checked": true,
+  "batch_0001_attempts_all_precede_parent_restart": true,
+  "schema_check_suite": "87 cases plus 1000 interval oracle cases passed",
+  "unit_tests": "35 passed"
+}

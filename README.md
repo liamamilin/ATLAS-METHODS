@@ -9,6 +9,7 @@
 - 已接入：Schema、目标优先提示词、检查器，以及复用已有 OpenCode/Open Design 连接的可续跑批转换器。
 - 真实模型批次：[第 001 批状态与用量](data/normalized/batch-001/report.json)、[转换记录](data/normalized/batch-001/records.jsonl)；逐条保存，成功跳过，失败显式重试。
 - 2026-11-07 首批实际处理 7 个仓库的 40 条入口：保存 40 条，失败 0 条，待处理 0。默认 Open Design 优先，额度限制时回退到实测 Go 免费模型、恢复后切回；[切换策略及实测报告](normalization/batches/provider-check-001.report.md)。这些记录仍为未完整审阅、未执行。
+- 2026-11-08 已启动剩余 55,663 条的全队列连续分批转换，复用原 40 条；[本轮检查点与运行报告](normalization/batches/full-001.report.md)。新结果和完整响应留在本机持久目录，公开索引保留来源、哈希和可取回路径。
 - 人工样例是格式和内容参考，不是自动转换结果或方法有效性的证明。
 
 编码 Agent 先读 [AGENTS.md](AGENTS.md)，然后执行 [批转换任务](normalization/NEXT-TASK.md)。
@@ -42,6 +43,12 @@ python3 normalization/batch_convert.py \
 ```
 
 完整请求、原响应和会话留在本机，Git 只保存可公开派生记录、输入范围、用量元数据及报告；不执行上游 Skill。
+
+全队列进程退出后的续跑命令（进程仍运行时无需重复启动）：
+
+```bash
+python3 -u normalization/run_corpus.py
+```
 
 ## 采集成果保持不变
 

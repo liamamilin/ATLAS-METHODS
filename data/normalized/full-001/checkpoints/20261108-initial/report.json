@@ -1,0 +1,33 @@
+{
+  "as_of": "2026-11-08T07:11:28.676633+00:00",
+  "corpus_saved_entries": 55703,
+  "reused": 40,
+  "new_succeeded": 28,
+  "total_succeeded": 68,
+  "remaining": 55635,
+  "failed": 1,
+  "pending_including_active_or_deferred": 55634,
+  "usage_this_run": {
+    "sessions": 33,
+    "sessions_without_usage": 0,
+    "tokens": {
+      "input": 432709,
+      "output": 233991,
+      "reasoning": 478174,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "by_model": {
+      "open-design/deepseek-v4.1-flash": {
+        "input": 432709,
+        "output": 233991,
+        "reasoning": 478174,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "billing_cost": null
+  },
+  "record_storage": "Local persistent files; record_path and detail_path are relative to this checkpoint directory. Public index contains provenance, hashes and paths only.",
+  "queue_sha256": "40c76fcfc2471e9cc7941427e5b818501f827d2482e3a42e726ba0fb2c65360e"
+}

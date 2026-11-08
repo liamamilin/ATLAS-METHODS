@@ -11,3 +11,8 @@
 /.provider-routing-state.json
 /.provider-routing-state.lock
 /.provider-routing-state.tmp
+# Corpus run bodies and full diagnostics remain local until separately licensed.
+/full-*/batches/
+/full-*/worker.log
+/full-*/progress.json
+/full-*/runtime.json

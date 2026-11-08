@@ -175,7 +175,11 @@ class BatchTests(unittest.TestCase):
 import json, os, sys
 from pathlib import Path
 assert Path(os.environ['PWD']).resolve() == Path.cwd().resolve()
-assert sys.stdin.read() == ''
+incoming = sys.stdin.read()
+if sys.argv[1]=='run' and sys.argv[-1]=='open-design/fixture':
+    assert incoming == 'L' * 130001
+else:
+    assert incoming == ''
 c=json.loads(Path('opencode.json').read_text())
 assert c['agents']['atlas-normalizer']['permissions'][-1] == {'action':'*','resource':'*','effect':'deny'}
 assert c['agents']['atlas-normalizer']['steps'] == 2
@@ -205,6 +209,11 @@ else:
             self.assertEqual(reply['finish'], 'stop')
             self.assertNotIn('transport_error', reply)
             self.assertTrue((attempt / 'events.jsonl').exists())
+            large = root / 'attempt-large'
+            large.mkdir()
+            large_reply = OpenCodeClient(str(executable), 'open-design/fixture', 10).call('L' * 130001, large)
+            self.assertNotIn('transport_error', large_reply)
+            self.assertEqual(large_reply['input_transport'], 'controlled_stdin')
 
     def test_unexpected_single_item_error_does_not_stop_later_items(self):
         class OnceBroken(FakeClient):
