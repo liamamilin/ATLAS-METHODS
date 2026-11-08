@@ -7,7 +7,9 @@ from unittest.mock import patch
 
 import test_batch_convert as fixtures
 from batch_convert import run_batch
-from model_routing import ModelDeferred, QuotaRouter, content_filter_signal, limit_signal, verify_free_model
+from model_routing import (
+    ModelDeferred, QuotaRouter, connection_reset_signal, content_filter_signal, limit_signal, verify_free_model,
+)
 
 
 PRIMARY = 'open-design/deepseek-v4.1-flash'
@@ -138,6 +140,27 @@ class RoutingTests(unittest.TestCase):
             self.assertTrue(router.call('fixture',root)['input_error'])
             self.assertTrue(router.call('fixture',root)['timed_out'])
             self.assertEqual(self.calls,[PRIMARY,PRIMARY])
+
+    def test_timeout_after_connection_reset_defers_on_free_fallback(self):
+        events = [
+            {'type': 'step_start'},
+            {'type': 'error', 'error': {
+                'type': 'unknown',
+                'message': 'Transport: ECONNRESET: The socket connection was closed unexpectedly.',
+            }},
+        ]
+        self.assertFalse(connection_reset_signal([{'type': 'text', 'error': events[-1]['error']}]))
+        reply = {'transport_error': 'OpenCode timeout', 'timed_out': True,
+                 'connection_reset': connection_reset_signal(events)}
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            router = self.router(root, {PRIMARY: [limited()], FREE: [reply]})
+            router.call('fixture', root)
+            with self.assertRaises(ModelDeferred) as caught:
+                router.call('fixture', root)
+            self.assertEqual(caught.exception.model, FREE)
+            self.assertTrue(caught.exception.reply['connection_reset'])
+            self.assertEqual(self.calls, [PRIMARY, FREE])
 
     def test_actual_hyphenated_content_filter_is_source_specific_not_quota_or_global_defer(self):
         event={'type':'error','error':{'type':'provider.content-filter','message':'Provider blocked the response'}}

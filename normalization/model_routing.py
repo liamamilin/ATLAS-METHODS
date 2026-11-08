@@ -26,6 +26,12 @@ def content_filter_signal(events):
                for e in events)
 
 
+def connection_reset_signal(events):
+    return any(e.get('type') == 'error' and isinstance(e.get('error'), dict) and
+               str(e['error'].get('message', '')).startswith('Transport: ECONNRESET:')
+               for e in events)
+
+
 def limit_signal(events):
     """Only provider quota/rate errors, never schema/auth/context errors."""
     for event in events:
@@ -193,7 +199,8 @@ class QuotaRouter:
         if model == self.fallback and reply.get('limit'):
             raise ModelDeferred('Free fallback limited; waiting for model availability', model, reply)
         if (reply.get('transport_error') and not reply.get('limit') and
-                not reply.get('timed_out') and not reply.get('input_error') and not reply.get('content_filtered')):
+                (not reply.get('timed_out') or reply.get('connection_reset')) and
+                not reply.get('input_error') and not reply.get('content_filtered')):
             # A provider/connection failure is not evidence that the Skill is
             # invalid. Pause the queue rather than fail thousands of sources.
             raise ModelDeferred('Model request unavailable; see retained events/stderr', model, reply)

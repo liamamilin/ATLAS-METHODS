@@ -23,7 +23,9 @@ import threading
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
 from export_response_schema import response_schema
-from model_routing import ModelDeferred, QuotaRouter, content_filter_signal, limit_signal, verify_free_model
+from model_routing import (
+    ModelDeferred, QuotaRouter, connection_reset_signal, content_filter_signal, limit_signal, verify_free_model,
+)
 
 HERE = Path(__file__).resolve().parent
 CONTENT_FILTER_MESSAGE = 'Provider blocked this source; retained refusal, no retry or alternate-model request'
@@ -283,6 +285,7 @@ class OpenCodeClient:
                      'input_transport': 'controlled_stdin' if piped else 'argv',
                      'limit': limit_signal(events),
                      'content_filtered': content_filter_signal(events),
+                     'connection_reset': connection_reset_signal(events),
                      'exit_code': proc.returncode, 'timed_out': timed_out,
                      'tool_events': [e.get('type') for e in events if 'tool' in e.get('type', '')]}
             error_text = '\n'.join(json.dumps(e.get('error', {})).lower() for e in events if e.get('type') == 'error')
