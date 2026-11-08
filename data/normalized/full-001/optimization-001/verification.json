@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-08T08:23:11.956470+00:00",
+  "preserved_records_unchanged": 158,
+  "global_config_unchanged": true,
+  "batch_0007_first_request_at": "2026-11-08T08:12:28.534097+00:00",
+  "batch_0006_finished_at": "2026-11-08T08:15:07.070277+00:00",
+  "cross_batch_overlap_observed": true,
+  "finished_attempts_with_mcp_disabled": 48,
+  "task_mcp_processes_observed": 0,
+  "schema_and_original_checker_unchanged": true,
+  "schema_tests": "87 plus 1000 interval oracle passed",
+  "related_unit_tests": "42 passed",
+  "checkpoint": "20261108-optimization-001",
+  "checkpoint_records_verified": 211,
+  "remaining_identities_verified": 55492,
+  "all_checkpoint_paths_and_sha256_match": true,
+  "successes_and_remaining_disjoint": true,
+  "first_50_retry_causes_verified": true
+}

@@ -70,9 +70,13 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 每次转换启动独立临时 OpenCode Location，设置 cwd 与 PWD 一致，使用禁止全部工具操作的专用 primary agent，不加载本项目为编码任务。短请求的标准输入设为 DEVNULL；超过 120,000 字节的长请求通过单独受控管道传入完整提示词，避免命令行参数长度限制，不截断入口，也不继承父进程 heredoc。允许正常首轮回复，避免 steps=1 触发强制总结，工具仍全部禁止。固定 CLI 会话标题，不要求辅助模型生成标题。没有运行上游命令、脚本或 hooks；不会让模型自行取文件或补造阅读范围。权限字段依据 [OpenCode permissions](https://opencode.ai/docs/permissions/)，实际配置加载及 JSON/用量解析另有回归测试。
 
+转换客户端通过 V2 `api config.get --standalone` 的配置来源列表，只提取 `mcp.servers` 名称；临时项目为这些名称写入 `disabled: true` 的完整惰性定义，不复制原 MCP 命令、环境或 provider 凭据。配置查询每个模型客户端缓存一次；原用户配置和模型连接不修改。覆盖形状遵循 [OpenCode MCP 配置](https://opencode.ai/docs/mcp-servers/#config)，真实 `mcp list` 与请求进程树均用于验证没有启动无用 MCP。配置形状未知时拒绝该次请求，不静默加载 MCP。请求 metadata 保留禁用名称。
+
+格式提示补充 JSON 重复键、顶层 `content/gaps` 和 `gaps.target` 数字数组索引的正反例；已有双行号要求继续保留。模型仍生成完整响应，失败仍经原 Schema/检查器拒绝并有限重试；程序不重写模型正文、修造 JSON 或放宽校验。
+
 ## 全语料连续分批
 
-`run_corpus.py` 是现有转换器的文件队列循环。冻结的 [full-001.queue.jsonl](batches/full-001.queue.jsonl) 包含剩余 55,663 个固定来源版本；已完成的 40 条从队列排除，实际结果文件可访问且结构核验通过后才复用。所有已保存原文共 55,703 条，历史 99 条未导出入口单独保留在 [unavailable.jsonl](batches/full-001.unavailable.jsonl)，不当作已转换。
+`run_corpus.py` 使用现有逐条转换、来源检查、保存与汇总函数，以一个有界线程池滚动处理文件队列。冻结的 [full-001.queue.jsonl](batches/full-001.queue.jsonl) 包含剩余 55,663 个固定来源版本；已完成的 40 条从队列排除，实际结果文件可访问且结构核验通过后才复用。所有已保存原文共 55,703 条，历史 99 条未导出入口单独保留在 [unavailable.jsonl](batches/full-001.unavailable.jsonl)，不当作已转换。
 
 从项目根目录启动或在进程退出后继续同一队列：
 
@@ -80,7 +84,9 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 python3 -u normalization/run_corpus.py --workers 10
 ```
 
-程序默认每批 25 条、4 个 worker；本机按用户要求在 2026-11-08 15:43 改为显式 `--workers 10`，续跑时保留此参数。不设置批次数上限、不逐批等待确认。已完成批次复用，记录失败后继续后续批次；额度导致模型不可用时，保存 deferred/pending 并等待再试。重启的队列父进程会等待尚在运行的批转换子进程锁，避免重复在途请求。
+程序默认每批 25 条、4 个 worker；本机按用户要求显式 `--workers 10`，续跑时保留此参数。25 条的批次只作为目录与保存单位，10 个 worker 跨批次共享；完成一条即补一条，旧批次慢任务未结束时也可开始下一批，不改变已冻结批次的来源归属。不设置批次数上限、不逐批等待确认。已完成批次复用，失败记录后继续。额度导致模型不可用时，保存 deferred/pending，暂停领取更多材料，等待后再试，不把整库快速写成 deferred。
+
+原批次目录、selection、state、records、attempts 与 report 继续沿用。首次交接会等待仍在运行的旧批转换子进程锁，复用其稍后写出的结果。新滚动进程收到 SIGTERM/SIGINT 后停止领取新任务，等待在途任务完成并保存，最后释放队列与批次锁；日常切换应等待这一过程退出后再续跑。成功结果缺失时不复用，保存成功文件而未更新 state 的中断可由原有恢复逻辑处理。
 
 首轮结束后，对失败项再执行一次有限重试（成功项仍跳过）：
 
@@ -99,7 +105,7 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 
 检查点位于 `data/normalized/full-001/checkpoints/`。index 中 record_path、剩余项 detail_path 均相对于该检查点目录，指向真实本机文件；摘要核对原索引 source、记录结构和保留的模型响应。remaining 包含尚未成功的来源（包括失败、在途、未开始及额度延期）；快照数字带 as_of 时间，后台工作继续时不会假装它是实时值。用量只累计该次全语料运行的新请求，不重复计算复用 40 条的历史用量，未返回请求不虚构 token 或费用。
 
-实时进度和日志在本机 `data/normalized/full-001/progress.json`、`runtime.json`、`worker.log`。进程仍运行时不要重复启动；若退出，原命令续跑。这里只持续执行已授权的全队列任务，没有另建数据库、网站或定时服务。
+实时进度和日志在本机 `data/normalized/full-001/progress.json`、`runtime.json`、`worker.log`。滚动版 progress 的 `batches` 同时包含已结束与当前打开批次，计数包含当前批次已保存的成功/失败；`active_batches` 可以有多个，`scheduler_run` 只统计本次进程新领取任务、完成数、峰值在途数与槽位占用。检查点仍独立校验实际文件，不靠这些运行计数判定已转换。进程仍运行时不要重复启动；若退出，原命令续跑。这里只持续执行已授权的全队列任务，没有另建数据库、网站或定时服务。
 
 ## Open Design 优先与免费回退
 

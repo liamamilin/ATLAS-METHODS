@@ -180,9 +180,15 @@ if sys.argv[1]=='run' and sys.argv[-1]=='open-design/fixture':
     assert incoming == 'L' * 130001
 else:
     assert incoming == ''
+if sys.argv[1:3]==['api','config.get']:
+    counter=Path(sys.argv[0]).parent/'config-queries'
+    counter.write_text(counter.read_text()+'query\\n' if counter.exists() else 'query\\n')
+    print(json.dumps([{'info':{'mcp':{'servers':{'godot-ai':{'type':'remote','url':'https://example.invalid'},'blender':{}}}}}]))
+    sys.exit(0)
 c=json.loads(Path('opencode.json').read_text())
 assert c['agents']['atlas-normalizer']['permissions'][-1] == {'action':'*','resource':'*','effect':'deny'}
 assert c['agents']['atlas-normalizer']['steps'] == 2
+assert c['mcp']['servers'] == {name:{'type':'local','command':['false'],'disabled':True} for name in ['blender','godot-ai']}
 if sys.argv[1]=='run':
     print(json.dumps({'type':'text','sessionID':'fixture-session','part':{'text':'{"content":{},"gaps":[]}'}}))
 else:
@@ -200,7 +206,8 @@ else:
                 os.dup2(reader, 0)
                 os.close(reader)
                 with patch.dict('os.environ', {'PWD': '/a/different/project'}):
-                    reply = OpenCodeClient(str(executable), 'open-design/fixture', 10).call('fixture prompt', attempt)
+                    client = OpenCodeClient(str(executable), 'open-design/fixture', 10)
+                    reply = client.call('fixture prompt', attempt)
             finally:
                 os.dup2(saved, 0)
                 os.close(saved)
@@ -209,11 +216,37 @@ else:
             self.assertEqual(reply['finish'], 'stop')
             self.assertNotIn('transport_error', reply)
             self.assertTrue((attempt / 'events.jsonl').exists())
+            self.assertEqual(reply['disabled_mcp_servers'], ['blender', 'godot-ai'])
             large = root / 'attempt-large'
             large.mkdir()
-            large_reply = OpenCodeClient(str(executable), 'open-design/fixture', 10).call('L' * 130001, large)
+            large_reply = client.call('L' * 130001, large)
             self.assertNotIn('transport_error', large_reply)
             self.assertEqual(large_reply['input_transport'], 'controlled_stdin')
+            self.assertEqual((root/'config-queries').read_text().splitlines(), ['query'])
+
+    def test_unknown_mcp_configuration_fails_before_model_request(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);executable=root/'fake-opencode'
+            executable.write_text("#!/usr/bin/env python3\nimport sys\nassert sys.argv[1:3]==['api','config.get']\nprint('{}')\n")
+            executable.chmod(0o755);attempt=root/'attempt';attempt.mkdir()
+            with self.assertRaisesRegex(ValueError,'config.get format'):
+                OpenCodeClient(str(executable),'fixture').call('fixture',attempt)
+            self.assertFalse((attempt/'events.jsonl').exists())
+
+    def test_pointer_format_retry_retains_rejected_response_and_does_not_change_schema(self):
+        with tempfile.TemporaryDirectory() as t:
+            args, rows, items = self.fixture(Path(t), 1)
+            bad = response()
+            bad['gaps'] = [{'target':'/content/tasks/my-task/steps', 'reason':'not_stated', 'detail':'Fixture gap'}]
+            client = FakeClient([bad, response()])
+            result = run_batch(args, client)
+            self.assertEqual(result['succeeded'], 1)
+            self.assertEqual(len(client.calls), 2)
+            self.assertIn('/content/tasks/0/steps', client.calls[0])
+            self.assertIn('不得出现重复键', client.calls[0])
+            self.assertIn('gap_target_missing', client.calls[1])
+            rejected = args.out/'attempts'/key_of(items[0])/'001/response.txt'
+            self.assertEqual(json.loads(rejected.read_text()), bad)
 
     def test_unexpected_single_item_error_does_not_stop_later_items(self):
         class OnceBroken(FakeClient):

@@ -18,6 +18,7 @@ import shutil
 import signal
 import subprocess
 import tempfile
+import threading
 
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
@@ -151,6 +152,10 @@ def build_prompt(row, blocks, schema, language, feedback='', read_notes=None):
             '\n只返回一个完整 JSON 对象 content/gaps，不加 Markdown 围栏。不要调用任何工具。'
             '\n引用使用下面真实仓库路径和 LF 行号，不能引用未提供的文件。'
             '\nevidence 使用行号时必须同时写 line_start 和 line_end（单行也一样）；gaps 只放在顶层。'
+            '\nJSON 对象内不得出现重复键；content 和 gaps 在顶层各出现一次，content 内不得放 gaps。'
+            '\ngaps[].target 是完整记录的 JSON Pointer：数组使用从 0 开始的数字索引，'
+            '例如 /content/tasks/0/steps；不能写任务 id（如 /content/tasks/my-task/steps）。'
+            '只指向本次实际生成且存在的字段；任务未生成或无法定位时用 /content/tasks。'
             '\n行号不得超过 source_line_count，也不得越出 delivered_ranges；无法细定位时可引用材料中真实章节标题，不编造行界。'
             '\n概括需保留具体操作、条件、阈值与重要限制；不要为凑齐字段补步骤。'
             '\n以理解核心机制为目标，合并重复动作，不逐段翻译成长篇清单；步骤可继承任务证据。'
@@ -170,6 +175,29 @@ class OpenCodeClient:
         self.executable = executable
         self.model = model
         self.timeout = timeout
+        self._mcp_lock = threading.Lock()
+        self._mcp_servers = None
+
+    def disabled_mcp_servers(self, work, env):
+        # Query configuration only, never retain provider credentials or copy
+        # global commands/environment into our temporary config. V2 config.get
+        # returns configuration sources; the canonical MCP key is servers.
+        with self._mcp_lock:
+            if self._mcp_servers is None:
+                result = subprocess.run([self.executable, 'api', 'config.get', '--standalone'],
+                                        cwd=work, env=env, stdin=subprocess.DEVNULL,
+                                        capture_output=True, timeout=30)
+                if result.returncode:
+                    raise ValueError('Cannot inspect MCP configuration; no model request started')
+                sources = strict_json_loads(result.stdout.decode('utf-8'))
+                if not isinstance(sources, list):
+                    raise ValueError('Unexpected OpenCode config.get format')
+                names = set()
+                for source in sources:
+                    mcp = source.get('info', {}).get('mcp', {})
+                    names.update(mcp.get('servers', {}))
+                self._mcp_servers = sorted(names)
+            return self._mcp_servers
 
     def call(self, prompt, attempt):
         # A fresh private session prevents conversation carryover. Global model
@@ -181,7 +209,12 @@ class OpenCodeClient:
             # project's configuration. Keep both directory values in agreement.
             env = os.environ.copy()
             env['PWD'] = str(work)
+            disabled = self.disabled_mcp_servers(work, env)
             write_json(work / 'opencode.json', {
+                # Project config replaces each server object in V2. These
+                # inert disabled definitions never launch or copy global MCPs.
+                'mcp': {'servers': {name: {'type': 'local', 'command': ['false'], 'disabled': True}
+                                    for name in disabled}},
                 'agents': {'atlas-normalizer': {
                     'description': 'Convert supplied research text; no tools',
                     'mode': 'primary',
@@ -245,6 +278,7 @@ class OpenCodeClient:
             (attempt / 'response.txt').write_text(text, encoding='utf-8')
             # Preserve usage even when a request returned bad JSON or timed out.
             reply = {'text': text, 'session_id': sid, 'usage': usage, 'finish': finish, 'model': self.model,
+                     'disabled_mcp_servers': disabled,
                      'input_transport': 'controlled_stdin' if piped else 'argv',
                      'limit': limit_signal(events),
                      'exit_code': proc.returncode, 'timed_out': timed_out,
@@ -402,7 +436,8 @@ def summarize(args, selection, states, invocation):
     return report
 
 
-def run_batch(args, client=None):
+def prepare_run(args):
+    """Shared resume/identity checks for single batches and the rolling queue."""
     args.index = args.index.resolve()
     args.out = args.out.resolve()
     args.out.mkdir(parents=True, exist_ok=True)
@@ -439,41 +474,63 @@ def run_batch(args, client=None):
         if args.limit is None or len(todo) < args.limit:
             todo.append((item, row))
     write_json(state_path, states)
-    if client is None:
-        routing = getattr(args, 'routing_config', None)
-        config = strict_json_loads(routing.read_text()) if routing else None
-        if config and config['primary'] == args.model:
-            client = QuotaRouter(config, args.routing_state,
-                                 lambda model: OpenCodeClient(args.opencode, model, args.timeout),
-                                 lambda model: verify_free_model(args.opencode, model),
-                                 probe_timeout=args.timeout + 60)
-            args.routing_policy = {**config, 'state_path': str(args.routing_state)}
-        else:
-            client = OpenCodeClient(args.opencode, args.model, args.timeout)
+    return {'args': args, 'selection': selection, 'states': states, 'invocation': invocation,
+            'schema': schema, 'contract': contract, 'todo': todo}
+
+
+def make_client(args):
+    routing = getattr(args, 'routing_config', None)
+    config = strict_json_loads(routing.read_text()) if routing else None
+    clients, lock = {}, threading.Lock()
+    def factory(model):
+        with lock:
+            if model not in clients:
+                clients[model] = OpenCodeClient(args.opencode, model, args.timeout)
+            return clients[model]
+    if config and config['primary'] == args.model:
+        args.routing_policy = {**config, 'state_path': str(args.routing_state)}
+        return QuotaRouter(config, args.routing_state, factory,
+                           lambda model: verify_free_model(args.opencode, model),
+                           probe_timeout=args.timeout + 60)
+    return factory(args.model)
+
+
+def accept_future(context, item, future):
+    args, states, invocation = context['args'], context['states'], context['invocation']
+    try:
+        state = future.result()
+    except Exception as exc:
+        state = {'collection_id': item['collection_id'], 'commit_sha': item['commit_sha'],
+                 'key': key_of(item), 'state': 'failed', 'failure_stage': 'runner',
+                 'error': f'{type(exc).__name__}: {exc}'[:5000], 'updated_at': now()}
+    states[key_of(item)] = state
+    invocation['attempted_items'] += 1
+    write_json(args.out / 'state.json', states)
+    report = summarize(args, context['selection'], states, invocation)
+    print(json.dumps({'collection_id': item['collection_id'], 'state': state['state'],
+                      'succeeded': report['succeeded'], 'failed': report['failed'], 'pending': report['pending']}, ensure_ascii=False), flush=True)
+    return state, report
+
+
+def finish_run(context):
+    context['invocation']['finished_at'] = now()
+    return summarize(context['args'], context['selection'], context['states'], context['invocation'])
+
+
+def run_batch(args, client=None):
+    context = prepare_run(args)
+    client = client or make_client(args)
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(convert_one, item, row, args, client, schema, contract,
-                               states.get(key_of(item), {}).get('review_feedback') or
-                               states.get(key_of(item), {}).get('error', '')): item
-                   for item, row in todo}
+        futures = {pool.submit(convert_one, item, row, args, client, context['schema'], context['contract'],
+                               context['states'].get(key_of(item), {}).get('review_feedback') or
+                               context['states'].get(key_of(item), {}).get('error', '')): item
+                   for item, row in context['todo']}
         for future in as_completed(futures):
-            item = futures[future]
-            try:
-                state = future.result()
-            except Exception as exc:
-                state = {'collection_id': item['collection_id'], 'commit_sha': item['commit_sha'],
-                         'key': key_of(item), 'state': 'failed', 'failure_stage': 'runner',
-                         'error': f'{type(exc).__name__}: {exc}'[:5000], 'updated_at': now()}
-            states[key_of(item)] = state
-            invocation['attempted_items'] += 1
-            write_json(state_path, states)
-            report = summarize(args, selection, states, invocation)
-            print(json.dumps({'collection_id': item['collection_id'], 'state': state['state'],
-                              'succeeded': report['succeeded'], 'failed': report['failed'], 'pending': report['pending']}, ensure_ascii=False), flush=True)
-    invocation['finished_at'] = now()
-    return summarize(args, selection, states, invocation)
+            accept_future(context, futures[future], future)
+    return finish_run(context)
 
 
-def main():
+def build_parser():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--index', type=Path, default=HERE.parent / 'data/cumulative/skills.jsonl.gz')
     p.add_argument('--selection', type=Path, required=True)
@@ -490,6 +547,11 @@ def main():
     p.add_argument('--max-attempts', type=int, default=2)
     p.add_argument('--timeout', type=int, default=240)
     p.add_argument('--retry-failed', action='store_true')
+    return p
+
+
+def main():
+    p = build_parser()
     args = p.parse_args()
     if args.workers < 1 or not 1 <= args.max_attempts <= 3 or (args.limit is not None and args.limit < 0):
         p.error('workers >= 1, max-attempts 1..3, limit >= 0 required')

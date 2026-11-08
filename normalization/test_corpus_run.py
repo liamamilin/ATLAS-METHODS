@@ -9,11 +9,23 @@ import threading
 import unittest
 
 import test_batch_convert as fixtures
-from batch_convert import key_of, run_batch, write_json, write_jsonl
-from run_corpus import baseline_records, plan_references, prepare_batch, read_queue, snapshot, wait_for_batch
+from batch_convert import build_parser, key_of, run_batch, write_json, write_jsonl
+from run_corpus import baseline_records, plan_references, prepare_batch, read_queue, run, snapshot, wait_for_batch
+from model_routing import ModelDeferred
 
 
 class CorpusTests(unittest.TestCase):
+    def rolling_fixture(self, root, count=7, workers=2):
+        args, rows, items = fixtures.BatchTests().fixture(root, count)
+        write_json(args.selection, {'items':items[:1]})
+        run_batch(args, fixtures.FakeClient())
+        queue = root/'queue.jsonl'
+        write_jsonl(queue, items[1:])
+        full = root/'full'
+        full.mkdir()
+        return argparse.Namespace(out=full, queue=queue, index=args.index, baseline=args.out,
+                                  batch_size=2, workers=workers, retry_failed=False, max_batches=None)
+
     def setup_outputs(self, root, replies=None):
         args, rows, items = fixtures.BatchTests().fixture(root, 3)
         all_out = args.out
@@ -114,6 +126,103 @@ class CorpusTests(unittest.TestCase):
                 fcntl.flock(active,fcntl.LOCK_UN)
                 thread.join(timeout=2)
                 self.assertTrue(ready.is_set())
+
+    def test_rolling_fills_next_batch_before_slow_previous_task_and_caps_concurrency(self):
+        class Client(fixtures.FakeClient):
+            def __init__(self):
+                super().__init__(); self.next_started=threading.Event(); self.lock=threading.Lock()
+                self.active=0;self.peak=0;self.overlap=False
+            def call(self, prompt, attempt):
+                identity=json.loads((attempt/'metadata.json').read_text())['source']['collection_id']
+                with self.lock:self.active+=1;self.peak=max(self.peak,self.active)
+                try:
+                    if identity=='fixture-1':
+                        if not self.next_started.wait(3):raise RuntimeError('Batch barrier left a free worker idle')
+                    if identity=='fixture-3':
+                        self.overlap=True;self.next_started.set()
+                    return super().call(prompt,attempt)
+                finally:
+                    with self.lock:self.active-=1
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t));client=Client();run(args,client)
+            self.assertTrue(client.overlap);self.assertLessEqual(client.peak,2)
+            p=json.loads((args.out/'progress.json').read_text())
+            self.assertEqual((p['new_succeeded'],p['failed']),(6,0))
+            self.assertEqual(p['scheduler_run']['max_in_flight'],2)
+            previous={str(p):p.read_bytes() for p in args.out.glob('batches/*/records/*.json')}
+            resumed=fixtures.FakeClient();run(args,resumed)
+            self.assertEqual(resumed.calls,[])
+            self.assertTrue(all(Path(p).read_bytes()==data for p,data in previous.items()))
+
+    def test_rolling_failure_continues_and_only_explicit_retry_revisits_it(self):
+        class Client(fixtures.FakeClient):
+            def call(self,prompt,attempt):
+                identity=json.loads((attempt/'metadata.json').read_text())['source']['collection_id']
+                if identity=='fixture-1':
+                    (attempt/'response.txt').write_text('invalid')
+                    return {'text':'invalid','model':'fixture','finish':'stop','tool_events':[]}
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t),count=5);run(args,Client())
+            p=json.loads((args.out/'progress.json').read_text())
+            self.assertEqual((p['new_succeeded'],p['failed']),(3,1))
+            resumed=fixtures.FakeClient();run(args,resumed);self.assertEqual(resumed.calls,[])
+            args.retry_failed=True;retry=fixtures.FakeClient();run(args,retry)
+            self.assertEqual(len(retry.calls),1)
+            self.assertEqual(json.loads((args.out/'progress.json').read_text())['new_succeeded'],4)
+
+    def test_graceful_stop_drains_in_flight_and_resume_preserves_saved_results(self):
+        stop=threading.Event();both=threading.Barrier(2)
+        class Client(fixtures.FakeClient):
+            def call(self,prompt,attempt):
+                both.wait(timeout=3);stop.set()
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t));client=Client();run(args,client,stop)
+            p=json.loads((args.out/'progress.json').read_text())
+            self.assertEqual(p['status'],'stopped');self.assertEqual(len(client.calls),2)
+            saved={str(p):p.read_bytes() for p in args.out.glob('batches/*/records/*.json')}
+            resumed=fixtures.FakeClient();run(args,resumed)
+            self.assertEqual(len(resumed.calls),4)
+            self.assertTrue(all(Path(p).read_bytes()==data for p,data in saved.items()))
+
+    def test_deferred_item_remains_pending_then_resumes_without_losing_other_sources(self):
+        class Client(fixtures.FakeClient):
+            first=True
+            def call(self,prompt,attempt):
+                if self.first:
+                    self.first=False
+                    raise ModelDeferred('fixture free fallback unavailable','fixture')
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t),count=3,workers=1);run(args,Client(),deferred_delay=.01)
+            p=json.loads((args.out/'progress.json').read_text())
+            self.assertEqual((p['new_succeeded'],p['failed']),(2,0))
+            self.assertEqual(p['scheduler_run']['deferred'],1)
+
+    def test_rolling_handoff_waits_for_old_batch_and_does_not_duplicate_its_calls(self):
+        with tempfile.TemporaryDirectory() as t:
+            args=self.rolling_fixture(Path(t),count=3,workers=1)
+            items=read_queue(args.queue);directory=args.out/'batches/0001'
+            selection=prepare_batch(items,args.index,directory)
+            finished=threading.Event();client=fixtures.FakeClient();errors=[]
+            def resume():
+                try:run(args,client)
+                except BaseException as exc:errors.append(exc)
+                finally:finished.set()
+            with (directory/'.run.lock').open('a') as old:
+                fcntl.flock(old,fcntl.LOCK_EX)
+                thread=threading.Thread(target=resume);thread.start()
+                self.assertFalse(finished.wait(.05));self.assertEqual(client.calls,[])
+                # The old surviving batch publishes its actual results while
+                # the resumed queue is waiting for the same directory lock.
+                batch_args=build_parser().parse_args(['--index',str(args.index),'--selection',str(selection),'--out',str(directory)])
+                run_batch(batch_args,fixtures.FakeClient())
+                fcntl.flock(old,fcntl.LOCK_UN)
+                thread.join(timeout=3)
+            self.assertTrue(finished.is_set());self.assertEqual(errors,[])
+            self.assertEqual(client.calls,[])
+            self.assertEqual(json.loads((args.out/'progress.json').read_text())['new_succeeded'],2)
 
 
 if __name__=='__main__':unittest.main()

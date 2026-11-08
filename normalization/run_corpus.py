@@ -4,7 +4,8 @@ New record bodies stay local; snapshots publish provenance/paths and progress.
 No upstream commands run and no source is refreshed or semantically deduplicated.
 """
 import argparse
-from collections import Counter
+from collections import Counter, deque
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 import fcntl
 import hashlib
 import json
@@ -12,12 +13,15 @@ import os
 from pathlib import Path, PurePosixPath
 import posixpath
 import re
-import subprocess
+import signal
 import sys
+import threading
 import time
 from urllib.parse import unquote
 
-from batch_convert import HERE, key_of, load_selection, now, selected_rows, source_of, write_json, write_jsonl
+from batch_convert import (HERE, accept_future, build_parser, convert_one, finish_run, key_of,
+                           load_selection, make_client, now, prepare_run, selected_rows,
+                           source_of, summarize, write_json, write_jsonl)
 from check_record import check_record, strict_json_loads
 
 BASELINE = HERE.parent / 'data/normalized/batch-001'
@@ -231,63 +235,154 @@ def snapshot(args):
     return report
 
 
-def run(args):
+def run(args, client=None, stop_event=None, deferred_delay=300):
+    """One bounded pool spans the existing batch directories; no batch barrier.
+
+    The main thread alone publishes each batch's state/report. Directory locks
+    still protect old surviving batch subprocesses and independent CLI runs.
+    SIGTERM drains in-flight conversions before releasing locks.
+    """
     queue = read_queue(args.queue)
     baseline = baseline_records(args.baseline)
     baseline_ids = {(r['source']['collection_id'], r['source']['commit_sha']) for _,r in baseline}
     if baseline_ids & {(i['collection_id'],i['commit_sha']) for i in queue}:
         raise ValueError('Frozen queue includes an already completed baseline version')
     progress_path = args.out / 'progress.json'
-    progress = json.loads(progress_path.read_text()) if progress_path.exists() else {'batches': {}}
-    write_json(args.out / 'runtime.json', {'pid': os.getpid(), 'started_at': now(), 'command': sys.argv})
-    for n, start in enumerate(range(0, len(queue), args.batch_size), 1):
+    progress = {'batches': {}}
+    stop_event = stop_event or threading.Event()
+    write_json(args.out / 'runtime.json', {'pid': os.getpid(), 'started_at': now(), 'command': sys.argv,
+                                          'scheduler': 'rolling', 'workers': args.workers})
+    contexts, ready, futures = {}, deque(), {}
+    next_batch, exhausted, retry_at = 1, False, None
+    stats = {'scheduled': 0, 'finished': 0, 'succeeded': 0, 'failed': 0, 'deferred': 0,
+             'occupied_worker_seconds': 0.0, 'max_in_flight': 0}
+    started = None
+
+    def publish(status='running'):
+        elapsed = time.monotonic() - started if started is not None else 0
+        occupied = stats['occupied_worker_seconds'] + sum(time.monotonic()-v[3] for v in futures.values())
+        progress.update(status=status, scheduler='rolling', workers=args.workers, updated_at=now(),
+                        active_batch=min(contexts) if contexts else None, active_batches=sorted(contexts),
+                        completed_batches=sum(b['pending'] == 0 for b in progress['batches'].values()),
+                        new_succeeded=sum(b['succeeded'] for b in progress['batches'].values()),
+                        failed=sum(b['failed'] for b in progress['batches'].values()),
+                        scheduler_run={**stats, 'elapsed_seconds': elapsed, 'in_flight': len(futures),
+                                       'worker_occupation_ratio': occupied/(elapsed*args.workers) if elapsed else 0})
+        progress['remaining'] = len(queue) - progress['new_succeeded']
+        write_json(progress_path, progress)
+
+    def save_report(n, report):
+        progress['batches'][str(n)] = {k: report[k] for k in ('selected', 'succeeded', 'failed', 'pending')}
+
+    def close_if_finished(n):
+        context = contexts[n]
+        if context['active'] == 0 and context['unscheduled'] == 0 and not context['deferred']:
+            save_report(n, finish_run(context))
+            context['lock'].close()
+            del contexts[n]
+
+    def open_batch(n):
+        nonlocal client
+        start = (n-1)*args.batch_size
         directory = args.out / 'batches' / f'{n:04}'
         selection = prepare_batch(queue[start:start+args.batch_size], args.index, directory)
         report_path = directory / 'report.json'
-        while True:
-            progress.update(status='waiting_for_batch_lock', active_batch=n, updated_at=now())
-            write_json(progress_path, progress)
-            wait_for_batch(directory)
+        lock = (directory / '.run.lock').open('a')
+        try:
+            publish('waiting_for_batch_lock')
+            fcntl.flock(lock, fcntl.LOCK_EX)
             old = json.loads(report_path.read_text()) if report_path.exists() else None
-            # Completed batches (including recorded failures) are checkpoints.
-            # Individual records remain available for explicit later retry.
             state_path = directory / 'state.json'
             saved = json.loads(state_path.read_text()) if state_path.exists() else {}
             available = sum(s.get('state') == 'succeeded' and (directory / s['record']).is_file()
                             for s in saved.values())
             if old and old['pending'] == 0 and available == old['succeeded'] and (not args.retry_failed or old['failed'] == 0):
-                report = old
-                break
-            progress.update(status='running', active_batch=n, updated_at=now())
-            write_json(progress_path, progress)
-            command = [sys.executable, '-u', str(HERE / 'batch_convert.py'), '--selection', str(selection),
-                       '--out', str(directory), '--index', str(args.index), '--workers', str(args.workers)]
+                save_report(n, old)
+                lock.close()
+                return
+            command = ['--selection', str(selection), '--out', str(directory), '--index', str(args.index),
+                       '--workers', str(args.workers)]
             if args.retry_failed:
                 command.append('--retry-failed')
-            result = subprocess.run(command, stdin=subprocess.DEVNULL)
-            if not report_path.exists():
-                raise RuntimeError(f'Batch {n} did not write a report; exit {result.returncode}')
-            report = json.loads(report_path.read_text())
-            if old and report.get('generated_at') == old.get('generated_at'):
-                raise RuntimeError(f'Batch {n} exited without a fresh report; exit {result.returncode}')
-            if report['pending'] == 0:
-                break
-            progress.update(status='waiting_for_model', active_batch=n, updated_at=now())
-            write_json(progress_path, progress)
-            # Quota-deferred entries remain pending. Successful and failed items
-            # are skipped by the existing converter when the same batch resumes.
-            for _ in range(30):
-                time.sleep(10)
-        progress['batches'][str(n)] = {k: report[k] for k in ('selected', 'succeeded', 'failed', 'pending')}
-        progress.update(status='running', completed_batches=n, updated_at=now(),
-                        new_succeeded=sum(b['succeeded'] for b in progress['batches'].values()),
-                        failed=sum(b['failed'] for b in progress['batches'].values()))
-        progress['remaining'] = len(queue) - progress['new_succeeded']
-        write_json(progress_path, progress)
-        if args.max_batches and n >= args.max_batches:
-            return
-    progress.update(status='first_pass_finished', updated_at=now())
-    write_json(progress_path, progress)
+            batch_args = build_parser().parse_args(command)
+            context = prepare_run(batch_args)
+            if client is None:
+                client = make_client(batch_args)
+            if getattr(client, 'uses_fallback', False):
+                config = json.loads(batch_args.routing_config.read_text())
+                batch_args.routing_policy = {**config, 'state_path': str(batch_args.routing_state)}
+            context.update(lock=lock, active=0, unscheduled=len(context['todo']), deferred=[])
+            contexts[n] = context
+            ready.extend((n, item, row) for item, row in context['todo'])
+            save_report(n, summarize(batch_args, context['selection'], context['states'], context['invocation']))
+            close_if_finished(n)
+        except BaseException:
+            lock.close()
+            raise
+
+    try:
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            while True:
+                if retry_at is not None and time.monotonic() >= retry_at:
+                    for n, context in contexts.items():
+                        ready.extend((n, item, row) for item, row in context['deferred'])
+                        context['unscheduled'] += len(context['deferred'])
+                        context['deferred'] = []
+                    retry_at = None
+                while len(futures) < args.workers and not stop_event.is_set() and retry_at is None:
+                    if not ready:
+                        if exhausted:
+                            break
+                        if (next_batch-1)*args.batch_size >= len(queue) or (args.max_batches and next_batch > args.max_batches):
+                            exhausted = True
+                            break
+                        open_batch(next_batch)
+                        next_batch += 1
+                        continue
+                    n, item, row = ready.popleft()
+                    context = contexts[n]
+                    if started is None:
+                        started = time.monotonic()
+                        stats['first_submitted_at'] = now()
+                    old = context['states'].get(key_of(item), {})
+                    submitted = time.monotonic()
+                    future = pool.submit(convert_one, item, row, context['args'], client,
+                                         context['schema'], context['contract'],
+                                         old.get('review_feedback') or old.get('error', ''))
+                    futures[future] = (n, item, row, submitted)
+                    context['active'] += 1
+                    context['unscheduled'] -= 1
+                    stats['scheduled'] += 1
+                    stats['max_in_flight'] = max(stats['max_in_flight'], len(futures))
+                if not futures:
+                    if stop_event.is_set():
+                        publish('stopped')
+                        break
+                    if retry_at is not None:
+                        publish('waiting_for_model')
+                        stop_event.wait(min(10, max(0, retry_at-time.monotonic())))
+                        continue
+                    publish('first_pass_finished' if not args.max_batches else 'batch_limit_finished')
+                    break
+                publish('draining' if stop_event.is_set() else 'running')
+                done, _ = wait(futures, timeout=1, return_when=FIRST_COMPLETED)
+                for future in done:
+                    n, item, row, submitted = futures.pop(future)
+                    context = contexts[n]
+                    context['active'] -= 1
+                    state, report = accept_future(context, item, future)
+                    stats['occupied_worker_seconds'] += time.monotonic()-submitted
+                    stats['finished'] += 1
+                    stats[state['state']] += 1
+                    save_report(n, report)
+                    if state['state'] == 'deferred':
+                        context['deferred'].append((item, row))
+                        retry_at = time.monotonic() + deferred_delay
+                    close_if_finished(n)
+                publish('draining' if stop_event.is_set() else 'running')
+    finally:
+        for context in contexts.values():
+            context['lock'].close()
 
 
 def main():
@@ -312,7 +407,13 @@ def main():
         p.error('batch-size and workers must be positive')
     with (args.out / '.run.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        run(args)
+        stop = threading.Event()
+        old_handlers = {s: signal.signal(s, lambda *_: stop.set()) for s in (signal.SIGTERM, signal.SIGINT)}
+        try:
+            run(args, stop_event=stop)
+        finally:
+            for s, handler in old_handlers.items():
+                signal.signal(s, handler)
 
 
 if __name__ == '__main__':

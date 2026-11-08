@@ -1,0 +1,58 @@
+{
+  "window_successes": 25,
+  "started_at": "2026-11-08T08:06:01.840988+00:00",
+  "ended_at": "2026-11-08T08:14:28.915535+00:00",
+  "seconds": 507.074547,
+  "successes_per_hour": 177.48869575975777,
+  "workers": 10,
+  "request_slot_occupation_ratio": 0.9992428375625015,
+  "attempts_started_in_window": 41,
+  "retry_attempts_started_in_window": 6,
+  "attempts_finished_in_window": 32,
+  "unfinished_attempts_at_cutoff": 9,
+  "sessions_returned": 32,
+  "completed_attempts_without_usage": 2,
+  "terminal_failures": [
+    {
+      "source": {
+        "collection_id": "8821c61132725b6e7826",
+        "repository": "first-fluke/oh-my-agent",
+        "commit_sha": "73a27ed52cfb892d0727c34109d55a59b42e0869",
+        "skill_path": ".agents/skills/oma-academic-writing/SKILL.md",
+        "git_blob_sha": "d6a98d7884377e87be9cb763fdaaa9f0f9e2207c",
+        "entry_sha256": "99440ab30ed0da9e395db6964dac30d5eb73aa2c688162ae7fcafd5acb9ee431"
+      },
+      "error": "['content', 'tasks', 1, 'steps', 0, 'evidence', 0]: Additional properties are not allowed ('end_line' was unexpected)"
+    }
+  ],
+  "usage_returned_by_cutoff": {
+    "tokens": {
+      "input": 432188,
+      "output": 242614,
+      "reasoning": 396191,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "by_model": {
+      "open-design/deepseek-v4.1-flash": {
+        "input": 432188,
+        "output": 242614,
+        "reasoning": 396191,
+        "cache_read": 0,
+        "cache_write": 0
+      }
+    },
+    "billing_cost": null
+  },
+  "baseline_batch_0004": {
+    "successes": 25,
+    "seconds": 584.542917,
+    "successes_per_hour": 153.96645375826185,
+    "request_slot_occupation_ratio": 0.6131924157760347
+  },
+  "note": "Observed consecutive new source versions, not same-input A/B. Includes warm-up and retries; counts actual saved successful records. Request slots are wall time, not model CPU utilization; unfinished usage is excluded.",
+  "retry_causes": {
+    "timeout": 2,
+    "structure_or_evidence": 4
+  }
+}

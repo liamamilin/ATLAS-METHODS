@@ -10,6 +10,7 @@
 - 真实模型批次：[第 001 批状态与用量](data/normalized/batch-001/report.json)、[转换记录](data/normalized/batch-001/records.jsonl)；逐条保存，成功跳过，失败显式重试。
 - 2026-11-07 首批实际处理 7 个仓库的 40 条入口：保存 40 条，失败 0 条，待处理 0。默认 Open Design 优先，额度限制时回退到实测 Go 免费模型、恢复后切回；[切换策略及实测报告](normalization/batches/provider-check-001.report.md)。这些记录仍为未完整审阅、未执行。
 - 2026-11-08 已启动剩余 55,663 条的全队列连续分批转换，复用原 40 条；[本轮检查点与运行报告](normalization/batches/full-001.report.md)。新结果和完整响应留在本机持久目录，公开索引保留来源、哈希和可取回路径。
+- 10 路转换已接入跨批次滚动补位、临时禁用 MCP 和格式提示优化，沿用原批次与断点；[优化实测报告](normalization/batches/optimization-001.report.md)。
 - 人工样例是格式和内容参考，不是自动转换结果或方法有效性的证明。
 
 编码 Agent 先读 [AGENTS.md](AGENTS.md)，然后执行 [批转换任务](normalization/NEXT-TASK.md)。
