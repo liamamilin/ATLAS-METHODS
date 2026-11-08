@@ -18,10 +18,20 @@ class ModelDeferred(Exception):
         self.reply = reply or {}
 
 
+def content_filter_signal(events):
+    """A source-specific provider refusal must not stall or change models."""
+    return any(e.get('type') == 'error' and isinstance(e.get('error'), dict) and
+               (e['error'].get('type') in ('provider.content-filter', 'provider.content_filter') or
+                e['error'].get('code') in ('content_filter', 'content_policy_violation'))
+               for e in events)
+
+
 def limit_signal(events):
     """Only provider quota/rate errors, never schema/auth/context errors."""
     for event in events:
         if event.get('type') != 'error':
+            continue
+        if content_filter_signal([event]):
             continue
         error = event.get('error', {})
         if not isinstance(error, dict):
@@ -183,7 +193,7 @@ class QuotaRouter:
         if model == self.fallback and reply.get('limit'):
             raise ModelDeferred('Free fallback limited; waiting for model availability', model, reply)
         if (reply.get('transport_error') and not reply.get('limit') and
-                not reply.get('timed_out') and not reply.get('input_error')):
+                not reply.get('timed_out') and not reply.get('input_error') and not reply.get('content_filtered')):
             # A provider/connection failure is not evidence that the Skill is
             # invalid. Pause the queue rather than fail thousands of sources.
             raise ModelDeferred('Model request unavailable; see retained events/stderr', model, reply)

@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-08T13:38:49.552371+00:00",
+  "preserved_success_records_unchanged": 917,
+  "original_filter_attempts_unchanged": true,
+  "no_additional_filtered_source_requests": true,
+  "filtered_sources": [
+    {
+      "collection_id": "3d240d9d6b7531732adc",
+      "repository": "yaklang/hack-skills",
+      "commit_sha": "6fbf0bc8d5c71830d62543a308d8744606c43d7c",
+      "skill_path": "skills/active-directory-acl-abuse/SKILL.md",
+      "git_blob_sha": "a4d048b74e2fde269ae6b9f322f006e56401d498",
+      "entry_sha256": "0ac12347c7b2259397c1857b1ac103a9fb8ef3690be261e6d09fd06223122e95"
+    }
+  ],
+  "checkpoint": "20261108-content-filter-001",
+  "checkpoint_paths_and_sha256_verified": 929,
+  "remaining_identities_verified": 54774,
+  "success_and_remaining_disjoint": true,
+  "actual_new_successes_by_checkpoint": 12,
+  "workers": 10,
+  "peak_in_flight": 10,
+  "schema_suite": "87 plus 1000 oracle passed",
+  "related_tests": "49 passed"
+}

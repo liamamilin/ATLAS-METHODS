@@ -9,6 +9,7 @@ import unittest
 from unittest.mock import patch
 
 from batch_convert import OpenCodeClient, key_of, prepare_input, run_batch, write_json
+from model_routing import ModelDeferred
 
 
 def blob(data):
@@ -259,6 +260,44 @@ else:
             args, rows, items = self.fixture(Path(t))
             r = run_batch(args, OnceBroken())
             self.assertEqual((r['succeeded'], r['failed']), (1, 1))
+
+    def test_content_filter_skips_one_source_without_retry_or_blocking_later_records(self):
+        class Client(FakeClient):
+            def call(self,prompt,attempt):
+                if not self.calls:
+                    self.calls.append(prompt);(attempt/'response.txt').write_text('')
+                    return {'text':'','transport_error':'provider refusal','content_filtered':True}
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args,rows,items=self.fixture(Path(t));client=Client();result=run_batch(args,client)
+            self.assertEqual((result['succeeded'],result['failed'],result['pending']),(1,1,0))
+            self.assertEqual(len(client.calls),2)
+            state=json.loads((args.out/'state.json').read_text())[key_of(items[0])]
+            self.assertEqual(state['failure_stage'],'content_filter')
+            self.assertEqual(len(list((args.out/'attempts'/key_of(items[0])).iterdir())),1)
+            args.retry_failed=True;resumed=FakeClient();run_batch(args,resumed)
+            self.assertEqual(resumed.calls,[])
+
+    def test_old_deferred_filter_is_reclassified_from_retained_events_without_new_request(self):
+        class OldClient(FakeClient):
+            def call(self,prompt,attempt):
+                if not self.calls:
+                    self.calls.append(prompt);(attempt/'response.txt').write_text('')
+                    event={'type':'error','error':{'type':'provider.content-filter','message':'Provider blocked the response'}}
+                    (attempt/'events.jsonl').write_text(json.dumps(event)+'\n')
+                    raise ModelDeferred('old global availability classification','fixture')
+                return super().call(prompt,attempt)
+        with tempfile.TemporaryDirectory() as t:
+            args,rows,items=self.fixture(Path(t));first=run_batch(args,OldClient())
+            self.assertEqual((first['succeeded'],first['deferred']),(1,1))
+            metadata=args.out/'attempts'/key_of(items[0])/'001/metadata.json';previous=metadata.read_bytes()
+            args.retry_failed=True;resumed=FakeClient();result=run_batch(args,resumed)
+            self.assertEqual(resumed.calls,[])
+            self.assertEqual((result['succeeded'],result['failed'],result['deferred']),(1,1,0))
+            self.assertEqual(metadata.read_bytes(),previous)
+            state=json.loads((args.out/'state.json').read_text())[key_of(items[0])]
+            self.assertEqual(state['failure_stage'],'content_filter')
+            self.assertEqual(state['previous_availability_error'],'old global availability classification')
 
 
 if __name__ == '__main__':

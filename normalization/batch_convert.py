@@ -23,9 +23,10 @@ import threading
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
 from export_response_schema import response_schema
-from model_routing import ModelDeferred, QuotaRouter, limit_signal, verify_free_model
+from model_routing import ModelDeferred, QuotaRouter, content_filter_signal, limit_signal, verify_free_model
 
 HERE = Path(__file__).resolve().parent
+CONTENT_FILTER_MESSAGE = 'Provider blocked this source; retained refusal, no retry or alternate-model request'
 
 
 def now():
@@ -281,6 +282,7 @@ class OpenCodeClient:
                      'disabled_mcp_servers': disabled,
                      'input_transport': 'controlled_stdin' if piped else 'argv',
                      'limit': limit_signal(events),
+                     'content_filtered': content_filter_signal(events),
                      'exit_code': proc.returncode, 'timed_out': timed_out,
                      'tool_events': [e.get('type') for e in events if 'tool' in e.get('type', '')]}
             error_text = '\n'.join(json.dumps(e.get('error', {})).lower() for e in events if e.get('type') == 'error')
@@ -326,6 +328,11 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
         try:
             reply = client.call(prompt, attempt)
             metadata.update({k:v for k,v in reply.items() if k != 'text'})
+            if reply.get('content_filtered'):
+                metadata.update(state='failed', error=CONTENT_FILTER_MESSAGE, finished_at=now())
+                write_json(attempt/'metadata.json', metadata)
+                return {**base, 'state':'failed', 'failure_stage':'content_filter',
+                        'error':CONTENT_FILTER_MESSAGE, 'attempt':f'attempts/{key}/{seq:03}'}
             if reply.get('transport_error'):
                 raise ValueError(reply['transport_error'])
             if reply.get('tool_events'):
@@ -441,6 +448,25 @@ def summarize(args, selection, states, invocation):
     return report
 
 
+def retained_content_filter(args, state, row):
+    if state.get('state') != 'deferred' or row is None or not state.get('attempt'):
+        return False
+    path = args.out/state['attempt']
+    try:
+        metadata = strict_json_loads((path/'metadata.json').read_text())
+        if metadata.get('source') != source_of(row):
+            return False
+        events = []
+        for line in (path/'events.jsonl').read_text().splitlines():
+            try:
+                events.append(strict_json_loads(line))
+            except ValueError:
+                continue
+        return content_filter_signal(events)
+    except (OSError, ValueError, UnicodeError):
+        return False
+
+
 def prepare_run(args):
     """Shared resume/identity checks for single batches and the rolling queue."""
     args.index = args.index.resolve()
@@ -473,7 +499,13 @@ def prepare_run(args):
         if states.get(key, {}).get('state') == 'succeeded':
             # A state flag without its output is not a reusable result.
             states.pop(key)
-        if states.get(key, {}).get('state') == 'failed' and not args.retry_failed:
+        if retained_content_filter(args, states.get(key, {}), row):
+            previous = states[key]
+            states[key] = {**previous, 'state':'failed', 'failure_stage':'content_filter',
+                           'previous_availability_error':previous.get('error'),
+                           'error':CONTENT_FILTER_MESSAGE, 'updated_at':now()}
+        if (states.get(key, {}).get('state') == 'failed' and
+                (not args.retry_failed or states[key].get('failure_stage') == 'content_filter')):
             invocation['skipped_failed'] += 1
             continue
         if args.limit is None or len(todo) < args.limit:

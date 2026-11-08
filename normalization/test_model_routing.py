@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 import test_batch_convert as fixtures
 from batch_convert import run_batch
-from model_routing import ModelDeferred, QuotaRouter, limit_signal, verify_free_model
+from model_routing import ModelDeferred, QuotaRouter, content_filter_signal, limit_signal, verify_free_model
 
 
 PRIMARY = 'open-design/deepseek-v4.1-flash'
@@ -138,6 +138,16 @@ class RoutingTests(unittest.TestCase):
             self.assertTrue(router.call('fixture',root)['input_error'])
             self.assertTrue(router.call('fixture',root)['timed_out'])
             self.assertEqual(self.calls,[PRIMARY,PRIMARY])
+
+    def test_actual_hyphenated_content_filter_is_source_specific_not_quota_or_global_defer(self):
+        event={'type':'error','error':{'type':'provider.content-filter','message':'Provider blocked the response'}}
+        self.assertTrue(content_filter_signal([event]))
+        self.assertIsNone(limit_signal([event]))
+        reply={'text':'','transport_error':'OpenCode request failed','content_filtered':True}
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);router=self.router(root,{PRIMARY:[reply]})
+            self.assertTrue(router.call('fixture',root)['content_filtered'])
+            self.assertEqual(self.calls,[PRIMARY])
 
     def test_known_reset_time_is_respected(self):
         with tempfile.TemporaryDirectory() as t:

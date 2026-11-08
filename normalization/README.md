@@ -126,6 +126,8 @@ python3 -m unittest discover -s normalization -p 'test_*.py'
 
 2026-11-08 实际遇到 V2 `provider.quota`、HTTP `status: 402`、`insufficient_balance` 组合，现已纳入额度分类并解析服务端重置时间。Go 自身受限或普通连接/认证请求失败时保存 deferred 并暂停领取，保留实际响应与用量，不将整库快速写成材料失败；认证失败不因此启用其他模型。明确的上下文输入错误和单请求超时继续按条有限重试。
 
+`provider.content-filter` 是单条来源的拒绝，记录为 `failure_stage: content_filter` 后跳过，不触发全局等待、不换模型，也不重发这条来源；通用 `--retry-failed` 同样跳过它。旧版误归类为 deferred 的条目，续跑时只从来源匹配的保留事件纠正状态，原 attempt 不改，不为纠正分类再请求一次。实际修复与续跑检查点见 [过滤等待修复报告](batches/content-filter-incident-001.report.md)。
+
 旧版本误记的额度失败已按保留事件恢复，见 [实际故障与恢复报告](batches/quota-incident-001.report.md)。仅在同类历史问题需要修正且队列进程已排空退出时运行：
 
 ```bash

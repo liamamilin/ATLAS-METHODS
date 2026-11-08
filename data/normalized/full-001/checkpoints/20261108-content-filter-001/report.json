@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-11-08T13:35:53.519208+00:00",
+  "corpus_saved_entries": 55703,
+  "reused": 40,
+  "new_succeeded": 889,
+  "total_succeeded": 929,
+  "remaining": 54774,
+  "failed": 24,
+  "pending_including_active_or_deferred": 54750,
+  "usage_this_run": {
+    "sessions": 17922,
+    "model_sessions": 989,
+    "sessions_without_usage": 16933,
+    "unfinished_attempt_records": 10,
+    "tokens": {
+      "input": 11382989,
+      "output": 6491630,
+      "reasoning": 8092185,
+      "cache_read": 52474,
+      "cache_write": 0
+    },
+    "by_model": {
+      "open-design/deepseek-v4.1-flash": {
+        "sessions": 17535,
+        "input": 7318152,
+        "output": 4251538,
+        "reasoning": 7849414,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "opencode-go/iceman-contributor-free": {
+        "sessions": 387,
+        "input": 4064837,
+        "output": 2240092,
+        "reasoning": 242771,
+        "cache_read": 52474,
+        "cache_write": 0
+      }
+    },
+    "billing_cost": null
+  },
+  "record_storage": "Local persistent files; record_path and detail_path are relative to this checkpoint directory. Public index contains provenance, hashes and paths only.",
+  "queue_sha256": "40c76fcfc2471e9cc7941427e5b818501f827d2482e3a42e726ba0fb2c65360e"
+}
