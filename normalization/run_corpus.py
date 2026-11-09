@@ -389,6 +389,8 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                 command.append('--retry-failed')
             if getattr(args, 'luna_fallback', False):
                 command.append('--luna-fallback')
+            if getattr(args, 'go_fallback', None):
+                command.extend(['--go-fallback', args.go_fallback])
             batch_args = build_parser().parse_args(command)
             context = prepare_run(batch_args)
             if client is None:
@@ -398,6 +400,8 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                 batch_args.routing_policy = {**config, 'state_path': str(batch_args.routing_state)}
                 if batch_args.luna_fallback:
                     batch_args.routing_policy['fallback_override'] = LUNA
+                if batch_args.go_fallback:
+                    batch_args.routing_policy['free_fallback_override'] = batch_args.go_fallback
             context.update(lock=lock, active=0, unscheduled=len(context['todo']), deferred=[])
             contexts[n] = context
             ready.extend((n, item, row) for item, row in context['todo'])
@@ -481,6 +485,7 @@ def main():
     p.add_argument('--batch-size', type=int, default=25)
     p.add_argument('--workers', type=int, default=4)
     p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
     p.add_argument('--max-batches', type=int)
     p.add_argument('--retry-failed', action='store_true', help='One finite additional pass over recorded failures')
     p.add_argument('--snapshot', help='Write an immutable provenance-only checkpoint, without model calls')

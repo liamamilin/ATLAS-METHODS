@@ -317,7 +317,8 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
     attempts.mkdir(parents=True, exist_ok=True)
     seq = max([int(p.name) for p in attempts.iterdir() if p.is_dir() and p.name.isdigit()] + [0])
     normal_failures, quota_redirects = 0, 0
-    request_budget = args.max_attempts + int(bool(getattr(client, 'uses_fallback', False)))
+    redirect_budget = getattr(client, 'max_quota_redirects', int(bool(getattr(client, 'uses_fallback', False))))
+    request_budget = args.max_attempts + redirect_budget
     for _ in range(request_budget):
         seq += 1
         attempt = attempts / f'{seq:03}'
@@ -375,7 +376,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
             error = str(exc)[:5000]
             metadata.update(state='failed', error=error, finished_at=now())
             write_json(attempt / 'metadata.json', metadata)
-            if reply.get('retry_on_fallback') and quota_redirects == 0:
+            if reply.get('retry_on_fallback') and quota_redirects < redirect_budget:
                 quota_redirects += 1
                 continue
             feedback = (review_feedback + '\n' + error).strip()
@@ -525,6 +526,7 @@ def make_client(args):
     routing = getattr(args, 'routing_config', None)
     config = strict_json_loads(routing.read_text()) if routing else None
     luna = AtlasLunaClient(args.timeout) if getattr(args, 'luna_fallback', False) else None
+    go_override = getattr(args, 'go_fallback', None)
     clients, lock = ({LUNA: luna} if luna else {}), threading.Lock()
     def factory(model):
         with lock:
@@ -535,11 +537,14 @@ def make_client(args):
         args.routing_policy = {**config, 'state_path': str(args.routing_state)}
         if luna:
             args.routing_policy['fallback_override'] = LUNA
+        if go_override:
+            args.routing_policy['free_fallback_override'] = go_override
         return QuotaRouter(config, args.routing_state, factory,
                            lambda model: verify_free_model(args.opencode, model),
-                           probe_timeout=args.timeout + 60, fallback_override=LUNA if luna else None)
-    if luna:
-        raise ValueError('--luna-fallback requires the configured primary model')
+                           probe_timeout=args.timeout + 60, fallback_override=LUNA if luna else None,
+                           free_override=go_override)
+    if luna or go_override:
+        raise ValueError('Fallback options require the configured primary model')
     return factory(args.model)
 
 
@@ -590,6 +595,7 @@ def build_parser():
     p.add_argument('--routing-state', type=Path, default=HERE.parent / 'data/normalized/.provider-routing-state.json',
                    help='Persistent quota reset/probe state shared by batches')
     p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
     p.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')
     p.add_argument('--language', default='zh-CN')
     p.add_argument('--limit', type=int, help='Maximum new/retried items in this invocation')

@@ -33,7 +33,7 @@ def healthy():
 
 
 class RoutingTests(unittest.TestCase):
-    def router(self, root, queue=None, clock=None, check=None, fallback_override=None):
+    def router(self, root, queue=None, clock=None, check=None, fallback_override=None, free_override=None):
         self.calls = []
         queue = queue or {}
         clock = clock or [100]
@@ -49,7 +49,8 @@ class RoutingTests(unittest.TestCase):
 
         return QuotaRouter(CONFIG, root / 'route.json', factory,
                            check or (lambda model: {'model': model, 'cost': [{'input': 0, 'output': 0}]}),
-                           clock=lambda: clock[0], probe_timeout=30, fallback_override=fallback_override)
+                           clock=lambda: clock[0], probe_timeout=30, fallback_override=fallback_override,
+                           free_override=free_override)
 
     def test_luna_reuses_primary_cooldown_and_automatically_switches_back(self):
         with tempfile.TemporaryDirectory() as t:
@@ -64,6 +65,39 @@ class RoutingTests(unittest.TestCase):
             self.assertEqual(router.call('fixture', root)['routing']['selected'], 'primary_probe')
             self.assertEqual(router.call('fixture', root)['routing']['selected'], 'primary')
             self.assertEqual(self.calls, [LUNA, PRIMARY, PRIMARY])
+
+    def test_two_quota_redirects_save_a_record_and_recovery_restores_priority(self):
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            args, _, _ = fixtures.BatchTests().fixture(root, 1)
+            clock = [100]
+            primary_limit = limited()
+            primary_limit['limit']['retry_at'] = 200
+            luna_limit = limited()
+            luna_limit['limit']['retry_after_seconds'] = 20
+            alternate = 'opencode-go/crouton-alpha-free'
+            checks = []
+            router = self.router(root, {PRIMARY: [primary_limit], LUNA: [luna_limit]}, clock,
+                                 check=lambda model: checks.append(model) or {'model': model},
+                                 fallback_override=LUNA, free_override=alternate)
+
+            report = run_batch(args, router)
+            self.assertEqual(report['succeeded'], 1)
+            self.assertEqual(report['record_models'], {alternate: 1})
+            self.assertEqual(self.calls, [PRIMARY, LUNA, alternate])
+            self.assertEqual(checks, [alternate])
+            self.assertEqual(json.loads((root / 'route.json').read_text())['free_fallback'], FREE)
+            self.assertEqual(router.choose(), (alternate, None))
+            clock[0] = 120
+            probe_model, probe = router.choose()
+            self.assertEqual(probe_model, LUNA)
+            self.assertIsNotNone(probe)
+            self.assertEqual(router.choose(), (alternate, None))
+            router.observe(LUNA, probe, healthy())
+            self.assertEqual(router.choose(), (LUNA, None))
+            clock[0] = 200
+            self.assertEqual(router.call('fixture', root)['routing']['selected'], 'primary_probe')
+            self.assertEqual(router.choose(), (PRIMARY, None))
 
     def test_luna_adapter_uses_local_pack_and_retains_returned_usage(self):
         with tempfile.TemporaryDirectory() as t:

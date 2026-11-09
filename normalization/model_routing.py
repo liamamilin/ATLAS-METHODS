@@ -102,10 +102,12 @@ class QuotaRouter:
     uses_fallback = True
 
     def __init__(self, config, state_path, factory, free_check, clock=time.time, probe_timeout=300,
-                 fallback_override=None):
+                 fallback_override=None, free_override=None):
         self.primary = config['primary']
-        self.free_fallback = config['free_fallback']
-        self.fallback = fallback_override or self.free_fallback
+        self.configured_free_fallback = config['free_fallback']
+        self.free_fallback = free_override or self.configured_free_fallback
+        self.luna = fallback_override
+        self.max_quota_redirects = 2 if self.luna else 1
         self.cooldown = config.get('primary_probe_seconds', 300)
         self.transient_cooldown = config.get('rate_probe_seconds', 30)
         if self.cooldown < 1 or self.transient_cooldown < 1:
@@ -124,10 +126,10 @@ class QuotaRouter:
                 fcntl.flock(lock, fcntl.LOCK_EX)
                 if self.state_path.exists():
                     state = json.loads(self.state_path.read_text())
-                    if (state.get('primary'), state.get('free_fallback')) != (self.primary, self.free_fallback):
+                    if (state.get('primary'), state.get('free_fallback')) != (self.primary, self.configured_free_fallback):
                         raise ValueError('Routing state belongs to a different model pair; use a separate state path')
                 else:
-                    state = {'primary': self.primary, 'free_fallback': self.free_fallback,
+                    state = {'primary': self.primary, 'free_fallback': self.configured_free_fallback,
                              'primary_retry_at': 0, 'probe': None, 'events': []}
                 yield state
                 temp = self.state_path.with_suffix('.tmp')
@@ -137,23 +139,33 @@ class QuotaRouter:
     def choose(self):
         with self.state() as state:
             t = self.clock()
-            if not state['primary_retry_at']:
-                return self.primary, None
-            probe = state.get('probe')
-            if t >= state['primary_retry_at'] and (not probe or probe['expires'] <= t):
-                token = uuid.uuid4().hex
-                state['probe'] = {'token': token, 'expires': t + self.probe_timeout}
-                return self.primary, token
-            return self.fallback, None
+            candidates = [(self.primary, 'primary_retry_at', 'probe')]
+            if self.luna:
+                candidates.append((self.luna, 'luna_retry_at', 'luna_probe'))
+            for model, retry_key, probe_key in candidates:
+                retry_at = state.get(retry_key, 0)
+                if not retry_at:
+                    return model, None
+                probe = state.get(probe_key)
+                if t >= retry_at and (not probe or probe['expires'] <= t):
+                    token = uuid.uuid4().hex
+                    state[probe_key] = {'token': token, 'expires': t + self.probe_timeout}
+                    return model, token
+            return self.free_fallback, None
 
     def event(self, state, action, **fields):
         state['events'] = (state['events'] + [{'at': self.clock(), 'action': action, **fields}])[-500:]
 
     def observe(self, model, probe, reply):
+        if model == self.primary:
+            tier, probe_key = 'primary', 'probe'
+        elif model == self.luna:
+            tier, probe_key = 'luna', 'luna_probe'
+        else:
+            return
+        retry_key = tier + '_retry_at'
         signal = reply.get('limit')
         with self.state() as state:
-            if model != self.primary:
-                return
             if signal:
                 delay = self.transient_cooldown if signal['kind'] in ('rate', 'concurrency') else self.cooldown
                 retry_at = signal.get('retry_at', self.clock() + delay)
@@ -161,19 +173,18 @@ class QuotaRouter:
                     retry_at = self.clock() + signal['retry_after_seconds']
                 if signal['kind'] == 'concurrency':
                     retry_at = min(retry_at, self.clock() + delay)
-                state['primary_retry_at'] = max(self.clock() + 1, retry_at)
-                state['probe'] = None
-                self.event(state, 'primary_limited', limit=signal, retry_at=state['primary_retry_at'])
-            elif probe and (state.get('probe') or {}).get('token') == probe:
-                state['probe'] = None
+                state[retry_key] = max(self.clock() + 1, retry_at)
+                state[probe_key] = None
+                self.event(state, tier + '_limited', limit=signal, retry_at=state[retry_key])
+            elif probe and (state.get(probe_key) or {}).get('token') == probe:
+                state[probe_key] = None
                 if not reply.get('transport_error'):
-                    state['primary_retry_at'] = 0
-                    self.event(state, 'primary_restored')
+                    state[retry_key] = 0
+                    self.event(state, tier + '_restored')
                 else:
-                    state['primary_retry_at'] = self.clock() + self.cooldown
-                    self.event(state, 'primary_probe_failed', retry_at=state['primary_retry_at'])
-            # A request already in flight before quota failed cannot prove that
-            # quota recovered. Only the later leased probe may restore primary.
+                    state[retry_key] = self.clock() + self.cooldown
+                    self.event(state, tier + '_probe_failed', retry_at=state[retry_key])
+            # Only a leased probe can restore a model after a quota rejection.
 
     def call(self, prompt, attempt):
         model, probe = self.choose()
@@ -193,18 +204,24 @@ class QuotaRouter:
             self.observe(model, probe, {'transport_error': 'client exception'})
             raise
         self.observe(model, probe, reply)
-        selected = 'primary_probe' if probe else 'primary'
-        if model != self.primary:
-            selected = 'free_fallback' if model == self.free_fallback else 'luna_fallback'
+        unavailable = (reply.get('transport_error') and not reply.get('limit') and
+                       (not reply.get('timed_out') or reply.get('connection_reset')) and
+                       not reply.get('input_error') and not reply.get('content_filtered'))
+        redirect = model != self.free_fallback and bool(reply.get('limit'))
+        if model == self.primary:
+            selected = 'primary_probe' if probe else 'primary'
+        elif model == self.luna:
+            selected = 'luna_probe' if probe else 'luna_fallback'
+            redirect = redirect or bool(probe and unavailable)
+        else:
+            selected = 'free_fallback'
         reply = {**reply, 'model': reply.get('model') or model, 'routing': {
             'selected': selected, 'primary': self.primary, 'free_fallback': self.free_fallback,
             'free_catalog_check': evidence},
-            'retry_on_fallback': model == self.primary and bool(reply.get('limit'))}
-        if model == self.fallback and reply.get('limit'):
+            'retry_on_fallback': redirect}
+        if model == self.free_fallback and reply.get('limit'):
             raise ModelDeferred('Fallback limited; waiting for model availability', model, reply)
-        if (reply.get('transport_error') and not reply.get('limit') and
-                (not reply.get('timed_out') or reply.get('connection_reset')) and
-                not reply.get('input_error') and not reply.get('content_filtered')):
+        if unavailable and not redirect:
             # A provider/connection failure is not evidence that the Skill is
             # invalid. Pause the queue rather than fail thousands of sources.
             raise ModelDeferred('Model request unavailable; see retained events/stderr', model, reply)

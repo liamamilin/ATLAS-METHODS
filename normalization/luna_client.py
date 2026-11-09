@@ -41,6 +41,8 @@ class AtlasLunaClient:
             if error['code'] in ('quota_exhausted', 'rate_limited') and not reply['content_filtered']:
                 reply['limit'] = {'kind': 'quota' if error['code'] == 'quota_exhausted' else 'rate',
                                   'code': error['code']}
+                if error.get('retry_after') is not None:
+                    reply['limit']['retry_after_seconds'] = error['retry_after']
             return reply
         model = result.get('model', '')
         if result.get('provider') != 'openai' or not (model == 'gpt-6-luna' or model.startswith('gpt-6-luna-')):
@@ -66,7 +68,7 @@ def complete_from_pack(timeout, session):
                                     timeout=timeout, session_id=session)
     except atlas_model.ModelConfigError as exc:
         message = str(exc).lower()
-        return {'error': {'code': exc.code, 'upstream_status': exc.upstream_status,
+        return {'error': {'code': exc.code, 'upstream_status': exc.upstream_status, 'retry_after': exc.retry_after,
                           'input_error': any(term in message for term in (
                               'context_length_exceeded', 'context length', 'context window')),
                           'content_filtered': any(term in message for term in (
