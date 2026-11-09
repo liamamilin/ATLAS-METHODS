@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
@@ -7,6 +8,7 @@ from unittest.mock import patch
 
 import test_batch_convert as fixtures
 from batch_convert import run_batch
+from luna_client import AtlasLunaClient, LUNA
 from model_routing import (
     ModelDeferred, QuotaRouter, connection_reset_signal, content_filter_signal, limit_signal, verify_free_model,
 )
@@ -31,7 +33,7 @@ def healthy():
 
 
 class RoutingTests(unittest.TestCase):
-    def router(self, root, queue=None, clock=None, check=None):
+    def router(self, root, queue=None, clock=None, check=None, fallback_override=None):
         self.calls = []
         queue = queue or {}
         clock = clock or [100]
@@ -47,7 +49,42 @@ class RoutingTests(unittest.TestCase):
 
         return QuotaRouter(CONFIG, root / 'route.json', factory,
                            check or (lambda model: {'model': model, 'cost': [{'input': 0, 'output': 0}]}),
-                           clock=lambda: clock[0], probe_timeout=30)
+                           clock=lambda: clock[0], probe_timeout=30, fallback_override=fallback_override)
+
+    def test_luna_reuses_primary_cooldown_and_automatically_switches_back(self):
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            clock = [100]
+            self.router(root, {PRIMARY: [limited()]}, clock).call('fixture', root)
+            router = self.router(root, {LUNA: [{**healthy(), 'model': LUNA}]}, clock,
+                                 check=lambda model: self.fail('Go catalog should not be used for Luna'),
+                                 fallback_override=LUNA)
+            self.assertEqual(router.call('fixture', root)['routing']['selected'], 'luna_fallback')
+            clock[0] += CONFIG['primary_probe_seconds']
+            self.assertEqual(router.call('fixture', root)['routing']['selected'], 'primary_probe')
+            self.assertEqual(router.call('fixture', root)['routing']['selected'], 'primary')
+            self.assertEqual(self.calls, [LUNA, PRIMARY, PRIMARY])
+
+    def test_luna_adapter_uses_local_pack_and_retains_returned_usage(self):
+        with tempfile.TemporaryDirectory() as t:
+            pack = Path(t)
+            (pack / 'model-config.json').write_text('{}')
+            (pack / 'atlas_model.py').write_text(
+                'import os\n'
+                'def complete(messages, *, provider, model, thinking, timeout, session_id):\n'
+                '    assert os.getcwd() == os.environ["ATLAS_PACK"]\n'
+                '    assert os.environ["ATLAS_MODEL_CONFIG"].endswith("model-config.json")\n'
+                '    assert messages == [{"role": "user", "content": "fixture"}]\n'
+                '    assert (provider, model, thinking, timeout) == ("openai", "gpt-6-luna", False, 30)\n'
+                '    assert session_id.startswith("atlas-normalization-")\n'
+                '    return {"provider": provider, "model": model, "text": "{}",\n'
+                '            "usage": {"prompt_tokens": 12, "completion_tokens": 3, "total_tokens": 15}}\n'
+            )
+            with patch.dict(os.environ, {'ATLAS_PACK': t, 'ATLAS_MODEL_CONFIG': str(pack / 'model-config.json')}):
+                reply = AtlasLunaClient(30).call('fixture', pack)
+            self.assertEqual(reply['producer'], 'atlas_model/' + LUNA)
+            self.assertEqual(reply['usage']['turns'][0]['tokens'], {'input': 12, 'output': 3})
+            self.assertEqual((pack / 'response.txt').read_text(), '{}')
 
     def test_only_quota_rate_or_concurrency_errors_trigger(self):
         q = limit_signal([{'type': 'error', 'error': {'message': '[code=tier_limit_exceeded] membership concurrency limit exceeded: 11/10 resets 2026-11-07T15:19:00Z'}}])

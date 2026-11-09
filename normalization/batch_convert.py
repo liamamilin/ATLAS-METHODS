@@ -23,6 +23,7 @@ import threading
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
 from export_response_schema import response_schema
+from luna_client import AtlasLunaClient, LUNA
 from model_routing import (
     ModelDeferred, QuotaRouter, connection_reset_signal, content_filter_signal, limit_signal, verify_free_model,
 )
@@ -351,7 +352,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
                                      'scope': 'entry_only' if len(reads) == 1 else 'entry_and_references',
                                      'files_read': reads, 'gaps': response['gaps'],
                                      'review_status': 'unreviewed', 'execution_status': 'not_executed',
-                                     'producer': 'opencode/' + metadata['model'],
+                                     'producer': reply.get('producer') or 'opencode/' + metadata['model'],
                                      'prompt_version': 'target-first-' + digest((HERE / 'CONVERSION-PROMPT.md').read_bytes())[:12],
                                      'generated_at': now()}}
             checked = check_record(record, schema, source_texts=texts)
@@ -400,7 +401,7 @@ def summarize(args, selection, states, invocation):
     write_json(args.out / 'remaining.selection.json', {'items': remaining})
     totals = {'input': 0, 'output': 0, 'reasoning': 0, 'cache_read': 0, 'cache_write': 0}
     by_model = {}
-    sessions, model_sessions, pre_model_failures, unavailable, reported_cost = 0, 0, 0, 0, 0.0
+    sessions, atlas_requests, model_sessions, pre_model_failures, unavailable, reported_cost = 0, 0, 0, 0, 0, 0.0
     attempts = []
     attempt_paths = sorted((args.out / 'attempts').glob('*/*/metadata.json'))
     for path in attempt_paths:
@@ -408,6 +409,7 @@ def summarize(args, selection, states, invocation):
         if not d.get('session_id'):
             continue
         sessions += 1
+        atlas_requests += d.get('producer', '').startswith('atlas_model/')
         usage = d.get('usage', {})
         model_usage = by_model.setdefault(d.get('model', 'unknown'), {
             'sessions': 0, 'sessions_without_usage': 0,
@@ -432,7 +434,7 @@ def summarize(args, selection, states, invocation):
                          'state': d['state'], 'usage': usage})
     record_models = {}
     for record in records:
-        producer = record['extraction'].get('producer', 'unknown').removeprefix('opencode/')
+        producer = record['extraction'].get('producer', 'unknown').removeprefix('opencode/').removeprefix('atlas_model/')
         record_models[producer] = record_models.get(producer, 0) + 1
     report = {'generated_at': now(), 'schema_version': '0.1.1', 'model': args.model,
               'record_models': record_models, 'routing_policy': getattr(args, 'routing_policy', None),
@@ -441,7 +443,8 @@ def summarize(args, selection, states, invocation):
               'deferred': sum(states.get(key_of(i), {}).get('state') == 'deferred' for i in selection),
               'repositories': len({r['source']['repository'] for r in records}),
               'review_status': 'unreviewed; semantic spot checks reported separately',
-              'usage': {'attempts_total': len(attempt_paths), 'opencode_sessions': sessions, 'model_sessions': model_sessions,
+              'usage': {'attempts_total': len(attempt_paths), 'opencode_sessions': sessions - atlas_requests,
+                        'atlas_requests': atlas_requests, 'model_sessions': model_sessions,
                         'pre_model_failures': pre_model_failures, 'sessions_without_usage': unavailable,
                         'tokens': totals, 'opencode_reported_cost': reported_cost,
                         'by_model': by_model,
@@ -521,7 +524,8 @@ def prepare_run(args):
 def make_client(args):
     routing = getattr(args, 'routing_config', None)
     config = strict_json_loads(routing.read_text()) if routing else None
-    clients, lock = {}, threading.Lock()
+    luna = AtlasLunaClient(args.timeout) if getattr(args, 'luna_fallback', False) else None
+    clients, lock = ({LUNA: luna} if luna else {}), threading.Lock()
     def factory(model):
         with lock:
             if model not in clients:
@@ -529,9 +533,13 @@ def make_client(args):
             return clients[model]
     if config and config['primary'] == args.model:
         args.routing_policy = {**config, 'state_path': str(args.routing_state)}
+        if luna:
+            args.routing_policy['fallback_override'] = LUNA
         return QuotaRouter(config, args.routing_state, factory,
                            lambda model: verify_free_model(args.opencode, model),
-                           probe_timeout=args.timeout + 60)
+                           probe_timeout=args.timeout + 60, fallback_override=LUNA if luna else None)
+    if luna:
+        raise ValueError('--luna-fallback requires the configured primary model')
     return factory(args.model)
 
 
@@ -581,6 +589,7 @@ def build_parser():
                    help='Quota fallback policy; applied only when --model matches its primary')
     p.add_argument('--routing-state', type=Path, default=HERE.parent / 'data/normalized/.provider-routing-state.json',
                    help='Persistent quota reset/probe state shared by batches')
+    p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
     p.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')
     p.add_argument('--language', default='zh-CN')
     p.add_argument('--limit', type=int, help='Maximum new/retried items in this invocation')

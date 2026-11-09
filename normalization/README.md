@@ -118,6 +118,8 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 
 `--model` 显式选择其他模型时采用该单模型，不自动套用这份主模型策略。`extraction.producer` 和逐请求 metadata 记录实际使用的模型，报告分模型统计成功记录与用量。切换只在转换进程运行时或下次续跑时发生，没有后台轮询或定时服务；没有待处理任务就不额外花费请求来探测。
 
+经用户授权，可在主模型额度冷却期间使用本机 Atlas 配置的 Luna。设置 `ATLAS_PACK` 为现有 Atlas 项目目录，`ATLAS_MODEL_CONFIG` 为其模型配置文件，再用该环境的 Python 执行 `python3 -u normalization/run_corpus.py --workers 10 --luna-fallback`。该选项沿用原队列、断点和 Open Design 的额度重试时间。到期后仅用一条待处理任务探测 Open Design，成功后新请求恢复使用 Open Design。Luna 调用使用现有凭据，尝试记录保存 API 返回的 token 用量。
+
 运行路由及批转换回归：
 
 ```bash

@@ -101,9 +101,11 @@ def verify_free_model(executable, model):
 class QuotaRouter:
     uses_fallback = True
 
-    def __init__(self, config, state_path, factory, free_check, clock=time.time, probe_timeout=300):
+    def __init__(self, config, state_path, factory, free_check, clock=time.time, probe_timeout=300,
+                 fallback_override=None):
         self.primary = config['primary']
-        self.fallback = config['free_fallback']
+        self.free_fallback = config['free_fallback']
+        self.fallback = fallback_override or self.free_fallback
         self.cooldown = config.get('primary_probe_seconds', 300)
         self.transient_cooldown = config.get('rate_probe_seconds', 30)
         if self.cooldown < 1 or self.transient_cooldown < 1:
@@ -122,10 +124,10 @@ class QuotaRouter:
                 fcntl.flock(lock, fcntl.LOCK_EX)
                 if self.state_path.exists():
                     state = json.loads(self.state_path.read_text())
-                    if (state.get('primary'), state.get('free_fallback')) != (self.primary, self.fallback):
+                    if (state.get('primary'), state.get('free_fallback')) != (self.primary, self.free_fallback):
                         raise ValueError('Routing state belongs to a different model pair; use a separate state path')
                 else:
-                    state = {'primary': self.primary, 'free_fallback': self.fallback,
+                    state = {'primary': self.primary, 'free_fallback': self.free_fallback,
                              'primary_retry_at': 0, 'probe': None, 'events': []}
                 yield state
                 temp = self.state_path.with_suffix('.tmp')
@@ -176,7 +178,7 @@ class QuotaRouter:
     def call(self, prompt, attempt):
         model, probe = self.choose()
         evidence = None
-        if model == self.fallback:
+        if model == self.free_fallback:
             with self.lock:
                 if self.clock() >= self.free_until:
                     try:
@@ -191,13 +193,15 @@ class QuotaRouter:
             self.observe(model, probe, {'transport_error': 'client exception'})
             raise
         self.observe(model, probe, reply)
-        reply = {**reply, 'model': model, 'routing': {
-            'selected': 'primary_probe' if probe else ('primary' if model == self.primary else 'free_fallback'),
-            'primary': self.primary, 'free_fallback': self.fallback,
+        selected = 'primary_probe' if probe else 'primary'
+        if model != self.primary:
+            selected = 'free_fallback' if model == self.free_fallback else 'luna_fallback'
+        reply = {**reply, 'model': reply.get('model') or model, 'routing': {
+            'selected': selected, 'primary': self.primary, 'free_fallback': self.free_fallback,
             'free_catalog_check': evidence},
             'retry_on_fallback': model == self.primary and bool(reply.get('limit'))}
         if model == self.fallback and reply.get('limit'):
-            raise ModelDeferred('Free fallback limited; waiting for model availability', model, reply)
+            raise ModelDeferred('Fallback limited; waiting for model availability', model, reply)
         if (reply.get('transport_error') and not reply.get('limit') and
                 (not reply.get('timed_out') or reply.get('connection_reset')) and
                 not reply.get('input_error') and not reply.get('content_filtered')):
