@@ -283,7 +283,8 @@ else:
             def call(self,prompt,attempt):
                 if not self.calls:
                     self.calls.append(prompt);(attempt/'response.txt').write_text('')
-                    event={'type':'error','error':{'type':'provider.content-filter','message':'Provider blocked the response'}}
+                    event={'type':'error','error':{'type':'provider.invalid-request','status':400,
+                        'message':'Upstream request failed: [invalid_request_error] Request blocked by content filter: Request blocked by safety: Blocked'}}
                     (attempt/'events.jsonl').write_text(json.dumps(event)+'\n')
                     raise ModelDeferred('old global availability classification','fixture')
                 return super().call(prompt,attempt)

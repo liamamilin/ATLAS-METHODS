@@ -243,6 +243,16 @@ class RoutingTests(unittest.TestCase):
             self.assertTrue(router.call('fixture',root)['content_filtered'])
             self.assertEqual(self.calls,[PRIMARY])
 
+    def test_iceman_invalid_request_only_recognizes_explicit_content_filter(self):
+        error = {'type': 'provider.invalid-request', 'status': 400,
+                 'message': 'Upstream request failed: [invalid_request_error] Request blocked by content filter: Request blocked by safety: Blocked'}
+        event = {'type': 'error', 'error': error}
+        self.assertTrue(content_filter_signal([event]))
+        self.assertIsNone(limit_signal([event]))
+        self.assertFalse(content_filter_signal([{
+            'type': 'error', 'error': {**error, 'message': 'Upstream request failed: invalid parameter'},
+        }]))
+
     def test_known_reset_time_is_respected(self):
         with tempfile.TemporaryDirectory() as t:
             root = Path(t);clock = [100]

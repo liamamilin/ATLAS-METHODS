@@ -20,10 +20,18 @@ class ModelDeferred(Exception):
 
 def content_filter_signal(events):
     """A source-specific provider refusal must not stall or change models."""
-    return any(e.get('type') == 'error' and isinstance(e.get('error'), dict) and
-               (e['error'].get('type') in ('provider.content-filter', 'provider.content_filter') or
-                e['error'].get('code') in ('content_filter', 'content_policy_violation'))
-               for e in events)
+    for event in events:
+        error = event.get('error')
+        if event.get('type') != 'error' or not isinstance(error, dict):
+            continue
+        if (error.get('type') in ('provider.content-filter', 'provider.content_filter') or
+                error.get('code') in ('content_filter', 'content_policy_violation')):
+            return True
+        if (error.get('type') == 'provider.invalid-request' and error.get('status') == 400 and
+                str(error.get('message', '')).startswith(
+                    'Upstream request failed: [invalid_request_error] Request blocked by content filter:')):
+            return True
+    return False
 
 
 def connection_reset_signal(events):
