@@ -33,7 +33,8 @@ def healthy():
 
 
 class RoutingTests(unittest.TestCase):
-    def router(self, root, queue=None, clock=None, check=None, fallback_override=None, free_override=None):
+    def router(self, root, queue=None, clock=None, check=None, fallback_override=None, free_override=None,
+               free_backup=None):
         self.calls = []
         queue = queue or {}
         clock = clock or [100]
@@ -50,7 +51,7 @@ class RoutingTests(unittest.TestCase):
         return QuotaRouter(CONFIG, root / 'route.json', factory,
                            check or (lambda model: {'model': model, 'cost': [{'input': 0, 'output': 0}]}),
                            clock=lambda: clock[0], probe_timeout=30, fallback_override=fallback_override,
-                           free_override=free_override)
+                           free_override=free_override, free_backup=free_backup)
 
     def test_luna_reuses_primary_cooldown_and_automatically_switches_back(self):
         with tempfile.TemporaryDirectory() as t:
@@ -252,6 +253,56 @@ class RoutingTests(unittest.TestCase):
         self.assertFalse(content_filter_signal([{
             'type': 'error', 'error': {**error, 'message': 'Upstream request failed: invalid parameter'},
         }]))
+
+    def test_go_connection_reset_uses_verified_backup_and_probes_first_model_once(self):
+        beam = 'opencode-go/beam-free'
+        reset = {'transport_error': 'OpenCode timeout', 'timed_out': True, 'connection_reset': True}
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            args, _, _ = fixtures.BatchTests().fixture(root, 1)
+            clock = [100]
+            checks = []
+            router = self.router(root, {PRIMARY: [limited()], FREE: [reset]}, clock, free_backup=beam,
+                                 check=lambda model: checks.append(model) or {'model': model})
+            report = run_batch(args, router)
+            self.assertEqual(report['record_models'], {beam: 1})
+            self.assertEqual(self.calls, [PRIMARY, FREE, beam])
+            self.assertEqual(checks, [FREE, beam])
+            clock[0] += CONFIG['primary_probe_seconds'] - 1
+            self.assertEqual(router.choose(), (beam, None))
+            router.observe(PRIMARY, None, limited())
+            clock[0] += 1
+            model, probe = router.choose()
+            self.assertEqual(model, FREE)
+            self.assertIsNotNone(probe)
+            self.assertEqual(router.choose(), (beam, None))
+            router.observe_go_connection(model, probe, healthy(), False)
+            self.assertEqual(router.choose(), (FREE, None))
+
+    def test_go_quota_or_content_refusal_does_not_use_transport_backup(self):
+        beam = 'opencode-go/beam-free'
+        refused = {'transport_error': 'Filtered', 'content_filtered': True, 'connection_reset': True}
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            router = self.router(root, {PRIMARY: [limited()], FREE: [limited(), refused]}, free_backup=beam)
+            router.call('fixture', root)
+            with self.assertRaises(ModelDeferred):
+                router.call('fixture', root)
+            self.assertTrue(router.call('fixture', root)['content_filtered'])
+            self.assertEqual(self.calls, [PRIMARY, FREE, FREE])
+
+    def test_both_go_connection_resets_defer_without_failing_the_record(self):
+        beam = 'opencode-go/beam-free'
+        reset = {'transport_error': 'OpenCode timeout', 'timed_out': True, 'connection_reset': True}
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            args, _, _ = fixtures.BatchTests().fixture(root, 1)
+            router = self.router(root, {PRIMARY: [limited()], FREE: [reset], beam: [reset]}, free_backup=beam)
+            report = run_batch(args, router)
+            self.assertEqual((report['succeeded'], report['failed'], report['deferred']), (0, 0, 1))
+            with self.assertRaises(ModelDeferred):
+                router.choose()
+            self.assertEqual(self.calls, [PRIMARY, FREE, beam])
 
     def test_known_reset_time_is_respected(self):
         with tempfile.TemporaryDirectory() as t:

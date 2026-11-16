@@ -316,8 +316,8 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
     attempts = args.out / 'attempts' / key
     attempts.mkdir(parents=True, exist_ok=True)
     seq = max([int(p.name) for p in attempts.iterdir() if p.is_dir() and p.name.isdigit()] + [0])
-    normal_failures, quota_redirects = 0, 0
-    redirect_budget = getattr(client, 'max_quota_redirects', int(bool(getattr(client, 'uses_fallback', False))))
+    normal_failures, model_redirects = 0, 0
+    redirect_budget = getattr(client, 'max_model_redirects', int(bool(getattr(client, 'uses_fallback', False))))
     request_budget = args.max_attempts + redirect_budget
     for _ in range(request_budget):
         seq += 1
@@ -339,6 +339,8 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
                 return {**base, 'state':'failed', 'failure_stage':'content_filter',
                         'error':CONTENT_FILTER_MESSAGE, 'attempt':f'attempts/{key}/{seq:03}'}
             if reply.get('transport_error'):
+                if reply.get('connection_reset') and reply.get('retry_on_fallback') and model_redirects >= redirect_budget:
+                    raise ModelDeferred('Go connection reset; waiting for model availability', metadata['model'], reply)
                 raise ValueError(reply['transport_error'])
             if reply.get('tool_events'):
                 raise ValueError('Unexpected tool event; conversion rejected')
@@ -376,8 +378,8 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
             error = str(exc)[:5000]
             metadata.update(state='failed', error=error, finished_at=now())
             write_json(attempt / 'metadata.json', metadata)
-            if reply.get('retry_on_fallback') and quota_redirects < redirect_budget:
-                quota_redirects += 1
+            if reply.get('retry_on_fallback') and model_redirects < redirect_budget:
+                model_redirects += 1
                 continue
             feedback = (review_feedback + '\n' + error).strip()
             normal_failures += 1
@@ -527,6 +529,7 @@ def make_client(args):
     config = strict_json_loads(routing.read_text()) if routing else None
     luna = AtlasLunaClient(args.timeout) if getattr(args, 'luna_fallback', False) else None
     go_override = getattr(args, 'go_fallback', None)
+    go_backup = getattr(args, 'go_backup', None)
     clients, lock = ({LUNA: luna} if luna else {}), threading.Lock()
     def factory(model):
         with lock:
@@ -539,11 +542,13 @@ def make_client(args):
             args.routing_policy['fallback_override'] = LUNA
         if go_override:
             args.routing_policy['free_fallback_override'] = go_override
+        if go_backup:
+            args.routing_policy['free_backup'] = go_backup
         return QuotaRouter(config, args.routing_state, factory,
                            lambda model: verify_free_model(args.opencode, model),
                            probe_timeout=args.timeout + 60, fallback_override=LUNA if luna else None,
-                           free_override=go_override)
-    if luna or go_override:
+                           free_override=go_override, free_backup=go_backup)
+    if luna or go_override or go_backup:
         raise ValueError('Fallback options require the configured primary model')
     return factory(args.model)
 
@@ -596,6 +601,7 @@ def build_parser():
                    help='Persistent quota reset/probe state shared by batches')
     p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
     p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
+    p.add_argument('--go-backup', help='Zero-priced Go model for explicit connection resets on the first Go model')
     p.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')
     p.add_argument('--language', default='zh-CN')
     p.add_argument('--limit', type=int, help='Maximum new/retried items in this invocation')

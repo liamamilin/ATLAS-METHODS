@@ -110,12 +110,15 @@ class QuotaRouter:
     uses_fallback = True
 
     def __init__(self, config, state_path, factory, free_check, clock=time.time, probe_timeout=300,
-                 fallback_override=None, free_override=None):
+                 fallback_override=None, free_override=None, free_backup=None):
         self.primary = config['primary']
         self.configured_free_fallback = config['free_fallback']
         self.free_fallback = free_override or self.configured_free_fallback
+        if free_backup == self.free_fallback:
+            raise ValueError('Go backup must differ from the first Go model')
+        self.free_models = (self.free_fallback, free_backup) if free_backup else (self.free_fallback,)
         self.luna = fallback_override
-        self.max_quota_redirects = 2 if self.luna else 1
+        self.max_model_redirects = len(self.free_models) + int(bool(self.luna))
         self.cooldown = config.get('primary_probe_seconds', 300)
         self.transient_cooldown = config.get('rate_probe_seconds', 30)
         if self.cooldown < 1 or self.transient_cooldown < 1:
@@ -124,7 +127,7 @@ class QuotaRouter:
         self.factory, self.free_check, self.clock = factory, free_check, clock
         self.probe_timeout = probe_timeout
         self.lock = threading.Lock()
-        self.free_until, self.free_evidence = 0, None
+        self.free_catalog = {}
 
     @contextmanager
     def state(self):
@@ -159,7 +162,41 @@ class QuotaRouter:
                     token = uuid.uuid4().hex
                     state[probe_key] = {'token': token, 'expires': t + self.probe_timeout}
                     return model, token
-            return self.free_fallback, None
+            cooling = state.get('go_transport_retry_at', {}) if len(self.free_models) > 1 else {}
+            leases = state.get('go_transport_probes', {})
+            for model in self.free_models:
+                if model not in cooling:
+                    return model, None
+                if t >= cooling[model] and t >= leases.get(model, {}).get('expires', 0):
+                    token = uuid.uuid4().hex
+                    state.setdefault('go_transport_probes', {})[model] = {
+                        'token': token, 'expires': t + self.probe_timeout,
+                    }
+                    return model, token
+            raise ModelDeferred('Go connections are in cooldown', self.free_fallback)
+
+    def observe_go_connection(self, model, probe, reply, reset):
+        with self.state() as state:
+            retry_times = state.setdefault('go_transport_retry_at', {})
+            leases = state.setdefault('go_transport_probes', {})
+            t = self.clock()
+            matching_probe = probe and leases.get(model, {}).get('token') == probe
+            if matching_probe:
+                leases.pop(model)
+                if not reply.get('transport_error') and not reply.get('limit'):
+                    retry_times.pop(model, None)
+                    self.event(state, 'go_connection_restored', model=model)
+                else:
+                    retry_times[model] = t + self.cooldown
+            elif reset and t >= retry_times.get(model, 0) and model not in leases:
+                retry_times[model] = t + self.cooldown
+                self.event(state, 'go_connection_reset', model=model, retry_at=retry_times[model])
+            return bool(reset and any(
+                other != model and (other not in retry_times or (
+                    t >= retry_times[other] and t >= leases.get(other, {}).get('expires', 0)
+                ))
+                for other in self.free_models
+            ))
 
     def event(self, state, action, **fields):
         state['events'] = (state['events'] + [{'at': self.clock(), 'action': action, **fields}])[-500:]
@@ -197,15 +234,15 @@ class QuotaRouter:
     def call(self, prompt, attempt):
         model, probe = self.choose()
         evidence = None
-        if model == self.free_fallback:
+        if model in self.free_models:
             with self.lock:
-                if self.clock() >= self.free_until:
+                until, evidence = self.free_catalog.get(model, (0, None))
+                if self.clock() >= until:
                     try:
-                        self.free_evidence = self.free_check(model)
+                        evidence = self.free_check(model)
                     except Exception as exc:
                         raise ModelDeferred(f'Free fallback unavailable: {type(exc).__name__}: {exc}', model) from exc
-                    self.free_until = self.clock() + 300
-                evidence = self.free_evidence
+                    self.free_catalog[model] = (self.clock() + 300, evidence)
         try:
             reply = self.factory(model).call(prompt, attempt)
         except Exception:
@@ -215,7 +252,7 @@ class QuotaRouter:
         unavailable = (reply.get('transport_error') and not reply.get('limit') and
                        (not reply.get('timed_out') or reply.get('connection_reset')) and
                        not reply.get('input_error') and not reply.get('content_filtered'))
-        redirect = model != self.free_fallback and bool(reply.get('limit'))
+        redirect = model not in self.free_models and bool(reply.get('limit'))
         if model == self.primary:
             selected = 'primary_probe' if probe else 'primary'
         elif model == self.luna:
@@ -223,11 +260,14 @@ class QuotaRouter:
             redirect = redirect or bool(probe and unavailable)
         else:
             selected = 'free_fallback'
+            reset = bool(unavailable and reply.get('connection_reset'))
+            if len(self.free_models) > 1 and (reset or probe):
+                redirect = self.observe_go_connection(model, probe, reply, reset)
         reply = {**reply, 'model': reply.get('model') or model, 'routing': {
             'selected': selected, 'primary': self.primary, 'free_fallback': self.free_fallback,
             'free_catalog_check': evidence},
             'retry_on_fallback': redirect}
-        if model == self.free_fallback and reply.get('limit'):
+        if model in self.free_models and reply.get('limit'):
             raise ModelDeferred('Fallback limited; waiting for model availability', model, reply)
         if unavailable and not redirect:
             # A provider/connection failure is not evidence that the Skill is

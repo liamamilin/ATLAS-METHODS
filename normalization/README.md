@@ -122,6 +122,8 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 
 默认 Go 模型不可用时，续跑命令可加 `--go-fallback opencode-go/crouton-alpha-free`。运行时仍按现有规则核验该模型已启用且输入、输出和缓存价格均为零。
 
+如需在两个已授权的 Go 模型间恢复传输故障，可加 `--go-fallback opencode-go/beam-free --go-backup opencode-go/iceman-contributor-free`。两者分别通过现有零价核验。发现明确的连接重置后，先用另一模型处理，随后用一条待处理任务探测恢复。额度限制继续退避，内容拒绝继续按单条记录。
+
 运行路由及批转换回归：
 
 ```bash
