@@ -20,6 +20,7 @@ import subprocess
 import tempfile
 import threading
 
+from attempt_storage import archive_session, release_session, save_request
 from jsonschema import Draft202012Validator
 from check_record import check_record, source_line_count, strict_json_loads
 from export_response_schema import response_schema
@@ -259,11 +260,16 @@ class OpenCodeClient:
             sid = next(iter(sessions)) if len(sessions) == 1 else None
             usage = {'available': False, 'reason': 'No session export with token counts'}
             finish = None
+            session_storage = None
             if sid:
                 try:
                     exported = subprocess.run([self.executable, 'session', 'export', '--standalone', sid],
                                               cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, timeout=60)
-                    (attempt / 'session.json').write_bytes(exported.stdout)
+                    archive = None
+                    try:
+                        archive = archive_session(attempt, exported.stdout)
+                    except (OSError, ValueError) as exc:
+                        session_storage = {'database_copy': 'retained', 'reason': type(exc).__name__}
                     session = strict_json_loads(exported.stdout.decode('utf-8'))
                     turns = [m.get('info', m) for m in session.get('messages', [])]
                     turns = [m for m in turns if isinstance(m.get('tokens'), dict)]
@@ -276,13 +282,17 @@ class OpenCodeClient:
                     elif any('Agent not found' in str(m.get('error', {})) for m in session.get('messages', [])):
                         usage = {'available': True, 'request_not_started': True, 'turns': [],
                                  'reason': 'OpenCode failed to resolve agent before a model turn'}
-                except (ValueError, UnicodeError, subprocess.SubprocessError):
-                    pass
+                    if (archive is not None and exported.returncode == 0 and not timed_out
+                            and not any('tool' in e.get('type', '') for e in events)):
+                        session_storage = release_session(
+                            attempt, session, sid, work, self.executable, env, archive)
+                except (OSError, ValueError, UnicodeError, subprocess.SubprocessError) as exc:
+                    session_storage = {'database_copy': 'retained', 'reason': type(exc).__name__}
             text = ''.join(e.get('part', {}).get('text', '') for e in events if e.get('type') == 'text')
             (attempt / 'response.txt').write_text(text, encoding='utf-8')
             # Preserve usage even when a request returned bad JSON or timed out.
             reply = {'text': text, 'session_id': sid, 'usage': usage, 'finish': finish, 'model': self.model,
-                     'disabled_mcp_servers': disabled,
+                     'disabled_mcp_servers': disabled, 'session_storage': session_storage,
                      'input_transport': 'controlled_stdin' if piped else 'argv',
                      'limit': limit_signal(events),
                      'content_filtered': content_filter_signal(events),
@@ -328,7 +338,7 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
                     'prompt_sha256': digest(prompt.encode()), 'input_files': inputs,
                     'response_schema_sha256': digest(json.dumps(contract, sort_keys=True).encode())}
         write_json(attempt / 'metadata.json', metadata)
-        (attempt / 'request.txt').write_text(prompt, encoding='utf-8')
+        save_request(attempt, prompt)
         reply = {}
         try:
             reply = client.call(prompt, attempt)

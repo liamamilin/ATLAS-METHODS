@@ -66,7 +66,9 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 - `state.json`、`failures.jsonl`、`remaining.selection.json`：逐条进度、最后失败及剩余清单。成功标记缺少实际文件时不算完成；保存文件后中断可从文件恢复。输出目录带运行锁，避免两个批进程同时写入。
 - `inputs/`、`attempts/*/*/metadata.json`：实际输入路径、范围、哈希、请求摘要、检查结果、模型会话 ID 和用量，包括失败请求。
 - `report.json`：累计结果、当前调用的跳过/尝试数和可取得的用量。OpenCode 的 cost 只是其报告的估计；0 不证明免费，未核实账单费用保持未知。reasoning/cache 可能与 input/output 重叠，不机械相加。
-- `attempts/` 中的完整请求、原响应、事件、会话和 stderr：持久保留本地并由 `.gitignore` 排除，避免把请求内上游原文批量公开。
+- `attempts/` 中的完整请求、原响应、事件、会话和 stderr：持久保留本地并由 `.gitignore` 排除，避免把请求内上游原文批量公开。新请求以批次内 `.requests/<sha256>.txt` 保存唯一内容，每个 attempt 的 `request.txt` 是只读硬链接；禁止原地修改，新的反馈必须创建新 attempt。来源身份和结果仍按 collection_id + commit 分开。
+- 新会话完整导出为 `session.json.gz`，先原子落盘、fsync、解压逐字节核验，再检查导出的会话 ID、专用标题、临时目录、无父会话和 idle 时间。只清除本次已结束、无工具事件的专用转换会话在 OpenCode 数据库中的重复副本；历史会话、交互聊天、无法验证或导出失败的会话保留。`session-storage.json` 和 metadata 记录归档哈希及删除结果。数据库可复用释放的页，不强制 VACUUM。
+- 原响应 `response.txt`、事件 `events.jsonl`、用量及状态保持原格式，快照校验和额度恢复照常使用。需恢复完整会话时，将 `session.json.gz` 解压至临时 JSON，再用 `opencode session import` 导入。旧明文会话和历史 `.storage-archives` 仍可读取，不要求迁移。
 
 每次转换启动独立临时 OpenCode Location，设置 cwd 与 PWD 一致，使用禁止全部工具操作的专用 primary agent，不加载本项目为编码任务。短请求的标准输入设为 DEVNULL；超过 120,000 字节的长请求通过单独受控管道传入完整提示词，避免命令行参数长度限制，不截断入口，也不继承父进程 heredoc。允许正常首轮回复，避免 steps=1 触发强制总结，工具仍全部禁止。固定 CLI 会话标题，不要求辅助模型生成标题。没有运行上游命令、脚本或 hooks；不会让模型自行取文件或补造阅读范围。权限字段依据 [OpenCode permissions](https://opencode.ai/docs/permissions/)，实际配置加载及 JSON/用量解析另有回归测试。
 

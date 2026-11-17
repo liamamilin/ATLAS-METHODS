@@ -192,9 +192,14 @@ assert c['agents']['atlas-normalizer']['steps'] == 2
 assert c['mcp']['servers'] == {name:{'type':'local','command':['false'],'disabled':True} for name in ['blender','godot-ai']}
 if sys.argv[1]=='run':
     print(json.dumps({'type':'text','sessionID':'fixture-session','part':{'text':'{"content":{},"gaps":[]}'}}))
+elif sys.argv[1:3]==['session','delete']:
+    counter=Path(sys.argv[0]).parent/'deleted-sessions'
+    counter.write_text(counter.read_text()+'deleted\\n' if counter.exists() else 'deleted\\n')
 else:
     assert sys.argv[1:3]==['session','export']
-    print(json.dumps({'messages':[{'type':'assistant','finish':'stop','tokens':{'input':17,'output':9},'cost':0}]}))
+    print(json.dumps({'info':{'id':'fixture-session','title':'ATLAS SkillRecord conversion',
+                             'location':{'directory':str(Path.cwd())},'time':{'busy':1,'idle':2}},
+                      'messages':[{'type':'assistant','finish':'stop','tokens':{'input':17,'output':9},'cost':0}]}))
 ''')
             executable.chmod(0o755)
             attempt = root / 'attempt'
@@ -224,6 +229,17 @@ else:
             self.assertNotIn('transport_error', large_reply)
             self.assertEqual(large_reply['input_transport'], 'controlled_stdin')
             self.assertEqual((root/'config-queries').read_text().splitlines(), ['query'])
+            self.assertTrue((attempt/'session.json.gz').exists())
+            self.assertFalse((attempt/'session.json').exists())
+            self.assertEqual(reply['session_storage']['database_copy'], 'deleted')
+            self.assertEqual((root/'deleted-sessions').read_text().splitlines(), ['deleted', 'deleted'])
+            failed_archive = root/'failed-archive'; failed_archive.mkdir()
+            with patch('batch_convert.archive_session', side_effect=OSError('disk full')):
+                retained = client.call('fixture prompt', failed_archive)
+            self.assertEqual(retained['session_storage']['database_copy'], 'retained')
+            self.assertEqual(retained['usage']['turns'][0]['tokens']['input'], 17)
+            self.assertEqual((root/'deleted-sessions').read_text().splitlines(), ['deleted', 'deleted'])
+            self.assertEqual((failed_archive/'response.txt').read_text(), '{"content":{},"gaps":[]}')
 
     def test_unknown_mcp_configuration_fails_before_model_request(self):
         with tempfile.TemporaryDirectory() as t:
