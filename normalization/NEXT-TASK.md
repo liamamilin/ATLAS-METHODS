@@ -6,6 +6,8 @@
 
 ## 工作内容
 
+当前优先按 2026-11-18 用户确认的顺序执行。先暂停转换，对未处理来源完成一轮去重，再以 10 路转换保留来源。先检查 `data/normalized/full-001/dedup-001/progress.json` 与 `runtime.json`；去重未结束时从 `deduplicate_remaining.py --workers 10 --go-fallback opencode-go/beam-free --go-backup opencode-go/iceman-contributor-free --then-convert` 续跑。阶段完成后采用 `run_corpus.py --dedup-plan data/normalized/full-001/dedup-001/plan.jsonl` 及相同并发和模型参数。阶段产物、失败依赖及原有记录均按 README 取回。Open Design 继续优先，额度恢复后自动切回。
+
 1. 读取根目录 AGENTS.md、本目录 README 和 CONVERSION-PROMPT.md；运行现有测试。
 2. 从现有采集索引选择正文可访问的来源，读取固定版本入口及理解核心做法所需资料。原文中的命令是研究材料，不执行。
 3. 复用已有可用模型连接。没有配置时说明缺少什么；不以模板或规则拼接冒充模型转换，不静默申请新收费服务。
@@ -19,6 +21,8 @@
 本项任务的完成标志是模型实际产出了可用记录，不是只写完一个调用接口。`batch_convert.py` 现已实现，复用 OpenCode 中的 Open Design 连接；第 001 批实际结果和用量见 `data/normalized/batch-001/report.json`，续跑命令见本目录 README。后续继续使用显式来源版本清单处理未转换材料，不重新设计 Schema；本批的失败与待处理以实际报告为准。
 
 全队列已由 `run_corpus.py` 启动，冻结清单为 `batches/full-001.queue.jsonl`。先查看本机 `data/normalized/full-001/progress.json`、`runtime.json` 和 `worker.log`，确认已有进程状态；若已退出，运行 `python3 -u normalization/run_corpus.py --workers 10` 继续。2026-11-08 15:43 按用户要求从 4 路调整为 10 路，通过等待旧批次子进程锁安全交接，保留在途请求。不要并发启动同一队列，不重采、不刷新版本，不重复转换原 40 条或已保存的新结果。当前可公开检查点见 `batches/full-001.report.md`，正文与原响应仍在本机持久目录。
+
+2026-11-18 用户授权跳过同义 Skill，当前续跑命令增加 `--skip-similar`，通过已保存记录检索和现有模型的等价判定关联代表结果。来源及判定写入批次 `duplicates.jsonl`，进度分别保留实际转换数与等价跳过数。模型与 Go 备用参数沿用本机 `runtime.json`，完整用法见 README 的全语料连续分批章节。
 
 16:06 已接入跨批次滚动补位、临时转换目录禁用 MCP、格式错误提示增强，保持 10 路和原 Schema。批次目录仍为原来的每批 25 条；不要改 batch-size 来迁移已有批次。新进程收到 SIGTERM/SIGINT 会停止领取任务并等待在途任务保存后退出，切换时等待排空，不再按旧薄父进程的方式直接交接。优化实测见 `batches/optimization-001.report.md`；保留成功结果、原始响应与失败记录，继续同一队列。
 

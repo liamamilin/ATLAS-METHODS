@@ -14,6 +14,8 @@
 # Corpus run bodies and full diagnostics remain local until separately licensed.
 /full-*/batches/
 /full-*/worker.log
+/full-*/dedup-worker.log
 /full-*/progress.json
 /full-*/runtime.json
+/full-*/dedup-*/
 /full-*/recoveries/*/previous-states.jsonl.gz

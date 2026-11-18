@@ -78,6 +78,25 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 ## 全语料连续分批
 
+2026-11-18 当前按用户要求先对未处理来源完成一轮去重，再转换保留条目。当前步骤由 `data/normalized/full-001/dedup-001/progress.json` 决定，去重进程信息在同目录的 `runtime.json`。实际命令为
+
+```bash
+/Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/deduplicate_remaining.py \
+  --workers 10 --go-fallback opencode-go/beam-free \
+  --go-backup opencode-go/iceman-contributor-free --then-convert
+```
+
+去重先核对实际输入和关联材料，再用现有模型判断候选是否保留同一做法的关键条件和限制。未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点只转换保留来源。重复来源在代表转换成功后关联到实际结果；代表失败时保留 `pending_duplicate` 及依赖。断点保留已完成的判定，模型暂不可用时继续退避等待。候选检索与模型判断仍可能漏判或误判。
+
+已完成去重后的转换续跑命令为
+
+```bash
+/Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/run_corpus.py \
+  --workers 10 --go-fallback opencode-go/beam-free \
+  --go-backup opencode-go/iceman-contributor-free \
+  --dedup-plan data/normalized/full-001/dedup-001/plan.jsonl
+```
+
 `run_corpus.py` 使用现有逐条转换、来源检查、保存与汇总函数，以一个有界线程池滚动处理文件队列。冻结的 [full-001.queue.jsonl](batches/full-001.queue.jsonl) 包含剩余 55,663 个固定来源版本；已完成的 40 条从队列排除，实际结果文件可访问且结构核验通过后才复用。所有已保存原文共 55,703 条，历史 99 条未导出入口单独保留在 [unavailable.jsonl](batches/full-001.unavailable.jsonl)，不当作已转换。
 
 从项目根目录启动或在进程退出后继续同一队列：
@@ -87,6 +106,8 @@ python3 -u normalization/run_corpus.py --workers 10
 ```
 
 程序默认每批 25 条、4 个 worker；本机按用户要求显式 `--workers 10`，续跑时保留此参数。25 条的批次只作为目录与保存单位，10 个 worker 跨批次共享；完成一条即补一条，旧批次慢任务未结束时也可开始下一批，不改变已冻结批次的来源归属。不设置批次数上限、不逐批等待确认。已完成批次复用，失败记录后继续。额度导致模型不可用时，保存 deferred/pending，暂停领取更多材料，等待后再试，不把整库快速写成 deferred。
+
+用户授权跳过同义 Skill 时，续跑命令加 `--skip-similar`。程序从实际保存的转换结果中检索至多两个候选，核对当前供给的正文、关联文本、遗漏说明和未供给包文件的清单哈希。供给完全相同可直接关联；措辞或格式不同则用现有模型核对步骤、条件、权限、阈值与重要限制，明确等价后写为 `skipped_duplicate`。相似判定属于模型判断，检索仍可能漏掉近义表达。逐次比较的响应、判定和用量保存在各批次的 `similarity_checks/`，原始来源及代表结果路径保存在 `duplicates.jsonl`。代表文件缺失或校验变化时重新排入待处理，成功结果继续复用。进度及检查点报告增加 `skipped_duplicate`，`remaining` 为成功与等价跳过之外的来源数量。
 
 原批次目录、selection、state、records、attempts 与 report 继续沿用。首次交接会等待仍在运行的旧批转换子进程锁，复用其稍后写出的结果。新滚动进程收到 SIGTERM/SIGINT 后停止领取新任务，等待在途任务完成并保存，最后释放队列与批次锁；日常切换应等待这一过程退出后再续跑。成功结果缺失时不复用，保存成功文件而未更新 state 的中断可由原有恢复逻辑处理。
 

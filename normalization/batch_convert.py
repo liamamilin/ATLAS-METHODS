@@ -9,6 +9,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 import fcntl
+from functools import lru_cache
 import gzip
 import hashlib
 import json
@@ -89,14 +90,26 @@ def selected_rows(index, selection):
     return found
 
 
+@lru_cache(maxsize=4)
+def _manifest_version(path, mtime_ns, size):
+    """The timestamp and size in the cache key invalidate edited manifests."""
+    manifest = strict_json_loads(path.read_text(encoding='utf-8'))
+    return manifest, {f['path']: f for f in manifest['files']}
+
+
+def repository_manifest(path):
+    path = path.resolve()
+    stat = path.stat()
+    return _manifest_version(path, stat.st_mtime_ns, stat.st_size)
+
+
 def prepare_input(row, item, index):
     if row.get('state') != 'collected':
         raise ValueError('entry was not saved by collector')
     manifest_path = (index.parent / row['repository_manifest']).resolve()
-    manifest = strict_json_loads(manifest_path.read_text(encoding='utf-8'))
+    manifest, files = repository_manifest(manifest_path)
     if (manifest['repository'], manifest['commit_sha']) != (row['repository'], row['commit_sha']):
         raise ValueError('manifest identity mismatch')
-    files = {f['path']: f for f in manifest['files']}
     root = (index.parent / row['collection_root']).resolve()
     requests = [{'path': row['skill_path'], **({'ranges': item['entry_ranges']} if 'entry_ranges' in item else {})}]
     requests += item.get('references', [])
@@ -400,23 +413,28 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
 
 
 def summarize(args, selection, states, invocation):
-    records, failures, remaining = [], [], []
+    records, failures, remaining, duplicates = [], [], [], []
     for item in selection:
         state = states.get(key_of(item), {'state': 'pending'})
         if state['state'] == 'succeeded':
             records.append(strict_json_loads((args.out / state['record']).read_text(encoding='utf-8')))
+        elif state['state'] == 'skipped_duplicate':
+            duplicates.append(state)
         else:
             remaining.append(item)
             if state['state'] == 'failed':
                 failures.append(state)
     write_jsonl(args.out / 'records.jsonl', records)
     write_jsonl(args.out / 'failures.jsonl', failures)
+    if duplicates or (args.out / 'duplicates.jsonl').exists():
+        write_jsonl(args.out / 'duplicates.jsonl', duplicates)
     write_json(args.out / 'remaining.selection.json', {'items': remaining})
     totals = {'input': 0, 'output': 0, 'reasoning': 0, 'cache_read': 0, 'cache_write': 0}
     by_model = {}
     sessions, atlas_requests, model_sessions, pre_model_failures, unavailable, reported_cost = 0, 0, 0, 0, 0, 0.0
     attempts = []
-    attempt_paths = sorted((args.out / 'attempts').glob('*/*/metadata.json'))
+    similarity_paths = sorted((args.out / 'similarity_checks').glob('*/*/metadata.json'))
+    attempt_paths = sorted((args.out / 'attempts').glob('*/*/metadata.json')) + similarity_paths
     for path in attempt_paths:
         d = strict_json_loads(path.read_text(encoding='utf-8'))
         if not d.get('session_id'):
@@ -452,11 +470,13 @@ def summarize(args, selection, states, invocation):
     report = {'generated_at': now(), 'schema_version': '0.1.1', 'model': args.model,
               'record_models': record_models, 'routing_policy': getattr(args, 'routing_policy', None),
               'selected': len(selection), 'succeeded': len(records), 'failed': len(failures),
+              'skipped_duplicate': len(duplicates),
               'pending': len(remaining) - len(failures), 'invocation': invocation,
               'deferred': sum(states.get(key_of(i), {}).get('state') == 'deferred' for i in selection),
               'repositories': len({r['source']['repository'] for r in records}),
               'review_status': 'unreviewed; semantic spot checks reported separately',
               'usage': {'attempts_total': len(attempt_paths), 'opencode_sessions': sessions - atlas_requests,
+                        'similarity_checks': len(similarity_paths),
                         'atlas_requests': atlas_requests, 'model_sessions': model_sessions,
                         'pre_model_failures': pre_model_failures, 'sessions_without_usage': unavailable,
                         'tokens': totals, 'opencode_reported_cost': reported_cost,
@@ -483,6 +503,37 @@ def retained_content_filter(args, state, row):
                 continue
         return content_filter_signal(events)
     except (OSError, ValueError, UnicodeError):
+        return False
+
+
+def valid_duplicate(state, directory, schema):
+    if state.get('state') != 'skipped_duplicate':
+        return False
+    try:
+        target = state['duplicate_of']
+        record_path = directory / target['record_path']
+        data = record_path.read_bytes()
+        record = strict_json_loads(data.decode('utf-8'))
+        if target.get('match') == 'planned_equivalent':
+            from dedup_plan import read_decision
+            decision = read_decision(directory / target['plan_decision'], target['plan_sha256'],
+                                     state['source'], target['source'])
+            if decision['status'] != 'duplicate':
+                return False
+        if target.get('match') == 'model_equivalent':
+            comparison = directory / target['comparison']
+            metadata = strict_json_loads(comparison.read_text())
+            response = strict_json_loads((comparison.parent / 'response.txt').read_text())
+            if (metadata.get('state') != 'succeeded' or response != metadata.get('decision')
+                    or response.get('equivalent') is not True or response.get('reason') != target.get('reason')
+                    or metadata.get('source') != state.get('source')
+                    or metadata.get('input_fingerprint') != state.get('input_fingerprint')
+                    or Path(metadata['candidate_record']).resolve() != record_path.resolve()
+                    or metadata.get('candidate_record_sha256', target['record_sha256']) != target['record_sha256']):
+                return False
+        return (digest(data) == target['record_sha256'] and record['source'] == target['source']
+                and not check_record(record, schema)['errors'])
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
         return False
 
 
@@ -517,6 +568,10 @@ def prepare_run(args):
             continue
         if states.get(key, {}).get('state') == 'succeeded':
             # A state flag without its output is not a reusable result.
+            states.pop(key)
+        if states.get(key, {}).get('state') == 'skipped_duplicate':
+            if row and states[key].get('source') == source_of(row) and valid_duplicate(states[key], args.out, schema):
+                continue
             states.pop(key)
         if retained_content_filter(args, states.get(key, {}), row):
             previous = states[key]

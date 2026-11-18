@@ -1,7 +1,7 @@
 """Run the frozen corpus queue as small resumable batches using batch_convert.
 
 New record bodies stay local; snapshots publish provenance/paths and progress.
-No upstream commands run and no source is refreshed or semantically deduplicated.
+No upstream commands run and no source is refreshed.
 """
 import argparse
 from collections import Counter, deque
@@ -22,8 +22,10 @@ from urllib.parse import unquote
 
 from batch_convert import (HERE, accept_future, build_parser, convert_one, finish_run, key_of,
                            load_selection, make_client, now, prepare_run, selected_rows,
-                           source_of, summarize, write_json, write_jsonl)
+                           repository_manifest, source_of, summarize, valid_duplicate, write_json, write_jsonl)
 from check_record import check_record, strict_json_loads
+from duplicate_skills import SkillDeduplicator
+from dedup_plan import load_plan, planned_state
 from luna_client import LUNA
 from model_routing import limit_signal
 
@@ -57,8 +59,7 @@ def read_queue(path):
 def plan_references(row, index, budget=40000):
     """Direct local text guides only. Freeze choices; do not recursively crawl."""
     entry = (index.parent / row['raw_path']).read_bytes().decode('utf-8')
-    manifest = json.loads((index.parent / row['repository_manifest']).read_text())
-    files = {f['path']: f for f in manifest['files']}
+    _, files = repository_manifest(index.parent / row['repository_manifest'])
     base = PurePosixPath(row['skill_path']).parent.as_posix()
     candidates = re.findall(r'\[[^\]]*\]\(([^)\s]+)', entry)
     candidates += re.findall(r'`([^`\n]+\.(?:md|txt))`', entry, flags=re.I)
@@ -266,7 +267,7 @@ def snapshot(args):
         identity = (row['source']['collection_id'], row['source']['commit_sha'])
         if identity not in collected or row['source'] != source_of(collected[identity]):
             raise ValueError('Snapshot source differs from actual collection index')
-    failed = {}
+    failed, duplicates, pending_duplicates = {}, {}, {}
     totals = Counter()
     by_model = {}
     sessions, model_sessions, unknown, unfinished = 0, 0, 0, 0
@@ -275,9 +276,34 @@ def snapshot(args):
             if 'collection_id' not in state:
                 continue
             identity = (state['collection_id'], state['commit_sha'])
+            if state['state'] == 'skipped_duplicate' and identity not in identities:
+                if identity not in allowed or not valid_duplicate(state, path.parent, schema):
+                    raise ValueError('Invalid duplicate representative: ' + str(path))
+                target = state['duplicate_of']
+                representative = (target['source']['collection_id'], target['source']['commit_sha'])
+                if representative not in identities:
+                    raise ValueError('Duplicate representative is outside this snapshot')
+                target = {**target, 'record_path': os.path.relpath(path.parent / target['record_path'], checkpoint)}
+                if 'comparison' in target:
+                    target['comparison'] = os.path.relpath(path.parent / target['comparison'], checkpoint)
+                if 'plan_decision' in target:
+                    target['plan_decision'] = os.path.relpath(path.parent / target['plan_decision'], checkpoint)
+                duplicates[identity] = {'source': state['source'], 'duplicate_of': target,
+                                        'detail_path': os.path.relpath(path, checkpoint)}
             if state['state'] == 'failed' and identity not in identities:
                 failed[identity] = {'failure_stage': state.get('failure_stage'), 'detail_path': os.path.relpath(path, checkpoint)}
-    for path in sorted((args.out / 'batches').glob('*/attempts/*/*/metadata.json')):
+            if state['state'] == 'pending_duplicate' and identity not in identities:
+                pending_duplicates[identity] = {'state': 'pending_duplicate', 'representative': state['representative'],
+                                                'detail_path': os.path.relpath(path, checkpoint)}
+    duplicate_rows = selected_rows(args.index, [
+        {'collection_id': identity[0], 'commit_sha': identity[1]} for identity in duplicates
+    ])
+    for identity, duplicate in duplicates.items():
+        if identity not in duplicate_rows or duplicate['source'] != source_of(duplicate_rows[identity]):
+            raise ValueError('Skipped source differs from actual collection index')
+    attempt_paths = sorted((args.out / 'batches').glob('*/attempts/*/*/metadata.json'))
+    attempt_paths += sorted((args.out / 'batches').glob('*/similarity_checks/*/*/metadata.json'))
+    for path in attempt_paths:
         d = json.loads(path.read_text())
         unfinished += not bool(d.get('finished_at'))
         if not d.get('session_id'):
@@ -297,15 +323,19 @@ def snapshot(args):
             for k in ['read', 'write']:
                 totals['cache_' + k] += t.get('cache', {}).get(k, 0) or 0
                 model_totals['cache_' + k] += t.get('cache', {}).get(k, 0) or 0
-    remaining = [dict(i, state='failed' if (i['collection_id'], i['commit_sha']) in failed else 'pending',
-                      **failed.get((i['collection_id'], i['commit_sha']), {}))
-                 for i in items if (i['collection_id'], i['commit_sha']) not in identities]
+    remaining = [{**i, 'state': 'failed' if (i['collection_id'], i['commit_sha']) in failed else 'pending',
+                  **pending_duplicates.get((i['collection_id'], i['commit_sha']), {}),
+                  **failed.get((i['collection_id'], i['commit_sha']), {})}
+                 for i in items if (i['collection_id'], i['commit_sha']) not in identities | duplicates.keys()]
     checkpoint.mkdir(parents=True, exist_ok=False)
     write_jsonl(checkpoint / 'index.jsonl', index_rows)
     write_jsonl(checkpoint / 'remaining.jsonl', remaining)
+    if duplicates:
+        write_jsonl(checkpoint / 'duplicates.jsonl', duplicates.values())
     report = {'as_of': now(), 'corpus_saved_entries': len(items) + len(baseline), 'reused': len(baseline),
               'new_succeeded': len(identities) - len(baseline), 'total_succeeded': len(identities),
               'remaining': len(remaining), 'failed': len(failed),
+              'skipped_duplicate': len(duplicates),
               'pending_including_active_or_deferred': len(remaining) - len(failed),
               'usage_this_run': {'sessions': sessions, 'model_sessions': model_sessions,
                                  'sessions_without_usage': unknown, 'unfinished_attempt_records': unfinished,
@@ -316,6 +346,50 @@ def snapshot(args):
     write_json(checkpoint / 'report.json', report)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
+
+
+def skip_identical(args, queue, deduplicator, stop_event, publish_report):
+    """Apply byte-verified duplicate decisions before waiting on model services."""
+    schema = strict_json_loads((HERE / 'skill-record.v0.1.1.schema.json').read_text())
+    limit = len(queue) if args.max_batches is None else min(len(queue), args.max_batches * args.batch_size)
+    for start in range(0, limit, args.batch_size):
+        if stop_event.is_set():
+            return
+        items = queue[start:start + args.batch_size]
+        candidates = set()
+        for item in items:
+            row = deduplicator.rows.get((item['collection_id'], item['commit_sha']))
+            if (row and key_of(item) not in deduplicator.entries
+                    and row['sha256'] in deduplicator.hashes):
+                candidates.add(key_of(item))
+        if not candidates:
+            continue
+        directory = args.out / 'batches' / f'{start // args.batch_size + 1:04}'
+        state_path = directory / 'state.json'
+        previous = strict_json_loads(state_path.read_text()) if state_path.is_file() else {}
+        candidates = {key for key in candidates if previous.get(key, {}).get('state') != 'failed'
+                      and not valid_duplicate(previous.get(key, {}), directory, schema)}
+        if not candidates:
+            continue
+        selection = prepare_batch(items, args.index, directory)
+        with (directory / '.run.lock').open('a') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            batch_args = build_parser().parse_args([
+                '--selection', str(selection), '--out', str(directory), '--index', str(args.index),
+            ])
+            if (directory / 'report.json').is_file():
+                batch_args.routing_policy = strict_json_loads((directory / 'report.json').read_text()).get('routing_policy')
+            context = prepare_run(batch_args)
+            for item, row in context['todo']:
+                if key_of(item) not in candidates:
+                    continue
+                state = deduplicator.convert(item, row, batch_args, None, context['schema'], context['contract'],
+                                             exact_only=True)
+                if state:
+                    context['states'][key_of(item)] = state
+            write_json(directory / 'state.json', context['states'])
+            report = summarize(batch_args, context['selection'], context['states'], context['invocation'])
+            publish_report(start // args.batch_size + 1, report)
 
 
 def run(args, client=None, stop_event=None, deferred_delay=300):
@@ -330,14 +404,36 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
     baseline_ids = {(r['source']['collection_id'], r['source']['commit_sha']) for _,r in baseline}
     if baseline_ids & {(i['collection_id'],i['commit_sha']) for i in queue}:
         raise ValueError('Frozen queue includes an already completed baseline version')
+    plan = {}
+    plan_rows = {}
+    record_paths = {key_of(item): args.out / 'batches' / f'{n // args.batch_size + 1:04}' / 'records' / (key_of(item) + '.json')
+                    for n, item in enumerate(queue)}
+    record_paths.update({path.stem: path for path, _ in baseline})
+    if getattr(args, 'dedup_plan', None):
+        plan = load_plan(args.dedup_plan, hashlib.sha256(args.queue.read_bytes()).hexdigest())
+        sources = [strict_json_loads(path.read_text())['source'] for path, _ in plan.values()]
+        plan_rows = selected_rows(args.index, sources)
+        if any(key not in record_paths for key in plan):
+            raise ValueError('Deduplication plan includes a source outside the frozen queue')
+    deduplicator = None
+    if getattr(args, 'skip_similar', False):
+        rows = selected_rows(args.index, queue + [
+            {'collection_id': r['source']['collection_id'], 'commit_sha': r['source']['commit_sha']}
+            for _, r in baseline
+        ])
+        saved_paths = [path for path, _ in baseline] + sorted((args.out / 'batches').glob('*/records/*.json'))
+        saved = ((path, strict_json_loads(path.read_text())) for path in saved_paths)
+        deduplicator = SkillDeduplicator(args.index, rows, saved)
+        del saved, saved_paths
     progress_path = args.out / 'progress.json'
+    schema = json.loads((HERE / 'skill-record.v0.1.1.schema.json').read_text())
     progress = {'batches': {}}
     stop_event = stop_event or threading.Event()
     write_json(args.out / 'runtime.json', {'pid': os.getpid(), 'started_at': now(), 'command': sys.argv,
                                           'scheduler': 'rolling', 'workers': args.workers})
     contexts, ready, futures = {}, deque(), {}
     next_batch, exhausted, retry_at = 1, False, None
-    stats = {'scheduled': 0, 'finished': 0, 'succeeded': 0, 'failed': 0, 'deferred': 0,
+    stats = {'scheduled': 0, 'finished': 0, 'succeeded': 0, 'failed': 0, 'deferred': 0, 'skipped_duplicate': 0,
              'occupied_worker_seconds': 0.0, 'max_in_flight': 0}
     started = None
 
@@ -348,14 +444,20 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                         active_batch=min(contexts) if contexts else None, active_batches=sorted(contexts),
                         completed_batches=sum(b['pending'] == 0 for b in progress['batches'].values()),
                         new_succeeded=sum(b['succeeded'] for b in progress['batches'].values()),
+                        skipped_duplicate=sum(b.get('skipped_duplicate', 0) for b in progress['batches'].values()),
                         failed=sum(b['failed'] for b in progress['batches'].values()),
                         scheduler_run={**stats, 'elapsed_seconds': elapsed, 'in_flight': len(futures),
                                        'worker_occupation_ratio': occupied/(elapsed*args.workers) if elapsed else 0})
-        progress['remaining'] = len(queue) - progress['new_succeeded']
+        progress['remaining'] = len(queue) - progress['new_succeeded'] - progress['skipped_duplicate']
         write_json(progress_path, progress)
 
     def save_report(n, report):
         progress['batches'][str(n)] = {k: report[k] for k in ('selected', 'succeeded', 'failed', 'pending')}
+        progress['batches'][str(n)]['skipped_duplicate'] = report.get('skipped_duplicate', 0)
+
+    def publish_duplicate_report(n, report):
+        save_report(n, report)
+        publish('checking_duplicates')
 
     def close_if_finished(n):
         context = contexts[n]
@@ -379,7 +481,11 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
             saved = json.loads(state_path.read_text()) if state_path.exists() else {}
             available = sum(s.get('state') == 'succeeded' and (directory / s['record']).is_file()
                             for s in saved.values())
-            if old and old['pending'] == 0 and available == old['succeeded'] and (not args.retry_failed or old['failed'] == 0):
+            duplicates_valid = all(valid_duplicate(s, directory, schema)
+                                   for s in saved.values() if s.get('state') == 'skipped_duplicate')
+            if (old and not old.get('skipped_duplicate') and old['pending'] == 0
+                    and available == old['succeeded'] and duplicates_valid
+                    and (not args.retry_failed or old['failed'] == 0)):
                 save_report(n, old)
                 lock.close()
                 return
@@ -395,6 +501,16 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                 command.extend(['--go-backup', args.go_backup])
             batch_args = build_parser().parse_args(command)
             context = prepare_run(batch_args)
+            if plan:
+                todo = []
+                for item, row in context['todo']:
+                    state = planned_state(batch_args, item, row, plan[key_of(item)], record_paths, schema) if key_of(item) in plan else None
+                    if state is None:
+                        todo.append((item, row))
+                    else:
+                        context['states'][key_of(item)] = state
+                context['todo'] = todo
+                write_json(directory / 'state.json', context['states'])
             if client is None:
                 client = make_client(batch_args)
             if getattr(client, 'uses_fallback', False):
@@ -416,6 +532,11 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
             raise
 
     try:
+        if deduplicator:
+            for path in sorted((args.out / 'batches').glob('*/report.json')):
+                save_report(int(path.parent.name), strict_json_loads(path.read_text()))
+            publish('checking_duplicates')
+            skip_identical(args, queue, deduplicator, stop_event, publish_duplicate_report)
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             while True:
                 if retry_at is not None and time.monotonic() >= retry_at:
@@ -441,7 +562,8 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                         stats['first_submitted_at'] = now()
                     old = context['states'].get(key_of(item), {})
                     submitted = time.monotonic()
-                    future = pool.submit(convert_one, item, row, context['args'], client,
+                    convert = deduplicator.convert if deduplicator else convert_one
+                    future = pool.submit(convert, item, row, context['args'], client,
                                          context['schema'], context['contract'],
                                          old.get('review_feedback') or (old.get('error', '') if old.get('state') == 'failed' else ''))
                     futures[future] = (n, item, row, submitted)
@@ -457,6 +579,34 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                         publish('waiting_for_model')
                         stop_event.wait(min(10, max(0, retry_at-time.monotonic())))
                         continue
+                    if plan:
+                        by_batch = {}
+                        for key, entry in plan.items():
+                            decision = strict_json_loads(entry[0].read_text())
+                            if decision['status'] != 'duplicate':
+                                continue
+                            directory = record_paths[key].parent.parent
+                            if args.max_batches and int(directory.name) > args.max_batches:
+                                continue
+                            by_batch.setdefault(directory, []).append((key, entry, decision['source']))
+                        for directory, entries in by_batch.items():
+                            with (directory / '.run.lock').open('a') as lock:
+                                fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+                                state_path = directory / 'state.json'
+                                states = strict_json_loads(state_path.read_text())
+                                batch_args = build_parser().parse_args([
+                                    '--selection', str(directory / 'selection.json'), '--out', str(directory),
+                                    '--index', str(args.index),
+                                ])
+                                previous = strict_json_loads((directory / 'report.json').read_text())
+                                batch_args.routing_policy = previous.get('routing_policy')
+                                for key, entry, source in entries:
+                                    item = {'collection_id': source['collection_id'], 'commit_sha': source['commit_sha']}
+                                    row = plan_rows[(item['collection_id'], item['commit_sha'])]
+                                    states[key] = planned_state(batch_args, item, row, entry, record_paths, schema)
+                                write_json(state_path, states)
+                                report = summarize(batch_args, load_selection(batch_args.selection), states, previous['invocation'])
+                                save_report(int(directory.name), report)
                     publish('first_pass_finished' if not args.max_batches else 'batch_limit_finished')
                     break
                 publish('draining' if stop_event.is_set() else 'running')
@@ -488,6 +638,8 @@ def main():
     p.add_argument('--baseline', type=Path, default=BASELINE)
     p.add_argument('--batch-size', type=int, default=25)
     p.add_argument('--workers', type=int, default=4)
+    p.add_argument('--skip-similar', action='store_true', help='Skip equivalent source packages, retaining representative links')
+    p.add_argument('--dedup-plan', type=Path, help='Completed pending-source deduplication plan')
     p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
     p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
     p.add_argument('--go-backup', help='Zero-priced Go model for explicit connection resets on the first Go model')
