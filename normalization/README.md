@@ -86,7 +86,7 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
   --go-backup opencode-go/iceman-contributor-free --then-convert
 ```
 
-去重先核对实际输入和关联材料，再用现有模型判断候选是否保留同一做法的关键条件和限制。未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点只转换保留来源。重复来源在代表转换成功后关联到实际结果；代表失败时保留 `pending_duplicate` 及依赖。断点保留已完成的判定，模型暂不可用时继续退避等待。候选检索与模型判断仍可能漏判或误判。
+去重先核对实际输入和关联材料，再用现有模型判断候选是否保留同一做法的关键条件和限制。逐条选择至多两个最接近的已转换来源或队列中更早的原文代表，避免把文本相似链上的不同流程统一拿去和同一个来源比较。未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点只转换保留来源。重复来源在代表转换成功后关联到实际结果；代表失败时保留 `pending_duplicate` 及依赖。断点保留已完成的判定，模型暂不可用时继续退避等待。候选检索与模型判断仍可能漏判或误判。
 
 已完成去重后的转换续跑命令为
 

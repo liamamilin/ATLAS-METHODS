@@ -29,12 +29,12 @@ def decide(item, candidates, deduplicator, args, client):
         result = deduplicator.compare(blocks, item.get('reference_selection'), candidate,
                                       row, args, item, client)
         if result and result.get('refused'):
-            return {'status': 'failed', 'failure_stage': 'content_filter',
+            return {'status': 'failed', 'failure_stage': 'content_filter', 'candidates': candidates,
                     'reason': 'Provider refused the source comparison', 'comparison': result['comparison']}
         if result:
-            return {'status': 'duplicate', 'representative': candidate,
+            return {'status': 'duplicate', 'representative': candidate, 'candidates': candidates,
                     'fingerprint': package_key(blocks, item.get('reference_selection')), **result}
-    return {'status': 'unique'}
+    return {'status': 'unique', 'candidates': candidates}
 
 
 def run(args, client=None, stop_event=None, retry_delay=300):
@@ -138,41 +138,30 @@ def run(args, client=None, stop_event=None, retry_delay=300):
     write_json(state_path, states)
     publish('finding_candidates')
     representatives = {key for key in prepared if key not in exact_links and key in dedup.entries}
-    parent = {key: key for key in representatives}
-
-    def find(key):
-        while parent[key] != key:
-            parent[key] = parent[parent[key]]
-            key = parent[key]
-        return key
-
-    known = defaultdict(list)
     order = {key_of(item): n for n, item in enumerate(pending)}
-    for key in representatives:
-        row = dedup.entries[key][2]
-        text = (args.index.parent / row['raw_path']).read_text(encoding='utf-8')
-        for candidate in dedup.candidates(row, text):
-            if candidate in representatives:
-                a, b = find(key), find(candidate)
-                parent[max(a, b)] = min(a, b)
-            elif dedup.entries[candidate][1]['kind'] == 'normalized_record':
-                known[key].append(candidate)
-    components = defaultdict(list)
-    for key in representatives:
-        components[find(key)].append(key)
-    candidate_map = {}
-    for members in components.values():
-        converted = Counter(c for key in members for c in known[key])
-        if converted:
-            candidates = [key for key, _ in converted.most_common(2)]
-        else:
-            canonical = min(members, key=lambda key: order[key])
-            candidates = [canonical]
-            states[canonical] = {'status': 'unique'}
-        for key in members:
-            if key not in candidates:
+    candidate_path = stage / 'candidates.json'
+    cached = strict_json_loads(candidate_path.read_text()) if candidate_path.is_file() else {}
+    if cached.get('policy') == 'nearest_earlier_source':
+        candidate_map = cached['items']
+    else:
+        candidate_map = {}
+        for key in sorted(representatives, key=lambda key: order[key]):
+            if stop_event.is_set():
+                publish('stopped')
+                return False
+            row = dedup.entries[key][2]
+            candidates = dedup.candidates(row, '', eligible=lambda candidate: (
+                dedup.entries[candidate][1]['kind'] == 'normalized_record'
+                or order[candidate] < order[key]
+            ))
+            if candidates:
                 candidate_map[key] = candidates
-    write_json(stage / 'candidates.json', candidate_map)
+        write_json(candidate_path, {'policy': 'nearest_earlier_source', 'items': candidate_map})
+    for key in representatives:
+        if key not in candidate_map and states.get(key, {}).get('status') not in ('duplicate', 'failed'):
+            states[key] = {'status': 'unique', 'candidates': []}
+        elif states.get(key, {}).get('status') == 'unique' and states[key].get('candidates') != candidate_map.get(key):
+            states.pop(key)
     write_json(state_path, states)
     batch_args = build_parser().parse_args([
         '--selection', str(stage / 'selection.json'), '--out', str(stage), '--index', str(args.index),

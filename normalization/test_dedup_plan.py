@@ -16,8 +16,8 @@ import test_corpus_run as corpus_fixtures
 
 
 class PlanTests(unittest.TestCase):
-    def setup(self, root, semantic=False):
-        args = corpus_fixtures.CorpusTests().rolling_fixture(root, count=3)
+    def setup(self, root, semantic=False, count=3):
+        args = corpus_fixtures.CorpusTests().rolling_fixture(root, count=count)
         with gzip.open(args.index, 'rt') as stream:
             rows = [json.loads(line) for line in stream]
         for n, row in enumerate(rows):
@@ -25,8 +25,8 @@ class PlanTests(unittest.TestCase):
             if n == 0:
                 continue
             data = b'alpha\nbeta\ngamma\ndelta\nepsilon\nzeta\n'
-            if semantic and n == 2:
-                data = b'alternative\nwording\nfor\nthe\nsame\nprocedure\n'
+            if semantic and n >= 2:
+                data = f'alternative{n}\nwording\nfor\nthe\nsame\nprocedure\n'.encode()
             raw = args.index.parent / f'raw/unique-path/pending-{n}.md'
             raw.write_bytes(data)
             row.update(raw_path=str(raw.relative_to(args.index.parent)),
@@ -138,6 +138,25 @@ class PlanTests(unittest.TestCase):
             recovered = fixtures.FakeClient([{'equivalent': True, 'reason': 'Same procedure'}])
             self.assertTrue(deduplicate(plan_args, recovered))
             self.assertEqual(len(recovered.calls), 1)
+
+    def test_earlier_source_proofs_resolve_a_chain_to_one_real_record(self):
+        with tempfile.TemporaryDirectory() as temp:
+            args, plan_args, rows = self.setup(Path(temp), semantic=True, count=4)
+            comparison = fixtures.FakeClient([
+                {'equivalent': True, 'reason': 'Same steps and conditions'},
+                {'equivalent': True, 'reason': 'Equivalent wording'},
+            ])
+            self.assertTrue(deduplicate(plan_args, comparison))
+            decisions = [json.loads(p.read_text()) for p in
+                         (args.out / plan_args.name / 'decisions').glob('*.json')]
+            self.assertEqual(max(len(d['proofs']) for d in decisions), 2)
+            args.dedup_plan = args.out / plan_args.name / 'plan.jsonl'
+            conversion = fixtures.FakeClient()
+            run(args, conversion)
+            self.assertEqual(len(conversion.calls), 1)
+            args.snapshot = 'chain'
+            report = snapshot(args)
+            self.assertEqual((report['total_succeeded'], report['skipped_duplicate'], report['remaining']), (2, 2, 0))
 
 
 if __name__ == '__main__':

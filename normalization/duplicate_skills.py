@@ -107,8 +107,9 @@ class SkillDeduplicator:
         _, _, _, blocks = prepare_input(row, item, self.index)
         return blocks, item.get('reference_selection')
 
-    def candidates(self, row, text):
-        tokens = features(text)
+    def candidates(self, row, text, eligible=None):
+        source_key = key_of({'collection_id': row['id'], 'commit_sha': row['commit_sha']})
+        tokens = self.entries[source_key][3] if source_key in self.entries else features(text)
         name = comparison_name(row.get('declared_name'))
         with self.condition:
             direct = self.hashes[row['sha256']] | self.names.get(name, set())
@@ -118,7 +119,7 @@ class SkillDeduplicator:
                     shared.update(self.words[token])
             ranked = []
             for key in direct | shared.keys():
-                if key == key_of({'collection_id': row['id'], 'commit_sha': row['commit_sha']}):
+                if key == source_key or eligible is not None and not eligible(key):
                     continue
                 other = self.entries[key][3]
                 similarity = len(tokens & other) / max(1, len(tokens | other))
