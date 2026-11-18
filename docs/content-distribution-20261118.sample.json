@@ -1,0 +1,3562 @@
+{
+  "as_of": "2026-11-18T13:35:09.713803+00:00",
+  "selection": {
+    "unit": "distinct entry_sha256 among saved normalized records; not distinct methods",
+    "population": 29333,
+    "sample_size": 240,
+    "seed": 20261118,
+    "algorithm": "random.Random(20261118).sample(sorted(entry_hash_groups), 240)",
+    "representative": "Within each group, minimum (len(source.skill_path), record_path).",
+    "scope": "batch-001/records/*.json and full-001/batches/*/records/*.json; unique collection_id + commit_sha",
+    "classification": "Read normalized content.title and content.summary; assign one exploratory primary category by main purpose. No model API requests. No changes to SkillRecord."
+  },
+  "inventory": {
+    "as_of": "2026-11-18T13:35:09.713803+00:00",
+    "records": 34481,
+    "repositories": 516,
+    "entry_hashes": 29333,
+    "top_repos": [
+      [
+        "ThomasMoreAI/legal-skills-open",
+        4247
+      ],
+      [
+        "sickn33/agentic-awesome-skills",
+        4240
+      ],
+      [
+        "LeoYeAI/agent-master-skills",
+        3436
+      ],
+      [
+        "openaccountants/openaccountants",
+        2233
+      ],
+      [
+        "TerminalSkills/skills",
+        1108
+      ],
+      [
+        "affaan-m/ECC",
+        1067
+      ],
+      [
+        "davila7/claude-code-templates",
+        916
+      ],
+      [
+        "composio-community/awesome-codex-skills",
+        878
+      ],
+      [
+        "ComposioHQ/awesome-claude-skills",
+        855
+      ],
+      [
+        "mukul975/Anthropic-Cybersecurity-Skills",
+        813
+      ],
+      [
+        "infrasity-labs/dev-gtm-claude-skills",
+        584
+      ],
+      [
+        "github/awesome-copilot",
+        471
+      ],
+      [
+        "skillmds/skillmd",
+        463
+      ],
+      [
+        "NVIDIA/skills",
+        429
+      ],
+      [
+        "alirezarezvani/claude-skills",
+        395
+      ],
+      [
+        "adriannoes/awesome-agentic-ai",
+        386
+      ],
+      [
+        "lawve-ai/awesome-legal-skills",
+        276
+      ],
+      [
+        "KalarisLabs/research-agent-skills",
+        274
+      ],
+      [
+        "rlaope/oh-my-hermes",
+        273
+      ],
+      [
+        "foryourhealth111-pixel/Vibe-Skills",
+        253
+      ],
+      [
+        "sandbaseai/sandbase-skills",
+        246
+      ],
+      [
+        "makenotion/notion-cookbook",
+        242
+      ],
+      [
+        "OneWave-AI/claude-skills",
+        229
+      ],
+      [
+        "microsoft/skills",
+        208
+      ],
+      [
+        "first-fluke/oh-my-agent",
+        207
+      ]
+    ],
+    "collected": 55802,
+    "collected_hashes": 46059
+  },
+  "category_counts": [
+    {
+      "category": "法律实务与合规",
+      "sample_count": 36,
+      "sample_percent": 15.0
+    },
+    {
+      "category": "AI、智能体与模型工程",
+      "sample_count": 33,
+      "sample_percent": 13.8
+    },
+    {
+      "category": "软件开发与架构",
+      "sample_count": 30,
+      "sample_percent": 12.5
+    },
+    {
+      "category": "产品、营销与组织经营",
+      "sample_count": 28,
+      "sample_percent": 11.7
+    },
+    {
+      "category": "办公、文档与协作工具",
+      "sample_count": 19,
+      "sample_percent": 7.9
+    },
+    {
+      "category": "视觉设计与音视频制作",
+      "sample_count": 16,
+      "sample_percent": 6.7
+    },
+    {
+      "category": "科研、教育与科学工作流",
+      "sample_count": 14,
+      "sample_percent": 5.8
+    },
+    {
+      "category": "财税、会计与投资",
+      "sample_count": 13,
+      "sample_percent": 5.4
+    },
+    {
+      "category": "网络安全与取证",
+      "sample_count": 11,
+      "sample_percent": 4.6
+    },
+    {
+      "category": "云、部署与运行维护",
+      "sample_count": 10,
+      "sample_percent": 4.2
+    },
+    {
+      "category": "测试、调试与工程评审",
+      "sample_count": 8,
+      "sample_percent": 3.3
+    },
+    {
+      "category": "数据获取、分析与统计",
+      "sample_count": 8,
+      "sample_percent": 3.3
+    },
+    {
+      "category": "通用写作与内容编辑",
+      "sample_count": 7,
+      "sample_percent": 2.9
+    },
+    {
+      "category": "建筑、航天等专业工程",
+      "sample_count": 4,
+      "sample_percent": 1.7
+    },
+    {
+      "category": "入口信息不足，暂不归类",
+      "sample_count": 3,
+      "sample_percent": 1.2
+    }
+  ],
+  "sample": [
+    {
+      "sample_no": 1,
+      "source": {
+        "collection_id": "ca0c48e73bec771d13d7",
+        "repository": "SupercmoHQ/superCMO-skills",
+        "commit_sha": "3bf78a423b1ba27a1f500b3b50f806b86cc5bdab",
+        "skill_path": "skills/generating-videos/SKILL.md",
+        "git_blob_sha": "f72e853e6e5b7e7c7f2b2168b118ba5ed4703b5e",
+        "entry_sha256": "bc1a8b1a30e75eb59af3d72c9fcdbe67cc2871f4470032e1568890b441011538"
+      },
+      "record_path": "data/normalized/full-001/batches/0157/records/2ba9c4ebef8b55577f30d7628d8b3be8.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 2,
+      "source": {
+        "collection_id": "bb3ed559160eef306735",
+        "repository": "GarethManning/education-agent-skills",
+        "commit_sha": "135d6275e7db0657d70b147f46d3191c5430677d",
+        "skill_path": "skills/environmental-experiential-learning/ecological-inquiry-anchor-designer/SKILL.md",
+        "git_blob_sha": "2acfe17b30e50f22d05648be2c2e83a8d7a1a233",
+        "entry_sha256": "ed7ec7f699a4eb077319a00ec1e51431946beb925e2b78682d59bc633b4bc970"
+      },
+      "record_path": "data/normalized/full-001/batches/0288/records/27f81225e44720b9006d0f1f92beb7fd.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 3,
+      "source": {
+        "collection_id": "0c0f7bc9ae7fac3ce894",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/find-matching-tenders/SKILL.md",
+        "git_blob_sha": "8b2f520206b90a1edc0f9be570b83131373d968e",
+        "entry_sha256": "3af92271b3c9dfe391246cec85681b3b7d2bf792431de8555a92bd67e4fe2d27"
+      },
+      "record_path": "data/normalized/full-001/batches/1369/records/afea3732fb264ab3b08d3a5415e81de9.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 4,
+      "source": {
+        "collection_id": "51d62e94d8798399cf13",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/constitutional/skills/abwaegungsgesetz-und-gewichtsformel-alexy/SKILL.md",
+        "git_blob_sha": "dc28e85592b2fe963f82ee191075c72f7de363a1",
+        "entry_sha256": "6387d416c13ad90136780d0440252d3ae207e38210576434cc70bb2403a61099"
+      },
+      "record_path": "data/normalized/full-001/batches/1295/records/31e858f1682b5b8d7e00794c39483dd2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 5,
+      "source": {
+        "collection_id": "7728746c0bf02c54359b",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/implementing-security-information-sharing-with-stix2/SKILL.md",
+        "git_blob_sha": "5365daf19af54308d93b0dc15971f7e5615b7846",
+        "entry_sha256": "151204a223a753556e698bb6b5629976b3bad9d31ffd44bb259550a7e1b93e29"
+      },
+      "record_path": "data/normalized/full-001/batches/0808/records/5b8ad7ee06d0d944e2532397d4c45442.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 6,
+      "source": {
+        "collection_id": "2b87cc33f8fef858c5a5",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "skills/agent-introspection-debugging/SKILL.md",
+        "git_blob_sha": "7f40c4579f09b15884e7e4e22635ccd41e1ba1a7",
+        "entry_sha256": "0cdbfe3c822ff50d21df8cd0e20c72407a6f5658089edc0e96e79a03927cb956"
+      },
+      "record_path": "data/normalized/full-001/batches/0903/records/8bbb52c7931cd9236504ab38408d73a0.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 7,
+      "source": {
+        "collection_id": "caa560f25e006816d262",
+        "repository": "lawve-ai/awesome-legal-skills",
+        "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+        "skill_path": "skills/requete-cph-licenciement-faute-grave-selim-brihi/SKILL.md",
+        "git_blob_sha": "ebfcd35979a0ab8f771cfa15ab018b7083f573da",
+        "entry_sha256": "d713fbe95b22a10d3f6dc5e01dd0822fa67fd71f11ac6d340fb9de89021df582"
+      },
+      "record_path": "data/normalized/full-001/batches/0621/records/2e8d1b645a8e50e3748e9dbed66022b4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 8,
+      "source": {
+        "collection_id": "8159af6200d1af86a66f",
+        "repository": "dembrandt/dembrandt-skills",
+        "commit_sha": "8f78f13f74a2356326d0c3c21bc63e5624e6a457",
+        "skill_path": "skills/color-mode-and-theme/SKILL.md",
+        "git_blob_sha": "98aeee08d9689844e14f239d84a30425819f3065",
+        "entry_sha256": "04cb6c409f0f594bcb63bc2cc06a42b29357bde6fc562b4b78ec43d0869c03fa"
+      },
+      "record_path": "data/normalized/full-001/batches/0084/records/13a2d52a9aa8f38b7e6923055702d751.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 9,
+      "source": {
+        "collection_id": "99b8295df50c6db190c2",
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/analyse-problem/SKILL.md",
+        "git_blob_sha": "544124e023d67c827da1376f6019e15be7921f00",
+        "entry_sha256": "4139ed798371ebc0540d77838ee959791248397c12e78c426fe12d3ad384de09"
+      },
+      "record_path": "data/normalized/full-001/batches/0510/records/72d1edcac42074236db68ee904405e22.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 10,
+      "source": {
+        "collection_id": "17185d6cced70d0f8995",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/contracts/skills/aenderungs-historie-agb-eskalations-marker/SKILL.md",
+        "git_blob_sha": "20f0f2e892dd0eac3ed34096f14606ba9b6f1d73",
+        "entry_sha256": "6e418642b5302003c1fc7b70d6f91a8dc7f8afee0de55b0b32c265ca238c426b"
+      },
+      "record_path": "data/normalized/full-001/batches/1368/records/bb4fcac70a9a91d391f1a1cdc54677b4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 11,
+      "source": {
+        "collection_id": "ecd1a38ec3578dcacf53",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cl/general/skills/investigacion-juridica-chile-orwel/SKILL.md",
+        "git_blob_sha": "045a5a7d79655aedf92a1aaf5a075fd41229a9fd",
+        "entry_sha256": "5b2caccd34cd6af170d4ea586fe74cf2ac585a77138da92d6511712d3923e273"
+      },
+      "record_path": "data/normalized/full-001/batches/0822/records/b4fbb4a14b70f93fe6cf33e054fb83c5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 12,
+      "source": {
+        "collection_id": "dd72a8ee6d77ed23e058",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/creative-design/marp-slide/SKILL.md",
+        "git_blob_sha": "79c639b3a91392b7922963d6ab850db28b25eadd",
+        "entry_sha256": "8db340c8b1e6f97196056af07990993d30a947b19e67c20f7429074a0e365d89"
+      },
+      "record_path": "data/normalized/full-001/batches/0635/records/1a599fbe604386d6e2a4970b9c39bd4b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 13,
+      "source": {
+        "collection_id": "69f8e68885cbed5f794a",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/marketing-skills/references/onboarding-cro/SKILL.md",
+        "git_blob_sha": "97315d6994461563f8e66bae4adde9cf8fe3ae40",
+        "entry_sha256": "c973ee1520d800fb68c39965d6c99526489c834440d7b2c254ab059cb54dab8d"
+      },
+      "record_path": "data/normalized/full-001/batches/1128/records/74b05544549a70a65eafa9cf93415816.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 14,
+      "source": {
+        "collection_id": "8ebccb65f82d5239dd4b",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/imagemagick/SKILL.md",
+        "git_blob_sha": "8c6c65381389e4bdbc48eeba42713c858071d7d1",
+        "entry_sha256": "7a3dcf2da9f262ce96f41902a34e054071f6cab1d588cf78bbff5886bc306240"
+      },
+      "record_path": "data/normalized/full-001/batches/0773/records/df6a841261efe560428c499f3ca68fff.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 15,
+      "source": {
+        "collection_id": "c30a9a05ea619af6cb70",
+        "repository": "MengTo/Skills",
+        "commit_sha": "5ea1661a0e05d82b054553daaa6baf6d0233c33c",
+        "skill_path": "agent-skills/media/aura-asset-images/SKILL.md",
+        "git_blob_sha": "125bb0e8a91844478b10a2c96d74e377019526ef",
+        "entry_sha256": "c902c2b2b8182b4738c7e6a93d5a33fe62a495844c2e0b4a7b0152812b93cd76"
+      },
+      "record_path": "data/normalized/full-001/batches/0386/records/edf1ecaae95dd4efbac15fc442e5fae7.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 16,
+      "source": {
+        "collection_id": "ab6e8afc031cd7bfe249",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/azure-ai-contentsafety-java/SKILL.md",
+        "git_blob_sha": "ca8afafbb4e24a21b5da4a907e73d8048a161c63",
+        "entry_sha256": "300fe492b4d47708c904438a407e252b8939aa9ace25a6e6c42a30fb267f071a"
+      },
+      "record_path": "data/normalized/full-001/batches/1295/records/cfcafdfe6651201b1b6fad664fa9e8bf.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 17,
+      "source": {
+        "collection_id": "6551a4f1af74cf58b010",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/ai-research/agent-tool-builder/SKILL.md",
+        "git_blob_sha": "d2041478317aba23edf3bb59fd157560ee20960f",
+        "entry_sha256": "3f1bb1ccdb486a79382c05cfb0a51ecfad94614eba3a37ce4d76d734f3e1aff0"
+      },
+      "record_path": "data/normalized/full-001/batches/0130/records/031ed83c694358b9e5bff7dc83df0442.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 18,
+      "source": {
+        "collection_id": "34e83847dd1b2ef340a1",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/development/cc-skill-continuous-learning/SKILL.md",
+        "git_blob_sha": "48b8035499246bd244b27b3a4a3ecaee8dba4968",
+        "entry_sha256": "c21650c3655292ebbb083b910397ee34bb100395a195a9557cd3410dd6a7fbc1"
+      },
+      "record_path": "data/normalized/full-001/batches/0688/records/1c30c5a1e00762aae64f283a6877e7af.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "入口信息不足，暂不归类"
+    },
+    {
+      "sample_no": 19,
+      "source": {
+        "collection_id": "cb0f32e4a8babf503534",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/orchata/SKILL.md",
+        "git_blob_sha": "f03a4f862c392f10b7ded2eceb756d9720a7edce",
+        "entry_sha256": "f9a48d6430dcf9d28ac889dcb11bfb9174cdd0b5c2dd76b97e906fa7548f469f"
+      },
+      "record_path": "data/normalized/full-001/batches/1186/records/87715f4425ae2f6436beaea604091e36.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 20,
+      "source": {
+        "collection_id": "5a2ae127ce22984ff64e",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/moltflow-whatsapp/SKILL.md",
+        "git_blob_sha": "2bc787ded3e7fc85f7ddd07ebd7e21b2feb02d08",
+        "entry_sha256": "00ed7b7abae39edbce65ac0aa94f0f124ae8301eafc9fd2e14c6f192358a1c01"
+      },
+      "record_path": "data/normalized/full-001/batches/1147/records/7d8fa0f054f1fa886c58bb367304e54f.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 21,
+      "source": {
+        "collection_id": "da20322a80ada9cab0ce",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ny-residency-leaving-new-york/SKILL.md",
+        "git_blob_sha": "9ee2dc9fc1cdd0e69a50ea3ba24afd7e7f4085c8",
+        "entry_sha256": "4269373f4abc2b76b6131e944c9004ccb9f19faa6a60e8a9bfa20d7bf414b15b"
+      },
+      "record_path": "data/normalized/full-001/batches/1059/records/dc54d9fc73d613c9e9b667f351243324.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 22,
+      "source": {
+        "collection_id": "31cb05316e524a057313",
+        "repository": "sandbaseai/sandbase-skills",
+        "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+        "skill_path": "marketing/gsap-frameworks/SKILL.md",
+        "git_blob_sha": "64c6731ad70da9a2d78e9976686dacc9b0fcf33d",
+        "entry_sha256": "9c3681c68ee85869abf73a9120eeabe5c3e6ba712e79e15b79c84e91e3389c7e"
+      },
+      "record_path": "data/normalized/full-001/batches/0344/records/d58b976efa7699c6fc80133a6b1fbf2a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 23,
+      "source": {
+        "collection_id": "bca6df25d87c8db13d36",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/sox/SKILL.md",
+        "git_blob_sha": "94917dddf4a99bf210d2bc82e807443706f9a532",
+        "entry_sha256": "0f4cc70cf273b70a0bd9d9156cb148a1f1c9dbfc8ed99797e335d22235fc3210"
+      },
+      "record_path": "data/normalized/full-001/batches/0953/records/554466e6eb665e59447db73d80cba869.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 24,
+      "source": {
+        "collection_id": "a1bdf7e7272f0c8a00e3",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/api-documentation/SKILL.md",
+        "git_blob_sha": "25fefc23c0a4199b5d479119c5b6473caf0b5765",
+        "entry_sha256": "6b111ef252cce0df1bb640a4c7448aed16e15bf0da54ec14db74e7d045b61f83"
+      },
+      "record_path": "data/normalized/full-001/batches/1281/records/315ca643f2fb2a8ec5a5d328251695be.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 25,
+      "source": {
+        "collection_id": "4bd864d38e0afd891948",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/security-auditor/SKILL.md",
+        "git_blob_sha": "e8f78fe00047388271176eaf247f0f49af061027",
+        "entry_sha256": "01a5687de84be124b8d6c4ecd9e21185ddb31b5293474c60cac9c3f9fce57ca3"
+      },
+      "record_path": "data/normalized/full-001/batches/1189/records/93c9871f4d281ca13fa05bd6863403f1.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 26,
+      "source": {
+        "collection_id": "03c9321c03eb7740ac76",
+        "repository": "alinaqi/maggy",
+        "commit_sha": "55aabe2493627e1de9cd09459d555181d66f3111",
+        "skill_path": "skills/autonomous-testing/SKILL.md",
+        "git_blob_sha": "d28b371080ac0a7696c01dce78437b08e5cff751",
+        "entry_sha256": "3c34371a375330e860bf8b5e550909f9a4da09713c3f2a844a69a07068265a4b"
+      },
+      "record_path": "data/normalized/full-001/batches/0083/records/b41d114fc81f1ba6c703382977435e5a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 27,
+      "source": {
+        "collection_id": "b940f1279c7fcd732bac",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "br/finance/skills/analise-rif-andrevictor23-tech/SKILL.md",
+        "git_blob_sha": "09a8edffff5bf32c7393faae4f71273c8fa19932",
+        "entry_sha256": "4f975a9cdcfce2414e20ce4f4e8b0ba284253e38af5671d9303993edbf2f7b54"
+      },
+      "record_path": "data/normalized/full-001/batches/0708/records/a13a56e84898795f7cdbb2d0031e8e0c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 28,
+      "source": {
+        "collection_id": "c5fdb5f73d30e3fff2e8",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/deel-automation/SKILL.md",
+        "git_blob_sha": "1d2b044700796cc33a1be3baf92da048f1911d57",
+        "entry_sha256": "67156a9c4f5e8bb386b94a6f51a1c51780884738ac92ed3b011c9bef9e3062f7"
+      },
+      "record_path": "data/normalized/full-001/batches/0620/records/52cc4375123b9db99bf78d7eccca5cc2.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 29,
+      "source": {
+        "collection_id": "862aaf1eedd3832ba23d",
+        "repository": "OpenSenseNova/SenseNova-Skills",
+        "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+        "skill_path": "skills/sn-da-non-spreadsheet-analysis/SKILL.md",
+        "git_blob_sha": "ceb754d128443eeb494bda9eaadd8f5c59c30c75",
+        "entry_sha256": "d472d8bd386131f929afe9cd51aacb1ee0a778021505a9453743e02b34d44b6e"
+      },
+      "record_path": "data/normalized/full-001/batches/0303/records/dcb6d76f1ffe80f8119113e127585874.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 30,
+      "source": {
+        "collection_id": "a323abc904941784ecf9",
+        "repository": "rlaope/oh-my-hermes",
+        "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+        "skill_path": "agent-skills/omh-finance-analysis/SKILL.md",
+        "git_blob_sha": "05dd70370b71800b2ca1cecec2dc76d9ed4905fe",
+        "entry_sha256": "1bb45b631877446a9b5fb660bcd2548899772f33571b0fefe4535eb558e12b51"
+      },
+      "record_path": "data/normalized/full-001/batches/0290/records/cf55bdf7a852fd618e4249ec711750f9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 31,
+      "source": {
+        "collection_id": "24448bef72d76e4d8f87",
+        "repository": "AceDataCloud/Skills",
+        "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+        "skill_path": "skills/google-search/SKILL.md",
+        "git_blob_sha": "c3188bc730f01874487a7d2223fe231d9c5d0bdb",
+        "entry_sha256": "a38abd0c7460f06313d62256c97df2393927a1005d81026a26abbb0b65e60350"
+      },
+      "record_path": "data/normalized/full-001/batches/0287/records/31fa80a9e5f0efe4254709f1d8acdcd0.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 32,
+      "source": {
+        "collection_id": "7047a74a4489b4c1a251",
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex/training-check/SKILL.md",
+        "git_blob_sha": "d20c90907a07914d4ecd88ea6227b1c1adba0751",
+        "entry_sha256": "94bcb09c9b2eae90f2bcfeb98d652dd72dbe00d42be47486650397ad5be69c44"
+      },
+      "record_path": "data/normalized/full-001/batches/0581/records/19c18e858a7b5231df8476cd27bc493e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 33,
+      "source": {
+        "collection_id": "e99952a24baba37b9ecc",
+        "repository": "hanhuark/mechanical-engineering-research-skill",
+        "commit_sha": "7b6c32d4e67b3a7896903b2d37cb2ddafc395b65",
+        "skill_path": "skills/reviewer-author-loop/SKILL.md",
+        "git_blob_sha": "0d5571d812193c2555d0208805993510d385bba7",
+        "entry_sha256": "3c5bd7f506316bfb2bcbf5563320bcfb60fdacb99929a826e122456d5def3134"
+      },
+      "record_path": "data/normalized/full-001/batches/0095/records/0f441f481735d7bf504f39adcd48a7b7.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 34,
+      "source": {
+        "collection_id": "61f30fbbea397b1d3575",
+        "repository": "agent-sh/agnix",
+        "commit_sha": "4926685333ad34df98c6196d3508c466561b439c",
+        "skill_path": "tests/fixtures/claude-ext/plugin/skills/run/SKILL.md",
+        "git_blob_sha": "ce478f455b10b2a3468fb4be539fc284c0319847",
+        "entry_sha256": "70b2ff57c83dfef883f1cc7669ef0dc188364c5a844eaecb5d67839cdec3e864"
+      },
+      "record_path": "data/normalized/full-001/batches/0165/records/3cad12d4b5207ab1ed117e99bea93469.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "入口信息不足，暂不归类"
+    },
+    {
+      "sample_no": 35,
+      "source": {
+        "collection_id": "b213eea4590137e993ae",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/analyzing-browser-forensics-with-hindsight/SKILL.md",
+        "git_blob_sha": "6d1e9acaf7fcb181c988fa7da625f31da9db64c7",
+        "entry_sha256": "2a1b299850c069234806eae7f7a11263c489ffe5c8a3eba02b9cd3da4ebc1f10"
+      },
+      "record_path": "data/normalized/full-001/batches/0124/records/31206f4550bf7ed2242108a298b0de86.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 36,
+      "source": {
+        "collection_id": "647365056e8a717b0182",
+        "repository": "NVIDIA/skills",
+        "commit_sha": "c24aea9a0b0bbe9bd16363682045fc9218b3cbef",
+        "skill_path": "skills/nemo-mbridge-perf-memory-tuning/SKILL.md",
+        "git_blob_sha": "17e5a8549d6376fe5c68511d5f6728248177fbb7",
+        "entry_sha256": "3e40e553688d53b8d73b0759ad0f523a0791bf622015d34ee97f631ab617664c"
+      },
+      "record_path": "data/normalized/full-001/batches/0640/records/99b4e5d8a45474e8d813b0671de4ef8d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 37,
+      "source": {
+        "collection_id": "48f7fb0a062a7b331f28",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/lph8-bauueberwachung-dokumentenanalyse/SKILL.md",
+        "git_blob_sha": "49ca79be44494eca461f60ebf759d83048dfe6d9",
+        "entry_sha256": "a76c76e9aba094286fb75e316ae7c88d1f20c57f5697cfd0aa6d77e6db0866dd"
+      },
+      "record_path": "data/normalized/full-001/batches/1348/records/93dd4abff6cbebd1a1a62cabc540c89b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "建筑、航天等专业工程"
+    },
+    {
+      "sample_no": 38,
+      "source": {
+        "collection_id": "834647639ebfcdc7babe",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "br/consumer/skills/procon-defesa-auto-de-infracao-sbroggioadv/SKILL.md",
+        "git_blob_sha": "296d0742b260043299f84051aa98f13c227f62e7",
+        "entry_sha256": "432d8b1d31644adea0ce8c0578ffa5d5e8337864391262d8cd614707c3a317b7"
+      },
+      "record_path": "data/normalized/full-001/batches/0597/records/36b7aee9056c61693ef15add17a8b732.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 39,
+      "source": {
+        "collection_id": "b76d1427f5b546a38192",
+        "repository": "kensaurus/skills",
+        "commit_sha": "c617b8caf90d63fb0950dc1c848b78b148fd414b",
+        "skill_path": "skills/audit-performance/SKILL.md",
+        "git_blob_sha": "b70deb3672f0cd3691a218482009165e3ffc1a75",
+        "entry_sha256": "1ed0e90a01878cea1cb36d35255557e0adc6ba2e32f89a990d494b8ad97368f4"
+      },
+      "record_path": "data/normalized/full-001/batches/0250/records/1e44d7ce5fbdd604f83c75f2930b5c80.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 40,
+      "source": {
+        "collection_id": "248782d39f307a49508c",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/gstack/plan-ceo-review/SKILL.md",
+        "git_blob_sha": "b05db5e9bad1102261b0b5b3007851e22aedfd66",
+        "entry_sha256": "8d9cb532e4b5197d8b991f1de896bde15eedf498d858f83f9aa8608745230f69"
+      },
+      "record_path": "data/normalized/full-001/batches/1070/records/b88024056f1dcbca10ba8dc39dc8715b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 41,
+      "source": {
+        "collection_id": "7fa4773c0dbfd7fcd565",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": ".kiro/skills/e2e-testing/SKILL.md",
+        "git_blob_sha": "d02f6eb6533b7a32d0c7d5ebe6c3352e50466c58",
+        "entry_sha256": "7b177f8bf4a0981bcada3456d327ac09ceaab97997efc0040b7104e4a3798947"
+      },
+      "record_path": "data/normalized/full-001/batches/0376/records/537b14ced2679b75360818ffb8df4a72.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 42,
+      "source": {
+        "collection_id": "17783605e0deab764c32",
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/analytics/google-analytics-data-api-basics/SKILL.md",
+        "git_blob_sha": "f498495f07dd3f5b228e523311c87ec1d6ba5ecd",
+        "entry_sha256": "3ec2b0f892d1c640e0d8f6bff803b93a65492ec81a7d11526472b7c37d4f0025"
+      },
+      "record_path": "data/normalized/full-001/batches/0191/records/90f4c6aa3a1066e55ead576a6ff3832e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 43,
+      "source": {
+        "collection_id": "b284bbca0c6b3705d121",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/azure-ai-ml-py/SKILL.md",
+        "git_blob_sha": "1d640135fd6831924147b08f8ae046342f412e25",
+        "entry_sha256": "0ea9da61c731c12c3e08feb475306ceb7b5a16e41bccb20af157bfc65d45335c"
+      },
+      "record_path": "data/normalized/full-001/batches/1296/records/c1cc8987089dfcf5c68956134da7407b.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 44,
+      "source": {
+        "collection_id": "36b6fd82588a125742cf",
+        "repository": "foryourhealth111-pixel/Vibe-Skills",
+        "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+        "skill_path": "bundled/skills/transcribe/SKILL.md",
+        "git_blob_sha": "757576f9bbd1782f14fcc28ca85159139a2b8fa5",
+        "entry_sha256": "f530021da9f377362ee4214e0bc689cbb5404640d2eb88ee272d51d61f530a09"
+      },
+      "record_path": "data/normalized/full-001/batches/0628/records/dfe808b31c861177af6bc9580ec67b4a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 45,
+      "source": {
+        "collection_id": "d5c91682122761555fc5",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/administrative/skills/foerderantragssteller-formalia-red-fuehrung/SKILL.md",
+        "git_blob_sha": "b8d34edc5e1925318b7b36a5d9de168d5a3d658b",
+        "entry_sha256": "855d3ea3dd9ee0549cf12bb8076f127ab6becf52b043481ea343554d5294346b"
+      },
+      "record_path": "data/normalized/full-001/batches/1091/records/c9bdc4f2b65aaf00aeaff4fb3ae3a2ff.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 46,
+      "source": {
+        "collection_id": "2415139fa30daa079b29",
+        "repository": "Nanako0129/sepia",
+        "commit_sha": "0eb11d6c64c962fcc35f596c167c6e38045d6cb8",
+        "skill_path": "skills/sepia-write/SKILL.md",
+        "git_blob_sha": "b85d32aa39b98c10828ab99ca258795789eb296c",
+        "entry_sha256": "345966d26318921c0dec585807c25a2cf7308b9ecedcba9e0183c6f76cad362f"
+      },
+      "record_path": "data/normalized/full-001/batches/0067/records/de914081da00892fc538d7c6c4a1f010.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 47,
+      "source": {
+        "collection_id": "1725ec3d494b41bb4bac",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/solo-build/SKILL.md",
+        "git_blob_sha": "f3db1a80ffdaea73215199a0468459141bc47666",
+        "entry_sha256": "ea8c4762903a7f9d5f72c19342b9b0634262ccc60892d5ec4d777c7d19dafb09"
+      },
+      "record_path": "data/normalized/full-001/batches/1268/records/cf323cdb8ccd0d70214a3f6e66296202.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 48,
+      "source": {
+        "collection_id": "709b8ee59de225069a55",
+        "repository": "veniceai/skills",
+        "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+        "skill_path": "skills/venice-embeddings/SKILL.md",
+        "git_blob_sha": "5d685cdd0033aa5e26aa30985ac0229999638357",
+        "entry_sha256": "a0cc917d3957f9836a8973dd9048dc9003520cc4a3eb491ce90e77a2ff0c297c"
+      },
+      "record_path": "data/normalized/full-001/batches/0171/records/5eb149e4c903b0b87ea731cc02801470.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 49,
+      "source": {
+        "collection_id": "d0d55daa24342e3207d5",
+        "repository": "gamedev-skills/awesome-gamedev-agent-skills",
+        "commit_sha": "19d93f97c9c1ea0f8b306e77aa81e0d3e352d3e9",
+        "skill_path": "skills/ebitengine/ebitengine-game/SKILL.md",
+        "git_blob_sha": "ef948ba9ed1707f6cea97c686447fbf2d7abe4b6",
+        "entry_sha256": "4a0538670587bea6976be87b1b7b02051e5be81a291add67a68d86c12e0f2e21"
+      },
+      "record_path": "data/normalized/full-001/batches/0167/records/7643f186d78d51341c98227a86c70989.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 50,
+      "source": {
+        "collection_id": "4bcdbda6b0e1142a1285",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/tr/skills/kotlin-patterns/SKILL.md",
+        "git_blob_sha": "6ef0fd1e9fd609e393a438472002e494308b3778",
+        "entry_sha256": "b21d77a1dabadf80841db28490208d07e4912b1ad5fd6074f8296547c11618ae"
+      },
+      "record_path": "data/normalized/full-001/batches/0743/records/ec949e2359699ccd3165eafe9b308a75.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 51,
+      "source": {
+        "collection_id": "e5ff384360187e311d01",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/blog-title-generator/SKILL.md",
+        "git_blob_sha": "bcb3388d87b984003ead40285db5b64f35efcfc7",
+        "entry_sha256": "2c860d7e4c82dc173b92131c1db07ead266aa619609d8a806e95e48a70ffcf93"
+      },
+      "record_path": "data/normalized/full-001/batches/1314/records/57c69ca49eb4f152f01598e0088c8831.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 52,
+      "source": {
+        "collection_id": "69a1a8815c9e1405c351",
+        "repository": "github/awesome-copilot",
+        "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+        "skill_path": "skills/agent-governance/SKILL.md",
+        "git_blob_sha": "a3c2501676c11fd8433c802b7f1c21d174ff6721",
+        "entry_sha256": "efc0abaa0dff7d5567a27e1a5b9126ef70410e0a213225dab1b109f3f129db68"
+      },
+      "record_path": "data/normalized/full-001/batches/0139/records/9b4c38f50377b1a4a618ab3fbecfb40b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 53,
+      "source": {
+        "collection_id": "ca3ac05095242164f8d7",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/wrike-api/SKILL.md",
+        "git_blob_sha": "182017591c51661d7d199768995c5540c24e558b",
+        "entry_sha256": "74285778000ae26fe25e9c7e6ec132b6826e2a5f64900ebe9a03cda9fd8fb77f"
+      },
+      "record_path": "data/normalized/full-001/batches/1321/records/1e0ca22f651358aafe6b73cfc1a935e9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 54,
+      "source": {
+        "collection_id": "d879947631abaf45bcd5",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cross-jurisdiction/regulatory/skills/weltraummandat-quellenkarte/SKILL.md",
+        "git_blob_sha": "bbe1600f71fd3b2445c7eff21798423a0c7a7fa2",
+        "entry_sha256": "f69ad0906528202b5174948ce7d386c452129597ca1f3285d51473b841c8b629"
+      },
+      "record_path": "data/normalized/full-001/batches/1026/records/95fa0f69df48b73449f5f61ae9872df2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 55,
+      "source": {
+        "collection_id": "13e80bb4acb36747362d",
+        "repository": "github/awesome-copilot",
+        "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+        "skill_path": "skills/create-github-issues-feature-from-implementation-plan/SKILL.md",
+        "git_blob_sha": "e0d8662b1a44bae83df371f11382ff543cfa8b9d",
+        "entry_sha256": "6cc82a68a65904fed67fa7da9ae797f18b245bc9e1a6a3370a8af842dd0816d0"
+      },
+      "record_path": "data/normalized/full-001/batches/0458/records/7ba6182ee7c21d62489dc4381a2c9246.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 56,
+      "source": {
+        "collection_id": "af391205c384567b55ee",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/parsing-artifacts-with-eric-zimmerman-tools/SKILL.md",
+        "git_blob_sha": "f563e0a99f84026bf04cafa0da3a90ca26640a30",
+        "entry_sha256": "dd4a0cc46223c8e3ac6d482495898f24c24a0bda01bd4a4f525a589e79605817"
+      },
+      "record_path": "data/normalized/full-001/batches/0831/records/d79f88ed9a70e868bb9b8e46033a7146.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 57,
+      "source": {
+        "collection_id": "4293dbf4cc704b438b4f",
+        "repository": "rlaope/oh-my-hermes",
+        "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+        "skill_path": "agent-skills/omh-context-budget-review/SKILL.md",
+        "git_blob_sha": "c9ba2f34f4e1e4270fe640a2d2d1a7e0e0e95341",
+        "entry_sha256": "cde70ffe4b412a3970e744ccee91d420cb52270d86ff1833c3a7aded4e095b86"
+      },
+      "record_path": "data/normalized/full-001/batches/0223/records/f883d4296955d0181c2ad6b0d9743cbe.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 58,
+      "source": {
+        "collection_id": "9f7e34fdf648c65b8243",
+        "repository": "AceDataCloud/Skills",
+        "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+        "skill_path": "skills/hashnode/SKILL.md",
+        "git_blob_sha": "35f620ff09167fc61e4583d23254403de68fc566",
+        "entry_sha256": "6796e7b4f82b81dbbdb8ef59681928594b97e9f4dd0ef639a20eea4b65348656"
+      },
+      "record_path": "data/normalized/full-001/batches/0317/records/f6e6b6f39aee453c7cf3fa610b8a2b19.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 59,
+      "source": {
+        "collection_id": "39dd349fe28562b25f53",
+        "repository": "dotnet/skills",
+        "commit_sha": "d63a2a78358c7641821b62c5e7a6d36598f6ca79",
+        "skill_path": "plugins/dotnet-template-engine/skills/template-instantiation/SKILL.md",
+        "git_blob_sha": "b5d3f71345c542e4e45421aecbf6dc406efe3e05",
+        "entry_sha256": "106718dba7660f37473677baa8af3cb16527cca5a2b0d295171ab4735eaf9897"
+      },
+      "record_path": "data/normalized/full-001/batches/0363/records/545a2872261e76a861b74e091635616b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 60,
+      "source": {
+        "collection_id": "d6e439f2fac15ab6b373",
+        "repository": "lawve-ai/awesome-legal-skills",
+        "commit_sha": "f9f28cdccbeb98bbdde010042ea9f525ca427c72",
+        "skill_path": "skills/skill-creation-openai/SKILL.md",
+        "git_blob_sha": "20aa59a694dba018d78687ba6d0b79a1e24bf08e",
+        "entry_sha256": "11d5247838d9cfe4b512fe9903694bc6223338b08f0aa0efd1f0a5945ec56594"
+      },
+      "record_path": "data/normalized/full-001/batches/0635/records/33b28d6bdd92db471942f90f7acefac9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 61,
+      "source": {
+        "collection_id": "d2917841b67ca1696b1f",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/dropbox-sign-automation/SKILL.md",
+        "git_blob_sha": "fcee2ca469ab2a5c6c85d48f7a26b4865978f65b",
+        "entry_sha256": "cdf5f171b96749fddf5e290afbd1a1760013858c0508ba94cf431e1e90a32438"
+      },
+      "record_path": "data/normalized/full-001/batches/0651/records/6a09aad066ae5fed3f01fb973d3d1a42.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 62,
+      "source": {
+        "collection_id": "de1eb1d69941e349e10d",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/git-commit/SKILL.md",
+        "git_blob_sha": "c35f13b8760c18e5c087e08a762279c5ceab1fb6",
+        "entry_sha256": "554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f"
+      },
+      "record_path": "data/normalized/full-001/batches/1059/records/833013e715bd0626ac443fa48fcd1b15.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 63,
+      "source": {
+        "collection_id": "5a7d04f377023e64e99e",
+        "repository": "alirezarezvani/claude-skills",
+        "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+        "skill_path": "marketing-skill/skills/content-humanizer/SKILL.md",
+        "git_blob_sha": "228e298c0fca8f72bdd96cbcfd2a2e5b1632f0b3",
+        "entry_sha256": "6350b643b7a8aa8bbf713105ee61c069ab419448461311b74ba14afe2ecf189e"
+      },
+      "record_path": "data/normalized/full-001/batches/0673/records/7f1b27af803ed47f059ca4dc5cef3e87.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 64,
+      "source": {
+        "collection_id": "f30facdd45393a96dda1",
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "play-by-play-generator/SKILL.md",
+        "git_blob_sha": "194cf6d11b458a10c3d867425693820a9c8efde6",
+        "entry_sha256": "ab01ddedff9f3099292ef01292aa92e295ce010763fa4803ad5619b325df79df"
+      },
+      "record_path": "data/normalized/full-001/batches/0534/records/cc2cf06687bc00028e53ee80a393b279.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 65,
+      "source": {
+        "collection_id": "4fe52181f894430dca6a",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/ja-JP/skills/kotlin-patterns/SKILL.md",
+        "git_blob_sha": "1f965bb8ba6f1c05e591b18aa24241854091a9a9",
+        "entry_sha256": "fc1164b220bb0ce3f11c7a6a2871ca74b8dddf65b1d7ad3ecf9eb3da55582d78"
+      },
+      "record_path": "data/normalized/full-001/batches/0655/records/3fc19266ec1ee94123ea5872bcb5a08e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 66,
+      "source": {
+        "collection_id": "b6685dd72e794622ba76",
+        "repository": "open-legal-products/mike-workflows",
+        "commit_sha": "20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1",
+        "skill_path": "assistant-workflows/finnish-law-pack/trademarks-and-trade-names/SKILL.md",
+        "git_blob_sha": "2195f44646aff59ad49944e8bf2734cc42664654",
+        "entry_sha256": "c2b77e5927a4b745fd56d8b7eeed8313971aa49a32e3eae8436ba2991e3f7b18"
+      },
+      "record_path": "data/normalized/full-001/batches/0449/records/38d34834d2ee1b4459518225bd3257d9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 67,
+      "source": {
+        "collection_id": "20975ac8d27bc8967340",
+        "repository": "GarethManning/education-agent-skills",
+        "commit_sha": "135d6275e7db0657d70b147f46d3191c5430677d",
+        "skill_path": "skills/self-regulated-learning/goal-setting-protocol-designer/SKILL.md",
+        "git_blob_sha": "77ece69dfd0ce5738587c37d054e4cafaba0ee35",
+        "entry_sha256": "ab1e1523e63de50c7640705638dd183f4b16c6f8db883de7f3c552cd0eb2bedc"
+      },
+      "record_path": "data/normalized/full-001/batches/0491/records/8d5a159b8f7b9d32653fd7ca90d4bd94.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 68,
+      "source": {
+        "collection_id": "2c3dfa8be6d5da09d928",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nl-double-tax-relief/SKILL.md",
+        "git_blob_sha": "c3a06791eee2e0e7b7ef44b1834bd231437b129e",
+        "entry_sha256": "6cfcd86efaefe40827926dba8f4f49ebdf56e95d87070527427dc681f2c9eaa3"
+      },
+      "record_path": "data/normalized/full-001/batches/1052/records/2d26c28403d68b74809f4111d091d0ff.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 69,
+      "source": {
+        "collection_id": "497e75f66bc17b200bc2",
+        "repository": "Paramchoudhary/ResumeSkills",
+        "commit_sha": "74ae19e7c62b0516d1c298328e5544976c12da5d",
+        "skill_path": "skills/cold-email-writer/SKILL.md",
+        "git_blob_sha": "3f18792242ebe1b47659339ed4b2b090b9fa83b4",
+        "entry_sha256": "b8b576b5e917b68083efc8772db765843caef125dd5d9444b533ca23b9ad574b"
+      },
+      "record_path": "data/normalized/full-001/batches/0125/records/cbbc6d1fa80b01e99be8391cd8563bf8.json",
+      "same_entry_hash_source_versions": 3,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 70,
+      "source": {
+        "collection_id": "74dcd1e46f51245cb95f",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/ja-JP/skills/knowledge-ops/SKILL.md",
+        "git_blob_sha": "9f2bb63a3d77d5e03ec4e4a673f68c5f890150fd",
+        "entry_sha256": "be73c52875edc00c0105462e922fc8e6a4bc1bbbd55ebbb179ffb3abf6222ac4"
+      },
+      "record_path": "data/normalized/full-001/batches/0652/records/0c7b62d02b267b69b9392577a579ec19.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 71,
+      "source": {
+        "collection_id": "1f6d5e02f80ade73bc97",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/insolvenzplan-starug-planwerkst-workflow-fristen-und-risikoampel/SKILL.md",
+        "git_blob_sha": "7a1d5d1a2709cbec8498c6487ed0bffc139a300e",
+        "entry_sha256": "2d46413742500d21535d4212e4be5c766447c57e3d7811aaef453a7bffd87466"
+      },
+      "record_path": "data/normalized/full-001/batches/1214/records/0948936edf9033601932e64ea5412e4b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 72,
+      "source": {
+        "collection_id": "3f583ed932aaa1fc02b6",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/datadog-monitor-designer/SKILL.md",
+        "git_blob_sha": "09db561aa18dcc56cd8103bc9890bf6bba51b41c",
+        "entry_sha256": "72f14f7c482d6509d7bacfe712d7f1a330c7307e7d7d0f6a098afaf31ba696c7"
+      },
+      "record_path": "data/normalized/full-001/batches/0995/records/ac4de991e68754184398d2d80b79aa55.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 73,
+      "source": {
+        "collection_id": "af2d8d426b3008dc707a",
+        "repository": "posteyai/skills",
+        "commit_sha": "87e029a5836c2dd158fbb7d04938f3ccc62be149",
+        "skill_path": "skills/postey/SKILL.md",
+        "git_blob_sha": "f5b53cfb85c0ec293bef0659b47d7d10110c838a",
+        "entry_sha256": "d53f5c71ba2c01ea0aaa28ca1e71428c6187b48982de30f032a9b7f50f02d084"
+      },
+      "record_path": "data/normalized/full-001/batches/0098/records/ab3bb9be2a3b5eb862e3608b834cf777.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 74,
+      "source": {
+        "collection_id": "d91cd6aa3d103e660c75",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/tushare-finance/SKILL.md",
+        "git_blob_sha": "14c74a00fb24a15c96ab882e8a1ecea9dc7277ee",
+        "entry_sha256": "4e1e80963b98a32a19c3491c7f88f598a966e0d3777e3c1436442587df1f6f02"
+      },
+      "record_path": "data/normalized/full-001/batches/1298/records/821de4962d6651243db2ef22c9e2f1cf.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 75,
+      "source": {
+        "collection_id": "5661acaf3a0ab2cde410",
+        "repository": "aws/agent-toolkit-for-aws",
+        "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+        "skill_path": "skills/specialized-skills/database-skills/aurora-dsql/SKILL.md",
+        "git_blob_sha": "3c4122bd30baa86d67b0e3165adce6d01b1d0d05",
+        "entry_sha256": "c2bee64f8b26f2a96b42802e86b7dd6cd043464eba2139dd34ed04f6c3c8b9da"
+      },
+      "record_path": "data/normalized/full-001/batches/0503/records/6d7baafa6406336dfcdefe9501640aa9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 76,
+      "source": {
+        "collection_id": "3f1e7d88f48e0ce0207f",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/android-dev/SKILL.md",
+        "git_blob_sha": "496e53bd032d08644f4292d43fed9164713a5e6a",
+        "entry_sha256": "c8ca5603699011777eb483848c8fffb5a933620ac930c98b6eddd185e5f60c3d"
+      },
+      "record_path": "data/normalized/full-001/batches/1277/records/4327666a61044d803fc1084369c32221.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 77,
+      "source": {
+        "collection_id": "681546565e054195f620",
+        "repository": "alirezarezvani/claude-skills",
+        "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+        "skill_path": "engineering/skills/database-schema-designer/SKILL.md",
+        "git_blob_sha": "dac769e792601757f9e4bc116c9c482867c53fa9",
+        "entry_sha256": "61c188c9968e506693be958aba1e909ae4f499c0fd9ca15c1cec9be985f119c6"
+      },
+      "record_path": "data/normalized/full-001/batches/0619/records/7a3f905ed7f1b14750e32254f93162aa.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 78,
+      "source": {
+        "collection_id": "292c5b5124e346ee5dac",
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "seo-keyword-cluster-builder/SKILL.md",
+        "git_blob_sha": "75eaa4372a97115e48050963e35e5e754b951f84",
+        "entry_sha256": "e4283934c926e79d514887021c4e644a818829d8b0a087c28731b32851a8b89b"
+      },
+      "record_path": "data/normalized/full-001/batches/0593/records/67d4c9d8b90ac81e5bfd4ae36df98873.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 79,
+      "source": {
+        "collection_id": "ecc9c8336cedb188a728",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/implementing-diamond-model-analysis/SKILL.md",
+        "git_blob_sha": "4e58743e7b2e07bd9573bcd3b208951cb7e0370d",
+        "entry_sha256": "b373bb800cd81a83461cad510b552179e05c011ea9d9dba83f2379ca2ee4dfa8"
+      },
+      "record_path": "data/normalized/full-001/batches/0766/records/83d3c87c29de775e61a6329bb65bcebf.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 80,
+      "source": {
+        "collection_id": "91600d86e32e45a21ad4",
+        "repository": "apify/awesome-skills",
+        "commit_sha": "485f6c0d47e3a05269fe735f15e7aeeb7a98d78e",
+        "skill_path": "skills/apify-buying-signal-detection/SKILL.md",
+        "git_blob_sha": "daf04ef60e1f62963e29b9953c7652c12906df83",
+        "entry_sha256": "dbdd7ffd4ba912efcaec155473d175540e4e540ddedfde5e21178d615f7a1db8"
+      },
+      "record_path": "data/normalized/full-001/batches/0093/records/6c7d91968f28104de96c80b85fc1e4cf.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 81,
+      "source": {
+        "collection_id": "f4fbfacb22c27358bb3b",
+        "repository": "rlaope/oh-my-hermes",
+        "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+        "skill_path": "agent-skills/omh-model-finetuning/SKILL.md",
+        "git_blob_sha": "3eba30610a0592c9a34ba1943932f2f82d2b7f3c",
+        "entry_sha256": "1fb00bb194d290dcc180405ce65f99ba8580d87e0e08d15fe5aea1cc598ec183"
+      },
+      "record_path": "data/normalized/full-001/batches/0373/records/275c04710c06b84a1fd45f74b1a79314.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 82,
+      "source": {
+        "collection_id": "b0ab0e4f1554e23186f5",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/krisenfrueherkennung-starug-juristischer-argumentationskern/SKILL.md",
+        "git_blob_sha": "d7726710df8f2e275fa97d0c21dd36e5673dea36",
+        "entry_sha256": "d2647c234b3afbde6a64d17d4841150bb9d8dce48914e1012cd92f1e44e17db7"
+      },
+      "record_path": "data/normalized/full-001/batches/1223/records/828afba1745451fa50feb29010379c65.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 83,
+      "source": {
+        "collection_id": "f588f7dc72f844fef261",
+        "repository": "snyk/agent-scan",
+        "commit_sha": "6b2a1f330348ab5898e2f1aefdd6c5be17e987b1",
+        "skill_path": "tests/skills/pdf/SKILL.md",
+        "git_blob_sha": "f6a22ddf88fdc7e7b7603f4c9064cc51bd930ad9",
+        "entry_sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb"
+      },
+      "record_path": "data/normalized/full-001/batches/0150/records/063c19c3371d05538297dda26d60bcca.json",
+      "same_entry_hash_source_versions": 3,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 84,
+      "source": {
+        "collection_id": "c153947dc4d47ab1838f",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/contracts/skills/klauselgenerator-formvorbehalt-maklervertrag/SKILL.md",
+        "git_blob_sha": "f7b9dbd54579863ea18d1aa384be7761e7e9b051",
+        "entry_sha256": "e679be79e52767769a46334d41523bb8efb45eb467b922681408d031000578cb"
+      },
+      "record_path": "data/normalized/full-001/batches/1394/records/12c4e0930b740fc8307f4fa5041a1cdd.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 85,
+      "source": {
+        "collection_id": "d70b84f37e0b3127b353",
+        "repository": "rlaope/oh-my-hermes",
+        "commit_sha": "68768989d56706f444574a70af1e5484c673b11c",
+        "skill_path": "skills/omh-workspace-audit/SKILL.md",
+        "git_blob_sha": "8431201e858bb7cc35b96d190df88a9389243752",
+        "entry_sha256": "a1e8cb1d872dcf041b525ebeadf20f80bf4427eb3168a8eff47059c3edbf0c1e"
+      },
+      "record_path": "data/normalized/full-001/batches/0660/records/45b4f1295faa6157427a320a06397b84.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 86,
+      "source": {
+        "collection_id": "1f26904ece64c75757c4",
+        "repository": "mrhlaingbwardev/agentic-hacking-skills",
+        "commit_sha": "e1dc2759662155ba5a2d72e733a7d899ef4499ef",
+        "skill_path": "skills/web-developer/SKILL.md",
+        "git_blob_sha": "24c2415af0f7f9ff2c7612157e66a2babd1331b9",
+        "entry_sha256": "4fc975ec07b619a6b53cae8cac4e278ef80d29015c92023626f5afc80ae69fcb"
+      },
+      "record_path": "data/normalized/full-001/batches/0192/records/d5d5693d0cf21ef498adcd94af4c9161.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 87,
+      "source": {
+        "collection_id": "4e6767717b613e313768",
+        "repository": "inference-sh/skills",
+        "commit_sha": "0cbf91c26ada28702c79962406286f0c14292150",
+        "skill_path": "tools/audio/ai-music-generation/SKILL.md",
+        "git_blob_sha": "e3a6a7758c70ca7bb92715d8f7bc7fdfbd6b0ff7",
+        "entry_sha256": "ef44b66c678cea93794e6d6c2bcafae045e373bc59819b490594b62a50192162"
+      },
+      "record_path": "data/normalized/full-001/batches/0282/records/89739ebf24a42cbf259d4342a4310167.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 88,
+      "source": {
+        "collection_id": "2d871961bbac4ba13aa6",
+        "repository": "Sendmux/skills",
+        "commit_sha": "edc201aa0608a795f0aeddc14be25b6a641d57e8",
+        "skill_path": "skills/sendmux-cli/SKILL.md",
+        "git_blob_sha": "a202c3bf813d70bbdb13e8128dc7f096afe4c7a7",
+        "entry_sha256": "7cd602f71a2dd19ae3ac33053490e3b01308cc25347a6c7fee7385573ec55400"
+      },
+      "record_path": "data/normalized/full-001/batches/0157/records/f3bd443a835b3df5fa747c79a79a4116.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 89,
+      "source": {
+        "collection_id": "1931f69f16ea453edab9",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/bautraeger-grundbuchaufflassung-925-bgb/SKILL.md",
+        "git_blob_sha": "d54ae637354f83c215c31385bb04268efeeebefc",
+        "entry_sha256": "87282f786f154063ea1c93ea42e7767b04c62e485e4080d46326d162ee2d06c5"
+      },
+      "record_path": "data/normalized/full-001/batches/1337/records/c084ca0ac420f77bf4b252939dab48a4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 90,
+      "source": {
+        "collection_id": "b8b7993bd176db2a4488",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "ca/constitutional/skills/quebec-charter-rights-vezril/SKILL.md",
+        "git_blob_sha": "dd6c9de0e9da95cd31b792fd7b8e355da0b72181",
+        "entry_sha256": "fb4c05d857918d9d30be817c811e223d1bc759bac6a0edb3a83c605ade8def07"
+      },
+      "record_path": "data/normalized/full-001/batches/0792/records/6a19889333a9f1b57cc04f0ce36fd395.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 91,
+      "source": {
+        "collection_id": "64429fe542d213843019",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cn/employment/skills/handbook-updates-zhou210712/SKILL.md",
+        "git_blob_sha": "a2692802fecba8854fcd1bf5f5837c245089092d",
+        "entry_sha256": "b36abbb34f25f1c648a4ebf8ec196ebc5de00a70c6c1f79e3c980373a18b8eb4"
+      },
+      "record_path": "data/normalized/full-001/batches/0877/records/eccf209c695b05d1ca9fdbdf091fcda5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 92,
+      "source": {
+        "collection_id": "2ef899f148995d02db9a",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/sentry/deslop/SKILL.md",
+        "git_blob_sha": "500f12ec80caafd7b64eb4210d187ded3cf53206",
+        "entry_sha256": "2b106d2147e8aa353e0d5feb429ca4e20b5bc700719acc677bf5482e53e785fa"
+      },
+      "record_path": "data/normalized/full-001/batches/0936/records/ed65b4233a72a0b721b85f05dd136209.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 93,
+      "source": {
+        "collection_id": "bcc969a291088a31bc22",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/constitutional/skills/belgien-redelijkheid-evenredigheid/SKILL.md",
+        "git_blob_sha": "d37d31448c936fae35ccaf49c377c5d1287fbd1f",
+        "entry_sha256": "a0eb4309605fc518503c47cfc94bc6b8cf970739d39e215025fe6a03f603f32c"
+      },
+      "record_path": "data/normalized/full-001/batches/1298/records/37101c1be0169acd3194b9bc927c41d5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 94,
+      "source": {
+        "collection_id": "ca25596f42591880badd",
+        "repository": "alirezarezvani/claude-skills",
+        "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+        "skill_path": "engineering/skills/ci-cd-pipeline-builder/SKILL.md",
+        "git_blob_sha": "a4550b952bdbc2d177660f429d88258f6bf1713d",
+        "entry_sha256": "2bebf5dab7b2130226a685f2d9d87de147afb4901837eb40563229afbf07a31a"
+      },
+      "record_path": "data/normalized/full-001/batches/0614/records/5ac8431a98aafab5684d0594d11367e3.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 95,
+      "source": {
+        "collection_id": "56ac8593e07ae5357e15",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/self-improving/SKILL.md",
+        "git_blob_sha": "1c6ec89e9256074f950a14af6eff2781aad0fca8",
+        "entry_sha256": "12922e038557d72ef03e201caa0442976144e62077c56010a1e04d9ae237e8a7"
+      },
+      "record_path": "data/normalized/full-001/batches/1249/records/6f093e2a5fceb4a0222564497fb5bfa5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 96,
+      "source": {
+        "collection_id": "bb9c8a5a1995ccc386a7",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/contracts/skills/handeln-im-fremden-namen-offenkundigkeit/SKILL.md",
+        "git_blob_sha": "7a370706924e33ff533daf8cd0a1e60cd697f86d",
+        "entry_sha256": "d34eb6412ba8cad69b6911f4edce8a643595cd1cc44e8c579ab1f7c8809efa73"
+      },
+      "record_path": "data/normalized/full-001/batches/1391/records/4cf1bbc8c76487b8f33a3c566bfa70b8.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 97,
+      "source": {
+        "collection_id": "d3085ba54b24027f7129",
+        "repository": "KalarisLabs/research-agent-skills",
+        "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+        "skill_path": "skills/pylabrobot/SKILL.md",
+        "git_blob_sha": "e22ad3b12fda05c7e2b3bfb7865565bf155264f6",
+        "entry_sha256": "aeb8ec83351928b34347387bcc1a6939fe00ef85cc37b741e3795c5f18f2c2fc"
+      },
+      "record_path": "data/normalized/full-001/batches/0589/records/2362cf2d62e3873eadc87325c4e3fb35.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 98,
+      "source": {
+        "collection_id": "49d65c1cc30bcafea330",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cn/ip/skills/paper-to-cn-patent/SKILL.md",
+        "git_blob_sha": "a4715fc3c23fc47677bea20ff74525847b0692df",
+        "entry_sha256": "4604f2107570cd07a4103f28ad85523ee2af99b92fbd3b27ad77ec434224b1ab"
+      },
+      "record_path": "data/normalized/full-001/batches/0890/records/c950f504e0fb92a700eb3d6e1f73d5d2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 99,
+      "source": {
+        "collection_id": "17600f61492063798ae1",
+        "repository": "microsoft/skills",
+        "commit_sha": "4f831bbbf54e004507758d8ef2ab420c77bb81b6",
+        "skill_path": ".github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py/SKILL.md",
+        "git_blob_sha": "3f7ec0d3239a968bb2acb0bec5fa6956894365cd",
+        "entry_sha256": "6d4a9cbb3889a3dd6beca505dbc6c240454a7432f9460195c68f9b54f0a89396"
+      },
+      "record_path": "data/normalized/full-001/batches/0391/records/494d9ab7020ae4f09d04213fe89fd242.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 100,
+      "source": {
+        "collection_id": "79475fd8db50c4b281d8",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/auto-memory-pro/skills/status/SKILL.md",
+        "git_blob_sha": "0e6f5950bf30c1d43441925f08a8041c515a6435",
+        "entry_sha256": "85cbe0a90e18f8ba387d2e4507bb351592b88631716c2fc50c2a28bdd38922dc"
+      },
+      "record_path": "data/normalized/full-001/batches/0737/records/718c238ac234b8a3a86f9973170c5286.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 101,
+      "source": {
+        "collection_id": "0b857d7045da7aa19211",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "commit_sha": "a25cf9ec00e2745d03f8704acf6f6919694ccd9a",
+        "skill_path": "skills/pymc/SKILL.md",
+        "git_blob_sha": "7fe1b3f1942fe27962162ab13193aa47dbce48b9",
+        "entry_sha256": "77d29ba7adf73d822329eab576d15a748811633a60bca88f5e93954793b3ea8a"
+      },
+      "record_path": "data/normalized/full-001/batches/0485/records/7ed4f5bd681aace36fce832fa9cb4514.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 102,
+      "source": {
+        "collection_id": "37c3cbfddcf7fe491d2e",
+        "repository": "zubair-trabzada/geo-seo-claude",
+        "commit_sha": "989cae01e8ebbc42a9ec798eb9e7cb423f5ec89c",
+        "skill_path": "skills/geo-report-pdf/SKILL.md",
+        "git_blob_sha": "d6ca6ea852c57b1df3abc5bb960be62d0e3e7a6f",
+        "entry_sha256": "9990a6a1b8be9a6b40a0435810e7fdc13e8c7e0bc9e9e33cee40965c5b0bddc7"
+      },
+      "record_path": "data/normalized/full-001/batches/0136/records/658644c086de6c790f03855cddd5b763.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 103,
+      "source": {
+        "collection_id": "33ff17ac0fe4a2128dac",
+        "repository": "googleworkspace/cli",
+        "commit_sha": "cd3697e07eb520056dcf142d0c7439bbb9ba32e9",
+        "skill_path": "skills/gws-workflow-email-to-task/SKILL.md",
+        "git_blob_sha": "bf9456d77622ecf3cae0d7544602b95ba3faeb13",
+        "entry_sha256": "07dfd3803f8205d9f57a68bc3b1e61de937f58ed9f2082ddabe8e3266239a3bd"
+      },
+      "record_path": "data/normalized/full-001/batches/0253/records/239cfb4ea50dd420f4931ec9ca990fd0.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 104,
+      "source": {
+        "collection_id": "d36ea62a37e53c616c19",
+        "repository": "finom/vovk",
+        "commit_sha": "0f3c4a2a3388273ccf5cab5a5af41b34f2b91666",
+        "skill_path": "skills/decorators/SKILL.md",
+        "git_blob_sha": "0f25f09ad9e771d0f291916ec4c6796f28ab1c95",
+        "entry_sha256": "5045db15bc9603e64dd61dc07be4a51c3daf5784be6fab68edf4a39df4805d10"
+      },
+      "record_path": "data/normalized/full-001/batches/0052/records/03c650f1b372fb3d4c38ce53042f4d2b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 105,
+      "source": {
+        "collection_id": "cadffd6312427852424e",
+        "repository": "nexscope-ai/eCommerce-Skills",
+        "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+        "skill_path": "supply-chain-optimization/supply-chain-optimization-tiktok/SKILL.md",
+        "git_blob_sha": "c8861a075fff224f7fcd7e200a52f6b0c0b5b849",
+        "entry_sha256": "f58d0618033ba185f6ca9b1813c2926369bd1a66b30a79456cc27372f6d273f9"
+      },
+      "record_path": "data/normalized/full-001/batches/0490/records/7cc5e555b067b8378f050f738aa4ae2d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 106,
+      "source": {
+        "collection_id": "0cd5f4bc19ec1f516309",
+        "repository": "sandbaseai/sandbase-skills",
+        "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+        "skill_path": "marketing/systematic-debugging/SKILL.md",
+        "git_blob_sha": "143e0723f269687ee08a9f2aae14219e390f9da6",
+        "entry_sha256": "71cb554debdfc1159dc0d7779015dae25efbb53f0f2ac78ee38c85218fc7b6a3"
+      },
+      "record_path": "data/normalized/full-001/batches/0517/records/13dd5406e95b2c2586556eefc5e731f5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 107,
+      "source": {
+        "collection_id": "050a5086d8c26ad08190",
+        "repository": "tronghieu/agent-skills",
+        "commit_sha": "831d1ae5c686a81b10f9c5b9cca04a7b8b97303d",
+        "skill_path": "skills/product-manager/SKILL.md",
+        "git_blob_sha": "6088b50f09321c86be0793441013529be869c3f6",
+        "entry_sha256": "1a93ae2a0083caff5dc8aee1d84db70e0cb2f7ef9c64b475422d94c98de96868"
+      },
+      "record_path": "data/normalized/full-001/batches/0143/records/48ee1079fc44b0f23dfb88b391a1f231.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 108,
+      "source": {
+        "collection_id": "106eca61c86471af72b7",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/bigmailer-automation/SKILL.md",
+        "git_blob_sha": "27da7c3277348a2d20442f3a461eb01d696ad592",
+        "entry_sha256": "92ed5b0bc6a1a411f56797420271ab5af5d4735764f72d5cd64d61449fb65264"
+      },
+      "record_path": "data/normalized/full-001/batches/0438/records/f89631c1201e2717e2a7d31f6d7b6a9c.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 109,
+      "source": {
+        "collection_id": "989d533b4b748303eab7",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/airtable-automation/SKILL.md",
+        "git_blob_sha": "be1fa6bc18876b3090eedd9dbda1848f51530d14",
+        "entry_sha256": "36e5f849d737e8fe29cef96082039340b7e481558e03d3441361538d1edc6824"
+      },
+      "record_path": "data/normalized/full-001/batches/1275/records/0667b6e83102a8bf62457435481e4461.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 110,
+      "source": {
+        "collection_id": "cf24af64edbe6e254785",
+        "repository": "karero/croftweaver",
+        "commit_sha": "26261f1d84feeefa2df4c6bcba5cb45e2d69a7c2",
+        "skill_path": "skills/facts-check/SKILL.md",
+        "git_blob_sha": "fdf857edff459f1d48e03875115ce4daf03aebc4",
+        "entry_sha256": "f7ea7588e1a3d41b7c650da35cd94aa441525fd208a5ce53348196474aa31b74"
+      },
+      "record_path": "data/normalized/full-001/batches/0087/records/51cf52451bff5ab67add5a4ccadff862.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 111,
+      "source": {
+        "collection_id": "460741f4ffb3f729e56d",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/adaptive-learning-playbook/SKILL.md",
+        "git_blob_sha": "f4885ab19cbc2a8545bde2104f8f26931a248bf7",
+        "entry_sha256": "103f9a57e7d8e2f81e03f0cc22b2dc69dd29d0089b5c752eff29bf8a8ef5949e"
+      },
+      "record_path": "data/normalized/full-001/batches/0322/records/ebff25ce1c0058522a43d52c5d95ab8d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 112,
+      "source": {
+        "collection_id": "6d7f3daa28770eaaf1ee",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/power-user-cultivation/SKILL.md",
+        "git_blob_sha": "f0976c3f703b6be496d7293729223f03737ca7c1",
+        "entry_sha256": "6416997691f20b365cc7caec87b55f27bd773b01f797bebc15a3374bd2a1a449"
+      },
+      "record_path": "data/normalized/full-001/batches/1151/records/21a0459e71193188afd403534b2cfc2e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 113,
+      "source": {
+        "collection_id": "bb7256816f71195dbdc6",
+        "repository": "seb1n/awesome-ai-agent-skills",
+        "commit_sha": "75865a5d037a4cdaa7f409a4ec14ab9b0292920b",
+        "skill_path": "database/query-optimization/SKILL.md",
+        "git_blob_sha": "f2b0b66cf989efa573eced66ef9cd3f9e813736d",
+        "entry_sha256": "0c12c4f33599cd19323ea276b89961deb96678f2d87fa57004b93bb2ca787e49"
+      },
+      "record_path": "data/normalized/full-001/batches/0306/records/9d8f6b0ec373cefa31905462278681ec.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 114,
+      "source": {
+        "collection_id": "703459357194258e7949",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/analyzing-ransomware-network-indicators/SKILL.md",
+        "git_blob_sha": "5fc96c0bd4eebd4345dee2e994c380a647b4f771",
+        "entry_sha256": "1e1c08200fe87d10552c5954eadeacbfa49b4d2e762591f0913338b27500b67e"
+      },
+      "record_path": "data/normalized/full-001/batches/0337/records/ca606249be408b1b3390081b690968ee.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 115,
+      "source": {
+        "collection_id": "d1a6b19602374ed5752e",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cl/litigation/skills/chilean-litigation-legal-elpabloultron/SKILL.md",
+        "git_blob_sha": "00b0496d3fa138552240e6702520b923f5d2d730",
+        "entry_sha256": "8775b11c5058beb69c101bbe3e8fae03f89b35c11a10e3f18b1feb091cd676bc"
+      },
+      "record_path": "data/normalized/full-001/batches/0823/records/5176d0c287e8ec1d3e8d1b312e968883.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 116,
+      "source": {
+        "collection_id": "240dd106d871581cd5d4",
+        "repository": "SnailSploit/Claude-Red",
+        "commit_sha": "a8de813edc9f66f60d44cfe42d47750e89d9930b",
+        "skill_path": "Skills/wireless/offensive-wps/SKILL.md",
+        "git_blob_sha": "462daf3069120240ecc92738151a4e06d1e4222f",
+        "entry_sha256": "4cc089a78b4793a15d9b5bcce4916840db48480dc8eb88c057d6ebd1555501dc"
+      },
+      "record_path": "data/normalized/full-001/batches/0386/records/3e1be9762c5ad7324f8981ccbded50f4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 117,
+      "source": {
+        "collection_id": "f864484918fb11a7e3e5",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/pk-it-export-tax/SKILL.md",
+        "git_blob_sha": "7b2206e39c84ada3c79a4b8a9b9ceb7a33d97d97",
+        "entry_sha256": "b693bd3d60949f37cc4929bc7c1d8bb826d9b40a97f0221505d11a1ba9bce336"
+      },
+      "record_path": "data/normalized/full-001/batches/1072/records/c240b64e7d02925675b5a5930db32051.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 118,
+      "source": {
+        "collection_id": "516f616d07b77e15c33b",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/notion-mcp/SKILL.md",
+        "git_blob_sha": "4f5bfb7206503c469cf47075375e62ca3f908d66",
+        "entry_sha256": "9c16338e7a64dbdde2b8cfbbf00d75dbf63b16efc70c52a17a2e968b3dabfd63"
+      },
+      "record_path": "data/normalized/full-001/batches/1164/records/77a76a90f70491ebc7a0964ffa5ed507.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 119,
+      "source": {
+        "collection_id": "0e892cbec3435a0fc3ec",
+        "repository": "indranilbanerjee/digital-marketing-pro",
+        "commit_sha": "cc45ca06eaf48abde3bb60fb79d31c41229c58db",
+        "skill_path": "skills/client-onboarding/SKILL.md",
+        "git_blob_sha": "70b32207ed44908e01159a4b6d9d878a9ba186ba",
+        "entry_sha256": "716136e36d1277f7cb9016410e65e6aa7c9da71c124e33e73b5d4746012af4e6"
+      },
+      "record_path": "data/normalized/full-001/batches/0221/records/cabc93c11f9e17635c5dbcc936dee40a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 120,
+      "source": {
+        "collection_id": "e30d9accdd39bb8c94af",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "br/employment/skills/cold-start-interview-trabalhista-legal-br-ria-sistemas/SKILL.md",
+        "git_blob_sha": "cb01115f5d3ef8decf3fede3ff982392bc58e8f3",
+        "entry_sha256": "6ea9ebbd4d8f2c97f19c5bb01a92d42cea09a448f669aa0269536c95f24c4fdd"
+      },
+      "record_path": "data/normalized/full-001/batches/0701/records/eb281b509415c9b71168719bd3296766.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 121,
+      "source": {
+        "collection_id": "eb923e621dcd929297fa",
+        "repository": "BuilderIO/skills",
+        "commit_sha": "f4f10b8d513476c24bd995ceac5294bcdd6ee15c",
+        "skill_path": "skills/factory-babysit-pr/SKILL.md",
+        "git_blob_sha": "20a8184eac85d3e1f1eb47cfbcd54f8c97113edd",
+        "entry_sha256": "d34a0922e844baf346258f5d39244dfcf8090a3adbee8956e7d00d129829b0a0"
+      },
+      "record_path": "data/normalized/full-001/batches/0083/records/b75c125c5bca288c8e92dae9eb2e5cd5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 122,
+      "source": {
+        "collection_id": "473c8cfe651c20851632",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/wiederholungsleistungen-planungsaenderung/SKILL.md",
+        "git_blob_sha": "15981eb9a5260406658488e7ac469c4a2a624bed",
+        "entry_sha256": "c7af3dcc9297d4b19c00484043f81df591d730df22363153a6b4545c0c48fc77"
+      },
+      "record_path": "data/normalized/full-001/batches/1355/records/8115e73540354f331aad45086a416894.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 123,
+      "source": {
+        "collection_id": "7a86567d651f30a11767",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/hermes-agent/SKILL.md",
+        "git_blob_sha": "7c6725d6e91188f6c24f9c49983d3cf58b58bdfd",
+        "entry_sha256": "d4e75ff98b30264ccd72adb090b5bff9795a7cb154bf5f7223eccb34adb42bf5"
+      },
+      "record_path": "data/normalized/full-001/batches/0758/records/923b61ee75190094bfcf1e027e543cf2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 124,
+      "source": {
+        "collection_id": "db1bb2c6dd1c54805de5",
+        "repository": "K-Dense-AI/mimeo",
+        "commit_sha": "a4cea1842a24515cda354a3aa9eb9763677a3cdd",
+        "skill_path": "output/judea-pearl/SKILL.md",
+        "git_blob_sha": "53466c7e21b5977ea59973949e2642bc9670f4ac",
+        "entry_sha256": "38d97e367e855a483054addc55f6ec0e363cde0a6ec2c0a84bacbce80fed1234"
+      },
+      "record_path": "data/normalized/full-001/batches/0140/records/46fc8949e73d0da16d2d284e014f28d2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 125,
+      "source": {
+        "collection_id": "513b2a0c1dc379f6bba3",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/china-pit/SKILL.md",
+        "git_blob_sha": "eb75a049190b8fbb876afe917030562371bb2792",
+        "entry_sha256": "1b69d4e3faf16c265ea7b8546d99548d7644e0a33647e1cf5aa679100aaf90c3"
+      },
+      "record_path": "data/normalized/full-001/batches/0730/records/46a38ac795ce520a2f43ba4080304222.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 126,
+      "source": {
+        "collection_id": "2f2ae897820489223ed7",
+        "repository": "AgriciDaniel/claude-seo",
+        "commit_sha": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+        "skill_path": "extensions/seranking/skills/seo-seranking/SKILL.md",
+        "git_blob_sha": "3936e790be9b01c47190fa0e9af1a1cd1d55ad93",
+        "entry_sha256": "e5aca1c812fdb6174eab316791e3483c3cd26d71f7986e3e1cedcc3d11602ae4"
+      },
+      "record_path": "data/normalized/full-001/batches/0092/records/c5fb6bc84ed9eddb9370cfc2f7b8817b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 127,
+      "source": {
+        "collection_id": "62abd3517038d9c2b020",
+        "repository": "rameerez/claude-code-startup-skills",
+        "commit_sha": "410f81f83e4ac309032eab3d3265353f97ea665f",
+        "skill_path": "skills/customer-empathy/SKILL.md",
+        "git_blob_sha": "31601211a561e91263970d6fd39fdff41e953f73",
+        "entry_sha256": "ed629ab684570b5442f327601fcf364c8289002270761c51b11069d87b09ab91"
+      },
+      "record_path": "data/normalized/full-001/batches/0032/records/d77b0e6b3079fd1b349c01f8ec01e24c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 128,
+      "source": {
+        "collection_id": "af38fe761e457a0e8af0",
+        "repository": "veniceai/skills",
+        "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+        "skill_path": "skills/venice-auth/SKILL.md",
+        "git_blob_sha": "43592f690d3fb5c72977616afe0c25f0a2c5d824",
+        "entry_sha256": "816be260ab53428b0f100dad3dc87978591e1365cdd6fad9ff52b438f2f962a9"
+      },
+      "record_path": "data/normalized/full-001/batches/0100/records/4104fd9d973f30ab9245d10a7b358f64.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 129,
+      "source": {
+        "collection_id": "b4833dcce8bfc2912a2d",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/red-teaming-llms-with-garak/SKILL.md",
+        "git_blob_sha": "ccfe522affefbfdc7495515c41432a43aecc268c",
+        "entry_sha256": "313dce0a1ce1bba2296bf1ee9e3991f0088be6d6fe46036ff668023332dd2a39"
+      },
+      "record_path": "data/normalized/full-001/batches/0903/records/71f9b1dfe39ed8c20e4f4561930f98c9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 130,
+      "source": {
+        "collection_id": "29a51f98c9cdee301afb",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/constitutional/skills/verfassungsrecht-juristischer-argumentationskern/SKILL.md",
+        "git_blob_sha": "2a5749b5dee72f62a486b8ebffc0123355101c11",
+        "entry_sha256": "04ab2cc4befe5e676085aa14e31d51d9543232b4d02979ccb960f4d796298aa6"
+      },
+      "record_path": "data/normalized/full-001/batches/1328/records/a39d3d6304acd924dd9f55e38fcc85c2.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 131,
+      "source": {
+        "collection_id": "4dc9a60bc42cc838272c",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/content-length-comparator/SKILL.md",
+        "git_blob_sha": "b9e769c9b02d3b66736596461d65d9bbd4f83784",
+        "entry_sha256": "e8259a27656dfd494d6e5963732f4934f977ea779a61d20aa926ada39687bb7b"
+      },
+      "record_path": "data/normalized/full-001/batches/1338/records/8338a26bfab6d4971779d269a05ab98a.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 132,
+      "source": {
+        "collection_id": "ba16177c2a2e0f0c0251",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/alumni-re-hire-tracker/SKILL.md",
+        "git_blob_sha": "c74147d58d9e12c3504586a7e726944603245c52",
+        "entry_sha256": "9dc094ab76ea84f2ebe44a1b07981c2e37671df0533c50418a9926c3ba8492aa"
+      },
+      "record_path": "data/normalized/full-001/batches/1276/records/ae4710fa396c1e54fbfb10ab15ebac02.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 133,
+      "source": {
+        "collection_id": "c54205eb7767c80c38c5",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cross-jurisdiction/corporate/skills/corporate-docs-danielmc09/SKILL.md",
+        "git_blob_sha": "c46ab1be93aa433b02f6aef240169b063ce269db",
+        "entry_sha256": "0bcc685725f80243cb1d4249946f412b832415ac191dc50d560149e534c5c4a3"
+      },
+      "record_path": "data/normalized/full-001/batches/0984/records/abb008346c56850c28a90848c913bbcc.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 134,
+      "source": {
+        "collection_id": "101514f5f046a613fc63",
+        "repository": "softaworks/agent-toolkit",
+        "commit_sha": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+        "skill_path": "skills/session-handoff/SKILL.md",
+        "git_blob_sha": "1d61d970431fdbebc7c1a952351af8fa7cca1f8b",
+        "entry_sha256": "8964e1b846170ac9cdbaa4c3c510e3493e08917620761cbb492c46d8d3567e64"
+      },
+      "record_path": "data/normalized/full-001/batches/0399/records/c58c6499a654b8935d0d4b53545ec6ca.json",
+      "same_entry_hash_source_versions": 3,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 135,
+      "source": {
+        "collection_id": "3c3d08a2cf2eb67a6df2",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/constitutional/skills/daenemark-proportionalitetsprincip/SKILL.md",
+        "git_blob_sha": "c57aec0aaf3d0840b4d5641741826776d4f98f40",
+        "entry_sha256": "1004501ecc3424e7549a8b7cf712283ac3ab2e237a78cb933691d86ec6548561"
+      },
+      "record_path": "data/normalized/full-001/batches/1300/records/b9dcf51ee42855205eaf675c8cb2f4a9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 136,
+      "source": {
+        "collection_id": "ef44bf6f9f6a9604d83e",
+        "repository": "google/elephant-goldfish-model",
+        "commit_sha": "6a8001ea31ccf72430ba0603a467ec6df9f69dd7",
+        "skill_path": "skills/egm-resolve/SKILL.md",
+        "git_blob_sha": "ebd5a67c1f7bc776a1fce27d00b78436de9e159e",
+        "entry_sha256": "fe12b8712f88b51780d817e6c8f0ac5e7a29961ee111d0fd19bfc2f738d2f531"
+      },
+      "record_path": "data/normalized/full-001/batches/0130/records/d158bb8d53e9afdc90f6e1c09a17fe29.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 137,
+      "source": {
+        "collection_id": "f77590b536bea4a7307b",
+        "repository": "plugin87/ux-ui-agent-skills",
+        "commit_sha": "def84a70fadc3490d80901295a4f1951fdb2cc69",
+        "skill_path": ".claude/skills/design-review/SKILL.md",
+        "git_blob_sha": "618dba532d5f7a2a85f6a450e5b9735d6d466b18",
+        "entry_sha256": "2ef0c5c2d3dbc3a20a69b5ca7b63fbad89ce470188211296cea7e7b5d013befb"
+      },
+      "record_path": "data/normalized/full-001/batches/0116/records/f87b5fadd255a0c06bce2927131f7304.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 138,
+      "source": {
+        "collection_id": "9903d5af2d0115e20bc6",
+        "repository": "OneWave-AI/claude-skills",
+        "commit_sha": "b2267d9171af4f56848d82992381b20b89b44056",
+        "skill_path": "quiz-maker/SKILL.md",
+        "git_blob_sha": "509a11a5f95de352df1133b94b993fd413a78e13",
+        "entry_sha256": "2a58e3a486c15c80cb077776290df747f0c04e4fd879a29bc5dcd77377f34947"
+      },
+      "record_path": "data/normalized/full-001/batches/0560/records/f036102eb8b04196e9cea81724822523.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 139,
+      "source": {
+        "collection_id": "16ab8b3db9cf28889113",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/superpowers-lab/SKILL.md",
+        "git_blob_sha": "53b95ef6741e53b3e4ebb04a98eb5bf58d137115",
+        "entry_sha256": "33940624ef8a0333b0b17e31be8f67f39504186a33fe596d4842859e0c9d42c5"
+      },
+      "record_path": "data/normalized/full-001/batches/1215/records/2501301984223b060ea101f22af1a185.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 140,
+      "source": {
+        "collection_id": "913ac83525e69da9a132",
+        "repository": "softaworks/agent-toolkit",
+        "commit_sha": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+        "skill_path": "skills/plugin-forge/SKILL.md",
+        "git_blob_sha": "6b314395db1330b9dd60a663dd08e980230776f0",
+        "entry_sha256": "8179b93434f814607d2a028631e105fe46a3d7ba488c64fa70c8cb01cfc84104"
+      },
+      "record_path": "data/normalized/full-001/batches/0381/records/cee4e36bf79ad6562e0aef8a88c325d3.json",
+      "same_entry_hash_source_versions": 3,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 141,
+      "source": {
+        "collection_id": "745c14726443b1edf9cd",
+        "repository": "gooseworks-ai/goose-skills",
+        "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+        "skill_path": "skills/shared/meta-ad-manager/SKILL.md",
+        "git_blob_sha": "7fdc6920e1e32d63de0c6cfd06df6d53c1709bac",
+        "entry_sha256": "966240b475f754fe20e2e37a664f0adb59d6ad2c09715e6c4d3a221ebc0af724"
+      },
+      "record_path": "data/normalized/full-001/batches/0469/records/8cc7c8178be01f98c99e6dbabe981911.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 142,
+      "source": {
+        "collection_id": "2579c4a3a94cf7f710f6",
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/auto-review-loop/SKILL.md",
+        "git_blob_sha": "c0b9b23f2e1854096dab65f0fbd98d8783b11c32",
+        "entry_sha256": "2a553de8f498aa8224b0bc941a3c4c4dba351d5c61ebf48beaecb6a24aaa4a60"
+      },
+      "record_path": "data/normalized/full-001/batches/0101/records/343a0dc5f77f8aeb3ac7e8fcb2d1d86c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 143,
+      "source": {
+        "collection_id": "bafbddf9fa60171cb96a",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/lph8-bauueberwachung-parkhaus-tiefgarage-beton/SKILL.md",
+        "git_blob_sha": "53386d284a76094701a0bd5185fcc61dccb5513f",
+        "entry_sha256": "5ff06f125d2dc0929f84034a057fdd10c3347533edaf72edc58bb4b550ac5f2a"
+      },
+      "record_path": "data/normalized/full-001/batches/1350/records/8e51d78ee742dc263c12b70fc080d1d6.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "建筑、航天等专业工程"
+    },
+    {
+      "sample_no": 144,
+      "source": {
+        "collection_id": "2d95664185d12a6657a2",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/blender-vse-pipeline/SKILL.md",
+        "git_blob_sha": "1476822b8b09ae726bbcdd806ef3c9be32ab56a2",
+        "entry_sha256": "d52954695563c218fd39c5a39fc0902c0940b71abc7505d77c6d407db8bb3998"
+      },
+      "record_path": "data/normalized/full-001/batches/0474/records/fd0251cab2654d4ff542e795e82defab.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 145,
+      "source": {
+        "collection_id": "f1e712c72f53264ee8dd",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/bannerbear-automation/SKILL.md",
+        "git_blob_sha": "c9c5e8761907e6d8a313e74564c727362ac1d007",
+        "entry_sha256": "74e1a06f61a81a362de750e772c0e5b4720c87034c6cc52681c56aa0768cb858"
+      },
+      "record_path": "data/normalized/full-001/batches/0397/records/6d7a08290b79e96f55f80b92dd79ffd9.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 146,
+      "source": {
+        "collection_id": "ca3a67e2187e7a728f32",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/boesglaeubigkeit-kenntnis-und-819-timing/SKILL.md",
+        "git_blob_sha": "51d57a6d5f487fd61c1c89068314113c11d02654",
+        "entry_sha256": "5746d7d098c9afb192d9cb6e8b496ea6e2622102dc589244b69db3b9ee8fdc26"
+      },
+      "record_path": "data/normalized/full-001/batches/1185/records/f64b326fd9d8b1207057bd3b19ad53bd.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 147,
+      "source": {
+        "collection_id": "7c54ce75652b94ba1797",
+        "repository": "browser-act/skills",
+        "commit_sha": "593316aa0f8ccd88bdf745c92b24a50641701973",
+        "skill_path": "solutions/video-platforms/tiktok-hashtag-videos/SKILL.md",
+        "git_blob_sha": "29aa60ad69fb5d41e2be4a6118f8b3e5ddb8819e",
+        "entry_sha256": "c811e05ad9d3035fab23fdcf014cdedde3bf9a0b391e6794a34501df0fdd9667"
+      },
+      "record_path": "data/normalized/full-001/batches/0416/records/1ba2d4f15f50e20ff388f70ecb1c21d6.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 148,
+      "source": {
+        "collection_id": "61efb0624fa87401539e",
+        "repository": "nexscope-ai/eCommerce-Skills",
+        "commit_sha": "ee0fb29433d02ccc22e3e6cea9ab4586d49fd42e",
+        "skill_path": "shopify-checkout-customization/SKILL.md",
+        "git_blob_sha": "de742316247875e92e0e811b60a8a1a87aeac64b",
+        "entry_sha256": "e989e55245b332dde8e23d599234efdbe4f1e74013048dc05240c549c0f142da"
+      },
+      "record_path": "data/normalized/full-001/batches/0443/records/ca25d73ecc9af9175ca884cac713c11b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 149,
+      "source": {
+        "collection_id": "528a58739279deb07600",
+        "repository": "composio-community/awesome-codex-skills",
+        "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+        "skill_path": "composio-skills/statuscake-automation/SKILL.md",
+        "git_blob_sha": "c22aca1c16bdc09ec3a778982f6488f9d6df3701",
+        "entry_sha256": "c52ea3abf72c49a4e6d2f2b89738b378383c732a82315e8446f772438aae8e6b"
+      },
+      "record_path": "data/normalized/full-001/batches/0887/records/6f304355b4bbdf4103ef46fb65803e1b.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 150,
+      "source": {
+        "collection_id": "4c823f35a3b671293e05",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/administrative/skills/nutztierhaltung-kontrolle/SKILL.md",
+        "git_blob_sha": "d5079d6667d192113692b6e027be17ce20b3b0b7",
+        "entry_sha256": "4d5211dfdd621a8d8291402ed9a8e34e3b2e371d0f4adfff5045412b6deebef7"
+      },
+      "record_path": "data/normalized/full-001/batches/1112/records/42b8c5c563cdd2bdc76c36872498339a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 151,
+      "source": {
+        "collection_id": "3ff52c47ec6c400d2715",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/risikoregister-sachverstaendigen-pruefung/SKILL.md",
+        "git_blob_sha": "aa7110cf498af43dd26d840365eb5401ae0a74b9",
+        "entry_sha256": "34cbaf75abc38d492fe32fd16c832084f3a8e7c8c11278c09ff359c760bddefe"
+      },
+      "record_path": "data/normalized/full-001/batches/1353/records/c132ae763d7210b1c62a2b097d98fa9c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "建筑、航天等专业工程"
+    },
+    {
+      "sample_no": 152,
+      "source": {
+        "collection_id": "33f326a04ced24940eb8",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/screenshot-fyi-automation/SKILL.md",
+        "git_blob_sha": "c20663d1f1ee442c138ef0a90221f90ba548ef39",
+        "entry_sha256": "654d0f12f00c76d6102f25c087357b178b72b45933c892edd7da14284e6dc1f7"
+      },
+      "record_path": "data/normalized/full-001/batches/0864/records/b2b2aa1c2f838efe7ce31035be70ff7b.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 153,
+      "source": {
+        "collection_id": "00f7517658a6e663d138",
+        "repository": "alirezarezvani/claude-skills",
+        "commit_sha": "8f082544116fc0d014188e521ca40304cdfc86b0",
+        "skill_path": "marketing-skill/skills/marketing-ideas/SKILL.md",
+        "git_blob_sha": "5e643ec2f3c15d9f8753129afd4d2955db17fbb8",
+        "entry_sha256": "c5f217a4fe511488fd27a0f3fde7da84f5c6865f8aef7b7ee5e3d8f76e855b93"
+      },
+      "record_path": "data/normalized/full-001/batches/0681/records/7a463f2f885a9accda6483c13855f62c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 154,
+      "source": {
+        "collection_id": "b6c3820da172db70525c",
+        "repository": "google/skills",
+        "commit_sha": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+        "skill_path": "skills/cloud/gke-multitenancy/SKILL.md",
+        "git_blob_sha": "5fd9f8beb80acd23f654d4bbdd63c92818e44e97",
+        "entry_sha256": "eb60874b5f37992a541b90143218dbffe669bb18a50193059ca9bd7884b0de21"
+      },
+      "record_path": "data/normalized/full-001/batches/0480/records/8b8bb359d43a159c55da0b6b3d2a0575.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 155,
+      "source": {
+        "collection_id": "5c34cee42915becfeda6",
+        "repository": "KalarisLabs/research-agent-skills",
+        "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+        "skill_path": "skills/evaluating-cosmos-policy/SKILL.md",
+        "git_blob_sha": "954fba68c507bb2c37d35624c889c9e348d33ccb",
+        "entry_sha256": "796d2cb54ed2dc428baa1d7aa68ac57325985d16eb87218252f6a118d397ef1f"
+      },
+      "record_path": "data/normalized/full-001/batches/0352/records/66156060cd321107d95dd567d6e468f4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 156,
+      "source": {
+        "collection_id": "4c1522c0217900b22d26",
+        "repository": "foryourhealth111-pixel/Vibe-Skills",
+        "commit_sha": "bd10381417cbd890ed6f08a18bb18fb5aaf0f741",
+        "skill_path": "bundled/skills/ml-data-leakage-guard/SKILL.md",
+        "git_blob_sha": "a9cb6e9dbc318de456d26a469ef9ff6d9c559ff6",
+        "entry_sha256": "cfc29c2fc1e94e507ef198601826c91858d18810dd89ad612ce0c45689dc424b"
+      },
+      "record_path": "data/normalized/full-001/batches/0471/records/4f3360f32ad7dec5857a75963aa92479.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 157,
+      "source": {
+        "collection_id": "64617ddb136a8b403933",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/ca-fed-cpp-ei/SKILL.md",
+        "git_blob_sha": "56db1e44b35b8fd10fff0fa9b47a7d800f4171ae",
+        "entry_sha256": "a608f53253742a1b961b2d6a1a65b2fc56cb9cdd7b60dff1ff6df81aee723904"
+      },
+      "record_path": "data/normalized/full-001/batches/0689/records/af5e6f82f9bc040109aef3ae2399ef7d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 158,
+      "source": {
+        "collection_id": "70e47e05e27730523017",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/bunnycdn-automation/SKILL.md",
+        "git_blob_sha": "da09b9a3471192b61c5c563102f257c9f87bb14d",
+        "entry_sha256": "070ca401e4416c334318c78aa2695101e37ee4c0e8f43e790bc6e01140ec2186"
+      },
+      "record_path": "data/normalized/full-001/batches/0515/records/e3301ef85eb30149607378641b2f5b58.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 159,
+      "source": {
+        "collection_id": "95c005db17d0956250af",
+        "repository": "prompt-security/clawsec",
+        "commit_sha": "e46beec4f559e15c57d250023298391253e9ce43",
+        "skill_path": "skills/claw-release/SKILL.md",
+        "git_blob_sha": "404da81d0d7d3acafd4b02e5112875544c2ac167",
+        "entry_sha256": "f6f326b1b91a0ce92cb7d159b0207ed47a94837c751f8ae3798921a4ff747d8c"
+      },
+      "record_path": "data/normalized/full-001/batches/0015/records/67c82e9580a791f28c9a216ea614c166.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 160,
+      "source": {
+        "collection_id": "3afa482653279f80db67",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/scientific-writing/SKILL.md",
+        "git_blob_sha": "5fecc0e7c08bade99a95364b0fb9b37ae1905c58",
+        "entry_sha256": "61f1e00b7ced079bd602c3a2b722e2f40ef908a4d302312ec6ec358039e1d2f1"
+      },
+      "record_path": "data/normalized/full-001/batches/1187/records/7e0a1d28b0d2bb0fa4ac8027c7645455.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 161,
+      "source": {
+        "collection_id": "8eb70e6817f2c751aae5",
+        "repository": "NeoLabHQ/context-engineering-kit",
+        "commit_sha": "23e2428e809d77717f8acc9659c374a3a1fcb93e",
+        "skill_path": "skills/launch-sub-agent/SKILL.md",
+        "git_blob_sha": "a0b68eaaa983c10110497b4457a405301bba5d2d",
+        "entry_sha256": "a6823b0e9930cb99a458d9b5941bcaab711c1184d762d23d1d152e7f7eea8b9f"
+      },
+      "record_path": "data/normalized/full-001/batches/0563/records/c02dadb73356fc5cc856e07f42445688.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 162,
+      "source": {
+        "collection_id": "b3b4db6d950efd3a5c85",
+        "repository": "aeonfun/aeon",
+        "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+        "skill_path": "skills/taskmarket-delegate/SKILL.md",
+        "git_blob_sha": "778d768820b3a89bc116d795b86bf7cfbbf2366c",
+        "entry_sha256": "bc78074e49656a5289c946525c6eaf954d74571425bac494451afd30a6a44cdd"
+      },
+      "record_path": "data/normalized/full-001/batches/0448/records/d11421c0379fd263e4a86090b8793686.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 163,
+      "source": {
+        "collection_id": "981438e7680aa3d7fb16",
+        "repository": "amirkiarafiei/subagent-cli-skills",
+        "commit_sha": "ae8b6feef10458e41c729d6d8d5d2f4fb26a9fe4",
+        "skill_path": "skills/openhands-cli/SKILL.md",
+        "git_blob_sha": "3191ec8d7e08b14eaaee488a3993a5fb59350f64",
+        "entry_sha256": "a26e56ed69e5396fa89662c4e095cc0f8a04ff6105572bc65a09b9bdaa133b8a"
+      },
+      "record_path": "data/normalized/full-001/batches/0195/records/89edc3c46a16159178977f8ed973b748.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 164,
+      "source": {
+        "collection_id": "24948fde52973ab4b2b5",
+        "repository": "adobe/skills",
+        "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+        "skill_path": "plugins/commerce/app-management/skills/commerce-app-init/SKILL.md",
+        "git_blob_sha": "507b5339319c9a280cfd28fa144ad2eeee15596a",
+        "entry_sha256": "858d79a136313d0005c707681cffd10875cd855cb07c53a7b4ea5d97de5c394f"
+      },
+      "record_path": "data/normalized/full-001/batches/0501/records/0e25361e1c1eedb56fdbca330739f1e7.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 165,
+      "source": {
+        "collection_id": "53c24cc6210028fac0af",
+        "repository": "KalarisLabs/research-agent-skills",
+        "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+        "skill_path": "skills/neuropixels-analysis/SKILL.md",
+        "git_blob_sha": "566faeabfe8ddfc43fb138ab8d637e3cdb0f944d",
+        "entry_sha256": "3668bb16e7e28449d58cafa4daf6ecdeaa3781e96502853195a486a7b5298f55"
+      },
+      "record_path": "data/normalized/full-001/batches/0530/records/4e4cb2a57bfecd397ad4cb3323684136.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 166,
+      "source": {
+        "collection_id": "d668d3d7234b6b6ce207",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/relay-for-telegram/SKILL.md",
+        "git_blob_sha": "379b81dd619f871a6b6cdab2321862d9040c4aea",
+        "entry_sha256": "ca2f1dce1c0cddff54acf680c76d7bec7ea3c2438c81f699f8c40466e8ea8328"
+      },
+      "record_path": "data/normalized/full-001/batches/1229/records/db1027ed224421043c508bd8e496459c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 167,
+      "source": {
+        "collection_id": "12a0e3c1fa5c4a180ca0",
+        "repository": "ReScienceLab/opc-skills",
+        "commit_sha": "4a2ab3639bd9d14e4184721f2d7eac9c1729cc97",
+        "skill_path": "skills/producthunt/SKILL.md",
+        "git_blob_sha": "a949610c1bf5584638f6f77054309e1c575688f0",
+        "entry_sha256": "654e04b89eec79a477ee1f9cd7a2cfd2ac3206256873e92db09f368809915f4c"
+      },
+      "record_path": "data/normalized/full-001/batches/0099/records/0d77c2409d4a2b94a8f3e5447de137b4.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 168,
+      "source": {
+        "collection_id": "04aa04a980028646e735",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/contracts/skills/arbeitsrecht-agb-310-abs4/SKILL.md",
+        "git_blob_sha": "acc4f0bdb9ec7afd509cdcb4286d948d8f0006fd",
+        "entry_sha256": "2b92a917164a91b9503d9f326c98682b7295865eb0dbe11a696cbad9bea136c8"
+      },
+      "record_path": "data/normalized/full-001/batches/1375/records/c1c76e8d7f2ffba561925a4f7aa2b6ab.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 169,
+      "source": {
+        "collection_id": "02e690e7c5516d5a7e19",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/file-uploads/SKILL.md",
+        "git_blob_sha": "f94ef26753ef2ae08230bd64b2fc47fd84dcff4d",
+        "entry_sha256": "42f7bd55025c6912d683b70a587cb7388dec54262fbb91ab4018ca72adc79c08"
+      },
+      "record_path": "data/normalized/full-001/batches/1368/records/b0f1720ef8e0da39cc4537bdff8add8b.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 170,
+      "source": {
+        "collection_id": "a4a571f654dfe96be174",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/zh-TW/skills/project-guidelines-example/SKILL.md",
+        "git_blob_sha": "4e7f5508473138ebc7ff0f1256c8fd73f743e317",
+        "entry_sha256": "28d9d929df67b73d130c67eeb24b6b8d459798e3f48b70f31c86a2a8fb0baede"
+      },
+      "record_path": "data/normalized/full-001/batches/0846/records/4bc0cc36bcd1f9873205c4d63ed52100.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 171,
+      "source": {
+        "collection_id": "6b5351e9312f6478da21",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/antitrust/skills/kartellrecht-marktabgrenzung-pr-workflow-anschluss-skills-router/SKILL.md",
+        "git_blob_sha": "7499c5d3a1a7b19aaed3b3131a1e602fb2bb76e1",
+        "entry_sha256": "2a79be8114a95214052bd7dea4a0bd98eebf794e47327c372f867d42c0125563"
+      },
+      "record_path": "data/normalized/full-001/batches/1145/records/c40b9eb7219766b94019a76ca86a382b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 172,
+      "source": {
+        "collection_id": "de79631dc7322e0d3a7b",
+        "repository": "gooseworks-ai/goose-skills",
+        "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+        "skill_path": "skills/shared/reddit-post-finder/SKILL.md",
+        "git_blob_sha": "8485324843ffe3b9b843c81017b43126662df1cf",
+        "entry_sha256": "76e7abd69bba6a51cb6c15184633b6183fa1de2f78e15efe96a885d55a650eb9"
+      },
+      "record_path": "data/normalized/full-001/batches/0474/records/2e6cc73348b6658d66d0d27bd2a469b3.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 173,
+      "source": {
+        "collection_id": "92a50ea3cf7c4c830904",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/insolvenzrisiko-im-dreipersonenverhaeltnis/SKILL.md",
+        "git_blob_sha": "89eaeec78dc530a8dd31ac034612b65676dc1e70",
+        "entry_sha256": "4e787e3f71c0bcccb8c8c3256c4baf7a76d3a064c6141e9515c6c6a6411b48a2"
+      },
+      "record_path": "data/normalized/full-001/batches/1218/records/c367208f8bc19a3894ec250cc5a9fbe0.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 174,
+      "source": {
+        "collection_id": "b56d127e7c3812b853ea",
+        "repository": "gooseworks-ai/goose-skills",
+        "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+        "skill_path": "skills/shared/goose-graphics-create-format/SKILL.md",
+        "git_blob_sha": "c5e0237be5f9aba266885966d303f2319d19c862",
+        "entry_sha256": "ccae7c2d6989742fdf461221eda856d34dca7e24838adaf31a0bad02a4beb821"
+      },
+      "record_path": "data/normalized/full-001/batches/0454/records/5bdf60cf9ada4ea1f988fdfcf62af855.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 175,
+      "source": {
+        "collection_id": "5dcabc7eefb906a91b64",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/consumer/skills/kaltstart-verbraucherfall-sortieren/SKILL.md",
+        "git_blob_sha": "345b4b7e14b73958e8fdef4f06c137126128d5fd",
+        "entry_sha256": "b098888f558057d2fd43bbcd02f0fbd34e1fb3a5d4260f66488917582423ae59"
+      },
+      "record_path": "data/normalized/full-001/batches/1361/records/24c6152172e9169676d7eb0e0da4fa91.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 176,
+      "source": {
+        "collection_id": "60588999ab0981bd702c",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/gr-income-tax/SKILL.md",
+        "git_blob_sha": "189488f629d401f7c7ffdaa907164334b9db4c1e",
+        "entry_sha256": "ee6da4262b9ff6cd6a7f25715e62c3cd7842055fbd77a6af8e946314d00874fc"
+      },
+      "record_path": "data/normalized/full-001/batches/0908/records/344f069100738dc4ea158263f5aa420b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 177,
+      "source": {
+        "collection_id": "7e55f513498b2de564a6",
+        "repository": "yaklang/hack-skills",
+        "commit_sha": "6fbf0bc8d5c71830d62543a308d8744606c43d7c",
+        "skill_path": "skills/ssrf-server-side-request-forgery/SKILL.md",
+        "git_blob_sha": "ca81071ad32bd4ec643c9231035060e31aa92ae1",
+        "entry_sha256": "c3502de5ddbe5dce06d8c78986667813aec2239158b94dea3195775427063c2f"
+      },
+      "record_path": "data/normalized/full-001/batches/0399/records/0029e58f2518c3ec35bf9011126728c6.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 178,
+      "source": {
+        "collection_id": "32d7a8012997ad023afa",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/causa-data-causa-non-secuta/SKILL.md",
+        "git_blob_sha": "2ca9866a4ac89848300fb929c6edb6ff5a208a93",
+        "entry_sha256": "fb8e432e4139f23301c903de181ddec973413c779e63c42c9a9f38d3fc811113"
+      },
+      "record_path": "data/normalized/full-001/batches/1186/records/220e1deeded7d02673f57e53fe011c9f.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 179,
+      "source": {
+        "collection_id": "389ad0e8a8e2aa5ed236",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/openai-sdk/SKILL.md",
+        "git_blob_sha": "756d87ee41461929e551e237bf7df9bec98ef98a",
+        "entry_sha256": "98793aa46caa38f819bf2aa7a102b60d06b5c65cf6851cbf2483bc466f0fc5a3"
+      },
+      "record_path": "data/normalized/full-001/batches/0869/records/f4387949d92dbe0138024b039dff1433.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 180,
+      "source": {
+        "collection_id": "804b3b378cfb4b25cc16",
+        "repository": "gooseworks-ai/goose-skills",
+        "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+        "skill_path": "skills/marketing/research-competitors/SKILL.md",
+        "git_blob_sha": "3d6898a6388adeef6e52e6d9a1ede1859cc71351",
+        "entry_sha256": "b7286e9e0f4370e18100351ad5dddef832b781d597d38ad13a702469c42307d0"
+      },
+      "record_path": "data/normalized/full-001/batches/0352/records/91d9ac0ba02ea3bedbb314805f5a1d1c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 181,
+      "source": {
+        "collection_id": "cbc48b46659366026d6c",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "br/corporate/skills/customize-9/SKILL.md",
+        "git_blob_sha": "9a1debe6680f0f95208fec42eb88bad928aaa4b2",
+        "entry_sha256": "7995042f8d0098cc549cd1dd8cc3caf2380c761a9e0d9a3ce940ec5ab676a681"
+      },
+      "record_path": "data/normalized/full-001/batches/0650/records/ef0965c1239f3c0a96a737741d7d73c0.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 182,
+      "source": {
+        "collection_id": "703bac9bbd9600d339d4",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/kobe/SKILL.md",
+        "git_blob_sha": "dccab86aa0c7f0d242ee7811c05c5b98916e9408",
+        "entry_sha256": "e8b6e96f618c07e04dab459b8a2748655659d5b98ce53ca383d623c475956b9d"
+      },
+      "record_path": "data/normalized/full-001/batches/1105/records/216640ab603dffcbb35ad4c34976b938.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 183,
+      "source": {
+        "collection_id": "fb2b606c6cc499c0e88e",
+        "repository": "mcollina/skills",
+        "commit_sha": "c75d70dbfbe991d8cec42aeda0b64ff14fbb9ac7",
+        "skill_path": "skills/nodejs-core/SKILL.md",
+        "git_blob_sha": "00473a28f093381dc987f87641479764423e1d29",
+        "entry_sha256": "b0d8354a96f2b6512972a1e0243b1134ab2e0006f061f68cb8ec4b4d8d1402bc"
+      },
+      "record_path": "data/normalized/full-001/batches/0077/records/4e510cc4a16ec98975c40aa7e792a116.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 184,
+      "source": {
+        "collection_id": "caacd516164805f0782c",
+        "repository": "mukul975/Anthropic-Cybersecurity-Skills",
+        "commit_sha": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+        "skill_path": "skills/conducting-network-penetration-test/SKILL.md",
+        "git_blob_sha": "e0b942a16ad5778aedd5def17237b81cc21577d9",
+        "entry_sha256": "b7521af5038b93cfab7f85ac9be3cd9952092cede1872d8e7a46e364f06be333"
+      },
+      "record_path": "data/normalized/full-001/batches/0534/records/670aa5672a8191994b04ce7a4c16c592.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 185,
+      "source": {
+        "collection_id": "ee50eb6b3cf6e0f866ab",
+        "repository": "sandbaseai/sandbase-skills",
+        "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+        "skill_path": "marketing/git-workflow-and-versioning/SKILL.md",
+        "git_blob_sha": "2ba9553cd3524d7bd0727d6f11b606e8c14125ab",
+        "entry_sha256": "880be6ad12d746e8f80892e30bc948c26aecf8cc4127f0e5d6f6e805d1a3e62b"
+      },
+      "record_path": "data/normalized/full-001/batches/0306/records/5877339e7a97d552c57b24e854c56adb.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 186,
+      "source": {
+        "collection_id": "5e79b2ae5b0c139c1ae3",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/construction/skills/fachanwalt-bau-architektenrecht-unterlagen-luecken/SKILL.md",
+        "git_blob_sha": "5f56ff9f0d7feb9e445d3c3c3177df5e6530cf72",
+        "entry_sha256": "002f41aac9463bbad7ee3b938a1e99456958fa07ce439240dc017c99913d8ea1"
+      },
+      "record_path": "data/normalized/full-001/batches/1343/records/494c840db17d1c21159d3480bc33aef1.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 187,
+      "source": {
+        "collection_id": "a334ed27ee62b7bd7597",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/beeminder-automation/SKILL.md",
+        "git_blob_sha": "f78db4188e84e1a1e39e2a6659e788a4c05c6505",
+        "entry_sha256": "ece85527c603f2381711f5162b65e4f90640c0d8a320f38406acf51e930295c0"
+      },
+      "record_path": "data/normalized/full-001/batches/0419/records/d121f842043b0c2663ffa9f86390b6f4.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 188,
+      "source": {
+        "collection_id": "5ad669c2834c93474f43",
+        "repository": "transloadit/skills",
+        "commit_sha": "f627757b56f4212fef968a3efdfb514ad19a304c",
+        "skill_path": "skills/transform-convert-markdown-to-pdf-with-transloadit/SKILL.md",
+        "git_blob_sha": "406d83b949304e95d4f17de04ec40bac96c20ed4",
+        "entry_sha256": "2aec2db6d8f77f98011dd643a0da09cf938dbe207882120bc7bbb2051e0a3e53"
+      },
+      "record_path": "data/normalized/full-001/batches/0100/records/b1ca6c57e22e6318ef93e7925410308d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 189,
+      "source": {
+        "collection_id": "e4cc0cfcdd35fc27bab7",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/ja-JP/skills/git-workflow/SKILL.md",
+        "git_blob_sha": "9f894fd0626bb31c3877d932986db1ac724c39b3",
+        "entry_sha256": "fccb46e027d5494488e873c393dd3c3254832adb11b14403a03a31e80e9a835b"
+      },
+      "record_path": "data/normalized/full-001/batches/0630/records/08a4ed7edfc75ea840c68763a3dcec05.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 190,
+      "source": {
+        "collection_id": "b9d71335b1ed8961a06a",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/ja-JP/skills/research-ops/SKILL.md",
+        "git_blob_sha": "31278894c1d0521f4a93bbd1caec5cebd5e49376",
+        "entry_sha256": "688940df22d7dae91e9bbdb387ae98ae7a431d13fd280a1c9a6b6c2a25c323fc"
+      },
+      "record_path": "data/normalized/full-001/batches/0695/records/a96b8ad8bf71de4b78eadcdac945c508.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 191,
+      "source": {
+        "collection_id": "3e3824da0fb693dace73",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/coding-agent-rollout/SKILL.md",
+        "git_blob_sha": "94e32e66d066637220026eb377886128b8cd6378",
+        "entry_sha256": "a064ac715703c81a57566bc8e280e8c7095348da8a05ffbec4e3b8da41bd6df2"
+      },
+      "record_path": "data/normalized/full-001/batches/0935/records/278448289fdccc39e204f8dfda88a2db.json",
+      "same_entry_hash_source_versions": 3,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 192,
+      "source": {
+        "collection_id": "adaa0355c6c8e9f22dea",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/hermes-tweet/SKILL.md",
+        "git_blob_sha": "b32331a7ef067ea4cfd64a7cc657b2e5e7f2a067",
+        "entry_sha256": "ecaf7aa6afde571e15907c6586b15be4a9b6ea9d96fbad6ad1141fab0d8f9755"
+      },
+      "record_path": "data/normalized/full-001/batches/1075/records/ec19009c7f2f5949f5c2f06025bc4950.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 193,
+      "source": {
+        "collection_id": "fd5af6292b1ffbc850c0",
+        "repository": "tushaarmehtaa/tushar-skills",
+        "commit_sha": "8c24e61a2718f44f36648a92e1f7cc03aaf33b2f",
+        "skill_path": "who-to-sell-to/SKILL.md",
+        "git_blob_sha": "4f635ea5e472a0f7beb9d0cdfd9bdbd7550ecd8b",
+        "entry_sha256": "f7d2de031648e1548ff8139ad0eef4ca7e9ff6b0d67305395bc19b2df72d963a"
+      },
+      "record_path": "data/normalized/full-001/batches/0362/records/cd64acf129ed2192591e8b9cd419b8f5.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 194,
+      "source": {
+        "collection_id": "738f3d4a46ee27786858",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/tr/skills/database-migrations/SKILL.md",
+        "git_blob_sha": "eba89570384421858750d2d297ba6db1feaf1ec2",
+        "entry_sha256": "c82a2e39ae76d534160d3b39bbca3752e9689bacd4bc1d95583cd83ccbed6146"
+      },
+      "record_path": "data/normalized/full-001/batches/0737/records/251defd169308dbf865a960151ce7d5b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 195,
+      "source": {
+        "collection_id": "6a4604d5e7c863e62cec",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "skills/competitive-report-structure/SKILL.md",
+        "git_blob_sha": "37264b3cda37894c9ce1ff574a8e77f0320db354",
+        "entry_sha256": "316894ef4f7751ddb9defa6a9c71171e21489f4836047c1500e8102500cf6e9d"
+      },
+      "record_path": "data/normalized/full-001/batches/0921/records/46c4bc2215ae9da6879112269c1da7a7.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 196,
+      "source": {
+        "collection_id": "0b151bdc40d5831bc9e2",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/zh-CN/skills/kotlin-patterns/SKILL.md",
+        "git_blob_sha": "1edd2164baf84c61d8ee761bfdda1c39b807579e",
+        "entry_sha256": "ff3f4b87cd952126a1f9bc609c3162bccaad6bd0cd051ca9b2d19cc410fbb1a4"
+      },
+      "record_path": "data/normalized/full-001/batches/0808/records/3adb73058ee7a3c7d76c220df5b02742.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 197,
+      "source": {
+        "collection_id": "2cbac535085cba19d5b7",
+        "repository": "veniceai/skills",
+        "commit_sha": "15a6fa63ff7466cd894ccc5bab91985e3b88f216",
+        "skill_path": "skills/venice-create-image/SKILL.md",
+        "git_blob_sha": "2d87fc74e47411f3ea20fb73ca480d0322483dd5",
+        "entry_sha256": "75cb9536e8e0b9e7dcb3577e1aecb4df2b2f7e0571e8bd10a3e927c63be8e00f"
+      },
+      "record_path": "data/normalized/full-001/batches/0143/records/6465d59edff1afc9b04d2f8f795fe4fb.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 198,
+      "source": {
+        "collection_id": "61bb78c3063bcfd03901",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/plan-sanierungskonzept-sicherheiten/SKILL.md",
+        "git_blob_sha": "3390c9df13b326aeb426e9c8485921a95b6fc1f3",
+        "entry_sha256": "4e159a22b8e1c33cb0a935716ad867a10bc78eda838a4bbdec0744d80cdaeadb"
+      },
+      "record_path": "data/normalized/full-001/batches/1236/records/8220318a24f1031ec9e02026458d01b1.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 199,
+      "source": {
+        "collection_id": "a17c0047ab45d2f7f767",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/lex/SKILL.md",
+        "git_blob_sha": "fc6671596f883ea4476a3c2d24101fddb442cbd9",
+        "entry_sha256": "49b44ea9139987ea4ea04adabc9af5c0fd12ecb81ee6295a8f51573cf399943c"
+      },
+      "record_path": "data/normalized/full-001/batches/1074/records/3afe001fceaed898088984ef7bd07e3d.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 200,
+      "source": {
+        "collection_id": "75aded76360b9d4f0cc2",
+        "repository": "mblode/agent-skills",
+        "commit_sha": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+        "skill_path": "skills/save-md/SKILL.md",
+        "git_blob_sha": "bd79937435292b00fb63b1a8fe0e78f43a126d2c",
+        "entry_sha256": "d23c3ecd127d2b659deb28d073c74d4f5403f0eac3781a9016b42bb6643d7300"
+      },
+      "record_path": "data/normalized/full-001/batches/0181/records/794ef91d68ab7849a811635f662cd794.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 201,
+      "source": {
+        "collection_id": "ae9c09859ca64aa283cf",
+        "repository": "tech-leads-club/agent-skills",
+        "commit_sha": "8658b6658c762b9e5efd3956ed35a51c41bdf6c3",
+        "skill_path": "packages/skills-catalog/skills/(cloud)/vercel-deploy/SKILL.md",
+        "git_blob_sha": "830ca645acbf47bfb458313969af339afc66ab3a",
+        "entry_sha256": "b0184063d83eca5ccdb7b75e2ea2dd090047c39dda146828391a94d73f6a3299"
+      },
+      "record_path": "data/normalized/full-001/batches/0182/records/99f43ab862c3f24c1b69b26e123cb095.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 202,
+      "source": {
+        "collection_id": "790a1668e34169f1c6b1",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/files-com-automation/SKILL.md",
+        "git_blob_sha": "3bd46b69a66aec5293392540cb6eaa92411c6bef",
+        "entry_sha256": "377dae5261fef13d53fb57711d1e2ce42c698a41e72f5812469d660a8793cd27"
+      },
+      "record_path": "data/normalized/full-001/batches/0679/records/01b967a1283d99e8fd2ff42777db38ad.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 203,
+      "source": {
+        "collection_id": "afcc4291219c472febe2",
+        "repository": "open-legal-products/mike-workflows",
+        "commit_sha": "20bed204ce9ef07e1bc2df0b16b35ee8ad997fb1",
+        "skill_path": "assistant-workflows/finnish-law-pack/competition-compliance/SKILL.md",
+        "git_blob_sha": "a90bfd1a13d4555a4d358a6e975aead80176441d",
+        "entry_sha256": "6ce123b9d6920f2df7b6a3fe8e5c6938da207e03e572490f2933bffd42ac7f67"
+      },
+      "record_path": "data/normalized/full-001/batches/0279/records/bde4233c9c4fa3ee1b9fbab5c69567cd.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 204,
+      "source": {
+        "collection_id": "d5f7f634728ee522cdb6",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/warren-buffett/SKILL.md",
+        "git_blob_sha": "f6afe8174acd6621e6bd858490980ba94ea09947",
+        "entry_sha256": "e03027a653ecb4cc68c68c954ba62a15d40e898f6e112188009debe7411340b2"
+      },
+      "record_path": "data/normalized/full-001/batches/1246/records/6e2060ff8ce656649c2a73c00fc0508a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 205,
+      "source": {
+        "collection_id": "81eb8931397e4d8d2f03",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/azure-cosmos-ts/SKILL.md",
+        "git_blob_sha": "9c0b897898521572745c74f96bc1bbb0231e054d",
+        "entry_sha256": "5987c25bcd140b98c4f703b1bc9952803065932228682972825a89322e8be097"
+      },
+      "record_path": "data/normalized/full-001/batches/1300/records/f6d95f22405826ec4e8968d6036adf09.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 206,
+      "source": {
+        "collection_id": "3b62a244a843a460b823",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/swiftui-view-refactor/SKILL.md",
+        "git_blob_sha": "970ea41ea1b97d75a2cfd9716d8a3a1b69570d13",
+        "entry_sha256": "d722d4b9cb4fe61caa979c68975cf932701657077d55279732835c57d5ded9a5"
+      },
+      "record_path": "data/normalized/full-001/batches/1280/records/94480f0c68ee09290cabe94ea540a28b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 207,
+      "source": {
+        "collection_id": "bea703ca670c974be27b",
+        "repository": "OpenLinkSoftware/ai-agent-skills",
+        "commit_sha": "e2f8dc3f0d9bbed89cc7c2530d63c601e8342e7e",
+        "skill_path": "mpp-stripe-client/SKILL.md",
+        "git_blob_sha": "2881f1b1be1a82ef18a6561c4ea91b8566879459",
+        "entry_sha256": "9af95b45dffb149ce52b1f068e4c2809a8ad3e9761d5fab42b06ef86250a6209"
+      },
+      "record_path": "data/normalized/full-001/batches/0156/records/1f7fd99bd8eb6e5a246d31512d291bae.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 208,
+      "source": {
+        "collection_id": "eed74220d29327375eb0",
+        "repository": "NoizAI/skills",
+        "commit_sha": "779f30af588ebf4dd17fc0acaa590ae147a0d3f5",
+        "skill_path": "skills/music-video/SKILL.md",
+        "git_blob_sha": "baee66f6fa225ab4cc32c0394c38b0f2e6edf845",
+        "entry_sha256": "c61c1c7e8aaa45483008f41be0cea8f7687ca5efc680b852a28e407d291e4b5b"
+      },
+      "record_path": "data/normalized/full-001/batches/0056/records/07e44adc3d0808e12bfb450c77cb7efb.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 209,
+      "source": {
+        "collection_id": "c11156e0fbc1474dc930",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/cross-border-tax-workflow-base/SKILL.md",
+        "git_blob_sha": "5dbcca124cc354782f311c9eafe24b3a5257929e",
+        "entry_sha256": "5f4c27e3ec395ea89db4e2f8f589fc859f64e12301f1c78f45c690b1dc8b54e5"
+      },
+      "record_path": "data/normalized/full-001/batches/0760/records/c9e24a8c7b252beb95c3d452594c8cd9.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 210,
+      "source": {
+        "collection_id": "0a4da4b48f85ea90df46",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/cloudq/SKILL.md",
+        "git_blob_sha": "8d537c2d175c25520f83f8c97f28b1a30d03597e",
+        "entry_sha256": "c01792d19abecba51c62d5874285b90cb213fd7643bf2d1cb1d3ccc13008baab"
+      },
+      "record_path": "data/normalized/full-001/batches/0925/records/4678c40b048adb815d470499b2e5415e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 211,
+      "source": {
+        "collection_id": "755a4435fc981b3903ab",
+        "repository": "dhicoc/dsh-reverse-skill",
+        "commit_sha": "f1b61cf3deec370198ae81a23b8512338002d073",
+        "skill_path": "skills/SKILL.md",
+        "git_blob_sha": "d00edaa70aa618ce6f0ab09e2132fe443aea221f",
+        "entry_sha256": "bdc1b4cf295089399ce007b03652ab2349c0b379d8be3edfc01dac16e027755e"
+      },
+      "record_path": "data/normalized/full-001/batches/0281/records/1e2481af291837b4f830dd99a4876e5e.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "网络安全与取证"
+    },
+    {
+      "sample_no": 212,
+      "source": {
+        "collection_id": "25cf338611b1deea1377",
+        "repository": "aws/agent-toolkit-for-aws",
+        "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+        "skill_path": "skills/core-skills/aws-sdk-python-usage/SKILL.md",
+        "git_blob_sha": "9ee37c716693b73e08d6656e2684d5471d832258",
+        "entry_sha256": "f4e0bfd87dfcd08d7af75b1b5940071e479f4e5607da4fc45c4c8c3d12ba6d70"
+      },
+      "record_path": "data/normalized/full-001/batches/0431/records/484ac640c7139c2f9ac739ec8680f10c.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 213,
+      "source": {
+        "collection_id": "51678568e983a43f70ba",
+        "repository": "sandbaseai/sandbase-skills",
+        "commit_sha": "cbab58188611e626ccaf54ac346b437d12ea4729",
+        "skill_path": "marketing/video-template-frame-light-leak-cinema/SKILL.md",
+        "git_blob_sha": "5ffe6bcfba02bf5f61bf250ee03221b32d92ee2c",
+        "entry_sha256": "064a0c954f6aee2529bccc34ca5941dbb2e9f40bbd1961b6b259393890613c6a"
+      },
+      "record_path": "data/normalized/full-001/batches/0546/records/577b1b4f1aedcb5cdb5238ac0eb35580.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 214,
+      "source": {
+        "collection_id": "295a0b61fc158ca6c57e",
+        "repository": "wanshuiyin/Auto-claude-code-research-in-sleep",
+        "commit_sha": "2901234ad2954cd2388ced8d3aed2ed9de42803a",
+        "skill_path": "skills/skills-codex-claude-review/paper-figure/SKILL.md",
+        "git_blob_sha": "8cd995f359ad0a8a76ad96903005bc4a3bbb01b2",
+        "entry_sha256": "1e2ec8dfeff340a6b42adac53a096b2f6b9ef628d579f94230e4b113cdebb1fe"
+      },
+      "record_path": "data/normalized/full-001/batches/0402/records/f7ce1748c07d24111e45b858e1fc0f4a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 215,
+      "source": {
+        "collection_id": "40d66e709ec2f204debf",
+        "repository": "gooseworks-ai/goose-skills",
+        "commit_sha": "1add09bd8e0d057e91e25c96b9282498e2fcb2a2",
+        "skill_path": "skills/marketing/improve-search-visibility-entity-footprint/SKILL.md",
+        "git_blob_sha": "f04421e30e2ae711a288665024f8eed06fefb4dc",
+        "entry_sha256": "dec4aa2148cb03f38a264ae8f87d979085e390b31c5c630c91396c8b1cd6c873"
+      },
+      "record_path": "data/normalized/full-001/batches/0221/records/a91ccc381bbce3ee21deb87656f8aaf5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "产品、营销与组织经营"
+    },
+    {
+      "sample_no": 216,
+      "source": {
+        "collection_id": "090563c19b5421333348",
+        "repository": "LeoYeAI/agent-master-skills",
+        "commit_sha": "8f88f9a0dd5a1075d4f0c7626f9d960844d57575",
+        "skill_path": "skills/imortalbrain/SKILL.md",
+        "git_blob_sha": "e78260cece371a47efd8a545e07cb1a8ff882973",
+        "entry_sha256": "872831ee87c8f9ba6ed3350c174965017f8909c0ce88470fc749183edd0f2ee9"
+      },
+      "record_path": "data/normalized/full-001/batches/1089/records/68bb3b52b1e60aae51282a0c01340c9b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 217,
+      "source": {
+        "collection_id": "ffad5cb8a69b6ba82610",
+        "repository": "KalarisLabs/research-agent-skills",
+        "commit_sha": "fa023d6d166562a8de118f59bb73647c0e444b8c",
+        "skill_path": "skills/creative-thinking-for-research/SKILL.md",
+        "git_blob_sha": "8171186f3d564f30759d3fb86317e7b77ac8585f",
+        "entry_sha256": "bd9d7fb3b1ff786e6f392d029f05742a89e6236820e851b019bb1090df8d16cb"
+      },
+      "record_path": "data/normalized/full-001/batches/0292/records/fc7cab5419951802929c5b25f4541d72.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 218,
+      "source": {
+        "collection_id": "5266c98d39910870d288",
+        "repository": "TerminalSkills/skills",
+        "commit_sha": "0abb852010feb21984fa40f0bf52352a440ae6d4",
+        "skill_path": "skills/rolldown/SKILL.md",
+        "git_blob_sha": "b6fe1a6c88c4a31acca2b68c9b3a74cf36fd910f",
+        "entry_sha256": "41b39c609b1c75274c860bacb3bf9e1d29a1ea7d06082ebf67296c250579eee5"
+      },
+      "record_path": "data/normalized/full-001/batches/0935/records/ec19efad95bb0da476931ec8a7c27429.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 219,
+      "source": {
+        "collection_id": "f1a13cd757131663ae9c",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/nh-bpt-bet/SKILL.md",
+        "git_blob_sha": "239624a2a184c825fa39eec67a9d77a4d8ac4b09",
+        "entry_sha256": "a309dae93dfdfb1e37173076754dbb2dd93c733c59884a1c29ed1d7f92ecddd2"
+      },
+      "record_path": "data/normalized/full-001/batches/1049/records/1e870becacd2fa3b7bea4ef6c5a014e6.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 220,
+      "source": {
+        "collection_id": "7b7aed49e899562fd207",
+        "repository": "AceDataCloud/Skills",
+        "commit_sha": "5219818ac62b1afa8d18553e51d3372954576112",
+        "skill_path": "claude-plugins/suno-by-ace-data-cloud/skills/suno/SKILL.md",
+        "git_blob_sha": "7a02f944a0f718807275b78fe8bac6817d2619fa",
+        "entry_sha256": "2e0ea0d9c0a917412e9bea10ca2927cb0b051077ec7726df2f53ff4bdc99018a"
+      },
+      "record_path": "data/normalized/full-001/batches/0061/records/50a95f4f4e3554d49e6c34078932b6a0.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "视觉设计与音视频制作"
+    },
+    {
+      "sample_no": 221,
+      "source": {
+        "collection_id": "0a76ff6098da5fa2b056",
+        "repository": "alinaqi/maggy",
+        "commit_sha": "55aabe2493627e1de9cd09459d555181d66f3111",
+        "skill_path": "skills/database-schema/SKILL.md",
+        "git_blob_sha": "c12142f2f1898aae1f046a0ff5972d4dc60a712b",
+        "entry_sha256": "7f2adf8f398f6aa713787d33551cffdb21e8ba62d2a82c673a89e225302b9eb7"
+      },
+      "record_path": "data/normalized/full-001/batches/0205/records/8d287fb0b4942c93d285f70baf20c219.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 222,
+      "source": {
+        "collection_id": "3b7aaa9c77a93a84cf48",
+        "repository": "ComposioHQ/awesome-claude-skills",
+        "commit_sha": "be2a406907dbc61b73e6827ded415c96139d13a2",
+        "skill_path": "composio-skills/diffbot-automation/SKILL.md",
+        "git_blob_sha": "82b943bc065e36f45965e521a27bf33bd9d5b20b",
+        "entry_sha256": "3d346527371d9d0dd92e6ec63b4df4b02637db6becd8c20ad7e6bc213412efb7"
+      },
+      "record_path": "data/normalized/full-001/batches/0627/records/aea9be751788e2cd03c3ce64568a2fcf.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 223,
+      "source": {
+        "collection_id": "e9158f8d17fe5e5db11c",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills-claude/skills/requesting-code-review/SKILL.md",
+        "git_blob_sha": "d4c9787daff17dac1e40f33a4a50a9ab5c209af2",
+        "entry_sha256": "a95ccb7c11638d23ccce4ab32ad91b8d189b25a509bf599883fa50a4bc8748ef"
+      },
+      "record_path": "data/normalized/full-001/batches/1176/records/45e8ff9aeb1d679ab0d476420824365b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "测试、调试与工程评审"
+    },
+    {
+      "sample_no": 224,
+      "source": {
+        "collection_id": "d56bbca2c3c0e56f7e89",
+        "repository": "jgsystemsconsulting/jgs-se-knowledge-packs",
+        "commit_sha": "3bf1e1338acf4cb83e9339ce535228635165f288",
+        "skill_path": "packs/nasa-rm-standard/SKILL.md",
+        "git_blob_sha": "1203d147aeaa329053ae5554cf1522c712077279",
+        "entry_sha256": "cbcbda2f20cee3fc05bf081448185fcf2db5310475bd3dbc380e3ef305b36ec7"
+      },
+      "record_path": "data/normalized/full-001/batches/0331/records/4c80716e73dc21a8ff071400d7307f2f.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "建筑、航天等专业工程"
+    },
+    {
+      "sample_no": 225,
+      "source": {
+        "collection_id": "8f720f7a8f01175a15df",
+        "repository": "adobe/skills",
+        "commit_sha": "4ed20a979f6912ffaac8dfc9cd6729e6964d7b9a",
+        "skill_path": "plugins/web/skills/page-reduce/SKILL.md",
+        "git_blob_sha": "e231a48b5fbb453d41d5002313be323669261cd5",
+        "entry_sha256": "43a74c34f9fc2d65d05f3f2ebe7ca16f7525fe83b40f75304871011b98485dd4"
+      },
+      "record_path": "data/normalized/full-001/batches/0573/records/745c0b9a391b5ff80aa9f4bb4e98a9e5.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 226,
+      "source": {
+        "collection_id": "2669a6213ef56fe3c0b3",
+        "repository": "OpenSenseNova/SenseNova-Skills",
+        "commit_sha": "004a2426fa092097d65ac9233ca0bcb2be793f57",
+        "skill_path": "skills/sn-da-excel-workflow/capability/excel-data-analysis/kpi-metric-analysis/SKILL.md",
+        "git_blob_sha": "96d787c827fee010fc582af7751af5e731318969",
+        "entry_sha256": "97866770d864f5f510e8f1ed73002842cb371752bcb58724555ba748d799be8a"
+      },
+      "record_path": "data/normalized/full-001/batches/0125/records/55f1857256e2d898cca8ccded49b5cdd.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "数据获取、分析与统计"
+    },
+    {
+      "sample_no": 227,
+      "source": {
+        "collection_id": "7190640bb210b0523508",
+        "repository": "HeshamFS/materials-simulation-skills",
+        "commit_sha": "775055956bb8fa3838032c49a346e26d94d0d1f6",
+        "skill_path": "skills/ontology/ontology-validator/SKILL.md",
+        "git_blob_sha": "96a027096b8e29a546aa673e6cf82fe53ea2fec5",
+        "entry_sha256": "4190138b566ca90ef7d038922c1686fb65e2c38ffbdafa073f462603d76c3cd4"
+      },
+      "record_path": "data/normalized/full-001/batches/0154/records/fd58f3581beb45b9da313e8aa2044d7a.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 228,
+      "source": {
+        "collection_id": "74a9c1ae7f232ce8e09f",
+        "repository": "sickn33/agentic-awesome-skills",
+        "commit_sha": "828257c3037dc7c3c3ec987decc5a603025a0ce5",
+        "skill_path": "plugins/agentic-awesome-skills/skills/agent-memory-systems/SKILL.md",
+        "git_blob_sha": "13be6405b5c943ebcb50cd49613650b4852b4a0d",
+        "entry_sha256": "22f3841f3ad976551744589eec8da488bfd0be46fe15c78b1db59447e4532586"
+      },
+      "record_path": "data/normalized/full-001/batches/1265/records/a1372e7caf946d067f4a1979e9e7fc5c.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 229,
+      "source": {
+        "collection_id": "78dbeceda079ed40d3cd",
+        "repository": "aeonfun/aeon",
+        "commit_sha": "504a21d53c0c9b485f6e90c43db83000825e1d3c",
+        "skill_path": "skills/write-tweet/SKILL.md",
+        "git_blob_sha": "4fed72fa78cc237cb413988c3394655c4afeb19e",
+        "entry_sha256": "d4776892eed1cc6a01ff24dd21887bb4ea9972bee396776bf6ac5944ad94489f"
+      },
+      "record_path": "data/normalized/full-001/batches/0465/records/1509025814b2eefb6deddba0630c4052.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "通用写作与内容编辑"
+    },
+    {
+      "sample_no": 230,
+      "source": {
+        "collection_id": "9f32b94c46bb840aa821",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "cross-jurisdiction/commercial/skills/fachanwalt-internationales-wirts-schriftsatzkern-substantiierung/SKILL.md",
+        "git_blob_sha": "25eacf2f438b6f92cbec733311e7a6f2dd8c2793",
+        "entry_sha256": "7223461083290646cf9159d660c653030a97e16d9a933c76dfe7aa5ec208d635"
+      },
+      "record_path": "data/normalized/full-001/batches/0940/records/7b658d9329698b66d3ee09aed4ca8c60.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 231,
+      "source": {
+        "collection_id": "fec411fb4c70a541fed5",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/ai-research/distributed-training-ray-train/SKILL.md",
+        "git_blob_sha": "6070c1c4a09adc5875b3075cdf4de68a482cfd59",
+        "entry_sha256": "aabf6d087572ea69611d4c538d4b3d5900ade43b787ee60be8d9b0573651a954"
+      },
+      "record_path": "data/normalized/full-001/batches/0274/records/b81a63b7e8b6a1cf866a448c49fdedba.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 232,
+      "source": {
+        "collection_id": "057e56ff47dd8fcb0652",
+        "repository": "composio-community/awesome-codex-skills",
+        "commit_sha": "0930e1373789d2eda449039f7ac154b33031de89",
+        "skill_path": "meeting-notes-and-actions/SKILL.md",
+        "git_blob_sha": "4f0a10f25f01e95cbaa73a20402dc98b673f8493",
+        "entry_sha256": "932eaf79198aba4322dca81bafe5fa0f1d00668b9b8b3f06918397b4a2d03f69"
+      },
+      "record_path": "data/normalized/full-001/batches/0942/records/9bc485f259c9363adca72ce2924e9e9b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    },
+    {
+      "sample_no": 233,
+      "source": {
+        "collection_id": "7691301aefa39a8ae41c",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "skills/context-budget/SKILL.md",
+        "git_blob_sha": "063e29a464e1f7461517569061d14bc31596f10d",
+        "entry_sha256": "793d51ac6639a466213800c228189a48b102c88d7cfb5b0651baa3480a577206"
+      },
+      "record_path": "data/normalized/full-001/batches/0924/records/3b197bbf53c6e5058d8f704041a4be20.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "AI、智能体与模型工程"
+    },
+    {
+      "sample_no": 234,
+      "source": {
+        "collection_id": "fc6ab79e5a3ca3e7b28a",
+        "repository": "ThomasMoreAI/legal-skills-open",
+        "commit_sha": "2896ce4c0ca1632b43efb29647c2811eadc89247",
+        "skill_path": "de/bankruptcy/skills/klageantrag-zahlung-kondiktion-schwarzarbeit/SKILL.md",
+        "git_blob_sha": "cb50488b686bdff7c976fedd9f704f0df23c4b5f",
+        "entry_sha256": "79026bb9526cd29b269dabe2adfe1e9af08f6b8ad3808a701fbed32badf5ed38"
+      },
+      "record_path": "data/normalized/full-001/batches/1221/records/6ab9167bd2ad3ddff4b5e1dec03ec23b.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "法律实务与合规"
+    },
+    {
+      "sample_no": 235,
+      "source": {
+        "collection_id": "fc3b387d46e60e7e2458",
+        "repository": "davila7/claude-code-templates",
+        "commit_sha": "5cc17cf267132cc690dee82239b80a99ec82e4f8",
+        "skill_path": "cli-tool/components/skills/scientific/scholar-evaluation/SKILL.md",
+        "git_blob_sha": "0dc20a517b2efcc87955d5aa20172e6fe0e95efb",
+        "entry_sha256": "9aaa928d073083a25dc9b46863a4a38fbbd6d181e44dff8ea9632a79cca148b8"
+      },
+      "record_path": "data/normalized/full-001/batches/0905/records/eeb8a24d467553b6eaf03ebe4c1d5967.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "科研、教育与科学工作流"
+    },
+    {
+      "sample_no": 236,
+      "source": {
+        "collection_id": "3e43b3debde028089f4e",
+        "repository": "openaccountants/openaccountants",
+        "commit_sha": "93c747880c47cfa6c27ec826c3d9967e2112643f",
+        "skill_path": "agent-skills/venezuela-tax-optimization/SKILL.md",
+        "git_blob_sha": "e35e05535e81289e5c6052824c6c9c26e2896d36",
+        "entry_sha256": "46eafc5546fe9312bb1309514b0fb990b2afd78319594a91743e6c545bf332b6"
+      },
+      "record_path": "data/normalized/full-001/batches/1153/records/d2083247b3f26cfb1b793bd23edd3134.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "财税、会计与投资"
+    },
+    {
+      "sample_no": 237,
+      "source": {
+        "collection_id": "a07553531dd1daf64de9",
+        "repository": "affaan-m/ECC",
+        "commit_sha": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+        "skill_path": "docs/ja-JP/skills/bun-runtime/SKILL.md",
+        "git_blob_sha": "5ff7f0464a3e5a4adeb56ef0542e454b121317da",
+        "entry_sha256": "c321e505e9f5287a90201736af2b0b9b7cf59c3e2eb4957356d0ee2ea0684fb2"
+      },
+      "record_path": "data/normalized/full-001/batches/0553/records/289987294c521ba8691699684f120f74.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "软件开发与架构"
+    },
+    {
+      "sample_no": 238,
+      "source": {
+        "collection_id": "74aa111d97bd6fd19e8e",
+        "repository": "aws/agent-toolkit-for-aws",
+        "commit_sha": "e5b169de713857a5ffb4e8588a45e640525bd08a",
+        "skill_path": "skills/core-skills/aws-messaging-and-streaming/SKILL.md",
+        "git_blob_sha": "613b62748efcb9d2b808121caec1ab8ac93014ae",
+        "entry_sha256": "b96708d32b0090fd86a14d5a20812a6aac7002b4500d7745531f9a734a926bfe"
+      },
+      "record_path": "data/normalized/full-001/batches/0423/records/c38caa7b306edd46f7da30f1d33b1c1c.json",
+      "same_entry_hash_source_versions": 2,
+      "primary_category": "云、部署与运行维护"
+    },
+    {
+      "sample_no": 239,
+      "source": {
+        "collection_id": "c8796fb973d3c41c47a0",
+        "repository": "BankrBot/skills",
+        "commit_sha": "059a1e8077f2047b79e301c7c4321a7536932fc5",
+        "skill_path": "base-node/SKILL.md",
+        "git_blob_sha": "a4cc51bfb6a1ccefb0b9c8845d1001aab8e15c50",
+        "entry_sha256": "fc78c027defc3e43c89aeafe7a84b65f4d0c1080e1e3bd5018b7222963153d55"
+      },
+      "record_path": "data/normalized/full-001/batches/0288/records/d24af36a1d0a05e8494b12a8e9648108.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "入口信息不足，暂不归类"
+    },
+    {
+      "sample_no": 240,
+      "source": {
+        "collection_id": "6f675f92ea8808a79d63",
+        "repository": "github/awesome-copilot",
+        "commit_sha": "60dcb901abbd87609d93d6281f1916c22b8bbd8c",
+        "skill_path": "skills/plantuml-ascii/SKILL.md",
+        "git_blob_sha": "d01cc750d0e84b5439d44648079dd6ee55f2518a",
+        "entry_sha256": "8bfd83efc42a70cdb9d1e3d64ec305bd4d6f09e1753a03bbb7d3805d9bd13e53"
+      },
+      "record_path": "data/normalized/full-001/batches/0688/records/8e8f240af3e67a56f2df419ce06e2938.json",
+      "same_entry_hash_source_versions": 1,
+      "primary_category": "办公、文档与协作工具"
+    }
+  ]
+}
