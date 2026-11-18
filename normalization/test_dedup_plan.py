@@ -16,7 +16,7 @@ import test_corpus_run as corpus_fixtures
 
 
 class PlanTests(unittest.TestCase):
-    def setup(self, root, semantic=False, count=3):
+    def setup(self, root, semantic=False, count=3, documents=None):
         args = corpus_fixtures.CorpusTests().rolling_fixture(root, count=count)
         with gzip.open(args.index, 'rt') as stream:
             rows = [json.loads(line) for line in stream]
@@ -27,6 +27,8 @@ class PlanTests(unittest.TestCase):
             data = b'alpha\nbeta\ngamma\ndelta\nepsilon\nzeta\n'
             if semantic and n >= 2:
                 data = f'alternative{n}\nwording\nfor\nthe\nsame\nprocedure\n'.encode()
+            if documents is not None:
+                data = documents[n - 1]
             raw = args.index.parent / f'raw/unique-path/pending-{n}.md'
             raw.write_bytes(data)
             row.update(raw_path=str(raw.relative_to(args.index.parent)),
@@ -157,6 +159,33 @@ class PlanTests(unittest.TestCase):
             args.snapshot = 'chain'
             report = snapshot(args)
             self.assertEqual((report['total_succeeded'], report['skipped_duplicate'], report['remaining']), (2, 2, 0))
+
+    def test_local_plan_skips_only_confirmed_formats_and_keeps_code_and_scope_changes(self):
+        frontmatter = b'---\nname: demo\nallowed-tools: Read\n---\n'
+        body = b'\n## Use\n\n- Check **10** items.\n\n```text\nx = 1\n```\n'
+        first = frontmatter + body
+        formatted = frontmatter + body.replace(b'- Check **10**', b'+ Check __10__').replace(b'\n\n', b'\n\n\n')
+        changed_code = formatted.replace(b'x = 1', b'x  = 1')
+        changed_scope = formatted.replace(b'allowed-tools: Read', b'allowed-tools: Read Write')
+        changed_limit = formatted.replace(b'__10__', b'__20__')
+        with tempfile.TemporaryDirectory() as temp:
+            args, plan_args, _ = self.setup(Path(temp), count=6, documents=[
+                first, formatted, changed_code, changed_scope, changed_limit,
+            ])
+            plan_args.local_only = True
+            comparison = fixtures.FakeClient()
+            self.assertTrue(deduplicate(plan_args, comparison))
+            self.assertEqual(comparison.calls, [])
+            stage = args.out / plan_args.name
+            report = json.loads((stage / 'report.json').read_text())
+            self.assertEqual(report['duplicate_matches'], {'same_markdown_structure': 1})
+            self.assertEqual(report['unique_to_convert'], 4)
+            args.dedup_plan = stage / 'plan.jsonl'
+            conversion = fixtures.FakeClient()
+            run(args, conversion)
+            self.assertEqual(len(conversion.calls), 4)
+            args.snapshot = 'local'
+            self.assertEqual(snapshot(args)['skipped_duplicate'], 1)
 
 
 if __name__ == '__main__':

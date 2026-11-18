@@ -17,7 +17,7 @@ from batch_convert import (
 )
 from check_record import strict_json_loads
 from dedup_plan import load_plan
-from duplicate_skills import SkillDeduplicator, package_key
+from duplicate_skills import SkillDeduplicator, formatting_key, formatting_probe, package_key
 from model_routing import ModelDeferred
 from run_corpus import HERE, baseline_records, plan_references, read_queue
 
@@ -37,8 +37,54 @@ def decide(item, candidates, deduplicator, args, client):
     return {'status': 'unique', 'candidates': candidates}
 
 
+def match_formatting(dedup, states, stop_event):
+    from markdown_it import MarkdownIt
+
+    parser = MarkdownIt('commonmark').enable('table')
+    buckets = defaultdict(list)
+    for key, (_, _, row, _, _) in dedup.entries.items():
+        if stop_event.is_set():
+            return
+        try:
+            text = (dedup.index.parent / row['raw_path']).read_text(encoding='utf-8')
+        except (OSError, UnicodeError):
+            continue
+        buckets[formatting_probe(text)].append(key)
+
+    for keys in buckets.values():
+        if stop_event.is_set():
+            return
+        if len(keys) < 2 or not any(
+            dedup.entries[key][1]['kind'] == 'source_package'
+            and states.get(key, {}).get('status') not in ('duplicate', 'failed')
+            for key in keys
+        ):
+            continue
+        formats = {}
+        for key in keys:
+            _, profile, row, _, _ = dedup.entries[key]
+            status = states.get(key, {}).get('status')
+            if status == 'failed':
+                continue
+            try:
+                blocks, omissions = dedup.package(key)
+                fingerprint = formatting_key(blocks, omissions, dedup.unread_context(row, blocks), parser)
+            except (OSError, ValueError, KeyError):
+                continue
+            if fingerprint is None:
+                continue
+            earlier = formats.setdefault(fingerprint, key)
+            if earlier != key and profile['kind'] == 'source_package' and status != 'duplicate':
+                states[key] = {
+                    'status': 'duplicate', 'representative': earlier, 'match': 'same_markdown_structure',
+                    'fingerprint': fingerprint,
+                    'reason': 'Same Markdown structure, supplied files, and unread file inventory',
+                }
+
+
 def run(args, client=None, stop_event=None, retry_delay=300):
     stop_event = stop_event or threading.Event()
+    local_only = getattr(args, 'local_only', False)
     stage = args.out / args.name
     if (stage / 'report.json').is_file() and (stage / 'plan.jsonl').is_file():
         load_plan(stage / 'plan.jsonl', digest(args.queue.read_bytes()))
@@ -136,12 +182,17 @@ def run(args, client=None, stop_event=None, retry_delay=300):
     states.update(exact_links)
     write_json(stage / 'selection.json', {'items': list(prepared.values())})
     write_json(state_path, states)
-    publish('finding_candidates')
+    publish('checking_formatting' if local_only else 'finding_candidates')
+    if local_only:
+        match_formatting(dedup, states, stop_event)
+        write_json(state_path, states)
     representatives = {key for key in prepared if key not in exact_links and key in dedup.entries}
     order = {key_of(item): n for n, item in enumerate(pending)}
     candidate_path = stage / 'candidates.json'
     cached = strict_json_loads(candidate_path.read_text()) if candidate_path.is_file() else {}
-    if cached.get('policy') == 'nearest_earlier_source':
+    if local_only:
+        candidate_map = {}
+    elif cached.get('policy') == 'nearest_earlier_source':
         candidate_map = cached['items']
     else:
         candidate_map = {}
@@ -159,7 +210,8 @@ def run(args, client=None, stop_event=None, retry_delay=300):
         write_json(candidate_path, {'policy': 'nearest_earlier_source', 'items': candidate_map})
     for key in representatives:
         if key not in candidate_map and states.get(key, {}).get('status') not in ('duplicate', 'failed'):
-            states[key] = {'status': 'unique', 'candidates': []}
+            if not local_only or states.get(key, {}).get('status') != 'unique':
+                states[key] = {'status': 'unique', 'candidates': []}
         elif states.get(key, {}).get('status') == 'unique' and states[key].get('candidates') != candidate_map.get(key):
             states.pop(key)
     write_json(state_path, states)
@@ -167,8 +219,9 @@ def run(args, client=None, stop_event=None, retry_delay=300):
         '--selection', str(stage / 'selection.json'), '--out', str(stage), '--index', str(args.index),
         '--workers', str(args.workers), '--go-fallback', args.go_fallback, '--go-backup', args.go_backup,
     ])
-    client = client or make_client(batch_args)
     todo = deque(key for key in candidate_map if states.get(key, {}).get('status') not in ('unique', 'duplicate', 'failed'))
+    if todo and client is None:
+        client = make_client(batch_args)
     while todo and not stop_event.is_set():
         deferred = []
         paused = False
@@ -248,8 +301,11 @@ def run(args, client=None, stop_event=None, retry_delay=300):
             for kind in ('input', 'output', 'reasoning'):
                 usage[model][kind] += turn['tokens'].get(kind) or 0
     write_json(stage / 'report.json', {'as_of': now(), 'pending_at_start': len(pending),
+                                     'policy': 'local_only' if local_only else 'model_comparison',
                                      'unique_to_convert': len(ready),
                                      'duplicates': sum(e['status'] == 'duplicate' for e in entries),
+                                     'duplicate_matches': dict(Counter(s['match'] for s in states.values()
+                                                                      if s['status'] == 'duplicate')),
                                      'failed': sum(e['status'] == 'failed' for e in entries),
                                      'comparison_attempts': dict(checks),
                                      'usage_by_model': {model: dict(values) for model, values in usage.items()},
@@ -269,6 +325,8 @@ def main():
     parser.add_argument('--workers', type=int, default=10)
     parser.add_argument('--go-fallback', default='opencode-go/beam-free')
     parser.add_argument('--go-backup', default='opencode-go/iceman-contributor-free')
+    parser.add_argument('--local-only', action='store_true',
+                        help='Find formatting duplicates locally, keep prior decisions, and convert uncertain entries')
     parser.add_argument('--then-convert', action='store_true')
     args = parser.parse_args()
     if args.workers < 1 or args.name in ('', '.', '..') or Path(args.name).name != args.name:

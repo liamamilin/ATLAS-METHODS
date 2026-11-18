@@ -1,1 +1,2 @@
 jsonschema[format]>=4.18,<5
+markdown-it-py>=3,<5

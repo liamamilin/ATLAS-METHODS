@@ -43,6 +43,63 @@ def package_key(blocks, omissions):
     return digest(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode())
 
 
+def formatting_probe(text):
+    # This cheap key only chooses which entries need a full Markdown comparison.
+    return digest(re.sub(r'[\s#*_~+\-]', '', text).encode())
+
+
+def markdown_structure(text, parser):
+    if '\0' in text:
+        return ['literal', text]
+    text = text.replace('\r\n', '\n').removesuffix('\r')
+    lines = text.split('\n')
+    frontmatter = []
+    if lines[0] == '---':
+        end = next((i for i in range(1, len(lines)) if lines[i] in ('---', '...')), None)
+        if end is None:
+            return ['literal', text]
+        frontmatter, lines = lines[:end + 1], lines[end + 1:]
+
+    def token_data(token):
+        # Keep inline source intact for code, links, escapes, entities and HTML.
+        # Preserve list numbers, code bodies, hard breaks, and heading levels.
+        content = token.content
+        if token.type == 'inline' and not re.search(r'[`\\\[<&|]', content):
+            content = ''
+        markup = '' if token.type in {
+            'heading_open', 'heading_close', 'bullet_list_open', 'bullet_list_close',
+            'list_item_open', 'list_item_close', 'em_open', 'em_close',
+            'strong_open', 'strong_close', 'hr',
+        } else token.markup
+        return [token.type, token.tag, token.nesting, token.hidden, token.info,
+                token.attrs, markup, content, [token_data(child) for child in token.children or []]]
+
+    env = {}
+    tokens = parser.parse('\n'.join(lines), env)
+    # Duplicate reference definitions can be hidden by the Markdown parser.
+    if env.get('duplicate_refs'):
+        return ['literal', text]
+    references = {name: lines[slice(*ref['map'])] for name, ref in env.get('references', {}).items()}
+    return ['markdown', frontmatter, [token_data(token) for token in tokens], references]
+
+
+def formatting_key(blocks, omissions, unread, parser):
+    # Line mapping and unknown dependencies stay significant for partial inputs.
+    if (any(block['coverage'] != 'full' for block in blocks)
+            or (omissions or {}).get('not_supplied') or (omissions or {}).get('error')
+            or any(not blob for _, _, blob in unread)):
+        return None
+    base = posixpath.dirname(blocks[0]['path'])
+    files = []
+    for block in blocks:
+        path = posixpath.relpath(block['path'], base)
+        text = '\n'.join(line.split('|', 1)[1] for line in block['numbered_source'].split('\n')
+                         if line)
+        body = markdown_structure(text, parser) if path.lower().endswith(('.md', '.markdown')) else text
+        files.append([path, body])
+    return digest(json.dumps([files, unread], ensure_ascii=False, sort_keys=True).encode())
+
+
 class SkillDeduplicator:
     def __init__(self, index, rows, saved):
         self.index, self.rows = index, rows

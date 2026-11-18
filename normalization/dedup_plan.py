@@ -34,7 +34,8 @@ def read_decision(path, checksum, source=None, representative=None):
                     or metadata.get('source') != current or metadata.get('candidate_source') != proof['representative']
                     or digest(artifact.read_bytes()) != metadata['candidate_record_sha256']):
                 raise ValueError('Invalid equivalence comparison')
-        elif proof['match'] != 'identical_supplied_text' or len(proof.get('fingerprint', '')) != 64:
+        elif (proof['match'] not in ('identical_supplied_text', 'same_markdown_structure')
+              or len(proof.get('fingerprint', '')) != 64):
             raise ValueError('Unknown deduplication proof')
         current = proof['representative']
     if decision['status'] == 'duplicate' and (not decision['proofs'] or current != decision['representative']):

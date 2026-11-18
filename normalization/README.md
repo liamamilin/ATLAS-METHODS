@@ -78,15 +78,17 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 ## 全语料连续分批
 
-2026-11-18 当前按用户要求先对未处理来源完成一轮去重，再转换保留条目。当前步骤由 `data/normalized/full-001/dedup-001/progress.json` 决定，去重进程信息在同目录的 `runtime.json`。实际命令为
+当前先对未处理来源完成本地去重，再转换保留条目。当前步骤由 `data/normalized/full-001/dedup-001/progress.json` 决定，去重进程信息在同目录的 `runtime.json`。实际命令为
 
 ```bash
 /Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/deduplicate_remaining.py \
-  --workers 10 --go-fallback opencode-go/beam-free \
+  --workers 10 --local-only --go-fallback opencode-go/beam-free \
   --go-backup opencode-go/iceman-contributor-free --then-convert
 ```
 
-去重先核对实际输入和关联材料，再用现有模型判断候选是否保留同一做法的关键条件和限制。逐条选择至多两个最接近的已转换来源或队列中更早的原文代表，避免把文本相似链上的不同流程统一拿去和同一个来源比较。未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点只转换保留来源。重复来源在代表转换成功后关联到实际结果；代表失败时保留 `pending_duplicate` 及依赖。断点保留已完成的判定，模型暂不可用时继续退避等待。候选检索与模型判断仍可能漏判或误判。
+去重先核对实际输入和关联材料。`--local-only` 复用已保存的同义判定，使用本地指纹筛选格式副本，再比对 Markdown 结构、原始 frontmatter、代码、链接、关联文本和未供给文件清单。不确定是否等价的来源继续转换。需要语义比较时可沿用此前的模式，逐条比较至多两个最接近的已转换来源或队列中更早的原文代表。
+
+未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点转换保留来源。重复来源在代表转换成功后关联到实际结果。代表失败时保留 `pending_duplicate` 及依赖。候选检索与语义判断仍可能漏判或误判。
 
 已完成去重后的转换续跑命令为
 
