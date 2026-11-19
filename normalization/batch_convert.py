@@ -347,7 +347,8 @@ def convert_one(item, row, args, client, schema, contract, feedback=''):
         attempt = attempts / f'{seq:03}'
         attempt.mkdir()
         prompt = build_prompt(row, blocks, contract, args.language, feedback, item.get('reference_selection'))
-        metadata = {'started_at': now(), 'source': source_of(row), 'model': args.model,
+        metadata = {'started_at': now(), 'source': source_of(row),
+                    'model': None if getattr(client, 'go_only', False) else args.model,
                     'prompt_sha256': digest(prompt.encode()), 'input_files': inputs,
                     'response_schema_sha256': digest(json.dumps(contract, sort_keys=True).encode())}
         write_json(attempt / 'metadata.json', metadata)
@@ -592,6 +593,9 @@ def prepare_run(args):
 def make_client(args):
     routing = getattr(args, 'routing_config', None)
     config = strict_json_loads(routing.read_text()) if routing else None
+    go_only = getattr(args, 'go_only', False)
+    if go_only and (not config or getattr(args, 'luna_fallback', False)):
+        raise ValueError('Go-only routing requires a routing config and cannot use Luna')
     luna = AtlasLunaClient(args.timeout) if getattr(args, 'luna_fallback', False) else None
     go_override = getattr(args, 'go_fallback', None)
     go_backup = getattr(args, 'go_backup', None)
@@ -601,8 +605,10 @@ def make_client(args):
             if model not in clients:
                 clients[model] = OpenCodeClient(args.opencode, model, args.timeout)
             return clients[model]
-    if config and config['primary'] == args.model:
+    if config and (go_only or config['primary'] == args.model):
         args.routing_policy = {**config, 'state_path': str(args.routing_state)}
+        if go_only:
+            args.routing_policy['mode'] = 'go_only'
         if luna:
             args.routing_policy['fallback_override'] = LUNA
         if go_override:
@@ -612,7 +618,7 @@ def make_client(args):
         return QuotaRouter(config, args.routing_state, factory,
                            lambda model: verify_free_model(args.opencode, model),
                            probe_timeout=args.timeout + 60, fallback_override=LUNA if luna else None,
-                           free_override=go_override, free_backup=go_backup)
+                           free_override=go_override, free_backup=go_backup, go_only=go_only)
     if luna or go_override or go_backup:
         raise ValueError('Fallback options require the configured primary model')
     return factory(args.model)
@@ -664,7 +670,9 @@ def build_parser():
                    help='Quota fallback policy; applied only when --model matches its primary')
     p.add_argument('--routing-state', type=Path, default=HERE.parent / 'data/normalized/.provider-routing-state.json',
                    help='Persistent quota reset/probe state shared by batches')
-    p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    provider = p.add_mutually_exclusive_group()
+    provider.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    provider.add_argument('--go-only', action='store_true', help='Only use verified zero-priced OpenCode Go models')
     p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
     p.add_argument('--go-backup', help='Zero-priced Go model for explicit connection resets on the first Go model')
     p.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')

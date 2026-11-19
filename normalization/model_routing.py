@@ -110,8 +110,11 @@ class QuotaRouter:
     uses_fallback = True
 
     def __init__(self, config, state_path, factory, free_check, clock=time.time, probe_timeout=300,
-                 fallback_override=None, free_override=None, free_backup=None):
+                 fallback_override=None, free_override=None, free_backup=None, go_only=False):
         self.primary = config['primary']
+        self.go_only = go_only
+        if go_only and fallback_override:
+            raise ValueError('Go-only routing cannot use a Luna fallback')
         self.configured_free_fallback = config['free_fallback']
         self.free_fallback = free_override or self.configured_free_fallback
         if free_backup == self.free_fallback:
@@ -150,7 +153,7 @@ class QuotaRouter:
     def choose(self):
         with self.state() as state:
             t = self.clock()
-            candidates = [(self.primary, 'primary_retry_at', 'probe')]
+            candidates = [] if self.go_only else [(self.primary, 'primary_retry_at', 'probe')]
             if self.luna:
                 candidates.append((self.luna, 'luna_retry_at', 'luna_probe'))
             for model, retry_key, probe_key in candidates:
@@ -259,12 +262,13 @@ class QuotaRouter:
             selected = 'luna_probe' if probe else 'luna_fallback'
             redirect = redirect or bool(probe and unavailable)
         else:
-            selected = 'free_fallback'
+            selected = 'go_only' if self.go_only else 'free_fallback'
             reset = bool(unavailable and reply.get('connection_reset'))
             if len(self.free_models) > 1 and (reset or probe):
                 redirect = self.observe_go_connection(model, probe, reply, reset)
         reply = {**reply, 'model': reply.get('model') or model, 'routing': {
-            'selected': selected, 'primary': self.primary, 'free_fallback': self.free_fallback,
+            'selected': selected, 'primary': None if self.go_only else self.primary,
+            'free_fallback': self.free_fallback,
             'free_catalog_check': evidence},
             'retry_on_fallback': redirect}
         if model in self.free_models and reply.get('limit'):

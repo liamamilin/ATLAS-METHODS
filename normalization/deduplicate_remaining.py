@@ -215,10 +215,13 @@ def run(args, client=None, stop_event=None, retry_delay=300):
         elif states.get(key, {}).get('status') == 'unique' and states[key].get('candidates') != candidate_map.get(key):
             states.pop(key)
     write_json(state_path, states)
-    batch_args = build_parser().parse_args([
+    batch_command = [
         '--selection', str(stage / 'selection.json'), '--out', str(stage), '--index', str(args.index),
         '--workers', str(args.workers), '--go-fallback', args.go_fallback, '--go-backup', args.go_backup,
-    ])
+    ]
+    if getattr(args, 'go_only', False):
+        batch_command.append('--go-only')
+    batch_args = build_parser().parse_args(batch_command)
     todo = deque(key for key in candidate_map if states.get(key, {}).get('status') not in ('unique', 'duplicate', 'failed'))
     if todo and client is None:
         client = make_client(batch_args)
@@ -325,6 +328,7 @@ def main():
     parser.add_argument('--workers', type=int, default=10)
     parser.add_argument('--go-fallback', default='opencode-go/beam-free')
     parser.add_argument('--go-backup', default='opencode-go/iceman-contributor-free')
+    parser.add_argument('--go-only', action='store_true', help='Only use verified zero-priced OpenCode Go models')
     parser.add_argument('--local-only', action='store_true',
                         help='Find formatting duplicates locally, keep prior decisions, and convert uncertain entries')
     parser.add_argument('--then-convert', action='store_true')
@@ -344,6 +348,8 @@ def main():
                    '--index', str(args.index), '--queue', str(args.queue), '--baseline', str(args.baseline),
                    '--workers', str(args.workers), '--go-fallback', args.go_fallback, '--go-backup', args.go_backup,
                    '--dedup-plan', str(args.out / args.name / 'plan.jsonl')]
+        if args.go_only:
+            command.append('--go-only')
         with (args.out / 'worker.log').open('ab', buffering=0) as log:
             worker = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,
                                       start_new_session=True)

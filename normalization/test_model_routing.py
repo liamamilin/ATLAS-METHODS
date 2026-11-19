@@ -34,7 +34,7 @@ def healthy():
 
 class RoutingTests(unittest.TestCase):
     def router(self, root, queue=None, clock=None, check=None, fallback_override=None, free_override=None,
-               free_backup=None):
+               free_backup=None, go_only=False):
         self.calls = []
         queue = queue or {}
         clock = clock or [100]
@@ -51,7 +51,28 @@ class RoutingTests(unittest.TestCase):
         return QuotaRouter(CONFIG, root / 'route.json', factory,
                            check or (lambda model: {'model': model, 'cost': [{'input': 0, 'output': 0}]}),
                            clock=lambda: clock[0], probe_timeout=30, fallback_override=fallback_override,
-                           free_override=free_override, free_backup=free_backup)
+                           free_override=free_override, free_backup=free_backup, go_only=go_only)
+
+    def test_go_only_keeps_free_transport_fallback_and_never_probes_primary(self):
+        backup = 'opencode-go/beam-free'
+        reset = {'transport_error': 'connection reset', 'connection_reset': True}
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            clock = [100]
+            self.router(root, {PRIMARY: [limited()]}, clock).call('fixture', root)
+            clock[0] += CONFIG['primary_probe_seconds']
+            checks = []
+            router = self.router(root, {FREE: [reset]}, clock, free_backup=backup, go_only=True,
+                                 check=lambda model: checks.append(model) or {'model': model})
+            args, _, _ = fixtures.BatchTests().fixture(root, 1)
+            report = run_batch(args, router)
+            self.assertEqual(report['record_models'], {backup: 1})
+            self.assertEqual(self.calls, [FREE, backup])
+            self.assertEqual(checks, [FREE, backup])
+            self.assertEqual(router.call('fixture', root)['routing']['selected'], 'go_only')
+            state = json.loads((root / 'route.json').read_text())
+            self.assertIsNone(state['probe'])
+            self.assertEqual(state['primary_retry_at'], clock[0])
 
     def test_luna_reuses_primary_cooldown_and_automatically_switches_back(self):
         with tempfile.TemporaryDirectory() as t:

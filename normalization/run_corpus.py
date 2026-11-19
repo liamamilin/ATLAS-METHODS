@@ -495,6 +495,8 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
                 command.append('--retry-failed')
             if getattr(args, 'luna_fallback', False):
                 command.append('--luna-fallback')
+            if getattr(args, 'go_only', False):
+                command.append('--go-only')
             if getattr(args, 'go_fallback', None):
                 command.extend(['--go-fallback', args.go_fallback])
             if getattr(args, 'go_backup', None):
@@ -516,6 +518,8 @@ def run(args, client=None, stop_event=None, deferred_delay=300):
             if getattr(client, 'uses_fallback', False):
                 config = json.loads(batch_args.routing_config.read_text())
                 batch_args.routing_policy = {**config, 'state_path': str(batch_args.routing_state)}
+                if batch_args.go_only:
+                    batch_args.routing_policy['mode'] = 'go_only'
                 if batch_args.luna_fallback:
                     batch_args.routing_policy['fallback_override'] = LUNA
                 if batch_args.go_fallback:
@@ -640,7 +644,9 @@ def main():
     p.add_argument('--workers', type=int, default=4)
     p.add_argument('--skip-similar', action='store_true', help='Skip equivalent source packages, retaining representative links')
     p.add_argument('--dedup-plan', type=Path, help='Completed pending-source deduplication plan')
-    p.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    provider = p.add_mutually_exclusive_group()
+    provider.add_argument('--luna-fallback', action='store_true', help='Explicitly use local Atlas Luna during primary cooldown')
+    provider.add_argument('--go-only', action='store_true', help='Only use verified zero-priced OpenCode Go models')
     p.add_argument('--go-fallback', help='Select an alternate Go model, subject to the existing zero-price check')
     p.add_argument('--go-backup', help='Zero-priced Go model for explicit connection resets on the first Go model')
     p.add_argument('--max-batches', type=int)

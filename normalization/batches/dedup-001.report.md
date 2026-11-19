@@ -74,3 +74,9 @@
 本轮已落盘结果由 Beam 生成 558 条、Iceman 生成 188 条。Beam 报告 input 4,670,543、output 4,258,450、reasoning 5,209,879 tokens；Iceman 报告 input 1,241,511、output 661,429、reasoning 1,323,196 tokens。Open Design 的 86 次失败尝试无可统计 token。上述用量只覆盖转换交接后的已结束尝试，账单费用未知。
 
 抽查了登记期限、证据矩阵和行业机构登记三条结果，固定来源身份、Git blob、正文哈希和结构校验均通过。三条保留的主要内容分别包括区分期限种类、案卷与证据缺口、按行业确定对应机构。机构登记条目 `de/corporate/skills/ihk-und-berufsgenossenschaft/SKILL.md` 有一处待复核，原文第 81 行与第 138 行的期限起算点不同，模型沿用正文写法，未在 gaps 中记录该矛盾。本机结果为 `data/normalized/full-001/batches/1458/records/4fae74efbd79e5b2a3793096c90ce02a.json`，继续保留原响应和未审阅状态。
+
+## 11 月 19 日 18:35 切换为仅用 OpenCode Go
+
+旧进程保存最后一条结果后退出，累计保存 36,715 条。去重后的代表来源已完成 2,232 条，剩余 14,339 条，本轮新增条目失败 0 条。18:35:55 以 `--go-only`、同一去重清单和 10 路并发上限启动续跑。OpenCode 模型目录核验 Beam 和 Iceman 均已启用，输入、输出及缓存读写价格均为零。
+
+`--go-only` 直接使用 Go 模型，跳过 Open Design 探测。Beam 连接重置时可使用 Iceman，临时不可用的条目继续退避重试。现有 Schema 自检和 82 项单元测试通过，新增测试覆盖主模型探测到期时仍只走 Go，以及连接重置时经零价核验后切换到备用 Go。

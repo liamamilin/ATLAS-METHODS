@@ -82,7 +82,7 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 ```bash
 /Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/deduplicate_remaining.py \
-  --workers 10 --local-only --go-fallback opencode-go/beam-free \
+  --workers 10 --local-only --go-only --go-fallback opencode-go/beam-free \
   --go-backup opencode-go/iceman-contributor-free --then-convert
 ```
 
@@ -90,22 +90,18 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 未处理来源也可先选出原文代表，比较依据保存为 `source_package`。该阶段产出 `plan.jsonl`、`unique.queue.jsonl` 和逐项判定记录。去重完成后，`--then-convert` 自动启动原转换器的 `--dedup-plan` 模式，按原批次和断点转换保留来源。重复来源在代表转换成功后关联到实际结果。代表失败时保留 `pending_duplicate` 及依赖。候选检索与语义判断仍可能漏判或误判。
 
-已完成去重后的转换续跑命令为
+本轮已完成去重，现仅使用 OpenCode Go 免费模型转换。用 `--go-only` 从原断点续跑
 
 ```bash
 /Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/run_corpus.py \
-  --workers 10 --go-fallback opencode-go/beam-free \
+  --workers 10 --go-only --go-fallback opencode-go/beam-free \
   --go-backup opencode-go/iceman-contributor-free \
   --dedup-plan data/normalized/full-001/dedup-001/plan.jsonl
 ```
 
+`--go-only` 跳过 Open Design 探测，继续缓存零价核验结果和两个 Go 模型的连接退避状态。两个模型都暂不可用时保留待处理来源并重试。
+
 `run_corpus.py` 使用现有逐条转换、来源检查、保存与汇总函数，以一个有界线程池滚动处理文件队列。冻结的 [full-001.queue.jsonl](batches/full-001.queue.jsonl) 包含剩余 55,663 个固定来源版本；已完成的 40 条从队列排除，实际结果文件可访问且结构核验通过后才复用。所有已保存原文共 55,703 条，历史 99 条未导出入口单独保留在 [unavailable.jsonl](batches/full-001.unavailable.jsonl)，不当作已转换。
-
-从项目根目录启动或在进程退出后继续同一队列：
-
-```bash
-python3 -u normalization/run_corpus.py --workers 10
-```
 
 程序默认每批 25 条、4 个 worker；本机按用户要求显式 `--workers 10`，续跑时保留此参数。25 条的批次只作为目录与保存单位，10 个 worker 跨批次共享；完成一条即补一条，旧批次慢任务未结束时也可开始下一批，不改变已冻结批次的来源归属。不设置批次数上限、不逐批等待确认。已完成批次复用，失败记录后继续。额度导致模型不可用时，保存 deferred/pending，暂停领取更多材料，等待后再试，不把整库快速写成 deferred。
 
@@ -113,11 +109,7 @@ python3 -u normalization/run_corpus.py --workers 10
 
 原批次目录、selection、state、records、attempts 与 report 继续沿用。首次交接会等待仍在运行的旧批转换子进程锁，复用其稍后写出的结果。新滚动进程收到 SIGTERM/SIGINT 后停止领取新任务，等待在途任务完成并保存，最后释放队列与批次锁；日常切换应等待这一过程退出后再续跑。成功结果缺失时不复用，保存成功文件而未更新 state 的中断可由原有恢复逻辑处理。
 
-首轮结束后，对失败项再执行一次有限重试（成功项仍跳过）：
-
-```bash
-python3 -u normalization/run_corpus.py --workers 10 --retry-failed
-```
+首轮结束后，可在本轮续跑命令末尾加 `--retry-failed` 对失败项执行一次有限重试，已保存条目继续复用。
 
 新批次只从已保存清单解析入口直接引用的本地 Markdown/文本指南，不递归爬取整个包。选择至多四份、合计 40,000 字节的直接指南，优先显式提到的编译指南；未提供路径及原因写入冻结 selection 和模型输入备注，核心缺口由模型按现有约定简短说明。原入口保持完整；不声称整包覆盖或方法有效。
 
@@ -132,9 +124,9 @@ python3 normalization/run_corpus.py --snapshot YYYYMMDD-HHMMSS
 
 实时进度和日志在本机 `data/normalized/full-001/progress.json`、`runtime.json`、`worker.log`。滚动版 progress 的 `batches` 同时包含已结束与当前打开批次，计数包含当前批次已保存的成功/失败；`active_batches` 可以有多个，`scheduler_run` 只统计本次进程新领取任务、完成数、峰值在途数与槽位占用。检查点仍独立校验实际文件，不靠这些运行计数判定已转换。进程仍运行时不要重复启动；若退出，原命令续跑。这里只持续执行已授权的全队列任务，没有另建数据库、网站或定时服务。
 
-## Open Design 优先与免费回退
+## Open Design 优先模式
 
-默认加载 [model-routing.json](model-routing.json)，主模型为 `open-design/deepseek-v4.1-flash`，免费回退为实测的 `opencode-go/iceman-contributor-free`。原续跑命令即可使用：
+未指定 `--go-only` 时，默认加载 [model-routing.json](model-routing.json)，主模型为 `open-design/deepseek-v4.1-flash`，免费回退为 `opencode-go/iceman-contributor-free`。
 
 1. 正常先用 Open Design。只有明确额度、429/速率或并发限制会转用回退；格式、认证、上下文长度等错误不会被当作额度耗尽。
 2. 用 `opencode api model.list` 核验固定 Go ID 仍 active/enabled，所有输入、输出与缓存价格均为 0。价格未知、变为收费或模型不可用时保留为 deferred/pending，不换用其他付费模型。目录核验缓存最长五分钟。
