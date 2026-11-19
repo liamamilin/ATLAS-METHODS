@@ -66,3 +66,11 @@
 00:05 转换器实际按同一冻结队列和 `--dedup-plan` 恢复，峰值在途达 10 条。继续查看本机 `data/normalized/full-001/progress.json` 和各批次的实际结果。续跑命令见 [标准化说明](../README.md)。去重阶段的完整计划及用量报告在本机 `data/normalized/full-001/dedup-001/`。
 
 `python3 normalization/run_tests.py` 的 87 项已有回归及 1,000 次对照通过。标准化单元测试 81 项通过，覆盖格式副本、代码和权限差异、数值变化以及用计划恢复转换。
+
+## 11 月 19 日 10:47 转换检查点
+
+累计实际保存 35,229 条。去重后保留的 16,571 条代表来源已完成 746 条，剩余 15,825 条。本轮新增条目失败 0 条，历史失败 431 条。进程保持 10 路，最近 30 分钟落盘 166 条。Open Design 仍返回额度不足，免费模型的暂不可用请求继续按原断点重试。
+
+本轮已落盘结果由 Beam 生成 558 条、Iceman 生成 188 条。Beam 报告 input 4,670,543、output 4,258,450、reasoning 5,209,879 tokens；Iceman 报告 input 1,241,511、output 661,429、reasoning 1,323,196 tokens。Open Design 的 86 次失败尝试无可统计 token。上述用量只覆盖转换交接后的已结束尝试，账单费用未知。
+
+抽查了登记期限、证据矩阵和行业机构登记三条结果，固定来源身份、Git blob、正文哈希和结构校验均通过。三条保留的主要内容分别包括区分期限种类、案卷与证据缺口、按行业确定对应机构。机构登记条目 `de/corporate/skills/ihk-und-berufsgenossenschaft/SKILL.md` 有一处待复核，原文第 81 行与第 138 行的期限起算点不同，模型沿用正文写法，未在 gaps 中记录该矛盾。本机结果为 `data/normalized/full-001/batches/1458/records/4fae74efbd79e5b2a3793096c90ce02a.json`，继续保留原响应和未审阅状态。
