@@ -82,8 +82,8 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 ```bash
 /Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/deduplicate_remaining.py \
-  --workers 10 --local-only --go-only --go-fallback opencode-go/beam-free \
-  --go-backup opencode-go/iceman-contributor-free --then-convert
+  --workers 10 --local-only --go-only --go-fallback opencode-go/hy4-flash-free \
+  --go-backup opencode-go/longcat-2.5-free --then-convert
 ```
 
 去重先核对实际输入和关联材料。`--local-only` 复用已保存的同义判定，使用本地指纹筛选格式副本，再比对 Markdown 结构、原始 frontmatter、代码、链接、关联文本和未供给文件清单。不确定是否等价的来源继续转换。需要语义比较时可沿用此前的模式，逐条比较至多两个最接近的已转换来源或队列中更早的原文代表。
@@ -94,8 +94,8 @@ python3 -m unittest discover -s normalization -p test_batch_convert.py
 
 ```bash
 /Users/milin/.pyenv/versions/3.10.13/bin/python3 -u normalization/run_corpus.py \
-  --workers 10 --go-only --go-fallback opencode-go/beam-free \
-  --go-backup opencode-go/iceman-contributor-free \
+  --workers 10 --go-only --go-fallback opencode-go/hy4-flash-free \
+  --go-backup opencode-go/longcat-2.5-free \
   --dedup-plan data/normalized/full-001/dedup-001/plan.jsonl
 ```
 
