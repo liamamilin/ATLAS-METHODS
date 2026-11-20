@@ -4,7 +4,9 @@
 
 ## 当前重点
 
-采集阶段已有固定版本语料。目前使用 Open Design 把已有材料批量转换为 **SkillRecord v0.1.1**，不再继续设计 Schema。
+已转换的内容可在[本机 Skill 资料库](library/README.md)搜索、分类浏览和回查固定来源。目录可按最新落盘结果重新生成。
+
+采集阶段已有固定版本语料。当前批量转换使用 OpenCode Go 的免费模型生成 **SkillRecord v0.1.1**，并行补充资料库的后续输入。
 
 - 已接入：Schema、目标优先提示词、检查器，以及复用已有 OpenCode/Open Design 连接的可续跑批转换器。
 - 真实模型批次：[第 001 批状态与用量](data/normalized/batch-001/report.json)、[转换记录](data/normalized/batch-001/records.jsonl)；逐条保存，成功跳过，失败显式重试。
@@ -47,11 +49,7 @@ python3 normalization/batch_convert.py \
 
 完整请求、原响应和会话留在本机，Git 只保存可公开派生记录、输入范围、用量元数据及报告；不执行上游 Skill。
 
-全队列进程退出后的续跑命令（进程仍运行时无需重复启动）：
-
-```bash
-python3 -u normalization/run_corpus.py --workers 10
-```
+全队列进程退出后，按[当前去重队列的续跑命令](normalization/NEXT-TASK.md)恢复。
 
 ## 采集成果保持不变
 

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Skill 资料库 · Atlas Methods</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Atlas Methods 首页"><i aria-hidden="true"></i>Atlas Methods</a>
+    <span class="timestamp" id="updated">正在读取本机目录</span>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav aria-label="领域" id="category-nav"></nav>
+    </aside>
+    <main>
+      <div class="intro">
+        <h1>Skill 资料库</h1>
+        <p>按用途找做法，查看步骤与限制，回到固定版本的来源。</p>
+        <dl class="metrics" id="metrics" aria-label="目录统计"></dl>
+      </div>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="query">搜索 Skill</label>
+        <input id="query" name="q" type="search" placeholder="搜索名称、用途或仓库…" autocomplete="off" maxlength="160">
+        <button type="submit" class="primary">搜索</button>
+      </form>
+      <div class="filters">
+        <label class="mobile-category"><span>领域</span><select id="category-select"><option value="">全部 Skill</option></select></label>
+        <label><span>专题</span><select id="topic"><option value="">全部专题</option></select></label>
+        <label><span>来源</span><select id="repo"><option value="">全部仓库</option></select></label>
+        <label><span>排序</span><select id="sort">
+          <option value="">相关度</option><option value="new">最近转换</option>
+          <option value="title">标题</option><option value="sources">来源最多</option>
+        </select></label>
+        <label class="check"><input id="grouped" type="checkbox">仅看有多个来源</label>
+        <button class="clear" id="clear" type="button" hidden>清除筛选</button>
+      </div>
+      <section aria-label="搜索结果">
+        <div class="results-head">
+          <h2 id="result-title">全部 Skill</h2>
+          <span id="result-count" role="status" aria-live="polite"></span>
+        </div>
+        <div id="results" class="cards" aria-busy="true"></div>
+        <div id="pagination" class="pagination" hidden>
+          <button id="previous" type="button">上一页</button>
+          <span id="page-info"></span>
+          <button id="next" type="button">下一页</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <header class="dialog-bar">
+      <span>Skill 详情</span>
+      <button id="close-detail" type="button" autofocus>关闭</button>
+    </header>
+    <div id="detail-content" class="dialog-content"><h2 id="detail-title">正在读取</h2></div>
+  </dialog>
+</body>
+</html>
