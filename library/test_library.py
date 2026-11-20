@@ -7,11 +7,24 @@ import unittest
 from unittest.mock import patch
 
 from build import SCHEMA, package_signature
+from export_pages import source_row
 import serve
 from taxonomy import classify
 
 
 class LibraryTests(unittest.TestCase):
+    def test_pages_source_export_only_contains_public_provenance(self):
+        row = {
+            'id': 'a' * 32, 'repo': 'owner/public', 'path': 'skills/example/SKILL.md',
+            'revision': 'b' * 40, 'relationship': 'representative',
+            'record_path': 'private-record.json', 'raw_path': 'private-original.md',
+            'summary': 'private normalized text',
+        }
+        self.assertEqual(source_row(row, {'owner/public': 0}),
+                         ['a' * 32, 0, 'skills/example/SKILL.md', 'b' * 40, 'representative'])
+        with self.assertRaises(ValueError):
+            source_row({**row, 'path': '../SKILL.md'}, {'owner/public': 0})
+
     def test_title_fallback_keeps_ambiguous_and_preclassified_entries(self):
         source = {'repository': 'owner/repo', 'skill_path': 'skills/example/SKILL.md'}
         connector = {'title': 'Asana Automation via Rube MCP'}

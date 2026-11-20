@@ -11,6 +11,19 @@ python3 library/serve.py --port 8765
 
 打开 [本机资料库](http://127.0.0.1:8765)。服务只监听本机地址。完整资料库和原文由本机提供，生成的 SQLite 索引保存在 `data/library/catalog.sqlite3`。
 
+## GitHub Pages 公开目录
+
+[公开目录](https://liamamilin.github.io/ATLAS-METHODS/) 可以搜索 Skill 名称、分类和仓库，详情列出 GitHub 固定版本来源。部署源为 `gh-pages` 分支根目录。
+
+在仓库根目录构建最新快照，然后导出到一个空目录：
+
+```bash
+python3 library/build.py
+python3 library/export_pages.py /tmp/atlas-pages-release
+```
+
+导出仅含目录标签、来源元数据和静态资产。更新公开站点时，把生成的 `index.html`、`app.js`、`pages_catalog.js`、`style.css`、`catalog.json` 和 `.nojekyll` 提交到 `gh-pages`。完整转换内容和原文仍用本机资料库访问。
+
 后续转换落盘后再运行一次 `python3 library/build.py`，然后刷新页面。生成器读取启动时的已保存结果，原子替换目录。已打开页面的来源链接使用固定来源身份，代表记录变动时，旧链接仍可解析到当前代表。
 
 目录从实际存在并与采集索引匹配的 SkillRecord 生成，复用首批 40 条和 `full-001` 正式结果。材料包合并比较固定版本的入口、关联文件 Git blob 和供给范围，额外识别能核对的 Markdown 格式变化。原转换与来源均保留，已核验的历史去重关联在代表条目的来源页可回查。存在重要内容差异或证据不足的记录各自保留。

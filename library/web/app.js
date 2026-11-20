@@ -3,6 +3,7 @@
 const byId = (id) => document.getElementById(id);
 const number = new Intl.NumberFormat('zh-CN');
 const fields = ['q', 'category', 'topic', 'repo', 'sort', 'grouped'];
+const publicSnapshot = document.documentElement.dataset.catalog;
 let filters = {};
 let meta;
 let categories;
@@ -29,6 +30,7 @@ function note(message) {
 }
 
 async function load(path, signal) {
+  if (publicSnapshot) return window.atlasPublicCatalog.load(publicSnapshot, path, signal);
   const response = await fetch(path, { signal });
   const body = await response.json();
   if (!response.ok) throw new Error(body.error || '本机资料库暂不可用');
@@ -118,7 +120,7 @@ function card(item) {
   const label = categories.get(item.category)?.label;
   link.append(element('span', item.topic ? label + ' · ' + item.topic : label, 'pill'));
   link.append(element('h3', item.title));
-  link.append(element('p', item.summary || '打开详情查看原记录。'));
+  link.append(element('p', item.summary || item.path || '打开详情查看原记录。'));
   const footer = element('div', null, 'card-foot');
   footer.append(element('span', item.repo), element('span', number.format(item.source_count) + ' 个来源'));
   link.append(footer);
@@ -302,6 +304,16 @@ function renderDetail(data) {
   const root = byId('detail-content');
   const record = data.record;
   const category = categories.get(data.category)?.label || '待归类';
+  if (!record) {
+    const title = element('h2', data.title);
+    title.id = 'detail-title';
+    const sources = element('section', null, 'source-list');
+    sources.append(element('h3', '固定版本来源 · ' + data.sources.length));
+    renderSources(sources, data);
+    root.replaceChildren(element('span', data.topic ? category + ' · ' + data.topic : category, 'pill'),
+      title, element('p', labelSource[data.label_from] || '', 'detail-banner'), sources);
+    return;
+  }
   const title = element('h2', record.content.title || record.content.name || record.source.skill_path);
   title.id = 'detail-title';
   const top = element('span', data.topic ? category + ' · ' + data.topic : category, 'pill');
