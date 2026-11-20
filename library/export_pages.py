@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export a GitHub Pages site containing only catalogue and source metadata."""
+"""Export a GitHub Pages catalogue with explicitly selected public overviews."""
 import argparse
 from collections import Counter, defaultdict
 from contextlib import closing
@@ -17,6 +17,7 @@ META_FIELDS = (
     'as_of', 'normalized', 'representatives', 'same_package', 'same_format',
     'sources', 'categories', 'repos', 'topics',
 )
+OVERVIEWS = Path(__file__).with_name('public-overviews.json')
 
 
 def source_row(row, repo_ids):
@@ -28,6 +29,23 @@ def source_row(row, repo_ids):
             or not parts or path.startswith('/') or '..' in parts or parts[-1].casefold() != 'skill.md'):
         raise ValueError(f'Cannot publish an invalid GitHub source: {identifier}')
     return [identifier, repo_ids[repo], path, revision, relationship]
+
+
+def public_overviews(con):
+    selected = json.loads(OVERVIEWS.read_text(encoding='utf-8'))
+    overviews = {}
+    for identifier, note in selected.items():
+        row = con.execute(
+            'SELECT repo, path, revision FROM sources WHERE id = ? AND record_path IS NOT NULL',
+            (identifier,),
+        ).fetchone()
+        if row is None or dict(row) != note['source']:
+            raise ValueError(f'Public overview source changed: {identifier}')
+        overviews[identifier] = {
+            **{key: note[key] for key in ('summary', 'when', 'steps', 'limits')},
+            'attribution': {key: note['attribution'][key] for key in ('name', 'url', 'license', 'license_url')},
+        }
+    return overviews
 
 
 def snapshot(con):
@@ -54,7 +72,7 @@ def snapshot(con):
             or sum(len(entry[-1]) for entry in entries) != public['sources']
             or any(entry['count'] != counts[entry['id']] for entry in public['categories'])):
         raise ValueError('Published index counts do not match the catalogue')
-    return {'meta': public, 'entries': entries}
+    return {'meta': public, 'entries': entries, 'overviews': public_overviews(con)}
 
 
 def export(out):
@@ -78,7 +96,7 @@ def export(out):
     html = html.replace('./style.css"', f'./style.css?v={version}"')
     html = html.replace('正在读取本机目录', '正在读取公开目录')
     html = html.replace('按用途找做法，查看步骤与限制，回到固定版本的来源。',
-                        '按领域、专题和仓库浏览 Skill，打开 GitHub 固定版本。')
+                        '按领域浏览 Skill、查看公开整理摘要并回查 GitHub 固定版本。')
     html = html.replace('搜索名称、用途或仓库…', '搜索名称、领域或仓库…')
     (out / 'index.html').write_text(html, encoding='utf-8')
     for name in ('app.js', 'pages_catalog.js', 'style.css'):

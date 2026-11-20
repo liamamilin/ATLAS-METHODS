@@ -1,0 +1,28 @@
+{
+  "c645f76efaf566869a83718453f75f1f": {
+    "source": {
+      "repo": "sickn33/agentic-awesome-skills",
+      "path": "skills/vercel-react-view-transitions/SKILL.md",
+      "revision": "828257c3037dc7c3c3ec987decc5a603025a0ce5"
+    },
+    "summary": "用 React 的 ViewTransition 把应用状态变化做成连续的视觉过渡。先判断用户需要看懂哪种关系，再决定动画的范围、触发时机和样式。浏览器不支持时，页面仍能正常导航。",
+    "when": "适用于已有 React 或 Next.js 应用中的列表到详情导航、共享元素、异步内容揭示，以及明确需要呈现先后关系的界面变化。",
+    "steps": [
+      "梳理路由、异步占位和导航前后持续存在的组件，标出哪些区域需要动画。",
+      "选择对应的过渡方式。层级导航区分前进与返回；共享元素保持视觉身份；异步内容就绪时在对应边界揭示。",
+      "为选中的范围设置 ViewTransition 边界和样式，使用支持的 React 更新方式触发。持久导航与主体内容分开处理，避免整页一起移动。",
+      "逐条检查实际交互路径，包括前进、返回、加载完成、快速连续操作以及系统减少动态效果设置。"
+    ],
+    "limits": [
+      "动画必须帮助用户理解位置或状态的变化。后台刷新和无方向的切换可以保持静默。",
+      "实施前核对当前 React、Next.js 和浏览器支持。不同版本的 API 和启用方式可能不同。",
+      "本机整理记录标出了未读的 Next.js 专项参考。采用框架特有的路由配置前，应补查对应版本的文档。"
+    ],
+    "attribution": {
+      "name": "Vercel",
+      "url": "https://github.com/vercel-labs/agent-skills/blob/1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62/skills/react-view-transitions/SKILL.md",
+      "license": "MIT",
+      "license_url": "https://spdx.org/licenses/MIT.html"
+    }
+  }
+}
