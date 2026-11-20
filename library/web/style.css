@@ -88,6 +88,10 @@ button:not(:disabled):hover { border-color: #aaa9db; }
   font-size: .9375rem; color: var(--subtle); line-height: 1.63; margin-bottom: 12px; overflow-wrap: anywhere;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
+.match-preview { display: grid; gap: 4px; margin: 3px 0 12px; }
+.match-preview p { margin: 0; font-size: .875rem; -webkit-line-clamp: 2; }
+.match-preview .match-goal { color: var(--ink); font-weight: 650; }
+.match-preview .match-tags { color: var(--accent); font-size: .8125rem; }
 .card-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
 .card-foot span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #54617a; font-size: .8125rem; }
 .card-foot span:last-child { color: var(--accent); white-space: nowrap; font-size: .875rem; }

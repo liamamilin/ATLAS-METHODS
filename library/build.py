@@ -12,6 +12,7 @@ import sys
 import tempfile
 
 from search import search_text
+from task_search import TASK_SCHEMA, add_tasks, tag_options
 from taxonomy import BY_LABEL, classify, topic_for
 from markdown_it import MarkdownIt
 
@@ -39,6 +40,7 @@ class Saved:
     generated: str
     reads: list
     covered_steps: int
+    tasks: list
 
 
 def read_json(path):
@@ -80,7 +82,8 @@ def gather_records(as_of):
             goals = '\n'.join(t.get('goal') or '' for t in tasks)
             saved = Saved(path, source, title, content.get('summary') or '', goals,
                           content.get('name') or '', category, label_from, extraction['review_status'],
-                          generated, extraction['files_read'], sum(len(t.get('steps') or []) for t in tasks))
+                          generated, extraction['files_read'], sum(len(t.get('steps') or []) for t in tasks),
+                          [{key: task.get(key) for key in ('goal', 'when', 'outputs')} for task in tasks])
             if path.stem in records:
                 ignored['repeated_record_identity'] += 1
                 continue
@@ -209,7 +212,7 @@ CREATE TABLE sources (
 );
 CREATE INDEX sources_skill ON sources(skill);
 CREATE INDEX sources_repo ON sources(repo, skill);
-"""
+""" + TASK_SCHEMA
 
 
 def build():
@@ -259,6 +262,7 @@ def build():
         con.executescript(SCHEMA)
         category_counts = Counter()
         label_counts = Counter()
+        tag_counts = Counter()
         distinct_repositories = set()
         with con:
             for key, (r, group, matches) in group_rows.items():
@@ -277,6 +281,7 @@ def build():
                     r.source['repository'], r.path.relative_to(ROOT).as_posix(), len(member_rows),
                     search_text(r.title + ' ' + r.search), search_text(' '.join(searches)),
                 ))
+                tag_counts.update(add_tasks(con, key, r.title, r.tasks))
                 for row, saved, match in member_rows:
                     source = source_of(row)
                     distinct_repositories.add(source['repository'])
@@ -293,6 +298,8 @@ def build():
                 'prior_aliases': len(seen) - len(records), 'sources': len(seen),
                 'repositories': len(distinct_repositories), 'categories': dict(category_counts),
                 'labels': dict(label_counts), 'excluded': dict(ignored), 'category_check': dict(audit),
+                'indexed_tasks': con.execute('SELECT COUNT(*) FROM catalog_tasks').fetchone()[0],
+                'task_tags': tag_options(tag_counts),
             }
             con.executemany('INSERT INTO meta VALUES (?,?)', ((k, json.dumps(v)) for k, v in report.items()))
         assert con.execute('PRAGMA quick_check').fetchone() == ('ok',)

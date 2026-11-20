@@ -11,6 +11,7 @@ import sqlite3
 from urllib.parse import parse_qs, quote, urlsplit
 
 from search import search_text
+from task_search import ACTION_TAGS, TASK_HITS, TOOL_TAGS, available, match_query
 from taxonomy import CATEGORIES, LABELS, UNSORTED_TOPIC
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,12 +39,31 @@ def list_skills(con, params):
     categories = value(params, 'category', 24)
     repo = value(params, 'repo')
     topic = value(params, 'topic')
+    action = value(params, 'action', 32)
+    tool = value(params, 'tool', 32)
     try:
         page = min(100000, max(1, int(value(params, 'page', 10) or 1)))
     except ValueError:
         page = 1
-    conditions = ['instr(s.search_text, ?) > 0' for _ in terms]
+    exact = ' AND '.join('instr(s.search_text, ?) > 0' for _ in terms)
+    conditions = [exact] if exact else []
     arguments = list(terms)
+    prelude, hit_args = '', []
+    source = 'FROM skills s'
+    task_columns, task_join = '', ''
+    if (query or action or tool) and available(con):
+        expression, expand, focus = match_query(query, action, tool)
+        if expression:
+            prelude, hit_args = TASK_HITS, [focus, focus, expression]
+            filtered = action in ACTION_TAGS or tool in TOOL_TAGS
+            join = 'JOIN' if filtered else 'LEFT JOIN'
+            source += f' {join} best b ON b.skill = s.id AND b.choice = 1'
+            task_join = ' LEFT JOIN catalog_tasks t ON t.id = b.id'
+            task_columns = ', t.position, t.goal, t.applicability, t.outputs, t.tags'
+            if expand:
+                conditions = [] if filtered else [f'(b.id IS NOT NULL OR ({exact}))']
+                if filtered:
+                    arguments = []
     if categories in LABELS:
         conditions.append('s.category = ?')
         arguments.append(categories)
@@ -59,20 +79,37 @@ def list_skills(con, params):
     sort = value(params, 'sort', 20)
     orders = {'new': 's.generated DESC', 'title': 's.search_title', 'sources': 's.source_count DESC, s.search_title'}
     order, order_args = orders.get(sort, 's.generated DESC'), []
-    if terms and sort not in orders:
+    if sort not in orders and prelude:
+        order = """CASE WHEN instr(s.search_title, NULLIF(?, '')) > 0 THEN 0
+                        WHEN b.id IS NOT NULL THEN 1 ELSE 2 END, b.preferred DESC, b.score, s.search_title"""
+        order_args.append(query)
+    elif terms and sort not in orders:
         order = 'CASE WHEN instr(s.search_title, ?) > 0 THEN 0 ELSE 1 END, s.search_title'
         order_args.append(query)
-    count = con.execute(f'SELECT COUNT(*) FROM skills s {where}', arguments).fetchone()[0]
+    count = con.execute(f'{prelude} SELECT COUNT(*) {source} {where}', (*hit_args, *arguments)).fetchone()[0]
     page = min(page, max(1, (count + PAGE_SIZE - 1) // PAGE_SIZE))
     rows = con.execute(f'''
-        SELECT s.id, s.title, s.summary, s.category, s.topic, s.repo, s.source_count, s.review
-        FROM skills s {where} ORDER BY {order}, s.id LIMIT ? OFFSET ?
-    ''', (*arguments, *order_args, PAGE_SIZE, (page - 1) * PAGE_SIZE)).fetchall()
-    return {'items': [dict(row) for row in rows], 'total': count, 'page': page, 'page_size': PAGE_SIZE}
+        {prelude}
+        SELECT s.id, s.title, s.summary, s.category, s.topic, s.repo, s.source_count, s.review{task_columns}
+        {source}{task_join} {where} ORDER BY {order}, s.id LIMIT ? OFFSET ?
+    ''', (*hit_args, *arguments, *order_args, PAGE_SIZE, (page - 1) * PAGE_SIZE)).fetchall()
+    items = []
+    for row in rows:
+        item = dict(row)
+        if prelude:
+            position, goal, when, outputs, tags = (
+                item.pop(key) for key in ('position', 'goal', 'applicability', 'outputs', 'tags')
+            )
+            if position is not None:
+                item['match'] = {'position': position, 'goal': goal, 'when': when,
+                                 'outputs': json.loads(outputs), 'tags': json.loads(tags)}
+        items.append(item)
+    return {'items': items, 'total': count, 'page': page, 'page_size': PAGE_SIZE}
 
 
 def meta(con):
     data = {row['key']: json.loads(row['value']) for row in con.execute('SELECT * FROM meta')}
+    data['task_search'] = bool(data.get('task_tags')) and available(con)
     data['categories'] = [
         {'id': key, 'label': name, 'section': section, 'count': data['categories'].get(key, 0)}
         for key, name, section, _ in CATEGORIES

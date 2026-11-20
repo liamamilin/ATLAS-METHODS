@@ -2,7 +2,8 @@
 
 const byId = (id) => document.getElementById(id);
 const number = new Intl.NumberFormat('zh-CN');
-const fields = ['q', 'category', 'topic', 'repo', 'sort', 'grouped'];
+const fields = ['q', 'category', 'topic', 'action', 'tool', 'repo', 'sort', 'grouped'];
+const tagNames = new Map();
 const publicSnapshot = document.documentElement.dataset.catalog;
 let filters = {};
 let meta;
@@ -39,7 +40,7 @@ async function load(path, signal) {
 
 function stateFromURL() {
   const params = new URLSearchParams(location.search);
-  return Object.fromEntries([...fields, 'page', 'skill', 'source'].map((key) => [key, params.get(key) || '']));
+  return Object.fromEntries([...fields, 'page', 'skill', 'source', 'match'].map((key) => [key, params.get(key) || '']));
 }
 
 function setURL(values, replace = false) {
@@ -101,12 +102,21 @@ function initLayout() {
   }
   setOptions(byId('category-select'), meta.categories.map((cat) => [cat.id, cat.label]));
   setOptions(byId('repo'), meta.repos.map((repo) => [repo, repo]));
+  if (meta.task_search) byId('query').placeholder = '描述你要做的事，或搜索 Skill 名称…';
+  for (const kind of ['action', 'tool']) {
+    const tags = meta.task_search ? meta.task_tags[kind] : [];
+    setOptions(byId(kind), tags.map(({ id, label }) => [id, label]));
+    byId(kind).parentElement.hidden = !tags.length;
+    for (const { id, label } of tags) tagNames.set(id, label);
+  }
 }
 
 function updateControls() {
   byId('query').value = filters.q;
   byId('category-select').value = filters.category;
   byId('repo').value = filters.repo;
+  byId('action').value = filters.action;
+  byId('tool').value = filters.tool;
   byId('sort').value = filters.sort;
   byId('grouped').checked = filters.grouped === '1';
   const topics = meta.topics.filter((t) => filters.category ? t.category === filters.category : filters.topic);
@@ -131,7 +141,7 @@ function updateControls() {
 }
 
 function navigate(update) {
-  setURL({ ...filters, ...update, skill: '', source: '' });
+  setURL({ ...filters, ...update, skill: '', source: '', match: '' });
   renderPage();
 }
 
@@ -139,12 +149,25 @@ function card(item) {
   const params = new URLSearchParams(location.search);
   params.set('skill', item.id);
   params.delete('source');
+  if (item.match) params.set('match', item.match.position);
+  else params.delete('match');
   const link = element('a', null, 'card');
   link.href = '?' + params.toString();
   const label = categories.get(item.category)?.label;
   link.append(element('span', item.topic ? label + ' · ' + item.topic : label, 'pill'));
   link.append(element('h3', item.title));
-  link.append(element('p', item.summary || item.path || '打开详情查看原记录。'));
+  if (item.match) {
+    const { goal, when, outputs, tags } = item.match;
+    const preview = element('div', null, 'match-preview');
+    preview.append(element('p', '匹配任务 · ' + goal, 'match-goal'));
+    if (when) preview.append(element('p', '适用 · ' + when));
+    if (outputs.length) preview.append(element('p', '产出 · ' + outputs.slice(0, 2).join('；')));
+    const labels = [...tags.action, ...tags.tool].map((key) => tagNames.get(key)).filter(Boolean);
+    if (labels.length) preview.append(element('p', labels.slice(0, 4).join(' · '), 'match-tags'));
+    link.append(preview);
+  } else {
+    link.append(element('p', item.summary || item.path || '打开详情查看原记录。'));
+  }
   const footer = element('div', null, 'card-foot');
   footer.append(element('span', item.repo), element('span', number.format(item.source_count) + ' 个来源'));
   link.append(footer);
@@ -152,7 +175,7 @@ function card(item) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     detailTab = 'method';
-    setURL({ ...filters, skill: item.id });
+    setURL({ ...filters, skill: item.id, source: '', match: item.match?.position });
     filters = stateFromURL();
     syncDetail();
   });
@@ -255,12 +278,12 @@ function copyText(record, source) {
   return lines.filter((line) => line !== null && line !== undefined).join('\n');
 }
 
-function renderMethod(container, record) {
+function renderMethod(container, record, matchedPosition) {
   const c = record.content;
   if (c.tasks?.length) container.append(element('h3', '做法'));
-  for (const task of c.tasks || []) {
+  for (const [index, task] of (c.tasks || []).entries()) {
     const box = element('details');
-    box.open = c.tasks.length === 1;
+    box.open = c.tasks.length === 1 || index + 1 === matchedPosition;
     box.append(element('summary', task.goal || '任务'));
     if (task.when) box.append(element('p', '适用条件 · ' + task.when));
     stringList(box, '输入', task.inputs);
@@ -296,7 +319,7 @@ function renderSources(container, data) {
     actions.append(link);
     if (source.has_record && source.id !== data.display_source) {
       actions.append(button('查看该来源的转换', () => {
-        setURL({ ...filters, skill: data.id, source: source.id });
+        setURL({ ...filters, skill: data.id, source: source.id, match: '' });
         filters = stateFromURL();
         detailTab = 'method';
         syncDetail();
@@ -373,7 +396,7 @@ function renderDetail(data) {
   function renderTab() {
     body.replaceChildren();
     for (const node of tabs.children) node.setAttribute('aria-pressed', String(node.dataset.tab === detailTab));
-    if (detailTab === 'method') renderMethod(body, record);
+    if (detailTab === 'method') renderMethod(body, record, data.display_source === data.id ? Number(filters.match) : 0);
     else renderSources(body, data);
   }
   for (const [id, label] of [['method', '做法与限制'], ['sources', '来源 · ' + data.sources.length]]) {
@@ -432,14 +455,14 @@ async function start() {
       navigate({ q: byId('query').value.trim(), page: 1 });
     });
     byId('category-select').addEventListener('change', () => navigate({ category: byId('category-select').value, topic: '', page: 1 }));
-    for (const key of ['sort', 'repo', 'topic', 'grouped']) {
+    for (const key of ['sort', 'repo', 'topic', 'action', 'tool', 'grouped']) {
       byId(key).addEventListener('change', () => navigate({ [key]: key === 'grouped' ? (byId(key).checked ? '1' : '') : byId(key).value, page: 1 }));
     }
     byId('clear').addEventListener('click', () => navigate(Object.fromEntries([...fields, 'page'].map((key) => [key, '']))));
     byId('close-detail').addEventListener('click', () => byId('detail').close());
     byId('detail').addEventListener('close', () => {
       if (!stateFromURL().skill) return;
-      setURL({ ...stateFromURL(), skill: '', source: '' }, true);
+      setURL({ ...stateFromURL(), skill: '', source: '', match: '' }, true);
       filters = stateFromURL();
     });
     window.addEventListener('popstate', renderPage);

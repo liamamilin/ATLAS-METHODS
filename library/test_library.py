@@ -10,6 +10,7 @@ from build import SCHEMA, package_signature
 from export_pages import source_row
 from search import search_text
 import serve
+from task_search import add_tasks
 from taxonomy import classify, topic_for
 
 
@@ -135,6 +136,49 @@ class LibraryTests(unittest.TestCase):
                 with self.subTest(query=query):
                     self.assertEqual(serve.list_skills(con, {'q': [query]})['total'], 1)
             self.assertEqual(search_text('C++'), 'c++')
+
+    def test_task_search_returns_one_match_per_skill_with_source_fields(self):
+        with sqlite3.connect(':memory:') as con:
+            con.row_factory = sqlite3.Row
+            con.executescript(SCHEMA)
+            for key, title, category in (('a', 'React View Transitions', 'code'), ('b', '独立手册', 'writing')):
+                con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    key, title, '', category, 'sample', '', 'unreviewed', 'today',
+                    'owner/example', '', 1, search_text(title), search_text(title),
+                ))
+            add_tasks(con, 'a', 'React View Transitions', [
+                {'goal': '读取 PostgreSQL 的只读查询结果'},
+                {'goal': '用 React 为列表进入详情加上视图过渡', 'when': '在现有 React 应用内',
+                 'outputs': ['CSS 配方']},
+                {'goal': '处理 React 视图过渡的浏览器回退'},
+            ])
+            query = {'q': ['给 React 列表进入详情时加一个过渡动画'], 'category': ['code']}
+            result = serve.list_skills(con, query)
+            self.assertEqual(result['total'], 1)
+            match = result['items'][0]['match']
+            self.assertEqual((match['position'], match['when'], match['outputs']),
+                             (2, '在现有 React 应用内', ['CSS 配方']))
+            self.assertEqual(serve.list_skills(con, {**query, 'category': ['office']})['total'], 0)
+            self.assertEqual(serve.list_skills(con, {'action': ['transition'], 'tool': ['react']})['total'], 1)
+            self.assertEqual(serve.list_skills(con, {'action': ['transition'], 'tool': ['postgresql']})['total'], 0)
+            fallback = serve.list_skills(con, {'q': ['独立手册']})
+            self.assertEqual(fallback['items'][0]['id'], 'b')
+            self.assertNotIn('match', fallback['items'][0])
+
+    def test_task_search_prefers_producing_minutes_over_tasks_that_use_them(self):
+        with sqlite3.connect(':memory:') as con:
+            con.row_factory = sqlite3.Row
+            con.executescript(SCHEMA)
+            for key, title in (('a', '议题与记录'), ('b', '会后跟进'), ('c', '材料交接')):
+                con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    key, title, '', 'office', 'sample', '', 'unreviewed', 'today',
+                    'owner/example', '', 1, search_text(title), search_text(title),
+                ))
+            add_tasks(con, 'a', '议题与记录', [{'goal': '根据原始记录起草会议纪要'}])
+            add_tasks(con, 'b', '会后跟进', [{'goal': '从会议纪要生成行动计划'}])
+            add_tasks(con, 'c', '材料交接', [{'goal': '确认文档权限', 'when': '已有会议纪要'}])
+            result = serve.list_skills(con, {'q': ['准备一场会议并生成会议纪要']})
+            self.assertEqual([item['id'] for item in result['items']], ['a', 'b'])
 
     def test_raw_requires_bytes_from_the_pinned_entry(self):
         with TemporaryDirectory() as temp, sqlite3.connect(':memory:') as con:
