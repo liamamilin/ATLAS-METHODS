@@ -22,7 +22,7 @@ python3 library/build.py
 python3 library/export_pages.py /tmp/atlas-pages-release
 ```
 
-导出仅含目录标签、来源元数据和静态资产。更新公开站点时，把生成的 `index.html`、`app.js`、`pages_catalog.js`、`style.css`、`catalog.json` 和 `.nojekyll` 提交到 `gh-pages`。完整转换内容和原文仍用本机资料库访问。
+导出仅含条目标题、目录标签、来源元数据和静态资产。公开搜索匹配标题和来源路径，长横线、连字符和空格可互换。更新公开站点时，把生成的 `index.html`、`app.js`、`pages_catalog.js`、`style.css`、`catalog.json` 和 `.nojekyll` 提交到 `gh-pages`。完整转换内容和原文仍用本机资料库访问。
 
 后续转换落盘后再运行一次 `python3 library/build.py`，然后刷新页面。生成器读取启动时的已保存结果，原子替换目录。已打开页面的来源链接使用固定来源身份，代表记录变动时，旧链接仍可解析到当前代表。
 

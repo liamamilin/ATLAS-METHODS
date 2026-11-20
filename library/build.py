@@ -11,7 +11,8 @@ import sqlite3
 import sys
 import tempfile
 
-from taxonomy import BY_LABEL, classify, fold, topic_for
+from search import search_text
+from taxonomy import BY_LABEL, classify, topic_for
 from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -274,7 +275,7 @@ def build():
                 con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
                     key, r.title, r.summary, r.category, r.label_from, topic, r.review, r.generated,
                     r.source['repository'], r.path.relative_to(ROOT).as_posix(), len(member_rows),
-                    fold(r.title + ' ' + r.search), fold(' '.join(searches)),
+                    search_text(r.title + ' ' + r.search), search_text(' '.join(searches)),
                 ))
                 for row, saved, match in member_rows:
                     source = source_of(row)

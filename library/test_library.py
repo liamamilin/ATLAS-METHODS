@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 from build import SCHEMA, package_signature
 from export_pages import source_row
+from search import search_text
 import serve
 from taxonomy import classify
 
@@ -69,6 +70,22 @@ class LibraryTests(unittest.TestCase):
             result = serve.list_skills(con, {'q': ['合同'], 'category': ['legal'], 'repo': ['owner/copy'], 'page': ['999']})
             self.assertEqual((result['total'], result['page'], result['items'][0]['id']), (1, 1, 'a'))
             self.assertEqual(serve.list_skills(con, {'repo': ["missing' OR 1=1"]})['total'], 0)
+
+    def test_search_accepts_title_separators_and_full_width_input(self):
+        with sqlite3.connect(':memory:') as con:
+            con.row_factory = sqlite3.Row
+            con.executescript(SCHEMA)
+            title = 'KI-Sicherheitskomponente'
+            con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                'a', title, '', 'legal', 'sample', '', 'unreviewed', 'today',
+                'owner/public', '', 1, search_text(title),
+                search_text(title + ' de/tmt/skills/sicherheitskomponente-mit-ki/SKILL.md'),
+            ))
+            for query in ('KI–Sicherheitskomponente', title, 'KI Sicherheitskomponente',
+                          'ＫＩ＿Sicherheitskomponente', 'sicherheitskomponente-mit-ki'):
+                with self.subTest(query=query):
+                    self.assertEqual(serve.list_skills(con, {'q': [query]})['total'], 1)
+            self.assertEqual(search_text('C++'), 'c++')
 
     def test_raw_requires_bytes_from_the_pinned_entry(self):
         with TemporaryDirectory() as temp, sqlite3.connect(':memory:') as con:

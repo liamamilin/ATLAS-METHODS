@@ -42,12 +42,13 @@ def snapshot(con):
         groups[row['skill']].append(source_row(row, repo_ids))
     entries = []
     counts = Counter()
-    for row in con.execute('SELECT id, category, topic, label_from FROM skills ORDER BY generated DESC, id'):
+    for row in con.execute('SELECT id, title, category, topic, label_from FROM skills ORDER BY generated DESC, id'):
         sources = groups[row['id']]
         if not sources or sources[0][0] != row['id']:
             raise ValueError('Missing representative source')
         name = PurePosixPath(sources[0][2]).parent.name or public['repos'][sources[0][1]].split('/')[1]
-        entries.append([name, row['category'], row['topic'], row['label_from'], sources])
+        title = ' '.join(row['title'].split())[:160] or name
+        entries.append([title, row['category'], row['topic'], row['label_from'], sources])
         counts[row['category']] += 1
     if (len(entries) != public['representatives']
             or sum(len(entry[-1]) for entry in entries) != public['sources']
@@ -64,7 +65,10 @@ def export(out):
         con.execute('BEGIN')
         data = snapshot(con)
     payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
-    version = hashlib.sha256(payload).hexdigest()[:12]
+    version_hash = hashlib.sha256(payload)
+    for name in ('index.html', 'app.js', 'pages_catalog.js', 'style.css'):
+        version_hash.update((WEB / name).read_bytes())
+    version = version_hash.hexdigest()[:12]
     (out / 'catalog.json').write_bytes(payload)
     html = (WEB / 'index.html').read_text(encoding='utf-8')
     html = html.replace('<html lang="zh-CN">', f'<html lang="zh-CN" data-catalog="./catalog.json?v={version}">')

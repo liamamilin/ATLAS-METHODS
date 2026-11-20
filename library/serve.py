@@ -10,7 +10,8 @@ import re
 import sqlite3
 from urllib.parse import parse_qs, quote, urlsplit
 
-from taxonomy import CATEGORIES, LABELS, fold
+from search import search_text
+from taxonomy import CATEGORIES, LABELS
 
 ROOT = Path(__file__).resolve().parents[1]
 DATABASE = ROOT / 'data/library/catalog.sqlite3'
@@ -32,7 +33,7 @@ def value(params, key, limit=160):
 
 
 def list_skills(con, params):
-    query = fold(value(params, 'q'))
+    query = search_text(value(params, 'q'))
     terms = query.split()[:8]
     categories = value(params, 'category', 24)
     repo = value(params, 'repo')
