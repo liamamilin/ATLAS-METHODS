@@ -11,7 +11,7 @@ import sqlite3
 from urllib.parse import parse_qs, quote, urlsplit
 
 from search import search_text
-from taxonomy import CATEGORIES, LABELS
+from taxonomy import CATEGORIES, LABELS, UNSORTED_TOPIC
 
 ROOT = Path(__file__).resolve().parents[1]
 DATABASE = ROOT / 'data/library/catalog.sqlite3'
@@ -79,7 +79,9 @@ def meta(con):
     ]
     data['repos'] = [row['repo'] for row in con.execute('SELECT DISTINCT repo FROM sources ORDER BY repo COLLATE NOCASE')]
     data['topics'] = [dict(row) for row in con.execute(
-        "SELECT DISTINCT category, topic FROM skills WHERE topic <> '' ORDER BY topic"
+        """SELECT category, topic, COUNT(*) AS count FROM skills
+           WHERE topic <> '' GROUP BY category, topic
+           ORDER BY category, topic = ?, count DESC, topic""", (UNSORTED_TOPIC,)
     )]
     return data
 

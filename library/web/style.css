@@ -27,7 +27,7 @@ h1, h2, h3, p, dl { margin: 0; }
 .timestamp { color: #d3d5f4; font-size: .875rem; font-variant-numeric: tabular-nums; text-align: right; }
 .layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); max-width: 1680px; min-height: calc(100vh - 70px); margin: auto; }
 .sidebar { background: #e9ecf6; border-right: 1px solid var(--line); padding: 28px 15px 30px; }
-.sidebar nav { position: sticky; top: 18px; }
+.sidebar nav { position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow: auto; }
 .nav-heading { padding: 17px 11px 7px; color: #46516a; font-size: .875rem; font-weight: 760; }
 .nav-button {
   border: 0; text-align: left; background: transparent; width: 100%; padding: 8px 10px;
@@ -36,7 +36,14 @@ h1, h2, h3, p, dl { margin: 0; }
 }
 .nav-button:hover { background: #f8f8ff; }
 .nav-button[aria-pressed="true"] { background: #dcdcff; color: #2c288d; font-weight: 720; }
+.nav-button[aria-expanded] > span:first-child::before {
+  content: ""; display: inline-block; width: .35em; height: .35em; margin: 0 .55em .1em .05em;
+  border: solid currentColor; border-width: 1px 1px 0 0; transform: rotate(45deg);
+}
+.nav-button[aria-expanded="true"] > span:first-child::before { transform: rotate(135deg); }
 .nav-count { color: #536079; font-variant-numeric: tabular-nums; font-size: .8125rem; white-space: nowrap; }
+.nav-children { margin: 3px 0 5px 12px; padding-inline-start: 4px; border-inline-start: 1px solid #cbd1e8; }
+.nav-children .nav-button { padding-block: 6px; font-size: .8125rem; }
 main { min-width: 0; padding: 31px clamp(18px, 4vw, 64px) 48px; }
 .intro { margin-bottom: 24px; }
 h1 { font-size: clamp(1.95rem, 4vw, 2.8rem); line-height: 1.15; font-weight: 820; letter-spacing: -.045em; }

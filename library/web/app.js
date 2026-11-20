@@ -71,19 +71,33 @@ function initLayout() {
   byId('updated').textContent = '目录更新 ' + t;
   categories = new Map(meta.categories.map((c) => [c.id, c]));
   const nav = byId('category-nav');
-  function categoryButton(id, label, count) {
-    const node = button('', () => navigate({ category: id, topic: '', page: 1 }));
+  function categoryButton(id, label, count, topic = '') {
+    const node = button('', () => navigate({ category: id, topic, page: 1 }));
     node.className = 'nav-button';
     node.dataset.category = id;
-    node.append(element('span', label), element('span', number.format(count), 'nav-count'));
-    nav.append(node);
+    if (topic) node.dataset.topic = topic;
+    node.append(element('span', label));
+    if (Number.isInteger(count)) node.append(element('span', number.format(count), 'nav-count'));
+    return node;
   }
-  categoryButton('', '全部 Skill', meta.representatives);
+  nav.append(categoryButton('', '全部 Skill', meta.representatives));
   let section;
   for (const cat of meta.categories) {
     if (cat.section !== section) nav.append(element('p', cat.section, 'nav-heading'));
     section = cat.section;
-    categoryButton(cat.id, cat.label, cat.count);
+    const parent = categoryButton(cat.id, cat.label, cat.count);
+    nav.append(parent);
+    const topics = meta.topics.filter((item) => item.category === cat.id);
+    if (!topics.length) continue;
+    const children = element('div', null, 'nav-children');
+    children.id = 'topics-' + cat.id;
+    children.dataset.parentCategory = cat.id;
+    children.setAttribute('role', 'group');
+    children.setAttribute('aria-label', cat.label + '的二级分类');
+    children.hidden = true;
+    children.append(...topics.map(({ topic, count }) => categoryButton(cat.id, topic, count, topic)));
+    parent.setAttribute('aria-controls', children.id);
+    nav.append(children);
   }
   setOptions(byId('category-select'), meta.categories.map((cat) => [cat.id, cat.label]));
   setOptions(byId('repo'), meta.repos.map((repo) => [repo, repo]));
@@ -95,15 +109,25 @@ function updateControls() {
   byId('repo').value = filters.repo;
   byId('sort').value = filters.sort;
   byId('grouped').checked = filters.grouped === '1';
-  const topics = [...new Set(meta.topics.filter((t) => !filters.category || t.category === filters.category).map((t) => t.topic))];
-  setOptions(byId('topic'), topics.map((topic) => [topic, topic]));
+  const topics = meta.topics.filter((t) => filters.category ? t.category === filters.category : filters.topic);
+  const options = new Map(topics.map(({ topic, count }) => [
+    topic, filters.category && Number.isInteger(count) ? topic + '（' + number.format(count) + '）' : topic,
+  ]));
+  setOptions(byId('topic'), options);
   byId('topic').value = filters.topic;
   byId('topic').parentElement.hidden = topics.length === 0;
   byId('clear').hidden = !fields.some((key) => !!filters[key]);
   for (const node of document.querySelectorAll('.nav-button')) {
-    node.setAttribute('aria-pressed', String(node.dataset.category === filters.category));
+    const inCategory = node.dataset.category === filters.category;
+    const active = inCategory && (!node.dataset.topic || node.dataset.topic === filters.topic);
+    node.setAttribute('aria-pressed', String(active));
+    if (node.hasAttribute('aria-controls')) node.setAttribute('aria-expanded', String(inCategory));
   }
-  byId('result-title').textContent = categories.get(filters.category)?.label || '全部 Skill';
+  for (const group of document.querySelectorAll('.nav-children')) {
+    group.hidden = group.dataset.parentCategory !== filters.category;
+  }
+  const category = categories.get(filters.category)?.label || '全部 Skill';
+  byId('result-title').textContent = [category, filters.topic].filter(Boolean).join(' / ');
 }
 
 function navigate(update) {

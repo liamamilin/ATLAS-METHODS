@@ -262,7 +262,7 @@ def build():
         distinct_repositories = set()
         with con:
             for key, (r, group, matches) in group_rows.items():
-                topic = topic_for(r.source)
+                topic = topic_for(r.source, r.category, r.title, r.goals, r.summary)
                 category_counts[r.category] += 1
                 label_counts[r.label_from] += 1
                 member_rows = []

@@ -1,6 +1,9 @@
 """Provisional browse labels derived from the recorded category study."""
+from pathlib import PurePosixPath
 import re
 import unicodedata
+
+from search import search_text
 
 
 def fold(text):
@@ -30,16 +33,16 @@ LABELS = {key: label for key, label, _, _ in CATEGORIES}
 BY_LABEL = {label: key for key, label, _, _ in CATEGORIES}
 BY_LABEL['入口信息不足，暂不归类'] = 'unfiled'
 
-PATTERNS = {}
-for key, _, _, vocabulary in CATEGORIES:
-    if not vocabulary:
-        continue
+def term_pattern(vocabulary):
     terms = sorted(set(vocabulary.split('|')), key=lambda term: (-len(term), term))
     expressions = [
         (r'(?<![a-z0-9])' + re.escape(term) + r'(?![a-z0-9])') if term.isascii() else re.escape(term)
         for term in terms
     ]
-    PATTERNS[key] = re.compile('|'.join(expressions))
+    return re.compile('|'.join(expressions))
+
+
+PATTERNS = {key: term_pattern(vocabulary) for key, _, _, vocabulary in CATEGORIES if vocabulary}
 
 
 def term_score(pattern, text):
@@ -74,6 +77,91 @@ LEGAL_TOPICS = {
     'real-estate': '不动产', 'family': '家庭', 'public-law': '公法',
 }
 
+# Classify code Skills by the work they help with. Languages appear in many
+# specialized Skills, so their names alone are only a fallback.
+CODE_TOPICS = {
+    '前端与 Web 界面': (
+        'react|next.js|nextjs|vue|angular|svelte|sveltekit|solidjs|nuxt|astro|remix|'
+        'frontend|front end|web app|web development|css|tailwind|shadcn|htmx|ember|'
+        'vite|webpack|browser extension|web component|storybook|html|'
+        'pinia|redux|zustand|jotai|jquery|gsap react|'
+        '前端|网页|浏览器扩展|网页界面|视图过渡|组件库|网站开发|网站架构'
+    ),
+    '移动与桌面应用': (
+        'react native|expo|flutter|android|jetpack compose|ios|ipados|watchos|macos|'
+        'swiftui|uikit|appkit|xcode|cocoapods|capacitor|electron|tauri|desktop app|'
+        'mobile app|game development|godot|unity|unreal engine|realitykit|'
+        '移动端|移动应用|桌面应用|客户端开发|小程序|游戏开发'
+    ),
+    '后端与 API': (
+        'backend|back end|rest api|restful|openapi|swagger|graphql|grpc|webhook|'
+        'server side|api design|microservice|rpc|websocket|spring boot|django|fastapi|'
+        'flask|nestjs|laravel|asp.net|message queue|kafka|rabbitmq|'
+        '后端|服务端|接口设计|微服务|服务接口|消息队列'
+    ),
+    '数据库与持久化': (
+        'database|postgresql|postgres|postgres.js|mysql|mariadb|mongodb|'
+        'sqlite|redis|sql server|sql|dynamodb|firestore|supabase|orm|prisma|'
+        'duckdb|clickhouse|turso|drizzle|query optimization|stored procedure|'
+        '数据库|索引优化|持久化|存储过程|模式迁移'
+    ),
+    '架构设计与重构': (
+        'architecture|design pattern|refactor|refactoring|adr|ddd|'
+        'domain driven design|codebase modernization|modular design|'
+        '软件架构|系统架构|架构设计|架构决策|架构评审|代码库架构|架构诊断|架构梳理|'
+        '设计模式|领域驱动|代码重构|结构化重构|代码库重构|重构|模块化设计'
+    ),
+    '构建与开发工作流': (
+        'git|git worktree|gitflow|pull request|commit message|conventional commits|'
+        'build system|gradle|maven|bazel|cmake|makefile|turbopack|bundler|'
+        'package manager|dependency management|npm|pnpm|yarn|scaffold|scaffolding|'
+        'monorepo|release workflow|sdk generation|code generation|'
+        '版本控制|分支管理|提交规范|依赖管理|包管理|构建工具|项目脚手架|代码生成'
+    ),
+    'SDK 与平台接入': (
+        'sdk|client library|api client|azure|cloudbase|amplify|stripe|'
+        'twilio|google cloud|api integration|platform integration|'
+        '平台接入|第三方接入|第三方接口|第三方集成|平台集成|客户端库'
+    ),
+    '编程语言与代码实践': (
+        'type system|type safety|typing|generics|concurrency|async await|'
+        'functional programming|idiomatic|code style|linting|'
+        '编程语言|类型安全|类型系统|泛型|并发|惯用|函数式|编码规范|代码风格'
+    ),
+}
+CODE_PATTERNS = {topic: term_pattern(vocabulary) for topic, vocabulary in CODE_TOPICS.items()}
+LANGUAGES = term_pattern(
+    'javascript|typescript|python|rust|golang|swift|kotlin|scala|java|'
+    'clojure|elixir|haskell|ruby|php|c++|c#|f#|lua|zig|cobol|nim|bash|'
+    'modern go|go pro|go expert|prolog|matlab'
+)
+CROSS_DOMAIN_TITLES = term_pattern(
+    'penetration testing|sql injection|endpoint detection|graphql introspection attack|'
+    'agent framework|model architecture|chembl|uniprot|openfda|pubmed|'
+    '渗透测试|漏洞利用|智能体框架|大语言模型架构|生物活性'
+)
+UNSORTED_TOPIC = '待细分'
+
+
+def code_topic(title, goal, summary, path):
+    title, goal, summary, slug = (
+        search_text(value) for value in (title, goal[:1200], summary[:1200], PurePosixPath(path).parent.name)
+    )
+    if CROSS_DOMAIN_TITLES.search(title) or CROSS_DOMAIN_TITLES.search(slug):
+        return UNSORTED_TOPIC
+    scores = {}
+    for topic, pattern in CODE_PATTERNS.items():
+        scores[topic] = (min(term_score(pattern, title), 6) * 5
+                         + min(term_score(pattern, slug), 4) * 3
+                         + min(term_score(pattern, goal), 4) * 2
+                         + min(term_score(pattern, summary), 3))
+    first, second = sorted(scores, key=scores.get, reverse=True)[:2]
+    if scores[first] >= 8 and scores[first] - scores[second] >= 3:
+        return first
+    if scores[first] < 8 and LANGUAGES.search(title):
+        return '编程语言与代码实践'
+    return UNSORTED_TOPIC
+
 
 def classify(source, content, reviewed_label=None):
     if reviewed_label is not None:
@@ -105,7 +193,9 @@ def classify(source, content, reviewed_label=None):
     return first, 'rule'
 
 
-def topic_for(source):
+def topic_for(source, category, title, goals, summary):
+    if category == 'code':
+        return code_topic(title, goals, summary, source['skill_path'])
     if source['repository'].casefold() == 'thomasmoreai/legal-skills-open':
         parts = source['skill_path'].split('/')
         if len(parts) >= 4 and parts[2] == 'skills':

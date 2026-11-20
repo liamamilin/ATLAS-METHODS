@@ -10,7 +10,7 @@ from build import SCHEMA, package_signature
 from export_pages import source_row
 from search import search_text
 import serve
-from taxonomy import classify
+from taxonomy import classify, topic_for
 
 
 class LibraryTests(unittest.TestCase):
@@ -34,6 +34,26 @@ class LibraryTests(unittest.TestCase):
         self.assertEqual(classify(source, {'title': 'Rube MCP Helper'}), ('unfiled', 'unfiled'))
         self.assertEqual(classify(source, {'title': 'SEO and PPTX with automation via Rube MCP'}),
                          ('unfiled', 'unfiled'))
+
+    def test_code_topics_follow_the_primary_work(self):
+        cases = (
+            ('React/Next.js 视图过渡', 'vercel-react-view-transitions', '前端与 Web 界面'),
+            ('React Native / Expo 最佳实践', 'react-native-patterns', '移动与桌面应用'),
+            ('使用 FastAPI 构建异步 Python API', 'fastapi-expert', '后端与 API'),
+            ('PostgreSQL 只读查询', 'postgresql-query', '数据库与持久化'),
+            ('架构决策记录（ADR）的创建与维护', 'architecture-decision-records', '架构设计与重构'),
+            ('使用 Git Worktree 建立隔离工作区', 'using-git-worktrees', '构建与开发工作流'),
+            ('Azure Identity SDK for Python', 'azure-identity-py', 'SDK 与平台接入'),
+            ('TypeScript Advanced Types', 'typescript-advanced-types', '编程语言与代码实践'),
+            ('PubMed 数据库检索', 'pubmed-database', '待细分'),
+            ('通用工具', 'miscellaneous', '待细分'),
+        )
+        for title, slug, expected in cases:
+            with self.subTest(title=title):
+                source = {'repository': 'owner/repo', 'skill_path': f'skills/{slug}/SKILL.md'}
+                self.assertEqual(topic_for(source, 'code', title, '', ''), expected)
+        source = {'repository': 'thomasmoreai/legal-skills-open', 'skill_path': 'de/contracts/skills/example/SKILL.md'}
+        self.assertEqual(topic_for(source, 'legal', '合同示例', '', ''), '合同')
 
     def test_dedup_uses_context_and_actual_coverage(self):
         def sample(base, reference_blob, coverage='full'):
@@ -67,8 +87,12 @@ class LibraryTests(unittest.TestCase):
                     source_id, 'a', source_id, repo, 'SKILL.md', 'commit', 'blob', 'sha', '[]',
                     None, None, 'test',
                 ))
-            result = serve.list_skills(con, {'q': ['合同'], 'category': ['legal'], 'repo': ['owner/copy'], 'page': ['999']})
+            result = serve.list_skills(con, {'q': ['合同'], 'category': ['legal'], 'topic': ['合同'],
+                                             'repo': ['owner/copy'], 'page': ['999']})
             self.assertEqual((result['total'], result['page'], result['items'][0]['id']), (1, 1, 'a'))
+            self.assertEqual(serve.list_skills(con, {'category': ['legal'], 'topic': ['诉讼']})['total'], 0)
+            con.execute("INSERT INTO meta VALUES ('categories', '{}')")
+            self.assertEqual(serve.meta(con)['topics'], [{'category': 'legal', 'topic': '合同', 'count': 1}])
             self.assertEqual(serve.list_skills(con, {'repo': ["missing' OR 1=1"]})['total'], 0)
 
     def test_search_accepts_title_separators_and_full_width_input(self):
