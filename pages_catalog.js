@@ -6,7 +6,7 @@
   const compare = new Intl.Collator('zh-CN', { numeric: true }).compare;
   const encodePath = (path) => path.split('/').map(encodeURIComponent).join('/');
 
-  function fromSnapshot({ meta, entries }) {
+  function fromSnapshot({ meta, entries, overviews = {} }) {
     const categoryNames = new Map(meta.categories.map(({ id, label }) => [id, label]));
     const bySource = new Map();
     const records = entries.map(([title, category, topic, labelFrom, rows], order) => {
@@ -16,11 +16,12 @@
           encodeURIComponent(revision) + '/' + encodePath(path),
       }));
       const first = sources[0];
+      const summary = overviews[first.id]?.summary || '';
       const record = {
-        id: first.id, title, category, topic, label_from: labelFrom,
+        id: first.id, title, category, topic, summary, label_from: labelFrom,
         repo: first.repo, path: first.path, source_count: sources.length, sources, order,
         searchTitle: fold(title),
-        search: fold([title, categoryNames.get(category) || '', topic,
+        search: fold([title, summary, categoryNames.get(category) || '', topic,
           ...sources.flatMap(({ repo, path }) => [repo, path])].join(' ')),
       };
       for (const source of sources) bySource.set(source.id, record);
@@ -38,6 +39,7 @@
         return {
           id: record.id, display_source: id, title: record.title, category: record.category,
           topic: record.topic, label_from: record.label_from, sources: record.sources,
+          overview: overviews[id] || overviews[record.id] || null,
         };
       }
       if (routeName !== '/api/skills') throw new Error('此内容仅在本机资料库可读');
@@ -62,8 +64,8 @@
       const start = (page - 1) * PAGE_SIZE;
       return {
         total: items.length, page, page_size: PAGE_SIZE,
-        items: items.slice(start, start + PAGE_SIZE).map(({ id, title, path, category, topic, repo, source_count }) =>
-          ({ id, title, path, category, topic, repo, source_count })),
+        items: items.slice(start, start + PAGE_SIZE).map(({ id, title, summary, path, category, topic, repo, source_count }) =>
+          ({ id, title, summary, path, category, topic, repo, source_count })),
       };
     }
     return { route };

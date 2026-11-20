@@ -307,11 +307,35 @@ function renderDetail(data) {
   if (!record) {
     const title = element('h2', data.title);
     title.id = 'detail-title';
+    const organized = element('section', null, 'detail-body');
+    const local = element('a', '在本机查看完整整理');
+    local.href = 'http://127.0.0.1:8765/?skill=' + encodeURIComponent(data.display_source);
+    local.target = '_blank';
+    local.rel = 'noopener noreferrer';
+    if (data.overview) {
+      const { summary, when, steps, limits, attribution } = data.overview;
+      organized.append(element('h3', '整理摘要'), element('p', summary, 'summary'));
+      if (when) organized.append(element('h4', '适用条件'), element('p', when));
+      objectList(organized, '实施步骤', steps.map((action) => ({ action })), true);
+      stringList(organized, '规则与限制', limits);
+      const credit = element('p', '基于 ', 'evidence');
+      const author = element('a', attribution.name);
+      author.href = attribution.url;
+      const license = element('a', attribution.license);
+      license.href = attribution.license_url;
+      credit.append(author, ' 的 Skill 整理 · ', license);
+      organized.append(credit);
+    } else {
+      organized.append(element('p', '这条的整理内容可在原电脑的本机资料库查看。', 'detail-banner'));
+    }
+    const actions = element('div', null, 'actions');
+    actions.append(local);
+    organized.append(actions);
     const sources = element('section', null, 'source-list');
     sources.append(element('h3', '固定版本来源 · ' + data.sources.length));
     renderSources(sources, data);
     root.replaceChildren(element('span', data.topic ? category + ' · ' + data.topic : category, 'pill'),
-      title, element('p', labelSource[data.label_from] || '', 'detail-banner'), sources);
+      title, element('p', labelSource[data.label_from] || '', 'detail-banner'), organized, sources);
     return;
   }
   const title = element('h2', record.content.title || record.content.name || record.source.skill_path);
