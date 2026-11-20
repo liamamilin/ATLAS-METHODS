@@ -180,6 +180,42 @@ class LibraryTests(unittest.TestCase):
             result = serve.list_skills(con, {'q': ['准备一场会议并生成会议纪要']})
             self.assertEqual([item['id'] for item in result['items']], ['a', 'b'])
 
+    def test_linked_facets_count_distinct_skills_and_require_tags_on_one_task(self):
+        with sqlite3.connect(':memory:') as con:
+            con.row_factory = sqlite3.Row
+            con.executescript(SCHEMA)
+            for key, title, topic in (('a', '视图实践', '前端'), ('b', '查询优化', '数据库'),
+                                      ('c', '网页组件', '前端')):
+                con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    key, title, '', 'code', 'sample', topic, 'unreviewed', 'today',
+                    'owner/example', '', 1, search_text(title), search_text(title),
+                ))
+            add_tasks(con, 'a', '视图实践', [
+                {'goal': '为 React 加入视图过渡'}, {'goal': '为 React 检查视图过渡'},
+                {'goal': '使用 PostgreSQL 排查慢查询'},
+            ])
+            add_tasks(con, 'b', '查询优化', [{'goal': '使用 PostgreSQL 排查慢查询'}])
+            add_tasks(con, 'c', '网页组件', [{'goal': '为 Vue 加入视图过渡'}])
+            selection = {'category': ['code'], 'topic': ['前端']}
+            facets = serve.list_skills(con, selection)['facets']
+            self.assertEqual(facets['action'], {'transition': 2, 'slowquery': 1})
+            self.assertEqual(facets['tool'], {'react': 1, 'postgresql': 1})
+            filtered = serve.list_skills(con, {**selection, 'action': ['transition'], 'tool': ['react']})
+            self.assertEqual(filtered['total'], 1)
+            self.assertEqual(filtered['facets']['action'], {'transition': 1})
+            self.assertEqual(filtered['facets']['tool'], {'react': 1})
+            self.assertEqual(filtered['facets']['topics'], [{'category': 'code', 'topic': '前端', 'count': 1}])
+            alternatives = serve.list_skills(con, {**selection, 'action': ['transition'], 'tool': ['postgresql']})
+            self.assertEqual(alternatives['total'], 0)
+            self.assertEqual(alternatives['facets']['tool'], {'react': 1})
+            self.assertEqual(alternatives['facets']['action'], {'slowquery': 1})
+            same_action = serve.list_skills(con, {**selection, 'action': ['slowquery']})
+            self.assertEqual({t['topic']: t['count'] for t in same_action['facets']['topics']},
+                             {'数据库': 1, '前端': 1})
+            searched = serve.list_skills(con, {**selection, 'q': ['怎么给 React 加一个过渡动画']})
+            self.assertEqual(searched['total'], 1)
+            self.assertEqual(searched['facets']['action'], {'transition': 1})
+
     def test_raw_requires_bytes_from_the_pinned_entry(self):
         with TemporaryDirectory() as temp, sqlite3.connect(':memory:') as con:
             root = Path(temp)

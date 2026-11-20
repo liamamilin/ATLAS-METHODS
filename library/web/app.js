@@ -57,7 +57,11 @@ function setURL(values, replace = false) {
 
 function setOptions(select, options) {
   while (select.options.length > 1) select.remove(1);
-  for (const [id, label] of options) select.append(new Option(label, id));
+  for (const [id, label, disabled = false] of options) {
+    const option = new Option(label, id);
+    option.disabled = disabled;
+    select.append(option);
+  }
 }
 
 function initLayout() {
@@ -76,6 +80,7 @@ function initLayout() {
     const node = button('', () => navigate({ category: id, topic, page: 1 }));
     node.className = 'nav-button';
     node.dataset.category = id;
+    node.dataset.count = count ?? '';
     if (topic) node.dataset.topic = topic;
     node.append(element('span', label));
     if (Number.isInteger(count)) node.append(element('span', number.format(count), 'nav-count'));
@@ -105,7 +110,6 @@ function initLayout() {
   if (meta.task_search) byId('query').placeholder = '描述你要做的事，或搜索 Skill 名称…';
   for (const kind of ['action', 'tool']) {
     const tags = meta.task_search ? meta.task_tags[kind] : [];
-    setOptions(byId(kind), tags.map(({ id, label }) => [id, label]));
     byId(kind).parentElement.hidden = !tags.length;
     for (const { id, label } of tags) tagNames.set(id, label);
   }
@@ -115,17 +119,8 @@ function updateControls() {
   byId('query').value = filters.q;
   byId('category-select').value = filters.category;
   byId('repo').value = filters.repo;
-  byId('action').value = filters.action;
-  byId('tool').value = filters.tool;
   byId('sort').value = filters.sort;
   byId('grouped').checked = filters.grouped === '1';
-  const topics = meta.topics.filter((t) => filters.category ? t.category === filters.category : filters.topic);
-  const options = new Map(topics.map(({ topic, count }) => [
-    topic, filters.category && Number.isInteger(count) ? topic + '（' + number.format(count) + '）' : topic,
-  ]));
-  setOptions(byId('topic'), options);
-  byId('topic').value = filters.topic;
-  byId('topic').parentElement.hidden = topics.length === 0;
   byId('clear').hidden = !fields.some((key) => !!filters[key]);
   for (const node of document.querySelectorAll('.nav-button')) {
     const inCategory = node.dataset.category === filters.category;
@@ -138,6 +133,53 @@ function updateControls() {
   }
   const category = categories.get(filters.category)?.label || '全部 Skill';
   byId('result-title').textContent = [category, filters.topic].filter(Boolean).join(' / ');
+}
+
+function updateFacetControls(facets) {
+  const topicKey = (category, topic) => category + '\t' + topic;
+  const topicCounts = new Map();
+  const categoryCounts = new Map();
+  let total = 0;
+  for (const { category, topic, count } of facets?.topics || []) {
+    topicCounts.set(topicKey(category, topic), count);
+    categoryCounts.set(category, (categoryCounts.get(category) || 0) + count);
+    total += count;
+  }
+  for (const node of document.querySelectorAll('.nav-button')) {
+    const { category, topic, count: baseline } = node.dataset;
+    const count = facets
+      ? (topic ? topicCounts.get(topicKey(category, topic)) : category ? categoryCounts.get(category) : total) ?? 0
+      : baseline === '' ? null : Number(baseline);
+    const counter = node.querySelector('.nav-count');
+    if (counter && count !== null) counter.textContent = number.format(count);
+    node.disabled = !!facets && !!category && count === 0 && node.getAttribute('aria-pressed') !== 'true';
+  }
+
+  const topics = new Map();
+  for (const { category, topic, count } of meta.topics) {
+    if (filters.category ? category !== filters.category : !filters.topic) continue;
+    const scoped = facets ? topicCounts.get(topicKey(category, topic)) || 0 : count;
+    topics.set(topic, (topics.get(topic) || 0) + scoped);
+  }
+  const topicSelect = byId('topic');
+  setOptions(topicSelect, [...topics].map(([topic, count]) => [
+    topic, Number.isInteger(count) ? topic + '（' + number.format(count) + '）' : topic,
+    !!facets && count === 0 && topic !== filters.topic,
+  ]));
+  topicSelect.value = filters.topic;
+  topicSelect.parentElement.hidden = !topics.size;
+
+  for (const kind of ['action', 'tool']) {
+    const select = byId(kind);
+    const tags = meta.task_search ? meta.task_tags[kind] : [];
+    const choices = tags.flatMap(({ id, label, count }) => {
+      const scoped = facets ? facets[kind][id] || 0 : count;
+      return scoped || filters[kind] === id ? [[id, label + '（' + number.format(scoped) + '）']] : [];
+    });
+    setOptions(select, choices);
+    select.value = filters[kind];
+    select.disabled = !choices.length;
+  }
 }
 
 function navigate(update) {
@@ -185,6 +227,7 @@ function card(item) {
 async function renderPage() {
   filters = stateFromURL();
   updateControls();
+  updateFacetControls();
   syncDetail();
   pending?.abort();
   pending = new AbortController();
@@ -196,6 +239,7 @@ async function renderPage() {
   try {
     const page = await load('/api/skills?' + query.toString(), signal);
     if (signal.aborted) return;
+    updateFacetControls(page.facets);
     results.replaceChildren(...page.items.map(card));
     if (!page.items.length) results.append(note('没有匹配的 Skill。试试更短的关键词，或清除筛选。'));
     byId('result-count').textContent = number.format(page.total) + ' 条';

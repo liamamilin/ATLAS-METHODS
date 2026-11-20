@@ -11,7 +11,7 @@ import sqlite3
 from urllib.parse import parse_qs, quote, urlsplit
 
 from search import search_text
-from task_search import ACTION_TAGS, TASK_HITS, TOOL_TAGS, available, match_query
+from task_search import ACTION_TAGS, ANY_TAG_QUERY, TASK_HITS, TOOL_TAGS, available, match_query
 from taxonomy import CATEGORIES, LABELS, UNSORTED_TOPIC
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,14 +33,75 @@ def value(params, key, limit=160):
     return params.get(key, [''])[0].strip()[:limit]
 
 
+def catalogue_scope(params):
+    conditions, arguments = [], []
+    repo = value(params, 'repo')
+    if repo:
+        conditions.append('EXISTS (SELECT 1 FROM sources r WHERE r.skill = s.id AND r.repo = ?)')
+        arguments.append(repo)
+    if value(params, 'grouped') == '1':
+        conditions.append('s.source_count > 1')
+    return conditions, arguments
+
+
+def linked_facets(con, query, exact, terms, scope, scope_args, *, category, topic, action, tool):
+    """Count each choice with the other filters still in effect."""
+    expression, expand, _ = match_query(query)
+    tagged = bool(action or tool)
+    use_exact = bool(exact) and (not expand or not tagged)
+    literal = f'({exact})' if use_exact else '1'
+    literal_args = terms if use_exact else ()
+    scope_where = 'WHERE ' + ' AND '.join(scope) if scope else ''
+    if tagged:
+        topics = ('SELECT category, topic, COUNT(DISTINCT id) AS count FROM matching '
+                  'WHERE action_ok AND tool_ok GROUP BY category, topic')
+    else:
+        scope_match = 'literal OR id IN (SELECT id FROM matching)' if expand else 'literal'
+        topics = f'SELECT category, topic, COUNT(*) AS count FROM scoped WHERE {scope_match} GROUP BY category, topic'
+    rows = con.execute(f'''
+        WITH scoped AS MATERIALIZED (
+            SELECT s.id, s.category, s.topic, {literal} AS literal FROM skills s {scope_where}
+        ), matching AS MATERIALIZED (
+            SELECT s.id, s.category, s.topic, t.tags,
+                   (? = '' OR EXISTS (SELECT 1 FROM json_each(t.tags, '$.action') WHERE value = ?)) AS action_ok,
+                   (? = '' OR EXISTS (SELECT 1 FROM json_each(t.tags, '$.tool') WHERE value = ?)) AS tool_ok
+            FROM task_terms
+            JOIN catalog_tasks t ON t.id = task_terms.rowid
+            JOIN scoped s ON s.id = t.skill
+            WHERE task_terms MATCH ? {'AND s.literal' if not expand else ''}
+        ), tag_scope AS MATERIALIZED (
+            SELECT * FROM matching WHERE (? = '' OR category = ?) AND (? = '' OR topic = ?)
+        )
+        SELECT 'topic' AS kind, category, topic AS choice, count FROM ({topics})
+        UNION ALL
+        SELECT 'action', '', j.value, COUNT(DISTINCT s.id)
+        FROM tag_scope s, json_each(s.tags, '$.action') j WHERE s.tool_ok GROUP BY j.value
+        UNION ALL
+        SELECT 'tool', '', j.value, COUNT(DISTINCT s.id)
+        FROM tag_scope s, json_each(s.tags, '$.tool') j WHERE s.action_ok GROUP BY j.value
+    ''', (*literal_args, *scope_args, action, action, tool, tool, expression or ANY_TAG_QUERY,
+          category, category, topic, topic))
+    result = {'topics': [], 'action': {}, 'tool': {}}
+    for kind, parent, choice, count in rows:
+        if kind == 'topic':
+            result['topics'].append({'category': parent, 'topic': choice, 'count': count})
+        else:
+            result[kind][choice] = count
+    return result
+
+
 def list_skills(con, params):
     query = search_text(value(params, 'q'))
     terms = query.split()[:8]
-    categories = value(params, 'category', 24)
-    repo = value(params, 'repo')
+    category = value(params, 'category', 24)
     topic = value(params, 'topic')
     action = value(params, 'action', 32)
     tool = value(params, 'tool', 32)
+    category = category if category in LABELS else ''
+    action = action if action in ACTION_TAGS else ''
+    tool = tool if tool in TOOL_TAGS else ''
+    scope, scope_args = catalogue_scope(params)
+    has_facets = bool(query or category or topic or action or tool or scope) and available(con)
     try:
         page = min(100000, max(1, int(value(params, 'page', 10) or 1)))
     except ValueError:
@@ -51,11 +112,11 @@ def list_skills(con, params):
     prelude, hit_args = '', []
     source = 'FROM skills s'
     task_columns, task_join = '', ''
-    if (query or action or tool) and available(con):
+    if has_facets and (query or action or tool):
         expression, expand, focus = match_query(query, action, tool)
         if expression:
             prelude, hit_args = TASK_HITS, [focus, focus, expression]
-            filtered = action in ACTION_TAGS or tool in TOOL_TAGS
+            filtered = bool(action or tool)
             join = 'JOIN' if filtered else 'LEFT JOIN'
             source += f' {join} best b ON b.skill = s.id AND b.choice = 1'
             task_join = ' LEFT JOIN catalog_tasks t ON t.id = b.id'
@@ -64,17 +125,14 @@ def list_skills(con, params):
                 conditions = [] if filtered else [f'(b.id IS NOT NULL OR ({exact}))']
                 if filtered:
                     arguments = []
-    if categories in LABELS:
+    if category:
         conditions.append('s.category = ?')
-        arguments.append(categories)
-    if repo:
-        conditions.append('EXISTS (SELECT 1 FROM sources r WHERE r.skill = s.id AND r.repo = ?)')
-        arguments.append(repo)
+        arguments.append(category)
     if topic:
         conditions.append('s.topic = ?')
         arguments.append(topic)
-    if value(params, 'grouped') == '1':
-        conditions.append('s.source_count > 1')
+    conditions.extend(scope)
+    arguments.extend(scope_args)
     where = 'WHERE ' + ' AND '.join(conditions) if conditions else ''
     sort = value(params, 'sort', 20)
     orders = {'new': 's.generated DESC', 'title': 's.search_title', 'sources': 's.source_count DESC, s.search_title'}
@@ -104,7 +162,12 @@ def list_skills(con, params):
                 item['match'] = {'position': position, 'goal': goal, 'when': when,
                                  'outputs': json.loads(outputs), 'tags': json.loads(tags)}
         items.append(item)
-    return {'items': items, 'total': count, 'page': page, 'page_size': PAGE_SIZE}
+    result = {'items': items, 'total': count, 'page': page, 'page_size': PAGE_SIZE}
+    if has_facets:
+        result['facets'] = linked_facets(
+            con, query, exact, terms, scope, scope_args, category=category, topic=topic, action=action, tool=tool,
+        )
+    return result
 
 
 def meta(con):

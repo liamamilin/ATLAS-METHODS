@@ -62,6 +62,7 @@ TAG_PATTERNS = {
     kind: {key: term_pattern(aliases) for key, (_, aliases) in tags.items()}
     for kind, tags in (('action', ACTION_TAGS), ('tool', TOOL_TAGS))
 }
+ANY_TAG_QUERY = 'tags:(' + ' OR '.join('tag' + key for key in (*ACTION_TAGS, *TOOL_TAGS)) + ')'
 WORDS = re.compile(r'[\u3400-\u9fff]+|[a-z0-9]+')
 STOP_WORDS = set('a an the and of to for by in at from with is be how do i can my need want help me it'.split())
 FILLER = ('我想', '怎么', '一个', '一下', '可能', '需要', '导致', '请帮', '是否', '找出', '如何', '可以', '准备')
