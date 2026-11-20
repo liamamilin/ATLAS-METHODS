@@ -2,7 +2,7 @@
 
 (function expose(root) {
   const PAGE_SIZE = 24;
-  const fold = (text) => text.normalize('NFKC').toLowerCase();
+  const fold = (text) => text.normalize('NFKC').toLowerCase().replace(/[-_/\u2010-\u2015\u2212\s]+/g, ' ').trim();
   const compare = new Intl.Collator('zh-CN', { numeric: true }).compare;
   const encodePath = (path) => path.split('/').map(encodeURIComponent).join('/');
 
