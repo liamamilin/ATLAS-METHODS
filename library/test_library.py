@@ -8,9 +8,19 @@ from unittest.mock import patch
 
 from build import SCHEMA, package_signature
 import serve
+from taxonomy import classify
 
 
 class LibraryTests(unittest.TestCase):
+    def test_title_fallback_keeps_ambiguous_and_preclassified_entries(self):
+        source = {'repository': 'owner/repo', 'skill_path': 'skills/example/SKILL.md'}
+        connector = {'title': 'Asana Automation via Rube MCP'}
+        self.assertEqual(classify(source, connector), ('integration', 'title'))
+        self.assertEqual(classify(source, connector, 'office'), ('office', 'sample'))
+        self.assertEqual(classify(source, {'title': 'Rube MCP Helper'}), ('unfiled', 'unfiled'))
+        self.assertEqual(classify(source, {'title': 'SEO and PPTX with automation via Rube MCP'}),
+                         ('unfiled', 'unfiled'))
+
     def test_dedup_uses_context_and_actual_coverage(self):
         def sample(base, reference_blob, coverage='full'):
             entry, ref = base + '/SKILL.md', base + '/guide.md'

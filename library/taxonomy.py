@@ -15,6 +15,7 @@ CATEGORIES = (
     ('testing', '测试、调试与工程评审', '工程', 'unit test|integration test|e2e|playwright|debug|debugging|debugger|code review|pr review|regression test|test coverage|profiling|qa|tdd|benchmark testing|测试|调试|排错|代码审查|回归|性能分析|性能调优'),
     ('security', '网络安全与取证', '工程', 'cybersecurity|security audit|forensic|forensics|threat hunting|incident response|vulnerability|pentest|soc|hardening|malware|encryption|oauth|oidc|identity access|endpoint security|网络安全|取证|漏洞|安全审计|安全加固|加密|凭据管理|威胁|权限控制'),
     ('data', '数据获取、分析与统计', '工程', 'data analysis|analytics|data engineering|web scraping|scraper|etl|statistical|statistics|dataset|data pipeline|data quality|data visualization|pandas|warehouse|exploratory analysis|数据分析|数据采集|数据可视化|统计分析|数据质量|数据工程|数据清洗|爬取|数据仓库'),
+    ('integration', '工具集成与自动化', '工程', ''),
     ('legal', '法律实务与合规', '专业', 'legal|compliance|litigation|lawyer|law|contract|antitrust|court|regulation|privacy law|recht|rechts|anwalt|bgb|zpo|vertrag|gerichts|rechtsstreit|法律|合同|诉讼|法规|合规|法务|隐私政策|商标|仲裁'),
     ('finance', '财税、会计与投资', '专业', 'accounting|accountant|tax|bookkeeping|investment|valuation|finance|financial|payroll|steuer|bilanz|finanz|buchhaltung|vat|xero|stocks|financial reporting|财税|会计|税务|投资|财务|工资单|对账|发票|银行|增值税'),
     ('research', '科研、教育与科学工作流', '专业', 'research methodology|scientific|academic|literature review|peer review|bioinformatics|genomics|experiment|course|curriculum|quiz|teaching|education|learning outcome|科学|科研|学术|教学|教育|实验|教案|课程|生物信息|文献综述'),
@@ -52,6 +53,19 @@ SPECIALIZED_SOURCES = {
     'mukul975/anthropic-cybersecurity-skills': 'security',
 }
 
+# Apply specific title signals only to records the main rules could not place.
+# Using MCP as a tool does not make an otherwise classified Skill an integration.
+TITLE_HINTS = {
+    'integration': re.compile(r'(?:automation|integration) via rube mcp|(?:自动化|集成).*rube mcp|rube mcp 自动化'),
+    'code': re.compile(r'\bgit (?:worktree|branch|commit|rebase|merge)\b|\bconventional branch\b|\bcommit message\b|\bgit 分支|\bgit\b.*版本控制'),
+    'ai': re.compile(r'\bskill creator\b|\bskill authoring\b|创建(?:与更新)?(?: codex| claude)? skill|编写(?: codex| claude)? skill'),
+    'business': re.compile(r'\bseo\b|\baso\b|\bpricing strateg\w*\b|产品定价|定价策略|冷触达|邮件营销'),
+    'office': re.compile(r'\bgoogle slides\b|\bpptx\b|演示文稿生成|幻灯片生成'),
+    'design': re.compile(r'\bdesign system\b|\bbrand tokens\b|\bfigma\b|\btypography\b|\bcolor palette\b|设计系统|排版规范|视觉规范'),
+    'writing': re.compile(r'\bcopy edit(?:ing)?\b|\bproofreading\b|写作风格|文案改写|文字润色'),
+    'data': re.compile(r'\bdata quality\b|\bdata cleaning\b|数据质量|数据清洗|统计检验'),
+}
+
 LEGAL_TOPICS = {
     'antitrust': '竞争法', 'contracts': '合同', 'corporate': '公司治理',
     'criminal': '刑事', 'data-protection': '数据保护', 'employment': '劳动与雇佣',
@@ -81,7 +95,13 @@ def classify(source, content, reviewed_label=None):
     first, second = ranked[:2]
     if scores[first] < 5 or scores[first] - scores[second] < 2:
         fallback = SPECIALIZED_SOURCES.get(source['repository'].casefold())
-        return (fallback, 'source') if fallback else ('unfiled', 'unfiled')
+        if fallback:
+            return fallback, 'source'
+        hints = [category for category, pattern in TITLE_HINTS.items()
+                 if pattern.search(fold(content.get('title') or content.get('name') or ''))]
+        if len(hints) == 1:
+            return hints[0], 'title'
+        return 'unfiled', 'unfiled'
     return first, 'rule'
 
 
