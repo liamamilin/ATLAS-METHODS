@@ -4,6 +4,7 @@ import re
 import unicodedata
 
 from search import search_text
+from topic_rules import TOPIC_TERMS
 
 
 def fold(text):
@@ -129,7 +130,15 @@ CODE_TOPICS = {
         '编程语言|类型安全|类型系统|泛型|并发|惯用|函数式|编码规范|代码风格'
     ),
 }
-CODE_PATTERNS = {topic: term_pattern(vocabulary) for topic, vocabulary in CODE_TOPICS.items()}
+TOPIC_PATTERNS = {
+    category: {topic: term_pattern(terms) for topic, terms in vocabulary.items()}
+    for category, vocabulary in {**TOPIC_TERMS, 'code': CODE_TOPICS}.items()
+}
+UNFILED_SECTIONS = {
+    section: term_pattern('|'.join(vocabulary for _, _, group, vocabulary in CATEGORIES
+                                   if group == section and vocabulary))
+    for section in ('工程', '专业', '创作与办公')
+}
 LANGUAGES = term_pattern(
     'javascript|typescript|python|rust|golang|swift|kotlin|scala|java|'
     'clojure|elixir|haskell|ruby|php|c++|c#|f#|lua|zig|cobol|nim|bash|'
@@ -143,14 +152,29 @@ CROSS_DOMAIN_TITLES = term_pattern(
 UNSORTED_TOPIC = '待细分'
 
 
-def code_topic(title, goal, summary, path):
+def topic_for(source, category, title, goals, summary):
+    path = source['skill_path']
+    if source['repository'].casefold() == 'thomasmoreai/legal-skills-open':
+        parts = path.split('/')
+        if len(parts) >= 4 and parts[2] == 'skills':
+            if category == 'legal':
+                return LEGAL_TOPICS.get(parts[1], parts[1].replace('-', ' '))
+            if category == 'finance' and parts[1] == 'tax':
+                return LEGAL_TOPICS['tax']
     title, goal, summary, slug = (
-        search_text(value) for value in (title, goal[:1200], summary[:1200], PurePosixPath(path).parent.name)
+        search_text(value) for value in (title, goals[:1200], summary[:1200], PurePosixPath(path).parent.name)
     )
-    if CROSS_DOMAIN_TITLES.search(title) or CROSS_DOMAIN_TITLES.search(slug):
+    if category == 'unfiled':
+        clues = ' '.join((title, slug, goal[:400]))
+        sections = [section for section, pattern in UNFILED_SECTIONS.items() if pattern.search(clues)]
+        if len(sections) == 1:
+            return sections[0] + '方向线索'
+        return '跨领域线索' if sections else '线索不足'
+    if category == 'code' and (CROSS_DOMAIN_TITLES.search(title) or CROSS_DOMAIN_TITLES.search(slug)):
         return UNSORTED_TOPIC
+    patterns = TOPIC_PATTERNS[category]
     scores = {}
-    for topic, pattern in CODE_PATTERNS.items():
+    for topic, pattern in patterns.items():
         scores[topic] = (min(term_score(pattern, title), 6) * 5
                          + min(term_score(pattern, slug), 4) * 3
                          + min(term_score(pattern, goal), 4) * 2
@@ -158,8 +182,12 @@ def code_topic(title, goal, summary, path):
     first, second = sorted(scores, key=scores.get, reverse=True)[:2]
     if scores[first] >= 8 and scores[first] - scores[second] >= 3:
         return first
-    if scores[first] < 8 and LANGUAGES.search(title):
+    if category != 'code' and scores[first] - scores[second] >= 5 and patterns[first].search(title):
+        return first
+    if category == 'code' and scores[first] < 8 and LANGUAGES.search(title):
         return '编程语言与代码实践'
+    if category == 'integration' and 'rube mcp' in title:
+        return '通用 MCP 工具连接'
     return UNSORTED_TOPIC
 
 
@@ -191,13 +219,3 @@ def classify(source, content, reviewed_label=None):
             return hints[0], 'title'
         return 'unfiled', 'unfiled'
     return first, 'rule'
-
-
-def topic_for(source, category, title, goals, summary):
-    if category == 'code':
-        return code_topic(title, goals, summary, source['skill_path'])
-    if source['repository'].casefold() == 'thomasmoreai/legal-skills-open':
-        parts = source['skill_path'].split('/')
-        if len(parts) >= 4 and parts[2] == 'skills':
-            return LEGAL_TOPICS.get(parts[1], parts[1].replace('-', ' '))
-    return ''

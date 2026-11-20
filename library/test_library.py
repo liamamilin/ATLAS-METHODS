@@ -55,6 +55,31 @@ class LibraryTests(unittest.TestCase):
         source = {'repository': 'thomasmoreai/legal-skills-open', 'skill_path': 'de/contracts/skills/example/SKILL.md'}
         self.assertEqual(topic_for(source, 'legal', '合同示例', '', ''), '合同')
 
+    def test_topics_cover_other_domains_and_unfiled_clues(self):
+        cases = (
+            ('ai', 'RAG Implementation', 'rag', '知识检索与记忆'),
+            ('operations', 'Spring Boot 可观测性配置与审查', 'spring-observability', '观测、日志与告警'),
+            ('testing', 'Test-Driven Development', 'tdd', '单元与集成测试'),
+            ('security', '数字取证与事件响应工件整理', 'digital-forensics', '事件响应与数字取证'),
+            ('data', 'ETL/ELT 数据管道的设计与实现', 'data-pipeline-builder', '数据管道与仓库'),
+            ('integration', 'Mailchimp Automation via Rube MCP', 'mailchimp-automation', '营销、CRM 与表单'),
+            ('integration', 'Docupost Automation via Rube MCP', 'docupost-automation', '通用 MCP 工具连接'),
+            ('legal', '合同起草', 'contract-drafting', '合同'),
+            ('finance', 'Monaco business profits tax', 'mc-corporate-income-tax', '企业所得税'),
+            ('research', '文献综述与证据综合', 'literature-review', '文献检索与证据综述'),
+            ('engineering', '机器人系统设计', 'robotics-software-principles', '机器人系统'),
+            ('business', 'SEO 优化', 'seo', 'SEO 与搜索增长'),
+            ('design', '图像生成与编辑', 'image-generation', '图像生成与编辑'),
+            ('office', 'Microsoft Excel 工作簿', 'excel', '表格与结构化办公'),
+            ('writing', 'Blog Rewriter', 'blog-rewrite', '编辑、润色与校对'),
+            ('unfiled', 'Python 与 Excel', 'python-excel', '跨领域线索'),
+            ('unfiled', '使用说明', 'guide', '线索不足'),
+        )
+        for category, title, slug, expected in cases:
+            with self.subTest(category=category, title=title):
+                source = {'repository': 'owner/repo', 'skill_path': f'skills/{slug}/SKILL.md'}
+                self.assertEqual(topic_for(source, category, title, '', ''), expected)
+
     def test_dedup_uses_context_and_actual_coverage(self):
         def sample(base, reference_blob, coverage='full'):
             entry, ref = base + '/SKILL.md', base + '/guide.md'
