@@ -11,8 +11,29 @@ import time
 from urllib.request import Request, urlopen
 
 
-def chrome_path():
-    return shutil.which('google-chrome') or shutil.which('chromium') or shutil.which('chromium-browser')
+PATH_NAMES = ('google-chrome', 'chromium', 'chromium-browser')
+APP_BINARIES = (
+    'Google Chrome.app/Contents/MacOS/Google Chrome',
+    'Chromium.app/Contents/MacOS/Chromium',
+    'Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+)
+
+
+def chrome_path(path_lookup=None, roots=None):
+    """Find Chrome without requiring the macOS app bundle to be on PATH."""
+    lookup = shutil.which if path_lookup is None else path_lookup
+    for name in PATH_NAMES:
+        found = lookup(name)
+        if found:
+            return found
+    if roots is None:
+        roots = (Path('/Applications'), Path.home() / 'Applications')
+    for relative in APP_BINARIES:
+        for root in roots:
+            candidate = Path(root) / relative
+            if candidate.is_file():
+                return str(candidate)
+    return None
 
 
 class ChromePage:
@@ -31,41 +52,73 @@ class ChromePage:
         with socket.socket() as probe:
             probe.bind(('127.0.0.1', 0))
             port = probe.getsockname()[1]
-        proc = subprocess.Popen(
-            [binary, '--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu',
-             f'--remote-debugging-port={port}', f'--user-data-dir={user_data}',
-             '--window-size=1280,900', '--no-first-run', '--no-default-browser-check'],
-            stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True,
+        page = cls(None, port, None)
+        page._command = [
+            binary, '--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu',
+            f'--remote-debugging-port={port}', f'--user-data-dir={user_data}',
+            '--window-size=1280,900', '--no-first-run', '--no-default-browser-check',
+        ]
+        page._launch()
+        return page
+
+    def _launch(self):
+        self.proc = subprocess.Popen(
+            self._command, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True,
         )
         deadline = time.time() + 20
         while time.time() < deadline:
             try:
-                with urlopen(f'http://127.0.0.1:{port}/json/version', timeout=0.5) as response:
+                with urlopen(f'http://127.0.0.1:{self.port}/json/version', timeout=0.5) as response:
                     if response.status == 200:
-                        break
+                        return
             except OSError:
-                if proc.poll() is not None:
-                    raise RuntimeError(proc.stderr.read())
+                if self.proc.poll() is not None:
+                    raise RuntimeError(self.proc.stderr.read())
                 time.sleep(0.1)
-        else:
-            proc.kill()
-            raise RuntimeError('Chrome 调试端口没有起来')
-        return cls(proc, port, None)
+        self.proc.kill()
+        raise RuntimeError('Chrome 调试端口没有起来')
 
     def open(self, url):
+        self._attach(url)
+        self.wait(lambda state: state['busy'] == 'false' and state['updated'] != '正在读取本机目录')
+        return self
+
+    def _attach(self, url):
+        """Reconnect once if DevTools drops while the page target is enabled."""
+        error = None
+        for attempt in range(2):
+            try:
+                if self.proc is None or self.proc.poll() is not None:
+                    self._launch()
+                self._connect(self._target(url)['webSocketDebuggerUrl'])
+                self.call('Page.enable')
+                self.call('Runtime.enable')
+                return
+            except RuntimeError as exc:
+                error = exc
+                self._drop_socket()
+                if attempt or '调试连接' not in str(exc):
+                    raise
+        raise error
+
+    def _target(self, url):
         request = Request(f'http://127.0.0.1:{self.port}/json/new?{quote(url)}', method='PUT')
         try:
             with urlopen(request, timeout=5) as response:
-                target = json.load(response)
+                return json.load(response)
         except OSError:
             request = Request(f'http://127.0.0.1:{self.port}/json/new?{quote(url)}')
             with urlopen(request, timeout=5) as response:
-                target = json.load(response)
-        self._connect(target['webSocketDebuggerUrl'])
-        self.call('Page.enable')
-        self.call('Runtime.enable')
-        self.wait(lambda state: state['busy'] == 'false' and state['updated'] != '正在读取本机目录')
-        return self
+                return json.load(response)
+
+    def _drop_socket(self):
+        if self.sock:
+            try:
+                self.sock.close()
+            except OSError:
+                pass
+        self.sock = None
+        self.pending = b''
 
     def _connect(self, websocket_url):
         path = websocket_url.split(f'127.0.0.1:{self.port}', 1)[1]

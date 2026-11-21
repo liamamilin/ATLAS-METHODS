@@ -21,4 +21,4 @@ cd /Users/milin/Documents/ChatGPT/ATLAS-METHODS
 python3 library/accept_local.py --require-server --page --shots /tmp/atlas-accept
 ```
 
-没有 Chrome 时去掉 `--page`。退出码 0 表示目录文件与正在响应的服务一致；加了 `--page` 时还表示打开了一条真实详情，并能看见审阅状态和固定来源。退出码 1 表示服务未响应，或服务与文件不一致。退出码 2 表示目录文件不存在。截图只写到 `--shots` 给出的目录。
+没有 Chrome 时去掉 `--page`。macOS 上装在「/Applications/Google Chrome.app」的 Chrome 会被找到，不必先放入 PATH。退出码 0 表示目录文件与正在响应的服务一致；加了 `--page` 时还表示打开了一条真实详情，并能看见审阅状态和固定来源。退出码 1 表示服务未响应，或服务与文件不一致。退出码 2 表示目录文件不存在。截图只写到 `--shots` 给出的目录。页面以无界面方式打开。
