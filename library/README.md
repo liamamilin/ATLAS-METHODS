@@ -17,6 +17,8 @@ python3 library/serve.py --port 8765
 
 打开 [本机资料库](http://127.0.0.1:8765)。服务只监听本机地址。完整资料库和原文由本机提供，生成的 SQLite 索引保存在 `data/library/catalog.sqlite3`。
 
+目录重建会替换这份 SQLite。人工目录归类写在 `data/library/classification-overrides.json`，由重建读回，不直接改数据库，也不运行公开导出。预览、写入、核对和回滚命令见 [分类覆盖层操作说明](../docs/classification-overrides.md)。
+
 ## GitHub Pages 公开目录
 
 [公开目录](https://liamamilin.github.io/ATLAS-METHODS/) 可以搜索 Skill 名称、分类和仓库，详情列出 GitHub 固定版本来源。部署源为 `gh-pages` 分支根目录。

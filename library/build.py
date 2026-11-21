@@ -11,6 +11,7 @@ import sqlite3
 import sys
 import tempfile
 
+from classification_overrides import assign_browse_label, catalogue_topics, load_overrides, unused_overrides
 from search import search_text
 from task_search import TASK_SCHEMA, add_tasks, tag_options
 from taxonomy import BY_LABEL, classify, topic_for
@@ -21,6 +22,7 @@ NORMALIZED = ROOT / 'data/normalized'
 RUN = NORMALIZED / 'full-001'
 INDEX = ROOT / 'data/cumulative/skills.jsonl.gz'
 DATABASE = ROOT / 'data/library/catalog.sqlite3'
+OVERRIDES = ROOT / 'data/library/classification-overrides.json'
 sys.path.insert(0, str(ROOT / 'normalization'))
 from batch_convert import key_of, now, repository_manifest, selected_rows, source_of, valid_duplicate
 from duplicate_skills import formatting_probe, markdown_structure
@@ -254,6 +256,8 @@ def build():
         group_rows[rep][2].append((row, target.get('match', 'prior_alias')))
         seen.add(key)
 
+    overrides = load_overrides(OVERRIDES)
+    known_topics = catalogue_topics(DATABASE)
     DATABASE.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=DATABASE.parent, prefix='catalog-', suffix='.tmp', delete=False) as temp:
         pending = Path(temp.name)
@@ -264,11 +268,24 @@ def build():
         label_counts = Counter()
         tag_counts = Counter()
         distinct_repositories = set()
+        applied_ids = set()
+        suspended = []
+        member_ids = set()
         with con:
             for key, (r, group, matches) in group_rows.items():
+                member_ids.add(key)
+                member_ids.update(key_of(member.source) for member in group)
+                member_ids.update(key_of(source_of(row)) for row, _ in matches)
                 topic = topic_for(r.source, r.category, r.title, r.goals, r.summary)
-                category_counts[r.category] += 1
-                label_counts[r.label_from] += 1
+                category, label_from, topic, effect, reason = assign_browse_label(
+                    overrides, r.source, r.title, r.summary, r.tasks, r.category, r.label_from, topic, known_topics,
+                )
+                if effect == 'applied':
+                    applied_ids.add(key)
+                elif reason:
+                    suspended.append({'id': key, 'reason': reason})
+                category_counts[category] += 1
+                label_counts[label_from] += 1
                 member_rows = []
                 for member in group:
                     match = 'same_package' if member.source['entry_sha256'] == r.source['entry_sha256'] else 'same_markdown_structure'
@@ -277,7 +294,7 @@ def build():
                 searches = [r.title, r.search, r.summary, r.goals, topic]
                 searches += [row['repository'] + ' ' + row['skill_path'] for row, _, _ in member_rows]
                 con.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
-                    key, r.title, r.summary, r.category, r.label_from, topic, r.review, r.generated,
+                    key, r.title, r.summary, category, label_from, topic, r.review, r.generated,
                     r.source['repository'], r.path.relative_to(ROOT).as_posix(), len(member_rows),
                     search_text(r.title + ' ' + r.search), search_text(' '.join(searches)),
                 ))
@@ -298,6 +315,15 @@ def build():
                 'prior_aliases': len(seen) - len(records), 'sources': len(seen),
                 'repositories': len(distinct_repositories), 'categories': dict(category_counts),
                 'labels': dict(label_counts), 'excluded': dict(ignored), 'category_check': dict(audit),
+                'classification_overrides': {
+                    'applied': len(applied_ids),
+                    'suspended': sorted(
+                        suspended + unused_overrides(
+                            overrides, applied_ids, {item['id'] for item in suspended}, member_ids,
+                        ),
+                        key=lambda item: (item['id'], item['reason']),
+                    ),
+                },
                 'indexed_tasks': con.execute('SELECT COUNT(*) FROM catalog_tasks').fetchone()[0],
                 'task_tags': tag_options(tag_counts),
             }
