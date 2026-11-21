@@ -488,23 +488,61 @@ def summarize(args, selection, states, invocation):
     return report
 
 
-def retained_content_filter(args, state, row):
-    if state.get('state') != 'deferred' or row is None or not state.get('attempt'):
-        return False
-    path = args.out/state['attempt']
+def _attempt_directories(args, state):
+    found = []
+    recorded = state.get('attempt')
+    if isinstance(recorded, str) and recorded:
+        found.append(args.out / recorded)
+    key = state.get('key')
+    if isinstance(key, str) and key:
+        root = args.out / 'attempts' / key
+        if root.is_dir():
+            found.extend(path for path in sorted(root.iterdir()) if path.is_dir() and path.name.isdigit())
+    unique, seen = [], set()
+    root = args.out.resolve()
+    for path in found:
+        try:
+            resolved = path.resolve()
+        except OSError:
+            continue
+        if resolved in seen or not path.is_dir() or not resolved.is_relative_to(root):
+            continue
+        seen.add(resolved)
+        unique.append(path)
+    return unique
+
+
+def _attempt_content_filter(attempt, source):
     try:
-        metadata = strict_json_loads((path/'metadata.json').read_text())
-        if metadata.get('source') != source_of(row):
+        metadata = strict_json_loads((attempt / 'metadata.json').read_text(encoding='utf-8'))
+        if metadata.get('source') != source:
             return False
         events = []
-        for line in (path/'events.jsonl').read_text().splitlines():
+        for line in (attempt / 'events.jsonl').read_text(encoding='utf-8').splitlines():
             try:
                 events.append(strict_json_loads(line))
             except ValueError:
                 continue
-        return content_filter_signal(events)
     except (OSError, ValueError, UnicodeError):
         return False
+    return content_filter_signal(events)
+
+
+def retained_content_filter(args, state, row):
+    """True when retained, source-matched events record a provider content-filter refusal.
+
+    Deferred misclassifications are corrected on any resume. A failed record is
+    corrected only while retrying, and only when its top-level stage missed the refusal.
+    """
+    if row is None:
+        return False
+    kind = state.get('state')
+    if kind == 'failed' and state.get('failure_stage') == 'content_filter':
+        return False
+    if kind != 'deferred' and not (kind == 'failed' and getattr(args, 'retry_failed', False)):
+        return False
+    source = source_of(row)
+    return any(_attempt_content_filter(attempt, source) for attempt in _attempt_directories(args, state))
 
 
 def valid_duplicate(state, directory, schema):
@@ -576,9 +614,13 @@ def prepare_run(args):
             states.pop(key)
         if retained_content_filter(args, states.get(key, {}), row):
             previous = states[key]
-            states[key] = {**previous, 'state':'failed', 'failure_stage':'content_filter',
-                           'previous_availability_error':previous.get('error'),
-                           'error':CONTENT_FILTER_MESSAGE, 'updated_at':now()}
+            corrected = {**previous, 'state':'failed', 'failure_stage':'content_filter',
+                         'error':CONTENT_FILTER_MESSAGE, 'updated_at':now()}
+            if previous.get('state') == 'deferred':
+                corrected['previous_availability_error'] = previous.get('error')
+            elif previous.get('error') not in (None, CONTENT_FILTER_MESSAGE):
+                corrected['previous_error'] = previous.get('error')
+            states[key] = corrected
         if (states.get(key, {}).get('state') == 'failed' and
                 (not args.retry_failed or states[key].get('failure_stage') == 'content_filter')):
             invocation['skipped_failed'] += 1

@@ -60,6 +60,12 @@ class DuplicateTests(unittest.TestCase):
             args = fixture[0]
             write_json(args.out / 'state.json', {key_of(fixture[2][1]): state})
             self.assertEqual(prepare_run(args)['todo'], [])
+            args.retry_failed = True
+            self.assertEqual(prepare_run(args)['todo'], [])
+            stored = json.loads((args.out / 'state.json').read_text())[key_of(fixture[2][1])]
+            self.assertEqual(stored['state'], 'skipped_duplicate')
+            self.assertNotIn('failure_stage', stored)
+            args.retry_failed = False
             fixture[-1].unlink()
             self.assertEqual(len(prepare_run(args)['todo']), 1)
 
