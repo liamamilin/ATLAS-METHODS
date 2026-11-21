@@ -275,6 +275,85 @@ class RoutingTests(unittest.TestCase):
             'type': 'error', 'error': {**error, 'message': 'Upstream request failed: invalid parameter'},
         }]))
 
+    def test_http_400_finish_reason_is_a_refusal_without_capturing_ordinary_errors(self):
+        nested = {'type': 'error', 'error': {
+            'name': 'APIError',
+            'data': {
+                'message': 'Provider request failed with HTTP 400',
+                'statusCode': 400,
+                'isRetryable': False,
+                'responseBody': '{"choices":[{"finish_reason":"content_filter","message":{"content":""}}]}',
+            },
+        }}
+        literal = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'Provider request failed with HTTP 400 finish_reason=content_filter',
+        }}
+        hyphen = {'type': 'error', 'error': {
+            'statusCode': 400,
+            'responseBody': '{"choices":[{"finish_reason":"content-filter"}]}',
+            'message': 'Provider request failed with HTTP 400',
+        }}
+        split = [
+            {'type': 'step_finish', 'part': {'type': 'step-finish', 'reason': 'content-filter'}},
+            {'type': 'error', 'error': {'data': {
+                'message': 'Provider request failed with HTTP 400', 'statusCode': 400}}},
+        ]
+        for events in ([nested], [literal], [hyphen], split):
+            self.assertTrue(content_filter_signal(events))
+            self.assertIsNone(limit_signal(events))
+        self.assertTrue(content_filter_signal([{'type': 'error', 'error': {'name': 'ContentFilterError'}}]))
+        ordinary = {'type': 'error', 'error': {
+            'name': 'APIError',
+            'data': {
+                'message': 'Provider request failed with HTTP 400: invalid parameter',
+                'statusCode': 400,
+                'responseBody': '{"error":{"message":"invalid parameter","code":"invalid_parameter"}}',
+            },
+        }}
+        echoed = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'Provider request failed with HTTP 400',
+            'responseBody': '{"choices":[{"finish_reason":"stop"}],"messages":[{"content":"finish_reason=content_filter"}]}',
+        }}
+        self.assertFalse(content_filter_signal([ordinary]))
+        self.assertFalse(content_filter_signal([echoed]))
+        self.assertFalse(content_filter_signal([
+            {'type': 'text', 'part': {'text': 'HTTP 400 finish_reason=content_filter'}},
+            {'type': 'error', 'error': {'status': 400, 'message': 'Provider request failed with HTTP 400'}},
+        ]))
+        self.assertFalse(content_filter_signal([
+            {'type': 'step_finish', 'part': {'type': 'step-finish', 'reason': 'content-filter'}},
+        ]))
+        self.assertFalse(content_filter_signal([{'type': 'error', 'error': {
+            'status': 400, 'message': 'HTTP 400 content_filter documentation',
+        }}]))
+        quota_words = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'HTTP 400 too many requests finish_reason=content_filter',
+        }}
+        self.assertTrue(content_filter_signal([quota_words]))
+        self.assertIsNone(limit_signal([quota_words]))
+
+    def test_recorded_content_filter_does_not_switch_go_models(self):
+        event = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'Provider request failed with HTTP 400 finish_reason=content_filter',
+        }}
+        refused = {'text': '', 'transport_error': 'OpenCode request failed; see local events/stderr',
+                   'content_filtered': content_filter_signal([event]), 'connection_reset': True}
+        beam = 'opencode-go/beam-free'
+        with tempfile.TemporaryDirectory() as t:
+            root = Path(t)
+            args, _, _ = fixtures.BatchTests().fixture(root, 1)
+            router = self.router(root, {PRIMARY: [limited()], FREE: [refused], beam: [healthy()]},
+                                 free_backup=beam)
+            report = run_batch(args, router)
+            self.assertEqual((report['succeeded'], report['failed']), (0, 1))
+            self.assertEqual(self.calls, [PRIMARY, FREE])
+            state = next(iter(json.loads((args.out / 'state.json').read_text()).values()))
+            self.assertEqual(state['failure_stage'], 'content_filter')
+
     def test_go_connection_reset_uses_verified_backup_and_probes_first_model_once(self):
         beam = 'opencode-go/beam-free'
         reset = {'transport_error': 'OpenCode timeout', 'timed_out': True, 'connection_reset': True}

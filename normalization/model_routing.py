@@ -18,18 +18,146 @@ class ModelDeferred(Exception):
         self.reply = reply or {}
 
 
-def content_filter_signal(events):
-    """A source-specific provider refusal must not stall or change models."""
-    for event in events:
-        error = event.get('error')
-        if event.get('type') != 'error' or not isinstance(error, dict):
+_FILTER_FINISH = {'content_filter', 'content-filter'}
+_FINISH_KEYS = ('finish_reason', 'finishReason', 'rawFinish', 'raw_finish', 'finish')
+_STATUS_KEYS = ('status', 'statusCode', 'status_code')
+_LITERAL_FINISH = re.compile(
+    r'(?:"finish_reason"|\'finish_reason\'|\bfinish_reason)\s*[:=]\s*["\']?(content_filter|content-filter)\b',
+    re.IGNORECASE)
+_HTTP_400 = re.compile(r'\bHTTP\s*400\b', re.IGNORECASE)
+
+
+def _embedded_json(text):
+    if not isinstance(text, str):
+        return None
+    start = text.find('{')
+    if start < 0:
+        return None
+    try:
+        parsed, _ = json.JSONDecoder().raw_decode(text[start:])
+    except ValueError:
+        return None
+    return parsed if isinstance(parsed, dict) else None
+
+
+def _provider_objects(error):
+    """Error fields and one decoded provider body. Do not walk echoed prompt text."""
+    found, seen = [], set()
+
+    def add(obj):
+        if isinstance(obj, dict) and id(obj) not in seen:
+            seen.add(id(obj))
+            found.append(obj)
+
+    data = error.get('data') if isinstance(error.get('data'), dict) else None
+    add(error)
+    add(data)
+    for source in (error, data):
+        if not isinstance(source, dict):
             continue
-        if (error.get('type') in ('provider.content-filter', 'provider.content_filter') or
-                error.get('code') in ('content_filter', 'content_policy_violation')):
+        for key in ('message', 'responseBody', 'response_body'):
+            parsed = _embedded_json(source.get(key))
+            add(parsed)
+            if not isinstance(parsed, dict):
+                continue
+            nested = parsed.get('error')
+            add(nested if isinstance(nested, dict) else None)
+            choices = parsed.get('choices')
+            if isinstance(choices, list):
+                for choice in choices:
+                    add(choice if isinstance(choice, dict) else None)
+    return found
+
+
+def _explicit_content_filter(error):
+    data = error.get('data') if isinstance(error.get('data'), dict) else {}
+    if (error.get('type') in ('provider.content-filter', 'provider.content_filter') or
+            data.get('type') in ('provider.content-filter', 'provider.content_filter') or
+            error.get('code') in ('content_filter', 'content_policy_violation') or
+            data.get('code') in ('content_filter', 'content_policy_violation') or
+            error.get('name') == 'ContentFilterError'):
+        return True
+    return (error.get('type') == 'provider.invalid-request' and error.get('status') == 400 and
+            str(error.get('message', '')).startswith(
+                'Upstream request failed: [invalid_request_error] Request blocked by content filter:'))
+
+
+def _records_http_400(error):
+    for obj in _provider_objects(error):
+        if any(obj.get(key) == 400 for key in _STATUS_KEYS):
             return True
-        if (error.get('type') == 'provider.invalid-request' and error.get('status') == 400 and
-                str(error.get('message', '')).startswith(
-                    'Upstream request failed: [invalid_request_error] Request blocked by content filter:')):
+    data = error.get('data') if isinstance(error.get('data'), dict) else {}
+    for source in (error, data):
+        message = source.get('message')
+        if isinstance(message, str) and _HTTP_400.search(message):
+            return True
+    return False
+
+
+def _finish_in_tree(value, depth=0):
+    """Match a finish field in decoded objects, never inside prompt strings."""
+    if depth > 8:
+        return False
+    if isinstance(value, dict):
+        if any(value.get(key) in _FILTER_FINISH for key in _FINISH_KEYS):
+            return True
+        return any(_finish_in_tree(item, depth + 1) for item in value.values())
+    if isinstance(value, list):
+        return any(_finish_in_tree(item, depth + 1) for item in value)
+    return False
+
+
+def _records_filter_finish(error):
+    for obj in _provider_objects(error):
+        if _finish_in_tree(obj):
+            return True
+    data = error.get('data') if isinstance(error.get('data'), dict) else {}
+    for source in (error, data):
+        for key in ('message', 'responseBody', 'response_body'):
+            text = source.get(key)
+            if not isinstance(text, str) or not _LITERAL_FINISH.search(text):
+                continue
+            # A decoded body was already checked field-by-field. Do not treat a
+            # finish_reason mentioned inside echoed prompt text as the refusal.
+            if text.find('{') >= 0 and isinstance(_embedded_json(text), dict):
+                continue
+            return True
+    return False
+
+
+def _step_filter_finish(event):
+    part = event.get('part') if isinstance(event.get('part'), dict) else None
+    if event.get('type') not in ('step_finish', 'step-finish') and not (part and part.get('type') == 'step-finish'):
+        return False
+    reason = part.get('reason') if part else None
+    if reason not in _FILTER_FINISH:
+        reason = event.get('reason')
+    return reason in _FILTER_FINISH
+
+
+def content_filter_signal(events):
+    """A source-specific provider refusal must not be resent or moved to another model.
+
+    Explicit provider content-filter errors count on their own. A generic HTTP 400
+    counts only together with a recorded finish reason of content_filter or
+    content-filter, so ordinary request failures stay retryable.
+    """
+    http_400 = False
+    filter_finish = False
+    for event in events:
+        if not isinstance(event, dict):
+            continue
+        error = event.get('error')
+        if event.get('type') == 'error' and isinstance(error, dict):
+            if _explicit_content_filter(error):
+                return True
+            # Finish text on a different event must not combine with an unrelated 400.
+            if _records_http_400(error) and _records_filter_finish(error):
+                return True
+            http_400 = http_400 or _records_http_400(error)
+        elif _step_filter_finish(event):
+            filter_finish = True
+        if http_400 and filter_finish:
             return True
     return False
 

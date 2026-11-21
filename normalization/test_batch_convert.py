@@ -8,8 +8,8 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from batch_convert import OpenCodeClient, key_of, prepare_input, run_batch, write_json
-from model_routing import ModelDeferred
+from batch_convert import CONTENT_FILTER_MESSAGE, OpenCodeClient, key_of, prepare_input, run_batch, write_json
+from model_routing import ModelDeferred, content_filter_signal
 
 
 def blob(data):
@@ -315,6 +315,133 @@ else:
             state=json.loads((args.out/'state.json').read_text())[key_of(items[0])]
             self.assertEqual(state['failure_stage'],'content_filter')
             self.assertEqual(state['previous_availability_error'],'old global availability classification')
+
+    def test_retry_keeps_misclassified_content_filter_and_retries_ordinary_json(self):
+        filter_event = {'type': 'error', 'error': {
+            'name': 'APIError',
+            'data': {
+                'message': 'Provider request failed with HTTP 400',
+                'statusCode': 400,
+                'isRetryable': False,
+                'responseBody': '{"choices":[{"index":0,"finish_reason":"content_filter","message":{"content":""}}]}',
+            },
+        }}
+        transport = 'OpenCode request failed; see local events/stderr'
+
+        class Client(FakeClient):
+            def call(self, prompt, attempt):
+                source = json.loads((attempt / 'metadata.json').read_text())['source']['collection_id']
+                self.calls.append(prompt)
+                if source == 'fixture-1':
+                    (attempt / 'response.txt').write_text('not-json')
+                    return {'text': 'not-json', 'finish': 'stop', 'tool_events': []}
+                if source == 'fixture-2':
+                    (attempt / 'response.txt').write_text('')
+                    return {'text': '', 'transport_error': 'provider refusal', 'content_filtered': True}
+                if source == 'fixture-3':
+                    (attempt / 'events.jsonl').write_text(json.dumps(filter_event) + '\n')
+                    (attempt / 'response.txt').write_text('')
+                    (attempt / 'stderr.txt').write_text('')
+                    return {'text': '', 'transport_error': transport, 'finish': 'stop', 'tool_events': []}
+                return super().call(prompt, attempt)
+
+        with tempfile.TemporaryDirectory() as t:
+            args, rows, items = self.fixture(Path(t), 4)
+            first = run_batch(args, Client())
+            self.assertEqual((first['succeeded'], first['failed']), (1, 3))
+            keys = [key_of(item) for item in items]
+            states = json.loads((args.out / 'state.json').read_text())
+            self.assertEqual(states[keys[3]]['failure_stage'], 'model_or_validation')
+            self.assertEqual(states[keys[3]]['error'], transport)
+            self.assertEqual(states[keys[2]]['failure_stage'], 'content_filter')
+            success = (args.out / 'records' / (keys[0] + '.json')).read_bytes()
+            preserved = {
+                index: {path: path.read_bytes()
+                        for path in (args.out / 'attempts' / keys[index]).rglob('*') if path.is_file()}
+                for index in (2, 3)}
+            misclassified = json.dumps(states[keys[3]], sort_keys=True)
+            explicit = json.dumps(states[keys[2]], sort_keys=True)
+            resumed = FakeClient()
+            second = run_batch(args, resumed)
+            self.assertEqual(resumed.calls, [])
+            self.assertEqual(json.dumps(json.loads((args.out / 'state.json').read_text())[keys[3]], sort_keys=True), misclassified)
+            args.retry_failed = True
+            retried = FakeClient()
+            final = run_batch(args, retried)
+            self.assertEqual(len(retried.calls), 1)
+            self.assertEqual((final['succeeded'], final['failed']), (2, 2))
+            self.assertEqual((args.out / 'records' / (keys[0] + '.json')).read_bytes(), success)
+            after = json.loads((args.out / 'state.json').read_text())
+            self.assertEqual(json.dumps(after[keys[2]], sort_keys=True), explicit)
+            self.assertEqual(after[keys[3]]['failure_stage'], 'content_filter')
+            self.assertEqual(after[keys[3]]['error'], CONTENT_FILTER_MESSAGE)
+            self.assertEqual(after[keys[3]]['previous_error'], transport)
+            self.assertNotIn('previous_availability_error', after[keys[3]])
+            for files in preserved.values():
+                for path, data in files.items():
+                    self.assertEqual(path.read_bytes(), data)
+            self.assertEqual(json.loads((args.out / 'attempts' / keys[1] / '003' / 'metadata.json').read_text())['source']['collection_id'], 'fixture-1')
+            self.assertEqual(len(list((args.out / 'attempts' / keys[0]).iterdir())), 1)
+            self.assertEqual(len(list((args.out / 'attempts' / keys[3]).iterdir())), 2)
+            self.assertEqual(len(list((args.out / 'attempts' / keys[2]).iterdir())), 1)
+            self.assertEqual(len(list((args.out / 'attempts' / keys[1]).iterdir())), 3)
+            again = FakeClient()
+            run_batch(args, again)
+            self.assertEqual(again.calls, [])
+            rerun = json.loads((args.out / 'state.json').read_text())[keys[3]]
+            self.assertEqual(rerun['previous_error'], transport)
+            self.assertEqual(second['invocation']['skipped_failed'], 3)
+
+    def test_recognized_filter_is_not_resent_when_fallback_is_also_set(self):
+        event = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'Provider request failed with HTTP 400 finish_reason=content_filter',
+        }}
+
+        class Client(FakeClient):
+            def call(self, prompt, attempt):
+                self.calls.append(prompt)
+                (attempt / 'events.jsonl').write_text(json.dumps(event) + '\n')
+                (attempt / 'response.txt').write_text('')
+                return {'text': '', 'transport_error': 'OpenCode request failed; see local events/stderr',
+                        'content_filtered': content_filter_signal([json.loads((attempt / 'events.jsonl').read_text())]),
+                        'retry_on_fallback': True, 'connection_reset': True, 'input_error': True}
+
+        with tempfile.TemporaryDirectory() as t:
+            args, rows, items = self.fixture(Path(t), 1)
+            client = Client()
+            result = run_batch(args, client)
+            self.assertEqual((result['succeeded'], result['failed']), (0, 1))
+            self.assertEqual(len(client.calls), 1)
+            self.assertEqual(len(list((args.out / 'attempts' / key_of(items[0])).iterdir())), 1)
+            state = json.loads((args.out / 'state.json').read_text())[key_of(items[0])]
+            self.assertEqual(state['failure_stage'], 'content_filter')
+
+    def test_filter_events_for_another_source_remain_retryable(self):
+        event = {'type': 'error', 'error': {
+            'status': 400,
+            'message': 'Provider request failed with HTTP 400 finish_reason=content_filter',
+        }}
+
+        class Client(FakeClient):
+            def call(self, prompt, attempt):
+                self.calls.append(prompt)
+                (attempt / 'events.jsonl').write_text(json.dumps(event) + '\n')
+                (attempt / 'response.txt').write_text('')
+                return {'text': '', 'transport_error': 'OpenCode request failed; see local events/stderr'}
+
+        with tempfile.TemporaryDirectory() as t:
+            args, rows, items = self.fixture(Path(t), 1)
+            args.max_attempts = 1
+            run_batch(args, Client())
+            attempt = args.out / 'attempts' / key_of(items[0]) / '001'
+            metadata = json.loads((attempt / 'metadata.json').read_text())
+            metadata['source'] = {**metadata['source'], 'repository': 'fixture/someone-else'}
+            write_json(attempt / 'metadata.json', metadata)
+            args.retry_failed = True
+            resumed = FakeClient()
+            run_batch(args, resumed)
+            self.assertEqual(len(resumed.calls), 1)
 
 
 if __name__ == '__main__':

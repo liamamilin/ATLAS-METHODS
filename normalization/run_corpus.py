@@ -28,6 +28,7 @@ from duplicate_skills import SkillDeduplicator
 from dedup_plan import load_plan, planned_state
 from luna_client import LUNA
 from model_routing import limit_signal
+from recover_evidence_paths import evidence_journal_status, load_attempt_response
 
 BASELINE = HERE.parent / 'data/normalized/batch-001'
 
@@ -239,7 +240,10 @@ def snapshot(args):
         state = state_cache[directory].get(key_of({'collection_id': identity[0], 'commit_sha': identity[1]}), {})
         attempt = directory / state['attempt'] if 'attempt' in state else None
         if attempt is not None and json.loads((attempt / 'metadata.json').read_text()).get('state') != 'succeeded':
-            attempt = None
+            # A proved evidence-path journal keeps the original failed attempt
+            # as the response source. The attempt files themselves stay unchanged.
+            if evidence_journal_status(attempt) != 'valid':
+                attempt = None
         if attempt is None:
             # Record creation precedes state.json publication. A live snapshot
             # or a crash between those writes can recover from the accepted
@@ -252,7 +256,7 @@ def snapshot(args):
                     break
         if attempt is None:
             raise ValueError('Saved record has no retained model attempt: ' + str(path))
-        response = strict_json_loads((attempt / 'response.txt').read_text())
+        response = load_attempt_response(attempt)
         if record['content'] != response['content'] or record['extraction']['gaps'] != response['gaps']:
             raise ValueError('Saved content differs from retained model response: ' + str(path))
         identities.add(identity)
