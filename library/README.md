@@ -42,7 +42,7 @@ python3 -m unittest discover -s library -p 'test_frontend_smoke.py'
 python3 library/accept_local.py --require-server --page
 ```
 
-没有 Chrome 时去掉 `--page`，只核对目录文件和接口是否同一份数据。`--shots /临时目录` 可留下页面截图。8765 已有服务时不要再次执行 `library/serve.py`。
+没有 Chrome 时去掉 `--page`，只核对目录文件和接口是否同一份数据。`--page` 会核对首页条目数、搜索「视图过渡」、已归类领域中的一条详情，以及待归类中的一条详情，包括「未人工审阅」和固定来源。`--shots /临时目录` 可留下页面截图。8765 已有服务时不要再次执行 `library/serve.py`。
 
 ## GitHub Pages 公开目录
 
