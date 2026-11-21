@@ -2,6 +2,7 @@
 """Read the saved Atlas library over a loopback-only HTTP interface."""
 import argparse
 from contextlib import closing
+import errno
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
@@ -292,13 +293,25 @@ class Handler(BaseHTTPRequestHandler):
             self.json({'error': '无法核对本机文件'}, 409)
 
 
+def bind(port):
+    try:
+        return ThreadingHTTPServer(('127.0.0.1', port), Handler)
+    except OSError as exc:
+        if exc.errno == errno.EADDRINUSE:
+            raise SystemExit(
+                f'{port} 已有进程在监听。打开 http://127.0.0.1:{port} ，'
+                '或运行 python3 library/accept_local.py 核对它是否仍是当前目录。不要再启动第二个服务。'
+            ) from exc
+        raise
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
     args = parser.parse_args()
     if not DATABASE.is_file():
         parser.error('Run python3 library/build.py to create the local catalogue first')
-    with ThreadingHTTPServer(('127.0.0.1', args.port), Handler) as server:
+    with bind(args.port) as server:
         print(f'Atlas Skill Library: http://127.0.0.1:{server.server_port}', flush=True)
         try:
             server.serve_forever()

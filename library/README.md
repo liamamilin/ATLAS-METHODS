@@ -17,6 +17,33 @@ python3 library/serve.py --port 8765
 
 打开 [本机资料库](http://127.0.0.1:8765)。服务只监听本机地址。完整资料库和原文由本机提供，生成的 SQLite 索引保存在 `data/library/catalog.sqlite3`。
 
+目录重建会替换这份 SQLite。人工目录归类写在 `data/library/classification-overrides.json`，由重建读回，不直接改数据库，也不运行公开导出。预览、写入、核对和回滚命令见 [分类覆盖层操作说明](../docs/classification-overrides.md)。
+
+服务已在本机 8765 端口运行时，下面的请求只读现有目录，不重建、不导入、不改端口：
+
+```bash
+curl -fsS 'http://127.0.0.1:8765/api/meta'
+curl -fsS 'http://127.0.0.1:8765/api/skills?q=视图过渡&category=code'
+curl -fsS 'http://127.0.0.1:8765/api/skills?category=unfiled&topic=专业方向线索'
+curl -fsS 'http://127.0.0.1:8765/api/skill/代表身份'
+```
+
+`/api/meta` 给出目录时间、代表数、领域和专题。`/api/skills` 接受 `q`、`category`、`topic`、`action`、`tool`、`repo`。`/api/skill/代表身份` 给出分类、`label_from`、任务步骤和固定版本来源。页面上的审阅状态来自转换记录，目录归类显示为「目录归类，未审源文」。
+
+合成目录的页面冒烟不读取本机 `catalog.sqlite3`。机器上有 Chrome 时会打开真实页面：
+
+```bash
+python3 -m unittest discover -s library -p 'test_frontend_smoke.py'
+```
+
+验收清单见 [本机资料库验收清单](../docs/local-acceptance.md)。本机目录已经生成、服务已在 8765 端口运行时，用下面的命令做只读验收。它不重建、不导入、不另开端口：
+
+```bash
+python3 library/accept_local.py --require-server --page
+```
+
+没有 Chrome 时去掉 `--page`，只核对目录文件和接口是否同一份数据。`--shots /临时目录` 可留下页面截图。8765 已有服务时不要再次执行 `library/serve.py`。
+
 ## GitHub Pages 公开目录
 
 [公开目录](https://liamamilin.github.io/ATLAS-METHODS/) 可以搜索 Skill 名称、分类和仓库，详情列出 GitHub 固定版本来源。部署源为 `gh-pages` 分支根目录。

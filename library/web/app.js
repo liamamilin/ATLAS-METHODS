@@ -296,7 +296,10 @@ function objectList(body, name, entries, ordered = false) {
   body.append(element('h4', name), list);
 }
 
-const labelSource = { sample: '已有样本分类', rule: '规则初分', source: '按来源专题归类', title: '按标题关键词初分', unfiled: '待归类' };
+const labelSource = {
+  sample: '已有样本分类', rule: '规则初分', source: '按来源专题归类', title: '按标题关键词初分',
+  unfiled: '待归类', catalogue: '目录归类，未审源文',
+};
 const relationship = {
   representative: '代表记录', same_package: '相同材料包',
   planned_equivalent: '去重计划关联', identical_supplied_text: '相同供给材料',
