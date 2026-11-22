@@ -44,6 +44,8 @@ python3 library/accept_local.py --require-server --page
 
 没有 Chrome 时去掉 `--page`，只核对目录文件和接口是否同一份数据。`--page` 会核对首页条目数、搜索「视图过渡」、已归类领域中的一条详情，以及待归类中的一条详情，包括「未人工审阅」和固定来源。`--shots /临时目录` 可留下页面截图。8765 已有服务时不要再次执行 `library/serve.py`。
 
+待归类提案的 10 条试跑和持续运行见 [待归类目录提案](../docs/unfiled-classification-run.md)。它只写提案，不更新本机目录。
+
 ## GitHub Pages 公开目录
 
 [公开目录](https://liamamilin.github.io/ATLAS-METHODS/) 可以搜索 Skill 名称、分类和仓库，详情列出 GitHub 固定版本来源。部署源为 `gh-pages` 分支根目录。
