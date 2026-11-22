@@ -24,13 +24,44 @@ from concurrent.futures import ThreadPoolExecutor
 from classification_overrides import (
     DATABASE, OVERRIDES, catalogue_topics, connect_readonly, load_overrides, static_topics, topic_allowed,
 )
-from taxonomy import LABELS
+from taxonomy import LABELS, TOPIC_PATTERNS
 
 MODEL = 'opencode-go/iceman-contributor-free'
 PROVIDER = 'opencode-go'
 MODEL_ID = 'iceman-contributor-free'
 MAX_IN_FLIGHT = 10
 TRIAL_LIMIT = 10
+MAX_BATCH_CANDIDATES = 100
+MAX_BATCH_REQUESTS = 600
+MAX_BATCH_RUNTIME = 6 * 60 * 60
+SCHEMA_VERSION = 'catalogue-classification-response/v2'
+AGENT = 'atlas-catalogue'
+# OpenCode v2.2 agent permissions: ordered rules, last match wins, unmatched asks.
+# https://opencode.ai/docs/permissions/ and https://opencode.ai/docs/agents/
+# steps=2 avoids the forced summary injected on the final step. Deny is project-local.
+TOOL_DENIES = [
+    {'action': action, 'resource': '*', 'effect': 'deny'}
+    for action in (
+        'read', 'glob', 'grep', 'edit', 'shell', 'webfetch', 'websearch', 'skill',
+        'subagent', 'question', 'external_directory', 'execute', '*',
+    )
+]
+EXAMPLE_PROPOSE = {
+    'decision': 'propose_existing_category',
+    'category': 'operations',
+    'topic': '观测、日志与告警',
+    'evidence': [{'field': 'summary', 'quote': '应用日志里的异常', 'task_index': None}],
+    'reason': '摘要描述日志异常定位，对应既有专题。',
+    'retention_reason': None,
+}
+EXAMPLE_RETAIN = {
+    'decision': 'retain_unfiled',
+    'category': None,
+    'topic': None,
+    'evidence': [],
+    'reason': None,
+    'retention_reason': '摘要和任务没有足够的连续原文来对应既有专题。',
+}
 # Event lines are the JSON objects printed by `opencode run --format json`.
 # Text is events with type "text" and part.text. Errors use type "error".
 # Cost and the actual model come from `opencode session export`, whose assistant
@@ -80,6 +111,30 @@ def response_text(events):
         for event in events
         if isinstance(event, dict) and event.get('type') == 'text' and isinstance(event.get('part'), dict)
     )
+
+
+def tool_event_types(events):
+    found = []
+    for event in events:
+        if isinstance(event, dict) and 'tool' in str(event.get('type', '')).lower():
+            found.append(str(event.get('type')))
+    return found
+
+
+def project_config(disabled_mcp):
+    """Private project config. It does not write the user's global OpenCode config."""
+    return {
+        'mcp': {'servers': {
+            name: {'type': 'local', 'command': ['false'], 'disabled': True} for name in disabled_mcp
+        }},
+        'agents': {AGENT: {
+            'description': 'Classify one catalogue record from the prompt; no tools',
+            'mode': 'primary',
+            'system': '只根据用户消息里的目录摘要和任务返回一个 JSON 对象。不要读取文件，不要搜索，不要使用工具。',
+            'permissions': TOOL_DENIES,
+            'steps': 2,
+        }},
+    }
 
 
 def session_ids(events):
@@ -141,6 +196,8 @@ class OpenCodeFreeClient:
         self.executable = executable
         self.timeout = timeout
         self.sleeper = sleeper
+        self._mcp_lock = threading.Lock()
+        self._mcp_servers = None
 
     def check_price(self):
         result = subprocess.run(
@@ -160,7 +217,31 @@ class OpenCodeFreeClient:
         return {'model': MODEL, 'checked_at': now(), 'cost': entry['cost'], 'status': 'active', 'enabled': True}
 
     def command(self, title, prompt):
-        return [self.executable, 'run', '--standalone', '--model', MODEL, '--format', 'json', '--title', title, prompt]
+        return [self.executable, 'run', '--standalone', '--model', MODEL, '--format', 'json',
+                '--agent', AGENT, '--title', title, prompt]
+
+    def disabled_mcp_servers(self, work, env):
+        # Read names only. Do not copy credentials or the user's global config.
+        with self._mcp_lock:
+            if self._mcp_servers is None:
+                result = subprocess.run(
+                    [self.executable, 'api', 'config.get', '--standalone'],
+                    cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, timeout=30,
+                )
+                if result.returncode:
+                    raise PriceStop('Cannot inspect MCP configuration; no classification request was sent')
+                sources = json.loads(result.stdout.decode('utf-8'))
+                if not isinstance(sources, list):
+                    raise PriceStop('Unexpected OpenCode config.get format; no classification request was sent')
+                names = set()
+                for source in sources:
+                    info = source.get('info') if isinstance(source, dict) else None
+                    mcp = info.get('mcp') if isinstance(info, dict) else None
+                    servers = mcp.get('servers') if isinstance(mcp, dict) else None
+                    if isinstance(servers, dict):
+                        names.update(servers)
+                self._mcp_servers = sorted(names)
+            return self._mcp_servers
 
     def request(self, prompt, title, attempt):
         started = time.monotonic()
@@ -169,6 +250,10 @@ class OpenCodeFreeClient:
             work = Path(temp)
             env = os.environ.copy()
             env['PWD'] = str(work)
+            disabled = self.disabled_mcp_servers(work, env)
+            (work / 'opencode.json').write_text(
+                json.dumps(project_config(disabled), ensure_ascii=False, indent=2) + '\n', encoding='utf-8',
+            )
             proc = subprocess.Popen(
                 command, cwd=work, env=env, stdin=subprocess.DEVNULL,
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True,
@@ -200,6 +285,7 @@ class OpenCodeFreeClient:
                 'exit_code': proc.returncode, 'timed_out': timed_out, 'duration_seconds': duration,
                 'session_id': sessions[0] if len(sessions) == 1 else None,
                 'rate_limit_seconds': rate_limit(events), 'quota_exhausted': quota_exhausted(events),
+                'tool_events': tool_event_types(events),
                 'command': command[:-1] + ['<prompt>'],
             }
 
@@ -251,41 +337,60 @@ def parse_decision(text):
 
 
 def evidence_error(decision, skill):
-    if decision.get('decision') == 'retain_unfiled':
-        if not isinstance(decision.get('retention_reason'), str) or not decision['retention_reason'].strip():
-            return 'retain_unfiled requires retention_reason'
-        return None
-    if decision.get('decision') != 'propose_existing_category':
-        return 'decision must be propose_existing_category or retain_unfiled'
-    category, topic = decision.get('category'), decision.get('topic')
-    if not isinstance(category, str) or category not in skill['vocabulary'] or '/' in category:
-        return f'category must be an existing category id, not {category!r}'
-    if topic not in skill['vocabulary'][category]:
-        return f'topic must be an existing topic name for {category}, not {topic!r}'
+    """Validate against the same object the prompt shows. Name the broken field."""
+    if not isinstance(decision, dict):
+        return '输出必须是 JSON 对象。decision 只能是 propose_existing_category 或 retain_unfiled。'
+    name = decision.get('decision')
+    if name not in ('propose_existing_category', 'retain_unfiled'):
+        return f'decision 必须是 propose_existing_category 或 retain_unfiled，收到 {name!r}。'
     evidence = decision.get('evidence')
-    if not isinstance(evidence, list) or not evidence:
-        return 'propose requires evidence quotes from the supplied summary or tasks'
+    if not isinstance(evidence, list):
+        kind = 'object' if isinstance(evidence, dict) else type(evidence).__name__
+        return (
+            f'evidence 必须是数组，收到的是 {kind}。'
+            '每个元素都要有 field、quote、task_index。'
+            'field 只能是 summary 或 task。summary 的 task_index 为 null；'
+            'task 的 task_index 是 tasks 数组下标。'
+            '不能把 evidence 写成单个对象。'
+        )
+    if name == 'propose_existing_category' and not evidence:
+        return 'propose_existing_category 的 evidence 必须是至少包含一项的数组。'
     for item in evidence:
         if not isinstance(item, dict):
-            return 'evidence entries must be objects'
+            return 'evidence 数组里的每一项都必须是对象，包含 field、quote、task_index。'
         quote = item.get('quote')
         field = item.get('field')
         if field not in ('summary', 'task'):
-            return 'evidence field must be summary or task; title alone is not accepted'
+            return 'evidence.field 只能是 summary 或 task；title 不能作为 field。'
         if not isinstance(quote, str) or len(quote.strip()) < 8:
-            return 'evidence quote is missing or too short'
+            return 'evidence.quote 必须是所给字段里的连续原文，且至少 8 个字符。'
         if field == 'summary':
+            if item.get('task_index') not in (None,):
+                return 'field 为 summary 时 task_index 必须是 null。'
             source = skill['summary']
-        elif field == 'task':
+        else:
+            if not isinstance(item.get('task_index'), int):
+                return 'field 为 task 时 task_index 必须是整数下标。'
             try:
-                task = skill['tasks'][item.get('task_index')]
+                task = skill['tasks'][item['task_index']]
             except (IndexError, KeyError, TypeError):
-                return 'evidence task_index is outside the supplied tasks'
+                return 'evidence.task_index 超出了本次提供的 tasks。'
             source = f"{task.get('goal') or ''}\n{task.get('applicability') or ''}"
         if quote not in source:
-            return 'evidence quote is not a substring of the supplied field'
+            return 'evidence.quote 不是所给 summary 或 task 字段里的连续原文。'
+    if name == 'retain_unfiled':
+        if decision.get('category') is not None or decision.get('topic') is not None:
+            return 'retain_unfiled 的 category 和 topic 必须是 null。'
+        if not isinstance(decision.get('retention_reason'), str) or not decision['retention_reason'].strip():
+            return 'retain_unfiled 必须提供非空 retention_reason。'
+        return None
+    category, topic = decision.get('category'), decision.get('topic')
+    if not isinstance(category, str) or category not in skill['vocabulary'] or '/' in category:
+        return f'category 必须是 allowed 里的领域 id，不能写成“领域/专题”，收到 {category!r}。'
+    if topic not in skill['vocabulary'][category]:
+        return f'topic 必须与 {category} 的既有专题名逐字相同，收到 {topic!r}。'
     if not isinstance(decision.get('reason'), str) or not decision['reason'].strip():
-        return 'propose requires reason'
+        return 'propose_existing_category 必须提供非空 reason。'
     return None
 
 
@@ -296,17 +401,23 @@ def prompt_for(skill, feedback=''):
         'summary': skill['summary'], 'tasks': skill['tasks'],
         'current': skill['original_classification'],
         'allowed': listed,
+        'response_schema': SCHEMA_VERSION,
     }
     rules = (
-        '为这条待归类目录材料选择一个既有领域 id 和该领域下的既有专题名。'
-        'category 只能是 allowed 的键，不能写成“领域/专题”。topic 必须与 allowed 里的字符串完全相同。'
-        'evidence.quote 必须是 summary 或某个 task 的 goal/applicability 里的连续原文，不能只依据 title。'
-        '材料不足以区分时 decision 用 retain_unfiled，并写 retention_reason，不要发明专题。'
-        '只返回一个 JSON 对象，字段为 decision, category, topic, evidence, reason, retention_reason。'
-        '这是目录归类提案，不是源文审阅，不要把 review 改成已审。'
+        f'响应契约 {SCHEMA_VERSION}。只返回一个 JSON 对象，不要 markdown，不要调用工具。'
+        'decision 只能是 propose_existing_category 或 retain_unfiled。'
+        'propose_existing_category：category 是 allowed 的领域 id，topic 与 allowed 中的专题名逐字相同（空格也要相同），'
+        'evidence 是至少一项的数组，reason 为非空字符串，retention_reason 为 null。'
+        'retain_unfiled：category 和 topic 为 null，evidence 是数组且可以为空，reason 为 null，retention_reason 为非空字符串。'
+        'evidence 的每个元素必须含 field、quote、task_index。field 只能是 summary 或 task。'
+        'summary 的 task_index 为 null；task 的 task_index 是 tasks 的整数下标。'
+        'quote 必须是该字段中的连续原文。title 不能作为 field，也不能只依据 title 归类。'
+        '正例只说明结构，不要照抄其中的领域，除非当前摘要或任务确实包含对应原文且专题逐字匹配。\n'
+        '正例：' + json.dumps(EXAMPLE_PROPOSE, ensure_ascii=False) + '\n'
+        '保留例：' + json.dumps(EXAMPLE_RETAIN, ensure_ascii=False)
     )
     if feedback:
-        rules += '\n上一次输出未通过检查：' + feedback
+        rules += '\n上一次输出未通过同一契约。结构性错误如下，请按正例整份重写，不要只改其中一个字段：\n' + feedback
     return rules + '\n' + json.dumps(payload, ensure_ascii=False)
 
 
@@ -366,7 +477,12 @@ def load_excluded(paths, overrides):
         data = json.loads(Path(path).read_text(encoding='utf-8'))
         records = data.get('records') if isinstance(data, dict) else data
         if isinstance(records, list):
-            excluded.update(item.get('id') for item in records if isinstance(item, dict) and item.get('id'))
+            for item in records:
+                if not isinstance(item, dict) or not item.get('id'):
+                    continue
+                if item.get('decision') == 'retain_unfiled':
+                    continue
+                excluded.add(item['id'])
         elif isinstance(records, dict):
             excluded.update(records)
     return {item for item in excluded if isinstance(item, str)}
@@ -386,7 +502,9 @@ def proposal_from(skill, decision):
         'proposed_topic': decision.get('topic') if decision['decision'] != 'retain_unfiled' else None,
         'evidence': decision.get('evidence') or [],
         'reason': decision.get('reason'), 'retention_reason': decision.get('retention_reason'),
-        'quality_flags': [], 'source_record_sha256': skill['fingerprint'],
+        'quality_flags': ['provisional_not_final'] if decision['decision'] == 'retain_unfiled' else [],
+        'source_record_sha256': skill['fingerprint'],
+        'response_schema': SCHEMA_VERSION,
         'review_scope': 'catalog_content_only', 'not_original_source_review': True,
         'proposal_status': 'internal_proposal_not_applied',
     }
@@ -394,7 +512,8 @@ def proposal_from(skill, decision):
 
 
 class Runner:
-    def __init__(self, client, out, database, overrides, exclude, after, mode, workers=MAX_IN_FLIGHT):
+    def __init__(self, client, out, database, overrides, exclude, after, mode, workers=MAX_IN_FLIGHT,
+                 max_candidates=None, max_requests=None, max_runtime_seconds=None, clock=None):
         self.client = client
         self.out = Path(out)
         self.database = database
@@ -403,12 +522,35 @@ class Runner:
         self.after = after
         self.mode = mode
         self.workers = min(MAX_IN_FLIGHT, max(1, workers))
+        self.clock = clock or time.monotonic
+        if mode == 'trial':
+            self.max_candidates = TRIAL_LIMIT
+            self.max_requests = 40 if max_requests is None else max_requests
+            self.max_runtime = 900 if max_runtime_seconds is None else max_runtime_seconds
+        else:
+            self.max_candidates = max_candidates
+            self.max_requests = max_requests
+            self.max_runtime = max_runtime_seconds
+        self._check_budgets()
         self.stop = threading.Event()
         self.stop_reason = None
         self.lock = threading.Lock()
         self.inflight = 0
         self.max_inflight = 0
         self.calls = 0
+        self.started = None
+        self.state = None
+        self.candidate_budget_reached = False
+
+    def _check_budgets(self):
+        if self.mode == 'continuous' and None in (self.max_candidates, self.max_requests, self.max_runtime):
+            raise SystemExit('continuous 必须同时给出 --max-candidates、--max-requests 和 --max-runtime-seconds')
+        if not isinstance(self.max_candidates, int) or not 1 <= self.max_candidates <= MAX_BATCH_CANDIDATES:
+            raise SystemExit(f'每批候选必须是 1 到 {MAX_BATCH_CANDIDATES} 的整数')
+        if not isinstance(self.max_requests, int) or not 1 <= self.max_requests <= MAX_BATCH_REQUESTS:
+            raise SystemExit(f'每批请求必须是 1 到 {MAX_BATCH_REQUESTS} 的整数')
+        if not isinstance(self.max_runtime, (int, float)) or not 0 < self.max_runtime <= MAX_BATCH_RUNTIME:
+            raise SystemExit(f'每批运行秒数必须大于 0 且不超过 {MAX_BATCH_RUNTIME}')
 
     def state_path(self):
         return self.out / 'state.json'
@@ -416,8 +558,14 @@ class Runner:
     def load_state(self):
         path = self.state_path()
         if not path.exists():
-            return {'model': MODEL, 'after': self.after, 'completed': {}, 'stopped': None}
+            return {'schema_version': SCHEMA_VERSION, 'model': MODEL, 'after': self.after,
+                    'completed': {}, 'stopped': None, 'calls': 0}
         state = json.loads(path.read_text(encoding='utf-8'))
+        if state.get('schema_version') != SCHEMA_VERSION:
+            raise SystemExit(
+                '这个目录不是响应契约 '
+                f'{SCHEMA_VERSION}。不会把其中的旧失败改成成功，也不会改写原始 attempts。请换一个新的 --out。'
+            )
         if state.get('model') != MODEL:
             raise ValueError('run state belongs to a different model')
         return state
@@ -442,8 +590,6 @@ class Runner:
             attempt.mkdir(parents=True, exist_ok=True)
             prompt = prompt_for(skill, feedback)
             reply = self._request(prompt, f"ATLAS catalogue classification {skill['id']}", attempt)
-            with self.lock:
-                self.calls += 1
             last = reply
             if reply.get('stop'):
                 self.stop.set()
@@ -453,6 +599,11 @@ class Runner:
                 return {'status': 'retry', 'reason': reply['retry'], 'calls': attempt_no + 1}
             try:
                 assert_free_turn(reply['usage'])
+                tools = reply.get('tool_events') or []
+                if tools:
+                    message = 'tool events are not accepted: ' + ', '.join(tools)
+                    (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
+                    return {'status': 'error', 'error': message, 'calls': attempt_no + 1, 'tool_events': tools}
                 decision = parse_decision(reply['text'])
                 error = evidence_error(decision, skill)
                 if error:
@@ -468,10 +619,30 @@ class Runner:
                 (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
         return {'status': 'error', 'error': feedback, 'calls': 2, 'text': None if last is None else last.get('text')}
 
+    def reserve_request(self):
+        with self.lock:
+            if self.started is not None and self.clock() - self.started >= self.max_runtime:
+                self.stop.set()
+                self.stop_reason = 'runtime budget reached'
+                return False
+            calls = self.state.get('calls', 0) if self.state else self.calls
+            if calls >= self.max_requests:
+                self.stop.set()
+                self.stop_reason = 'request budget reached'
+                return False
+            calls += 1
+            self.calls = calls
+            if self.state is not None:
+                self.state['calls'] = calls
+                self.save_state(self.state)
+            return True
+
     def _request(self, prompt, title, attempt):
         delays = []
         for _ in range(3):
             if self.stop.is_set():
+                return {'stop': self.stop_reason}
+            if not self.reserve_request():
                 return {'stop': self.stop_reason}
             reply = self.client.request(prompt, title, attempt)
             if reply.get('quota_exhausted'):
@@ -500,6 +671,9 @@ class Runner:
             lock_file.close()
 
     def _run_locked(self):
+        if self.state_path().exists():
+            self.load_state()
+        self.started = self.clock()
         try:
             price = self.client.check_price()
         except (PriceStop, OSError, json.JSONDecodeError, subprocess.SubprocessError) as exc:
@@ -508,12 +682,29 @@ class Runner:
             return receipt
         (self.out / 'price.json').write_text(json.dumps(price, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         state = self.load_state()
+        self.state = state
+        self.calls = state.get('calls', 0)
+        if self.calls >= self.max_requests:
+            self.stop.set()
+            self.stop_reason = 'request budget reached'
+        elif self.clock() - self.started >= self.max_runtime:
+            self.stop.set()
+            self.stop_reason = 'runtime budget reached'
         vocabulary = allowed_vocabulary(self.database)
         excluded = load_excluded(self.exclude, self.overrides)
+        counted = sum(item.get('status') in ('proposed', 'retained', 'error', 'stopped')
+                      for item in state['completed'].values())
+        room = self.max_candidates - counted
         connection = connect_readonly(self.database)
         try:
             pending = []
             for skill_id in select_ids(connection, self.after, excluded, None):
+                if self.stop.is_set():
+                    break
+                if room <= 0:
+                    self.candidate_budget_reached = True
+                    self.stop_reason = self.stop_reason or 'candidate budget reached'
+                    break
                 skill = load_skill(connection, skill_id, vocabulary)
                 if skill is None:
                     continue
@@ -523,12 +714,11 @@ class Runner:
                 if previous and previous.get('fingerprint') != skill['fingerprint']:
                     state['completed'][skill_id] = {**previous, 'status': 'fingerprint_conflict'}
                     continue
+                room -= 1
                 if not (skill['summary'].strip() or any((task.get('goal') or '').strip() for task in skill['tasks'])):
                     self._record(state, skill, self.classify_one(skill))
                     continue
                 pending.append(skill)
-                if self.mode == 'trial' and len(pending) >= TRIAL_LIMIT:
-                    break
         finally:
             connection.close()
         self._work(pending, state)
@@ -536,6 +726,7 @@ class Runner:
         document = {
             'metadata': {
                 'schema': 'atlas-material-classification-proposals/v1',
+                'response_schema': SCHEMA_VERSION,
                 'created_at': now(), 'model': MODEL, 'mode': self.mode,
                 'not_applied': True, 'production_review_unchanged': 'unreviewed',
             },
@@ -549,7 +740,10 @@ class Runner:
             'retained': sum(item.get('status') == 'retained' for item in state['completed'].values()),
             'errors': sum(item.get('status') == 'error' for item in state['completed'].values()),
             'conflicts': sum(item.get('status') == 'fingerprint_conflict' for item in state['completed'].values()),
-            'writes_catalogue': False,
+            'writes_catalogue': False, 'response_schema': SCHEMA_VERSION,
+            'max_candidates': self.max_candidates, 'max_requests': self.max_requests,
+            'max_runtime_seconds': self.max_runtime,
+            'candidate_budget_reached': self.candidate_budget_reached,
         }
         (self.out / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         self.save_state(state)
@@ -596,21 +790,67 @@ class Runner:
             self.save_state(state)
 
 
+def review_retains(path, out):
+    """Report whether provisional retains mention existing topic terms. Not a new label."""
+    data = json.loads(Path(path).read_text(encoding='utf-8'))
+    records = data.get('records') if isinstance(data, dict) else data
+    if not isinstance(records, list):
+        raise SystemExit('retain review 需要提案 records 数组')
+    reviewed = []
+    for record in records:
+        if not isinstance(record, dict) or record.get('decision') != 'retain_unfiled':
+            continue
+        pieces = [record.get('summary') or '']
+        for task in record.get('tasks') or []:
+            if isinstance(task, dict):
+                pieces.append(task.get('goal') or '')
+                pieces.append(task.get('applicability') or '')
+        text = '\n'.join(pieces)
+        hits = []
+        for category, patterns in TOPIC_PATTERNS.items():
+            for topic, pattern in patterns.items():
+                if pattern.search(text):
+                    hits.append({'category': category, 'topic': topic})
+        reviewed.append({
+            'id': record.get('id'), 'permanent_exclude': False, 'final_review': False,
+            'title_used': False, 'taxonomy_hits_in_summary_or_tasks': hits,
+            'note': '暂保留不是终审，也不加入永久排除。命中只说明摘要或任务里出现了既有专题用词，不是新的归类决定。',
+        })
+    destination = Path(out)
+    destination.mkdir(parents=True, exist_ok=True)
+    report = {'response_schema': SCHEMA_VERSION, 'records': reviewed, 'writes_catalogue': False}
+    (destination / 'retain-review.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    return report
+
+
 def run(argv=None):
     parser = argparse.ArgumentParser(description='用零价 OpenCode Go 模型为待归类条目生成目录分类提案。不写生产目录。')
     parser.add_argument('--database', type=Path, default=DATABASE)
     parser.add_argument('--overrides', type=Path, default=OVERRIDES)
     parser.add_argument('--exclude', action='append', default=[], type=Path)
-    parser.add_argument('--after', required=True, help='只处理 id 严格大于这个游标的待归类条目')
-    parser.add_argument('--mode', choices=('trial', 'continuous'), required=True)
+    parser.add_argument('--after', help='只处理 id 严格大于这个游标的待归类条目')
+    parser.add_argument('--mode', choices=('trial', 'continuous'))
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--opencode', default=shutil.which('opencode') or 'opencode')
     parser.add_argument('--workers', type=int, default=MAX_IN_FLIGHT)
+    parser.add_argument('--max-candidates', type=int)
+    parser.add_argument('--max-requests', type=int)
+    parser.add_argument('--max-runtime-seconds', type=float)
+    parser.add_argument('--review-retains', type=Path)
     args = parser.parse_args(argv)
+    if args.review_retains:
+        report = review_retains(args.review_retains, args.out)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+    if not args.mode or args.after is None:
+        raise SystemExit('分类运行需要 --mode 和 --after')
     if args.workers > MAX_IN_FLIGHT:
         args.workers = MAX_IN_FLIGHT
     client = OpenCodeFreeClient(args.opencode)
-    runner = Runner(client, args.out, args.database, args.overrides, args.exclude, args.after, args.mode, args.workers)
+    runner = Runner(
+        client, args.out, args.database, args.overrides, args.exclude, args.after, args.mode, args.workers,
+        args.max_candidates, args.max_requests, args.max_runtime_seconds,
+    )
     report = runner.run()
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 2 if report.get('stopped') else 0
