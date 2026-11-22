@@ -247,7 +247,9 @@ class OpenCodeFreeClient:
         started = time.monotonic()
         command = self.command(title, prompt)
         with tempfile.TemporaryDirectory(prefix='atlas-catalogue-') as temp:
-            work = Path(temp)
+            # macOS getcwd follows /var -> /private/var. PWD must be that same path,
+            # or OpenCode reads a different project and the temp config is missed.
+            work = Path(temp).resolve()
             env = os.environ.copy()
             env['PWD'] = str(work)
             disabled = self.disabled_mcp_servers(work, env)

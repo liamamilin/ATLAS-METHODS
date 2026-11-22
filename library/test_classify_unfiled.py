@@ -2,6 +2,7 @@ import hashlib
 import json
 from pathlib import Path
 import sqlite3
+import tempfile
 import threading
 import time
 from tempfile import TemporaryDirectory
@@ -344,7 +345,22 @@ print(json.dumps({'type': 'text', 'sessionID': 's', 'part': {'text': '{}'}}) )
             executable.chmod(0o755)
             attempt = root / 'attempt'
             attempt.mkdir()
-            reply = classify_unfiled.OpenCodeFreeClient(str(executable), timeout=10).request('prompt', 'title', attempt)
+            # /var on macOS is a symlink. Put the client temp dir behind one so
+            # PWD and getcwd must be the same physical path or the fake CLI stops
+            # before it can emit the tool event.
+            physical = root / 'physical-tmp'
+            physical.mkdir()
+            logical = root / 'logical-tmp'
+            logical.symlink_to(physical, target_is_directory=True)
+            previous_tempdir = tempfile.tempdir
+            tempfile.tempdir = str(logical)
+            try:
+                reply = classify_unfiled.OpenCodeFreeClient(str(executable), timeout=10).request('prompt', 'title', attempt)
+            finally:
+                tempfile.tempdir = previous_tempdir
+            stderr = (attempt / 'stderr.txt').read_text(encoding='utf-8')
+            self.assertEqual(reply['exit_code'], 0, stderr)
+            self.assertEqual(stderr, '')
             self.assertEqual(reply['tool_events'], ['tool'])
             self.assertIn('--agent', reply['command'])
             self.assertIn(AGENT, reply['command'])
