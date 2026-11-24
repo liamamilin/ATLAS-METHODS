@@ -34,6 +34,7 @@ TRIAL_LIMIT = 10
 MAX_BATCH_CANDIDATES = 100
 MAX_BATCH_REQUESTS = 600
 MAX_BATCH_RUNTIME = 6 * 60 * 60
+EXPORT_READS = 3
 SCHEMA_VERSION = 'catalogue-classification-response/v2'
 AGENT = 'atlas-catalogue'
 # OpenCode v2.2 agent permissions: ordered rules, last match wins, unmatched asks.
@@ -191,6 +192,12 @@ class PriceStop(RuntimeError):
     pass
 
 
+class CostUnknown(RuntimeError):
+    def __init__(self, status):
+        super().__init__(status)
+        self.status = status
+
+
 class OpenCodeFreeClient:
     def __init__(self, executable, timeout=180, sleeper=time.sleep):
         self.executable = executable
@@ -271,57 +278,222 @@ class OpenCodeFreeClient:
             (attempt / 'stderr.txt').write_bytes(stderr)
             (attempt / 'request.txt').write_text(prompt, encoding='utf-8')
             events = parse_events(stdout)
+            text = response_text(events)
+            (attempt / 'response.txt').write_text(text, encoding='utf-8')
             sessions = session_ids(events)
-            usage = {'available': False}
-            if len(sessions) == 1 and not timed_out and proc.returncode == 0:
-                exported = subprocess.run(
-                    [self.executable, 'session', 'export', '--standalone', sessions[0]],
-                    cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, timeout=60,
-                )
-                (attempt / 'session-export.json').write_bytes(exported.stdout)
-                if exported.returncode == 0:
-                    usage = export_usage(exported.stdout)
+            session_id = sessions[0] if len(sessions) == 1 else None
+            if len(sessions) > 1:
+                usage = {'available': False, 'cost_status': 'session_ambiguous', 'turns': [], 'exports': 0}
+            elif session_id:
+                usage = self.read_exports(work, env, session_id, attempt)
+            else:
+                usage = {'available': False, 'cost_status': 'no_session', 'turns': [], 'exports': 0}
+            usage['transport'] = transport_signal(events)
+            usage['invalid_output'] = invalid_output_signal(events)
             duration = round(time.monotonic() - started, 3)
             return {
-                'text': response_text(events), 'events': events, 'usage': usage,
+                'text': text, 'events': events, 'usage': usage,
                 'exit_code': proc.returncode, 'timed_out': timed_out, 'duration_seconds': duration,
-                'session_id': sessions[0] if len(sessions) == 1 else None,
+                'session_id': session_id,
                 'rate_limit_seconds': rate_limit(events), 'quota_exhausted': quota_exhausted(events),
                 'tool_events': tool_event_types(events),
                 'command': command[:-1] + ['<prompt>'],
             }
 
+    def read_exports(self, work, env, session_id, attempt):
+        usage = {'available': False, 'cost_status': 'export_failed', 'turns': [], 'exports': 0}
+        for index in range(1, EXPORT_READS + 1):
+            usage = self.read_export(work, env, session_id, attempt, index)
+            usage['exports'] = index
+            # A parsed export that already lacks a turn cost will not grow that field
+            # by being read again. Retry only when the export itself is missing.
+            if usage.get('cost_status') in ('zero', 'nonzero', 'model_mismatch', 'unknown', 'no_model_turn'):
+                return usage
+            if index < EXPORT_READS:
+                self.sleeper(1)
+        return usage
+
+    def read_export(self, work, env, session_id, attempt, index):
+        # Read-only. This never calls `opencode run`.
+        exported = subprocess.run(
+            [self.executable, 'session', 'export', '--standalone', session_id],
+            cwd=work, env=env, stdin=subprocess.DEVNULL, capture_output=True, timeout=60,
+        )
+        (attempt / f'session-export-{index:03}.json').write_bytes(exported.stdout)
+        if exported.returncode != 0:
+            return {'available': False, 'cost_status': 'export_failed', 'turns': [], 'reason': 'export_failed'}
+        return export_usage(exported.stdout)
+
+    def export_existing(self, session_id, attempt):
+        with tempfile.TemporaryDirectory(prefix='atlas-catalogue-export-') as temp:
+            work = Path(temp).resolve()
+            env = os.environ.copy()
+            env['PWD'] = str(work)
+            return self.read_export(work, env, session_id, attempt, 1)
+
+
+def message_parts(message):
+    if not isinstance(message, dict):
+        return None, None
+    info = message.get('info', message)
+    if not isinstance(info, dict):
+        return message, None
+    return message, info
+
+
+def is_model_turn(message, info):
+    """User and agent-switch rows can carry a default cost of 0. That is not a model turn."""
+    kind = str(message.get('type') or info.get('role') or info.get('type') or '').lower().replace('_', '-')
+    if kind in {'user', 'agent-switched', 'synthetic', 'idle'}:
+        return False
+    if kind == 'assistant':
+        return True
+    error = message.get('error') if isinstance(message.get('error'), dict) else info.get('error')
+    if isinstance(error, dict) and (error.get('type') or error.get('message')):
+        return True
+    model = info.get('model') if isinstance(info.get('model'), dict) else {}
+    if (model.get('providerID') or model.get('id')) and (
+            isinstance(info.get('tokens'), dict) or info.get('finish') or 'cost' in info):
+        return True
+    return False
+
+
+def turn_from(message, info):
+    model = info.get('model') if isinstance(info.get('model'), dict) else {}
+    error = message.get('error') if isinstance(message.get('error'), dict) else info.get('error')
+    if not isinstance(error, dict):
+        error = {}
+    known = 'cost' in info and isinstance(info.get('cost'), (int, float)) and not isinstance(info.get('cost'), bool)
+    retry = info.get('retry') if isinstance(info.get('retry'), dict) else message.get('retry')
+    if not isinstance(retry, dict):
+        retry = {}
+    return {
+        'message_id': message.get('id') or info.get('id'),
+        'providerID': model.get('providerID'), 'id': model.get('id'),
+        'cost': info.get('cost') if known else None, 'cost_known': known,
+        'finish': info.get('finish'), 'error_type': error.get('type'),
+        'message_type': message.get('type') or info.get('role') or info.get('type'),
+        'cli_retry_attempt': retry.get('attempt') if isinstance(retry.get('attempt'), int) else None,
+    }
+
+
+def normalize_turn(turn):
+    if not isinstance(turn, dict):
+        return {'providerID': None, 'id': None, 'cost': None, 'cost_known': False, 'finish': None, 'error_type': None}
+    if 'cost_known' in turn:
+        return turn
+    cost = turn.get('cost')
+    known = isinstance(cost, (int, float)) and not isinstance(cost, bool)
+    return {**turn, 'cost_known': known, 'cost': cost if known else None}
+
+
+def judge_turns(turns):
+    turns = [normalize_turn(turn) for turn in turns]
+    if not turns:
+        return 'no_model_turn'
+    if any(turn['cost_known'] and turn['cost'] not in (0, 0.0) for turn in turns):
+        return 'nonzero'
+    if any(turn['cost_known'] and (turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID) for turn in turns):
+        return 'model_mismatch'
+    if any(not turn['cost_known'] for turn in turns):
+        return 'unknown'
+    if any(turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID for turn in turns):
+        return 'model_mismatch'
+    return 'zero'
+
 
 def export_usage(raw):
-    session = json.loads(raw.decode('utf-8'))
+    try:
+        session = json.loads(raw.decode('utf-8'))
+    except (UnicodeError, json.JSONDecodeError):
+        return {'available': False, 'cost_status': 'corrupt_export', 'turns': [], 'reason': 'corrupt_export'}
     messages = session.get('messages') if isinstance(session, dict) else None
-    if not isinstance(messages, list):
-        return {'available': False, 'reason': 'session export has no messages'}
+    if not isinstance(messages, list) or not messages:
+        return {'available': False, 'cost_status': 'no_messages', 'turns': [], 'reason': 'session export has no messages'}
     turns = []
     for message in messages:
-        info = message.get('info', message) if isinstance(message, dict) else None
-        if not isinstance(info, dict) or not isinstance(info.get('tokens'), dict):
+        message, info = message_parts(message)
+        if info is None or not is_model_turn(message, info):
             continue
-        model = info.get('model') if isinstance(info.get('model'), dict) else {}
-        turns.append({
-            'providerID': model.get('providerID'), 'id': model.get('id'),
-            'cost': info.get('cost'), 'finish': info.get('finish'),
-        })
-    if not turns:
-        return {'available': False, 'reason': 'session export has no model turn'}
-    return {'available': True, 'turns': turns}
+        turns.append(turn_from(message, info))
+    status = judge_turns(turns)
+    return {'available': status == 'zero', 'cost_status': status, 'turns': turns,
+            'reason': None if status == 'zero' else status}
 
 
-def assert_free_turn(usage):
-    if not usage.get('available'):
-        raise PriceStop('actual model cost could not be read; stopping without another request')
-    for turn in usage['turns']:
-        if turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID:
-            raise PriceStop(
-                f"response provider/model was {turn.get('providerID')}/{turn.get('id')}, not {MODEL}; stopping"
-            )
-        if turn.get('cost') not in (0, 0.0):
-            raise PriceStop(f"response cost was {turn.get('cost')}, not 0; stopping without a fallback")
+def cost_status(usage):
+    if not isinstance(usage, dict):
+        return 'unknown'
+    if usage.get('cost_status'):
+        return usage['cost_status']
+    return judge_turns(usage.get('turns') or [])
+
+
+def cost_gate(usage):
+    status = cost_status(usage)
+    turns = [normalize_turn(turn) for turn in (usage.get('turns') or [])]
+    if status == 'nonzero':
+        shown = next(turn.get('cost') for turn in turns if turn.get('cost_known') and turn.get('cost') not in (0, 0.0))
+        raise PriceStop(f'response cost was {shown}, not 0; stopping without a fallback')
+    if status == 'model_mismatch':
+        bad = next((turn for turn in turns if turn.get('cost_known') and (
+            turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID)), turns[0] if turns else {})
+        raise PriceStop(
+            f"response provider/model was {bad.get('providerID')}/{bad.get('id')}, not {MODEL}; stopping"
+        )
+    if status != 'zero':
+        raise CostUnknown(status)
+
+
+def transport_signal(events):
+    for event in events:
+        if not isinstance(event, dict) or event.get('type') != 'error' or not isinstance(event.get('error'), dict):
+            continue
+        error = event['error']
+        message = str(error.get('message', ''))
+        if error.get('type') == 'provider.transport' or message.startswith('Transport: ECONNRESET:') or 'ECONNRESET' in message:
+            return True
+    return False
+
+
+def invalid_output_signal(events):
+    for event in events:
+        if not isinstance(event, dict) or event.get('type') != 'error' or not isinstance(event.get('error'), dict):
+            continue
+        error = event['error']
+        message = str(error.get('message', ''))
+        if error.get('type') == 'provider.invalid-output' or 'stream ended without finish_reason' in message:
+            return True
+    return False
+
+
+def diagnosis_of(reply):
+    usage = reply.get('usage') if isinstance(reply.get('usage'), dict) else {}
+    turns = usage.get('turns') or []
+    status = cost_status(usage)
+    events = reply.get('events') or []
+    return {
+        'cost_status': status, 'fee_proven': status == 'zero', 'turns': turns,
+        'exports': usage.get('exports', 0), 'transport': bool(usage.get('transport')),
+        'invalid_output': bool(usage.get('invalid_output')), 'timed_out': bool(reply.get('timed_out')),
+        'exit_code': reply.get('exit_code'), 'session_id': reply.get('session_id'),
+        'cli_steps': sum(1 for event in events if isinstance(event, dict) and event.get('type') in ('step_start', 'step-start')),
+        'cli_retry_attempts': [turn.get('cli_retry_attempt') for turn in turns if turn.get('cli_retry_attempt')],
+        'session_info_cost_ignored': True,
+    }
+
+
+def combine_ledgers(previous, new_turns):
+    """A later export must not delete an earlier turn whose cost was absent."""
+    previous = [normalize_turn(turn) for turn in previous or []]
+    new_turns = [normalize_turn(turn) for turn in new_turns or []]
+    if previous and len(new_turns) < len(previous):
+        return previous, 'unknown'
+    previous_ids = {turn.get('message_id') for turn in previous if turn.get('message_id')}
+    new_ids = {turn.get('message_id') for turn in new_turns if turn.get('message_id')}
+    if previous_ids and not previous_ids <= new_ids:
+        return previous, 'unknown'
+    return new_turns, judge_turns(new_turns)
 
 
 def parse_decision(text):
@@ -600,26 +772,39 @@ class Runner:
             if reply.get('retry'):
                 return {'status': 'retry', 'reason': reply['retry'], 'calls': attempt_no + 1}
             try:
-                assert_free_turn(reply['usage'])
+                cost_gate(reply['usage'])
+                if reply.get('timed_out'):
+                    return self._closed(reply, attempt_no, 'runner_timeout')
+                if reply.get('exit_code') not in (0, None):
+                    return self._closed(reply, attempt_no, 'cli_exit')
                 tools = reply.get('tool_events') or []
                 if tools:
                     message = 'tool events are not accepted: ' + ', '.join(tools)
                     (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
-                    return {'status': 'error', 'error': message, 'calls': attempt_no + 1, 'tool_events': tools}
+                    return {**self._closed(reply, attempt_no, message), 'tool_events': tools}
                 decision = parse_decision(reply['text'])
                 error = evidence_error(decision, skill)
                 if error:
                     raise ValueError(error)
                 return {'status': 'proposed' if decision['decision'] != 'retain_unfiled' else 'retained',
-                        'decision': decision, 'calls': attempt_no + 1, 'duration_seconds': reply['duration_seconds']}
+                        'decision': decision, 'calls': attempt_no + 1, 'duration_seconds': reply['duration_seconds'],
+                        'session_id': reply.get('session_id'), 'diagnosis': diagnosis_of(reply)}
             except PriceStop as exc:
                 self.stop.set()
                 self.stop_reason = str(exc)
-                return {'status': 'stopped', 'reason': str(exc), 'calls': attempt_no + 1}
+                return {**self._closed(reply, attempt_no, str(exc)), 'status': 'stopped', 'reason': str(exc)}
+            except CostUnknown:
+                return self._closed(reply, attempt_no, 'cost_unknown')
             except ValueError as exc:
                 feedback = str(exc)
                 (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
         return {'status': 'error', 'error': feedback, 'calls': 2, 'text': None if last is None else last.get('text')}
+
+    def _closed(self, reply, attempt_no, reason):
+        return {
+            'status': 'error', 'error': reason, 'calls': attempt_no + 1,
+            'session_id': reply.get('session_id'), 'diagnosis': diagnosis_of(reply),
+        }
 
     def reserve_request(self):
         with self.lock:
@@ -741,6 +926,7 @@ class Runner:
             'proposed': sum(item.get('status') == 'proposed' for item in state['completed'].values()),
             'retained': sum(item.get('status') == 'retained' for item in state['completed'].values()),
             'errors': sum(item.get('status') == 'error' for item in state['completed'].values()),
+            'cost_unknown': sum(item.get('error') == 'cost_unknown' for item in state['completed'].values()),
             'conflicts': sum(item.get('status') == 'fingerprint_conflict' for item in state['completed'].values()),
             'writes_catalogue': False, 'response_schema': SCHEMA_VERSION,
             'max_candidates': self.max_candidates, 'max_requests': self.max_requests,
@@ -777,7 +963,8 @@ class Runner:
 
     def _record(self, skill_result_state, skill, result):
         state, = (skill_result_state,)
-        entry = {'status': result['status'], 'fingerprint': skill['fingerprint'], 'at': now()}
+        entry = {'status': result['status'], 'fingerprint': skill['fingerprint'], 'at': now(),
+                 'session_id': result.get('session_id'), 'diagnosis': result.get('diagnosis')}
         if result['status'] in ('proposed', 'retained'):
             entry['proposal'] = proposal_from(skill, result['decision'])
         else:
@@ -825,6 +1012,92 @@ def review_retains(path, out):
     return report
 
 
+def recheck_exports(client, out, database):
+    """Read saved sessions again. This does not call `opencode run` and does not invent a cost."""
+    out = Path(out)
+    lock_file = (out / 'runner.lock').open('a+')
+    try:
+        fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError as exc:
+        lock_file.close()
+        raise SystemExit('分类运行器已有进程持有锁，未启动副本') from exc
+    try:
+        state = json.loads((out / 'state.json').read_text(encoding='utf-8'))
+        if state.get('schema_version') != SCHEMA_VERSION or state.get('model') != MODEL:
+            raise SystemExit('补查只接受同一契约和同一免费模型的目录')
+        vocabulary = allowed_vocabulary(database)
+        connection = connect_readonly(database)
+        promoted, still_unknown = [], []
+        try:
+            for skill_id, entry in state.get('completed', {}).items():
+                if entry.get('status') in ('proposed', 'retained') or entry.get('proposal'):
+                    continue
+                if entry.get('error') != 'cost_unknown' or not entry.get('session_id'):
+                    continue
+                if (entry.get('diagnosis') or {}).get('timed_out'):
+                    still_unknown.append(skill_id)
+                    continue
+                attempt = out / 'attempts' / skill_id / 'recheck'
+                attempt.mkdir(parents=True, exist_ok=True)
+                usage = client.export_existing(entry['session_id'], attempt)
+                previous = (entry.get('diagnosis') or {}).get('turns') or []
+                turns, status = combine_ledgers(previous, usage.get('turns') or [])
+                note = {
+                    'read': 'session export only', 'runs': 0, 'cost_status': status,
+                    'turns': turns, 'fee_proven': status == 'zero',
+                    'original_diagnosis_kept': True,
+                }
+                (attempt / 'recheck-diagnosis.json').write_text(
+                    json.dumps(note, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                if status in ('nonzero', 'model_mismatch'):
+                    try:
+                        cost_gate({'cost_status': status, 'turns': turns})
+                    except PriceStop as exc:
+                        state['stopped'] = str(exc)
+                        break
+                if status != 'zero':
+                    still_unknown.append(skill_id)
+                    continue
+                response_path = out / 'attempts' / skill_id / '001' / 'response.txt'
+                skill = load_skill(connection, skill_id, vocabulary)
+                if skill is None or skill['fingerprint'] != entry.get('fingerprint') or not response_path.is_file():
+                    still_unknown.append(skill_id)
+                    continue
+                try:
+                    decision = parse_decision(response_path.read_text(encoding='utf-8'))
+                    error = evidence_error(decision, skill)
+                    if error:
+                        raise ValueError(error)
+                except ValueError:
+                    still_unknown.append(skill_id)
+                    continue
+                entry['status'] = 'proposed' if decision['decision'] != 'retain_unfiled' else 'retained'
+                entry['proposal'] = proposal_from(skill, decision)
+                entry['error'] = None
+                promoted.append(skill_id)
+        finally:
+            connection.close()
+        records, seen = [], set()
+        for item in state['completed'].values():
+            proposal = item.get('proposal')
+            if proposal and proposal['id'] not in seen:
+                seen.add(proposal['id'])
+                records.append(proposal)
+        document = {'metadata': {
+            'schema': 'atlas-material-classification-proposals/v1', 'response_schema': SCHEMA_VERSION,
+            'created_at': now(), 'model': MODEL, 'not_applied': True,
+            'production_review_unchanged': 'unreviewed',
+        }, 'records': records}
+        (out / 'proposals.json').write_text(json.dumps(document, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        temporary = (out / 'state.json').with_suffix('.json.tmp')
+        temporary.write_text(json.dumps(state, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        temporary.replace(out / 'state.json')
+        return {'promoted': promoted, 'still_unknown': still_unknown, 'stopped': state.get('stopped'),
+                'runs': 0, 'writes_catalogue': False}
+    finally:
+        lock_file.close()
+
+
 def run(argv=None):
     parser = argparse.ArgumentParser(description='用零价 OpenCode Go 模型为待归类条目生成目录分类提案。不写生产目录。')
     parser.add_argument('--database', type=Path, default=DATABASE)
@@ -839,7 +1112,12 @@ def run(argv=None):
     parser.add_argument('--max-requests', type=int)
     parser.add_argument('--max-runtime-seconds', type=float)
     parser.add_argument('--review-retains', type=Path)
+    parser.add_argument('--recheck-exports', action='store_true')
     args = parser.parse_args(argv)
+    if args.recheck_exports:
+        report = recheck_exports(OpenCodeFreeClient(args.opencode), args.out, args.database)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 2 if report.get('stopped') else 0
     if args.review_retains:
         report = review_retains(args.review_retains, args.out)
         print(json.dumps(report, ensure_ascii=False, indent=2))

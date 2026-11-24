@@ -2,7 +2,7 @@
 
 这个运行器只调用本机已登录的 OpenCode CLI，为待归类条目生成目录分类提案。它不写 `catalog.sqlite3`，不写分类覆盖层，也不把提案当成源文审阅。
 
-模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。实际会话导出的 provider、model 和 cost 也必须匹配；cost 不是 0，或价格不再是 0，就停止后续请求，不改用别的模型。
+模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。费用只认每个 assistant 回合自己的 `cost` 字段。会话级 `info.cost`、最后一个成功回合的 0，以及 user、agent-switched、synthetic、idle 上的默认 0，都不能补上前面错误回合缺失的费用。缺失保持 unknown。明确的非 0 或模型不一致才停止后续请求，不改用别的模型。导出失败或还没有 messages 时最多再只读导出两次；已经导出的缺费用错误回合不再靠等待补出字段。`--recheck-exports` 只调用 `session export`，不调用 `run`，也不能把历史 unknown 改成已证明免费。
 
 响应契约是 `catalogue-classification-response/v2`。`decision` 只能是 `propose_existing_category` 或 `retain_unfiled`。`evidence` 必须是数组；每一项包含 `field`（`summary` 或 `task`）、`quote` 和 `task_index`。专题名必须与现有词表逐字相同，包括空格。旧契约目录不会被改写成成功，原始 `attempts/` 留在原处，重试使用新的 `--out`。
 

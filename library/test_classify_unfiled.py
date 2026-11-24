@@ -12,8 +12,9 @@ import classify_unfiled
 from build import SCHEMA
 from classification_overrides import static_topics
 from classify_unfiled import (
-    AGENT, EXAMPLE_PROPOSE, MODEL, MODEL_ID, PROVIDER, SCHEMA_VERSION, TOOL_DENIES, PriceStop, Runner,
-    evidence_error, load_excluded, prompt_for, review_retains,
+    AGENT, EXAMPLE_PROPOSE, MODEL, MODEL_ID, PROVIDER, SCHEMA_VERSION, TOOL_DENIES, CostUnknown, PriceStop,
+    Runner, combine_ledgers, cost_gate, evidence_error, export_usage, load_excluded, prompt_for, recheck_exports,
+    review_retains,
 )
 
 
@@ -64,6 +65,10 @@ class FakeClient:
                 'rate_limit_seconds': reply.get('rate_limit_seconds'),
                 'quota_exhausted': reply.get('quota_exhausted', False),
                 'tool_events': reply.get('tool_events', []),
+                'events': reply.get('events', []),
+                'exit_code': reply.get('exit_code', 0),
+                'timed_out': reply.get('timed_out', False),
+                'session_id': reply.get('session_id'),
             }
         finally:
             with self.gate:
@@ -422,6 +427,202 @@ print(json.dumps({'type': 'text', 'sessionID': 's', 'part': {'text': '{}'}}) )
             topics = {item['topic'] for item in by_id['b' * 32]['taxonomy_hits_in_summary_or_tasks']}
             self.assertIn('模型训练与微调', topics)
             self.assertFalse((root / 'catalog.sqlite3').exists())
+
+    def test_error_turns_without_cost_stay_unknown_when_the_last_turn_is_zero(self):
+        session = {
+            'info': {'id': 'ses_recorded', 'cost': 0, 'outcome': 'succeeded',
+                     'tokens': {'input': 688, 'output': 187}},
+            'messages': [
+                {'type': 'agent-switched', 'info': {'cost': 0}},
+                {'type': 'user', 'info': {'cost': 0, 'tokens': {'input': 0, 'output': 0}}},
+                {'type': 'synthetic'},
+                {'type': 'idle', 'info': {'cost': 0}},
+                {'id': 'msg-err-2', 'type': 'assistant', 'finish': 'error',
+                 'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+                 'error': {'type': 'provider.invalid-output', 'status': 200,
+                           'message': 'OpenAI Chat stream ended without finish_reason'},
+                 'retry': {'attempt': 2}},
+                {'id': 'msg-err-3', 'type': 'assistant', 'finish': 'error',
+                 'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+                 'error': {'type': 'provider.invalid-output', 'status': 200,
+                           'message': 'OpenAI Chat stream ended without finish_reason'},
+                 'retry': {'attempt': 3}},
+                {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+                 'tokens': {'input': 688, 'output': 187},
+                 'model': {'providerID': PROVIDER, 'id': MODEL_ID}},
+            ],
+        }
+        usage = export_usage(json.dumps(session).encode())
+        self.assertEqual(usage['cost_status'], 'unknown')
+        self.assertEqual(len(usage['turns']), 3)
+        self.assertEqual([turn['cost_known'] for turn in usage['turns']], [False, False, True])
+        self.assertEqual([turn['cli_retry_attempt'] for turn in usage['turns']], [2, 3, None])
+        self.assertFalse(usage['available'])
+        with self.assertRaises(CostUnknown):
+            cost_gate(usage)
+        kept, status = combine_ledgers(usage['turns'], usage['turns'][-1:])
+        self.assertEqual(status, 'unknown')
+        self.assertEqual(len(kept), 3)
+
+    def test_missing_error_cost_does_not_stop_the_batch_or_start_another_run(self):
+        with TemporaryDirectory() as temp:
+            usage = export_usage(json.dumps({'messages': [
+                {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
+                 'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+                 'error': {'type': 'provider.invalid-output', 'status': 200,
+                           'message': 'OpenAI Chat stream ended without finish_reason'}},
+                {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+                 'tokens': {'input': 1, 'output': 1}, 'model': {'providerID': PROVIDER, 'id': MODEL_ID}},
+            ]}).encode())
+            client = FakeClient([
+                {'json': good_decision(), 'usage': usage, 'session_id': 'ses_recorded', 'events': [
+                    {'type': 'step_start'}, {'type': 'error', 'error': {
+                        'type': 'provider.invalid-output', 'status': 200,
+                        'message': 'OpenAI Chat stream ended without finish_reason'}},
+                    {'type': 'step_start'},
+                ]},
+                {'json': good_decision(), 'session_id': 'ses_ok'},
+            ])
+            report, _ = self.run_trial(Path(temp), client, ['b' * 32, 'c' * 32], workers=1)
+            self.assertEqual(len(client.requests), 2)
+            self.assertIsNone(report['stopped'])
+            self.assertEqual(report['proposed'], 1)
+            self.assertEqual(report['cost_unknown'], 1)
+            state = json.loads((Path(temp) / 'out/state.json').read_text(encoding='utf-8'))
+            unknown = state['completed']['b' * 32]
+            self.assertEqual(unknown['error'], 'cost_unknown')
+            self.assertEqual(unknown['diagnosis']['cli_steps'], 2)
+            self.assertFalse(unknown['diagnosis']['fee_proven'])
+            self.assertEqual(unknown['diagnosis']['turns'][0]['cost'], None)
+            again = FakeClient()
+            Runner(again, Path(temp) / 'out', Path(temp) / 'catalog.sqlite3', Path(temp) / 'none.json', [], '', 'trial', 1).run()
+            self.assertEqual(again.requests, [])
+
+    def test_user_only_export_is_not_free_and_a_complete_export_is_not_reread(self):
+        usage = export_usage(json.dumps({'info': {'cost': 0}, 'messages': [
+            {'type': 'agent-switched', 'info': {'cost': 0, 'tokens': {'input': 0, 'output': 0}}},
+            {'type': 'user', 'info': {'cost': 0, 'tokens': {'input': 0, 'output': 0}}},
+        ]}).encode())
+        self.assertEqual(usage['cost_status'], 'no_model_turn')
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            executable = root / 'opencode'
+            executable.write_text('''#!/usr/bin/env python3
+import json, sys
+from pathlib import Path
+log = Path(sys.argv[0]).with_name('calls.txt')
+log.write_text((log.read_text() if log.exists() else '') + sys.argv[1] + '\\n')
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1] == 'run':
+    print(json.dumps({'type': 'text', 'sessionID': 'ses_partial', 'part': {'text': '{}'}}) )
+    raise SystemExit
+print(json.dumps({'info': {'cost': 0, 'outcome': 'succeeded'}, 'messages': [
+    {'type': 'user', 'info': {'cost': 0}},
+    {'id': 'msg-err', 'type': 'assistant', 'finish': 'error', 'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'},
+     'error': {'type': 'provider.invalid-output', 'status': 200, 'message': 'OpenAI Chat stream ended without finish_reason'},
+     'retry': {'attempt': 2}},
+    {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0, 'tokens': {'input': 1, 'output': 1},
+     'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}]}))
+''', encoding='utf-8')
+            executable.chmod(0o755)
+            attempt = root / 'attempt'
+            attempt.mkdir()
+            client = classify_unfiled.OpenCodeFreeClient(str(executable), timeout=10, sleeper=lambda _seconds: None)
+            reply = client.request('prompt', 'title', attempt)
+            self.assertEqual(reply['usage']['cost_status'], 'unknown')
+            self.assertEqual(reply['usage']['exports'], 1)
+            self.assertEqual((root / 'calls.txt').read_text(encoding='utf-8').count('run'), 1)
+            self.assertEqual((root / 'calls.txt').read_text(encoding='utf-8').count('session'), 1)
+
+    def test_reread_stops_when_the_export_arrives_and_recheck_does_not_run(self):
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = build_db(root, ['b' * 32])
+            out = root / 'out'
+            out.mkdir()
+            skill_prompt = good_decision()
+            (out / 'attempts' / ('b' * 32) / '001').mkdir(parents=True)
+            (out / 'attempts' / ('b' * 32) / '001' / 'response.txt').write_text(
+                json.dumps(skill_prompt, ensure_ascii=False), encoding='utf-8')
+            connection = sqlite3.connect(database)
+            connection.row_factory = sqlite3.Row
+            from classify_unfiled import allowed_vocabulary, load_skill
+            skill = load_skill(connection, 'b' * 32, allowed_vocabulary(database))
+            connection.close()
+            state = {
+                'schema_version': SCHEMA_VERSION, 'model': MODEL, 'completed': {
+                    'b' * 32: {
+                        'status': 'error', 'error': 'cost_unknown', 'fingerprint': skill['fingerprint'],
+                        'session_id': 'ses_recorded',
+                        'diagnosis': {'cost_status': 'unknown', 'fee_proven': False, 'turns': [
+                            {'message_id': 'msg-err', 'cost_known': False, 'cost': None, 'finish': 'error'},
+                            {'message_id': 'msg-stop', 'cost_known': True, 'cost': 0, 'finish': 'stop',
+                             'providerID': PROVIDER, 'id': MODEL_ID},
+                        ]},
+                    }
+                }
+            }
+            (out / 'state.json').write_text(json.dumps(state), encoding='utf-8')
+            executable = root / 'opencode'
+            executable.write_text('''#!/usr/bin/env python3
+import json, sys
+from pathlib import Path
+log = Path(sys.argv[0]).with_name('calls.txt')
+log.write_text((log.read_text() if log.exists() else '') + ' '.join(sys.argv[1:]) + '\\n')
+if sys.argv[1] == 'run':
+    raise SystemExit('run is not a recheck')
+print(json.dumps({'messages': [
+    {'id': 'msg-err', 'type': 'assistant', 'finish': 'error', 'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'},
+     'error': {'type': 'provider.invalid-output', 'status': 200, 'message': 'OpenAI Chat stream ended without finish_reason'}},
+    {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0, 'tokens': {'input': 1, 'output': 1},
+     'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}]}))
+''', encoding='utf-8')
+            executable.chmod(0o755)
+            report = recheck_exports(classify_unfiled.OpenCodeFreeClient(str(executable), timeout=10), out, database)
+            self.assertEqual(report['runs'], 0)
+            self.assertEqual(report['promoted'], [])
+            self.assertEqual(report['still_unknown'], ['b' * 32])
+            self.assertNotIn('run', (root / 'calls.txt').read_text(encoding='utf-8'))
+            kept = json.loads((out / 'state.json').read_text(encoding='utf-8'))['completed']['b' * 32]
+            self.assertEqual(kept['error'], 'cost_unknown')
+            self.assertFalse(kept['diagnosis']['fee_proven'])
+            self.assertIsNone(kept['diagnosis']['turns'][0]['cost'])
+
+    def test_empty_export_is_reread_but_a_later_zero_does_not_drop_the_error_turn(self):
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            executable = root / 'opencode'
+            executable.write_text('''#!/usr/bin/env python3
+import json, sys
+from pathlib import Path
+counter = Path(sys.argv[0]).with_name('exports.txt')
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1] == 'run':
+    print(json.dumps({'type': 'step_start', 'sessionID': 'ses_late', 'part': {'type': 'step-start'}}))
+    print(json.dumps({'type': 'text', 'sessionID': 'ses_late', 'part': {'text': '{}'}}) )
+    raise SystemExit
+seen = counter.read_text() if counter.exists() else ''
+counter.write_text(seen + 'export\\n')
+if seen.count('export') == 0:
+    print('{}')
+    raise SystemExit
+print(json.dumps({'messages': [{'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+    'tokens': {'input': 1, 'output': 1}, 'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}]}))
+''', encoding='utf-8')
+            executable.chmod(0o755)
+            attempt = root / 'attempt'
+            attempt.mkdir()
+            sleeps = []
+            reply = classify_unfiled.OpenCodeFreeClient(
+                str(executable), timeout=10, sleeper=sleeps.append).request('prompt', 'title', attempt)
+            self.assertEqual(reply['usage']['cost_status'], 'zero')
+            self.assertEqual(reply['usage']['exports'], 2)
+            self.assertEqual(sleeps, [1])
+            self.assertEqual((root / 'exports.txt').read_text(encoding='utf-8').count('export'), 2)
 
 
 if __name__ == '__main__':
