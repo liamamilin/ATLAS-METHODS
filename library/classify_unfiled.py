@@ -774,14 +774,14 @@ class Runner:
             try:
                 cost_gate(reply['usage'])
                 if reply.get('timed_out'):
-                    return self._closed(reply, attempt_no, 'runner_timeout')
+                    return self._halt(reply, attempt_no, 'runner_timeout')
                 if reply.get('exit_code') not in (0, None):
-                    return self._closed(reply, attempt_no, 'cli_exit')
+                    return self._halt(reply, attempt_no, 'cli_exit')
                 tools = reply.get('tool_events') or []
                 if tools:
                     message = 'tool events are not accepted: ' + ', '.join(tools)
                     (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
-                    return {**self._closed(reply, attempt_no, message), 'tool_events': tools}
+                    return {**self._halt(reply, attempt_no, message), 'tool_events': tools}
                 decision = parse_decision(reply['text'])
                 error = evidence_error(decision, skill)
                 if error:
@@ -790,15 +790,22 @@ class Runner:
                         'decision': decision, 'calls': attempt_no + 1, 'duration_seconds': reply['duration_seconds'],
                         'session_id': reply.get('session_id'), 'diagnosis': diagnosis_of(reply)}
             except PriceStop as exc:
-                self.stop.set()
-                self.stop_reason = str(exc)
+                self._halt_new_runs(str(exc))
                 return {**self._closed(reply, attempt_no, str(exc)), 'status': 'stopped', 'reason': str(exc)}
             except CostUnknown:
-                return self._closed(reply, attempt_no, 'cost_unknown')
+                return self._halt(reply, attempt_no, 'cost_unknown')
             except ValueError as exc:
                 feedback = str(exc)
                 (attempt / 'rejected.txt').write_text(reply.get('text') or '', encoding='utf-8')
         return {'status': 'error', 'error': feedback, 'calls': 2, 'text': None if last is None else last.get('text')}
+
+    def _halt_new_runs(self, reason):
+        self.stop.set()
+        self.stop_reason = reason
+
+    def _halt(self, reply, attempt_no, reason):
+        self._halt_new_runs(reason)
+        return self._closed(reply, attempt_no, reason)
 
     def _closed(self, reply, attempt_no, reason):
         return {
@@ -871,7 +878,10 @@ class Runner:
         state = self.load_state()
         self.state = state
         self.calls = state.get('calls', 0)
-        if self.calls >= self.max_requests:
+        if state.get('stopped'):
+            self.stop.set()
+            self.stop_reason = state['stopped']
+        elif self.calls >= self.max_requests:
             self.stop.set()
             self.stop_reason = 'request budget reached'
         elif self.clock() - self.started >= self.max_runtime:
@@ -974,7 +984,9 @@ class Runner:
         (attempt / 'receipt.json').write_text(json.dumps({**entry, 'calls': result.get('calls', 0)}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         with self.lock:
             state['completed'][skill['id']] = entry
-            if result['status'] == 'stopped':
+            if self.stop_reason:
+                state['stopped'] = self.stop_reason
+            elif result['status'] == 'stopped':
                 state['stopped'] = result.get('reason')
             self.save_state(state)
 

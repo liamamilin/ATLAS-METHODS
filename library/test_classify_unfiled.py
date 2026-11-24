@@ -464,7 +464,7 @@ print(json.dumps({'type': 'text', 'sessionID': 's', 'part': {'text': '{}'}}) )
         self.assertEqual(status, 'unknown')
         self.assertEqual(len(kept), 3)
 
-    def test_missing_error_cost_does_not_stop_the_batch_or_start_another_run(self):
+    def test_unknown_cost_stops_new_runs_and_keeps_the_error_turn(self):
         with TemporaryDirectory() as temp:
             usage = export_usage(json.dumps({'messages': [
                 {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
@@ -483,10 +483,10 @@ print(json.dumps({'type': 'text', 'sessionID': 's', 'part': {'text': '{}'}}) )
                 ]},
                 {'json': good_decision(), 'session_id': 'ses_ok'},
             ])
-            report, _ = self.run_trial(Path(temp), client, ['b' * 32, 'c' * 32], workers=1)
-            self.assertEqual(len(client.requests), 2)
-            self.assertIsNone(report['stopped'])
-            self.assertEqual(report['proposed'], 1)
+            report, database = self.run_trial(Path(temp), client, ['b' * 32, 'c' * 32, 'd' * 32], workers=1)
+            self.assertEqual(len(client.requests), 1)
+            self.assertEqual(report['stopped'], 'cost_unknown')
+            self.assertEqual(report['proposed'], 0)
             self.assertEqual(report['cost_unknown'], 1)
             state = json.loads((Path(temp) / 'out/state.json').read_text(encoding='utf-8'))
             unknown = state['completed']['b' * 32]
@@ -495,8 +495,10 @@ print(json.dumps({'type': 'text', 'sessionID': 's', 'part': {'text': '{}'}}) )
             self.assertFalse(unknown['diagnosis']['fee_proven'])
             self.assertEqual(unknown['diagnosis']['turns'][0]['cost'], None)
             again = FakeClient()
-            Runner(again, Path(temp) / 'out', Path(temp) / 'catalog.sqlite3', Path(temp) / 'none.json', [], '', 'trial', 1).run()
+            resumed = Runner(again, Path(temp) / 'out', database, Path(temp) / 'none.json', [], '', 'trial', 1).run()
             self.assertEqual(again.requests, [])
+            self.assertEqual(resumed['stopped'], 'cost_unknown')
+            self.assertEqual(resumed['calls'], report['calls'])
 
     def test_user_only_export_is_not_free_and_a_complete_export_is_not_reread(self):
         usage = export_usage(json.dumps({'info': {'cost': 0}, 'messages': [
@@ -623,6 +625,76 @@ print(json.dumps({'messages': [{'id': 'msg-stop', 'type': 'assistant', 'finish':
             self.assertEqual(reply['usage']['exports'], 2)
             self.assertEqual(sleeps, [1])
             self.assertEqual((root / 'exports.txt').read_text(encoding='utf-8').count('export'), 2)
+
+    def test_ten_in_flight_are_not_followed_by_more_runs_after_unknown(self):
+        with TemporaryDirectory() as temp:
+            unknown = export_usage(json.dumps({'messages': [
+                {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
+                 'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+                 'error': {'type': 'provider.invalid-output', 'status': 200,
+                           'message': 'OpenAI Chat stream ended without finish_reason'}},
+                {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+                 'tokens': {'input': 1, 'output': 1}, 'model': {'providerID': PROVIDER, 'id': MODEL_ID}},
+            ]}).encode())
+
+            class Burst(FakeClient):
+                def request(self, prompt, title, attempt):
+                    with self.gate:
+                        self.inflight += 1
+                        self.max_inflight = max(self.max_inflight, self.inflight)
+                        ordinal = len(self.requests) + 1
+                        self.requests.append({'prompt': prompt, 'title': title})
+                    try:
+                        time.sleep(0.02 if ordinal == 1 else 0.08)
+                        if ordinal == 1:
+                            return {'text': json.dumps(good_decision()), 'usage': unknown, 'duration_seconds': 0.02,
+                                    'tool_events': [], 'events': [{'type': 'step_start'}, {'type': 'step_start'}],
+                                    'exit_code': 0, 'timed_out': False, 'session_id': 'ses_unknown'}
+                        return {'text': json.dumps(good_decision()), 'usage': free_usage(), 'duration_seconds': 0.08,
+                                'tool_events': [], 'events': [], 'exit_code': 0, 'timed_out': False,
+                                'session_id': 'ses_ok'}
+                    finally:
+                        with self.gate:
+                            self.inflight -= 1
+
+            client = Burst()
+            ids = [f'{index:032x}' for index in range(1, 21)]
+            report, _ = self.run_trial(
+                Path(temp), client, ids, mode='continuous', workers=10,
+                max_candidates=100, max_requests=100, max_runtime_seconds=60,
+            )
+            self.assertLessEqual(len(client.requests), 10)
+            self.assertLessEqual(client.max_inflight, 10)
+            self.assertEqual(report['stopped'], 'cost_unknown')
+            self.assertEqual(report['cost_unknown'], 1)
+            self.assertEqual(report['completed'], len(client.requests))
+            state = json.loads((Path(temp) / 'out/state.json').read_text(encoding='utf-8'))
+            unknown_rows = [item for item in state['completed'].values() if item.get('error') == 'cost_unknown']
+            self.assertEqual(len(unknown_rows), 1)
+            self.assertIsNone(unknown_rows[0]['diagnosis']['turns'][0]['cost'])
+            self.assertEqual(unknown_rows[0]['diagnosis']['turns'][1]['cost'], 0)
+            self.assertFalse(unknown_rows[0]['diagnosis']['fee_proven'])
+
+    def test_model_mismatch_and_tools_also_stop_later_runs(self):
+        mismatch = {'available': False, 'cost_status': 'model_mismatch', 'turns': [
+            {'providerID': 'other', 'id': 'paid', 'cost': 0, 'cost_known': True}]}
+        with TemporaryDirectory() as temp:
+            client = FakeClient([
+                {'json': good_decision(), 'usage': mismatch},
+                {'json': good_decision()},
+            ])
+            report, _ = self.run_trial(Path(temp), client, ['b' * 32, 'c' * 32], workers=1)
+            self.assertEqual(len(client.requests), 1)
+            self.assertIn('not opencode-go/iceman-contributor-free', report['stopped'])
+        with TemporaryDirectory() as temp:
+            client = FakeClient([
+                {'json': good_decision(), 'tool_events': ['tool']},
+                {'json': good_decision()},
+            ])
+            report, _ = self.run_trial(Path(temp), client, ['b' * 32, 'c' * 32], workers=1)
+            self.assertEqual(len(client.requests), 1)
+            self.assertIn('tool events are not accepted', report['stopped'])
+            self.assertEqual(report['proposed'], 0)
 
 
 if __name__ == '__main__':

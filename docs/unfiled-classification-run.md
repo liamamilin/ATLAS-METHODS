@@ -2,11 +2,11 @@
 
 这个运行器只调用本机已登录的 OpenCode CLI，为待归类条目生成目录分类提案。它不写 `catalog.sqlite3`，不写分类覆盖层，也不把提案当成源文审阅。
 
-模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。费用只认每个 assistant 回合自己的 `cost` 字段。会话级 `info.cost`、最后一个成功回合的 0，以及 user、agent-switched、synthetic、idle 上的默认 0，都不能补上前面错误回合缺失的费用。缺失保持 unknown。明确的非 0 或模型不一致才停止后续请求，不改用别的模型。导出失败或还没有 messages 时最多再只读导出两次；已经导出的缺费用错误回合不再靠等待补出字段。`--recheck-exports` 只调用 `session export`，不调用 `run`，也不能把历史 unknown 改成已证明免费。
+模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。费用只认每个 assistant 回合自己的 `cost` 字段。会话级 `info.cost`、最后一个成功回合的 0，以及 user、agent-switched、synthetic、idle 上的默认 0，都不能补上前面错误回合缺失的费用。缺失保持 unknown。新的 unknown、非 0、模型不一致或 tool 事件都会停止后续新的模型请求，已经在途的最多 10 条可以收尾并记下。同一输出目录不会因此自动开始下一批，也不会按同一指纹自动再跑。导出失败或还没有 messages 时最多再只读导出两次；已经导出的缺费用错误回合不再靠等待补出字段。`--recheck-exports` 只调用 `session export`，不调用 `run`，也不能把历史 unknown 改成已证明免费。
 
 响应契约是 `catalogue-classification-response/v2`。`decision` 只能是 `propose_existing_category` 或 `retain_unfiled`。`evidence` 必须是数组；每一项包含 `field`（`summary` 或 `task`）、`quote` 和 `task_index`。专题名必须与现有词表逐字相同，包括空格。旧契约目录不会被改写成成功，原始 `attempts/` 留在原处，重试使用新的 `--out`。
 
-全局同时在途最多 10 条。第二个进程看到锁会直接退出。已完成且指纹未变的条目不会再请求。模型输出若不是合法 JSON、领域不是既有 id、专题不是该领域下的既有名称，或证据不是本次输入摘要/任务里的连续原文，就保留原始输出并记为错误，不会被收成通过的提案。出现 tool 事件的那一条记为错误，不当作通过。
+全局同时在途最多 10 条。第二个进程看到锁会直接退出。已完成且指纹未变的条目不会再请求。模型输出若不是合法 JSON、领域不是既有 id、专题不是该领域下的既有名称，或证据不是本次输入摘要/任务里的连续原文，就保留原始输出并记为错误，不会被收成通过的提案。出现 tool 事件的那一条记为错误，并且不再调度新的模型请求。
 
 调用放在空的临时目录里，并写入只在该目录生效的 `atlas-catalogue` 代理。权限按 OpenCode v2 的 `permissions` 规则拒绝 `read`、`glob`、`grep`、`edit`、`shell` 以及其他工具。不修改用户的全局配置，不复制认证，也不在临时目录放 `AGENTS.md`。
 
