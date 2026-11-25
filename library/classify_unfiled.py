@@ -260,9 +260,10 @@ class OpenCodeFreeClient:
                 self._mcp_servers = sorted(names)
             return self._mcp_servers
 
-    def request(self, prompt, title, attempt):
+    def request(self, prompt, title, attempt, timeout=None):
         started = time.monotonic()
         command = self.command(title, prompt)
+        limit = self.timeout if timeout is None else max(1, int(timeout))
         with tempfile.TemporaryDirectory(prefix='atlas-catalogue-') as temp:
             # macOS getcwd follows /var -> /private/var. PWD must be that same path,
             # or OpenCode reads a different project and the temp config is missed.
@@ -279,7 +280,7 @@ class OpenCodeFreeClient:
             )
             timed_out = False
             try:
-                stdout, stderr = proc.communicate(timeout=self.timeout)
+                stdout, stderr = proc.communicate(timeout=limit)
             except subprocess.TimeoutExpired:
                 timed_out = True
                 os.killpg(proc.pid, signal.SIGTERM)

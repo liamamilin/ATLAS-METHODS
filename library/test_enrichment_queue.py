@@ -672,6 +672,117 @@ class QueueTests(unittest.TestCase):
             self.assertFalse(log.exists() and any(
                 json.loads(line)[:1] == ['run'] for line in log.read_text(encoding='utf-8').splitlines() if line.strip()))
 
+    def test_category_facts_stay_rejected_and_workers_can_share_one_wave(self):
+        import threading
+        import time
+        from enrichment import map_record
+        from enrichment_queue import (
+            FAKE_GENERATION_QUOTE, Ledger, apply_generation, batch_generation_prompt, build_plan, execute_queue,
+        )
+        skill = {
+            'id': 'a' * 32, 'summary': '目录',
+            'tasks': [{'id': 1, 'position': 1, 'goal': '使用 Python 排查。', 'applicability': '',
+                       'outputs': '[]', 'tags': {'action': [], 'tool': []}}],
+        }
+        prompt = batch_generation_prompt([skill])
+        self.assertIn('"dimension": "tools"', prompt)
+        self.assertIn('category 不是事实字段', prompt)
+        self.assertNotIn('"category":', prompt)
+        annotation = map_record(skill, skill['tasks'], source_hash=source_digest(skill))
+        reason = apply_generation(skill, annotation, {
+            'record_id': skill['id'], 'source_hash': source_digest(skill),
+            'facts': [
+                {'category': 'kind', 'quote': '使用 Python 排查。', 'role': 'required', 'value_id': 'execution_workflow'},
+                {'category': 'task_action', 'quote': '使用 Python 排查。', 'role': 'required',
+                 'task_position': 1, 'value_id': 'debug'},
+                {'category': 'task_action', 'proposed_value': '新词', 'quote': '使用 Python 排查。',
+                 'role': 'mentioned', 'task_position': 1, 'value_id': None},
+            ],
+        }, [skill])
+        self.assertIsNone(reason)
+        self.assertEqual([item.get('reason') for item in annotation.get('dropped_facts') or []], ['dimension'] * 3)
+        self.assertFalse(any(item.get('accepted') for item in annotation['facts']))
+        self.assertFalse(any(item.get('dimension') in ('kind', 'task_action') and item.get('method') == 'model_generation'
+                             for item in annotation['facts']))
+        copied = map_record(skill, skill['tasks'], source_hash=source_digest(skill))
+        apply_generation(skill, copied, {
+            'record_id': skill['id'], 'source_hash': source_digest(skill),
+            'facts': [{'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+                       'quote': FAKE_GENERATION_QUOTE, 'task_position': 1}],
+        }, [skill])
+        self.assertTrue(any(item.get('reason') == 'quote_not_in_record' for item in copied.get('dropped_facts') or []))
+        self.assertFalse(any(item.get('accepted') for item in copied['facts']))
+
+        def skill_at(index):
+            return {
+                'id': f'{index:032x}', 'summary': '目录',
+                'tasks': [{'id': 1, 'position': 1, 'goal': f'使用 Python 排查{index}。', 'applicability': '',
+                           'outputs': '[]', 'tags': {}}],
+            }
+
+        class Gate:
+            def __init__(self, timed_out=False):
+                self.timed_out = timed_out
+                self.live = 0
+                self.peak = 0
+                self.calls = 0
+                self.timeouts = []
+                self.price_checks = 0
+                self.lock = threading.Lock()
+            def check_price(self):
+                self.price_checks += 1
+                return {'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}
+            def request(self, prompt, title, attempt, timeout=None):
+                with self.lock:
+                    self.calls += 1
+                    self.live += 1
+                    self.peak = max(self.peak, self.live)
+                    self.timeouts.append(timeout)
+                try:
+                    if not self.timed_out:
+                        time.sleep(0.2)
+                    return {
+                        'text': '{"records":[]}', 'session_id': None if self.timed_out else 'ses',
+                        'timed_out': self.timed_out, 'tool_events': [], 'events': [], 'exit_code': 0,
+                        'usage': {'turns': [{
+                            'providerID': 'opencode-go', 'id': 'iceman-contributor-free',
+                            'cost_known': True, 'cost': 0,
+                        }], 'cost_status': 'zero'},
+                    }
+                finally:
+                    with self.lock:
+                        self.live -= 1
+
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            skills = [skill_at(index) for index in range(2)]
+            plan = build_plan(
+                skills, batch_sizes=(1,), control_ids=[], development_ids=[], holdout_ids=[],
+                caps={'cli_requests': 4, 'actual_turns': 10, 'runtime_seconds': 600, 'in_flight': 2},
+                fee_policy='allow-missing-cost', benchmark=False)
+            gate = Gate()
+            report = execute_queue(gate, plan, skills, Ledger(root / 'ledger'), root / 'out', workers=2)
+            self.assertEqual(report['max_in_flight'], 2)
+            self.assertEqual(gate.peak, 2)
+            self.assertGreater(min(gate.timeouts), 180)
+            self.assertFalse(report.get('halt'))
+            stopped = Gate(timed_out=True)
+            plan_one = build_plan(
+                skills[:1], batch_sizes=(1,), control_ids=[], development_ids=[], holdout_ids=[],
+                caps={'cli_requests': 4, 'actual_turns': 10, 'runtime_seconds': 600, 'in_flight': 1},
+                fee_policy='allow-missing-cost', benchmark=False)
+            first = execute_queue(stopped, plan_one, skills[:1], Ledger(root / 'halted'), root / 'halt-out', workers=1)
+            self.assertEqual(first['halt']['reason'], 'timeout')
+            state = json.loads((root / 'halted' / 'state.json').read_text(encoding='utf-8'))
+            self.assertEqual(state['requests'], 1)
+            self.assertTrue(all(entry.get('will_not_retry') and entry.get('error_kind') == 'unknown_outcome'
+                                for entry in state['records'].values()))
+            again = execute_queue(stopped, plan_one, skills[:1], Ledger(root / 'halted'), root / 'other-out', workers=1)
+            self.assertEqual(again['halt']['reason'], 'timeout')
+            self.assertEqual(again['model_run_requests'], 1)
+            self.assertEqual(stopped.calls, 1)
+            self.assertEqual(stopped.price_checks, 1)
+
 
 if __name__ == '__main__':
     unittest.main()

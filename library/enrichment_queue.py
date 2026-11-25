@@ -155,6 +155,9 @@ def pack_records(items, target_batch, input_char_budget=INPUT_CHAR_BUDGET, outpu
     }
 
 
+FAKE_GENERATION_QUOTE = '假例子：这段话不是任何一条真实记录的原文。'
+
+
 def batch_generation_prompt(skills):
     blocks = []
     for skill in skills:
@@ -162,10 +165,25 @@ def batch_generation_prompt(skills):
             'RECORD\nid: ' + skill['id'] + '\nsource_hash: ' + source_digest(skill) + '\nTEXT\n'
             + supplied_text(skill) + '\nEND\n'
         )
+    example = {
+        '_example_is_fake': True,
+        'records': [{
+            'record_id': '0' * 32,
+            'source_hash': '0' * 64,
+            'facts': [{
+                'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+                'quote': FAKE_GENERATION_QUOTE, 'task_position': 1, 'proposed_value': None,
+            }],
+        }],
+    }
     return (
         shared_context()
         + '\n一次返回一个 JSON 对象。records 数组的每项含 record_id、source_hash、facts。'
-        'quote 必须是该 record 自己 TEXT 里的连续原文。不要引用另一条 record。'
+        'facts 的每一项必须使用键 dimension，取值只能是词表里的维度名。'
+        'category 不是事实字段。只有 category、没有 dimension 的条目无效，不能把 category 改写成 dimension。'
+        '假例子不是用户材料，里面的 quote 不能抄进任何真实记录。\n'
+        + json.dumps(example, ensure_ascii=False)
+        + '\nquote 必须是该 record 自己 TEXT 里的连续原文。不要引用另一条 record。'
         '否定句不能写成 required。value_id 不在词表就留空并写 proposed_value，不要自己写成已接受。'
         'task_position 只能是这段 quote 实际出现的任务序号。\n'
         + ''.join(blocks)
@@ -724,24 +742,24 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
         state['seconds'] = round(opened_seconds + (time.monotonic() - started), 3)
 
     try:
+        existing = ledger.load()
+        if existing.get('budget_id') and existing.get('budget_id') != plan['sha256']:
+            raise SystemExit('ledger belongs to a different plan and is not a fresh benchmark budget')
+        halted = existing.get('halt')
+        if halted:
+            return {'stopped': halted.get('reason'), 'calls': 0, 'model_run_requests': existing.get('requests', 0),
+                    'halt': halted, 'production_publish': False, 'calls_model': False}
         try:
             if hasattr(client, 'check_price'):
                 client.check_price()
         except Exception as exc:
             return {'stopped': str(exc), 'calls': 0, 'model_run_requests': 0, 'production_publish': False,
                     'calls_model': False}
-        existing = ledger.load()
-        if existing.get('budget_id') and existing.get('budget_id') != plan['sha256']:
-            raise SystemExit('ledger belongs to a different plan and is not a fresh benchmark budget')
         if not existing.get('budget_id'):
             def stamp(state):
                 state['budget_id'] = plan['sha256']
                 return None
             ledger.update(stamp)
-        halted = ledger.load().get('halt')
-        if halted:
-            return {'stopped': halted.get('reason'), 'calls': 0, 'model_run_requests': ledger.load().get('requests', 0),
-                    'halt': halted, 'production_publish': False, 'calls_model': False}
 
         def pending(arm, phase):
             rows = []
@@ -834,8 +852,9 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
             (attempt / 'prompt.txt').write_text(prompt, encoding='utf-8')
             title = 'ATLAS queue ' + phase + ' ' + arm['id'] + ' ' + digest(group)[:12]
             started_call = time.monotonic()
+            remaining = caps['runtime_seconds'] - (opened_seconds + (time.monotonic() - started))
             try:
-                reply = client.request(prompt, title, attempt)
+                reply = client.request(prompt, title, attempt, timeout=max(1, int(remaining)))
             except (PriceStop, CostHalt, CostUnknown) as exc:
                 halt(type(exc).__name__)
                 return
@@ -980,39 +999,39 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                 dev_arms = [arm for arm in plan['arms'] if arm.get('stage') == 'dev_comparison' and arm.get('scheduled')]
                 if dev_arms and all(arm_finished(plan, arm, ledger.load(), by_id) for arm in dev_arms):
                     select_benchmark(plan, ledger, skills)
-            progressed = False
+            review_jobs = []
+            generate_jobs = []
             for arm in plan['arms']:
-                if stop['reason'] or not runnable(arm):
+                if not runnable(arm):
                     continue
                 groups, _overflow = pending(arm, 'review')
-                wave = groups[:workers]
-                if not wave:
-                    groups, _overflow = pending(arm, 'generate')
-                    wave = groups[:1]
-                    phase = 'generate'
-                else:
-                    phase = 'review'
-                if not wave:
-                    continue
-                reserved = []
-                for group in wave:
-                    reason = reserve(arm, group, phase)
-                    if reason:
-                        stop['reason'] = reason
-                        break
-                    reserved.append(group)
-                if not reserved:
+                review_jobs.extend((arm, group, 'review') for group in groups)
+                groups, _overflow = pending(arm, 'generate')
+                generate_jobs.extend((arm, group, 'generate') for group in groups)
+            jobs = (review_jobs or generate_jobs)[:workers]
+            if not jobs:
+                break
+            reserved = []
+            for arm, group, phase in jobs:
+                reason = reserve(arm, group, phase)
+                if reason:
+                    stop['reason'] = reason
                     break
-                peak['n'] = max(peak['n'], len(reserved))
-                if len(reserved) == 1:
-                    call(arm, reserved[0], phase)
-                else:
-                    with ThreadPoolExecutor(max_workers=len(reserved)) as pool:
-                        list(pool.map(lambda group: call(arm, group, phase), reserved))
-                progressed = True
-                if stop['reason']:
-                    break
-            if not progressed:
+                reserved.append((arm, group, phase))
+            if not reserved:
+                break
+            peak['n'] = max(peak['n'], len(reserved))
+
+            def run_job(job):
+                arm, group, phase = job
+                call(arm, group, phase)
+
+            if len(reserved) == 1:
+                run_job(reserved[0])
+            else:
+                with ThreadPoolExecutor(max_workers=len(reserved)) as pool:
+                    list(pool.map(run_job, reserved))
+            if stop['reason']:
                 break
         state = ledger.load()
         completed = {}
