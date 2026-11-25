@@ -139,6 +139,7 @@ def list_skills(con, params):
     matched = enrichment_ids(params)
     if matched == 'missing':
         enrichment_filter = 'index_missing'
+        conditions.append('0')
     elif isinstance(matched, set):
         enrichment_filter = 'applied'
         if not matched:

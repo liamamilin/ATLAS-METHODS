@@ -889,16 +889,20 @@ class Runner:
 
     def run(self):
         self.out.mkdir(parents=True, exist_ok=True)
+        from enrichment import global_writer_lock
+        shared = global_writer_lock()
         lock_file = (self.out / 'runner.lock').open('a+')
         try:
             fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as exc:
             lock_file.close()
+            shared.close()
             raise SystemExit('分类运行器已有进程持有锁，未启动副本') from exc
         try:
             return self._run_locked()
         finally:
             lock_file.close()
+            shared.close()
 
     def _run_locked(self):
         if self.state_path().exists():

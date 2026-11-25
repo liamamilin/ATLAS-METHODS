@@ -153,8 +153,28 @@ class ClosedLoopTests(unittest.TestCase):
         self.assertEqual(merged['only_in_code'], [])
         self.assertTrue(all(item['domain_id'] == 'legal' and item['topic_id'] is None for item in merged['only_in_runtime']))
         runtime = {tuple(pair) for pair in payload['allowed_pairs']}
-        self.assertIn(('integration', '待细分'), runtime)
-        self.assertIn(('legal', '税务'), runtime)
+        exact_runtime_only = (
+            ('legal', 'administrative'), ('legal', 'arbitration'), ('legal', 'aviation'),
+            ('legal', 'bankruptcy'), ('legal', 'capital markets'), ('legal', 'commercial'),
+            ('legal', 'constitutional'), ('legal', 'construction'), ('legal', 'consumer'),
+            ('legal', 'cybersecurity'), ('legal', 'energy'), ('legal', 'entertainment'),
+            ('legal', 'environmental'), ('legal', 'finance'), ('legal', 'gaming'),
+            ('legal', 'general'), ('legal', 'government contracts'), ('legal', 'healthcare'),
+            ('legal', 'immigration'), ('legal', 'insurance'), ('legal', 'investment funds'),
+            ('legal', 'life sciences'), ('legal', 'maritime'), ('legal', 'military'),
+            ('legal', 'nonprofit'), ('legal', 'personal injury'), ('legal', 'sanctions'),
+            ('legal', 'securities'), ('legal', 'social security'), ('legal', 'sports'),
+            ('legal', 'tmt'), ('legal', 'trade'), ('legal', 'transportation'),
+            ('legal', 'trusts and estates'), ('legal', 'white collar'),
+        )
+        self.assertEqual(sorted((item['domain_id'], item['topic']) for item in merged['only_in_runtime']),
+                         sorted(exact_runtime_only))
+        code_pairs = {(item['domain_id'], item['topic']) for item in code['pairs']}
+        self.assertTrue(code_pairs <= runtime)
+        for pair in (('integration', '待细分'), ('legal', '税务')):
+            self.assertIn(pair, runtime)
+            self.assertIn(pair, code_pairs)
+            self.assertNotIn(pair, exact_runtime_only)
         self.assertIn(('legal', 'administrative'), runtime)
 
     def test_conditions_stay_candidates_until_a_closed_phrase(self):
@@ -308,6 +328,254 @@ class ClosedLoopTests(unittest.TestCase):
         for case_id, passed in cases.items():
             with self.subTest(case_id):
                 self.assertTrue(passed, case_id)
+
+    def test_manifest_selects_only_those_ids_and_rejects_a_stale_hash(self):
+        from enrichment import manifest_digest, run_enrichment
+        quote = '根据日志检索异常'
+        skill_row = {'id': 'b' * 32, 'category': 'code', 'topic': '后端与 API', 'label_from': 'catalogue',
+                     'review': 'unreviewed', 'summary': '目录摘要。',
+                     'tasks': [{'position': 1, 'goal': quote, 'applicability': '', 'outputs': '', 'tags': {}}]}
+        other = dict(skill_row, id='c' * 32)
+        source_hash = __import__('enrichment').digest({'summary': skill_row['summary'], 'tasks': skill_row['tasks']})
+        ids = [skill_row['id']]
+        records = [{'id': skill_row['id'], 'source_hash': source_hash}]
+        manifest = {'ids': ids, 'records': records, 'sha256': manifest_digest(ids, records)}
+
+        class Fake:
+            def __init__(self):
+                self.calls = []
+            def check_price(self):
+                return {'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}
+            def request(self, prompt, title, attempt):
+                self.calls.append(title)
+                return {'text': json.dumps({'facts': [{'dimension': 'task_action', 'value_id': 'debug',
+                        'role': 'required', 'quote': quote, 'task_position': 1}]}),
+                        'session_id': 'ses_gen', 'usage': {'cost_status': 'zero', 'turns': [
+                            {'providerID': 'opencode-go', 'id': 'iceman-contributor-free', 'cost_known': True, 'cost': 0}]},
+                        'tool_events': [], 'exit_code': 0, 'timed_out': False, 'events': []}
+
+        with TemporaryDirectory() as temp:
+            fake = Fake()
+            report = run_enrichment(fake, temp, [other, skill_row], phase='generate', manifest=manifest,
+                                    cost_policy='allow-missing-cost', limit=48)
+            self.assertEqual(len(fake.calls), 1)
+            self.assertIn(skill_row['id'], fake.calls[0])
+            self.assertNotIn(other['id'], ''.join(fake.calls))
+            saved = json.loads(Path(temp, 'phase-manifest.json').read_text(encoding='utf-8'))
+            self.assertEqual(saved['selected_ids'], [skill_row['id']])
+            self.assertTrue(saved['calls_model'])
+            stale = dict(manifest)
+            stale['records'] = [{'id': skill_row['id'], 'source_hash': '0' * 64}]
+            stale['sha256'] = manifest_digest(stale['ids'], stale['records'])
+            fake2 = Fake()
+            refused = run_enrichment(fake2, temp + '-stale', [skill_row], phase='generate', manifest=stale,
+                                     cost_policy='allow-missing-cost')
+            self.assertEqual(fake2.calls, [])
+            self.assertEqual(refused['applied']['records'] if isinstance(refused.get('applied'), dict) else 0, 0)
+
+    def test_missing_sidecar_filter_does_not_return_the_whole_catalogue(self):
+        import os
+        import sqlite3
+        import serve
+        from build import SCHEMA
+        with TemporaryDirectory() as temp:
+            database = Path(temp) / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.row_factory = sqlite3.Row
+            connection.executescript(SCHEMA)
+            connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                'a' * 32, '标题', '摘要', 'code', 'catalogue', '后端与 API', 'unreviewed',
+                '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, 'a' * 32, '摘要'))
+            connection.commit()
+            os.environ['ATLAS_ENRICHMENT_DIR'] = str(Path(temp) / 'missing-enrichment')
+            try:
+                listed = serve.list_skills(connection, {'edim': ['tools'], 'evalue': ['python']})
+                untouched = serve.list_skills(connection, {})
+            finally:
+                os.environ.pop('ATLAS_ENRICHMENT_DIR', None)
+                connection.close()
+            self.assertEqual(listed['items'], [])
+            self.assertEqual(listed['total'], 0)
+            self.assertEqual(listed['enrichment_filter'], 'index_missing')
+            self.assertEqual(untouched['total'], 1)
+            bare = map_record({'id': 'a' * 32, 'category': 'legal', 'topic': 'administrative',
+                               'label_from': 'rule', 'review': 'unreviewed'}, [])
+            self.assertEqual(bare['primary']['topic'], 'administrative')
+            self.assertEqual(bare['primary']['topic_origin'], 'not_checked')
+            self.assertNotEqual(bare['dimensions']['input_kind']['state'], 'not_applicable')
+            self.assertEqual(bare['dimensions']['input_kind']['reason'], 'not_in_supplied_scope')
+            explicit_empty = map_record(skill(inputs=[]), [])
+            self.assertEqual(explicit_empty['dimensions']['input_kind']['reason'], 'not_in_source')
+
+    def test_cursor_covers_classified_ids_and_does_not_retry_or_cover_a_failure(self):
+        from classify_unfiled import CostHalt
+        from enrichment import run_enrichment
+        usage = {'cost_status': 'zero', 'turns': [
+            {'providerID': 'opencode-go', 'id': 'iceman-contributor-free', 'cost_known': True, 'cost': 0}]}
+
+        class Fake:
+            def __init__(self):
+                self.calls = []
+            def check_price(self):
+                return {'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}
+            def request(self, prompt, title, attempt):
+                self.calls.append(title)
+                if title.endswith('a' * 32):
+                    raise RuntimeError('schema')
+                return {'text': '{}', 'session_id': 'ses_' + str(len(self.calls)), 'usage': usage,
+                        'tool_events': [], 'exit_code': 0, 'timed_out': False, 'events': []}
+
+        def row(record_id, category):
+            return {'id': record_id, 'category': category, 'topic': '后端与 API', 'label_from': 'catalogue',
+                    'review': 'unreviewed', 'summary': '目录摘要。',
+                    'tasks': [{'position': 1, 'goal': '检索', 'applicability': '', 'outputs': '', 'tags': {}}]}
+
+        classified = row('a' * 32, 'code')
+        later = row('b' * 32, 'unfiled')
+        with TemporaryDirectory() as temp:
+            fake = Fake()
+            report = run_enrichment(fake, temp, [later, classified], phase='generate', limit=2,
+                                    cost_policy='allow-missing-cost', workers=1, after='')
+            self.assertEqual(len(fake.calls), 2)
+            self.assertIn('code', classified['category'])
+            saved = json.loads(Path(temp, 'phase-manifest.json').read_text(encoding='utf-8'))
+            self.assertEqual(saved['selection'], 'cursor')
+            self.assertEqual(saved['covered_cursor'], '')
+            self.assertIn(classified['id'], saved['skipped_errors'])
+            self.assertIn(later['id'], saved['selected_ids'])
+            fake2 = Fake()
+            run_enrichment(fake2, temp, [classified, later], phase='generate', limit=2,
+                           cost_policy='allow-missing-cost', workers=1, after='')
+            self.assertEqual(fake2.calls, [])
+
+        class Halt:
+            def __init__(self):
+                self.calls = 0
+            def check_price(self):
+                return {}
+            def request(self, prompt, title, attempt):
+                self.calls += 1
+                raise CostHalt('identity_unverified')
+
+        with TemporaryDirectory() as temp:
+            halt = Halt()
+            stopped = run_enrichment(halt, temp, [classified, later], phase='generate', limit=2,
+                                     cost_policy='strict', workers=1)
+            self.assertEqual(halt.calls, 1)
+            self.assertIn('identity_unverified', stopped['stopped'])
+
+    def test_same_task_accepts_skill_wide_evidence_and_rejects_example_roles(self):
+        skill_wide = [
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'scope': {'level': 'skill'}},
+            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required',
+             'scope': {'level': 'task', 'task_position': 1}},
+        ]
+        self.assertTrue(same_task_query(skill_wide, {'tools': ['python'], 'task_action': ['debug']}, True))
+        for role in ('example', 'prohibited'):
+            self.assertEqual(same_task_query([
+                {'dimension': 'side_effects', 'value_id': 'read_only', 'role': role,
+                 'scope': {'level': 'task', 'task_position': 1}},
+            ], {'side_effects': ['read_only']}, True), [])
+        self.assertTrue(same_task_query([
+            {'dimension': 'side_effects', 'value_id': 'read_only', 'role': 'required',
+             'scope': {'level': 'task', 'task_position': 1}},
+        ], {'side_effects': ['read_only']}, True))
+
+    def test_runtime_allowlist_keeps_legal_topics_without_rejecting_defaults(self):
+        from enrichment import merge_runtime_allowlist
+        raw = Path('library/fixtures/taxonomy-reconciliation-c26.safe.json').read_bytes()
+        merged = merge_runtime_allowlist(taxonomy_reconciliation(), json.loads(raw), 'abc')
+        keys = {(item['domain_id'], item['topic']) for item in merged['only_in_runtime']}
+        self.assertEqual(len(keys), 35)
+        self.assertIn(('legal', 'administrative'), keys)
+        marked = map_record({'id': 'd' * 32, 'category': 'legal', 'topic': 'administrative',
+                             'label_from': 'rule', 'review': 'unreviewed'}, [], runtime_topics=keys)
+        self.assertEqual(marked['primary']['topic_origin'], 'runtime_observed')
+        self.assertEqual(marked['primary']['topic'], 'administrative')
+
+    def test_help_accepts_manifest_and_ids(self):
+        import subprocess
+        import sys
+        result = subprocess.run([sys.executable, 'library/enrichment.py', '--help'],
+                                capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 0)
+        self.assertIn('--manifest', result.stdout)
+        self.assertIn('--ids', result.stdout)
+        self.assertIn('--after', result.stdout)
+        self.assertIn('--runtime-allowlist', result.stdout)
+
+    def test_full_scale_map_reads_tasks_once(self):
+        import sqlite3
+        from build import SCHEMA
+        from enrichment import map_catalogue, map_record, source_digest
+        representatives, sources, tasks = 46608, 55673, 130824
+        goal = '根据目录中的任务说明完成这一步，并保留原文里的限制。' * 4
+        with TemporaryDirectory() as temp:
+            database = Path(temp) / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            connection.execute('PRAGMA synchronous=OFF')
+            skill_rows = [(f'{index:032x}', '标题', '摘要', 'code', 'catalogue', '后端与 API', 'unreviewed',
+                           '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, f'{index:032x}', '摘要')
+                          for index in range(representatives)]
+            connection.executemany('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', skill_rows)
+            task_rows = []
+            remaining = tasks
+            for index in range(representatives):
+                count = 3 if index < (tasks - representatives * 2) else 2
+                for position in range(1, count + 1):
+                    tags = {'action': [], 'tool': []}
+                    if position == 1 and index < 1136:
+                        tags = {'action': ['debug'], 'tool': []}
+                    elif position == 1 and index < 1441:
+                        tags = {'action': ['debug'], 'tool': ['python']}
+                    elif position == 1 and index < 4554:
+                        tags = {'action': [], 'tool': ['python']}
+                    task_rows.append((f'{index:032x}', position, goal, '', '[]', json.dumps(tags, ensure_ascii=False)))
+                remaining -= count
+            self.assertEqual(remaining, 0)
+            self.assertEqual(len(task_rows), tasks)
+            connection.executemany(
+                'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                task_rows)
+            source_rows = []
+            for index in range(sources):
+                skill_index = index if index < representatives else index - representatives
+                source_rows.append((
+                    f'{index:032x}', f'{skill_index:032x}', 'collection', 'owner/example', 'SKILL.md',
+                    'abc', 'blob', 'a' * 64, '', None, None, 'representative'))
+            connection.executemany('INSERT INTO sources VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', source_rows)
+            connection.commit()
+            connection.close()
+            started = __import__('time').perf_counter()
+            report = map_catalogue(database)
+            elapsed = __import__('time').perf_counter() - started
+            self.assertLess(elapsed, 90, report['stages_seconds'])
+            self.assertTrue(report['complete'])
+            self.assertFalse(report['bounded_slice'])
+            self.assertEqual(report['writes'], 0)
+            self.assertEqual(report['processed'], representatives)
+            self.assertEqual(report['queries']['task_selects'], 1)
+            self.assertEqual(report['queries']['skill_selects'], 1)
+            self.assertEqual(report['queries']['source_rows_loaded'], 0)
+            self.assertEqual(report['catalogue_counts'], {
+                'representatives': representatives, 'sources': sources, 'tasks': tasks})
+            self.assertEqual(report['tasks_loaded'], tasks)
+            self.assertEqual(report['legacy_action_value_covered_representatives'], 1441)
+            self.assertEqual(report['legacy_tool_value_covered_representatives'], 3418)
+            self.assertEqual(report['legacy_either_value_covered_representatives'], 4554)
+            self.assertEqual(report['new_facet_value_coverage'], 'unknown_not_computed')
+            self.assertEqual(report['input_kind_not_applicable'], 0)
+            self.assertGreater(report['peak_rss_kib'], 0)
+            sliced = map_catalogue(database, limit=100)
+            self.assertFalse(sliced['complete'])
+            self.assertEqual(sliced['processed'], 100)
+            self.assertEqual(sliced['queries']['task_selects'], 1)
+            loaded, stats = __import__('enrichment').load_catalog(database, ids=[f'{0:032x}'])
+            direct = map_record(loaded[0], loaded[0]['tasks'], source_hash=source_digest(loaded[0]))
+            self.assertEqual(stats['task_selects'], 1)
+            self.assertEqual(direct['source_hash'], source_digest(loaded[0]))
+            self.assertNotEqual(direct['dimensions']['input_kind']['state'], 'not_applicable')
 
 
 if __name__ == '__main__':

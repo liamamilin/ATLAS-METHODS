@@ -6,7 +6,10 @@ import fcntl
 import hashlib
 import json
 from pathlib import Path
+import resource
 import sqlite3
+import sys
+import time
 
 from classification_overrides import static_topics
 from task_search import ACTION_TAGS, TOOL_TAGS
@@ -44,6 +47,19 @@ KIND_VALUES = (
     'reference_guide', 'execution_workflow', 'connector_integration', 'document_template',
     'router_or_orchestrator', 'scaffold', 'placeholder', 'deprecated_redirect',
 )
+
+
+def global_writer_lock():
+    """One lock shared with the catalogue classifier. Held for a whole run, then released."""
+    path = Path(__file__).resolve().parents[1] / 'data' / 'library' / 'atlas-writer.lock'
+    path.parent.mkdir(parents=True, exist_ok=True)
+    handle = path.open('a+')
+    try:
+        fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError as exc:
+        handle.close()
+        raise SystemExit('atlas writer lock is already held') from exc
+    return handle
 
 
 def now():
@@ -149,16 +165,25 @@ def fact(record_id, scope, dimension, value_id, role, support, quote, locator, s
     return body
 
 
-def map_record(skill, tasks, gaps=None, source_hash=''):
+def map_record(skill, tasks, gaps=None, source_hash='', runtime_topics=None):
     """Copy the existing category and only mark legacy task tags as unverified."""
     record_id = skill['id']
     dimensions = {name: {'state': 'unknown', 'reason': 'not_yet_annotated', 'values': []} for name in DIMENSIONS}
     facts = []
+    domain_id = skill.get('category') if skill.get('category') in LABELS else 'unfiled'
+    topic = skill.get('topic')
+    if runtime_topics is None:
+        topic_origin = 'not_checked'
+    elif (domain_id, topic) in runtime_topics:
+        topic_origin = 'runtime_observed'
+    else:
+        topic_origin = 'code_canonical_or_other'
     primary = {
-        'domain_id': skill.get('category') if skill.get('category') in LABELS else 'unfiled',
-        'topic': skill.get('topic'),
+        'domain_id': domain_id,
+        'topic': topic,
+        'topic_origin': topic_origin,
         'label_from': skill.get('label_from'),
-        'topic_resolved': bool(skill.get('topic')) and skill.get('topic') != UNSORTED_TOPIC and skill.get('category') != 'unfiled',
+        'topic_resolved': bool(topic) and topic != UNSORTED_TOPIC and skill.get('category') != 'unfiled',
         'domain_resolved': skill.get('category') not in (None, '', 'unfiled'),
     }
     if not tasks:
@@ -206,8 +231,10 @@ def map_record(skill, tasks, gaps=None, source_hash=''):
                 'direct_explicit' if quote else 'bounded_inference', quote,
                 'catalog_tasks.text', source_hash, 'deterministic_role_phrase'))
     inputs = skill.get('inputs')
-    if inputs == [] or inputs is None:
+    if inputs == []:
         dimensions['input_kind'] = {'state': 'unknown', 'reason': 'not_in_source', 'values': []}
+    elif inputs is None:
+        dimensions['input_kind'] = {'state': 'unknown', 'reason': 'not_in_supplied_scope', 'values': []}
     stated_gaps = list(gaps or skill.get('gaps') or [])
     annotation = {
         'schema': SCHEMA,
@@ -268,9 +295,19 @@ def satisfies(fact_item, dimension, values, role):
 def same_task_query(facts, filters, same_task=True):
     """filters is dimension -> values. Across dimensions AND, within one dimension OR."""
     grouped = {}
+    skill_wide = []
     for item in facts:
+        if (item.get('scope') or {}).get('level') == 'skill':
+            skill_wide.append(item)
         grouped.setdefault(scope_key(item), []).append(item)
-    scopes = grouped.values() if same_task else [facts]
+    scopes = []
+    if same_task:
+        for key, bucket in grouped.items():
+            scopes.append(bucket if key == ('skill',) else bucket + skill_wide)
+        if not scopes:
+            scopes = [skill_wide]
+    else:
+        scopes = [facts]
     hits = []
     for bucket in scopes:
         if all(any(satisfies(item, dimension, set(values), 'required') for item in bucket)
@@ -489,25 +526,178 @@ def plan_pilot(records, limit=48):
             'model_calls': 0}
 
 
-def load_catalog(database, limit=None):
-    connection = sqlite3.connect(database)
+def connect_readonly(database):
+    uri = Path(database).resolve().as_uri() + '?mode=ro'
+    connection = sqlite3.connect(uri, uri=True)
     connection.row_factory = sqlite3.Row
-    rows = connection.execute('SELECT id, category, topic, label_from, review FROM skills ORDER BY id')
-    skills = []
+    return connection
+
+
+def parse_tags(value):
+    if isinstance(value, dict):
+        return value
+    try:
+        parsed = json.loads(value)
+    except (TypeError, json.JSONDecodeError):
+        return {}
+    return parsed if isinstance(parsed, dict) else {}
+
+
+def attach_tasks(connection, skills, stats):
+    """One catalog_tasks read for the selected ids. Never one query per skill."""
+    started = time.perf_counter()
+    for skill in skills:
+        skill['tasks'] = []
+    if not skills:
+        stats['task_selects'] = 0
+        stats['tasks_loaded'] = 0
+        stats['load_tasks_seconds'] = 0
+        return
+    by_id = {skill['id']: skill for skill in skills}
+    ids = list(by_id)
+    if len(ids) <= 900:
+        marks = ','.join('?' * len(ids))
+        rows = connection.execute(
+            'SELECT id, skill, position, goal, applicability, outputs, tags FROM catalog_tasks '
+            f'WHERE skill IN ({marks}) ORDER BY skill, position, id',
+            ids)
+    else:
+        rows = connection.execute(
+            'SELECT id, skill, position, goal, applicability, outputs, tags FROM catalog_tasks '
+            'ORDER BY skill, position, id')
+    stats['task_selects'] = 1
+    loaded = 0
     for row in rows:
-        tasks = [dict(item) for item in connection.execute(
-            'SELECT id, position, goal, applicability, outputs, tags FROM catalog_tasks WHERE skill = ? ORDER BY position',
-            (row['id'],))]
-        for task in tasks:
-            try:
-                task['tags'] = json.loads(task['tags'])
-            except (TypeError, json.JSONDecodeError):
-                task['tags'] = {}
-        skills.append({**dict(row), 'tasks': tasks})
-        if limit and len(skills) >= limit:
-            break
-    connection.close()
-    return skills
+        skill = by_id.get(row['skill'])
+        if skill is None:
+            continue
+        skill['tasks'].append({
+            'id': row['id'], 'position': row['position'], 'goal': row['goal'],
+            'applicability': row['applicability'], 'outputs': row['outputs'],
+            'tags': parse_tags(row['tags']),
+        })
+        loaded += 1
+    stats['tasks_loaded'] = loaded
+    stats['load_tasks_seconds'] = round(time.perf_counter() - started, 3)
+
+
+def load_catalog(database, limit=None, ids=None, after='', with_tasks=True):
+    """Read representatives once. Tasks are one scan or one IN-list, not N+1."""
+    started = time.perf_counter()
+    connection = connect_readonly(database)
+    stats = {
+        'skill_selects': 0, 'task_selects': 0, 'source_selects': 0, 'source_rows_loaded': 0,
+        'tasks_loaded': 0, 'load_skills_seconds': 0, 'load_tasks_seconds': 0, 'catalogue_counts': {},
+    }
+    try:
+        counts = {}
+        for table in ('skills', 'sources', 'catalog_tasks'):
+            counts[table] = connection.execute(f'SELECT COUNT(*) FROM {table}').fetchone()[0]
+        stats['source_selects'] = 1
+        stats['catalogue_counts'] = {
+            'representatives': counts['skills'], 'sources': counts['sources'], 'tasks': counts['catalog_tasks'],
+        }
+        if ids is not None:
+            if not ids:
+                stats['load_skills_seconds'] = round(time.perf_counter() - started, 3)
+                return [], stats
+            marks = ','.join('?' * len(ids))
+            rows = connection.execute(
+                'SELECT id, title, summary, category, topic, label_from, review FROM skills '
+                f'WHERE id IN ({marks})', list(ids))
+        else:
+            sql = 'SELECT id, title, summary, category, topic, label_from, review FROM skills'
+            params = []
+            if after:
+                sql += ' WHERE id > ?'
+                params.append(after)
+            sql += ' ORDER BY id'
+            if limit:
+                sql += ' LIMIT ?'
+                params.append(int(limit))
+            rows = connection.execute(sql, params)
+        stats['skill_selects'] = 1
+        skills = [dict(row) for row in rows]
+        if not ids:
+            skills.sort(key=lambda item: item['id'])
+        stats['load_skills_seconds'] = round(time.perf_counter() - started, 3)
+        if with_tasks:
+            attach_tasks(connection, skills, stats)
+        return skills, stats
+    finally:
+        connection.close()
+
+
+def peak_rss_kib():
+    value = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    if sys.platform == 'darwin':
+        return int(value / 1024)
+    return int(value)
+
+
+def map_catalogue(database, out=None, *, after='', limit=None, runtime_topics=None, apply=False, progress=None):
+    """Deterministic map. Dry-run keeps no sidecar. Source hash is summary plus loaded tasks."""
+    skills, stats = load_catalog(database, limit=limit, after=after, with_tasks=True)
+    if progress:
+        progress({'stage': 'loaded', 'skills': len(skills), 'tasks_loaded': stats['tasks_loaded'],
+                  'task_selects': stats['task_selects'], 'catalogue_counts': stats['catalogue_counts']})
+    started = time.perf_counter()
+    fingerprints = []
+    annotations = [] if apply else None
+    action = tool = either = supplied_scope = 0
+    for index, skill in enumerate(skills, 1):
+        annotation = map_record(
+            skill, skill['tasks'], source_hash=source_digest(skill), runtime_topics=runtime_topics)
+        fingerprints.append(annotation['fingerprint'])
+        has_action = bool(annotation['dimensions']['task_action']['values'])
+        has_tool = bool(annotation['dimensions']['tools']['values'])
+        action += bool(has_action)
+        tool += bool(has_tool)
+        either += bool(has_action or has_tool)
+        if annotation['dimensions']['input_kind'].get('reason') == 'not_in_supplied_scope':
+            supplied_scope += 1
+        if annotations is not None:
+            annotations.append(annotation)
+        if progress and index % 5000 == 0:
+            progress({'stage': 'map', 'processed': index, 'of': len(skills),
+                      'elapsed_seconds': round(time.perf_counter() - started, 3)})
+    catalogue_total = stats['catalogue_counts']['representatives']
+    complete = not after and len(skills) == catalogue_total
+    result = {
+        'command': 'map', 'dry_run': not apply, 'writes': 0, 'complete': complete,
+        'processed': len(skills), 'after': after or '',
+        'next_after': skills[-1]['id'] if skills else (after or ''),
+        'bounded_slice': not complete,
+        'legacy_action_value_covered_representatives': action,
+        'legacy_tool_value_covered_representatives': tool,
+        'legacy_either_value_covered_representatives': either,
+        'new_facet_value_coverage': 'unknown_not_computed',
+        'input_kind_not_in_supplied_scope': supplied_scope,
+        'input_kind_not_applicable': 0,
+        'source_hash': 'sha256 of summary and the tasks loaded for that record',
+        'fingerprint': digest(fingerprints) if fingerprints else digest([]),
+        'map_seconds': round(time.perf_counter() - started, 3),
+        'peak_rss_kib': peak_rss_kib(),
+        'queries': {
+            'skill_selects': stats['skill_selects'], 'task_selects': stats['task_selects'],
+            'source_selects': stats['source_selects'], 'source_rows_loaded': 0,
+        },
+        'stages_seconds': {
+            'load_skills': stats['load_skills_seconds'], 'load_tasks': stats['load_tasks_seconds'],
+            'map': round(time.perf_counter() - started, 3),
+        },
+        'catalogue_counts': stats['catalogue_counts'], 'tasks_loaded': stats['tasks_loaded'],
+        'complexity': 'one skills read and one catalog_tasks read; sources are counted, not loaded per record',
+    }
+    if apply:
+        applied = Store(out).apply(annotations, 'deterministic-map', dry_run=False)
+        result['writes'] = applied.get('writes', 0)
+        result['dry_run'] = False
+        result['applied'] = applied
+    if progress:
+        progress({'stage': 'done', 'complete': complete, 'processed': len(skills),
+                  'stages_seconds': result['stages_seconds']})
+    return result
 
 
 def observe_risk(text):
@@ -721,14 +911,109 @@ def absorb_facts(annotation, payload, text):
     return annotation
 
 
+def manifest_digest(ids, records):
+    return digest({'ids': list(ids), 'records': records})
+
+
+def load_manifest(path):
+    raw = Path(path).read_bytes()
+    payload = json.loads(raw)
+    ids = payload.get('ids')
+    if not isinstance(ids, list) or not ids or len(ids) > 48:
+        raise SystemExit('manifest ids must be a list of 1 to 48 record ids')
+    records = payload.get('records') or []
+    expected = payload.get('sha256')
+    actual = manifest_digest(ids, records)
+    if expected != actual:
+        raise SystemExit('manifest sha256 does not match its ids and records')
+    return payload, hashlib.sha256(raw).hexdigest()
+
+
+def source_digest(skill):
+    return digest({'summary': skill.get('summary'), 'tasks': skill.get('tasks')})
+
+
+def cursor_select(skills, completed, after, limit):
+    """Take the next unfinished ids after the cursor. Errors are not retried and do not count as covered."""
+    start = after or ''
+    ordered = sorted(skills, key=lambda item: item['id'])
+    selected = []
+    skipped_errors = []
+    for skill in ordered:
+        if skill['id'] <= start:
+            continue
+        previous = completed.get(skill['id']) or {}
+        same = previous.get('source_hash') == source_digest(skill)
+        if same and previous.get('phase') == 'error':
+            skipped_errors.append(skill['id'])
+            continue
+        if same and previous.get('phase') in ('generated', 'reviewed'):
+            continue
+        selected.append(skill)
+        if len(selected) >= limit:
+            break
+    covered = start
+    for skill in ordered:
+        if skill['id'] <= start:
+            continue
+        previous = completed.get(skill['id']) or {}
+        if previous.get('source_hash') == source_digest(skill) and previous.get('phase') in ('generated', 'reviewed'):
+            covered = skill['id']
+            continue
+        break
+    return selected, skipped_errors, covered
+
+
+def covered_cursor(skills, completed, after):
+    start = after or ''
+    covered = start
+    for skill in sorted(skills, key=lambda item: item['id']):
+        if skill['id'] <= start:
+            continue
+        previous = completed.get(skill['id']) or {}
+        if previous.get('source_hash') == source_digest(skill) and previous.get('phase') in ('generated', 'reviewed'):
+            covered = skill['id']
+            continue
+        break
+    return covered
+
+
+def generation_prompt(skill):
+    return (
+        '只根据下面给出的目录文字返回一个 JSON 对象，不要使用工具，不要补充未出现的事实。'
+        'facts 的 quote 必须是给出文字里的连续原文。dimension 只能是 '
+        + ', '.join(DIMENSIONS) + '。role 只能是 ' + ', '.join(TOOL_ROLES) + '。'
+        '例子、禁止和替代不能写成 required。\n'
+        + supplied_text(skill)
+    )
+
+
+def review_prompt(skill, annotation):
+    visible = [{
+        'dimension': item['dimension'], 'value_id': item['value_id'], 'role': item['role'],
+        'quote': item.get('quote'), 'accepted': item.get('accepted'),
+    } for item in annotation.get('facts') or []]
+    return (
+        '独立审核下面的候选标签。只根据给出的目录文字和候选 quote，不要沿用生成会话，不要看生成者的推理。'
+        '返回 JSON，axes 的键必须是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
+        '没有固定源文就不要把 source_fidelity 写成 pass。\n'
+        + json.dumps({'source': supplied_text(skill), 'candidates': visible}, ensure_ascii=False)
+    )
+
+
 def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='strict', workers=10,
-                   max_requests=96, max_runtime=1500, after=''):
+                   max_requests=96, max_runtime=1500, after='', manifest=None, runtime_topics=None):
     """Generate, then review, through the same free-model client. Phases do not run 10+10."""
     from concurrent.futures import ThreadPoolExecutor
     import threading
     import time
+    shared = global_writer_lock()
     store = Store(out)
-    handle = store.lock()
+    try:
+        handle = store.lock()
+    except SystemExit:
+        shared.close()
+        raise
     started = time.monotonic()
     workers = min(10, max(1, workers))
     state_path = Path(out) / 'batch-state.json'
@@ -737,9 +1022,35 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
             'schema': SCHEMA, 'completed': {}, 'stopped': None, 'calls': 0}
         if state.get('stopped'):
             return {'stopped': state['stopped'], 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
-        if hasattr(client, 'check_price'):
-            client.check_price()
-        selected = [skill for skill in skills if skill['id'] > after][:limit]
+        if manifest:
+            actual = manifest_digest(manifest.get('ids') or [], manifest.get('records') or [])
+            if manifest.get('sha256') != actual:
+                raise SystemExit('manifest sha256 does not match its ids and records')
+        try:
+            if hasattr(client, 'check_price'):
+                client.check_price()
+        except Exception as exc:
+            return {'stopped': str(exc), 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
+        rejected = []
+        skipped_errors = []
+        if manifest:
+            by_id = {skill['id']: skill for skill in skills}
+            declared = {row.get('id'): row.get('source_hash') for row in manifest.get('records') or [] if isinstance(row, dict)}
+            selected = []
+            for record_id in manifest['ids']:
+                skill = by_id.get(record_id)
+                if skill is None:
+                    rejected.append({'id': record_id, 'reason': 'not_in_catalog'})
+                    continue
+                current_hash = source_digest(skill)
+                expected_hash = declared.get(record_id)
+                if expected_hash and expected_hash != current_hash:
+                    rejected.append({'id': record_id, 'reason': 'stale_source_hash'})
+                    continue
+                selected.append(skill)
+            covered = after or ''
+        else:
+            selected, skipped_errors, covered = cursor_select(skills, state['completed'], after, limit)
         calls = {'n': 0}
         stop = threading.Event()
         stop_reason = {'text': None}
@@ -750,11 +1061,12 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
             entered = False
             if stop.is_set() or time.monotonic() - started > max_runtime:
                 return
-            source_hash = digest({'summary': skill.get('summary'), 'tasks': skill.get('tasks')})
+            source_hash = source_digest(skill)
             with gate:
                 previous = state['completed'].get(skill['id'])
-                if previous and previous.get('source_hash') == source_hash and (
-                        previous.get('phase') == 'reviewed' or (previous.get('phase') == 'generated' and not review)):
+                if previous and previous.get('source_hash') == source_hash and previous.get('phase') in ('error', 'reviewed'):
+                    return
+                if previous and previous.get('source_hash') == source_hash and previous.get('phase') == 'generated' and not review:
                     return
                 if calls['n'] >= max_requests:
                     stop.set()
@@ -768,7 +1080,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                 if review and previous and previous.get('annotation'):
                     base = json.loads(json.dumps(previous['annotation']))
                 else:
-                    base = map_record(skill, skill.get('tasks') or [], source_hash=source_hash)
+                    base = map_record(skill, skill.get('tasks') or [], source_hash=source_hash, runtime_topics=runtime_topics)
                 for condition in parse_conditions(supplied_text(skill)):
                     if not condition['accepted']:
                         continue
@@ -779,7 +1091,15 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                 attempt = Path(out) / 'attempts' / skill['id'] / ('review' if review else 'generate')
                 attempt.mkdir(parents=True, exist_ok=True)
                 title = ('ATLAS enrichment review ' if review else 'ATLAS enrichment generate ') + skill['id']
-                reply = client.request(supplied_text(skill), title, attempt)
+                if stop.is_set():
+                    with gate:
+                        calls['n'] -= 1
+                        peak['current'] = max(0, peak['current'] - 1)
+                    entered = False
+                    return
+                prompt = review_prompt(skill, base) if review else generation_prompt(skill)
+                (attempt / 'prompt.txt').write_text(prompt, encoding='utf-8')
+                reply = client.request(prompt, title, attempt)
                 from classify_unfiled import accept_cost
                 accounting = accept_cost(reply.get('usage') or {}, cost_policy)
                 if reply.get('tool_events') or reply.get('timed_out') or reply.get('exit_code') not in (0, None):
@@ -798,6 +1118,14 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                         base['quality'] = {'grade': 'U', 'model_review': 'rejected_not_independent', 'execution': 'not_run'}
                     else:
                         axes = payload.get('axes') if isinstance(payload.get('axes'), dict) else {}
+                        text = supplied_text(skill)
+                        if any(item.get('accepted') and (not item.get('quote') or item['quote'] not in text)
+                               for item in base.get('facts') or []):
+                            axes['source_fidelity'] = 'fail'
+                        for raw in payload.get('facts') or []:
+                            quote = raw.get('quote') if isinstance(raw, dict) else None
+                            if quote and quote not in text:
+                                axes['source_fidelity'] = 'fail'
                         grade = derive_grade({
                             'independent': True, 'source_scope': 'fixed_source', 'axes': axes,
                             'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
@@ -822,8 +1150,8 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                         'turns': entry['turns'],
                     })
             except Exception as exc:
-                from classify_unfiled import CostUnknown, PriceStop
-                if isinstance(exc, PriceStop):
+                from classify_unfiled import CostHalt, CostUnknown, PriceStop
+                if isinstance(exc, (PriceStop, CostHalt)):
                     stop.set()
                     stop_reason['text'] = str(exc)
                 elif isinstance(exc, CostUnknown):
@@ -861,6 +1189,29 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
             run_phase(False)
         if phase in ('review', 'both') and not stop.is_set():
             run_phase(True)
+        if not manifest:
+            covered = covered_cursor(skills, state['completed'], after)
+            skipped_errors = sorted(set(skipped_errors) | {
+                key for key, item in state['completed'].items() if item.get('phase') == 'error'})
+        manifest_out = {
+            'schema': 'atlas-enrichment-run-manifest/v0.1',
+            'calls_model': True, 'pilot_is_not_used': True,
+            'selection': 'manifest' if manifest else 'cursor',
+            'source_hashes_checked': any(
+                isinstance(row, dict) and row.get('source_hash') for row in (manifest or {}).get('records') or []),
+            'after': after or '',
+            'covered_cursor': covered,
+            'covered_cursor_stops_before_errors': True,
+            'selected_ids': [skill['id'] for skill in selected],
+            'skipped_errors': skipped_errors,
+            'rejected': rejected,
+            'stopped': stop_reason['text'],
+            'sessions': [{
+                'id': key, 'phase': item.get('phase'), 'session_id': item.get('session_id'),
+                'cost_accounting': item.get('cost_accounting'), 'fee_proven': item.get('fee_proven'),
+            } for key, item in state['completed'].items()],
+        }
+        (Path(out) / 'phase-manifest.json').write_text(json.dumps(manifest_out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         annotations = [item['annotation'] for item in state['completed'].values() if item.get('annotation')]
         applied = store.apply_holding_lock(annotations, 'enrichment-batch', dry_run=not annotations)
         missing = sum(1 for item in state['completed'].values()
@@ -875,6 +1226,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
         }
     finally:
         handle.close()
+        shared.close()
 
 
 def run(argv=None):
@@ -885,15 +1237,17 @@ def run(argv=None):
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--snapshot')
-    parser.add_argument('--limit', type=int, default=48)
+    parser.add_argument('--limit', type=int, default=None, help='run omits this to take 48; map omits this to read the whole catalogue. A number is a bounded slice, not a full-catalogue result')
     parser.add_argument('--phase', choices=('generate', 'review', 'both'), default='both')
     parser.add_argument('--cost-policy', choices=('strict', 'allow-missing-cost'), default='strict')
     parser.add_argument('--opencode', default='opencode')
     parser.add_argument('--workers', type=int, default=10)
     parser.add_argument('--max-requests', type=int, default=96)
     parser.add_argument('--max-runtime-seconds', type=int, default=1500)
-    parser.add_argument('--after', default='')
-    parser.add_argument('--runtime-allowlist', type=Path)
+    parser.add_argument('--after', default='', help='Continue after this record id. Empty starts at the first id and includes already classified records. Not the unfiled cursor')
+    parser.add_argument('--runtime-allowlist', type=Path, help='Same c26 snapshot for taxonomy, map, and run. Omitted, unknown topics are kept')
+    parser.add_argument('--manifest', type=Path, help='JSON with ids, records, and sha256. run selects only these ids, checks the hash, and does not scan other records')
+    parser.add_argument('--ids', help='Comma-separated record ids, 1 to 48. Selects only those ids. Does not check source hashes; use --manifest for the hashed list')
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
         report = taxonomy_reconciliation()
@@ -907,22 +1261,49 @@ def run(argv=None):
             ensure_ascii=False, indent=2))
         return 0
     if args.command == 'pilot':
-        skills = load_catalog(args.database) if args.database else []
-        plan = plan_pilot(skills, args.limit)
+        skills = load_catalog(args.database, with_tasks=False)[0] if args.database else []
+        plan = plan_pilot(skills, args.limit or 48)
         plan['calls_model'] = False
+        plan['read_by_run'] = False
         print(json.dumps(plan, ensure_ascii=False, indent=2))
         return 0
+    if args.apply and args.dry_run:
+        raise SystemExit('pass either --apply or --dry-run')
+    runtime_topics = None
+    if args.runtime_allowlist and args.command in ('map', 'run'):
+        raw = args.runtime_allowlist.read_bytes()
+        merged = merge_runtime_allowlist(taxonomy_reconciliation(), json.loads(raw), hashlib.sha256(raw).hexdigest())
+        runtime_topics = {(item['domain_id'], item['topic']) for item in merged['only_in_runtime']}
+        if args.command == 'run' or args.apply:
+            args.out.mkdir(parents=True, exist_ok=True)
+            (args.out / 'taxonomy-used.json').write_text(
+                json.dumps(merged, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     if args.command == 'run':
         from classify_unfiled import OpenCodeFreeClient
-        skills = load_catalog(args.database)
+        if args.manifest and args.ids:
+            raise SystemExit('pass only one of --manifest and --ids')
+        manifest = None
+        if args.manifest:
+            manifest, _file_hash = load_manifest(args.manifest)
+            skills = load_catalog(args.database, ids=manifest['ids'])[0]
+        elif args.ids:
+            ids = [piece.strip() for piece in args.ids.split(',') if piece.strip()]
+            if not 1 <= len(ids) <= 48:
+                raise SystemExit('--ids accepts 1 to 48 record ids')
+            manifest = {'ids': ids, 'records': [], 'sha256': manifest_digest(ids, [])}
+            skills = load_catalog(args.database, ids=ids)[0]
+        else:
+            skills = load_catalog(args.database)[0]
         report = run_enrichment(
-            OpenCodeFreeClient(args.opencode), args.out, skills, phase=args.phase, limit=min(args.limit, 48),
+            OpenCodeFreeClient(args.opencode), args.out, skills, phase=args.phase,
+            limit=48 if args.limit is None else max(1, args.limit),
             cost_policy=args.cost_policy, workers=args.workers, max_requests=args.max_requests,
-            max_runtime=args.max_runtime_seconds, after=args.after)
+            max_runtime=args.max_runtime_seconds, after=args.after, manifest=manifest,
+            runtime_topics=runtime_topics)
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 2 if report.get('stopped') else 0
     if args.command == 'aliases':
-        skills = load_catalog(args.database)
+        skills = load_catalog(args.database, with_tasks=False)[0]
         print(json.dumps(alias_report([
             {'relationship': 'representative', 'id': skill['id']} for skill in skills
         ]), ensure_ascii=False, indent=2))
@@ -930,10 +1311,10 @@ def run(argv=None):
     if args.command == 'rollback':
         print(json.dumps(Store(args.out).rollback(args.snapshot, dry_run=not args.apply), ensure_ascii=False, indent=2))
         return 0
-    skills = load_catalog(args.database)
-    annotations = [map_record(skill, skill['tasks'], source_hash=skill['id']) for skill in skills]
-    result = Store(args.out).apply(annotations, 'deterministic-map', dry_run=not args.apply)
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    report = map_catalogue(
+        args.database, args.out, after=args.after, limit=args.limit, runtime_topics=runtime_topics,
+        apply=args.apply, progress=lambda payload: print(json.dumps(payload, ensure_ascii=False), file=sys.stderr, flush=True))
+    print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 
 
