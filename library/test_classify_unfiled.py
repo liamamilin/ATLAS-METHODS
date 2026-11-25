@@ -105,7 +105,8 @@ class ClassificationRunnerTests(unittest.TestCase):
         runner = Runner(
             client, root / 'out', database, root / 'none.json', exclude or [], after, mode, workers,
             budget.get('max_candidates'), budget.get('max_requests'), budget.get('max_runtime_seconds'),
-            budget.get('clock'),
+            budget.get('clock'), cost_policy=budget.get('cost_policy', 'strict'),
+            resume_missing_cost_halt=budget.get('resume_missing_cost_halt', False),
         )
         return runner.run(), database
 
@@ -695,6 +696,136 @@ print(json.dumps({'messages': [{'id': 'msg-stop', 'type': 'assistant', 'finish':
             self.assertEqual(len(client.requests), 1)
             self.assertIn('tool events are not accepted', report['stopped'])
             self.assertEqual(report['proposed'], 0)
+
+    def test_allow_missing_cost_continues_without_calling_the_cost_zero(self):
+        usage = export_usage(json.dumps({'info': {'cost': 0, 'outcome': 'succeeded'}, 'messages': [
+            {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
+             'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+             'error': {'type': 'provider.invalid-output', 'status': 200,
+                       'message': 'OpenAI Chat stream ended without finish_reason'}},
+            {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+             'tokens': {'input': 1, 'output': 1}, 'model': {'providerID': PROVIDER, 'id': MODEL_ID}},
+        ]}).encode())
+        with TemporaryDirectory() as temp:
+            client = FakeClient([
+                {'json': good_decision(), 'usage': usage, 'session_id': 'ses_missing'},
+                {'json': good_decision(), 'session_id': 'ses_zero'},
+            ])
+            report, _ = self.run_trial(
+                Path(temp), client, ['b' * 32, 'c' * 32], workers=1, cost_policy='allow-missing-cost')
+            self.assertEqual(len(client.requests), 2)
+            self.assertIsNone(report['stopped'])
+            self.assertEqual(report['missing_cost_allowed'], 1)
+            self.assertEqual(report['verified_zero'], 1)
+            self.assertFalse(report['fee_proven_all'])
+            state = json.loads((Path(temp) / 'out/state.json').read_text(encoding='utf-8'))
+            missing = state['completed']['b' * 32]
+            self.assertEqual(missing['cost_accounting'], 'missing_cost_allowed_by_user')
+            self.assertFalse(missing['fee_proven'])
+            self.assertIsNone(missing['diagnosis']['turns'][0]['cost'])
+            self.assertEqual(missing['proposal']['cost_accounting'], 'missing_cost_allowed_by_user')
+            self.assertFalse(missing['proposal']['fee_proven'])
+
+    def test_paid_or_unverified_identity_still_stops_when_missing_cost_is_allowed(self):
+        paid = export_usage(json.dumps({'messages': [
+            {'id': 'msg-err', 'type': 'assistant', 'finish': 'error', 'cost': 1,
+             'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+             'error': {'type': 'provider.invalid-output', 'status': 200, 'message': 'stream ended'}},
+        ]}).encode())
+        unnamed = export_usage(json.dumps({'messages': [
+            {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
+             'error': {'type': 'provider.invalid-output', 'status': 200, 'message': 'stream ended'}},
+        ]}).encode())
+        with TemporaryDirectory() as temp:
+            client = FakeClient([{'json': good_decision(), 'usage': paid}, {'json': good_decision()}])
+            report, _ = self.run_trial(
+                Path(temp), client, ['b' * 32, 'c' * 32], workers=1, cost_policy='allow-missing-cost')
+            self.assertEqual(len(client.requests), 1)
+            self.assertIn('cost was 1', report['stopped'])
+        with TemporaryDirectory() as temp:
+            client = FakeClient([{'json': good_decision(), 'usage': unnamed}, {'json': good_decision()}])
+            report, _ = self.run_trial(
+                Path(temp), client, ['b' * 32, 'c' * 32], workers=1, cost_policy='allow-missing-cost')
+            self.assertEqual(len(client.requests), 1)
+            self.assertEqual(report['stopped'], 'identity_unverified')
+
+    def test_bad_content_stays_rejected_and_resume_does_not_rerun_old_failures(self):
+        usage = export_usage(json.dumps({'messages': [
+            {'id': 'msg-err', 'type': 'assistant', 'finish': 'error',
+             'model': {'providerID': PROVIDER, 'id': MODEL_ID},
+             'error': {'type': 'provider.invalid-output', 'status': 200, 'message': 'stream ended'}},
+            {'id': 'msg-stop', 'type': 'assistant', 'finish': 'stop', 'cost': 0,
+             'tokens': {'input': 1, 'output': 1}, 'model': {'providerID': PROVIDER, 'id': MODEL_ID}},
+        ]}).encode())
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            client = FakeClient([
+                {'text': 'not json', 'usage': usage},
+                {'text': 'still not json', 'usage': usage},
+                {'json': good_decision()},
+            ])
+            report, database = self.run_trial(
+                root, client, ['b' * 32, 'c' * 32], workers=1, cost_policy='allow-missing-cost')
+            self.assertIsNone(report['stopped'])
+            self.assertEqual(report['proposed'], 1)
+            self.assertEqual(report['errors'], 1)
+            self.assertEqual(len(client.requests), 3)
+            held = json.loads((root / 'out/state.json').read_text(encoding='utf-8'))
+            held['stopped'] = 'tool events are not accepted: tool'
+            (root / 'out/state.json').write_text(json.dumps(held), encoding='utf-8')
+            again = FakeClient([{'json': good_decision()}])
+            blocked = Runner(
+                again, root / 'out', database, root / 'none.json', [], '', 'continuous', 1,
+                10, 10, 60, cost_policy='allow-missing-cost', resume_missing_cost_halt=True,
+            ).run()
+            self.assertEqual(again.requests, [])
+            self.assertIn('tool events', blocked['stopped'])
+
+    def test_resume_missing_cost_halt_finalizes_saved_text_without_a_new_run(self):
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = build_db(root, ['b' * 32, 'c' * 32])
+            out = root / 'out'
+            attempt = out / 'attempts' / ('b' * 32) / '001'
+            attempt.mkdir(parents=True)
+            (attempt / 'response.txt').write_text(json.dumps(good_decision(), ensure_ascii=False), encoding='utf-8')
+            import sqlite3 as sqlite
+            connection = sqlite.connect(database)
+            connection.row_factory = sqlite.Row
+            from classify_unfiled import allowed_vocabulary, load_skill
+            skill = load_skill(connection, 'b' * 32, allowed_vocabulary(database))
+            connection.close()
+            state = {
+                'schema_version': SCHEMA_VERSION, 'model': MODEL, 'stopped': 'cost_unknown',
+                'completed': {'b' * 32: {
+                    'status': 'error', 'error': 'cost_unknown', 'fingerprint': skill['fingerprint'],
+                    'session_id': 'ses_old',
+                    'diagnosis': {'fee_proven': False, 'turns': [
+                        {'message_id': 'msg-err', 'providerID': PROVIDER, 'id': MODEL_ID,
+                         'cost_known': False, 'cost': None, 'finish': 'error'},
+                        {'message_id': 'msg-stop', 'providerID': PROVIDER, 'id': MODEL_ID,
+                         'cost_known': True, 'cost': 0, 'finish': 'stop'},
+                    ]},
+                }},
+            }
+            (out / 'state.json').write_text(json.dumps(state), encoding='utf-8')
+            client = FakeClient([{'json': good_decision()}])
+            report = Runner(
+                client, out, database, root / 'none.json', [], '', 'trial', 1,
+                cost_policy='allow-missing-cost', resume_missing_cost_halt=True,
+            ).run()
+            self.assertEqual(len(client.requests), 1)
+            self.assertIsNone(report['stopped'])
+            self.assertFalse(report['fee_proven_all'])
+            saved = json.loads((out / 'state.json').read_text(encoding='utf-8'))
+            old = saved['completed']['b' * 32]
+            self.assertEqual(old['prior_error'], 'cost_unknown')
+            self.assertIsNone(old['diagnosis']['turns'][0]['cost'])
+            self.assertEqual(old['cost_accounting'], 'missing_cost_allowed_by_user')
+            self.assertFalse(old['fee_proven'])
+            self.assertEqual(saved['previous_stop'], 'cost_unknown')
+            self.assertNotIn('b' * 32, client.requests[0]['prompt'])
+            self.assertIn('c' * 32, client.requests[0]['prompt'])
 
 
 if __name__ == '__main__':

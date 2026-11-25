@@ -2,7 +2,7 @@
 
 这个运行器只调用本机已登录的 OpenCode CLI，为待归类条目生成目录分类提案。它不写 `catalog.sqlite3`，不写分类覆盖层，也不把提案当成源文审阅。
 
-模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。费用只认每个 assistant 回合自己的 `cost` 字段。会话级 `info.cost`、最后一个成功回合的 0，以及 user、agent-switched、synthetic、idle 上的默认 0，都不能补上前面错误回合缺失的费用。缺失保持 unknown。新的 unknown、非 0、模型不一致或 tool 事件都会停止后续新的模型请求，已经在途的最多 10 条可以收尾并记下。同一输出目录不会因此自动开始下一批，也不会按同一指纹自动再跑。导出失败或还没有 messages 时最多再只读导出两次；已经导出的缺费用错误回合不再靠等待补出字段。`--recheck-exports` 只调用 `session export`，不调用 `run`，也不能把历史 unknown 改成已证明免费。
+模型固定为 `opencode-go/iceman-contributor-free`。每次运行先读 `opencode api model.list`，确认该模型仍是 active、enabled，且输入、输出、缓存读写价格都是 0。费用只认每个 assistant 回合自己的 `cost` 字段。会话级 `info.cost`、最后一个成功回合的 0，以及 user、agent-switched、synthetic、idle 上的默认 0，都不能补上前面错误回合缺失的费用。默认 `--cost-policy strict`：缺 `cost`、非 0、身份不可核、模型不一致或 tool 事件都会停止后续新请求。`--cost-policy allow-missing-cost` 只在这次显式授权下使用：模型仍是 `opencode-go/iceman-contributor-free`，四项报价仍必须是 0，身份必须核得上，tools 必须是 0。这时 assistant 回合缺 `cost` 记为 `missing_cost_allowed_by_user`，不写成 0，也不因此停掉整批；内容、引用或结构错误仍拒绝该条。明确非 0、报价不再为 0、身份偏离或 tool 事件仍然全局停止，不能换模型。已经因 `cost_unknown` 停住的目录，要加 `--resume-missing-cost-halt` 才会继续新候选，并只把“仅仅缺费用”且内容合格的已保存结果收成提案；其他停止原因和旧账本不清除，也不会自动重跑旧失败。汇总里的 `fee_proven_all` 只有全部已核回合都是 0 时才为真。
 
 响应契约是 `catalogue-classification-response/v2`。`decision` 只能是 `propose_existing_category` 或 `retain_unfiled`。`evidence` 必须是数组；每一项包含 `field`（`summary` 或 `task`）、`quote` 和 `task_index`。专题名必须与现有词表逐字相同，包括空格。旧契约目录不会被改写成成功，原始 `attempts/` 留在原处，重试使用新的 `--out`。
 

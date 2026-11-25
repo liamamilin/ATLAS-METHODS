@@ -35,6 +35,8 @@ MAX_BATCH_CANDIDATES = 100
 MAX_BATCH_REQUESTS = 600
 MAX_BATCH_RUNTIME = 6 * 60 * 60
 EXPORT_READS = 3
+COST_POLICY_STRICT = 'strict'
+COST_POLICY_ALLOW_MISSING = 'allow-missing-cost'
 SCHEMA_VERSION = 'catalogue-classification-response/v2'
 AGENT = 'atlas-catalogue'
 # OpenCode v2.2 agent permissions: ordered rules, last match wins, unmatched asks.
@@ -193,6 +195,14 @@ class PriceStop(RuntimeError):
 
 
 class CostUnknown(RuntimeError):
+    def __init__(self, status):
+        super().__init__(status)
+        self.status = status
+
+
+class CostHalt(RuntimeError):
+    """Unverifiable identity or a broken export. Missing cost alone is CostUnknown."""
+
     def __init__(self, status):
         super().__init__(status)
         self.status = status
@@ -393,12 +403,12 @@ def judge_turns(turns):
         return 'no_model_turn'
     if any(turn['cost_known'] and turn['cost'] not in (0, 0.0) for turn in turns):
         return 'nonzero'
-    if any(turn['cost_known'] and (turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID) for turn in turns):
+    if any(not turn.get('providerID') or not turn.get('id') for turn in turns):
+        return 'identity_unverified'
+    if any(turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID for turn in turns):
         return 'model_mismatch'
     if any(not turn['cost_known'] for turn in turns):
         return 'unknown'
-    if any(turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID for turn in turns):
-        return 'model_mismatch'
     return 'zero'
 
 
@@ -429,20 +439,31 @@ def cost_status(usage):
     return judge_turns(usage.get('turns') or [])
 
 
-def cost_gate(usage):
+def accept_cost(usage, policy=COST_POLICY_STRICT):
+    """Return the accounting label, or raise. Never turns a missing cost into 0."""
+    if policy not in (COST_POLICY_STRICT, COST_POLICY_ALLOW_MISSING):
+        raise ValueError('unknown cost policy')
     status = cost_status(usage)
     turns = [normalize_turn(turn) for turn in (usage.get('turns') or [])]
     if status == 'nonzero':
         shown = next(turn.get('cost') for turn in turns if turn.get('cost_known') and turn.get('cost') not in (0, 0.0))
         raise PriceStop(f'response cost was {shown}, not 0; stopping without a fallback')
     if status == 'model_mismatch':
-        bad = next((turn for turn in turns if turn.get('cost_known') and (
-            turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID)), turns[0] if turns else {})
+        bad = next((turn for turn in turns if turn.get('providerID') != PROVIDER or turn.get('id') != MODEL_ID), {})
         raise PriceStop(
             f"response provider/model was {bad.get('providerID')}/{bad.get('id')}, not {MODEL}; stopping"
         )
-    if status != 'zero':
+    if status == 'unknown':
+        if policy == COST_POLICY_ALLOW_MISSING:
+            return 'missing_cost_allowed_by_user'
         raise CostUnknown(status)
+    if status != 'zero':
+        raise CostHalt(status)
+    return 'verified_zero'
+
+
+def cost_gate(usage, policy=COST_POLICY_STRICT):
+    return accept_cost(usage, policy)
 
 
 def transport_signal(events):
@@ -662,7 +683,7 @@ def load_excluded(paths, overrides):
     return {item for item in excluded if isinstance(item, str)}
 
 
-def proposal_from(skill, decision):
+def proposal_from(skill, decision, cost_accounting=None):
     record = {
         'id': skill['id'], 'title': skill['title'], 'summary': skill['summary'], 'tasks': skill['tasks'],
         'repo': skill['representative']['repo'],
@@ -676,6 +697,8 @@ def proposal_from(skill, decision):
         'proposed_topic': decision.get('topic') if decision['decision'] != 'retain_unfiled' else None,
         'evidence': decision.get('evidence') or [],
         'reason': decision.get('reason'), 'retention_reason': decision.get('retention_reason'),
+        'cost_accounting': cost_accounting,
+        'fee_proven': cost_accounting == 'verified_zero',
         'quality_flags': ['provisional_not_final'] if decision['decision'] == 'retain_unfiled' else [],
         'source_record_sha256': skill['fingerprint'],
         'response_schema': SCHEMA_VERSION,
@@ -687,7 +710,8 @@ def proposal_from(skill, decision):
 
 class Runner:
     def __init__(self, client, out, database, overrides, exclude, after, mode, workers=MAX_IN_FLIGHT,
-                 max_candidates=None, max_requests=None, max_runtime_seconds=None, clock=None):
+                 max_candidates=None, max_requests=None, max_runtime_seconds=None, clock=None,
+                 cost_policy=COST_POLICY_STRICT, resume_missing_cost_halt=False):
         self.client = client
         self.out = Path(out)
         self.database = database
@@ -705,6 +729,12 @@ class Runner:
             self.max_candidates = max_candidates
             self.max_requests = max_requests
             self.max_runtime = max_runtime_seconds
+        if cost_policy not in (COST_POLICY_STRICT, COST_POLICY_ALLOW_MISSING):
+            raise SystemExit('cost policy must be strict or allow-missing-cost')
+        if resume_missing_cost_halt and cost_policy != COST_POLICY_ALLOW_MISSING:
+            raise SystemExit('恢复缺费用暂停必须同时使用 --cost-policy allow-missing-cost')
+        self.cost_policy = cost_policy
+        self.resume_missing_cost_halt = resume_missing_cost_halt
         self._check_budgets()
         self.stop = threading.Event()
         self.stop_reason = None
@@ -772,7 +802,7 @@ class Runner:
             if reply.get('retry'):
                 return {'status': 'retry', 'reason': reply['retry'], 'calls': attempt_no + 1}
             try:
-                cost_gate(reply['usage'])
+                accounting = accept_cost(reply['usage'], self.cost_policy)
                 if reply.get('timed_out'):
                     return self._halt(reply, attempt_no, 'runner_timeout')
                 if reply.get('exit_code') not in (0, None):
@@ -786,12 +816,18 @@ class Runner:
                 error = evidence_error(decision, skill)
                 if error:
                     raise ValueError(error)
+                diagnosis = diagnosis_of(reply)
+                diagnosis['cost_accounting'] = accounting
+                diagnosis['fee_proven'] = accounting == 'verified_zero'
                 return {'status': 'proposed' if decision['decision'] != 'retain_unfiled' else 'retained',
                         'decision': decision, 'calls': attempt_no + 1, 'duration_seconds': reply['duration_seconds'],
-                        'session_id': reply.get('session_id'), 'diagnosis': diagnosis_of(reply)}
+                        'session_id': reply.get('session_id'), 'diagnosis': diagnosis,
+                        'cost_accounting': accounting}
             except PriceStop as exc:
                 self._halt_new_runs(str(exc))
                 return {**self._closed(reply, attempt_no, str(exc)), 'status': 'stopped', 'reason': str(exc)}
+            except CostHalt as exc:
+                return self._halt(reply, attempt_no, exc.status)
             except CostUnknown:
                 return self._halt(reply, attempt_no, 'cost_unknown')
             except ValueError as exc:
@@ -878,7 +914,10 @@ class Runner:
         state = self.load_state()
         self.state = state
         self.calls = state.get('calls', 0)
-        if state.get('stopped'):
+        if state.get('stopped') == 'cost_unknown' and self.resume_missing_cost_halt:
+            state['previous_stop'] = state['stopped']
+            state['stopped'] = None
+        elif state.get('stopped'):
             self.stop.set()
             self.stop_reason = state['stopped']
         elif self.calls >= self.max_requests:
@@ -894,6 +933,8 @@ class Runner:
         room = self.max_candidates - counted
         connection = connect_readonly(self.database)
         try:
+            if state.get('previous_stop') == 'cost_unknown' and self.resume_missing_cost_halt:
+                self._finalize_saved(state, connection, vocabulary)
             pending = []
             for skill_id in select_ids(connection, self.after, excluded, None):
                 if self.stop.is_set():
@@ -936,16 +977,54 @@ class Runner:
             'proposed': sum(item.get('status') == 'proposed' for item in state['completed'].values()),
             'retained': sum(item.get('status') == 'retained' for item in state['completed'].values()),
             'errors': sum(item.get('status') == 'error' for item in state['completed'].values()),
-            'cost_unknown': sum(item.get('error') == 'cost_unknown' for item in state['completed'].values()),
+            'cost_unknown': sum(item.get('error') == 'cost_unknown' or item.get('prior_error') == 'cost_unknown'
+                                for item in state['completed'].values()),
+            'verified_zero': sum(item.get('cost_accounting') == 'verified_zero' for item in state['completed'].values()),
+            'missing_cost_allowed': sum(item.get('cost_accounting') == 'missing_cost_allowed_by_user'
+                                        for item in state['completed'].values()),
+            'cost_policy': self.cost_policy,
             'conflicts': sum(item.get('status') == 'fingerprint_conflict' for item in state['completed'].values()),
             'writes_catalogue': False, 'response_schema': SCHEMA_VERSION,
             'max_candidates': self.max_candidates, 'max_requests': self.max_requests,
             'max_runtime_seconds': self.max_runtime,
             'candidate_budget_reached': self.candidate_budget_reached,
+            'fee_proven_all': False,
         }
+        report['fee_proven_all'] = (
+            report['verified_zero'] > 0 and report['missing_cost_allowed'] == 0 and report['cost_unknown'] == 0)
         (self.out / 'report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         self.save_state(state)
         return report
+
+    def _finalize_saved(self, state, connection, vocabulary):
+        """Promote saved answers that failed only because a cost field was absent. No model call."""
+        for skill_id, entry in state.get('completed', {}).items():
+            if entry.get('error') != 'cost_unknown' or entry.get('proposal'):
+                continue
+            diagnosis = dict(entry.get('diagnosis') or {})
+            if diagnosis.get('timed_out'):
+                continue
+            turns = diagnosis.get('turns') or []
+            if judge_turns(turns) != 'unknown':
+                continue
+            response_path = self.out / 'attempts' / skill_id / '001' / 'response.txt'
+            skill = load_skill(connection, skill_id, vocabulary)
+            if skill is None or skill['fingerprint'] != entry.get('fingerprint') or not response_path.is_file():
+                continue
+            try:
+                decision = parse_decision(response_path.read_text(encoding='utf-8'))
+                error = evidence_error(decision, skill)
+                if error:
+                    raise ValueError(error)
+            except ValueError as exc:
+                entry['quality_error'] = str(exc)
+                continue
+            entry['prior_error'] = 'cost_unknown'
+            entry['error'] = None
+            entry['status'] = 'proposed' if decision['decision'] != 'retain_unfiled' else 'retained'
+            entry['cost_accounting'] = 'missing_cost_allowed_by_user'
+            entry['fee_proven'] = False
+            entry['proposal'] = proposal_from(skill, decision, 'missing_cost_allowed_by_user')
 
     def _work(self, pending, state):
         if not pending:
@@ -975,8 +1054,11 @@ class Runner:
         state, = (skill_result_state,)
         entry = {'status': result['status'], 'fingerprint': skill['fingerprint'], 'at': now(),
                  'session_id': result.get('session_id'), 'diagnosis': result.get('diagnosis')}
+        if result.get('cost_accounting'):
+            entry['cost_accounting'] = result['cost_accounting']
+            entry['fee_proven'] = result['cost_accounting'] == 'verified_zero'
         if result['status'] in ('proposed', 'retained'):
-            entry['proposal'] = proposal_from(skill, result['decision'])
+            entry['proposal'] = proposal_from(skill, result['decision'], result.get('cost_accounting'))
         else:
             entry['error'] = result.get('error') or result.get('reason')
         attempt = self.out / 'attempts' / skill['id']
@@ -1024,7 +1106,7 @@ def review_retains(path, out):
     return report
 
 
-def recheck_exports(client, out, database):
+def recheck_exports(client, out, database, cost_policy=COST_POLICY_STRICT):
     """Read saved sessions again. This does not call `opencode run` and does not invent a cost."""
     out = Path(out)
     lock_file = (out / 'runner.lock').open('a+')
@@ -1067,9 +1149,13 @@ def recheck_exports(client, out, database):
                     except PriceStop as exc:
                         state['stopped'] = str(exc)
                         break
-                if status != 'zero':
+                if status == 'unknown' and cost_policy == COST_POLICY_ALLOW_MISSING:
+                    accounting = 'missing_cost_allowed_by_user'
+                elif status != 'zero':
                     still_unknown.append(skill_id)
                     continue
+                else:
+                    accounting = 'verified_zero'
                 response_path = out / 'attempts' / skill_id / '001' / 'response.txt'
                 skill = load_skill(connection, skill_id, vocabulary)
                 if skill is None or skill['fingerprint'] != entry.get('fingerprint') or not response_path.is_file():
@@ -1083,8 +1169,11 @@ def recheck_exports(client, out, database):
                 except ValueError:
                     still_unknown.append(skill_id)
                     continue
+                entry['prior_error'] = entry.get('error')
                 entry['status'] = 'proposed' if decision['decision'] != 'retain_unfiled' else 'retained'
-                entry['proposal'] = proposal_from(skill, decision)
+                entry['proposal'] = proposal_from(skill, decision, accounting)
+                entry['cost_accounting'] = accounting
+                entry['fee_proven'] = accounting == 'verified_zero'
                 entry['error'] = None
                 promoted.append(skill_id)
         finally:
@@ -1125,9 +1214,11 @@ def run(argv=None):
     parser.add_argument('--max-runtime-seconds', type=float)
     parser.add_argument('--review-retains', type=Path)
     parser.add_argument('--recheck-exports', action='store_true')
+    parser.add_argument('--cost-policy', choices=(COST_POLICY_STRICT, COST_POLICY_ALLOW_MISSING), default=COST_POLICY_STRICT)
+    parser.add_argument('--resume-missing-cost-halt', action='store_true')
     args = parser.parse_args(argv)
     if args.recheck_exports:
-        report = recheck_exports(OpenCodeFreeClient(args.opencode), args.out, args.database)
+        report = recheck_exports(OpenCodeFreeClient(args.opencode), args.out, args.database, args.cost_policy)
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 2 if report.get('stopped') else 0
     if args.review_retains:
@@ -1142,6 +1233,7 @@ def run(argv=None):
     runner = Runner(
         client, args.out, args.database, args.overrides, args.exclude, args.after, args.mode, args.workers,
         args.max_candidates, args.max_requests, args.max_runtime_seconds,
+        cost_policy=args.cost_policy, resume_missing_cost_halt=args.resume_missing_cost_halt,
     )
     report = runner.run()
     print(json.dumps(report, ensure_ascii=False, indent=2))
