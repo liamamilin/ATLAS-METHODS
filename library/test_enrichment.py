@@ -49,9 +49,9 @@ class EnrichmentAcceptanceTests(unittest.TestCase):
         self.assertEqual(resolve_tool('Postgres'), ('postgresql', None))
         self.assertEqual(resolve_tool('Google Sheets'), ('gsheets', None))
         facts = [
-            {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
-            {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 1}},
-            {'dimension': 'tools', 'value_id': 'python', 'role': 'prohibited', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
+            {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 0}},
+            {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 1}},
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'prohibited', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 0}},
         ]
         self.assertEqual(same_task_query(facts, {'tools': ['react'], 'task_action': ['deploy']}, True), [])
         self.assertEqual(same_task_query(facts, {'tools': ['python']}, True), [])
@@ -290,8 +290,8 @@ class ClosedLoopTests(unittest.TestCase):
                 {'support': 'direct_explicit', 'accepted': True, 'quote': None, 'role': 'required'}]}) != [],
             'A09': resolve_tool('Postgres')[0] == 'postgresql' and resolve_tool('Google Sheets')[0] == 'gsheets',
             'A10': same_task_query([
-                {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
-                {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 1}},
+                {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 0}},
+                {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 1}},
             ], {'tools': ['react'], 'task_action': ['deploy']}, True) == [],
             'A11': map_record(skill(), [])['quality']['grade'] == 'U',
             'A12': map_record(skill(gaps=[{'detail': '原文未说明可选参数'}]), [])['gaps'][0]['detail'] == '原文未说明可选参数',
@@ -466,8 +466,8 @@ class ClosedLoopTests(unittest.TestCase):
 
     def test_same_task_accepts_skill_wide_evidence_and_rejects_example_roles(self):
         skill_wide = [
-            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'accepted': True, 'scope': {'level': 'skill'}},
-            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required', 'accepted': True,
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'skill'}},
+            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required', 'accepted': True, 'review_decision': 'accept',
              'scope': {'level': 'task', 'task_position': 1}},
         ]
         self.assertTrue(same_task_query(skill_wide, {'tools': ['python'], 'task_action': ['debug']}, True))
@@ -477,7 +477,7 @@ class ClosedLoopTests(unittest.TestCase):
                  'scope': {'level': 'task', 'task_position': 1}},
             ], {'side_effects': ['read_only']}, True), [])
         self.assertTrue(same_task_query([
-            {'dimension': 'side_effects', 'value_id': 'read_only', 'role': 'required', 'accepted': True,
+            {'dimension': 'side_effects', 'value_id': 'read_only', 'role': 'required', 'accepted': True, 'review_decision': 'accept',
              'scope': {'level': 'task', 'task_position': 1}},
         ], {'side_effects': ['read_only']}, True))
 
@@ -781,7 +781,9 @@ if 'review' in title:
         'axes': {'source_fidelity': 'pass', 'structural_completeness': 'pass', 'actionability': 'pass',
                  'limitations_and_risks': 'limited', 'classification_and_tag_fit': 'pass'},
         'fact_decisions': [
-            {'dimension': 'output_kind', 'value_id': 'report', 'quote': quote, 'decision': 'reject'},
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'quote': quote, 'task_position': 1, 'decision': 'accept'},
+            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required', 'quote': quote, 'task_position': 1, 'decision': 'accept'},
+            {'dimension': 'output_kind', 'value_id': 'report', 'role': 'required', 'quote': quote, 'task_position': 1, 'decision': 'reject'},
         ],
     }
 else:
@@ -823,8 +825,7 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' +
             annotation = annotations[0]
             self.assertEqual(annotation['quality']['source_scope'], 'summary_and_tasks')
             self.assertNotEqual(annotation['quality']['axes']['source_fidelity'], 'pass')
-            self.assertEqual(annotation['dimensions']['tools']['values'], [
-                {'id': 'python', 'role': 'required'}, {'id': 'docker', 'role': 'prohibited'}])
+            self.assertEqual(annotation['dimensions']['tools']['values'], [{'id': 'python', 'role': 'required'}])
             self.assertEqual(annotation['dimensions']['task_action']['values'], [{'id': 'debug', 'role': 'required'}])
             self.assertEqual(annotation['dimensions']['scenario']['state'], 'unknown')
             self.assertEqual(annotation['dimensions']['output_kind']['values'], [])
@@ -867,6 +868,147 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' +
             self.assertFalse(receipt['calls_model'])
             self.assertFalse(receipt['prior_review_reusable'])
             self.assertGreaterEqual(receipt['resolved'], 1)
+
+    def test_cli_accepts_only_an_explicit_fact_decision(self):
+        import json as json_lib
+        import sqlite3
+        import subprocess
+        import sys
+        from build import SCHEMA
+        from enrichment import finalize, load_current_annotations, search_annotations
+        script = Path(__file__).resolve().parents[1] / 'library' / 'enrichment.py'
+        quote = '页面使用 React 和 urql 取数。使用 Python 取数。'
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            record_id = 'b' * 32
+            connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                record_id, '标题', '公开样例。', 'code', 'catalogue', '后端与 API', 'unreviewed',
+                '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, '公开样例。'))
+            connection.execute(
+                'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                (record_id, 1, quote, '', '[]', json.dumps({'action': [], 'tool': ['python']})))
+            connection.commit()
+            connection.close()
+            fake = root / 'opencode'
+            fake.write_text('''#!/usr/bin/env python3
+import json, os, sys, time
+quote = '页面使用 React 和 urql 取数。'
+python_quote = '使用 Python 取数。'
+if sys.argv[1:3] == ['api', 'model.list']:
+    print(json.dumps({'data': [{'providerID': 'opencode-go', 'id': 'iceman-contributor-free',
+        'enabled': True, 'status': 'active',
+        'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}]}))
+    raise SystemExit
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1:3] == ['session', 'export']:
+    print(json.dumps({'messages': [{'type': 'assistant', 'info': {
+        'role': 'assistant', 'cost': 0, 'finish': 'stop',
+        'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}}]}))
+    raise SystemExit
+title = sys.argv[sys.argv.index('--title') + 1]
+if 'review' in title:
+    body = {'axes': {'source_fidelity': 'limited', 'structural_completeness': 'unknown',
+                     'actionability': 'limited', 'limitations_and_risks': 'limited',
+                     'classification_and_tag_fit': 'limited'},
+            'fact_decisions': [
+                {'fact_id': 'model-dup', 'dimension': 'tools', 'value_id': 'react', 'role': 'required',
+                 'quote': quote, 'task_position': 1, 'decision': 'accept'},
+                {'fact_id': 'model-dup', 'dimension': 'tools', 'value_id': 'react', 'role': 'mentioned',
+                 'quote': quote, 'task_position': 1, 'decision': 'unknown'},
+                {'dimension': 'tools', 'value_id': None, 'proposed_value': 'urql', 'role': 'mentioned',
+                 'quote': quote, 'task_position': 1, 'decision': 'unknown'},
+                {'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+                 'quote': python_quote, 'task_position': 1, 'decision': 'reject'},
+            ]}
+else:
+    body = {'facts': [
+        {'fact_id': 'model-dup', 'dimension': 'tools', 'value_id': 'react', 'role': 'required',
+         'quote': quote, 'task_position': 1},
+        {'fact_id': 'model-dup', 'dimension': 'tools', 'value_id': 'react', 'role': 'mentioned',
+         'quote': quote, 'task_position': 1},
+        {'fact_id': 'model-dup', 'dimension': 'tools', 'value_id': None, 'proposed_value': 'urql',
+         'role': 'mentioned', 'quote': quote, 'task_position': 1},
+        {'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+         'quote': python_quote, 'task_position': 1},
+    ]}
+print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' + str(time.time_ns()),
+                  'part': {'text': json.dumps(body, ensure_ascii=False)}}))
+''', encoding='utf-8')
+            fake.chmod(0o755)
+            exported = subprocess.run([sys.executable, '-B', str(script), 'manifest', '--database', str(database),
+                                       '--ids', record_id, '--out', str(root / 'one.json')],
+                                      capture_output=True, text=True)
+            self.assertEqual(exported.returncode, 0, exported.stderr)
+            ran = subprocess.run([sys.executable, '-B', str(script), 'run', '--opencode', str(fake),
+                                  '--database', str(database), '--manifest', str(root / 'one.json'),
+                                  '--out', str(root / 'out'), '--phase', 'both', '--workers', '1',
+                                  '--max-requests', '2', '--max-runtime-seconds', '1500',
+                                  '--cost-policy', 'allow-missing-cost'],
+                                 capture_output=True, text=True)
+            self.assertEqual(ran.returncode, 0, ran.stdout + ran.stderr)
+            loaded = load_current_annotations(root / 'out')
+            annotation = loaded[0]
+            accepted = [item for item in annotation['facts'] if item.get('accepted')]
+            self.assertEqual(len(accepted), 1)
+            self.assertEqual(accepted[0]['value_id'], 'react')
+            self.assertEqual(accepted[0]['role'], 'required')
+            self.assertEqual(accepted[0]['review_decision'], 'accept')
+            self.assertEqual(annotation['dimensions']['tools']['values'], [{'id': 'react', 'role': 'required'}])
+            unknowns = [item for item in annotation['facts'] if item.get('review_decision') == 'unknown']
+            self.assertTrue(unknowns)
+            self.assertTrue(all(item.get('accepted') is False and item.get('candidate') is True for item in unknowns))
+            urql = [item for item in annotation['facts'] if item.get('proposed_value') == 'urql']
+            self.assertEqual(len(urql), 1)
+            self.assertIsNone(urql[0]['value_id'])
+            self.assertNotEqual(urql[0]['value_status'], 'resolved_from_quote')
+            self.assertFalse(any(item.get('fact_id') == accepted[0]['fact_id'] and item.get('role') != 'required'
+                                  and item.get('accepted') for item in annotation['facts']))
+            legacy = [item for item in annotation['facts'] if item.get('support') == 'legacy_unverified']
+            self.assertTrue(legacy)
+            self.assertTrue(all(item.get('accepted') is False and item.get('source_kind') == 'legacy_unverified' for item in legacy))
+            self.assertIn('python', {item.get('value_id') for item in legacy})
+            self.assertNotIn('python', {item.get('id') for item in annotation['dimensions']['tools']['values']})
+            self.assertEqual(search_annotations(loaded, [('tools', ['react'], None)], True), [record_id])
+            again = json_lib.loads(json_lib.dumps(annotation))
+            review = {'fact_decisions': [
+                {'dimension': 'tools', 'value_id': 'react', 'role': 'required',
+                 'quote': '页面使用 React 和 urql 取数。', 'task_position': 1, 'decision': 'accept'},
+                {'dimension': 'tools', 'value_id': 'react', 'role': 'mentioned',
+                 'quote': '页面使用 React 和 urql 取数。', 'task_position': 1, 'decision': 'unknown'},
+            ], 'axes': annotation['quality']['axes']}
+            skill = {'id': record_id, 'summary': '公开样例。', 'tasks': [
+                {'position': 1, 'goal': quote, 'applicability': '', 'outputs': '', 'tags': {'tool': ['python']}}]}
+            finalize(again, review, skill)
+            self.assertEqual(sum(1 for item in again['facts'] if item.get('accepted')), 1)
+            self.assertTrue(all(not item.get('accepted') for item in again['facts'] if item.get('review_decision') == 'unknown'))
+            stored = load_current_annotations(root / 'out')
+            self.assertEqual(sum(1 for item in stored[0]['facts'] if item.get('accepted')), 1)
+            self.assertEqual(search_annotations(stored, [('tools', ['python'], None)], True), [record_id])
+            stale_review = json_lib.loads(json_lib.dumps(annotation))
+            for item in stale_review['facts']:
+                if item.get('proposed_value') == 'urql':
+                    item['value_id'] = 'react'
+                    item['value_status'] = 'resolved_from_quote'
+            (root / 'reviewed.json').write_text(json_lib.dumps(stale_review), encoding='utf-8')
+            replayed = subprocess.run([sys.executable, '-B', str(script), 'replay', '--database', str(database),
+                                       '--ids', record_id,
+                                       '--generation', str(root / 'out' / 'attempts' / record_id / 'generate' / 'response.txt'),
+                                       '--review', str(root / 'out' / 'attempts' / record_id / 'review' / 'response.txt'),
+                                       '--reviewed-annotation', str(root / 'reviewed.json'),
+                                       '--out', str(root / 'replayed.json')],
+                                      capture_output=True, text=True)
+            self.assertEqual(replayed.returncode, 0, replayed.stderr)
+            receipt = json_lib.loads(replayed.stdout)
+            self.assertFalse(receipt['calls_model'])
+            self.assertEqual(receipt['replay_status'], 'candidate_semantics_changed')
+            self.assertFalse(receipt['prior_review_reusable'])
+            self.assertEqual(receipt['accepted'], 0)
+            self.assertEqual(receipt['grade'], 'U')
 
 
 if __name__ == '__main__':

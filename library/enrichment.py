@@ -161,8 +161,10 @@ def fact(record_id, scope, dimension, value_id, role, support, quote, locator, s
         'source_hash': source_hash, 'method': method, 'schema': SCHEMA,
     }
     body['fact_id'] = digest(body)[:32]
-    body['accepted'] = bool(quote) and support in ('direct_explicit', 'deterministic_alias')
-    body['candidate'] = not body['accepted']
+    body['accepted'] = False
+    body['candidate'] = support != 'legacy_unverified'
+    if support == 'legacy_unverified':
+        body['source_kind'] = 'legacy_unverified'
     return body
 
 
@@ -284,7 +286,11 @@ def scope_key(fact_item):
 
 
 def satisfies(fact_item, dimension, values, role):
-    if fact_item.get('accepted') is not True:
+    if fact_item.get('support') == 'legacy_unverified':
+        if fact_item.get('dimension') != dimension or fact_item.get('value_id') not in values:
+            return False
+        return True
+    if fact_item.get('accepted') is not True or fact_item.get('review_decision') != 'accept':
         return False
     if fact_item.get('dimension') != dimension or fact_item.get('value_id') not in values:
         return False
@@ -417,6 +423,7 @@ class Store:
 
     def apply_holding_lock(self, annotations, batch_id, dry_run=False):
         previous = self.current()
+        annotations = [enforce_acceptance_invariant(item) for item in annotations]
         fingerprint = digest([item['fingerprint'] for item in annotations])
         if previous and previous.get('fingerprint') == fingerprint and previous.get('batch_id') == batch_id:
             return {'applied': False, 'idempotent': True, 'snapshot': previous.get('snapshot'), 'writes': 0}
@@ -838,7 +845,8 @@ def load_current_annotations(out):
     path = Path(out) / 'snapshots' / current['snapshot'] / 'annotations.jsonl'
     if not path.is_file():
         return None
-    return [json.loads(line) for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
+    return [enforce_acceptance_invariant(json.loads(line))
+            for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
 
 
 def search_annotations(annotations, filters, same_task=True):
@@ -980,16 +988,30 @@ def absorb_facts(annotation, payload, skill):
         received_value = raw.get('value_id')
         value = received_value if isinstance(received_value, str) and received_value else None
         value_status = 'model'
-        if value is None:
+        proposed = raw.get('proposed_value')
+        proposed = proposed.strip() if isinstance(proposed, str) else ''
+        if value and value not in (value_catalog().get(dimension) or []):
+            value_status = 'not_in_vocabulary'
+            value = None
+        if proposed:
+            if value and quote_mentions(dimension, value, proposed):
+                value_status = 'proposed_alias'
+            else:
+                # A nominated new word is not rewritten from some other catalog word in the same quote.
+                nominated = resolve_unique(dimension, proposed)
+                if nominated and quote_mentions(dimension, nominated, proposed):
+                    value = nominated
+                    value_status = 'proposed_alias'
+                else:
+                    value = None
+                    value_status = 'proposed_not_alias'
+        elif value is None:
             resolved = resolve_unique(dimension, quote) if quote_ok else None
             if resolved:
                 value = resolved
                 value_status = 'resolved_from_quote'
             else:
                 value_status = 'missing'
-        elif value not in (value_catalog().get(dimension) or []):
-            value_status = 'not_in_vocabulary'
-            value = None
         received_role = raw.get('role')
         if received_role in TOOL_ROLES:
             role = received_role
@@ -1017,12 +1039,37 @@ def absorb_facts(annotation, payload, skill):
         item['value_status'] = value_status
         item['role_received'] = received_role
         item['role_status'] = role_status
-        item['proposed_value'] = raw.get('proposed_value')
+        item['proposed_value'] = proposed or None
+        item['model_fact_id'] = raw.get('fact_id')
         item['program_evidence'] = evidenced
         item['rule_version'] = RULE_VERSION
+        item['review_decision'] = 'unspecified'
         item['accepted'] = False
         item['candidate'] = True
+        item['fact_id'] = digest({
+            'dimension': dimension, 'value_id': value, 'proposed_value': proposed or None,
+            'role': role, 'quote': item.get('quote'), 'scope': item.get('scope'),
+        })[:32]
         annotation['facts'].append(item)
+    deduped = []
+    seen = {}
+    for item in annotation['facts']:
+        if item.get('support') == 'legacy_unverified':
+            deduped.append(item)
+            continue
+        previous = seen.get(item['fact_id'])
+        if previous is None:
+            seen[item['fact_id']] = item
+            deduped.append(item)
+            continue
+        if {key: previous.get(key) for key in ('dimension', 'value_id', 'role', 'quote', 'scope', 'proposed_value')} != {
+                key: item.get(key) for key in ('dimension', 'value_id', 'role', 'quote', 'scope', 'proposed_value')}:
+            item['fact_id'] = digest({'collision': item['fact_id'], 'index': len(deduped)})[:32]
+            item['fact_id_collision'] = True
+            deduped.append(item)
+        else:
+            previous['duplicate_count'] = previous.get('duplicate_count', 1) + 1
+    annotation['facts'] = deduped
     annotation['fingerprint'] = digest({
         'record_id': annotation['record_id'], 'rule_version': RULE_VERSION,
         'facts': [item['fact_id'] for item in annotation['facts']],
@@ -1046,49 +1093,108 @@ def guard_tag_fit(axes, facts, text):
     return axes
 
 
-def settle_review(annotation, payload, skill):
-    """Accept a fact only from program evidence plus a review that did not reject that fact."""
+def decision_matches(item, decision):
+    """A model-supplied fact id never selects a different role, scope, or value."""
+    semantic = any(key in decision for key in ('dimension', 'value_id', 'role', 'quote', 'task_position'))
+    if decision.get('fact_id') and decision.get('fact_id') == item.get('fact_id') and not semantic:
+        return True
+    if not semantic or decision.get('dimension') != item.get('dimension'):
+        return False
+    if 'value_id' in decision and decision.get('value_id') != item.get('value_id'):
+        return False
+    if 'role' in decision and decision.get('role') != item.get('role'):
+        return False
+    if 'quote' in decision and decision.get('quote') != item.get('quote'):
+        return False
+    if 'task_position' in decision and (item.get('scope') or {}).get('task_position') != decision.get('task_position'):
+        return False
+    return True
+
+
+def enforce_acceptance_invariant(annotation):
+    """Accepted means this review explicitly accepted this fact. Nothing else may promote it."""
+    if not isinstance(annotation, dict):
+        return annotation
+    for item in annotation.get('facts') or []:
+        if item.get('support') == 'legacy_unverified':
+            item['accepted'] = False
+            item['candidate'] = False
+            item['source_kind'] = 'legacy_unverified'
+            item.pop('accepted_by', None)
+            continue
+        if item.get('accepted') and item.get('review_decision') != 'accept':
+            item['accepted'] = False
+            item.pop('accepted_by', None)
+        item['candidate'] = not item.get('accepted')
+    for name in DIMENSIONS:
+        facet = (annotation.get('dimensions') or {}).get(name)
+        if not isinstance(facet, dict):
+            continue
+        legacy_values = []
+        reviewed_values = []
+        for item in annotation.get('facts') or []:
+            if item.get('dimension') != name or not item.get('value_id'):
+                continue
+            shown = item['value_id'] if item.get('role') in (None, 'unknown') else {
+                'id': item['value_id'], 'role': item.get('role')}
+            if item.get('support') == 'legacy_unverified':
+                legacy_values.append(shown if isinstance(shown, dict) else {'id': shown, 'source': 'legacy_unverified'})
+            elif item.get('accepted') is True and item.get('review_decision') == 'accept':
+                reviewed_values.append(shown)
+        facet['legacy_values'] = legacy_values
+        facet['values'] = reviewed_values
+        if reviewed_values:
+            facet['state'] = 'known'
+            facet['reason'] = None
+        elif facet.get('state') == 'known':
+            facet['state'] = 'partial' if legacy_values else 'unknown'
+            facet['reason'] = 'legacy_unverified' if legacy_values else 'not_yet_annotated'
+    return annotation
+
+
+def finalize(annotation, payload, skill):
+    """The only place a model fact becomes accepted. Mapping a value is not acceptance."""
     text = supplied_text(skill)
     axes = dict(payload.get('axes') if isinstance(payload.get('axes'), dict) else {})
     if axes.get('source_fidelity') == 'pass':
         axes['source_fidelity'] = 'limited'
         axes['source_fidelity_reason'] = 'supply_is_summary_and_tasks_only'
-    decisions = {}
-    for row in payload.get('fact_decisions') or []:
-        if isinstance(row, dict):
-            decisions[(row.get('dimension'), row.get('value_id'), row.get('quote'))] = row.get('decision')
-    for item in annotation.get('facts') or []:
-        if item.get('support') == 'legacy_unverified':
+    model_facts = [item for item in annotation.get('facts') or [] if item.get('support') != 'legacy_unverified']
+    for item in model_facts:
+        item['accepted'] = False
+        item['candidate'] = True
+        item.pop('accepted_by', None)
+        item['review_decision'] = 'unspecified'
+    for decision in payload.get('fact_decisions') or []:
+        if not isinstance(decision, dict):
             continue
-        decision = decisions.get((item.get('dimension'), item.get('value_id'), item.get('quote')))
-        item['review_decision'] = decision or 'unspecified'
-        if decision == 'reject' or not item.get('program_evidence'):
-            item['accepted'] = False
-            item['candidate'] = True
-            continue
-        if item.get('dimension') in ('input_kind', 'output_kind', 'kind', 'scenario') and decision != 'accept':
-            item['accepted'] = False
-            item['candidate'] = True
-            continue
-        item['accepted'] = True
-        item['candidate'] = False
-        item['accepted_by'] = RULE_VERSION
-    axes = guard_tag_fit(axes, annotation.get('facts') or [], text)
-    if axes.get('classification_and_tag_fit') == 'fail':
-        for item in annotation.get('facts') or []:
-            if item.get('support') != 'legacy_unverified':
+        matched = [item for item in model_facts if decision_matches(item, decision)]
+        if len(matched) != 1:
+            for item in matched:
+                item['review_decision'] = 'conflict'
                 item['accepted'] = False
                 item['candidate'] = True
-    for name in DIMENSIONS:
-        values = []
-        for item in annotation.get('facts') or []:
-            if item.get('dimension') == name and item.get('accepted') and item.get('value_id'):
-                role = item.get('role')
-                values.append(item['value_id'] if role in (None, 'unknown') else {'id': item['value_id'], 'role': role})
-        if values:
-            annotation['dimensions'][name]['state'] = 'known'
-            annotation['dimensions'][name]['reason'] = None
-            annotation['dimensions'][name]['values'] = values
+            continue
+        item = matched[0]
+        decision_name = decision.get('decision')
+        if decision_name not in ('accept', 'reject', 'unknown'):
+            decision_name = 'unknown'
+        item['review_decision'] = decision_name
+        if decision_name == 'accept' and item.get('program_evidence') and item.get('value_id'):
+            item['accepted'] = True
+            item['candidate'] = False
+            item['accepted_by'] = 'independent_review_accept'
+        else:
+            item['accepted'] = False
+            item['candidate'] = True
+            item.pop('accepted_by', None)
+    axes = guard_tag_fit(axes, model_facts, text)
+    if axes.get('classification_and_tag_fit') == 'fail':
+        for item in model_facts:
+            item['accepted'] = False
+            item['candidate'] = True
+            item.pop('accepted_by', None)
+    enforce_acceptance_invariant(annotation)
     grade = derive_grade({
         'independent': True, 'source_scope': 'summary_and_tasks', 'axes': axes,
         'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
@@ -1102,6 +1208,44 @@ def settle_review(annotation, payload, skill):
         'accepted': [item['fact_id'] for item in annotation['facts'] if item.get('accepted')],
         'source_hash': annotation.get('source_hash'),
     })
+    return annotation
+
+
+def settle_review(annotation, payload, skill):
+    return finalize(annotation, payload, skill)
+
+
+def candidate_signature(annotation):
+    rows = []
+    for item in annotation.get('facts') or []:
+        if item.get('support') == 'legacy_unverified':
+            continue
+        rows.append({key: item.get(key) for key in (
+            'dimension', 'value_id', 'proposed_value', 'role', 'quote', 'scope')})
+    return digest(rows)
+
+
+def replay_saved(skill, generation, review, reviewed=None):
+    """Reapply a saved review only when the candidate facts are still the ones that were reviewed."""
+    annotation = map_record(skill, skill.get('tasks') or [], source_hash=source_digest(skill))
+    absorb_facts(annotation, generation, skill)
+    if reviewed is not None and candidate_signature(annotation) != candidate_signature(reviewed):
+        for item in annotation.get('facts') or []:
+            if item.get('support') != 'legacy_unverified':
+                item['accepted'] = False
+                item['candidate'] = True
+                item['review_decision'] = 'unspecified'
+                item.pop('accepted_by', None)
+        enforce_acceptance_invariant(annotation)
+        annotation['quality'] = {
+            'grade': 'U', 'model_review': 'not_reused', 'execution': 'not_run',
+            'prior_review_reusable': False, 'replay_status': 'candidate_semantics_changed',
+            'rule_version': RULE_VERSION,
+        }
+        return annotation
+    finalize(annotation, review, skill)
+    annotation['quality']['prior_review_reusable'] = reviewed is not None
+    annotation['quality']['replay_status'] = 'acceptance_replayed'
     return annotation
 
 
@@ -1307,9 +1451,9 @@ def generation_prompt(skill):
 
 def review_prompt(skill, annotation):
     visible = [{
-        'dimension': item['dimension'], 'value_id': item.get('value_id'), 'role': item.get('role'),
-        'value_status': item.get('value_status'), 'proposed_value': item.get('proposed_value'),
-        'scope': item.get('scope'), 'quote': item.get('quote'),
+        'fact_id': item.get('fact_id'), 'dimension': item['dimension'], 'value_id': item.get('value_id'),
+        'role': item.get('role'), 'value_status': item.get('value_status'),
+        'proposed_value': item.get('proposed_value'), 'scope': item.get('scope'), 'quote': item.get('quote'),
         'program_evidence': item.get('program_evidence'),
     } for item in annotation.get('facts') or [] if item.get('support') != 'legacy_unverified']
     return (
@@ -1318,7 +1462,8 @@ def review_prompt(skill, annotation):
         '无 quote、引用不在供给里、value_id 不在词表、引用属于另一个任务，或把否定句当成 required 的，decision 写 reject。'
         '证据不够就写 unknown，不要因为其它轴通过就接受全部候选。'
         '返回 JSON：axes 的键是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
-        'fact_decisions 的每一项含 dimension、value_id、quote、decision。decision 只能是 accept、reject、unknown。\n'
+        'fact_decisions 的每一项含 fact_id、dimension、value_id、role、quote、task_position、decision。'
+        'decision 只能是 accept、reject、unknown。只有 decision 为 accept 的那一条会进入可筛选值；unknown 保持候选。\n'
         + json.dumps({
             'source_scope': 'summary_and_tasks', 'source': supplied_text(skill), 'candidates': visible,
         }, ensure_ascii=False)
@@ -1531,7 +1676,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'repair', 'rollback', 'run', 'aliases'))
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'repair', 'replay', 'rollback', 'run', 'aliases'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
@@ -1546,7 +1691,10 @@ def run(argv=None):
     parser.add_argument('--max-runtime-seconds', type=int, default=1500)
     parser.add_argument('--after', default='', help='Continue after this record id. Empty starts at the first id and includes already classified records. Not the unfiled cursor')
     parser.add_argument('--runtime-allowlist', type=Path, help='Same c26 snapshot for taxonomy, map, and run. Omitted, unknown topics are kept')
-    parser.add_argument('--attempt', type=Path, help='Saved model response JSON for repair. repair does not call a model')
+    parser.add_argument('--attempt', type=Path, help='Saved generation response JSON for repair. repair does not call a model')
+    parser.add_argument('--generation', type=Path, help='Saved generation response JSON for replay')
+    parser.add_argument('--review', type=Path, help='Saved review response JSON for replay')
+    parser.add_argument('--reviewed-annotation', type=Path, help='Annotation the saved review actually saw')
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     args = parser.parse_args(argv)
@@ -1591,6 +1739,24 @@ def run(argv=None):
             args.out.mkdir(parents=True, exist_ok=True)
             (args.out / 'taxonomy-used.json').write_text(
                 json.dumps(merged, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    if args.command == 'replay':
+        ids = parse_explicit_ids(args.ids)
+        if len(ids) != 1 or not args.generation or not args.review:
+            raise SystemExit('replay needs one id, --generation, and --review')
+        skill = select_explicit_ids(args.database, ids)[0]
+        reviewed = json.loads(args.reviewed_annotation.read_text(encoding='utf-8')) if args.reviewed_annotation else None
+        annotation = replay_saved(
+            skill, json.loads(args.generation.read_text(encoding='utf-8')),
+            json.loads(args.review.read_text(encoding='utf-8')), reviewed)
+        Path(args.out).write_text(json.dumps(annotation, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(json.dumps({
+            'calls_model': False,
+            'replay_status': annotation['quality'].get('replay_status'),
+            'prior_review_reusable': annotation['quality'].get('prior_review_reusable'),
+            'grade': annotation['quality'].get('grade'),
+            'accepted': sum(1 for item in annotation['facts'] if item.get('accepted')),
+        }, ensure_ascii=False, indent=2))
+        return 0
     if args.command == 'repair':
         ids = parse_explicit_ids(args.ids)
         if len(ids) != 1:

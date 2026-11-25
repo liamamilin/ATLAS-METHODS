@@ -68,7 +68,23 @@ python3 library/enrichment.py repair \
   --out repaired.json
 ```
 
-剩下未请求的代表先取 1 条做下一道有效性门，通过后再取 8 条，然后是 38 条。三次合计仍在最初 96 次请求之内，不重置已用掉的 2 次。旧的空壳结果留在原目录，不算 48 条全部成功。
+剩下未请求的代表先取 1 条做下一道有效性门，通过后再取 8 条，然后是 38 条。三次合计仍在最初 96 次请求之内，不重置已用掉的次数。已经请求过的两条不要重跑。
+
+可筛选值只来自逐事实 `decision` 为 `accept` 的候选。`unknown`、缺项、`reject` 和冲突都保持候选，不会因为规范值对得上或总轴通过而进入 `values`。明确写下的新词（例如 `proposed_value`）不会因为同一句里另有一个已知工具就被收成那个工具。
+
+已保存的那一条如果把新词收成了别的规范值，候选语义已经变了。`replay` 对照 `--reviewed-annotation` 后会停在 U，不沿用旧 D1，也不接受任何事实：
+
+```bash
+python3 library/enrichment.py replay \
+  --database data/library/catalog.sqlite3 \
+  --ids 那一条代表id \
+  --generation 该条generate/response.txt \
+  --review 该条review/response.txt \
+  --reviewed-annotation 当时保存的annotation.json \
+  --out replayed.json
+```
+
+输出里 `replay_status` 为 `candidate_semantics_changed` 时，这份结果不能当作审核通过。
 
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 
