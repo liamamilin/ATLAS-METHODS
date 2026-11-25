@@ -371,29 +371,32 @@ class Store:
     def apply(self, annotations, batch_id, dry_run=False):
         handle = self.lock()
         try:
-            previous = self.current()
-            fingerprint = digest([item['fingerprint'] for item in annotations])
-            if previous and previous.get('fingerprint') == fingerprint and previous.get('batch_id') == batch_id:
-                return {'applied': False, 'idempotent': True, 'snapshot': previous.get('snapshot'), 'writes': 0}
-            snapshot = digest({'batch_id': batch_id, 'fingerprint': fingerprint})[:16]
-            plan = {'snapshot': snapshot, 'records': len(annotations), 'batch_id': batch_id, 'dry_run': dry_run}
-            if dry_run:
-                plan['writes'] = 0
-                return plan
-            folder = self.out / 'snapshots' / snapshot
-            folder.mkdir(parents=True, exist_ok=True)
-            (folder / 'annotations.jsonl').write_text(
-                ''.join(json.dumps(item, ensure_ascii=False) + '\n' for item in annotations), encoding='utf-8')
-            pointer = {'schema': SCHEMA, 'snapshot': snapshot, 'batch_id': batch_id, 'fingerprint': fingerprint,
-                       'previous': None if not previous else previous.get('snapshot'), 'records': len(annotations)}
-            temporary = self.out / 'current.json.tmp'
-            temporary.write_text(json.dumps(pointer, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-            temporary.replace(self.out / 'current.json')
-            plan['writes'] = 1
-            plan['applied'] = True
-            return plan
+            return self.apply_holding_lock(annotations, batch_id, dry_run)
         finally:
             handle.close()
+
+    def apply_holding_lock(self, annotations, batch_id, dry_run=False):
+        previous = self.current()
+        fingerprint = digest([item['fingerprint'] for item in annotations])
+        if previous and previous.get('fingerprint') == fingerprint and previous.get('batch_id') == batch_id:
+            return {'applied': False, 'idempotent': True, 'snapshot': previous.get('snapshot'), 'writes': 0}
+        snapshot = digest({'batch_id': batch_id, 'fingerprint': fingerprint})[:16]
+        plan = {'snapshot': snapshot, 'records': len(annotations), 'batch_id': batch_id, 'dry_run': dry_run}
+        if dry_run:
+            plan['writes'] = 0
+            return plan
+        folder = self.out / 'snapshots' / snapshot
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / 'annotations.jsonl').write_text(
+            ''.join(json.dumps(item, ensure_ascii=False) + '\n' for item in annotations), encoding='utf-8')
+        pointer = {'schema': SCHEMA, 'snapshot': snapshot, 'batch_id': batch_id, 'fingerprint': fingerprint,
+                   'previous': None if not previous else previous.get('snapshot'), 'records': len(annotations)}
+        temporary = self.out / 'current.json.tmp'
+        temporary.write_text(json.dumps(pointer, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        temporary.replace(self.out / 'current.json')
+        plan['writes'] = 1
+        plan['applied'] = True
+        return plan
 
     def rollback(self, snapshot, dry_run=False):
         handle = self.lock()
@@ -419,18 +422,21 @@ class Store:
     def append_ledger(self, kind, entry):
         handle = self.lock()
         try:
-            folder = self.out / 'ledger'
-            folder.mkdir(parents=True, exist_ok=True)
-            path = folder / (kind + '.jsonl')
-            line = json.dumps(entry, ensure_ascii=False)
-            existing = path.read_text(encoding='utf-8') if path.is_file() else ''
-            if line + '\n' in existing or line in existing.splitlines():
-                return {'appended': False, 'idempotent': True}
-            with path.open('a', encoding='utf-8') as handle_out:
-                handle_out.write(line + '\n')
-            return {'appended': True}
+            return self.append_holding_lock(kind, entry)
         finally:
             handle.close()
+
+    def append_holding_lock(self, kind, entry):
+        folder = self.out / 'ledger'
+        folder.mkdir(parents=True, exist_ok=True)
+        path = folder / (kind + '.jsonl')
+        line = json.dumps(entry, ensure_ascii=False)
+        existing = path.read_text(encoding='utf-8') if path.is_file() else ''
+        if line in existing.splitlines():
+            return {'appended': False, 'idempotent': True}
+        with path.open('a', encoding='utf-8') as handle_out:
+            handle_out.write(line + '\n')
+        return {'appended': True}
 
 
 class Flight:
@@ -530,18 +536,370 @@ def detail_for(out, skill_id):
     return None
 
 
+CONDITION_RULES = (
+    ('requirements', 'authentication', 'required', ('需要登录', '必须登录')),
+    ('requirements', 'network', 'required', ('需要网络',)),
+    ('requirements', 'permission', 'required', ('需要管理员权限', '需要管理员')),
+    ('side_effects', 'secrets_handling', 'prohibited', ('不要泄露密钥', '不要发送密钥')),
+)
+
+
+def parse_conditions(text):
+    """Keep the original line. Accept only a closed phrase that appears inside it."""
+    found = []
+    for line in (text or '').splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        matched = False
+        for dimension, value_id, role, phrases in CONDITION_RULES:
+            if any(phrase in stripped for phrase in phrases):
+                found.append({
+                    'dimension': dimension, 'value_id': value_id, 'role': role,
+                    'quote': stripped, 'accepted': True, 'candidate': False,
+                    'support': 'direct_explicit',
+                })
+                matched = True
+        if not matched and any(word in stripped for word in ('条件', '权限', '密钥', '登录', '网络')):
+            found.append({
+                'dimension': 'requirements', 'value_id': None, 'role': 'unknown',
+                'quote': stripped, 'accepted': False, 'candidate': True,
+                'support': 'bounded_inference',
+            })
+    return found
+
+
+def alias_report(rows):
+    representatives = [row for row in rows if row.get('relationship') == 'representative']
+    aliases = [row for row in rows if row.get('relationship') != 'representative']
+    return {
+        'representatives': len(representatives),
+        'aliases': len(aliases),
+        'aliases_with_inherited_grade': sum(1 for row in aliases if row.get('quality_grade')),
+        'quality_inherited': False,
+    }
+
+
+def runtime_pairs(payload):
+    """Read either an explicit {pairs:[{domain_id,topic}]} file or the c26 reconciliation list."""
+    raw_pairs = payload.get('allowed_pairs')
+    if not isinstance(raw_pairs, list):
+        raise ValueError('runtime allowlist pairs must be a list')
+    stated = payload.get('runtime_allowed_last_saved') if isinstance(payload.get('runtime_allowed_last_saved'), dict) else {}
+    source = stated.get('source') or payload.get('source')
+    version = stated.get('sha256') or payload.get('version') or payload.get('sha256')
+    parsed = []
+    for pair in raw_pairs:
+        if isinstance(pair, dict):
+            domain, topic = pair.get('domain_id'), pair.get('topic')
+        elif isinstance(pair, (list, tuple)) and len(pair) == 2:
+            domain, topic = pair
+        else:
+            domain, topic = None, None
+        parsed.append((domain, topic))
+    return parsed, source, version
+
+
+def merge_runtime_allowlist(code, payload, raw_hash):
+    parsed, source, version = runtime_pairs(payload)
+    code_keys = {(item['domain_id'], item['topic']) for item in code['pairs']}
+    runtime_keys = set()
+    skipped = 0
+    extra = []
+    for domain, topic in parsed:
+        if domain not in LABELS or domain == 'unfiled' or not isinstance(topic, str) or not topic:
+            skipped += 1
+            continue
+        runtime_keys.add((domain, topic))
+        if (domain, topic) in code_keys:
+            continue
+        extra.append({
+            'domain_id': domain, 'topic': topic, 'topic_id': None,
+            'topic_resolved': topic != UNSORTED_TOPIC, 'origin': 'runtime_observed',
+        })
+    only_code = sorted(code_keys - runtime_keys)
+    merged = dict(code)
+    merged['pairs'] = [{**item, 'origin': item.get('origin', 'code_canonical')} for item in code['pairs']] + extra
+    merged['runtime_observed_added'] = len(extra)
+    merged['runtime_skipped'] = skipped
+    merged['allowed_pairs_with_runtime'] = len(code_keys | runtime_keys)
+    merged['only_in_runtime'] = [
+        {'domain_id': item['domain_id'], 'topic': item['topic'], 'topic_id': None} for item in extra]
+    merged['only_in_code'] = [{'domain_id': domain, 'topic': topic, 'topic_id': None} for domain, topic in only_code]
+    merged['code_pairs_kept'] = len(code_keys)
+    merged['runtime_source'] = source
+    merged['runtime_vocabulary_sha256'] = version
+    merged['snapshot_file_sha256'] = raw_hash
+    merged['difference_source'] = (
+        'Code export is static_topics only. Runtime pairs add path-derived legal labels '
+        'whose folder slug is not one of the Chinese LEGAL_TOPICS names. Those pairs stay '
+        'allowed and are not conflicts. Nothing is added or removed to force 155 or 163.'
+    )
+    return merged
+
+
+def load_current_annotations(out):
+    current = Store(out).current()
+    if not current:
+        return None
+    path = Path(out) / 'snapshots' / current['snapshot'] / 'annotations.jsonl'
+    if not path.is_file():
+        return None
+    return [json.loads(line) for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
+
+
+def search_annotations(annotations, filters, same_task=True):
+    """filters: list of (dimension, values, state or None)."""
+    hits = []
+    for annotation in annotations:
+        facts = annotation.get('facts') or []
+        ok = True
+        for dimension, values, state in filters:
+            facet = (annotation.get('dimensions') or {}).get(dimension) or {}
+            if state and facet.get('state') != state:
+                ok = False
+                break
+            if values and not same_task_query(facts, {dimension: values}, same_task):
+                ok = False
+                break
+        if ok and filters:
+            # Cross-dimension AND must hold inside one scope when same_task is set.
+            active = [(dimension, values) for dimension, values, _state in filters if values]
+            if same_task and len(active) > 1:
+                if not same_task_query(facts, dict(active), True):
+                    ok = False
+        if ok:
+            hits.append(annotation['record_id'])
+    return hits
+
+
+def supplied_text(skill):
+    parts = [skill.get('summary') or '']
+    for task in skill.get('tasks') or []:
+        parts.extend(str(task.get(key) or '') for key in ('goal', 'applicability', 'outputs'))
+    return '\n'.join(parts)
+
+
+def absorb_facts(annotation, payload, text):
+    for raw in payload.get('facts') or []:
+        if not isinstance(raw, dict) or raw.get('dimension') not in DIMENSIONS:
+            continue
+        quote = raw.get('quote') if isinstance(raw.get('quote'), str) else ''
+        quote_ok = bool(quote) and quote in text
+        value = raw.get('value_id')
+        role = raw.get('role') if raw.get('role') in TOOL_ROLES else 'unknown'
+        if raw.get('dimension') == 'tools' and quote_ok and value in TOOL_TAGS:
+            detected = tool_role_from_text(quote, value)
+            if detected in ('prohibited', 'example', 'alternative'):
+                role = detected
+        known_value = value in ACTION_TAGS or value in TOOL_TAGS or value in INPUT_KINDS or value in OUTPUT_KINDS or value in KIND_VALUES
+        mentions_value = True
+        if value in TOOL_TAGS and quote_ok:
+            mentions_value = tool_role_from_text(quote, value) is not None or TOOL_TAGS[value][0].casefold() in quote.casefold()
+        if value in ACTION_TAGS and quote_ok:
+            mentions_value = ACTION_TAGS[value][0] in quote or any(
+                alias in quote.casefold() for alias in ACTION_TAGS[value][1].casefold().split('|'))
+        accepted = quote_ok and known_value and mentions_value
+        item = fact(
+            annotation['record_id'],
+            {'level': 'task', 'task_position': raw.get('task_position')} if raw.get('task_position') is not None else {'level': 'skill'},
+            raw['dimension'], value, role,
+            'direct_explicit' if accepted else 'bounded_inference',
+            quote if quote_ok else None, 'model_quote', annotation.get('source_hash') or '', 'model_generation')
+        item['accepted'] = accepted
+        item['candidate'] = not accepted
+        annotation['facts'].append(item)
+        if accepted:
+            facet = annotation['dimensions'][raw['dimension']]
+            facet['state'] = 'known'
+            facet['reason'] = None
+            facet['values'].append(value if role == 'unknown' else {'id': value, 'role': role})
+    annotation['fingerprint'] = digest({
+        'record_id': annotation['record_id'], 'facts': [item['fact_id'] for item in annotation['facts']],
+        'source_hash': annotation.get('source_hash'),
+    })
+    return annotation
+
+
+def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='strict', workers=10,
+                   max_requests=96, max_runtime=1500, after=''):
+    """Generate, then review, through the same free-model client. Phases do not run 10+10."""
+    from concurrent.futures import ThreadPoolExecutor
+    import threading
+    import time
+    store = Store(out)
+    handle = store.lock()
+    started = time.monotonic()
+    workers = min(10, max(1, workers))
+    state_path = Path(out) / 'batch-state.json'
+    try:
+        state = json.loads(state_path.read_text(encoding='utf-8')) if state_path.is_file() else {
+            'schema': SCHEMA, 'completed': {}, 'stopped': None, 'calls': 0}
+        if state.get('stopped'):
+            return {'stopped': state['stopped'], 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
+        if hasattr(client, 'check_price'):
+            client.check_price()
+        selected = [skill for skill in skills if skill['id'] > after][:limit]
+        calls = {'n': 0}
+        stop = threading.Event()
+        stop_reason = {'text': None}
+        gate = threading.Lock()
+        peak = {'n': 0, 'current': 0}
+
+        def one(skill, review):
+            entered = False
+            if stop.is_set() or time.monotonic() - started > max_runtime:
+                return
+            source_hash = digest({'summary': skill.get('summary'), 'tasks': skill.get('tasks')})
+            with gate:
+                previous = state['completed'].get(skill['id'])
+                if previous and previous.get('source_hash') == source_hash and (
+                        previous.get('phase') == 'reviewed' or (previous.get('phase') == 'generated' and not review)):
+                    return
+                if calls['n'] >= max_requests:
+                    stop.set()
+                    stop_reason['text'] = 'request budget reached'
+                    return
+                calls['n'] += 1
+                peak['current'] += 1
+                peak['n'] = max(peak['n'], peak['current'])
+            entered = True
+            try:
+                if review and previous and previous.get('annotation'):
+                    base = json.loads(json.dumps(previous['annotation']))
+                else:
+                    base = map_record(skill, skill.get('tasks') or [], source_hash=source_hash)
+                for condition in parse_conditions(supplied_text(skill)):
+                    if not condition['accepted']:
+                        continue
+                    base['facts'].append(fact(
+                        skill['id'], {'level': 'skill'}, condition['dimension'], condition['value_id'],
+                        condition['role'], 'direct_explicit', condition['quote'], 'supplied_text',
+                        source_hash, 'closed_phrase'))
+                attempt = Path(out) / 'attempts' / skill['id'] / ('review' if review else 'generate')
+                attempt.mkdir(parents=True, exist_ok=True)
+                title = ('ATLAS enrichment review ' if review else 'ATLAS enrichment generate ') + skill['id']
+                reply = client.request(supplied_text(skill), title, attempt)
+                from classify_unfiled import accept_cost
+                accounting = accept_cost(reply.get('usage') or {}, cost_policy)
+                if reply.get('tool_events') or reply.get('timed_out') or reply.get('exit_code') not in (0, None):
+                    stop.set()
+                    stop_reason['text'] = 'tool_or_transport'
+                    return
+                payload = json.loads(reply.get('text') or '{}')
+                if review:
+                    generation = previous or {}
+                    verdict = independent_review(
+                        {'session_id': generation.get('session_id'), 'context_hash': generation.get('context_hash'),
+                         'model': 'opencode-go/iceman-contributor-free'},
+                        {'session_id': reply.get('session_id'), 'context_hash': digest(title),
+                         'model': 'opencode-go/iceman-contributor-free'})
+                    if not verdict['accepted']:
+                        base['quality'] = {'grade': 'U', 'model_review': 'rejected_not_independent', 'execution': 'not_run'}
+                    else:
+                        axes = payload.get('axes') if isinstance(payload.get('axes'), dict) else {}
+                        grade = derive_grade({
+                            'independent': True, 'source_scope': 'fixed_source', 'axes': axes,
+                            'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+                        base['quality'] = {'grade': grade['grade'], 'model_review': 'completed',
+                                           'execution': 'not_run', 'diversity': 'same_model_new_session'}
+                else:
+                    absorb_facts(base, payload, supplied_text(skill))
+                    base['quality'] = {'grade': 'U', 'model_review': 'draft_searchable', 'execution': 'not_run'}
+                entry = {
+                    'phase': 'reviewed' if review else 'generated', 'source_hash': source_hash,
+                    'session_id': reply.get('session_id'), 'context_hash': digest(title),
+                    'cost_accounting': accounting, 'fee_proven': accounting == 'verified_zero',
+                    'turns': (reply.get('usage') or {}).get('turns') or [],
+                    'annotation': base,
+                }
+                with gate:
+                    state['completed'][skill['id']] = entry
+                    state['calls'] = calls['n']
+                    store.append_holding_lock('model_runs', {
+                        'record_id': skill['id'], 'phase': entry['phase'], 'session_id': entry['session_id'],
+                        'cost_accounting': accounting, 'fee_proven': entry['fee_proven'],
+                        'turns': entry['turns'],
+                    })
+            except Exception as exc:
+                from classify_unfiled import CostUnknown, PriceStop
+                if isinstance(exc, PriceStop):
+                    stop.set()
+                    stop_reason['text'] = str(exc)
+                elif isinstance(exc, CostUnknown):
+                    stop.set()
+                    stop_reason['text'] = 'cost_unknown'
+                else:
+                    with gate:
+                        state['completed'][skill['id']] = {
+                            'phase': 'error', 'error': type(exc).__name__, 'source_hash': source_hash,
+                            'fee_proven': False}
+            finally:
+                if entered:
+                    with gate:
+                        peak['current'] = max(0, peak['current'] - 1)
+                        public = {key: value for key, value in state.items() if key != 'completed'}
+                        public['completed'] = state['completed']
+                        public['stopped'] = stop_reason['text']
+                        state_path.write_text(json.dumps(public, ensure_ascii=False) + '\n', encoding='utf-8')
+
+        def run_phase(review):
+            pending = []
+            for skill in selected:
+                done = state['completed'].get(skill['id']) or {}
+                if review and done.get('phase') != 'generated':
+                    continue
+                if not review and done.get('phase') in ('generated', 'reviewed'):
+                    continue
+                pending.append(skill)
+            if not pending or stop.is_set():
+                return
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                list(pool.map(lambda skill: one(skill, review), pending))
+
+        if phase in ('generate', 'both'):
+            run_phase(False)
+        if phase in ('review', 'both') and not stop.is_set():
+            run_phase(True)
+        annotations = [item['annotation'] for item in state['completed'].values() if item.get('annotation')]
+        applied = store.apply_holding_lock(annotations, 'enrichment-batch', dry_run=not annotations)
+        missing = sum(1 for item in state['completed'].values()
+                      if item.get('cost_accounting') == 'missing_cost_allowed_by_user')
+        verified = sum(1 for item in state['completed'].values() if item.get('cost_accounting') == 'verified_zero')
+        return {
+            'stopped': stop_reason['text'], 'calls': calls['n'], 'model_calls_this_process': calls['n'],
+            'max_in_flight': peak['n'], 'workers': workers, 'verified_zero': verified,
+            'missing_cost_allowed': missing,
+            'fee_proven_all': verified > 0 and missing == 0 and not stop_reason['text'],
+            'applied': applied, 'writes_catalogue': False, 'phase': phase,
+        }
+    finally:
+        handle.close()
+
+
 def run(argv=None):
-    parser = argparse.ArgumentParser(description='Build enrichment sidecars. Does not call a model or write the catalogue.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'rollback'))
+    parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'rollback', 'run', 'aliases'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--snapshot')
     parser.add_argument('--limit', type=int, default=48)
+    parser.add_argument('--phase', choices=('generate', 'review', 'both'), default='both')
+    parser.add_argument('--cost-policy', choices=('strict', 'allow-missing-cost'), default='strict')
+    parser.add_argument('--opencode', default='opencode')
+    parser.add_argument('--workers', type=int, default=10)
+    parser.add_argument('--max-requests', type=int, default=96)
+    parser.add_argument('--max-runtime-seconds', type=int, default=1500)
+    parser.add_argument('--after', default='')
+    parser.add_argument('--runtime-allowlist', type=Path)
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
         report = taxonomy_reconciliation()
+        if args.runtime_allowlist:
+            raw = args.runtime_allowlist.read_bytes()
+            report = merge_runtime_allowlist(report, json.loads(raw), hashlib.sha256(raw).hexdigest())
         args.out.parent.mkdir(parents=True, exist_ok=True)
         args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         print(json.dumps({key: report[key] for key in (
@@ -550,7 +908,24 @@ def run(argv=None):
         return 0
     if args.command == 'pilot':
         skills = load_catalog(args.database) if args.database else []
-        print(json.dumps(plan_pilot(skills, args.limit), ensure_ascii=False, indent=2))
+        plan = plan_pilot(skills, args.limit)
+        plan['calls_model'] = False
+        print(json.dumps(plan, ensure_ascii=False, indent=2))
+        return 0
+    if args.command == 'run':
+        from classify_unfiled import OpenCodeFreeClient
+        skills = load_catalog(args.database)
+        report = run_enrichment(
+            OpenCodeFreeClient(args.opencode), args.out, skills, phase=args.phase, limit=min(args.limit, 48),
+            cost_policy=args.cost_policy, workers=args.workers, max_requests=args.max_requests,
+            max_runtime=args.max_runtime_seconds, after=args.after)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 2 if report.get('stopped') else 0
+    if args.command == 'aliases':
+        skills = load_catalog(args.database)
+        print(json.dumps(alias_report([
+            {'relationship': 'representative', 'id': skill['id']} for skill in skills
+        ]), ensure_ascii=False, indent=2))
         return 0
     if args.command == 'rollback':
         print(json.dumps(Store(args.out).rollback(args.snapshot, dry_run=not args.apply), ensure_ascii=False, indent=2))

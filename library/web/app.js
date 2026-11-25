@@ -2,7 +2,15 @@
 
 const byId = (id) => document.getElementById(id);
 const number = new Intl.NumberFormat('zh-CN');
-const fields = ['q', 'category', 'topic', 'action', 'tool', 'repo', 'sort', 'grouped'];
+const fields = ['q', 'category', 'topic', 'action', 'tool', 'repo', 'sort', 'grouped', 'edim', 'estate', 'evalue', 'edim2', 'evalue2', 'esame'];
+const enrichmentDimensions = [
+  ['task_action', '任务动作'], ['tools', '工具'], ['input_kind', '输入'], ['output_kind', '输出'],
+  ['scenario', '场景'], ['requirements', '条件'], ['side_effects', '风险'], ['kind', '资料形态'],
+];
+const enrichmentStates = [
+  ['known', '已确定'], ['partial', '部分'], ['unknown', '未知'],
+  ['not_applicable', '不适用'], ['conflict', '冲突'],
+];
 const tagNames = new Map();
 const publicSnapshot = document.documentElement.dataset.catalog;
 let filters = {};
@@ -106,6 +114,9 @@ function initLayout() {
     nav.append(children);
   }
   setOptions(byId('category-select'), meta.categories.map((cat) => [cat.id, cat.label]));
+  setOptions(byId('edim'), enrichmentDimensions);
+  setOptions(byId('edim2'), enrichmentDimensions);
+  setOptions(byId('estate'), enrichmentStates);
   setOptions(byId('repo'), meta.repos.map((repo) => [repo, repo]));
   if (meta.task_search) byId('query').placeholder = '描述你要做的事，或搜索 Skill 名称…';
   for (const kind of ['action', 'tool']) {
@@ -121,6 +132,12 @@ function updateControls() {
   byId('repo').value = filters.repo;
   byId('sort').value = filters.sort;
   byId('grouped').checked = filters.grouped === '1';
+  byId('edim').value = filters.edim;
+  byId('estate').value = filters.estate;
+  byId('evalue').value = filters.evalue;
+  byId('edim2').value = filters.edim2;
+  byId('evalue2').value = filters.evalue2;
+  byId('esame').checked = filters.esame !== '0';
   byId('clear').hidden = !fields.some((key) => !!filters[key]);
   for (const node of document.querySelectorAll('.nav-button')) {
     const inCategory = node.dataset.category === filters.category;
@@ -242,7 +259,8 @@ async function renderPage() {
     updateFacetControls(page.facets);
     results.replaceChildren(...page.items.map(card));
     if (!page.items.length) results.append(note('没有匹配的 Skill。试试更短的关键词，或清除筛选。'));
-    byId('result-count').textContent = number.format(page.total) + ' 条';
+    byId('result-count').textContent = number.format(page.total) + ' 条' + (
+      page.enrichment_filter === 'index_missing' ? '（分层索引尚未应用）' : '');
     const last = Math.max(1, Math.ceil(page.total / page.page_size));
     byId('pagination').hidden = last === 1;
     byId('previous').disabled = page.page <= 1;
@@ -438,6 +456,14 @@ function renderDetail(data) {
   const status = [reviewStatus[record.extraction.review_status] || record.extraction.review_status, labelSource[data.label_from]].filter(Boolean).join(' · ');
   root.replaceChildren(top, title, element('p', status, 'detail-banner'));
   if (record.content.summary) root.append(element('p', record.content.summary, 'summary'));
+  if (data.enrichment) {
+    const box = element('section', null, 'detail-banner');
+    const facet = data.enrichment.dimensions || {};
+    const summary = Object.entries(facet).map(([name, item]) => name + ':' + (item.state || 'unknown')).join(' · ');
+    box.append(element('p', '分层 · ' + (data.enrichment.grade || 'U') + ' · 审核 ' + (data.enrichment.model_review || 'untracked')));
+    box.append(element('p', summary));
+    root.append(box);
+  }
   const tabs = element('div', null, 'tabs');
   const body = element('section', null, 'detail-body source-list');
   function renderTab() {
@@ -502,8 +528,13 @@ async function start() {
       navigate({ q: byId('query').value.trim(), page: 1 });
     });
     byId('category-select').addEventListener('change', () => navigate({ category: byId('category-select').value, topic: '', page: 1 }));
-    for (const key of ['sort', 'repo', 'topic', 'action', 'tool', 'grouped']) {
-      byId(key).addEventListener('change', () => navigate({ [key]: key === 'grouped' ? (byId(key).checked ? '1' : '') : byId(key).value, page: 1 }));
+    for (const key of ['sort', 'repo', 'topic', 'action', 'tool', 'grouped', 'edim', 'estate', 'edim2', 'esame']) {
+      byId(key).addEventListener('change', () => navigate({
+        [key]: (key === 'grouped' || key === 'esame') ? (byId(key).checked ? '1' : '0') : byId(key).value, page: 1,
+      }));
+    }
+    for (const key of ['evalue', 'evalue2']) {
+      byId(key).addEventListener('change', () => navigate({ [key]: byId(key).value.trim(), page: 1 }));
     }
     byId('clear').addEventListener('click', () => navigate(Object.fromEntries([...fields, 'page'].map((key) => [key, '']))));
     byId('close-detail').addEventListener('click', () => byId('detail').close());

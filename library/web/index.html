@@ -39,6 +39,12 @@
           <option value="title">标题</option><option value="sources">来源最多</option>
         </select></label>
         <label class="check"><input id="grouped" type="checkbox">仅看有多个来源</label>
+        <label><span>标签维</span><select id="edim"><option value="">不按标签维</option></select></label>
+        <label><span>标签状态</span><select id="estate"><option value="">任意状态</option></select></label>
+        <label><span>标签值</span><input id="evalue" maxlength="80" placeholder="如 python / report"></label>
+        <label><span>第二维</span><select id="edim2"><option value="">不交叉</option></select></label>
+        <label><span>第二值</span><input id="evalue2" maxlength="80"></label>
+        <label class="check"><input id="esame" type="checkbox" checked>同一任务内</label>
         <button class="clear" id="clear" type="button" hidden>清除筛选</button>
       </div>
       <section aria-label="搜索结果">
