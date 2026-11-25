@@ -138,4 +138,6 @@ ps -p 89492 -o pid=,command=
 
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 
+标签值的默认查询是「已审 accept 的这个规范值，任何角色」。`mentioned`、`example`、`prohibited` 都能被找到，详情里写出角色。`erole=required` 只保留 `required` 和 `conditional`。`erole=legacy` 只查旧任务标签，不把它们当成已审 accept。不带 `erole` 时，旧标签不会冒充已审值。这就是 `image` 的 mentioned 以前被漏掉、而 `sql` 仍能命中的原因：按值查询被固定成必需角色，同时 `tools`/`task_action` 的 `legacy_unverified` 又不看角色。`scenario`、`requirements`、`side_effects` 的已接受数仍是 0；附件里的候选数不是已接受覆盖。43 条审核记录的等级是 D1 31、U 8、R 4，不是 43 条高质量，也没有 source_fidelity pass 或执行通过。
+
 8765 上的进程在启动时加载 `library/serve.py`。`library/web/index.html`、`style.css`、`app.js` 每次请求从磁盘读取；接口代码不会热更新。父级要在同一端口重启原来的进程，不要另开一个服务。端口已被占用时 `serve.py` 会直接退出。重启前先停掉现有进程，再在仓库根目录执行 `python3 library/serve.py --port 8765`。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。这次交付不重启该进程。

@@ -286,22 +286,23 @@ def scope_key(fact_item):
 
 
 def satisfies(fact_item, dimension, values, role):
-    if fact_item.get('support') == 'legacy_unverified':
-        if fact_item.get('dimension') != dimension or fact_item.get('value_id') not in values:
-            return False
-        return True
-    if fact_item.get('accepted') is not True or fact_item.get('review_decision') != 'accept':
-        return False
+    """role any: reviewed accept of this value, every role. required: strong roles only. legacy: old tags only."""
     if fact_item.get('dimension') != dimension or fact_item.get('value_id') not in values:
         return False
-    if role == 'required' and fact_item.get('role') not in STRONG_ROLES:
+    if role == 'legacy':
+        return fact_item.get('support') == 'legacy_unverified'
+    if fact_item.get('support') == 'legacy_unverified':
         return False
-    if fact_item.get('role') in ('prohibited', 'example', 'alternative', 'mentioned', 'target_platform'):
-        return role not in ('required', 'conditional')
-    return True
+    if fact_item.get('accepted') is not True or fact_item.get('review_decision') != 'accept':
+        return False
+    if role in (None, '', 'any'):
+        return True
+    if role == 'required':
+        return fact_item.get('role') in STRONG_ROLES
+    return fact_item.get('role') == role
 
 
-def same_task_query(facts, filters, same_task=True):
+def same_task_query(facts, filters, same_task=True, role='any'):
     """filters is dimension -> values. Across dimensions AND, within one dimension OR."""
     grouped = {}
     skill_wide = []
@@ -319,7 +320,7 @@ def same_task_query(facts, filters, same_task=True):
         scopes = [facts]
     hits = []
     for bucket in scopes:
-        if all(any(satisfies(item, dimension, set(values), 'required') for item in bucket)
+        if all(any(satisfies(item, dimension, set(values), role) for item in bucket)
                for dimension, values in filters.items()):
             hits.append(bucket)
     return hits
@@ -851,7 +852,7 @@ def load_current_annotations(out):
             for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
 
 
-def search_annotations(annotations, filters, same_task=True):
+def search_annotations(annotations, filters, same_task=True, role='any'):
     """filters: list of (dimension, values, state or None)."""
     hits = []
     for annotation in annotations:
@@ -862,14 +863,14 @@ def search_annotations(annotations, filters, same_task=True):
             if state and facet.get('state') != state:
                 ok = False
                 break
-            if values and not same_task_query(facts, {dimension: values}, same_task):
+            if values and not same_task_query(facts, {dimension: values}, same_task, role):
                 ok = False
                 break
         if ok and filters:
             # Cross-dimension AND must hold inside one scope when same_task is set.
             active = [(dimension, values) for dimension, values, _state in filters if values]
             if same_task and len(active) > 1:
-                if not same_task_query(facts, dict(active), True):
+                if not same_task_query(facts, dict(active), True, role):
                     ok = False
         if ok:
             hits.append(annotation['record_id'])

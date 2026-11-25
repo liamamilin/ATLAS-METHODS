@@ -216,7 +216,10 @@ def enrichment_ids(params):
     dimension2 = value(params, 'edim2', 40)
     chosen2 = value(params, 'evalue2', 80)
     same = value(params, 'esame', 2)
-    if not any((dimension, state, chosen, dimension2, chosen2, same)):
+    role = value(params, 'erole', 16)
+    if role not in ('required', 'legacy'):
+        role = 'any'
+    if not any((dimension, state, chosen, dimension2, chosen2, same, role if role != 'any' else '')):
         return None
     try:
         from enrichment import load_current_annotations, search_annotations
@@ -232,7 +235,7 @@ def enrichment_ids(params):
         filters.append((dimension2, [chosen2] if chosen2 else [], None))
     if not filters:
         return None
-    return set(search_annotations(annotations, filters, same != '0'))
+    return set(search_annotations(annotations, filters, same != '0', role))
 
 
 def enrichment_dir():

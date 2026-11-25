@@ -54,7 +54,8 @@ class EnrichmentAcceptanceTests(unittest.TestCase):
             {'dimension': 'tools', 'value_id': 'python', 'role': 'prohibited', 'accepted': True, 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 0}},
         ]
         self.assertEqual(same_task_query(facts, {'tools': ['react'], 'task_action': ['deploy']}, True), [])
-        self.assertEqual(same_task_query(facts, {'tools': ['python']}, True), [])
+        self.assertEqual(same_task_query(facts, {'tools': ['python']}, True, 'required'), [])
+        self.assertTrue(same_task_query(facts, {'tools': ['python']}, True, 'any'))
         self.assertTrue(same_task_query(facts, {'tools': ['react']}, True))
 
     def test_quality_review_execution_and_stale(self):
@@ -988,7 +989,8 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' +
             self.assertTrue(all(not item.get('accepted') for item in again['facts'] if item.get('review_decision') == 'unknown'))
             stored = load_current_annotations(root / 'out')
             self.assertEqual(sum(1 for item in stored[0]['facts'] if item.get('accepted')), 1)
-            self.assertEqual(search_annotations(stored, [('tools', ['python'], None)], True), [record_id])
+            self.assertEqual(search_annotations(stored, [('tools', ['python'], None)], True), [])
+            self.assertEqual(search_annotations(stored, [('tools', ['python'], None)], True, 'legacy'), [record_id])
             stale_review = json_lib.loads(json_lib.dumps(annotation))
             for item in stale_review['facts']:
                 if item.get('proposed_value') == 'urql':
@@ -1202,6 +1204,79 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses-' + title[-6:], 'part': {'te
                           '--cost-policy', 'allow-missing-cost', '--resume-provider-invalid'])
             self.assertNotEqual(halted.returncode, 0)
             self.assertIn('resume refused', halted.stderr)
+
+    def test_value_search_keeps_roles_and_does_not_treat_legacy_as_reviewed(self):
+        import os
+        import sqlite3
+        import serve
+        from build import SCHEMA
+        from enrichment import Store, search_annotations
+
+        def reviewed(record_id, facts, state_values):
+            dimensions = {name: {'state': 'unknown', 'reason': 'not_yet_annotated', 'values': []}
+                          for name in ('task_action', 'tools', 'input_kind', 'output_kind', 'scenario',
+                                       'requirements', 'side_effects', 'kind')}
+            for name, values in state_values.items():
+                dimensions[name] = {'state': 'known', 'reason': None, 'values': values}
+            return {
+                'schema': 'atlas-skill-enrichment/v0.1', 'record_id': record_id, 'fingerprint': record_id,
+                'source_hash': 'h', 'dimensions': dimensions, 'facts': facts,
+                'quality': {'grade': 'D1', 'model_review': 'completed'},
+            }
+
+        def fact(dimension, value, role, support='direct_explicit', accepted=True, decision='accept', position=1):
+            return {
+                'dimension': dimension, 'value_id': value, 'role': role, 'support': support,
+                'accepted': accepted, 'review_decision': decision,
+                'scope': {'level': 'task', 'task_position': position},
+            }
+
+        image = reviewed('1' * 32, [
+            fact('output_kind', 'image', 'mentioned'),
+        ], {'output_kind': [{'id': 'image', 'role': 'mentioned'}]})
+        sql = reviewed('2' * 32, [
+            fact('tools', 'sql', 'mentioned'),
+            fact('tools', 'sql', 'unknown', support='legacy_unverified', accepted=False, decision=None),
+            fact('output_kind', 'image', 'mentioned', position=2),
+        ], {'tools': [{'id': 'sql', 'role': 'mentioned'}], 'output_kind': [{'id': 'image', 'role': 'mentioned'}]})
+        rows = [image, sql]
+        self.assertEqual(search_annotations(rows, [('output_kind', ['image'], None)]), ['1' * 32, '2' * 32])
+        self.assertEqual(search_annotations(rows, [('output_kind', ['image'], None)], True, 'required'), [])
+        self.assertEqual(search_annotations(rows, [('tools', ['sql'], None)]), ['2' * 32])
+        self.assertEqual(search_annotations(rows, [('tools', ['sql'], None)], True, 'required'), [])
+        self.assertEqual(search_annotations(rows, [('tools', ['sql'], None)], True, 'legacy'), ['2' * 32])
+        self.assertEqual(search_annotations([reviewed('3' * 32, [
+            fact('tools', 'sql', 'unknown', support='legacy_unverified', accepted=False, decision=None),
+        ], {})], [('tools', ['sql'], None)]), [])
+        self.assertEqual(search_annotations(rows, [('tools', ['sql'], None)], True, 'any'), ['2' * 32])
+        unknown = reviewed('4' * 32, [fact('output_kind', 'image', 'mentioned', accepted=False, decision='unknown')], {})
+        self.assertEqual(search_annotations([unknown], [('output_kind', ['image'], None)]), [])
+        self.assertEqual(search_annotations(rows, [('output_kind', ['image'], None), ('tools', ['sql'], None)], True), [])
+        self.assertEqual(search_annotations([sql], [('output_kind', ['image'], None), ('tools', ['sql'], None)], False), ['2' * 32])
+        with TemporaryDirectory() as temp:
+            database = Path(temp) / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            for record_id in ('1' * 32, '2' * 32):
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', '摘要', 'code', 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, '摘要'))
+            connection.commit()
+            store = Store(temp)
+            store.apply([image, sql], 'role-contract')
+            os.environ['ATLAS_ENRICHMENT_DIR'] = temp
+            try:
+                connection.row_factory = sqlite3.Row
+                listed = serve.list_skills(connection, {'edim': ['output_kind'], 'evalue': ['image']})
+                required = serve.list_skills(connection, {'edim': ['output_kind'], 'evalue': ['image'], 'erole': ['required']})
+                legacy = serve.list_skills(connection, {'edim': ['tools'], 'evalue': ['sql'], 'erole': ['legacy']})
+                plain = serve.list_skills(connection, {})
+            finally:
+                os.environ.pop('ATLAS_ENRICHMENT_DIR', None)
+            self.assertEqual(sorted(item['id'] for item in listed['items']), ['1' * 32, '2' * 32])
+            self.assertEqual(required['items'], [])
+            self.assertEqual([item['id'] for item in legacy['items']], ['2' * 32])
+            self.assertEqual(plain['total'], 2)
 
 
 if __name__ == '__main__':

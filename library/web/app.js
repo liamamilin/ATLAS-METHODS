@@ -2,7 +2,7 @@
 
 const byId = (id) => document.getElementById(id);
 const number = new Intl.NumberFormat('zh-CN');
-const fields = ['q', 'category', 'topic', 'action', 'tool', 'repo', 'sort', 'grouped', 'edim', 'estate', 'evalue', 'edim2', 'evalue2', 'esame'];
+const fields = ['q', 'category', 'topic', 'action', 'tool', 'repo', 'sort', 'grouped', 'edim', 'estate', 'evalue', 'erole', 'edim2', 'evalue2', 'esame'];
 const enrichmentDimensions = [
   ['task_action', '任务动作'], ['tools', '工具'], ['input_kind', '输入'], ['output_kind', '输出'],
   ['scenario', '场景'], ['requirements', '条件'], ['side_effects', '风险'], ['kind', '资料形态'],
@@ -135,6 +135,7 @@ function updateControls() {
   byId('edim').value = filters.edim;
   byId('estate').value = filters.estate;
   byId('evalue').value = filters.evalue;
+  byId('erole').value = filters.erole;
   byId('edim2').value = filters.edim2;
   byId('evalue2').value = filters.evalue2;
   byId('esame').checked = filters.esame !== '0';
@@ -459,7 +460,11 @@ function renderDetail(data) {
   if (data.enrichment) {
     const box = element('section', null, 'detail-banner');
     const facet = data.enrichment.dimensions || {};
-    const summary = Object.entries(facet).map(([name, item]) => name + ':' + (item.state || 'unknown')).join(' · ');
+    const summary = Object.entries(facet).map(([name, item]) => {
+      const values = (item.values || []).map((value) => (typeof value === 'string' ? value : value.id + (value.role ? '/' + value.role : ''))).join(', ');
+      const legacy = (item.legacy_values || []).map((value) => (value.id || value) + '/旧标签').join(', ');
+      return name + ':' + (item.state || 'unknown') + (values ? '(' + values + ')' : '') + (legacy ? ' [' + legacy + ']' : '');
+    }).join(' · ');
     box.append(element('p', '分层 · ' + (data.enrichment.grade || 'U') + ' · 审核 ' + (data.enrichment.model_review || 'untracked')
       + (data.enrichment.recommend === false ? ' · 不作为推荐' : '')));
     box.append(element('p', summary));
@@ -529,7 +534,7 @@ async function start() {
       navigate({ q: byId('query').value.trim(), page: 1 });
     });
     byId('category-select').addEventListener('change', () => navigate({ category: byId('category-select').value, topic: '', page: 1 }));
-    for (const key of ['sort', 'repo', 'topic', 'action', 'tool', 'grouped', 'edim', 'estate', 'edim2', 'esame']) {
+    for (const key of ['sort', 'repo', 'topic', 'action', 'tool', 'grouped', 'edim', 'estate', 'erole', 'edim2', 'esame']) {
       byId(key).addEventListener('change', () => navigate({
         [key]: (key === 'grouped' || key === 'esame') ? (byId(key).checked ? '1' : '0') : byId(key).value, page: 1,
       }));
