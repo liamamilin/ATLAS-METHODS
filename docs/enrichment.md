@@ -25,27 +25,36 @@ python3 library/enrichment.py pilot --database data/library/catalog.sqlite3 --li
 
 有界续跑使用同一次 `map` 命令，另加 `--limit` 和一个 `--after`。`--after` 的值取上一份结果里的 `next_after`，不是固定字符串。这样的结果 `complete` 为 false，不能当作全库通过。完整映射就是上面那条不带 `--after`、不带 `--limit` 的 dry-run。
 
-`pilot` 不调用模型，`run` 也不读取它的输出。分层 48 条只有在 `--manifest` 指向父级自己的清单时才会被选中。`--after` 的默认值是空字符串，按代表 id 从整个目录往后取，包含已经分类、只是还没有标签的记录；它不会只取待归类余量。不要把 c26 的待归类游标传给这次运行。
+`pilot` 不加 `--ids` 时只打印领域抽样，`read_by_run` 为 false，`run` 不读它。`pilot --ids` 和 `manifest --ids` 用同一选择器：按逗号输入的顺序选出这 1 到 48 个 id，重复、缺失或超过 48 个就退出，不改去取默认前 48 条。命令把清单写到 `--out`。
 
-`run` 会调用本机 OpenCode。先生成，再换一个新 session 审核。生成提示只含契约和当次目录文字；审核提示只含同一段目录文字和候选 quote，不含生成者的推理。两段共用 `data/library/atlas-writer.lock`，最多 10 路。缺 `cost` 在 `allow-missing-cost` 下记 unknown，不写成 0。明确非 0、身份不可核、价格不可核或 tool 事件会停；已经发出的请求可以记完，不再发新的。失败记入 `phase-manifest.json`，下次不自动重试，已覆盖游标停在失败之前。`run` 自己写入 sidecar，不需要再执行一次 map。
+`source_hash` 是规范 JSON `{"summary": skills.summary, "tasks": [该代表的 catalog_tasks 行]}` 的 sha256。规范 JSON 对对象键排序、保留数组顺序，分隔符是逗号和冒号。每个任务行含 `id`、`position`、`goal`、`applicability`、`outputs`、`tags`。这不是规范化 SkillRecord 文件的 sha256。文件里的 `normalized_record_sha256` 固定为 null，不参加 `sha256`。`sha256` 是同一套规范 JSON，对象只含 `ids` 和 `records`。`records` 与 `ids` 同序，`records[i].id` 必须等于 `ids[i]`。
 
-父级的 48 条清单不在这个仓库里，所以这里不写一条带假路径的 `run`。`python3 library/enrichment.py --help` 列出 `--manifest` 和 `--ids`。清单是 JSON，含 `ids`、`records`（每条有 `id` 和当前 `source_hash`）和 `sha256`。`sha256` 必须等于 `manifest_digest(ids, records)`。摘要不符、源文摘要不符或不在当前目录里的 id 会被拒绝，并且不会改去扫描其他代表。`--ids` 是逗号分隔的 1 到 48 个 id，不核 source hash。既定 48 条要加的参数只有 `--manifest` 加那份真实文件；同时可加的是 `--phase both`、`--max-requests 96`、`--max-runtime-seconds 1500`、`--workers 10`、`--cost-policy allow-missing-cost` 和 `--runtime-allowlist library/fixtures/taxonomy-reconciliation-c26.safe.json`。这条会调用模型，离线验收不要执行。
+```bash
+python3 library/enrichment.py manifest \
+  --database data/library/catalog.sqlite3 \
+  --ids id-1,id-2,id-3 \
+  --out slice.json
+```
 
-不带 `--manifest` 时，`run` 按代表 id 从整个目录往后取，包含已经分类的记录。省略 `--limit` 时默认 48。要覆盖全部代表，省略 `--after`，并把 `--limit` 设成目录代表数、把 `--max-requests` 设成至少代表数的两倍。下面这条是 id 顺序的前 48 条，不是分层清单，也不是全库。它会调用模型，离线验收不要执行。
+`--ids` 里的顺序会原样写入 `ids`。`id-1,id-2,id-3` 换成这次分片的真实代表 id，`slice.json` 换成这次要保存的路径。先导出，再把刚写出的文件交给 `run`。`run` 不接受 `--ids`、`--after` 或 `--limit`。清单 sha256、顺序、缺失 id 或当前 `source_hash` 不一致时，进程在任何模型请求之前退出。
+
+首批按 1 条、9 条、38 条三份互不重叠的清单跑。每份用自己的 `--out` 目录。三份合计最多 96 次请求。单条和 9 条用 `--workers 1`，38 条用 `--workers 10`。
 
 ```bash
 python3 library/enrichment.py run \
   --opencode /Users/milin/.opencode/bin/opencode \
   --database data/library/catalog.sqlite3 \
-  --out data/library/enrichment \
+  --manifest slice.json \
+  --out slice-out \
   --phase both \
-  --limit 48 \
-  --max-requests 96 \
+  --workers 1 \
+  --max-requests 2 \
   --max-runtime-seconds 1500 \
-  --workers 10 \
   --cost-policy allow-missing-cost \
   --runtime-allowlist library/fixtures/taxonomy-reconciliation-c26.safe.json
 ```
+
+9 条把 `--max-requests` 改为 18，`--workers` 仍为 1。38 条把 `--workers` 改为 10，`--max-requests` 改为 76。`--manifest` 和 `--out` 分别换成该分片刚导出的文件和该分片自己的目录。这三步都会调用模型。离线只做 `manifest` 导出。
 
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 

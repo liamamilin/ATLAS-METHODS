@@ -911,20 +911,96 @@ def absorb_facts(annotation, payload, text):
     return annotation
 
 
+MANIFEST_SCHEMA = 'atlas-enrichment-manifest/v0.1'
+SOURCE_HASH_SEMANTICS = (
+    'sha256 of canonical JSON {"summary": skills.summary, "tasks": [catalog_tasks rows]}. '
+    'Canonical JSON sorts object keys, keeps array order, and uses separators (",", ":"). '
+    'Each task row has id, position, goal, applicability, outputs, and tags, in position order. '
+    'This is not the normalized SkillRecord file hash.'
+)
+
+
 def manifest_digest(ids, records):
     return digest({'ids': list(ids), 'records': records})
+
+
+def parse_explicit_ids(text):
+    ids = [piece.strip() for piece in str(text or '').split(',') if piece.strip()]
+    if not 1 <= len(ids) <= 48:
+        raise SystemExit('explicit ids must be 1 to 48')
+    if len(ids) != len(set(ids)):
+        raise SystemExit('explicit ids contain duplicates')
+    return ids
+
+
+def select_explicit_ids(database, ids):
+    """Skills in the requested order. Missing, duplicate, or extra ids stop the command."""
+    ids = list(ids)
+    if not 1 <= len(ids) <= 48 or len(ids) != len(set(ids)):
+        raise SystemExit('explicit ids must be 1 to 48 unique records')
+    skills, _stats = load_catalog(database, ids=ids, with_tasks=True)
+    by_id = {skill['id']: skill for skill in skills}
+    if len(by_id) != len(ids) or any(record_id not in by_id for record_id in ids):
+        raise SystemExit('explicit ids are not all current representatives')
+    return [by_id[record_id] for record_id in ids]
+
+
+def assert_manifest_current(skills, manifest):
+    """Reject a stale, reordered, or incomplete manifest before any model call."""
+    ids = manifest.get('ids')
+    records = manifest.get('records')
+    if not isinstance(ids, list) or not isinstance(records, list):
+        raise SystemExit('manifest ids and records must be lists')
+    if manifest.get('sha256') != manifest_digest(ids, records):
+        raise SystemExit('manifest sha256 does not match its ids and records')
+    if [record.get('id') if isinstance(record, dict) else None for record in records] != list(ids):
+        raise SystemExit('manifest record order does not match ids')
+    if not ids or len(ids) > 48 or len(ids) != len(set(ids)):
+        raise SystemExit('manifest ids must be 1 to 48 unique records')
+    by_id = {skill['id']: skill for skill in skills}
+    if any(record_id not in by_id for record_id in ids):
+        raise SystemExit('manifest ids are not all current representatives')
+    for record_id, record in zip(ids, records):
+        if record.get('source_hash') != source_digest(by_id[record_id]):
+            raise SystemExit('manifest source_hash does not match the current catalogue')
+    return [by_id[record_id] for record_id in ids]
+
+
+def export_manifest(database, ids, out_path):
+    skills = select_explicit_ids(database, ids)
+    records = [{'id': skill['id'], 'source_hash': source_digest(skill)} for skill in skills]
+    payload = {
+        'schema': MANIFEST_SCHEMA,
+        'id_order': 'input',
+        'calls_model': False,
+        'source_hash_semantics': SOURCE_HASH_SEMANTICS,
+        'normalized_record_sha256': None,
+        'ids': [skill['id'] for skill in skills],
+        'records': records,
+    }
+    payload['sha256'] = manifest_digest(payload['ids'], records)
+    path = Path(out_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    temporary.replace(path)
+    return payload
 
 
 def load_manifest(path):
     raw = Path(path).read_bytes()
     payload = json.loads(raw)
     ids = payload.get('ids')
-    if not isinstance(ids, list) or not ids or len(ids) > 48:
+    records = payload.get('records')
+    if not isinstance(ids, list) or not 1 <= len(ids) <= 48:
         raise SystemExit('manifest ids must be a list of 1 to 48 record ids')
-    records = payload.get('records') or []
-    expected = payload.get('sha256')
-    actual = manifest_digest(ids, records)
-    if expected != actual:
+    if len(ids) != len(set(ids)):
+        raise SystemExit('manifest ids contain duplicates')
+    if not isinstance(records, list) or [row.get('id') if isinstance(row, dict) else None for row in records] != ids:
+        raise SystemExit('manifest record order does not match ids')
+    if any(not isinstance(row.get('source_hash'), str) or not row.get('source_hash') for row in records):
+        raise SystemExit('manifest records must carry source_hash')
+    if payload.get('sha256') != manifest_digest(ids, records):
         raise SystemExit('manifest sha256 does not match its ids and records')
     return payload, hashlib.sha256(raw).hexdigest()
 
@@ -1022,34 +1098,17 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
             'schema': SCHEMA, 'completed': {}, 'stopped': None, 'calls': 0}
         if state.get('stopped'):
             return {'stopped': state['stopped'], 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
+        rejected = []
+        skipped_errors = []
         if manifest:
-            actual = manifest_digest(manifest.get('ids') or [], manifest.get('records') or [])
-            if manifest.get('sha256') != actual:
-                raise SystemExit('manifest sha256 does not match its ids and records')
+            selected = assert_manifest_current(skills, manifest)
+            covered = ''
         try:
             if hasattr(client, 'check_price'):
                 client.check_price()
         except Exception as exc:
             return {'stopped': str(exc), 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
-        rejected = []
-        skipped_errors = []
-        if manifest:
-            by_id = {skill['id']: skill for skill in skills}
-            declared = {row.get('id'): row.get('source_hash') for row in manifest.get('records') or [] if isinstance(row, dict)}
-            selected = []
-            for record_id in manifest['ids']:
-                skill = by_id.get(record_id)
-                if skill is None:
-                    rejected.append({'id': record_id, 'reason': 'not_in_catalog'})
-                    continue
-                current_hash = source_digest(skill)
-                expected_hash = declared.get(record_id)
-                if expected_hash and expected_hash != current_hash:
-                    rejected.append({'id': record_id, 'reason': 'stale_source_hash'})
-                    continue
-                selected.append(skill)
-            covered = after or ''
-        else:
+        if not manifest:
             selected, skipped_errors, covered = cursor_select(skills, state['completed'], after, limit)
         calls = {'n': 0}
         stop = threading.Event()
@@ -1231,7 +1290,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'rollback', 'run', 'aliases'))
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'rollback', 'run', 'aliases'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
@@ -1246,8 +1305,8 @@ def run(argv=None):
     parser.add_argument('--max-runtime-seconds', type=int, default=1500)
     parser.add_argument('--after', default='', help='Continue after this record id. Empty starts at the first id and includes already classified records. Not the unfiled cursor')
     parser.add_argument('--runtime-allowlist', type=Path, help='Same c26 snapshot for taxonomy, map, and run. Omitted, unknown topics are kept')
-    parser.add_argument('--manifest', type=Path, help='JSON with ids, records, and sha256. run selects only these ids, checks the hash, and does not scan other records')
-    parser.add_argument('--ids', help='Comma-separated record ids, 1 to 48. Selects only those ids. Does not check source hashes; use --manifest for the hashed list')
+    parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
+    parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
         report = taxonomy_reconciliation()
@@ -1260,11 +1319,23 @@ def run(argv=None):
             'domain_count', 'allowed_pairs', 'unsorted_pairs', 'pairs_excluding_unsorted', 'unique_topic_strings')},
             ensure_ascii=False, indent=2))
         return 0
+    if args.command == 'manifest' or (args.command == 'pilot' and args.ids):
+        if not args.database:
+            raise SystemExit('manifest export needs --database')
+        payload = export_manifest(args.database, parse_explicit_ids(args.ids), args.out)
+        print(json.dumps({
+            'calls_model': False, 'id_order': payload['id_order'], 'ids': payload['ids'],
+            'sha256': payload['sha256'], 'out': str(args.out),
+            'source_hash_semantics': payload['source_hash_semantics'],
+            'read_by_run': True,
+        }, ensure_ascii=False, indent=2))
+        return 0
     if args.command == 'pilot':
         skills = load_catalog(args.database, with_tasks=False)[0] if args.database else []
         plan = plan_pilot(skills, args.limit or 48)
         plan['calls_model'] = False
         plan['read_by_run'] = False
+        plan['id_order'] = 'domain_sample'
         print(json.dumps(plan, ensure_ascii=False, indent=2))
         return 0
     if args.apply and args.dry_run:
@@ -1280,20 +1351,17 @@ def run(argv=None):
                 json.dumps(merged, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     if args.command == 'run':
         from classify_unfiled import OpenCodeFreeClient
-        if args.manifest and args.ids:
-            raise SystemExit('pass only one of --manifest and --ids')
-        manifest = None
-        if args.manifest:
-            manifest, _file_hash = load_manifest(args.manifest)
-            skills = load_catalog(args.database, ids=manifest['ids'])[0]
-        elif args.ids:
-            ids = [piece.strip() for piece in args.ids.split(',') if piece.strip()]
-            if not 1 <= len(ids) <= 48:
-                raise SystemExit('--ids accepts 1 to 48 record ids')
-            manifest = {'ids': ids, 'records': [], 'sha256': manifest_digest(ids, [])}
-            skills = load_catalog(args.database, ids=ids)[0]
-        else:
-            skills = load_catalog(args.database)[0]
+        if args.ids:
+            raise SystemExit('run does not accept --ids; write a manifest first')
+        if not args.manifest:
+            raise SystemExit('run requires --manifest')
+        if args.after:
+            raise SystemExit('run --manifest does not use --after')
+        if args.limit is not None:
+            raise SystemExit('run --manifest does not use --limit')
+        manifest, _file_hash = load_manifest(args.manifest)
+        skills = select_explicit_ids(args.database, manifest['ids'])
+        assert_manifest_current(skills, manifest)
         report = run_enrichment(
             OpenCodeFreeClient(args.opencode), args.out, skills, phase=args.phase,
             limit=48 if args.limit is None else max(1, args.limit),

@@ -368,10 +368,10 @@ class ClosedLoopTests(unittest.TestCase):
             stale['records'] = [{'id': skill_row['id'], 'source_hash': '0' * 64}]
             stale['sha256'] = manifest_digest(stale['ids'], stale['records'])
             fake2 = Fake()
-            refused = run_enrichment(fake2, temp + '-stale', [skill_row], phase='generate', manifest=stale,
-                                     cost_policy='allow-missing-cost')
+            with self.assertRaises(SystemExit):
+                run_enrichment(fake2, temp + '-stale', [skill_row], phase='generate', manifest=stale,
+                               cost_policy='allow-missing-cost')
             self.assertEqual(fake2.calls, [])
-            self.assertEqual(refused['applied']['records'] if isinstance(refused.get('applied'), dict) else 0, 0)
 
     def test_missing_sidecar_filter_does_not_return_the_whole_catalogue(self):
         import os
@@ -501,6 +501,7 @@ class ClosedLoopTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0)
         self.assertIn('--manifest', result.stdout)
         self.assertIn('--ids', result.stdout)
+        self.assertIn('manifest', result.stdout)
         self.assertIn('--after', result.stdout)
         self.assertIn('--runtime-allowlist', result.stdout)
 
@@ -576,6 +577,153 @@ class ClosedLoopTests(unittest.TestCase):
             self.assertEqual(stats['task_selects'], 1)
             self.assertEqual(direct['source_hash'], source_digest(loaded[0]))
             self.assertNotEqual(direct['dimensions']['input_kind']['state'], 'not_applicable')
+
+    def test_cli_exports_the_requested_ids_and_run_consumes_that_file(self):
+        import os
+        import sqlite3
+        import subprocess
+        import sys
+        from build import SCHEMA
+        from enrichment import manifest_digest, source_digest
+        script = Path(__file__).resolve().parents[1] / 'library' / 'enrichment.py'
+        domains = ('code', 'legal', 'ai', 'data', 'research')
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            for index in range(60):
+                record_id = f'{index:032x}'
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', f'摘要{index}', domains[index % 5], 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, f'摘要{index}'))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, f'目标{index}', '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            requested = [f'{index:032x}' for index in range(59, 11, -1)]
+            self.assertEqual(len(requested), 48)
+            self.assertNotEqual(requested, sorted(requested))
+            slices = [requested[:1], requested[1:10], requested[10:]]
+            self.assertEqual([len(item) for item in slices], [1, 9, 38])
+            fake = root / 'opencode'
+            fake.write_text('''#!/usr/bin/env python3
+import fcntl, json, os, sys, time
+from pathlib import Path
+log = Path(sys.argv[0]).with_name('calls.log')
+with log.open('a') as handle:
+    fcntl.flock(handle, fcntl.LOCK_EX)
+    handle.write(json.dumps(sys.argv[1:]) + '\\n')
+if sys.argv[1:3] == ['api', 'model.list']:
+    print(json.dumps({'data': [{'providerID': 'opencode-go', 'id': 'iceman-contributor-free',
+        'enabled': True, 'status': 'active',
+        'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}]}))
+    raise SystemExit
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1:3] == ['session', 'export']:
+    print(json.dumps({'messages': [{'type': 'assistant', 'info': {
+        'role': 'assistant', 'cost': 0, 'finish': 'stop',
+        'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}}]}))
+    raise SystemExit
+session = 'ses_' + str(os.getpid()) + '_' + str(time.time_ns())
+title = sys.argv[sys.argv.index('--title') + 1]
+body = {'axes': {'source_fidelity': 'pass', 'structural_completeness': 'pass', 'actionability': 'pass',
+                 'limitations_and_risks': 'pass', 'classification_and_tag_fit': 'pass'}} if 'review' in title else {'facts': []}
+print(json.dumps({'type': 'text', 'sessionID': session, 'part': {'text': json.dumps(body)}}))
+''', encoding='utf-8')
+            fake.chmod(0o755)
+
+            def cli(args):
+                return subprocess.run([sys.executable, '-B', str(script), *args], capture_output=True, text=True)
+
+            def calls():
+                path = root / 'calls.log'
+                if not path.exists():
+                    return []
+                return [json.loads(line) for line in path.read_text(encoding='utf-8').splitlines() if line.strip()]
+
+            bare = cli(['pilot', '--database', str(database), '--out', str(root / 'ignored.json'), '--limit', '48'])
+            self.assertEqual(bare.returncode, 0, bare.stderr)
+            bare_plan = json.loads(bare.stdout)
+            self.assertFalse(bare_plan['read_by_run'])
+            self.assertNotEqual(bare_plan['ids'], requested)
+            self.assertFalse((root / 'ignored.json').exists())
+            seen = []
+            for size, chosen in zip((1, 9, 38), slices):
+                out = root / f'slice-{size}.json'
+                exported = cli(['manifest', '--database', str(database), '--ids', ','.join(chosen), '--out', str(out)])
+                self.assertEqual(exported.returncode, 0, exported.stderr)
+                payload = json.loads(out.read_text(encoding='utf-8'))
+                self.assertEqual(payload['ids'], chosen)
+                self.assertEqual(payload['id_order'], 'input')
+                self.assertIsNone(payload['normalized_record_sha256'])
+                self.assertEqual([row['id'] for row in payload['records']], chosen)
+                self.assertEqual(payload['sha256'], manifest_digest(payload['ids'], payload['records']))
+                self.assertIn('not the normalized SkillRecord file hash', payload['source_hash_semantics'])
+                pilot = cli(['pilot', '--database', str(database), '--ids', ','.join(chosen), '--out', str(root / f'pilot-{size}.json')])
+                self.assertEqual(pilot.returncode, 0, pilot.stderr)
+                self.assertEqual(json.loads((root / f'pilot-{size}.json').read_text(encoding='utf-8'))['sha256'], payload['sha256'])
+                seen.extend(chosen)
+            self.assertEqual(len(set(seen)), 48)
+            duplicate = cli(['manifest', '--database', str(database), '--ids', requested[0] + ',' + requested[0],
+                             '--out', str(root / 'dup.json')])
+            self.assertNotEqual(duplicate.returncode, 0)
+            self.assertFalse((root / 'dup.json').exists())
+            missing = cli(['manifest', '--database', str(database), '--ids', requested[0] + ',' + ('f' * 32),
+                           '--out', str(root / 'missing.json')])
+            self.assertNotEqual(missing.returncode, 0)
+            self.assertFalse((root / 'missing.json').exists())
+            too_many = ','.join(f'{index:032x}' for index in range(49))
+            overflow = cli(['manifest', '--database', str(database), '--ids', too_many, '--out', str(root / 'over.json')])
+            self.assertNotEqual(overflow.returncode, 0)
+            self.assertFalse((root / 'over.json').exists())
+            before = database.read_bytes()
+            workers = {1: '1', 9: '1', 38: '10'}
+            requests = {1: '2', 9: '18', 38: '76'}
+            for size in (1, 9, 38):
+                if (root / 'calls.log').exists():
+                    (root / 'calls.log').unlink()
+                ran = cli(['run', '--opencode', str(fake), '--database', str(database),
+                           '--manifest', str(root / f'slice-{size}.json'), '--out', str(root / f'out-{size}'),
+                           '--phase', 'both', '--workers', workers[size], '--max-requests', requests[size],
+                           '--max-runtime-seconds', '1500', '--cost-policy', 'allow-missing-cost'])
+                self.assertEqual(ran.returncode, 0, ran.stderr + ran.stdout)
+                report = json.loads(ran.stdout)
+                self.assertEqual(report['calls'], size * 2)
+                self.assertEqual([item[0] for item in calls() if item and item[0] == 'run'].__len__(), size * 2)
+                phase = json.loads((root / f'out-{size}' / 'phase-manifest.json').read_text(encoding='utf-8'))
+                self.assertEqual(phase['selected_ids'], slices[{1: 0, 9: 1, 38: 2}[size]])
+            self.assertEqual(database.read_bytes(), before)
+            connection = sqlite3.connect(database)
+            self.assertEqual({row[0] for row in connection.execute('SELECT review FROM skills')}, {'unreviewed'})
+            connection.execute('UPDATE skills SET summary = ? WHERE id = ?', ('changed', requested[0]))
+            connection.commit()
+            connection.close()
+            if (root / 'calls.log').exists():
+                (root / 'calls.log').unlink()
+            stale = cli(['run', '--opencode', str(fake), '--database', str(database),
+                         '--manifest', str(root / 'slice-1.json'), '--out', str(root / 'stale-out'),
+                         '--phase', 'both', '--workers', '1', '--cost-policy', 'allow-missing-cost'])
+            self.assertNotEqual(stale.returncode, 0)
+            self.assertFalse(any(item and item[0] == 'run' for item in calls()))
+            payload = json.loads((root / 'slice-9.json').read_text(encoding='utf-8'))
+            payload['records'][0], payload['records'][1] = payload['records'][1], payload['records'][0]
+            payload['sha256'] = manifest_digest(payload['ids'], payload['records'])
+            (root / 'reordered.json').write_text(json.dumps(payload), encoding='utf-8')
+            if (root / 'calls.log').exists():
+                (root / 'calls.log').unlink()
+            reordered = cli(['run', '--opencode', str(fake), '--database', str(database),
+                             '--manifest', str(root / 'reordered.json'), '--out', str(root / 'reorder-out'),
+                             '--phase', 'both', '--workers', '1'])
+            self.assertNotEqual(reordered.returncode, 0)
+            self.assertFalse(any(item and item[0] == 'run' for item in calls()))
+            ids_only = cli(['run', '--opencode', str(fake), '--database', str(database),
+                            '--ids', requested[0], '--out', str(root / 'ids-out')])
+            self.assertNotEqual(ids_only.returncode, 0)
+            self.assertFalse(any(item and item[0] == 'run' for item in calls()))
 
 
 if __name__ == '__main__':
