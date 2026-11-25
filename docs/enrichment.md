@@ -159,6 +159,60 @@ python3 library/enrichment.py rollback \
 
 不要新开这 48 条的审核。本观察批已请求 295，剩下 152 条最多 304 次，合计 599，不超过 600。旧的 2 条坏流水线和 4 条 provider invalid 不重试。这次不重启 8765。发布和后续 `run` 各自起进程，读磁盘上的 `enrichment.py`。正在跑的 PID 71194 继续提供已经安装的检索。
 
-标签值的默认查询是「已审 accept 的这个规范值，任何角色」。`mentioned`、`example`、`prohibited` 都能被找到，详情里写出角色。`erole=required` 只保留 `required` 和 `conditional`。`erole=legacy` 只查旧任务标签，不把它们当成已审 accept。不带 `erole` 时，旧标签不会冒充已审值。这就是 `image` 的 mentioned 以前被漏掉、而 `sql` 仍能命中的原因：按值查询被固定成必需角色，同时 `tools`/`task_action` 的 `legacy_unverified` 又不看角色。当时那 43 条审核记录的等级是 D1 31、U 8、R 4。本机现在的生产累计是 142/46608，192 条 accepted，63 个有值代表，等级 D1 100、U 21、R 21。current `23ae4f011b0ba06f`，previous `a17fe4d21de60046`。这些等级和缺费用都不是这次停下的原因。
+标签值的默认查询是「已审 accept 的这个规范值，任何角色」。`mentioned`、`example`、`prohibited` 都能被找到，详情里写出角色。`erole=required` 只保留 `required` 和 `conditional`。`erole=legacy` 只查旧任务标签，不把它们当成已审 accept。不带 `erole` 时，旧标签不会冒充已审值。这就是 `image` 的 mentioned 以前被漏掉、而 `sql` 仍能命中的原因：按值查询被固定成必需角色，同时 `tools`/`task_action` 的 `legacy_unverified` 又不看角色。当时那 43 条审核记录的等级是 D1 31、U 8、R 4。随后生产曾到 142/46608。2026-11-25 21:17 的只读核对是 242/46608、394 条 accepted、122 个有值代表，等级 D1 183、U 32、R 27，current `279f6eae5f2c38ce`，previous `f52ba82d5c332182`。这些等级和缺费用都不是高吞吐改造的原因。
 
 8765 上的 PID 71194 在启动时加载了当时的 `library/serve.py`。页面文件每次请求从磁盘读取；接口代码不会热更新。这次的去重修复不需要动它。端口已被占用时再执行 `serve.py` 会直接退出，不要另开第二个服务。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。
+
+## 合批队列 v0.2
+
+`run` 仍然是一条记录一次生成、一次审核。清单里有 48 条并不等于一个模型请求里有 48 条。`queue` 才把多条记录放进同一次 `opencode run`。旧的 stopped run 不会被 `queue` 接着跑。
+
+字符数乘 2 是保守的估算 token，不是官方分词器，也不是字节数。共享词表只写一次。单条超长记录不截断正文：放不进预算就整条不送，记 `over_budget`。模型输出不是完整 JSON，或回合 `finish` 为 `length` 时，这一请求里的记录全部不接受。
+
+规则和封闭短语只产生候选。审核接受之前，检索看不到它们。`reject`、`unknown`、缺决定、冲突、跨记录引用都不接受。否定句上的 required 会按原文改成 prohibited，不能借 required 通过。完全相同的事实仍合并。同一 `fact_id` 而角色或作用域不同则冲突，不接受。`source_fidelity` 在摘要加任务的供给上不能保持 pass。等级 R 的 `recommend` 为 false。
+
+一次 `execute` 或 `resume` 自己从生成走到审核，并在每个请求后写 ledger。远程会话断开不影响已经写进 ledger 的计划；机器休眠或关机不在这个保证里。ledger 跨档位、跨阶段累计。硬上限是 80 次 `opencode run`、100 个实际 assistant turn、2700 秒、同时在途 10。先到即停，不再提交新请求。换一个 `--out` 不能清空这笔账，也不能绕过 tools、非 0、错误模型或身份不可核。缺费用在 `allow-missing-cost` 下仍是 unknown，不写成 0。未知结果不自动重发。一个记录失败不把同请求里已经成立的记录打回，也不整批重跑。
+
+不同 arm 的缓存按计划和 arm 分开。不能用上一档的结果冒充下一档的新测量。请求数不是耗时，也不能把同一条记录在多个 arm 里的出现次数当成覆盖率分母。
+
+基准计划读三份已经由 `manifest` 写出的官方清单：开发 48、留出 48、对照 16。对照必须是开发集的子集。开发档和留出档不会进同一个批次。`plan` 先按真实正文长度打包，给出每个 arm 的估算请求数；这个数不是测量。封存的选择规则是 `dev-quality-then-throughput/v1`：开发集上机械错审为 0 的档位里，取每秒审完代表更多的一档，平手则请求更少，再平手则更小的档。留出集只跑这一档，用来确认，不回头改规则或阈值。另外两档留在计划里，标记为未跑，不能说成 96 条三个档都测过。若打包后开发、对照再加留出确认放不进 80 次请求，计划会从最大档开始删，并写明原因；放不进就停，不把上限加到 80 以上。
+
+开发集来自己发布记录，留出集在否定、条件和长度上更难。留出结果不能直接外推到 46608。准备说明的 sha256 只是备注，不是可执行计划。新的 ledger 是独立预算，不读取、不清除旧 run 的 transport halt，也不启动那 52 条。
+
+`source_hash` 仍是摘要加任务行的规范 JSON。`outputs` 保持数据库里的 JSON 文本，不先解码成数组。`tags` 用解码后的 JSON。任务行不含 `skill`。这和已经导出的官方清单一致。
+
+`queue` 不发布生产，也不重启 8765。预览的 `writes` 是 0。要进生产仍用原来的 `publish`，先不加 `--apply`。
+
+下面的尖括号都是占位，不是本机路径。一次启动会先跑开发集和 16 条对照；开发集都结束后，同一进程按上面的规则决定是否继续留出集。中途退出就用 `resume`，不要换 ledger 或计划。
+
+```bash
+python3 library/enrichment.py queue --help
+python3 library/enrichment.py queue \
+  --action plan --benchmark \
+  --database <catalog.sqlite3> \
+  --dev-manifest <dev48.json> \
+  --heldout-manifest <heldout48.json> \
+  --control-manifest <control16.json> \
+  --preparation-sha256 ee8dff6edbdb0bc63554057f6d74b8f9c63907ee5bd164998dffefdaebb92d5c \
+  --cost-policy allow-missing-cost \
+  --workers 10 \
+  --ledger <new-benchmark-ledger> \
+  --out <queue-plan.json>
+python3 library/enrichment.py queue \
+  --action validate \
+  --database <catalog.sqlite3> \
+  --plan <queue-plan.json> \
+  --ledger <new-benchmark-ledger> \
+  --out <validate.json>
+python3 library/enrichment.py queue \
+  --action execute \
+  --database <catalog.sqlite3> \
+  --plan <queue-plan.json> \
+  --ledger <new-benchmark-ledger> \
+  --out <staging-dir> \
+  --opencode opencode \
+  --cost-policy allow-missing-cost \
+  --workers 10
+```
+
+`execute` 返回后可以用 `--action status` 看哪些 arm 实际跑过。留出档在选择之前是估算。staging 不是生产 enrichment 目录。这次没有真实模型调用，没有测 Mac 上的墙钟，也没有证明合批相对单条非劣。

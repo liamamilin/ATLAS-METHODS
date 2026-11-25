@@ -1495,7 +1495,8 @@ SOURCE_HASH_SEMANTICS = (
     'sha256 of canonical JSON {"summary": skills.summary, "tasks": [catalog_tasks rows]}. '
     'Canonical JSON sorts object keys, keeps array order, and uses separators (",", ":"). '
     'Each task row has id, position, goal, applicability, outputs, and tags, in position order. '
-    'This is not the normalized SkillRecord file hash.'
+    'outputs is the raw database JSON text, not a decoded array. tags is decoded JSON, not the raw string. '
+    'The task row has no skill field. This is not the normalized SkillRecord file hash.'
 )
 
 
@@ -1584,8 +1585,27 @@ def load_manifest(path):
     return payload, hashlib.sha256(raw).hexdigest()
 
 
+def canonical_task_row(task):
+    """Match the manifest CLI. outputs stays database text. tags is decoded JSON. skill is absent."""
+    if isinstance(task.get('outputs'), (list, dict)):
+        raise SystemExit('task outputs must stay the raw database JSON text')
+    row = {}
+    for key in ('id', 'position', 'goal', 'applicability', 'outputs'):
+        if key in task:
+            row[key] = task.get(key)
+    if 'tags' in task:
+        tags = task.get('tags')
+        if isinstance(tags, str):
+            tags = parse_tags(tags)
+        elif not isinstance(tags, dict):
+            tags = {}
+        row['tags'] = tags
+    return row
+
+
 def source_digest(skill):
-    return digest({'summary': skill.get('summary'), 'tasks': skill.get('tasks')})
+    tasks = [canonical_task_row(task) for task in skill.get('tasks') or []]
+    return digest({'summary': skill.get('summary'), 'tasks': tasks})
 
 
 def cursor_select(skills, completed, after, limit):
@@ -1959,7 +1979,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'publish', 'repair', 'replay', 'rollback', 'run', 'aliases'))
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'publish', 'repair', 'replay', 'rollback', 'run', 'aliases', 'queue'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
@@ -1983,6 +2003,23 @@ def run(argv=None):
     parser.add_argument('--run', action='append', default=[], help='Finished run directory. Repeat once per slice. Used by publish')
     parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out. The source run directory is not modified')
     parser.add_argument('--resume-provider-invalid', action='store_true', help='Clear a provider invalid-output stop after saved turns pass the tool, identity, and nonzero checks. Error rows are not retried')
+    parser.add_argument('--action', choices=('plan', 'validate', 'execute', 'resume', 'status', 'preview', 'select'),
+                        help='queue only. plan seals 8/16/32 packing. validate checks it. execute and resume share one ledger across arms and phases. status reads it. preview writes 0. Hard caps: 80 model-run requests, 100 assistant turns, 2700 seconds, 10 in flight. Characters times 2 are estimated tokens, not a tokenizer and not bytes.')
+    parser.add_argument('--plan', type=Path, help='Sealed queue plan JSON')
+    parser.add_argument('--ledger', type=Path, help='Persistent queue ledger. A new --out does not reset it')
+    parser.add_argument('--ids-file', type=Path, help='Queue ids, comma or newline separated, 1 to 96')
+    parser.add_argument('--batch-sizes', default='8', help='Comma-separated pack targets. Benchmark forces 8,16,32')
+    parser.add_argument('--control-ids', default='', help='Same-source single-record control ids. Benchmark needs 16')
+    parser.add_argument('--development-ids', default='', help='Development half. Benchmark needs 48 ids that partition the plan')
+    parser.add_argument('--holdout-ids', default='', help='Holdout half. Benchmark needs the other 48')
+    parser.add_argument('--benchmark', action='store_true', help='Seal the 96-record, 74-request schedule under the 80/100/2700 cap')
+    parser.add_argument('--max-turns', type=int, default=None, help='Queue assistant-turn cap, at most 100')
+    parser.add_argument('--publish-out', type=Path, help='queue preview only. Dry-run destination. Production is not updated')
+    parser.add_argument('--arm', default='', help='queue preview projects this arm id, for example b8 or control-1')
+    parser.add_argument('--dev-manifest', type=Path, help='Official 48-record development manifest. Not mixed into heldout packs')
+    parser.add_argument('--heldout-manifest', type=Path, help='Official 48-record heldout manifest. Confirmed only after the sealed selection rule')
+    parser.add_argument('--control-manifest', type=Path, help='Official 16-record single-record control manifest. Must be a development subset')
+    parser.add_argument('--preparation-sha256', default='', help='Hash of the preparation note. That note is not an executable plan')
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
         report = taxonomy_reconciliation()
@@ -2089,6 +2126,140 @@ def run(argv=None):
             runtime_topics=runtime_topics, resume_provider_invalid=args.resume_provider_invalid)
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 2 if report.get('stopped') else 0
+    if args.command == 'queue':
+        from enrichment_queue import (
+            HARD_MAX_RECORDS, Ledger, build_benchmark_plan, build_plan, execute_queue, load_plan,
+            load_queue_ids, parse_id_list, project_run_dir, queue_status, select_benchmark, validate_plan,
+        )
+        if args.action is None:
+            raise SystemExit('queue needs --action plan, validate, execute, resume, status, preview, or select')
+        if args.action == 'plan':
+            if args.benchmark or args.dev_manifest or args.heldout_manifest or args.control_manifest:
+                if not (args.dev_manifest and args.heldout_manifest and args.control_manifest and args.database):
+                    raise SystemExit('benchmark plan needs --database and the dev, heldout, and control manifests')
+                dev_manifest, _dev_hash = load_manifest(args.dev_manifest)
+                heldout_manifest, _held_hash = load_manifest(args.heldout_manifest)
+                control_manifest, _control_hash = load_manifest(args.control_manifest)
+                dev_skills = load_queue_ids(args.database, dev_manifest['ids'])
+                heldout_skills = load_queue_ids(args.database, heldout_manifest['ids'])
+                for skill, row in zip(dev_skills, dev_manifest['records']):
+                    if source_digest(skill) != row['source_hash']:
+                        raise SystemExit('dev manifest source_hash does not match the catalogue')
+                for skill, row in zip(heldout_skills, heldout_manifest['records']):
+                    if source_digest(skill) != row['source_hash']:
+                        raise SystemExit('heldout manifest source_hash does not match the catalogue')
+                for row in control_manifest['records']:
+                    if row['id'] not in {skill['id'] for skill in dev_skills} or row['source_hash'] != source_digest(
+                            next(skill for skill in dev_skills if skill['id'] == row['id'])):
+                        raise SystemExit('control manifest source_hash does not match the development catalogue')
+                caps = {
+                    'cli_requests': 80, 'actual_turns': 100, 'runtime_seconds': 2700,
+                    'in_flight': min(10, max(1, args.workers)),
+                }
+                plan = build_benchmark_plan(
+                    dev_skills, heldout_skills, control_manifest['ids'], caps=caps,
+                    fee_policy=args.cost_policy, preparation_sha256=args.preparation_sha256)
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                print(json.dumps({
+                    'calls_model': False, 'production_publish': False, 'out': str(args.out),
+                    'sha256': plan['sha256'], 'estimated_requests': plan['estimated_requests'],
+                    'heldout_reserved_requests': plan['heldout_reserved_requests'],
+                    'reserved_total': plan['reserved_total'],
+                    'scheduled_arms': [arm['id'] for arm in plan['arms'] if arm.get('scheduled')],
+                    'estimated_not_run': [arm['id'] for arm in plan['arms'] if not arm.get('scheduled')],
+                    'selection_rule': plan['selection_rule'],
+                    'preparation_file_is_not_executable': True,
+                    'token_estimate': plan['token_estimate'],
+                }, ensure_ascii=False, indent=2))
+                return 0
+            raw_ids = parse_id_list(args.ids or '')
+            if args.ids_file:
+                raw_ids.extend(parse_id_list(args.ids_file.read_text(encoding='utf-8')))
+            if not args.database:
+                raise SystemExit('queue plan needs --database')
+            if not 1 <= len(raw_ids) <= HARD_MAX_RECORDS:
+                raise SystemExit('queue plan takes 1 to 96 ids')
+            skills = load_queue_ids(args.database, raw_ids)
+            caps = {
+                'cli_requests': args.max_requests if args.max_requests is not None else 80,
+                'actual_turns': args.max_turns if args.max_turns is not None else 100,
+                'runtime_seconds': args.max_runtime_seconds if args.max_runtime_seconds is not None else 2700,
+                'in_flight': min(10, max(1, args.workers)),
+            }
+            if args.benchmark:
+                caps = {'cli_requests': 80, 'actual_turns': 100, 'runtime_seconds': 2700, 'in_flight': min(10, max(1, args.workers))}
+            sizes = tuple(int(piece) for piece in args.batch_sizes.split(',') if piece.strip())
+            plan = build_plan(
+                skills, batch_sizes=sizes,
+                control_ids=parse_id_list(args.control_ids),
+                development_ids=parse_id_list(args.development_ids),
+                holdout_ids=parse_id_list(args.holdout_ids),
+                caps=caps, fee_policy=args.cost_policy, benchmark=args.benchmark,
+            )
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            print(json.dumps({
+                'calls_model': False, 'production_publish': False, 'out': str(args.out),
+                'sha256': plan['sha256'], 'ideal_requests': plan['ideal_requests'],
+                'arms': [arm['id'] for arm in plan['arms']], 'caps': plan['caps'],
+                'token_estimate': plan['token_estimate'], 'records': len(plan['ids']),
+            }, ensure_ascii=False, indent=2))
+            return 0
+        if not args.plan or not args.ledger:
+            raise SystemExit('queue validate, execute, resume, status, and preview need --plan and --ledger')
+        plan = load_plan(args.plan)
+        ledger = Ledger(args.ledger)
+        if args.action == 'validate':
+            if not args.database:
+                raise SystemExit('queue validate needs --database')
+            skills = load_queue_ids(args.database, plan['ids'])
+            report = validate_plan(plan, skills, ledger)
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 0 if report['valid'] and not report.get('halt') else 2
+        if args.action == 'select':
+            if not args.database:
+                raise SystemExit('queue select needs --database')
+            skills = load_queue_ids(args.database, plan['ids'])
+            decision = select_benchmark(plan, ledger, skills)
+            print(json.dumps({'calls_model': False, 'production_publish': False, 'selection': decision}, ensure_ascii=False, indent=2))
+            return 0 if decision.get('ready') else 2
+        if args.action == 'status':
+            report = queue_status(plan, ledger)
+            text = json.dumps(report, ensure_ascii=False, indent=2)
+            print(text)
+            if args.out.exists() and args.out.is_dir():
+                (args.out / 'queue-status.json').write_text(text + '\n', encoding='utf-8')
+            else:
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(text + '\n', encoding='utf-8')
+            return 0
+        if args.action == 'preview':
+            if not args.arm:
+                raise SystemExit('queue preview needs --arm so arms are not merged into one record')
+            projected = project_run_dir(plan, ledger, Path(str(args.out) + '-view'), args.arm)
+            report = {'calls_model': False, 'production_publish': False, 'writes': 0, 'arm': args.arm,
+                      'projected': str(projected)}
+            if args.database and args.publish_out:
+                report['publish'] = publish_runs([projected], args.publish_out, args.database, apply=False)
+                report['writes'] = report['publish'].get('writes', 0)
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+            return 0
+        if args.cost_policy != plan.get('fee_policy'):
+            raise SystemExit('queue execute fee policy must match the sealed plan')
+        if args.max_requests not in (96, plan['caps']['cli_requests']):
+            raise SystemExit('queue execute cannot change the sealed request cap')
+        if not args.database:
+            raise SystemExit('queue execute needs --database')
+        skills = load_queue_ids(args.database, plan['ids'])
+        from classify_unfiled import OpenCodeFreeClient
+        report = execute_queue(
+            OpenCodeFreeClient(args.opencode), plan, skills, ledger, args.out,
+            resume=args.action == 'resume', workers=args.workers)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 2 if report.get('halt') or report.get('stopped') else 0
     if args.command == 'aliases':
         skills = load_catalog(args.database, with_tasks=False)[0]
         print(json.dumps(alias_report([
