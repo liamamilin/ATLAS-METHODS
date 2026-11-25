@@ -194,6 +194,17 @@ def local_file(path, base, allowed):
     return result
 
 
+def enrichment_detail(skill_id):
+    folder = ROOT / 'data/library/enrichment'
+    if not (folder / 'current.json').is_file():
+        return None
+    try:
+        from enrichment import detail_for
+        return detail_for(folder, skill_id)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return None
+
+
 def github_url(row):
     return 'https://github.com/' + quote(row['repo'], safe='/') + '/blob/' + quote(row['revision'], safe='') + '/' + quote(row['path'], safe='/')
 
@@ -218,9 +229,13 @@ def get_skill(con, skill_id, requested_source):
             'has_raw': bool(row['raw_path']),
         })
     record = json.loads(local_file(display_record, ROOT, NORMALIZED).read_text(encoding='utf-8'))
-    return {'id': skill['id'], 'category': skill['category'], 'topic': skill['topic'],
-            'label_from': skill['label_from'], 'record': record,
-            'display_source': display_source, 'sources': sources}
+    payload = {'id': skill['id'], 'category': skill['category'], 'topic': skill['topic'],
+               'label_from': skill['label_from'], 'record': record,
+               'display_source': display_source, 'sources': sources}
+    enrichment = enrichment_detail(skill['id'])
+    if enrichment is not None:
+        payload['enrichment'] = enrichment
+    return payload
 
 
 def get_raw(con, source_id):
