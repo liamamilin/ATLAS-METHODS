@@ -128,16 +128,37 @@ python3 library/enrichment.py run \
 
 `--resume-provider-invalid` 只解除 `tool_or_transport` 或 `provider_invalid_output`，并且已保存回合必须是该免费模型、没有工具事件、没有明确非 0。它不删除旧账，也不重跑 `phase=error` 的记录。11 条未请求要另用只含这 11 条的清单，在剩余请求额度内再跑，不能把首批 48 条说成已经全部完成。
 
-8765 上的原进程启动时加载了当时的 `library/serve.py`。页面文件每次请求从磁盘读，接口要等这个进程重启。先读出它的启动命令，再停掉这一个 PID，用同一条命令在同一端口拉起。不要另开第二个服务，也不要删掉 PID 记录之前就杀进程。macOS 上：
-
-```bash
-ps -p 89492 -o pid=,command=
-```
-
-记录输出后，由父级在授权范围内结束该 PID，再在仓库根目录执行记录里的那条命令。若记录就是默认启动，则是 `python3 library/serve.py --port 8765`。启动失败时用刚才记录的同一条命令再拉起，不要改端口。重启后用 `curl -fsS http://127.0.0.1:8765/api/meta` 核对目录仍是原来那一份。这次交付不执行重启。
+8765 上的进程启动时加载当时的 `library/serve.py`。页面文件每次请求从磁盘读，接口要等这个进程重启才换。本机当前唯一进程是 PID 71194。这次只改事实去重和离线发布，不重启它，也不要另开第二个服务。
 
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 
-标签值的默认查询是「已审 accept 的这个规范值，任何角色」。`mentioned`、`example`、`prohibited` 都能被找到，详情里写出角色。`erole=required` 只保留 `required` 和 `conditional`。`erole=legacy` 只查旧任务标签，不把它们当成已审 accept。不带 `erole` 时，旧标签不会冒充已审值。这就是 `image` 的 mentioned 以前被漏掉、而 `sql` 仍能命中的原因：按值查询被固定成必需角色，同时 `tools`/`task_action` 的 `legacy_unverified` 又不看角色。`scenario`、`requirements`、`side_effects` 的已接受数仍是 0；附件里的候选数不是已接受覆盖。43 条审核记录的等级是 D1 31、U 8、R 4，不是 43 条高质量，也没有 source_fidelity pass 或执行通过。
+同一任务内对所有维度生效，不限动作和工具。两条事实的 `task_position` 不同就不能拼在一起。`level` 为 `skill` 的事实对整条 Skill 成立，所以可以和其中任意一个任务的事实组合；两条都在 skill 上时，勾不勾「同一任务内」结果相同。这不是跨任务拼出来的组合。
 
-8765 上的进程在启动时加载 `library/serve.py`。`library/web/index.html`、`style.css`、`app.js` 每次请求从磁盘读取；接口代码不会热更新。父级要在同一端口重启原来的进程，不要另开一个服务。端口已被占用时 `serve.py` 会直接退出。重启前先停掉现有进程，再在仓库根目录执行 `python3 library/serve.py --port 8765`。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。这次交付不重启该进程。
+被卡住的那 48 条不要重跑模型。`publish` 只读 run 目录。完全相同、且原始审核对这个 `fact_id` 都是 `reject` 的候选会收成一条，`accepted` 仍为 false，其它已接受事实的决定保持原样。对不上就跳过该代表，其余照常预览或发布。`--exclude` 可显式跳过，源目录不改。
+
+```bash
+python3 library/enrichment.py publish \
+  --database data/library/catalog.sqlite3 \
+  --out data/library/enrichment \
+  --run 该48条的run目录
+python3 library/enrichment.py publish \
+  --database data/library/catalog.sqlite3 \
+  --out data/library/enrichment \
+  --run 该48条的run目录 \
+  --apply
+```
+
+预览的 `writes` 是 0，源 run 目录不改。`normalized_identical_rejects` 有那一条，就可以 `--apply` 整片 48。已发布的 142 条留在原快照里，一起进入新快照。若该条在 `skipped`，把代表 id 放进 `--exclude` 再发布其余 47。`--apply` 之后若要撤回，用计划里的 `previous`（当前指针的前一版是 `23ae4f011b0ba06f`）：
+
+```bash
+python3 library/enrichment.py rollback \
+  --out data/library/enrichment \
+  --snapshot 23ae4f011b0ba06f \
+  --apply
+```
+
+不要新开这 48 条的审核。本观察批已请求 295，剩下 152 条最多 304 次，合计 599，不超过 600。旧的 2 条坏流水线和 4 条 provider invalid 不重试。这次不重启 8765。发布和后续 `run` 各自起进程，读磁盘上的 `enrichment.py`。正在跑的 PID 71194 继续提供已经安装的检索。
+
+标签值的默认查询是「已审 accept 的这个规范值，任何角色」。`mentioned`、`example`、`prohibited` 都能被找到，详情里写出角色。`erole=required` 只保留 `required` 和 `conditional`。`erole=legacy` 只查旧任务标签，不把它们当成已审 accept。不带 `erole` 时，旧标签不会冒充已审值。这就是 `image` 的 mentioned 以前被漏掉、而 `sql` 仍能命中的原因：按值查询被固定成必需角色，同时 `tools`/`task_action` 的 `legacy_unverified` 又不看角色。当时那 43 条审核记录的等级是 D1 31、U 8、R 4。本机现在的生产累计是 142/46608，192 条 accepted，63 个有值代表，等级 D1 100、U 21、R 21。current `23ae4f011b0ba06f`，previous `a17fe4d21de60046`。这些等级和缺费用都不是这次停下的原因。
+
+8765 上的 PID 71194 在启动时加载了当时的 `library/serve.py`。页面文件每次请求从磁盘读取；接口代码不会热更新。这次的去重修复不需要动它。端口已被占用时再执行 `serve.py` 会直接退出，不要另开第二个服务。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。

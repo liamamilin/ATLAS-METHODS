@@ -1278,6 +1278,185 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses-' + title[-6:], 'part': {'te
             self.assertEqual([item['id'] for item in legacy['items']], ['2' * 32])
             self.assertEqual(plain['total'], 2)
 
+    def test_identical_rejected_closed_phrase_collapses_without_new_acceptance(self):
+        import sqlite3
+        import subprocess
+        import sys
+        from build import SCHEMA
+        from enrichment import fact, finalize, load_catalog, load_current_annotations, map_record, same_task_query, source_digest
+        script = Path(__file__).resolve().parents[1] / 'library' / 'enrichment.py'
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            for record_id, goal in (('a' * 32, '需要登录才能继续。'), ('b' * 32, '使用 Python 排查故障。'), ('d' * 32, '保留。')):
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', goal, 'code', 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, goal))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, goal, '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            catalogue = {item['id']: item for item in load_catalog(database)[0]}
+
+            def base(record_id):
+                skill = catalogue[record_id]
+                annotation = map_record(skill, skill['tasks'], source_hash=source_digest(skill))
+                annotation['quality'] = {
+                    'grade': 'D1', 'model_review': 'completed', 'rule_version': 'canonical-value/v1',
+                    'execution': 'not_run',
+                }
+                return annotation
+
+            duplicate = base('a' * 32)
+            closed = {
+                'fact_id': 'dup-auth', 'dimension': 'requirements', 'value_id': 'authentication',
+                'role': 'required', 'quote': '需要登录才能继续。', 'method': 'closed_phrase',
+                'support': 'direct_explicit', 'accepted': False, 'candidate': True,
+                'review_decision': 'conflict', 'program_evidence': True,
+                'scope': {'level': 'skill'},
+            }
+            duplicate['facts'].extend([dict(closed), dict(closed)])
+            duplicate['facts'].append({
+                'fact_id': 'keep-python', 'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+                'quote': '需要登录才能继续。', 'support': 'direct_explicit', 'accepted': True,
+                'candidate': False, 'review_decision': 'accept', 'program_evidence': True,
+                'scope': {'level': 'task', 'task_position': 1},
+            })
+            duplicate['fingerprint'] = 'fp-a'
+            clean = base('b' * 32)
+            clean['facts'].append({
+                'fact_id': 'py', 'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+                'quote': '使用 Python 排查故障。', 'support': 'direct_explicit', 'accepted': True,
+                'candidate': False, 'review_decision': 'accept', 'program_evidence': True,
+                'scope': {'level': 'task', 'task_position': 1},
+            })
+            clean['fingerprint'] = 'fp-b'
+            kept = base('d' * 32)
+            kept['fingerprint'] = 'fp-d'
+            run_dir = root / 'held48'
+            (run_dir / 'attempts' / ('a' * 32) / 'review').mkdir(parents=True)
+            (run_dir / 'attempts' / ('a' * 32) / 'review' / 'response.txt').write_text(json.dumps({
+                'fact_decisions': [
+                    {'fact_id': 'dup-auth', 'decision': 'reject'},
+                    {'fact_id': 'dup-auth', 'decision': 'reject'},
+                    {'fact_id': 'keep-python', 'decision': 'accept'},
+                ],
+            }), encoding='utf-8')
+            (run_dir / 'batch-state.json').write_text(json.dumps({'completed': {
+                'a' * 32: {'phase': 'reviewed', 'annotation': duplicate},
+                'b' * 32: {'phase': 'reviewed', 'annotation': clean},
+            }, 'stopped': None}), encoding='utf-8')
+            before_state = (run_dir / 'batch-state.json').read_bytes()
+            destination = root / 'published'
+            destination.mkdir()
+            snap = destination / 'snapshots' / 'oldsnap'
+            snap.mkdir(parents=True)
+            (snap / 'annotations.jsonl').write_text(json.dumps(kept) + '\n', encoding='utf-8')
+            (destination / 'current.json').write_text(json.dumps({
+                'snapshot': 'oldsnap', 'previous': None, 'fingerprint': 'old', 'batch_id': 'seed', 'records': 1,
+            }), encoding='utf-8')
+
+            def cli(args):
+                return subprocess.run([sys.executable, '-B', str(script), *args], capture_output=True, text=True)
+
+            preview = cli(['publish', '--database', str(database), '--out', str(destination), '--run', str(run_dir)])
+            self.assertEqual(preview.returncode, 0, preview.stderr)
+            shown = json.loads(preview.stdout)
+            self.assertEqual(shown['writes'], 0)
+            self.assertEqual(shown['normalized_identical_rejects'], ['a' * 32])
+            self.assertEqual((run_dir / 'batch-state.json').read_bytes(), before_state)
+            applied = cli(['publish', '--database', str(database), '--out', str(destination),
+                           '--run', str(run_dir), '--apply'])
+            self.assertEqual(applied.returncode, 0, applied.stderr)
+            loaded = {item['record_id']: item for item in load_current_annotations(destination)}
+            self.assertEqual(set(loaded), {'a' * 32, 'b' * 32, 'd' * 32})
+            auth = [item for item in loaded['a' * 32]['facts'] if item.get('value_id') == 'authentication']
+            self.assertEqual(len(auth), 1)
+            self.assertEqual(auth[0]['review_decision'], 'reject')
+            self.assertFalse(auth[0]['accepted'])
+            self.assertEqual(len([item['fact_id'] for item in loaded['a' * 32]['facts'] if item.get('fact_id') == 'dup-auth']), 1)
+            kept_accept = [item for item in loaded['a' * 32]['facts'] if item.get('fact_id') == 'keep-python']
+            self.assertEqual(len(kept_accept), 1)
+            self.assertTrue(kept_accept[0]['accepted'])
+            self.assertEqual(kept_accept[0]['review_decision'], 'accept')
+            self.assertEqual(loaded['a' * 32]['quality']['grade'], 'D1')
+            different = dict(closed)
+            different['role'] = 'mentioned'
+            different['fact_id'] = 'dup-auth'
+            split = base('a' * 32)
+            split['facts'].extend([dict(closed), different])
+            split['fingerprint'] = 'fp-split'
+            split_dir = root / 'split'
+            split_dir.mkdir()
+            (split_dir / 'batch-state.json').write_text(json.dumps({'completed': {
+                'a' * 32: {'phase': 'reviewed', 'annotation': split},
+                'b' * 32: {'phase': 'reviewed', 'annotation': clean},
+            }}), encoding='utf-8')
+            partial = cli(['publish', '--database', str(database), '--out', str(root / 'other'),
+                           '--run', str(split_dir), '--apply'])
+            self.assertEqual(partial.returncode, 0, partial.stderr)
+            partial_ids = {item['record_id'] for item in load_current_annotations(root / 'other')}
+            self.assertNotIn('a' * 32, partial_ids)
+            self.assertIn('b' * 32, partial_ids)
+            task_one = {'dimension': 'input_kind', 'value_id': 'document', 'role': 'required', 'accepted': True,
+                        'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 1}}
+            task_two = {'dimension': 'output_kind', 'value_id': 'document', 'role': 'required', 'accepted': True,
+                        'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 2}}
+            same = dict(task_two, scope={'level': 'task', 'task_position': 1})
+            skill_fact = {'dimension': 'kind', 'value_id': 'execution_workflow', 'role': 'required', 'accepted': True,
+                          'review_decision': 'accept', 'scope': {'level': 'skill'}}
+            skill_a = catalogue['a' * 32]
+            generated = map_record(skill_a, skill_a['tasks'], source_hash=source_digest(skill_a))
+            for _ in range(2):
+                generated['facts'].append(fact(
+                    skill_a['id'], {'level': 'skill'}, 'requirements', 'authentication', 'required',
+                    'direct_explicit', '需要登录才能继续。', 'supplied_text', generated['source_hash'], 'closed_phrase'))
+            closed_id = generated['facts'][-1]['fact_id']
+            finalize(generated, {'axes': {}, 'fact_decisions': [
+                {'fact_id': closed_id, 'decision': 'reject'},
+                {'fact_id': closed_id, 'decision': 'reject'},
+            ]}, skill_a)
+            generated_auth = [item for item in generated['facts'] if item.get('fact_id') == closed_id]
+            self.assertEqual(len(generated_auth), 1)
+            self.assertEqual(generated_auth[0]['review_decision'], 'reject')
+            self.assertFalse(generated_auth[0]['accepted'])
+            unknown = map_record(skill_a, skill_a['tasks'], source_hash=source_digest(skill_a))
+            unknown['facts'].append(fact(
+                skill_a['id'], {'level': 'skill'}, 'requirements', 'authentication', 'required',
+                'direct_explicit', '需要登录才能继续。', 'supplied_text', unknown['source_hash'], 'closed_phrase'))
+            finalize(unknown, {'axes': {}, 'fact_decisions': [
+                {'fact_id': unknown['facts'][-1]['fact_id'], 'decision': 'unknown'},
+            ]}, skill_a)
+            self.assertFalse(any(item.get('accepted') for item in unknown['facts']))
+            split_ann = map_record(skill_a, skill_a['tasks'], source_hash=source_digest(skill_a))
+            required_fact = fact(
+                skill_a['id'], {'level': 'skill'}, 'requirements', 'authentication', 'required',
+                'direct_explicit', '需要登录才能继续。', 'supplied_text', split_ann['source_hash'], 'closed_phrase')
+            mentioned_fact = fact(
+                skill_a['id'], {'level': 'skill'}, 'requirements', 'authentication', 'mentioned',
+                'direct_explicit', '需要登录才能继续。', 'supplied_text', split_ann['source_hash'], 'closed_phrase')
+            mentioned_fact['fact_id'] = required_fact['fact_id']
+            split_ann['facts'].extend([required_fact, mentioned_fact])
+            finalize(split_ann, {'axes': {}, 'fact_decisions': [
+                {'fact_id': required_fact['fact_id'], 'decision': 'accept'},
+            ]}, skill_a)
+            split_roles = sorted(item['role'] for item in split_ann['facts'] if item.get('dimension') == 'requirements')
+            self.assertEqual(split_roles, ['mentioned', 'required'])
+            self.assertTrue(all(
+                item.get('review_decision') == 'conflict' and item.get('accepted') is False
+                for item in split_ann['facts'] if item.get('dimension') == 'requirements'))
+            self.assertEqual(same_task_query([task_one, task_two], {'input_kind': ['document'], 'output_kind': ['document']}, True), [])
+            self.assertTrue(same_task_query([task_one, same], {'input_kind': ['document'], 'output_kind': ['document']}, True))
+            self.assertTrue(same_task_query([skill_fact, task_one], {'kind': ['execution_workflow'], 'input_kind': ['document']}, True))
+            self.assertEqual(same_task_query([
+                dict(skill_fact, scope={'level': 'task', 'task_position': 1}),
+                {'dimension': 'output_kind', 'value_id': 'decision_or_plan', 'role': 'required', 'accepted': True,
+                 'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 2}},
+            ], {'kind': ['execution_workflow'], 'output_kind': ['decision_or_plan']}, True), [])
+
 
 if __name__ == '__main__':
     unittest.main()

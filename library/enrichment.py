@@ -1065,10 +1065,11 @@ def absorb_facts(annotation, payload, skill):
             seen[item['fact_id']] = item
             deduped.append(item)
             continue
-        if {key: previous.get(key) for key in ('dimension', 'value_id', 'role', 'quote', 'scope', 'proposed_value')} != {
-                key: item.get(key) for key in ('dimension', 'value_id', 'role', 'quote', 'scope', 'proposed_value')}:
+        if fact_identity(previous) != fact_identity(item):
             item['fact_id'] = digest({'collision': item['fact_id'], 'index': len(deduped)})[:32]
             item['fact_id_collision'] = True
+            item['accepted'] = False
+            item['candidate'] = True
             deduped.append(item)
         else:
             previous['duplicate_count'] = previous.get('duplicate_count', 1) + 1
@@ -1114,10 +1115,102 @@ def decision_matches(item, decision):
     return True
 
 
+def fact_identity(item):
+    scope = item.get('scope') or {}
+    return (
+        item.get('dimension'), item.get('value_id'), item.get('role'), item.get('quote'),
+        item.get('proposed_value'), scope.get('level'), scope.get('task_position'), scope.get('task_id'),
+    )
+
+
+def dedupe_identical_facts(annotation):
+    """Merge facts that are the same fact. Different role, scope, quote, or proposal stay separate."""
+    if not isinstance(annotation, dict):
+        return annotation
+    kept = []
+    seen = {}
+    for item in annotation.get('facts') or []:
+        if item.get('support') == 'legacy_unverified':
+            kept.append(item)
+            continue
+        ident = fact_identity(item)
+        previous = seen.get(ident)
+        if previous is None:
+            seen[ident] = item
+            kept.append(item)
+            continue
+        previous['duplicate_count'] = previous.get('duplicate_count', 1) + 1
+        if previous.get('review_decision') not in (None, '', 'unspecified') and item.get('review_decision') not in (
+                None, '', 'unspecified', previous.get('review_decision')):
+            previous['review_decision'] = 'conflict'
+            previous['accepted'] = False
+            previous['candidate'] = True
+            previous.pop('accepted_by', None)
+    by_id = {}
+    for item in kept:
+        if item.get('support') == 'legacy_unverified' or not item.get('fact_id'):
+            continue
+        other = by_id.get(item['fact_id'])
+        if other is not None and fact_identity(other) != fact_identity(item):
+            for collided in (other, item):
+                collided['fact_id_collision'] = True
+                collided['review_decision'] = 'conflict'
+                collided['accepted'] = False
+                collided['candidate'] = True
+                collided.pop('accepted_by', None)
+        by_id[item['fact_id']] = item
+    annotation['facts'] = kept
+    return annotation
+
+
+def collapse_identical_rejects(annotation, review_payload):
+    """Collapse exact duplicate candidates only when every matching raw decision is reject."""
+    groups = {}
+    for item in annotation.get('facts') or []:
+        if item.get('support') == 'legacy_unverified':
+            continue
+        groups.setdefault(fact_identity(item), []).append(item)
+    duplicates = [group for group in groups.values() if len(group) > 1]
+    if not duplicates:
+        return annotation, 'unchanged'
+    if any(item.get('accepted') for group in duplicates for item in group):
+        return None, 'accepted_duplicate'
+    decisions = [row for row in (review_payload or {}).get('fact_decisions') or [] if isinstance(row, dict)]
+    if not decisions:
+        return None, 'raw_review_missing'
+    for group in duplicates:
+        matched = [row.get('decision') for row in decisions if any(decision_matches(item, row) for item in group)]
+        if len(matched) < 2 or any(decision != 'reject' for decision in matched):
+            return None, 'raw_review_not_unanimous_reject'
+    before = [
+        (fact_identity(item), item.get('review_decision'), item.get('accepted') is True)
+        for item in annotation.get('facts') or [] if item.get('support') != 'legacy_unverified'
+    ]
+    dedupe_identical_facts(annotation)
+    for item in annotation.get('facts') or []:
+        if item.get('duplicate_count', 1) > 1 and item.get('support') != 'legacy_unverified':
+            item['review_decision'] = 'reject'
+            item['accepted'] = False
+            item['candidate'] = True
+            item.pop('accepted_by', None)
+    after = [
+        (fact_identity(item), item.get('review_decision'), item.get('accepted') is True)
+        for item in annotation.get('facts') or [] if item.get('support') != 'legacy_unverified'
+    ]
+    before_accepts = [row for row in before if row[2]]
+    after_accepts = [row for row in after if row[2]]
+    if before_accepts != after_accepts:
+        return None, 'accept_binding_changed'
+    if any(item.get('accepted') for item in annotation.get('facts') or [] if item.get('review_decision') != 'accept'):
+        return None, 'accept_binding_changed'
+    return annotation, 'collapsed_identical_rejects'
+
+
 def enforce_acceptance_invariant(annotation):
     """Accepted means this review explicitly accepted this fact. Nothing else may promote it."""
     if not isinstance(annotation, dict):
         return annotation
+    dedupe_identical_facts(annotation)
     for item in annotation.get('facts') or []:
         if item.get('support') == 'legacy_unverified':
             item['accepted'] = False
@@ -1157,6 +1250,7 @@ def enforce_acceptance_invariant(annotation):
 
 def finalize(annotation, payload, skill):
     """The only place a model fact becomes accepted. Mapping a value is not acceptance."""
+    dedupe_identical_facts(annotation)
     text = supplied_text(skill)
     axes = dict(payload.get('axes') if isinstance(payload.get('axes'), dict) else {})
     if axes.get('source_fidelity') == 'pass':
@@ -1177,8 +1271,15 @@ def finalize(annotation, payload, skill):
                 item['review_decision'] = 'conflict'
                 item['accepted'] = False
                 item['candidate'] = True
+                item.pop('accepted_by', None)
             continue
         item = matched[0]
+        if item.get('review_decision') not in (None, '', 'unspecified') and item.get('review_decision') != decision.get('decision'):
+            item['review_decision'] = 'conflict'
+            item['accepted'] = False
+            item['candidate'] = True
+            item.pop('accepted_by', None)
+            continue
         decision_name = decision.get('decision')
         if decision_name not in ('accept', 'reject', 'unknown'):
             decision_name = 'unknown'
@@ -1260,7 +1361,7 @@ def load_run_entries(path):
     return state.get('completed') or {}
 
 
-def publish_runs(run_dirs, destination, database, *, apply=False):
+def publish_runs(run_dirs, destination, database, *, apply=False, exclude=()):
     """Merge reviewed run snapshots. Drafts stay out. Unrelated published records stay."""
     import copy
     shared = global_writer_lock()
@@ -1275,8 +1376,13 @@ def publish_runs(run_dirs, destination, database, *, apply=False):
         chosen = {}
         skipped = []
         conflicts = []
+        normalized = []
+        excluded = set(exclude or ())
         for run_dir in run_dirs:
             for record_id, entry in load_run_entries(run_dir).items():
+                if record_id in excluded:
+                    skipped.append({'id': record_id, 'reason': 'excluded', 'run': str(run_dir)})
+                    continue
                 phase = entry.get('phase')
                 if phase != 'reviewed':
                     skipped.append({'id': record_id, 'reason': phase or 'not_reviewed', 'run': str(run_dir)})
@@ -1292,7 +1398,29 @@ def publish_runs(run_dirs, destination, database, *, apply=False):
                 if quality.get('rule_version') not in (None, RULE_VERSION):
                     conflicts.append({'id': record_id, 'reason': 'vocabulary_policy'})
                     continue
-                item = enforce_acceptance_invariant(copy.deepcopy(annotation))
+                item = copy.deepcopy(annotation)
+                identities = [fact_identity(fact) for fact in item.get('facts') or []
+                              if fact.get('support') != 'legacy_unverified']
+                if len(identities) != len(set(identities)):
+                    review_path = Path(run_dir) / 'attempts' / record_id / 'review' / 'response.txt'
+                    raw_review = None
+                    if review_path.is_file():
+                        try:
+                            raw_review = json.loads(review_path.read_text(encoding='utf-8'))
+                        except json.JSONDecodeError:
+                            raw_review = None
+                    collapsed, status = collapse_identical_rejects(item, raw_review)
+                    if collapsed is None:
+                        skipped.append({'id': record_id, 'reason': status, 'run': str(run_dir)})
+                        continue
+                    item = collapsed
+                    normalized.append(record_id)
+                item = enforce_acceptance_invariant(item)
+                fact_ids = [fact.get('fact_id') for fact in item.get('facts') or []
+                            if fact.get('support') != 'legacy_unverified' and fact.get('fact_id')]
+                if len(fact_ids) != len(set(fact_ids)):
+                    skipped.append({'id': record_id, 'reason': 'fact_id_collision', 'run': str(run_dir)})
+                    continue
                 grade = (item.get('quality') or {}).get('grade')
                 item.setdefault('quality', {})
                 item['quality']['recommend'] = grade != 'R'
@@ -1327,6 +1455,7 @@ def publish_runs(run_dirs, destination, database, *, apply=False):
             'skipped': skipped, 'incoming': len(chosen), 'records': len(merged),
             'grades': {}, 'recommend_false': sum(1 for item in chosen.values() if not item['quality'].get('recommend')),
             'dry_run': not apply, 'writes': 0,
+            'normalized_identical_rejects': normalized,
         }
         for item in chosen.values():
             grade = item['quality'].get('grade')
@@ -1669,6 +1798,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                     closed['candidate'] = True
                     closed['rule_version'] = RULE_VERSION
                     base['facts'].append(closed)
+                dedupe_identical_facts(base)
                 attempt = Path(out) / 'attempts' / skill['id'] / ('review' if review else 'generate')
                 attempt.mkdir(parents=True, exist_ok=True)
                 title = ('ATLAS enrichment review ' if review else 'ATLAS enrichment generate ') + skill['id']
@@ -1851,6 +1981,7 @@ def run(argv=None):
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     parser.add_argument('--run', action='append', default=[], help='Finished run directory. Repeat once per slice. Used by publish')
+    parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out. The source run directory is not modified')
     parser.add_argument('--resume-provider-invalid', action='store_true', help='Clear a provider invalid-output stop after saved turns pass the tool, identity, and nonzero checks. Error rows are not retried')
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
@@ -1933,7 +2064,8 @@ def run(argv=None):
     if args.command == 'publish':
         if not args.database or not args.run:
             raise SystemExit('publish needs --database and at least one --run directory')
-        report = publish_runs(args.run, args.out, args.database, apply=args.apply)
+        report = publish_runs(args.run, args.out, args.database, apply=args.apply,
+                              exclude=[piece.strip() for piece in args.exclude.split(',') if piece.strip()])
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 2 if report.get('conflicts') else 0
     if args.command == 'run':
