@@ -1010,6 +1010,199 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' +
             self.assertEqual(receipt['accepted'], 0)
             self.assertEqual(receipt['grade'], 'U')
 
+    def test_cli_publishes_reviewed_runs_and_reviews_past_invalid_output(self):
+        import sqlite3
+        import subprocess
+        import sys
+        from build import SCHEMA
+        from enrichment import load_catalog, load_current_annotations, map_record, search_annotations, source_digest
+        script = Path(__file__).resolve().parents[1] / 'library' / 'enrichment.py'
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            rows = {
+                'a' * 32: ('使用 Python 排查故障。', 'D1', True),
+                'b' * 32: ('整理会议纪要。', 'R', True),
+                'c' * 32: ('空任务。', 'U', False),
+                'd' * 32: ('保留的旧记录。', 'D1', True),
+            }
+            for record_id, (goal, _grade, _reviewed) in rows.items():
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', goal, 'code', 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, goal))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, goal, '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            catalogue = {item['id']: item for item in load_catalog(database)[0]}
+
+            def reviewed(record_id, grade, accept):
+                skill = catalogue[record_id]
+                annotation = map_record(skill, skill['tasks'], source_hash=source_digest(skill))
+                annotation['quality'] = {
+                    'grade': grade, 'model_review': 'completed', 'rule_version': 'canonical-value/v1',
+                    'diversity': 'same_model_new_session', 'execution': 'not_run',
+                }
+                if accept:
+                    annotation['facts'].append({
+                        'fact_id': 'f-' + record_id[:4], 'dimension': 'tools', 'value_id': 'python',
+                        'role': 'required', 'quote': skill['tasks'][0]['goal'], 'support': 'direct_explicit',
+                        'program_evidence': True, 'review_decision': 'accept', 'accepted': True,
+                        'candidate': False, 'scope': {'level': 'task', 'task_position': 1},
+                    })
+                annotation['facts'].append({
+                    'fact_id': 'u-' + record_id[:4], 'dimension': 'tools', 'value_id': 'docker',
+                    'role': 'mentioned', 'quote': skill['tasks'][0]['goal'], 'support': 'bounded_inference',
+                    'program_evidence': False, 'review_decision': 'unknown', 'accepted': True,
+                    'candidate': False, 'scope': {'level': 'task', 'task_position': 1},
+                })
+                annotation['fingerprint'] = 'fp-' + grade + '-' + record_id[:4]
+                return annotation
+
+            def write_run(path, items):
+                path.mkdir()
+                completed = {}
+                for record_id, phase, annotation in items:
+                    completed[record_id] = {
+                        'phase': phase, 'source_hash': annotation.get('source_hash'), 'annotation': annotation,
+                    }
+                (path / 'batch-state.json').write_text(json.dumps({'completed': completed, 'stopped': None}), encoding='utf-8')
+
+            keep = reviewed('d' * 32, 'D1', True)
+            write_run(root / 'slice-reviewed', [
+                ('a' * 32, 'reviewed', reviewed('a' * 32, 'D1', True)),
+                ('b' * 32, 'reviewed', reviewed('b' * 32, 'R', True)),
+            ])
+            draft = reviewed('c' * 32, 'U', False)
+            draft['quality']['model_review'] = 'draft_pending_review'
+            write_run(root / 'slice-draft', [('c' * 32, 'generated', draft)])
+            destination = root / 'published'
+            destination.mkdir()
+            snapshot = destination / 'snapshots' / 'oldsnap'
+            snapshot.mkdir(parents=True)
+            (snapshot / 'annotations.jsonl').write_text(json.dumps(keep) + '\n', encoding='utf-8')
+            (destination / 'current.json').write_text(json.dumps({
+                'snapshot': 'oldsnap', 'previous': None, 'fingerprint': 'old', 'batch_id': 'seed', 'records': 1,
+            }), encoding='utf-8')
+            before_db = database.read_bytes()
+
+            def cli(args):
+                return subprocess.run([sys.executable, '-B', str(script), *args], capture_output=True, text=True)
+
+            preview = cli(['publish', '--database', str(database), '--out', str(destination),
+                           '--run', str(root / 'slice-reviewed'), '--run', str(root / 'slice-draft')])
+            self.assertEqual(preview.returncode, 0, preview.stderr)
+            shown = json.loads(preview.stdout)
+            self.assertFalse(shown['applied'])
+            self.assertEqual(shown['writes'], 0)
+            self.assertEqual(json.loads((destination / 'current.json').read_text(encoding='utf-8'))['snapshot'], 'oldsnap')
+            applied = cli(['publish', '--database', str(database), '--out', str(destination),
+                           '--run', str(root / 'slice-reviewed'), '--run', str(root / 'slice-draft'), '--apply'])
+            self.assertEqual(applied.returncode, 0, applied.stderr)
+            body = json.loads(applied.stdout)
+            self.assertTrue(body['applied'])
+            self.assertEqual(body['grades'], {'D1': 1, 'R': 1})
+            self.assertEqual(database.read_bytes(), before_db)
+            loaded = {item['record_id']: item for item in load_current_annotations(destination)}
+            self.assertIn('d' * 32, loaded)
+            self.assertNotIn('c' * 32, loaded)
+            self.assertEqual(loaded['a' * 32]['quality']['grade'], 'D1')
+            self.assertTrue(loaded['a' * 32]['quality']['recommend'])
+            self.assertFalse(loaded['b' * 32]['quality']['recommend'])
+            self.assertEqual(loaded['a' * 32]['dimensions']['tools']['values'], [{'id': 'python', 'role': 'required'}])
+            self.assertFalse(any(item.get('value_id') == 'docker' and item.get('accepted') for item in loaded['a' * 32]['facts']))
+            self.assertEqual(search_annotations(list(loaded.values()), [('tools', ['python'], None)], True), ['a' * 32, 'b' * 32, 'd' * 32])
+            again = cli(['publish', '--database', str(database), '--out', str(destination),
+                         '--run', str(root / 'slice-reviewed'), '--run', str(root / 'slice-draft'), '--apply'])
+            self.assertTrue(json.loads(again.stdout)['idempotent'])
+            conflict_dir = root / 'slice-conflict'
+            other = reviewed('a' * 32, 'D1', True)
+            other['fingerprint'] = 'different'
+            write_run(conflict_dir, [('a' * 32, 'reviewed', other)])
+            refused = cli(['publish', '--database', str(database), '--out', str(destination),
+                           '--run', str(conflict_dir), '--apply'])
+            self.assertNotEqual(refused.returncode, 0)
+            self.assertEqual(json.loads((destination / 'current.json').read_text(encoding='utf-8'))['snapshot'], body['snapshot'])
+            rolled = cli(['rollback', '--out', str(destination), '--snapshot', body['previous'], '--apply'])
+            self.assertEqual(json.loads(rolled.stdout)['rolled_back'], True)
+            restored = load_current_annotations(destination)
+            self.assertEqual([item['record_id'] for item in restored], ['d' * 32])
+
+            fake = root / 'opencode'
+            fake.write_text('''#!/usr/bin/env python3
+import json, sys
+title = ''
+if '--title' in sys.argv:
+    title = sys.argv[sys.argv.index('--title') + 1]
+if sys.argv[1:3] == ['api', 'model.list']:
+    print(json.dumps({'data': [{'providerID': 'opencode-go', 'id': 'iceman-contributor-free',
+        'enabled': True, 'status': 'active',
+        'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}]}))
+    raise SystemExit
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1:3] == ['session', 'export']:
+    print(json.dumps({'messages': [{'type': 'assistant', 'info': {
+        'role': 'assistant', 'cost': 0, 'finish': 'stop',
+        'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}}]}))
+    raise SystemExit
+if 'bbbb' in title:
+    print(json.dumps({'type': 'error', 'error': {
+        'type': 'provider.invalid-output', 'message': 'stream ended without finish_reason'}}))
+    raise SystemExit(1)
+print(json.dumps({'type': 'text', 'sessionID': 'ses-' + title[-6:], 'part': {'text': json.dumps({
+    'facts': [], 'axes': {'source_fidelity': 'limited', 'structural_completeness': 'limited',
+                          'actionability': 'limited', 'limitations_and_risks': 'limited',
+                          'classification_and_tag_fit': 'limited'}, 'fact_decisions': []})}}))
+''', encoding='utf-8')
+            fake.chmod(0o755)
+            manifest = root / 'two.json'
+            two = cli(['manifest', '--database', str(database), '--ids', 'a' * 32 + ',' + 'b' * 32, '--out', str(manifest)])
+            self.assertEqual(two.returncode, 0, two.stderr)
+            first = cli(['run', '--opencode', str(fake), '--database', str(database), '--manifest', str(manifest),
+                         '--out', str(root / 'recover'), '--phase', 'both', '--workers', '1', '--max-requests', '4',
+                         '--max-runtime-seconds', '1500', '--cost-policy', 'allow-missing-cost'])
+            self.assertEqual(first.returncode, 0, first.stdout + first.stderr)
+            report = json.loads(first.stdout)
+            self.assertIsNone(report['stopped'])
+            self.assertEqual(report['error_kinds'], {'provider_invalid_output': 1})
+            state = json.loads((root / 'recover' / 'batch-state.json').read_text(encoding='utf-8'))
+            self.assertEqual(state['completed']['b' * 32]['phase'], 'error')
+            self.assertTrue(state['completed']['b' * 32]['will_not_retry'])
+            self.assertNotEqual(state['completed']['a' * 32]['phase'], 'error')
+            calls = (root / 'recover' / 'attempts')
+            self.assertTrue((calls / ('a' * 32) / 'review').exists())
+            self.assertFalse((calls / ('b' * 32) / 'review').exists())
+            state['stopped'] = 'tool_or_transport'
+            state['completed']['a' * 32]['phase'] = 'generated'
+            (root / 'recover' / 'batch-state.json').write_text(json.dumps(state), encoding='utf-8')
+            resumed = cli(['run', '--opencode', str(fake), '--database', str(database), '--manifest', str(manifest),
+                           '--out', str(root / 'recover'), '--phase', 'review', '--workers', '1',
+                           '--max-requests', '24', '--max-runtime-seconds', '1500',
+                           '--cost-policy', 'allow-missing-cost', '--resume-provider-invalid'])
+            self.assertEqual(resumed.returncode, 0, resumed.stdout + resumed.stderr)
+            after = json.loads((root / 'recover' / 'batch-state.json').read_text(encoding='utf-8'))
+            self.assertIsNone(after['stopped'])
+            self.assertEqual(after['completed']['a' * 32]['phase'], 'reviewed')
+            self.assertEqual(after['completed']['b' * 32]['phase'], 'error')
+            self.assertEqual(json.loads(resumed.stdout)['calls'], 1)
+            paid = dict(state)
+            paid['stopped'] = 'tool_or_transport'
+            paid['completed']['a' * 32]['turns'] = [{
+                'providerID': 'opencode-go', 'id': 'iceman-contributor-free', 'cost_known': True, 'cost': 2,
+            }]
+            (root / 'paid' ).mkdir()
+            (root / 'paid' / 'batch-state.json').write_text(json.dumps(paid), encoding='utf-8')
+            halted = cli(['run', '--opencode', str(fake), '--database', str(database), '--manifest', str(manifest),
+                          '--out', str(root / 'paid'), '--phase', 'review', '--workers', '1',
+                          '--cost-policy', 'allow-missing-cost', '--resume-provider-invalid'])
+            self.assertNotEqual(halted.returncode, 0)
+            self.assertIn('resume refused', halted.stderr)
+
 
 if __name__ == '__main__':
     unittest.main()

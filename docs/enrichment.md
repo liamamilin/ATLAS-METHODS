@@ -86,6 +86,56 @@ python3 library/enrichment.py replay \
 
 输出里 `replay_status` 为 `candidate_semantics_changed` 时，这份结果不能当作审核通过。
 
+已完成独立审核的 run 目录用 `publish` 收成站点读取的 sidecar。不加 `--apply` 只预览。草稿、失败行和 `review_decision` 不是 `accept` 的事实不会变成可筛选值。等级 U 保持 U。等级 R 仍发布，但 `recommend` 为 false，不删除原文。目标里已有、这次没有带到的记录保持原样。同一条记录指纹不一致则整次不写。`--apply` 之后，`rollback --snapshot` 用发布结果里的 `previous`，先不加 `--apply` 预览，再加 `--apply` 才把 `current.json` 指回去。历史快照和账本保留。
+
+```bash
+python3 library/enrichment.py publish \
+  --database data/library/catalog.sqlite3 \
+  --out data/library/enrichment \
+  --run 第1片run目录 --run 第7片run目录 --run 第38片run目录
+python3 library/enrichment.py publish \
+  --database data/library/catalog.sqlite3 \
+  --out data/library/enrichment \
+  --run 第1片run目录 --run 第7片run目录 --run 第38片run目录 \
+  --apply
+python3 library/enrichment.py rollback \
+  --out data/library/enrichment \
+  --snapshot 发布结果里的previous
+python3 library/enrichment.py rollback \
+  --out data/library/enrichment \
+  --snapshot 发布结果里的previous \
+  --apply
+```
+
+8 次已完成的审核请求对应 3 个 U、4 个 D1、1 个 R。这 3 个 U 是审核已经跑完、等级仍为 U，不是 3 次请求失败。另外 24 条是只生成、尚未审核的草案，也是 U，不能算进那 8 次。
+
+38 片停在 `tool_or_transport`，但保存的工具事件是 0，3 次是 `provider.invalid-output`。工具事件、身份不可核、明确非 0 仍会停止。缺费用在 `allow-missing-cost` 下不单独造成这种停止。要继续，只审核已经生成成功的记录，不重试失败的 3 条，也不把未请求的 11 条算进完成：
+
+```bash
+python3 library/enrichment.py run \
+  --opencode /Users/milin/.opencode/bin/opencode \
+  --database data/library/catalog.sqlite3 \
+  --manifest 该38片清单 \
+  --out 该38片run目录 \
+  --phase review \
+  --workers 10 \
+  --max-requests 24 \
+  --max-runtime-seconds 1500 \
+  --cost-policy allow-missing-cost \
+  --resume-provider-invalid \
+  --runtime-allowlist library/fixtures/taxonomy-reconciliation-c26.safe.json
+```
+
+`--resume-provider-invalid` 只解除 `tool_or_transport` 或 `provider_invalid_output`，并且已保存回合必须是该免费模型、没有工具事件、没有明确非 0。它不删除旧账，也不重跑 `phase=error` 的记录。11 条未请求要另用只含这 11 条的清单，在剩余请求额度内再跑，不能把首批 48 条说成已经全部完成。
+
+8765 上的原进程启动时加载了当时的 `library/serve.py`。页面文件每次请求从磁盘读，接口要等这个进程重启。先读出它的启动命令，再停掉这一个 PID，用同一条命令在同一端口拉起。不要另开第二个服务，也不要删掉 PID 记录之前就杀进程。macOS 上：
+
+```bash
+ps -p 89492 -o pid=,command=
+```
+
+记录输出后，由父级在授权范围内结束该 PID，再在仓库根目录执行记录里的那条命令。若记录就是默认启动，则是 `python3 library/serve.py --port 8765`。启动失败时用刚才记录的同一条命令再拉起，不要改端口。重启后用 `curl -fsS http://127.0.0.1:8765/api/meta` 核对目录仍是原来那一份。这次交付不执行重启。
+
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 
 8765 上的进程在启动时加载 `library/serve.py`。`library/web/index.html`、`style.css`、`app.js` 每次请求从磁盘读取；接口代码不会热更新。父级要在同一端口重启原来的进程，不要另开一个服务。端口已被占用时 `serve.py` 会直接退出。重启前先停掉现有进程，再在仓库根目录执行 `python3 library/serve.py --port 8765`。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。这次交付不重启该进程。

@@ -460,7 +460,8 @@ function renderDetail(data) {
     const box = element('section', null, 'detail-banner');
     const facet = data.enrichment.dimensions || {};
     const summary = Object.entries(facet).map(([name, item]) => name + ':' + (item.state || 'unknown')).join(' · ');
-    box.append(element('p', '分层 · ' + (data.enrichment.grade || 'U') + ' · 审核 ' + (data.enrichment.model_review || 'untracked')));
+    box.append(element('p', '分层 · ' + (data.enrichment.grade || 'U') + ' · 审核 ' + (data.enrichment.model_review || 'untracked')
+      + (data.enrichment.recommend === false ? ' · 不作为推荐' : '')));
     box.append(element('p', summary));
     root.append(box);
   }

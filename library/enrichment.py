@@ -727,9 +727,11 @@ def detail_for(out, skill_id):
     for line in path.read_text(encoding='utf-8').splitlines():
         item = json.loads(line)
         if item.get('record_id') == skill_id:
+            grade = item['quality']['grade']
             return {
-                'schema': SCHEMA, 'grade': item['quality']['grade'],
+                'schema': SCHEMA, 'grade': grade,
                 'model_review': item['quality']['model_review'],
+                'recommend': item['quality'].get('recommend', grade != 'R'),
                 'primary': item['primary'], 'dimensions': item['dimensions'],
                 'legacy_unverified': item.get('legacy_unverified', False),
             }
@@ -1249,6 +1251,103 @@ def replay_saved(skill, generation, review, reviewed=None):
     return annotation
 
 
+def load_run_entries(path):
+    state_path = Path(path) / 'batch-state.json'
+    if not state_path.is_file():
+        raise SystemExit('publish input has no batch-state.json: ' + str(path))
+    state = json.loads(state_path.read_text(encoding='utf-8'))
+    return state.get('completed') or {}
+
+
+def publish_runs(run_dirs, destination, database, *, apply=False):
+    """Merge reviewed run snapshots. Drafts stay out. Unrelated published records stay."""
+    import copy
+    shared = global_writer_lock()
+    store = Store(destination)
+    try:
+        handle = store.lock()
+    except SystemExit:
+        shared.close()
+        raise
+    try:
+        catalogue = {skill['id']: skill for skill in load_catalog(database, with_tasks=True)[0]}
+        chosen = {}
+        skipped = []
+        conflicts = []
+        for run_dir in run_dirs:
+            for record_id, entry in load_run_entries(run_dir).items():
+                phase = entry.get('phase')
+                if phase != 'reviewed':
+                    skipped.append({'id': record_id, 'reason': phase or 'not_reviewed', 'run': str(run_dir)})
+                    continue
+                annotation = entry.get('annotation')
+                if not isinstance(annotation, dict):
+                    skipped.append({'id': record_id, 'reason': 'no_annotation', 'run': str(run_dir)})
+                    continue
+                quality = annotation.get('quality') or {}
+                if quality.get('model_review') != 'completed':
+                    skipped.append({'id': record_id, 'reason': 'draft_or_unreviewed', 'run': str(run_dir)})
+                    continue
+                if quality.get('rule_version') not in (None, RULE_VERSION):
+                    conflicts.append({'id': record_id, 'reason': 'vocabulary_policy'})
+                    continue
+                item = enforce_acceptance_invariant(copy.deepcopy(annotation))
+                grade = (item.get('quality') or {}).get('grade')
+                item.setdefault('quality', {})
+                item['quality']['recommend'] = grade != 'R'
+                item['quality']['published_from'] = str(run_dir)
+                if not item.get('source_hash') or not item.get('fingerprint'):
+                    conflicts.append({'id': record_id, 'reason': 'missing_hash'})
+                    continue
+                current_skill = catalogue.get(record_id)
+                if current_skill is None or source_digest(current_skill) != item.get('source_hash'):
+                    conflicts.append({'id': record_id, 'reason': 'source_hash'})
+                    continue
+                previous = chosen.get(record_id)
+                if previous and previous.get('fingerprint') != item.get('fingerprint'):
+                    conflicts.append({'id': record_id, 'reason': 'annotation_hash'})
+                    continue
+                chosen[record_id] = item
+        existing = []
+        current = store.current()
+        if current:
+            folder = store.out / 'snapshots' / current['snapshot'] / 'annotations.jsonl'
+            if folder.is_file():
+                existing = [json.loads(line) for line in folder.read_text(encoding='utf-8').splitlines() if line.strip()]
+        merged = {item['record_id']: item for item in existing}
+        for record_id, item in chosen.items():
+            old = merged.get(record_id)
+            if old and old.get('fingerprint') != item.get('fingerprint'):
+                conflicts.append({'id': record_id, 'reason': 'would_replace_existing'})
+                continue
+            merged[record_id] = item
+        plan = {
+            'calls_model': False, 'writes_catalogue': False, 'conflicts': conflicts,
+            'skipped': skipped, 'incoming': len(chosen), 'records': len(merged),
+            'grades': {}, 'recommend_false': sum(1 for item in chosen.values() if not item['quality'].get('recommend')),
+            'dry_run': not apply, 'writes': 0,
+        }
+        for item in chosen.values():
+            grade = item['quality'].get('grade')
+            plan['grades'][grade] = plan['grades'].get(grade, 0) + 1
+        if conflicts or not apply:
+            plan['applied'] = False
+            return plan
+        ordered = [merged[key] for key in sorted(merged)]
+        applied = store.apply_holding_lock(ordered, 'publish', dry_run=False)
+        store.append_holding_lock('publish', {
+            'records': len(ordered), 'incoming': sorted(chosen), 'snapshot': applied.get('snapshot'),
+            'conflicts': 0,
+        })
+        plan.update(applied)
+        plan['applied'] = True
+        plan['previous'] = None if not current else current.get('snapshot')
+        return plan
+    finally:
+        handle.close()
+        shared.close()
+
+
 def repair_generated(skill, payload):
     """Fill unambiguous value ids from a saved response. Does not call a model or reuse the old grade."""
     annotation = map_record(skill, skill.get('tasks') or [], source_hash=source_digest(skill))
@@ -1470,8 +1569,25 @@ def review_prompt(skill, annotation):
     )
 
 
+def turns_allow_resume(state):
+    """Missing cost may remain unknown. Tools, a bad identity, or a nonzero cost still block resume."""
+    for entry in (state.get('completed') or {}).values():
+        if entry.get('error_kind') == 'tool_event' or entry.get('tool_events'):
+            return False
+        for turn in entry.get('turns') or []:
+            if not isinstance(turn, dict):
+                return False
+            if (turn.get('providerID') or turn.get('id')) and (
+                    turn.get('providerID') != 'opencode-go' or turn.get('id') != 'iceman-contributor-free'):
+                return False
+            if turn.get('cost_known') and turn.get('cost') not in (0, 0.0):
+                return False
+    return True
+
+
 def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='strict', workers=10,
-                   max_requests=96, max_runtime=1500, after='', manifest=None, runtime_topics=None):
+                   max_requests=96, max_runtime=1500, after='', manifest=None, runtime_topics=None,
+                   resume_provider_invalid=False):
     """Generate, then review, through the same free-model client. Phases do not run 10+10."""
     from concurrent.futures import ThreadPoolExecutor
     import threading
@@ -1490,7 +1606,14 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
         state = json.loads(state_path.read_text(encoding='utf-8')) if state_path.is_file() else {
             'schema': SCHEMA, 'completed': {}, 'stopped': None, 'calls': 0}
         if state.get('stopped'):
-            return {'stopped': state['stopped'], 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
+            resumable = state['stopped'] in ('tool_or_transport', 'provider_invalid_output')
+            if resume_provider_invalid and resumable and turns_allow_resume(state):
+                state['resumed_from'] = state['stopped']
+                state['stopped'] = None
+            elif resume_provider_invalid:
+                raise SystemExit('resume refused: saved turns failed the tool, identity, or nonzero-cost check, or the stop is not a provider invalid-output stop')
+            else:
+                return {'stopped': state['stopped'], 'calls': 0, 'model_calls_this_process': 0, 'writes_catalogue': False}
         rejected = []
         skipped_errors = []
         if manifest:
@@ -1557,12 +1680,36 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                 prompt = review_prompt(skill, base) if review else generation_prompt(skill)
                 (attempt / 'prompt.txt').write_text(prompt, encoding='utf-8')
                 reply = client.request(prompt, title, attempt)
-                from classify_unfiled import accept_cost
-                accounting = accept_cost(reply.get('usage') or {}, cost_policy)
-                if reply.get('tool_events') or reply.get('timed_out') or reply.get('exit_code') not in (0, None):
-                    stop.set()
-                    stop_reason['text'] = 'tool_or_transport'
+                from classify_unfiled import accept_cost, invalid_output_signal
+                usage = reply.get('usage') or {}
+                tools = reply.get('tool_events') or []
+                turns = usage.get('turns') or []
+                invalid = bool(usage.get('invalid_output')) or invalid_output_signal(reply.get('events') or [])
+                nonzero = any(turn.get('cost_known') and turn.get('cost') not in (0, 0.0) for turn in turns)
+                identity_bad = any(
+                    (turn.get('providerID') or turn.get('id')) and (
+                        turn.get('providerID') != 'opencode-go' or turn.get('id') != 'iceman-contributor-free')
+                    for turn in turns)
+                def record_error(kind, halt):
+                    if halt:
+                        stop.set()
+                        stop_reason['text'] = kind
+                    with gate:
+                        state['completed'][skill['id']] = {
+                            'phase': 'error', 'error': kind, 'error_kind': kind, 'will_not_retry': True,
+                            'source_hash': source_hash, 'fee_proven': False, 'tool_events': tools,
+                            'turns': turns, 'invalid_output': invalid,
+                        }
+                if tools or identity_bad or nonzero:
+                    record_error('tool_event' if tools else ('nonzero_cost' if nonzero else 'identity_unverified'), True)
                     return
+                if reply.get('timed_out'):
+                    record_error('timeout', True)
+                    return
+                if invalid or reply.get('exit_code') not in (0, None):
+                    record_error('provider_invalid_output' if invalid else 'transport', not invalid)
+                    return
+                accounting = accept_cost(usage, cost_policy)
                 payload = json.loads(reply.get('text') or '{}')
                 if review:
                     generation = previous or {}
@@ -1662,11 +1809,16 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
         missing = sum(1 for item in state['completed'].values()
                       if item.get('cost_accounting') == 'missing_cost_allowed_by_user')
         verified = sum(1 for item in state['completed'].values() if item.get('cost_accounting') == 'verified_zero')
+        error_kinds = {}
+        for item in state['completed'].values():
+            if item.get('phase') == 'error':
+                kind = item.get('error_kind') or item.get('error') or 'error'
+                error_kinds[kind] = error_kinds.get(kind, 0) + 1
         return {
             'stopped': stop_reason['text'], 'calls': calls['n'], 'model_calls_this_process': calls['n'],
             'max_in_flight': peak['n'], 'workers': workers, 'verified_zero': verified,
-            'missing_cost_allowed': missing,
-            'fee_proven_all': verified > 0 and missing == 0 and not stop_reason['text'],
+            'missing_cost_allowed': missing, 'error_kinds': error_kinds,
+            'fee_proven_all': verified > 0 and missing == 0 and not stop_reason['text'] and not error_kinds,
             'applied': applied, 'writes_catalogue': False, 'phase': phase,
         }
     finally:
@@ -1676,7 +1828,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'repair', 'replay', 'rollback', 'run', 'aliases'))
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'publish', 'repair', 'replay', 'rollback', 'run', 'aliases'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
@@ -1697,6 +1849,8 @@ def run(argv=None):
     parser.add_argument('--reviewed-annotation', type=Path, help='Annotation the saved review actually saw')
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
+    parser.add_argument('--run', action='append', default=[], help='Finished run directory. Repeat once per slice. Used by publish')
+    parser.add_argument('--resume-provider-invalid', action='store_true', help='Clear a provider invalid-output stop after saved turns pass the tool, identity, and nonzero checks. Error rows are not retried')
     args = parser.parse_args(argv)
     if args.command == 'taxonomy':
         report = taxonomy_reconciliation()
@@ -1775,6 +1929,12 @@ def run(argv=None):
             'grade': annotation['quality']['grade'],
         }, ensure_ascii=False, indent=2))
         return 0
+    if args.command == 'publish':
+        if not args.database or not args.run:
+            raise SystemExit('publish needs --database and at least one --run directory')
+        report = publish_runs(args.run, args.out, args.database, apply=args.apply)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 2 if report.get('conflicts') else 0
     if args.command == 'run':
         from classify_unfiled import OpenCodeFreeClient
         if args.ids:
@@ -1793,7 +1953,7 @@ def run(argv=None):
             limit=48 if args.limit is None else max(1, args.limit),
             cost_policy=args.cost_policy, workers=args.workers, max_requests=args.max_requests,
             max_runtime=args.max_runtime_seconds, after=args.after, manifest=manifest,
-            runtime_topics=runtime_topics)
+            runtime_topics=runtime_topics, resume_provider_invalid=args.resume_provider_invalid)
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 2 if report.get('stopped') else 0
     if args.command == 'aliases':
