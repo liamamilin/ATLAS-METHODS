@@ -47,6 +47,7 @@ KIND_VALUES = (
     'reference_guide', 'execution_workflow', 'connector_integration', 'document_template',
     'router_or_orchestrator', 'scaffold', 'placeholder', 'deprecated_redirect',
 )
+RULE_VERSION = 'canonical-value/v1'
 
 
 def global_writer_lock():
@@ -283,6 +284,8 @@ def scope_key(fact_item):
 
 
 def satisfies(fact_item, dimension, values, role):
+    if fact_item.get('accepted') is not True:
+        return False
     if fact_item.get('dimension') != dimension or fact_item.get('value_id') not in values:
         return False
     if role == 'required' and fact_item.get('role') not in STRONG_ROLES:
@@ -870,44 +873,247 @@ def supplied_text(skill):
     return '\n'.join(parts)
 
 
-def absorb_facts(annotation, payload, text):
+def value_catalog():
+    """The same ids the prompt shows and the validator accepts."""
+    return {
+        'task_action': list(ACTION_TAGS),
+        'tools': list(TOOL_TAGS),
+        'input_kind': list(INPUT_KINDS),
+        'output_kind': list(OUTPUT_KINDS),
+        'kind': list(KIND_VALUES),
+        'requirements': [value for dimension, value, _role, _phrases in CONDITION_RULES if dimension == 'requirements'],
+        'side_effects': [value for dimension, value, _role, _phrases in CONDITION_RULES if dimension == 'side_effects'],
+        'scenario': [],
+    }
+
+
+def value_aliases(dimension, value_id):
+    if dimension == 'task_action' and value_id in ACTION_TAGS:
+        label, extra = ACTION_TAGS[value_id]
+        return [label, *extra.split('|')]
+    if dimension == 'tools' and value_id in TOOL_TAGS:
+        label, extra = TOOL_TAGS[value_id]
+        return [label, *extra.split('|')]
+    for rule_dimension, rule_value, _role, phrases in CONDITION_RULES:
+        if rule_dimension == dimension and rule_value == value_id:
+            return list(phrases)
+    return [value_id]
+
+
+def quote_mentions(dimension, value_id, quote):
+    folded = (quote or '').casefold()
+    return any(alias and alias.casefold() in folded for alias in value_aliases(dimension, value_id))
+
+
+def resolve_unique(dimension, quote):
+    """One catalog id, or none when the quote matches zero or several."""
+    folded = (quote or '').casefold()
+    scored = []
+    for value_id in value_catalog().get(dimension) or []:
+        lengths = [len(alias) for alias in value_aliases(dimension, value_id) if alias and alias.casefold() in folded]
+        if lengths:
+            scored.append((value_id, max(lengths)))
+    kept = []
+    for value_id, length in scored:
+        aliases = [alias for alias in value_aliases(dimension, value_id) if alias and alias.casefold() in folded]
+        shadowed = False
+        for other, other_length in scored:
+            if other == value_id or other_length <= length:
+                continue
+            longer = [alias for alias in value_aliases(dimension, other) if alias and alias.casefold() in folded]
+            if any(alias.casefold() in big.casefold() for alias in aliases for big in longer):
+                shadowed = True
+        if not shadowed:
+            kept.append(value_id)
+    if len(kept) == 1:
+        return kept[0]
+    return None
+
+
+def quote_positions(skill, quote):
+    found = []
+    for task in skill.get('tasks') or []:
+        blob = '\n'.join(str(task.get(key) or '') for key in ('goal', 'applicability', 'outputs'))
+        if quote and quote in blob:
+            found.append(task.get('position'))
+    return found
+
+
+def scope_supports(skill, quote, task_position):
+    positions = quote_positions(skill, quote)
+    in_summary = bool(quote) and quote in (skill.get('summary') or '')
+    if task_position is None:
+        return in_summary or bool(positions)
+    return task_position in positions
+
+
+def program_evidence(skill, dimension, value_id, quote, task_position):
+    text = supplied_text(skill)
+    if not quote or quote not in text or value_id not in (value_catalog().get(dimension) or []):
+        return False
+    if not scope_supports(skill, quote, task_position):
+        return False
+    if dimension in ('task_action', 'tools', 'requirements', 'side_effects') and not quote_mentions(dimension, value_id, quote):
+        return False
+    if dimension == 'tools':
+        detected = tool_role_from_text(quote, value_id)
+        if detected in ('prohibited', 'example', 'alternative'):
+            return True
+    if any(phrase in quote for phrase in ('不要', '不是这一步', 'do not', "don't")):
+        return False
+    return True
+
+
+def absorb_facts(annotation, payload, skill):
+    """Keep every returned fact. A missing value_id is resolved only when one catalog id matches the quote."""
+    text = supplied_text(skill) if isinstance(skill, dict) else skill
+    skill_row = skill if isinstance(skill, dict) else {'summary': text, 'tasks': []}
     for raw in payload.get('facts') or []:
-        if not isinstance(raw, dict) or raw.get('dimension') not in DIMENSIONS:
+        if not isinstance(raw, dict):
+            continue
+        dimension = raw.get('dimension')
+        if dimension not in DIMENSIONS:
+            annotation.setdefault('dropped_facts', []).append({'reason': 'dimension', 'dimension': dimension})
             continue
         quote = raw.get('quote') if isinstance(raw.get('quote'), str) else ''
         quote_ok = bool(quote) and quote in text
-        value = raw.get('value_id')
-        role = raw.get('role') if raw.get('role') in TOOL_ROLES else 'unknown'
-        if raw.get('dimension') == 'tools' and quote_ok and value in TOOL_TAGS:
-            detected = tool_role_from_text(quote, value)
+        received_value = raw.get('value_id')
+        value = received_value if isinstance(received_value, str) and received_value else None
+        value_status = 'model'
+        if value is None:
+            resolved = resolve_unique(dimension, quote) if quote_ok else None
+            if resolved:
+                value = resolved
+                value_status = 'resolved_from_quote'
+            else:
+                value_status = 'missing'
+        elif value not in (value_catalog().get(dimension) or []):
+            value_status = 'not_in_vocabulary'
+            value = None
+        received_role = raw.get('role')
+        if received_role in TOOL_ROLES:
+            role = received_role
+            role_status = 'model'
+        elif received_role in (None, ''):
+            role = 'unknown'
+            role_status = 'missing'
+        else:
+            role = 'unknown'
+            role_status = 'invalid'
+        if dimension == 'tools' and quote_ok and (value in TOOL_TAGS or received_value in TOOL_TAGS):
+            detected = tool_role_from_text(quote, value or received_value)
             if detected in ('prohibited', 'example', 'alternative'):
                 role = detected
-        known_value = value in ACTION_TAGS or value in TOOL_TAGS or value in INPUT_KINDS or value in OUTPUT_KINDS or value in KIND_VALUES
-        mentions_value = True
-        if value in TOOL_TAGS and quote_ok:
-            mentions_value = tool_role_from_text(quote, value) is not None or TOOL_TAGS[value][0].casefold() in quote.casefold()
-        if value in ACTION_TAGS and quote_ok:
-            mentions_value = ACTION_TAGS[value][0] in quote or any(
-                alias in quote.casefold() for alias in ACTION_TAGS[value][1].casefold().split('|'))
-        accepted = quote_ok and known_value and mentions_value
+                role_status = 'corrected_from_quote'
+        task_position = raw.get('task_position')
+        evidenced = program_evidence(skill_row, dimension, value, quote, task_position) if value else False
         item = fact(
             annotation['record_id'],
-            {'level': 'task', 'task_position': raw.get('task_position')} if raw.get('task_position') is not None else {'level': 'skill'},
-            raw['dimension'], value, role,
-            'direct_explicit' if accepted else 'bounded_inference',
+            {'level': 'task', 'task_position': task_position} if task_position is not None else {'level': 'skill'},
+            dimension, value, role,
+            'direct_explicit' if evidenced else 'bounded_inference',
             quote if quote_ok else None, 'model_quote', annotation.get('source_hash') or '', 'model_generation')
-        item['accepted'] = accepted
-        item['candidate'] = not accepted
+        item['value_received'] = received_value
+        item['value_status'] = value_status
+        item['role_received'] = received_role
+        item['role_status'] = role_status
+        item['proposed_value'] = raw.get('proposed_value')
+        item['program_evidence'] = evidenced
+        item['rule_version'] = RULE_VERSION
+        item['accepted'] = False
+        item['candidate'] = True
         annotation['facts'].append(item)
-        if accepted:
-            facet = annotation['dimensions'][raw['dimension']]
-            facet['state'] = 'known'
-            facet['reason'] = None
-            facet['values'].append(value if role == 'unknown' else {'id': value, 'role': role})
     annotation['fingerprint'] = digest({
-        'record_id': annotation['record_id'], 'facts': [item['fact_id'] for item in annotation['facts']],
+        'record_id': annotation['record_id'], 'rule_version': RULE_VERSION,
+        'facts': [item['fact_id'] for item in annotation['facts']],
         'source_hash': annotation.get('source_hash'),
     })
+    return annotation
+
+
+def guard_tag_fit(axes, facts, text):
+    """A pass on tag fit cannot stand when the source has one clear catalog term and every value id is empty."""
+    if axes.get('classification_and_tag_fit') != 'pass':
+        return axes
+    if any(item.get('value_id') for item in facts):
+        return axes
+    for dimension in ('task_action', 'tools'):
+        if resolve_unique(dimension, text):
+            axes = dict(axes)
+            axes['classification_and_tag_fit'] = 'fail'
+            axes['tag_fit_reason'] = 'mappable_term_present_but_no_canonical_value'
+            return axes
+    return axes
+
+
+def settle_review(annotation, payload, skill):
+    """Accept a fact only from program evidence plus a review that did not reject that fact."""
+    text = supplied_text(skill)
+    axes = dict(payload.get('axes') if isinstance(payload.get('axes'), dict) else {})
+    if axes.get('source_fidelity') == 'pass':
+        axes['source_fidelity'] = 'limited'
+        axes['source_fidelity_reason'] = 'supply_is_summary_and_tasks_only'
+    decisions = {}
+    for row in payload.get('fact_decisions') or []:
+        if isinstance(row, dict):
+            decisions[(row.get('dimension'), row.get('value_id'), row.get('quote'))] = row.get('decision')
+    for item in annotation.get('facts') or []:
+        if item.get('support') == 'legacy_unverified':
+            continue
+        decision = decisions.get((item.get('dimension'), item.get('value_id'), item.get('quote')))
+        item['review_decision'] = decision or 'unspecified'
+        if decision == 'reject' or not item.get('program_evidence'):
+            item['accepted'] = False
+            item['candidate'] = True
+            continue
+        if item.get('dimension') in ('input_kind', 'output_kind', 'kind', 'scenario') and decision != 'accept':
+            item['accepted'] = False
+            item['candidate'] = True
+            continue
+        item['accepted'] = True
+        item['candidate'] = False
+        item['accepted_by'] = RULE_VERSION
+    axes = guard_tag_fit(axes, annotation.get('facts') or [], text)
+    if axes.get('classification_and_tag_fit') == 'fail':
+        for item in annotation.get('facts') or []:
+            if item.get('support') != 'legacy_unverified':
+                item['accepted'] = False
+                item['candidate'] = True
+    for name in DIMENSIONS:
+        values = []
+        for item in annotation.get('facts') or []:
+            if item.get('dimension') == name and item.get('accepted') and item.get('value_id'):
+                role = item.get('role')
+                values.append(item['value_id'] if role in (None, 'unknown') else {'id': item['value_id'], 'role': role})
+        if values:
+            annotation['dimensions'][name]['state'] = 'known'
+            annotation['dimensions'][name]['reason'] = None
+            annotation['dimensions'][name]['values'] = values
+    grade = derive_grade({
+        'independent': True, 'source_scope': 'summary_and_tasks', 'axes': axes,
+        'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+    annotation['quality'] = {
+        'grade': grade['grade'], 'model_review': 'completed', 'execution': 'not_run',
+        'diversity': 'same_model_new_session', 'source_scope': 'summary_and_tasks',
+        'rule_version': RULE_VERSION, 'axes': axes,
+    }
+    annotation['fingerprint'] = digest({
+        'record_id': annotation['record_id'], 'rule_version': RULE_VERSION,
+        'accepted': [item['fact_id'] for item in annotation['facts'] if item.get('accepted')],
+        'source_hash': annotation.get('source_hash'),
+    })
+    return annotation
+
+
+def repair_generated(skill, payload):
+    """Fill unambiguous value ids from a saved response. Does not call a model or reuse the old grade."""
+    annotation = map_record(skill, skill.get('tasks') or [], source_hash=source_digest(skill))
+    absorb_facts(annotation, payload, skill)
+    annotation['quality'] = {
+        'grade': 'U', 'model_review': 'repair_pending_review', 'execution': 'not_run',
+        'prior_review_reusable': False, 'rule_version': RULE_VERSION,
+    }
+    annotation['human_review_unchanged'] = True
     return annotation
 
 
@@ -1054,26 +1260,68 @@ def covered_cursor(skills, completed, after):
     return covered
 
 
+def catalog_lines():
+    lines = []
+    catalog = value_catalog()
+    for dimension in DIMENSIONS:
+        values = catalog[dimension]
+        if dimension == 'task_action':
+            shown = [key + '(' + ACTION_TAGS[key][0] + ')' for key in values]
+        elif dimension == 'tools':
+            shown = [key + '(' + TOOL_TAGS[key][0] + ')' for key in values]
+        elif values:
+            shown = list(values)
+        else:
+            shown = ['无封闭词表，没有把握就不要写 fact']
+        lines.append(dimension + ': ' + ', '.join(shown))
+    return '\n'.join(lines)
+
+
 def generation_prompt(skill):
+    example = {
+        '_example_is_fake': True,
+        'facts': [{
+            'dimension': 'tools', 'value_id': 'python', 'role': 'required',
+            'quote': '假例子：使用 Python 完成一个与用户材料无关的动作。',
+            'task_position': 1, 'proposed_value': None,
+        }, {
+            'dimension': 'tools', 'value_id': None, 'role': 'mentioned',
+            'quote': '假例子：这里出现一个词表里没有的工具名。',
+            'task_position': 1, 'proposed_value': '词表以外的新词',
+        }],
+    }
     return (
-        '只根据下面给出的目录文字返回一个 JSON 对象，不要使用工具，不要补充未出现的事实。'
-        'facts 的 quote 必须是给出文字里的连续原文。dimension 只能是 '
-        + ', '.join(DIMENSIONS) + '。role 只能是 ' + ', '.join(TOOL_ROLES) + '。'
-        '例子、禁止和替代不能写成 required。\n'
+        '只根据下面的目录摘要和任务返回一个 JSON 对象。不要使用工具，不要把没出现的事实补进去，不要为了填满八个维度而编标签。'
+        '这次供给只有 summary 和 tasks，不是原始全文。quote 必须是供给文字里的连续原文。'
+        'dimension 只能是下面的键。value_id 只能是该维度列出的规范 id；词表里没有的词把 value_id 留空，并把新词放进 proposed_value，不要自己写成已接受。'
+        'role 只能是 ' + ', '.join(TOOL_ROLES) + '。例子、禁止和替代不能写成 required。'
+        'task_position 使用任务序号；引用只在摘要里就不要填 task_position。'
+        '规范词表版本 ' + RULE_VERSION + '。\n'
+        + catalog_lines()
+        + '\n假例子，不是用户材料：\n'
+        + json.dumps(example, ensure_ascii=False)
+        + '\n目录摘要和任务：\n'
         + supplied_text(skill)
     )
 
 
 def review_prompt(skill, annotation):
     visible = [{
-        'dimension': item['dimension'], 'value_id': item['value_id'], 'role': item['role'],
-        'quote': item.get('quote'), 'accepted': item.get('accepted'),
-    } for item in annotation.get('facts') or []]
+        'dimension': item['dimension'], 'value_id': item.get('value_id'), 'role': item.get('role'),
+        'value_status': item.get('value_status'), 'proposed_value': item.get('proposed_value'),
+        'scope': item.get('scope'), 'quote': item.get('quote'),
+        'program_evidence': item.get('program_evidence'),
+    } for item in annotation.get('facts') or [] if item.get('support') != 'legacy_unverified']
     return (
-        '独立审核下面的候选标签。只根据给出的目录文字和候选 quote，不要沿用生成会话，不要看生成者的推理。'
-        '返回 JSON，axes 的键必须是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
-        '没有固定源文就不要把 source_fidelity 写成 pass。\n'
-        + json.dumps({'source': supplied_text(skill), 'candidates': visible}, ensure_ascii=False)
+        '独立审核这些候选。只看下面的摘要、任务和候选的 value_id、role、scope、quote。'
+        '不要沿用生成会话，不要看生成者的推理。供给只有 summary 和 tasks，source_fidelity 不能写成 pass。'
+        '无 quote、引用不在供给里、value_id 不在词表、引用属于另一个任务，或把否定句当成 required 的，decision 写 reject。'
+        '证据不够就写 unknown，不要因为其它轴通过就接受全部候选。'
+        '返回 JSON：axes 的键是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
+        'fact_decisions 的每一项含 dimension、value_id、quote、decision。decision 只能是 accept、reject、unknown。\n'
+        + json.dumps({
+            'source_scope': 'summary_and_tasks', 'source': supplied_text(skill), 'candidates': visible,
+        }, ensure_ascii=False)
     )
 
 
@@ -1143,10 +1391,15 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                 for condition in parse_conditions(supplied_text(skill)):
                     if not condition['accepted']:
                         continue
-                    base['facts'].append(fact(
+                    closed = fact(
                         skill['id'], {'level': 'skill'}, condition['dimension'], condition['value_id'],
                         condition['role'], 'direct_explicit', condition['quote'], 'supplied_text',
-                        source_hash, 'closed_phrase'))
+                        source_hash, 'closed_phrase')
+                    closed['program_evidence'] = True
+                    closed['accepted'] = False
+                    closed['candidate'] = True
+                    closed['rule_version'] = RULE_VERSION
+                    base['facts'].append(closed)
                 attempt = Path(out) / 'attempts' / skill['id'] / ('review' if review else 'generate')
                 attempt.mkdir(parents=True, exist_ok=True)
                 title = ('ATLAS enrichment review ' if review else 'ATLAS enrichment generate ') + skill['id']
@@ -1176,23 +1429,11 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
                     if not verdict['accepted']:
                         base['quality'] = {'grade': 'U', 'model_review': 'rejected_not_independent', 'execution': 'not_run'}
                     else:
-                        axes = payload.get('axes') if isinstance(payload.get('axes'), dict) else {}
-                        text = supplied_text(skill)
-                        if any(item.get('accepted') and (not item.get('quote') or item['quote'] not in text)
-                               for item in base.get('facts') or []):
-                            axes['source_fidelity'] = 'fail'
-                        for raw in payload.get('facts') or []:
-                            quote = raw.get('quote') if isinstance(raw, dict) else None
-                            if quote and quote not in text:
-                                axes['source_fidelity'] = 'fail'
-                        grade = derive_grade({
-                            'independent': True, 'source_scope': 'fixed_source', 'axes': axes,
-                            'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
-                        base['quality'] = {'grade': grade['grade'], 'model_review': 'completed',
-                                           'execution': 'not_run', 'diversity': 'same_model_new_session'}
+                        settle_review(base, payload, skill)
                 else:
-                    absorb_facts(base, payload, supplied_text(skill))
-                    base['quality'] = {'grade': 'U', 'model_review': 'draft_searchable', 'execution': 'not_run'}
+                    absorb_facts(base, payload, skill)
+                    base['quality'] = {'grade': 'U', 'model_review': 'draft_pending_review', 'execution': 'not_run',
+                                       'rule_version': RULE_VERSION}
                 entry = {
                     'phase': 'reviewed' if review else 'generated', 'source_hash': source_hash,
                     'session_id': reply.get('session_id'), 'context_hash': digest(title),
@@ -1290,7 +1531,7 @@ def run_enrichment(client, out, skills, *, phase='both', limit=48, cost_policy='
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description='Enrichment sidecar and optional free-model batch. map/pilot/taxonomy do not call a model.')
-    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'rollback', 'run', 'aliases'))
+    parser.add_argument('command', choices=('taxonomy', 'map', 'pilot', 'manifest', 'repair', 'rollback', 'run', 'aliases'))
     parser.add_argument('--database', type=Path)
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--apply', action='store_true')
@@ -1305,6 +1546,7 @@ def run(argv=None):
     parser.add_argument('--max-runtime-seconds', type=int, default=1500)
     parser.add_argument('--after', default='', help='Continue after this record id. Empty starts at the first id and includes already classified records. Not the unfiled cursor')
     parser.add_argument('--runtime-allowlist', type=Path, help='Same c26 snapshot for taxonomy, map, and run. Omitted, unknown topics are kept')
+    parser.add_argument('--attempt', type=Path, help='Saved model response JSON for repair. repair does not call a model')
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     args = parser.parse_args(argv)
@@ -1349,6 +1591,24 @@ def run(argv=None):
             args.out.mkdir(parents=True, exist_ok=True)
             (args.out / 'taxonomy-used.json').write_text(
                 json.dumps(merged, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    if args.command == 'repair':
+        ids = parse_explicit_ids(args.ids)
+        if len(ids) != 1:
+            raise SystemExit('repair takes exactly one id')
+        if not args.attempt:
+            raise SystemExit('repair needs --attempt')
+        skill = select_explicit_ids(args.database, ids)[0]
+        payload = json.loads(Path(args.attempt).read_text(encoding='utf-8'))
+        annotation = repair_generated(skill, payload)
+        Path(args.out).write_text(json.dumps(annotation, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        print(json.dumps({
+            'calls_model': False, 'rule_version': RULE_VERSION,
+            'prior_review_reusable': False,
+            'resolved': sum(1 for item in annotation['facts'] if item.get('value_status') == 'resolved_from_quote'),
+            'still_without_value': sum(1 for item in annotation['facts'] if not item.get('value_id')),
+            'grade': annotation['quality']['grade'],
+        }, ensure_ascii=False, indent=2))
+        return 0
     if args.command == 'run':
         from classify_unfiled import OpenCodeFreeClient
         if args.ids:

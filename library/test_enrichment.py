@@ -49,9 +49,9 @@ class EnrichmentAcceptanceTests(unittest.TestCase):
         self.assertEqual(resolve_tool('Postgres'), ('postgresql', None))
         self.assertEqual(resolve_tool('Google Sheets'), ('gsheets', None))
         facts = [
-            {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'scope': {'level': 'task', 'task_position': 0}},
-            {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'scope': {'level': 'task', 'task_position': 1}},
-            {'dimension': 'tools', 'value_id': 'python', 'role': 'prohibited', 'scope': {'level': 'task', 'task_position': 0}},
+            {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
+            {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 1}},
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'prohibited', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
         ]
         self.assertEqual(same_task_query(facts, {'tools': ['react'], 'task_action': ['deploy']}, True), [])
         self.assertEqual(same_task_query(facts, {'tools': ['python']}, True), [])
@@ -290,8 +290,8 @@ class ClosedLoopTests(unittest.TestCase):
                 {'support': 'direct_explicit', 'accepted': True, 'quote': None, 'role': 'required'}]}) != [],
             'A09': resolve_tool('Postgres')[0] == 'postgresql' and resolve_tool('Google Sheets')[0] == 'gsheets',
             'A10': same_task_query([
-                {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'scope': {'level': 'task', 'task_position': 0}},
-                {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'scope': {'level': 'task', 'task_position': 1}},
+                {'dimension': 'tools', 'value_id': 'react', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 0}},
+                {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'accepted': True, 'scope': {'level': 'task', 'task_position': 1}},
             ], {'tools': ['react'], 'task_action': ['deploy']}, True) == [],
             'A11': map_record(skill(), [])['quality']['grade'] == 'U',
             'A12': map_record(skill(gaps=[{'detail': '原文未说明可选参数'}]), [])['gaps'][0]['detail'] == '原文未说明可选参数',
@@ -466,8 +466,8 @@ class ClosedLoopTests(unittest.TestCase):
 
     def test_same_task_accepts_skill_wide_evidence_and_rejects_example_roles(self):
         skill_wide = [
-            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'scope': {'level': 'skill'}},
-            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required',
+            {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'accepted': True, 'scope': {'level': 'skill'}},
+            {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required', 'accepted': True,
              'scope': {'level': 'task', 'task_position': 1}},
         ]
         self.assertTrue(same_task_query(skill_wide, {'tools': ['python'], 'task_action': ['debug']}, True))
@@ -477,7 +477,7 @@ class ClosedLoopTests(unittest.TestCase):
                  'scope': {'level': 'task', 'task_position': 1}},
             ], {'side_effects': ['read_only']}, True), [])
         self.assertTrue(same_task_query([
-            {'dimension': 'side_effects', 'value_id': 'read_only', 'role': 'required',
+            {'dimension': 'side_effects', 'value_id': 'read_only', 'role': 'required', 'accepted': True,
              'scope': {'level': 'task', 'task_position': 1}},
         ], {'side_effects': ['read_only']}, True))
 
@@ -724,6 +724,149 @@ print(json.dumps({'type': 'text', 'sessionID': session, 'part': {'text': json.du
                             '--ids', requested[0], '--out', str(root / 'ids-out')])
             self.assertNotEqual(ids_only.returncode, 0)
             self.assertFalse(any(item and item[0] == 'run' for item in calls()))
+
+    def test_cli_review_publishes_only_evidenced_canonical_values(self):
+        import sqlite3
+        import subprocess
+        import sys
+        from build import SCHEMA
+        from enrichment import load_current_annotations, repair_generated, search_annotations, settle_review
+        script = Path(__file__).resolve().parents[1] / 'library' / 'enrichment.py'
+        quote = '使用 Python 排查故障并写出报告。'
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            ids = [f'{index:032x}' for index in range(3)]
+            for index, record_id in enumerate(ids):
+                summary = '这个公开样例帮助工程师排查故障。' if index == 1 else '空摘要'
+                goal = quote if index == 1 else '完成这项工作。'
+                second = '不要使用 Docker。部署应用不是这一步。' if index == 1 else ''
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', summary, ('code', 'legal', 'ai')[index], 'catalogue', '后端与 API',
+                    'unreviewed', '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, summary))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, goal, '', '[]', '{"action": [], "tool": []}'))
+                if second:
+                    connection.execute(
+                        'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                        (record_id, 2, second, '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            fake = root / 'opencode'
+            fake.write_text(r'''#!/usr/bin/env python3
+import json, os, sys, time
+log = open(sys.argv[0] + '.log', 'a')
+log.write(json.dumps(sys.argv[1:]) + '\n')
+log.close()
+if sys.argv[1:3] == ['api', 'model.list']:
+    print(json.dumps({'data': [{'providerID': 'opencode-go', 'id': 'iceman-contributor-free',
+        'enabled': True, 'status': 'active',
+        'cost': [{'input': 0, 'output': 0, 'cache': {'read': 0, 'write': 0}}]}]}))
+    raise SystemExit
+if sys.argv[1:3] == ['api', 'config.get']:
+    print('[]')
+    raise SystemExit
+if sys.argv[1:3] == ['session', 'export']:
+    print(json.dumps({'messages': [{'type': 'assistant', 'info': {
+        'role': 'assistant', 'cost': 0, 'finish': 'stop',
+        'model': {'providerID': 'opencode-go', 'id': 'iceman-contributor-free'}}}]}))
+    raise SystemExit
+title = sys.argv[sys.argv.index('--title') + 1]
+quote = '使用 Python 排查故障并写出报告。'
+if 'review' in title:
+    body = {
+        'axes': {'source_fidelity': 'pass', 'structural_completeness': 'pass', 'actionability': 'pass',
+                 'limitations_and_risks': 'limited', 'classification_and_tag_fit': 'pass'},
+        'fact_decisions': [
+            {'dimension': 'output_kind', 'value_id': 'report', 'quote': quote, 'decision': 'reject'},
+        ],
+    }
+else:
+    body = {'facts': [
+        {'dimension': 'tools', 'value_id': 'python', 'role': 'required', 'quote': quote, 'task_position': 1},
+        {'dimension': 'task_action', 'value_id': 'debug', 'role': 'required', 'quote': quote, 'task_position': 1},
+        {'dimension': 'tools', 'value_id': 'docker', 'role': 'required', 'quote': '不要使用 Docker。', 'task_position': 2},
+        {'dimension': 'task_action', 'value_id': 'deploy', 'role': 'required', 'quote': '部署应用不是这一步。', 'task_position': 1},
+        {'dimension': 'tools', 'value_id': 'cobol', 'role': 'required', 'quote': quote, 'task_position': 1},
+        {'dimension': 'output_kind', 'value_id': 'report', 'role': 'required', 'quote': quote, 'task_position': 1},
+        {'dimension': 'tools', 'value_id': 'slack', 'role': 'required', 'quote': '这段引用不在原文里', 'task_position': 1},
+    ]}
+print(json.dumps({'type': 'text', 'sessionID': 'ses_' + str(os.getpid()) + '_' + str(time.time_ns()),
+                  'part': {'text': json.dumps(body, ensure_ascii=False)}}))
+''', encoding='utf-8')
+            fake.chmod(0o755)
+
+            def cli(args):
+                return subprocess.run([sys.executable, '-B', str(script), *args], capture_output=True, text=True)
+
+            chosen = ids[1]
+            exported = cli(['manifest', '--database', str(database), '--ids', chosen, '--out', str(root / 'one.json')])
+            self.assertEqual(exported.returncode, 0, exported.stderr)
+            self.assertEqual(json.loads((root / 'one.json').read_text(encoding='utf-8'))['ids'], [chosen])
+            ran = cli(['run', '--opencode', str(fake), '--database', str(database),
+                       '--manifest', str(root / 'one.json'), '--out', str(root / 'out'),
+                       '--phase', 'both', '--workers', '1', '--max-requests', '2',
+                       '--max-runtime-seconds', '1500', '--cost-policy', 'allow-missing-cost'])
+            self.assertEqual(ran.returncode, 0, ran.stdout + ran.stderr)
+            prompt = (root / 'out' / 'attempts' / chosen / 'generate' / 'prompt.txt').read_text(encoding='utf-8')
+            self.assertIn('python(Python)', prompt)
+            self.assertIn('debug(排查故障)', prompt)
+            self.assertIn('假例子', prompt)
+            self.assertIn('canonical-value/v1', prompt)
+            review_prompt = (root / 'out' / 'attempts' / chosen / 'review' / 'prompt.txt').read_text(encoding='utf-8')
+            self.assertIn('python', review_prompt)
+            self.assertIn('summary_and_tasks', review_prompt)
+            annotations = load_current_annotations(root / 'out')
+            annotation = annotations[0]
+            self.assertEqual(annotation['quality']['source_scope'], 'summary_and_tasks')
+            self.assertNotEqual(annotation['quality']['axes']['source_fidelity'], 'pass')
+            self.assertEqual(annotation['dimensions']['tools']['values'], [
+                {'id': 'python', 'role': 'required'}, {'id': 'docker', 'role': 'prohibited'}])
+            self.assertEqual(annotation['dimensions']['task_action']['values'], [{'id': 'debug', 'role': 'required'}])
+            self.assertEqual(annotation['dimensions']['scenario']['state'], 'unknown')
+            self.assertEqual(annotation['dimensions']['output_kind']['values'], [])
+            self.assertTrue(annotation['human_review_unchanged'])
+            self.assertEqual(search_annotations(annotations, [('tools', ['python'], None), ('task_action', ['debug'], None)], True), [chosen])
+            self.assertEqual(search_annotations(annotations, [('tools', ['docker'], None)], True), [])
+            self.assertEqual(search_annotations(annotations, [('task_action', ['deploy'], None)], True), [])
+            self.assertEqual(search_annotations(annotations, [('output_kind', ['report'], None)], True), [])
+            self.assertEqual(search_annotations(annotations, [('tools', ['slack'], None)], True), [])
+            self.assertFalse(any(item.get('value_id') == 'cobol' and item.get('accepted') for item in annotation['facts']))
+            shell = {'facts': [
+                {'dimension': 'tools', 'role': 'required', 'quote': '见上文', 'task_position': 1},
+                {'dimension': 'task_action', 'role': 'required', 'quote': '见上文', 'task_position': 1},
+            ], 'axes': {'classification_and_tag_fit': 'pass', 'source_fidelity': 'pass'}}
+            from enrichment import map_record, source_digest
+            skill = {'id': chosen, 'category': 'legal', 'topic': '后端与 API', 'label_from': 'catalogue',
+                     'review': 'unreviewed', 'summary': '这个公开样例帮助工程师排查故障。',
+                     'tasks': [{'position': 1, 'goal': quote, 'applicability': '', 'outputs': '', 'tags': {}}]}
+            bare = map_record(skill, skill['tasks'], source_hash=source_digest(skill))
+            from enrichment import absorb_facts
+            absorb_facts(bare, shell, skill)
+            settle_review(bare, shell, skill)
+            self.assertTrue(all(not item.get('value_id') for item in bare['facts'] if item.get('support') != 'legacy_unverified'))
+            self.assertEqual(bare['quality']['axes']['classification_and_tag_fit'], 'fail')
+            resolved = repair_generated(skill, {'facts': [
+                {'dimension': 'tools', 'role': 'required', 'quote': quote, 'task_position': 1},
+            ]})
+            self.assertEqual(resolved['quality']['grade'], 'U')
+            self.assertFalse(resolved['quality']['prior_review_reusable'])
+            self.assertEqual(resolved['facts'][-1]['value_id'], 'python')
+            self.assertNotEqual(resolved['fingerprint'], annotation['fingerprint'])
+            attempt = root / 'response.json'
+            attempt.write_text(json.dumps({'facts': [
+                {'dimension': 'tools', 'role': 'required', 'quote': quote, 'task_position': 1},
+            ]}), encoding='utf-8')
+            repaired = cli(['repair', '--database', str(database), '--ids', chosen,
+                            '--attempt', str(attempt), '--out', str(root / 'repaired.json')])
+            self.assertEqual(repaired.returncode, 0, repaired.stderr)
+            receipt = json.loads(repaired.stdout)
+            self.assertFalse(receipt['calls_model'])
+            self.assertFalse(receipt['prior_review_reusable'])
+            self.assertGreaterEqual(receipt['resolved'], 1)
 
 
 if __name__ == '__main__':

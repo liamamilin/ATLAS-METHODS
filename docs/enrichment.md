@@ -56,6 +56,20 @@ python3 library/enrichment.py run \
 
 9 条把 `--max-requests` 改为 18，`--workers` 仍为 1。38 条把 `--workers` 改为 10，`--max-requests` 改为 76。`--manifest` 和 `--out` 分别换成该分片刚导出的文件和该分片自己的目录。这三步都会调用模型。离线只做 `manifest` 导出。
 
+生成提示带上 `canonical-value/v1` 的规范值 id。`value_id` 只能取该维度列出的 id。词表里没有的词把 `value_id` 留空，新词放在 `proposed_value`，模型不能自己写成已接受。提示里的例子标了假例子，不使用用户材料。程序只在 quote 是摘要或任务里的连续原文、作用域没有跨到别的任务、并且该维度只对应一个规范 id 时，才补上缺失的 `value_id`。审核看到候选的 `value_id`、`role`、`scope` 和 quote。某一轴通过不会把所有候选都变成可筛选标签。供给只有摘要和任务，`source_fidelity` 不会保持 pass。已审定且有证据的规范值才写入维度 `values`。没有依据的维度保持 unknown。
+
+已经生成的那一条不要自动重跑。若保存的生成响应里，quote 能无歧义对上规范 id，用下面的命令离线修复，不调用模型。写出的注解等级是 U，`prior_review_reusable` 为 false，旧的 D1 不能当作这次修复的审核。`--ids` 只放那一条代表 id，`--attempt` 是该条 `generate/response.txt`。
+
+```bash
+python3 library/enrichment.py repair \
+  --database data/library/catalog.sqlite3 \
+  --ids 那一条代表id \
+  --attempt 该条generate/response.txt \
+  --out repaired.json
+```
+
+剩下未请求的代表先取 1 条做下一道有效性门，通过后再取 8 条，然后是 38 条。三次合计仍在最初 96 次请求之内，不重置已用掉的 2 次。旧的空壳结果留在原目录，不算 48 条全部成功。
+
 `--runtime-allowlist` 对 `taxonomy`、`map` 和 `run` 是同一个参数。不传时不会因为专题不在代码里的 128 对中而拒绝记录。
 
 8765 上的进程在启动时加载 `library/serve.py`。`library/web/index.html`、`style.css`、`app.js` 每次请求从磁盘读取；接口代码不会热更新。父级要在同一端口重启原来的进程，不要另开一个服务。端口已被占用时 `serve.py` 会直接退出。重启前先停掉现有进程，再在仓库根目录执行 `python3 library/serve.py --port 8765`。没有 sidecar 时，带 `edim`、`estate`、`evalue`、`edim2`、`evalue2` 或 `esame` 的列表是空的；不带这些参数的旧列表保持原样。这次交付不重启该进程。
