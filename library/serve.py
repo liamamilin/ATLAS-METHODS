@@ -2,7 +2,9 @@
 """Read the saved Atlas library over a loopback-only HTTP interface."""
 import argparse
 from contextlib import closing
+import errno
 import hashlib
+import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
@@ -133,6 +135,18 @@ def list_skills(con, params):
         arguments.append(topic)
     conditions.extend(scope)
     arguments.extend(scope_args)
+    enrichment_filter = None
+    matched = enrichment_ids(params)
+    if matched == 'missing':
+        enrichment_filter = 'index_missing'
+        conditions.append('0')
+    elif isinstance(matched, set):
+        enrichment_filter = 'applied'
+        if not matched:
+            conditions.append('0')
+        else:
+            conditions.append('s.id IN (' + ','.join('?' * len(matched)) + ')')
+            arguments.extend(sorted(matched))
     where = 'WHERE ' + ' AND '.join(conditions) if conditions else ''
     sort = value(params, 'sort', 20)
     orders = {'new': 's.generated DESC', 'title': 's.search_title', 'sources': 's.source_count DESC, s.search_title'}
@@ -163,6 +177,8 @@ def list_skills(con, params):
                                  'outputs': json.loads(outputs), 'tags': json.loads(tags)}
         items.append(item)
     result = {'items': items, 'total': count, 'page': page, 'page_size': PAGE_SIZE}
+    if enrichment_filter:
+        result['enrichment_filter'] = enrichment_filter
     if has_facets:
         result['facets'] = linked_facets(
             con, query, exact, terms, scope, scope_args, category=category, topic=topic, action=action, tool=tool,
@@ -193,6 +209,51 @@ def local_file(path, base, allowed):
     return result
 
 
+def enrichment_ids(params):
+    dimension = value(params, 'edim', 40)
+    state = value(params, 'estate', 32)
+    chosen = value(params, 'evalue', 80)
+    dimension2 = value(params, 'edim2', 40)
+    chosen2 = value(params, 'evalue2', 80)
+    same = value(params, 'esame', 2)
+    role = value(params, 'erole', 16)
+    if role not in ('required', 'legacy'):
+        role = 'any'
+    if not any((dimension, state, chosen, dimension2, chosen2, same, role if role != 'any' else '')):
+        return None
+    try:
+        from enrichment import load_current_annotations, search_annotations
+    except ImportError:
+        return 'missing'
+    annotations = load_current_annotations(enrichment_dir())
+    if annotations is None:
+        return 'missing'
+    filters = []
+    if dimension:
+        filters.append((dimension, [chosen] if chosen else [], state or None))
+    if dimension2:
+        filters.append((dimension2, [chosen2] if chosen2 else [], None))
+    if not filters:
+        return None
+    return set(search_annotations(annotations, filters, same != '0', role))
+
+
+def enrichment_dir():
+    override = os.environ.get('ATLAS_ENRICHMENT_DIR')
+    return Path(override) if override else ROOT / 'data/library/enrichment'
+
+
+def enrichment_detail(skill_id):
+    folder = enrichment_dir()
+    if not (folder / 'current.json').is_file():
+        return None
+    try:
+        from enrichment import detail_for
+        return detail_for(folder, skill_id)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return None
+
+
 def github_url(row):
     return 'https://github.com/' + quote(row['repo'], safe='/') + '/blob/' + quote(row['revision'], safe='') + '/' + quote(row['path'], safe='/')
 
@@ -217,9 +278,13 @@ def get_skill(con, skill_id, requested_source):
             'has_raw': bool(row['raw_path']),
         })
     record = json.loads(local_file(display_record, ROOT, NORMALIZED).read_text(encoding='utf-8'))
-    return {'id': skill['id'], 'category': skill['category'], 'topic': skill['topic'],
-            'label_from': skill['label_from'], 'record': record,
-            'display_source': display_source, 'sources': sources}
+    payload = {'id': skill['id'], 'category': skill['category'], 'topic': skill['topic'],
+               'label_from': skill['label_from'], 'record': record,
+               'display_source': display_source, 'sources': sources}
+    enrichment = enrichment_detail(skill['id'])
+    if enrichment is not None:
+        payload['enrichment'] = enrichment
+    return payload
 
 
 def get_raw(con, source_id):
@@ -292,13 +357,25 @@ class Handler(BaseHTTPRequestHandler):
             self.json({'error': '无法核对本机文件'}, 409)
 
 
+def bind(port):
+    try:
+        return ThreadingHTTPServer(('127.0.0.1', port), Handler)
+    except OSError as exc:
+        if exc.errno == errno.EADDRINUSE:
+            raise SystemExit(
+                f'{port} 已有进程在监听。打开 http://127.0.0.1:{port} ，'
+                '或运行 python3 library/accept_local.py 核对它是否仍是当前目录。不要再启动第二个服务。'
+            ) from exc
+        raise
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
     args = parser.parse_args()
     if not DATABASE.is_file():
         parser.error('Run python3 library/build.py to create the local catalogue first')
-    with ThreadingHTTPServer(('127.0.0.1', args.port), Handler) as server:
+    with bind(args.port) as server:
         print(f'Atlas Skill Library: http://127.0.0.1:{server.server_port}', flush=True)
         try:
             server.serve_forever()

@@ -72,6 +72,7 @@ button:not(:disabled):hover { border-color: #aaa9db; }
 .filters .check { display: flex; align-items: center; padding: 7px 0; }
 .check input { margin: 0 4px 0 0; width: 16px; height: 16px; accent-color: var(--accent); }
 .filters .mobile-category { display: none; }
+.filters input[type="text"], .filters input:not([type="checkbox"]) { min-width: 8rem; }
 .clear { color: var(--accent); font-size: .875rem; }
 .results-head { display: flex; gap: 10px; align-items: baseline; justify-content: space-between; margin-bottom: 11px; }
 .results-head h2 { font-size: 1.2rem; }
