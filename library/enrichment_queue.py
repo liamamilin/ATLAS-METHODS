@@ -10,9 +10,10 @@ import re
 import time
 
 from enrichment import (
-    AXES, RULE_VERSION, TOOL_ROLES, TOOL_TAGS, catalog_lines, dedupe_identical_facts,
-    digest, fact, finalize, independent_review, map_record, parse_conditions, program_evidence,
-    source_digest, supplied_text, tool_role_from_text, value_catalog,
+    RULE_VERSION, TOOL_ROLES, TOOL_TAGS, axis_vocabulary_clause, catalog_lines,
+    dedupe_identical_facts, digest, fact, finalize, independent_review, map_record,
+    parse_conditions, program_evidence, source_digest, supplied_text, tool_role_from_text,
+    value_catalog,
 )
 
 QUEUE_SCHEMA = 'atlas-enrichment-queue/v0.2'
@@ -209,7 +210,7 @@ def batch_review_prompt(rows):
         '缺 decision、unknown、reject 都不是 accept。不要把一条 record 的 quote 或 fact_id 用到另一条上。'
         '返回 JSON：records 数组，每项含 record_id、source_hash、axes、fact_decisions。'
         'fact_decisions 含 record_id、fact_id、dimension、value_id、role、quote、task_position、decision。'
-        'axes 的键是 ' + ', '.join(AXES) + '。\n'
+        + axis_vocabulary_clause() + '\n'
         + ''.join(blocks)
     )
 
@@ -287,6 +288,49 @@ def apply_generation(skill, annotation, element, pack_skills):
     return None
 
 
+def pack_fidelity_note(values):
+    """Whether every member of a review pack carried the same raw source_fidelity.
+
+    Items are ('present', token), ('missing',), or ('absent',). Fewer than two
+    members is not a pack signal. This note is not a grade.
+    """
+    if len(values) < 2 or any(not item or item[0] not in ('present', 'missing', 'absent') for item in values):
+        return {'pack_fidelity_uniform': False}
+    uniform = all(item == values[0] for item in values)
+    note = {'pack_fidelity_uniform': uniform}
+    if uniform:
+        note['pack_fidelity_value'] = values[0][1] if values[0][0] == 'present' else None
+    return note
+
+
+def review_pack_fidelity_note(record_ids, by_record):
+    values = []
+    for record_id in record_ids:
+        element = by_record.get(record_id)
+        if not isinstance(element, dict):
+            values.append(('absent',))
+            continue
+        axes = element.get('axes') if isinstance(element.get('axes'), dict) else {}
+        if 'source_fidelity' in axes:
+            values.append(('present', axes.get('source_fidelity')))
+        else:
+            values.append(('missing',))
+    return pack_fidelity_note(values)
+
+
+def attach_pack_fidelity(annotation, note):
+    """Copy a pack fidelity flag onto an annotation. Grade is left as it is."""
+    if not isinstance(annotation, dict) or not isinstance(note, dict):
+        return annotation
+    quality = annotation.setdefault('quality', {})
+    quality['pack_fidelity_uniform'] = bool(note.get('pack_fidelity_uniform'))
+    if note.get('pack_fidelity_uniform'):
+        quality['pack_fidelity_value'] = note.get('pack_fidelity_value')
+    else:
+        quality.pop('pack_fidelity_value', None)
+    return annotation
+
+
 def apply_review(skill, annotation, element, generation_session, review_session, review_context):
     if not isinstance(element, dict):
         return annotation, 'provider_invalid_output'
@@ -320,7 +364,10 @@ def apply_review(skill, annotation, element, generation_session, review_session,
         decisions.append(row)
     finalize(annotation, {'axes': element.get('axes') or {}, 'fact_decisions': decisions}, skill)
     grade = (annotation.get('quality') or {}).get('grade')
-    annotation['quality']['recommend'] = grade != 'R'
+    if annotation['quality'].get('model_review') != 'completed':
+        annotation['quality']['recommend'] = False
+    else:
+        annotation['quality']['recommend'] = grade != 'R'
     annotation['quality']['review_session_id'] = review_session
     annotation['quality']['generation_session_id'] = generation_session.get('session_id')
     for item in annotation.get('facts') or []:
@@ -928,6 +975,7 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
             for element in payload.get('records') or []:
                 if isinstance(element, dict) and element.get('record_id'):
                     by_record.setdefault(element['record_id'], element)
+            fidelity_note = review_pack_fidelity_note(group, by_record) if phase == 'review' else None
             def mutate(state):
                 for skill in pack:
                     element = by_record.get(skill['id'])
@@ -971,6 +1019,8 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                                 'turns': turns, 'cost_accounting': accounting,
                             })
                             continue
+                        if fidelity_note:
+                            attach_pack_fidelity(reviewed, fidelity_note)
                         _put(state, plan, arm, skill, {
                             'phase': 'reviewed', 'will_not_retry': False, 'source_hash': source_digest(skill),
                             'arm': arm['id'], 'annotation': reviewed, 'session_id': session_id,
@@ -978,10 +1028,15 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                             'cost_accounting': accounting, 'fee_proven': accounting == 'verified_zero',
                             'turns': turns,
                         })
-                state.setdefault('events', []).append({
+                event = {
                     'phase': phase, 'arm': arm['id'], 'ids': group, 'outcome': 'saved',
                     'cost_accounting': accounting,
-                })
+                }
+                if fidelity_note:
+                    event['pack_fidelity_uniform'] = fidelity_note['pack_fidelity_uniform']
+                    if fidelity_note['pack_fidelity_uniform']:
+                        event['pack_fidelity_value'] = fidelity_note.get('pack_fidelity_value')
+                state.setdefault('events', []).append(event)
                 return None
             ledger.update(mutate)
 

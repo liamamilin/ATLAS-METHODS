@@ -1457,6 +1457,75 @@ print(json.dumps({'type': 'text', 'sessionID': 'ses-' + title[-6:], 'part': {'te
                  'review_decision': 'accept', 'scope': {'level': 'task', 'task_position': 2}},
             ], {'kind': ['execution_workflow'], 'output_kind': ['decision_or_plan']}, True), [])
 
+    def test_official_unknown_stays_u_and_unofficial_fidelity_is_not_d1(self):
+        from enrichment import AXIS_VALUES, axis_vocabulary_clause, finalize, review_prompt
+        scope = {
+            'independent': True, 'source_scope': 'summary_and_tasks',
+            'na_evidence': {}, 'diversity': 'same_model_new_session',
+        }
+        unknown_axes = {axis: 'limited' for axis in AXES}
+        unknown_axes['source_fidelity'] = 'unknown'
+        self.assertEqual(derive_grade(dict(scope, axes=unknown_axes), [])['grade'], 'U')
+        limited_axes = {axis: 'limited' for axis in AXES}
+        self.assertEqual(derive_grade(dict(scope, axes=limited_axes), [])['grade'], 'D1')
+        # The grade rule itself is unchanged: a near-synonym that reaches derive_grade is still D1.
+        # finalize must not let that happen.
+        self.assertEqual(derive_grade(dict(scope, axes={'source_fidelity': 'summary_only'}), [])['grade'], 'D1')
+        sample = skill()
+        sample['summary'] = '公开样例摘要。'
+        sample['tasks'] = [{'position': 1, 'goal': '完成这项公开样例。', 'applicability': '', 'outputs': ''}]
+
+        def reviewed(axes):
+            annotation = map_record(sample, sample['tasks'], source_hash='h')
+            finalize(annotation, {'axes': axes, 'fact_decisions': []}, sample)
+            return annotation
+
+        official_unknown = reviewed({'source_fidelity': 'unknown', 'actionability': 'limited'})
+        self.assertEqual(official_unknown['quality']['grade'], 'U')
+        self.assertEqual(official_unknown['quality']['model_review'], 'completed')
+        self.assertEqual(official_unknown['quality']['axes']['source_fidelity'], 'unknown')
+        self.assertNotIn('unofficial_axes', official_unknown['quality'])
+        official_limited = reviewed({'source_fidelity': 'limited'})
+        self.assertEqual(official_limited['quality']['grade'], 'D1')
+        self.assertEqual(official_limited['quality']['model_review'], 'completed')
+        remapped = reviewed({'source_fidelity': 'pass', 'structural_completeness': 'pass'})
+        self.assertEqual(remapped['quality']['axes']['source_fidelity'], 'limited')
+        self.assertEqual(remapped['quality']['axes']['source_fidelity_reason'], 'supply_is_summary_and_tasks_only')
+        self.assertEqual(remapped['quality']['grade'], 'D1')
+        self.assertNotIn('unofficial_axes', remapped['quality'])
+        missing = reviewed({})
+        self.assertEqual(missing['quality']['grade'], 'D1')
+        self.assertEqual(missing['quality']['model_review'], 'completed')
+        self.assertNotIn('unofficial_axes', missing['quality'])
+        for token in ('summary_only', 'partial', 'insufficient_evidence', 'Unknown'):
+            annotation = reviewed({'source_fidelity': token, 'actionability': 'pass'})
+            self.assertNotEqual(annotation['quality']['grade'], 'D1', token)
+            self.assertNotEqual(annotation['quality']['grade'], 'U', token)
+            self.assertIsNone(annotation['quality']['grade'])
+            self.assertEqual(annotation['quality']['model_review'], 'axis_vocabulary_invalid')
+            self.assertEqual(annotation['quality']['grade_withheld_reason'], 'unofficial_source_fidelity')
+            self.assertFalse(annotation['quality']['recommend'])
+            self.assertEqual(annotation['quality']['unofficial_axes']['source_fidelity'], token)
+            self.assertNotIn('source_fidelity', annotation['quality']['axes'])
+            self.assertEqual(annotation['quality']['axes'].get('actionability'), 'pass')
+        failed = reviewed({'source_fidelity': 'summary_only', 'actionability': 'fail'})
+        self.assertEqual(failed['quality']['grade'], 'R')
+        self.assertEqual(failed['quality']['model_review'], 'completed')
+        self.assertEqual(failed['quality']['unofficial_axes']['source_fidelity'], 'summary_only')
+        self.assertNotIn('source_fidelity', failed['quality']['axes'])
+        mixed = reviewed({'source_fidelity': 'limited', 'actionability': 'partial'})
+        self.assertEqual(mixed['quality']['grade'], 'D1')
+        self.assertEqual(mixed['quality']['axes']['source_fidelity'], 'limited')
+        self.assertNotIn('actionability', mixed['quality']['axes'])
+        self.assertEqual(mixed['quality']['unofficial_axes']['actionability'], 'partial')
+        clause = axis_vocabulary_clause()
+        prompt = review_prompt(sample, official_unknown)
+        self.assertIn(clause, prompt)
+        self.assertIn('unknown、pass、limited、fail、not_applicable', prompt)
+        for value in AXIS_VALUES:
+            self.assertIn(value, prompt)
+        self.assertIn('decision 写 unknown', prompt)
+
 
 if __name__ == '__main__':
     unittest.main()

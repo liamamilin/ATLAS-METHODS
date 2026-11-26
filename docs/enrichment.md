@@ -56,7 +56,7 @@ python3 library/enrichment.py run \
 
 9 条把 `--max-requests` 改为 18，`--workers` 仍为 1。38 条把 `--workers` 改为 10，`--max-requests` 改为 76。`--manifest` 和 `--out` 分别换成该分片刚导出的文件和该分片自己的目录。这三步都会调用模型。离线只做 `manifest` 导出。
 
-生成提示带上 `canonical-value/v1` 的规范值 id。`value_id` 只能取该维度列出的 id。词表里没有的词把 `value_id` 留空，新词放在 `proposed_value`，模型不能自己写成已接受。提示里的例子标了假例子，不使用用户材料。程序只在 quote 是摘要或任务里的连续原文、作用域没有跨到别的任务、并且该维度只对应一个规范 id 时，才补上缺失的 `value_id`。审核看到候选的 `value_id`、`role`、`scope` 和 quote。某一轴通过不会把所有候选都变成可筛选标签。供给只有摘要和任务，`source_fidelity` 不会保持 pass。已审定且有证据的规范值才写入维度 `values`。没有依据的维度保持 unknown。
+生成提示带上 `canonical-value/v1` 的规范值 id。`value_id` 只能取该维度列出的 id。词表里没有的词把 `value_id` 留空，新词放在 `proposed_value`，模型不能自己写成已接受。提示里的例子标了假例子，不使用用户材料。程序只在 quote 是摘要或任务里的连续原文、作用域没有跨到别的任务、并且该维度只对应一个规范 id 时，才补上缺失的 `value_id`。审核看到候选的 `value_id`、`role`、`scope` 和 quote。某一轴通过不会把所有候选都变成可筛选标签。供给只有摘要和任务，`source_fidelity` 不会保持 pass。审核轴只能取 `unknown`、`pass`、`limited`、`fail`、`not_applicable`。能用这段摘要和任务核对候选时，`source_fidelity` 写 `limited`；只有这段供给也不足以判断忠实度时才写 `unknown`。`summary_only`、`partial`、`insufficient_evidence` 不会被收成 D1。已审定且有证据的规范值才写入维度 `values`。没有依据的维度保持 unknown。
 
 已经生成的那一条不要自动重跑。若保存的生成响应里，quote 能无歧义对上规范 id，用下面的命令离线修复，不调用模型。写出的注解等级是 U，`prior_review_reusable` 为 false，旧的 D1 不能当作这次修复的审核。`--ids` 只放那一条代表 id，`--attempt` 是该条 `generate/response.txt`。
 
@@ -170,6 +170,8 @@ python3 library/enrichment.py rollback \
 字符数乘 2 是保守的估算 token，不是官方分词器，也不是字节数。共享词表只写一次。单条超长记录不截断正文：放不进预算就整条不送，记 `over_budget`。模型输出不是完整 JSON，或回合 `finish` 为 `length` 时，这一请求里的记录全部不接受。
 
 规则和封闭短语只产生候选。审核接受之前，检索看不到它们。`reject`、`unknown`、缺决定、冲突、跨记录引用都不接受。否定句上的 required 会按原文改成 prohibited，不能借 required 通过。完全相同的事实仍合并。同一 `fact_id` 而角色或作用域不同则冲突，不接受。`source_fidelity` 在摘要加任务的供给上不能保持 pass。等级 R 的 `recommend` 为 false。
+
+合批审核和单条审核共用同一段轴约束。轴值只有 `unknown`、`pass`、`limited`、`fail`、`not_applicable`。供给始终是摘要加任务：能核对候选就写 `limited`，只有这段供给也判断不了忠实度才写 `unknown`。供给不是全文，本身不是 `unknown`。`pass` 仍由 `finalize` 改成 `limited`。`derive_grade` 不变：在 `source_scope=summary_and_tasks` 且没有轴为 `fail` 时，只有精确的 `source_fidelity=unknown` 得到 U，其它正式非 fail 值得到 D1。缺轴仍是 D1，不改成 U。`summary_only`、`partial`、`insufficient_evidence` 以及其它未列出的词从正式 `axes` 移到 `unofficial_axes`。若被移走的是 `source_fidelity`，且没有其它轴为正式 `fail`，则不调用定级：`grade` 为 null，不是 D1 也不是 U，`model_review` 为 `axis_vocabulary_invalid`，`recommend` 为 false。现有发布只收 `model_review=completed`，因此这种审核不会进 sidecar。已有正式 `fail` 时等级仍是 R。已经落盘的生产和暂存记录不自动重判。费用、身份、halt、重试和发布条件不变。同一审核响应里至少两条记录的原始 `source_fidelity` 完全相同时，该次 ledger 事件和已审注解带上 `pack_fidelity_uniform`。这个标记不改等级。
 
 一次 `execute` 或 `resume` 自己从生成走到审核，并在每个请求后写 ledger。远程会话断开不影响已经写进 ledger 的计划；机器休眠或关机不在这个保证里。ledger 跨档位、跨阶段累计。硬上限是 80 次 `opencode run`、100 个实际 assistant turn、2700 秒、同时在途 10。先到即停，不再提交新请求。换一个 `--out` 不能清空这笔账，也不能绕过 tools、非 0、错误模型、身份不可核或已经写下的 timeout halt。缺费用在 `allow-missing-cost` 下仍是 unknown，不写成 0。未知结果不自动重发。一个记录失败不把同请求里已经成立的记录打回，也不整批重跑。
 

@@ -783,6 +783,68 @@ class QueueTests(unittest.TestCase):
             self.assertEqual(stopped.calls, 1)
             self.assertEqual(stopped.price_checks, 1)
 
+    def test_batch_prompt_lists_axis_values_and_pack_flag_is_not_a_grade(self):
+        from enrichment import AXIS_VALUES, axis_vocabulary_clause, review_prompt
+        from enrichment_queue import (
+            apply_review, attach_pack_fidelity, batch_review_prompt, pack_fidelity_note,
+            review_pack_fidelity_note,
+        )
+        clause = axis_vocabulary_clause()
+        self.assertIn('unknown、pass、limited、fail、not_applicable', clause)
+        self.assertIn('summary_only', clause)
+        self.assertIn('partial', clause)
+        self.assertIn('insufficient_evidence', clause)
+        self.assertIn('写 limited', clause)
+        self.assertIn('才写 unknown', clause)
+        self.assertIn('不要因为供给不是全文', clause)
+        for value in AXIS_VALUES:
+            self.assertIn(value, clause)
+        sample = {
+            'id': 'a' * 32, 'summary': '公开样例摘要。',
+            'tasks': [{'position': 1, 'goal': '完成这项公开样例。', 'applicability': '', 'outputs': ''}],
+        }
+        other = {
+            'id': 'b' * 32, 'summary': '另一条公开样例。',
+            'tasks': [{'position': 1, 'goal': '完成另一项公开样例。', 'applicability': '', 'outputs': ''}],
+        }
+        batch = batch_review_prompt([(sample, {'facts': []}), (other, {'facts': []})])
+        single = review_prompt(sample, {'facts': []})
+        self.assertIn(clause, batch)
+        self.assertIn(clause, single)
+        self.assertIn('不能写 pass', batch)
+        uniform = pack_fidelity_note([('present', 'unknown'), ('present', 'unknown')])
+        self.assertTrue(uniform['pack_fidelity_uniform'])
+        self.assertEqual(uniform['pack_fidelity_value'], 'unknown')
+        self.assertFalse(pack_fidelity_note([('present', 'unknown'), ('present', 'limited')])['pack_fidelity_uniform'])
+        self.assertFalse(pack_fidelity_note([('present', 'limited')])['pack_fidelity_uniform'])
+        self.assertFalse(pack_fidelity_note([('present', 'unknown'), ('absent',)])['pack_fidelity_uniform'])
+        packed = review_pack_fidelity_note([sample['id'], other['id']], {
+            sample['id']: {'axes': {'source_fidelity': 'summary_only'}},
+            other['id']: {'axes': {'source_fidelity': 'summary_only'}},
+        })
+        self.assertEqual(packed['pack_fidelity_value'], 'summary_only')
+        stamped = {'quality': {'grade': 'D1', 'axes': {'source_fidelity': 'limited'}}}
+        attach_pack_fidelity(stamped, uniform)
+        self.assertEqual(stamped['quality']['grade'], 'D1')
+        self.assertEqual(stamped['quality']['axes']['source_fidelity'], 'limited')
+        self.assertTrue(stamped['quality']['pack_fidelity_uniform'])
+        self.assertEqual(stamped['quality']['pack_fidelity_value'], 'unknown')
+        reviewed, reason = apply_review(
+            sample, {'facts': [], 'record_id': sample['id'], 'source_hash': 'h'},
+            {'record_id': sample['id'], 'axes': {'source_fidelity': 'insufficient_evidence'}, 'fact_decisions': []},
+            {'session_id': 'generation-session', 'context_hash': 'generation-context'},
+            'review-session', 'review-context')
+        self.assertIsNone(reason)
+        self.assertIsNone(reviewed['quality']['grade'])
+        self.assertNotEqual(reviewed['quality']['grade'], 'D1')
+        self.assertNotEqual(reviewed['quality']['grade'], 'U')
+        self.assertEqual(reviewed['quality']['model_review'], 'axis_vocabulary_invalid')
+        self.assertFalse(reviewed['quality']['recommend'])
+        self.assertEqual(reviewed['quality']['unofficial_axes']['source_fidelity'], 'insufficient_evidence')
+        graded = {'quality': {'grade': 'U', 'model_review': 'completed', 'axes': {'source_fidelity': 'unknown'}}}
+        attach_pack_fidelity(graded, uniform)
+        self.assertEqual(graded['quality']['grade'], 'U')
+
 
 if __name__ == '__main__':
     unittest.main()

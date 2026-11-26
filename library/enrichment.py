@@ -30,6 +30,7 @@ AXES = (
     'source_fidelity', 'structural_completeness', 'actionability',
     'limitations_and_risks', 'classification_and_tag_fit',
 )
+AXIS_VALUES = ('unknown', 'pass', 'limited', 'fail', 'not_applicable')
 STRONG_ROLES = {'required', 'conditional'}
 ALIASES = {
     'postgres': 'postgresql', 'postgresql': 'postgresql', 'google sheets': 'gsheets',
@@ -1248,6 +1249,38 @@ def enforce_acceptance_invariant(annotation):
     return annotation
 
 
+def partition_review_axes(axes):
+    """Keep official axis tokens. Any other value on an axis key is unofficial.
+
+    Side fields such as source_fidelity_reason stay with the official dict.
+    A missing axis key is not unofficial; only a present non-token is.
+    """
+    official = {}
+    unofficial = {}
+    for key, value in axes.items():
+        if key not in AXES or value in AXIS_VALUES:
+            official[key] = value
+        else:
+            unofficial[key] = value
+    return official, unofficial
+
+
+def axis_vocabulary_clause():
+    """Legal axis values, shared by the single-record and batch review prompts.
+
+    Summary-plus-tasks is the whole supply. That scope is limited, not unknown.
+    """
+    return (
+        'axes 的键是 ' + ', '.join(AXES)
+        + '，值只能是 unknown、pass、limited、fail、not_applicable。'
+        '不要写 summary_only、partial、insufficient_evidence，或其它没有列出的词。'
+        '供给始终是 summary 和 tasks，所以 source_fidelity 不能写 pass。'
+        '能用这段摘要和任务核对候选时，source_fidelity 写 limited：限制来自供给只有摘要和任务，判断本身做得到。'
+        '只有这段摘要和任务也不足以判断忠实度时，source_fidelity 才写 unknown，例如引用对不上供给，或主张含糊到无法比较。'
+        '不要因为供给不是全文，就把 source_fidelity 写成 unknown。'
+    )
+
+
 def finalize(annotation, payload, skill):
     """The only place a model fact becomes accepted. Mapping a value is not acceptance."""
     dedupe_identical_facts(annotation)
@@ -1299,14 +1332,31 @@ def finalize(annotation, payload, skill):
             item['candidate'] = True
             item.pop('accepted_by', None)
     enforce_acceptance_invariant(annotation)
-    grade = derive_grade({
-        'independent': True, 'source_scope': 'summary_and_tasks', 'axes': axes,
-        'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+    official_axes, unofficial_axes = partition_review_axes(axes)
+    official_fail = any(official_axes.get(axis) == 'fail' for axis in AXES)
+    fidelity_unofficial = 'source_fidelity' in unofficial_axes
+    # derive_grade still maps exact source_fidelity unknown to U and every other
+    # non-fail fidelity token to D1. Unofficial fidelity never reaches that branch,
+    # unless an official fail already decides R.
+    if fidelity_unofficial and not official_fail:
+        grade = {'grade': None}
+        model_review = 'axis_vocabulary_invalid'
+    else:
+        grade = derive_grade({
+            'independent': True, 'source_scope': 'summary_and_tasks', 'axes': official_axes,
+            'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+        model_review = 'completed'
     annotation['quality'] = {
-        'grade': grade['grade'], 'model_review': 'completed', 'execution': 'not_run',
+        'grade': grade['grade'], 'model_review': model_review, 'execution': 'not_run',
         'diversity': 'same_model_new_session', 'source_scope': 'summary_and_tasks',
-        'rule_version': RULE_VERSION, 'axes': axes,
+        'rule_version': RULE_VERSION, 'axes': official_axes,
     }
+    if unofficial_axes:
+        annotation['quality']['unofficial_axes'] = unofficial_axes
+        annotation['quality']['axis_vocabulary'] = 'unofficial'
+    if fidelity_unofficial and not official_fail:
+        annotation['quality']['grade_withheld_reason'] = 'unofficial_source_fidelity'
+        annotation['quality']['recommend'] = False
     annotation['fingerprint'] = digest({
         'record_id': annotation['record_id'], 'rule_version': RULE_VERSION,
         'accepted': [item['fact_id'] for item in annotation['facts'] if item.get('accepted')],
@@ -1709,9 +1759,9 @@ def review_prompt(skill, annotation):
         '独立审核这些候选。只看下面的摘要、任务和候选的 value_id、role、scope、quote。'
         '不要沿用生成会话，不要看生成者的推理。供给只有 summary 和 tasks，source_fidelity 不能写成 pass。'
         '无 quote、引用不在供给里、value_id 不在词表、引用属于另一个任务，或把否定句当成 required 的，decision 写 reject。'
-        '证据不够就写 unknown，不要因为其它轴通过就接受全部候选。'
-        '返回 JSON：axes 的键是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
-        'fact_decisions 的每一项含 fact_id、dimension、value_id、role、quote、task_position、decision。'
+        '某一条候选证据不够时，这条 fact 的 decision 写 unknown，不要因为其它轴通过就接受全部候选。'
+        '返回 JSON：' + axis_vocabulary_clause()
+        + 'fact_decisions 的每一项含 fact_id、dimension、value_id、role、quote、task_position、decision。'
         'decision 只能是 accept、reject、unknown。只有 decision 为 accept 的那一条会进入可筛选值；unknown 保持候选。\n'
         + json.dumps({
             'source_scope': 'summary_and_tasks', 'source': supplied_text(skill), 'candidates': visible,
