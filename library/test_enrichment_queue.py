@@ -971,6 +971,120 @@ class QueueTests(unittest.TestCase):
         self.assertTrue(item['program_evidence'])
         self.assertFalse(item['accepted'])
 
+    def test_label_packs_skip_exhausted_labels_and_keep_exclusions_out(self):
+        from enrichment_queue import OFFICIAL_LABELS, plan_label_packs
+        self.assertEqual(len(OFFICIAL_LABELS), 16)
+        rows = []
+        number = 1
+        for label in OFFICIAL_LABELS:
+            for _ in range(2):
+                rows.append({'id': f'{number:032x}', 'category': label})
+                number += 1
+        by_id = {row['id']: row['category'] for row in rows}
+        full = plan_label_packs(rows)
+        self.assertTrue(full['ready_to_execute'])
+        self.assertIsNone(full['failure'])
+        self.assertEqual(full['pack_size'], 16)
+        self.assertEqual(full['packs_formed'], 2)
+        self.assertEqual(full['packs_of_16'], 2)
+        self.assertEqual(full['exhausted_labels'], [])
+        for pack in full['packs']:
+            self.assertEqual([by_id[record_id] for record_id in pack], list(OFFICIAL_LABELS))
+        engineering = [row['id'] for row in rows if row['category'] == 'engineering']
+        narrowed = plan_label_packs(rows, excluded=engineering)
+        self.assertTrue(narrowed['ready_to_execute'])
+        self.assertEqual(narrowed['pack_size'], 15)
+        self.assertEqual(narrowed['packs_of_16'], 0)
+        self.assertEqual(narrowed['packs_formed'], 2)
+        self.assertEqual(narrowed['exhausted_labels'], ['engineering'])
+        self.assertNotIn('engineering', narrowed['active_labels'])
+        self.assertEqual(narrowed['excluded_ids_selected'], [])
+        for pack in narrowed['packs']:
+            self.assertEqual(len(pack), 15)
+            self.assertTrue(all(record_id not in engineering for record_id in pack))
+            self.assertNotIn('engineering', [by_id[record_id] for record_id in pack])
+        code_ids = [row['id'] for row in rows if row['category'] == 'code']
+        legal_ids = [row['id'] for row in rows if row['category'] == 'legal']
+        held = plan_label_packs(rows, excluded=[code_ids[0]], will_not_retry=[legal_ids[0]], max_packs=1)
+        self.assertEqual(held['packs_formed'], 1)
+        self.assertNotIn(code_ids[0], held['selected'])
+        self.assertNotIn(legal_ids[0], held['selected'])
+        self.assertIn(code_ids[1], held['selected'])
+        self.assertIn(legal_ids[1], held['selected'])
+        blocked = plan_label_packs(rows, excluded=[row['id'] for row in rows[:8]], will_not_retry=[row['id'] for row in rows[8:]])
+        self.assertFalse(blocked['ready_to_execute'])
+        self.assertEqual(blocked['failure'], 'no_complete_packs')
+        self.assertEqual(blocked['selected'], [])
+        self.assertEqual(blocked['packs'], [])
+        self.assertEqual(blocked['exhausted_labels'], list(OFFICIAL_LABELS))
+        self.assertEqual(plan_label_packs([])['failure'], 'no_complete_packs')
+        stranger = {'id': f'{number:032x}', 'category': 'not-a-label'}
+        with_stranger = plan_label_packs(rows + [stranger], max_packs=1)
+        self.assertEqual(with_stranger['pack_size'], 16)
+        self.assertNotIn(stranger['id'], with_stranger['selected'])
+
+    def test_cli_label_plan_omits_an_exhausted_label(self):
+        from enrichment_queue import OFFICIAL_LABELS, load_plan
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            ids = {}
+            for index, label in enumerate(OFFICIAL_LABELS, start=1):
+                record_id = f'{index:032x}'
+                ids[label] = record_id
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', '目录', label, 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, '目录'))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, '完成这项公开样例。', '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            log = root / 'calls.log'
+            common = [
+                '--database', str(database), '--cost-policy', 'allow-missing-cost', '--workers', '1',
+                '--max-requests', '8', '--max-turns', '20', '--max-runtime-seconds', '600',
+                '--max-packs', '1', '--by-label',
+            ]
+            made = self._cli(['queue', '--action', 'plan', '--out', str(root / 'full.json'), *common], log=log)
+            self.assertEqual(made.returncode, 0, made.stderr + made.stdout)
+            report = json.loads(made.stdout)
+            self.assertTrue(report['ready_to_execute'])
+            self.assertEqual(report['pack_size'], 16)
+            self.assertEqual(report['packs_of_16'], 1)
+            sealed = load_plan(root / 'full.json')
+            self.assertEqual(sealed['ids'], [ids[label] for label in OFFICIAL_LABELS])
+            self.assertEqual(sealed['label_pack']['exhausted_labels'], [])
+            self.assertEqual(len(self._runs(log)), 0)
+            (root / 'skip.txt').write_text(ids['engineering'] + '\n', encoding='utf-8')
+            narrowed = self._cli([
+                'queue', '--action', 'plan', '--out', str(root / 'narrow.json'),
+                '--exclude-file', str(root / 'skip.txt'), *common,
+            ], log=log)
+            self.assertEqual(narrowed.returncode, 0, narrowed.stderr + narrowed.stdout)
+            narrow_report = json.loads(narrowed.stdout)
+            self.assertEqual(narrow_report['pack_size'], 15)
+            self.assertEqual(narrow_report['exhausted_labels'], ['engineering'])
+            narrow_plan = load_plan(root / 'narrow.json')
+            self.assertNotIn(ids['engineering'], narrow_plan['ids'])
+            self.assertEqual(len(narrow_plan['ids']), 15)
+            self.assertEqual(narrow_plan['arms'][0]['batch_size'], 15)
+            (root / 'all.txt').write_text('\n'.join(ids.values()) + '\n', encoding='utf-8')
+            (root / 'retry.txt').write_text(ids['code'] + '\n', encoding='utf-8')
+            stopped = self._cli([
+                'queue', '--action', 'plan', '--out', str(root / 'none.json'),
+                '--exclude-file', str(root / 'all.txt'),
+                '--will-not-retry-file', str(root / 'retry.txt'), *common,
+            ], log=log)
+            self.assertEqual(stopped.returncode, 2, stopped.stderr + stopped.stdout)
+            refusal = json.loads((root / 'none.json').read_text(encoding='utf-8'))
+            self.assertFalse(refusal['ready_to_execute'])
+            self.assertEqual(refusal['failure'], 'no_complete_packs')
+            self.assertFalse(refusal['sealed_plan'])
+            self.assertEqual(len(self._runs(log)), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

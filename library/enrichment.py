@@ -2080,7 +2080,11 @@ def run(argv=None):
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     parser.add_argument('--run', action='append', default=[], help='Finished run directory. Repeat once per slice. Used by publish')
-    parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out. The source run directory is not modified')
+    parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out, and label-pack planning must not select. The source run directory is not modified')
+    parser.add_argument('--exclude-file', type=Path, help='More record ids label-pack planning must not select, comma or newline separated')
+    parser.add_argument('--will-not-retry-file', type=Path, help='Record ids already marked will_not_retry. Label-pack planning does not select them and does not retry them')
+    parser.add_argument('--by-label', action='store_true', help='queue plan only. One eligible record from each official label that still has one. A missing label is omitted, not filled')
+    parser.add_argument('--max-packs', type=int, default=None, help='queue plan --by-label only. Cap the number of complete label packs')
     parser.add_argument('--resume-provider-invalid', action='store_true', help='Clear a provider invalid-output stop after saved turns pass the tool, identity, and nonzero checks. Error rows are not retried')
     parser.add_argument('--action', choices=('plan', 'validate', 'execute', 'resume', 'status', 'preview', 'select'),
                         help='queue only. plan seals 8/16/32 packing. validate checks it. execute and resume share one ledger across arms and phases. status reads it. preview writes 0. Hard caps: 80 model-run requests, 100 assistant turns, 2700 seconds, 10 in flight. Characters times 2 are estimated tokens, not a tokenizer and not bytes.')
@@ -2208,10 +2212,68 @@ def run(argv=None):
     if args.command == 'queue':
         from enrichment_queue import (
             HARD_MAX_RECORDS, Ledger, build_benchmark_plan, build_plan, execute_queue, load_plan,
-            load_queue_ids, parse_id_list, project_run_dir, queue_status, select_benchmark, validate_plan,
+            load_queue_ids, parse_id_list, plan_label_packs, project_run_dir, queue_status,
+            select_benchmark, validate_plan,
         )
         if args.action is None:
             raise SystemExit('queue needs --action plan, validate, execute, resume, status, preview, or select')
+        if args.action == 'plan' and args.by_label:
+            if args.ids or args.ids_file or args.benchmark or args.dev_manifest:
+                raise SystemExit('label packs do not take explicit ids or a benchmark manifest')
+            if not args.database:
+                raise SystemExit('label packs need --database')
+            connection = connect_readonly(args.database)
+            try:
+                rows = [{'id': row['id'], 'category': row['category']} for row in connection.execute('SELECT id, category FROM skills')]
+            finally:
+                connection.close()
+            excluded = parse_id_list(args.exclude)
+            if args.exclude_file:
+                excluded.extend(parse_id_list(args.exclude_file.read_text(encoding='utf-8')))
+            withheld = []
+            if args.will_not_retry_file:
+                withheld.extend(parse_id_list(args.will_not_retry_file.read_text(encoding='utf-8')))
+            choice = plan_label_packs(rows, excluded=excluded, will_not_retry=withheld, max_packs=args.max_packs)
+            if not choice['ready_to_execute']:
+                report = {
+                    'calls_model': False, 'production_publish': False, 'sealed_plan': False,
+                    'ready_to_execute': False, 'failure': choice['failure'],
+                    'selected': [], 'packs': [], 'exhausted_labels': choice['exhausted_labels'],
+                    'yield_floors_unchanged': True,
+                }
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                print(json.dumps(report, ensure_ascii=False, indent=2))
+                return 2
+            skills = load_queue_ids(args.database, choice['selected'])
+            caps = {
+                'cli_requests': args.max_requests if args.max_requests is not None else 80,
+                'actual_turns': args.max_turns if args.max_turns is not None else 100,
+                'runtime_seconds': args.max_runtime_seconds if args.max_runtime_seconds is not None else 2700,
+                'in_flight': min(10, max(1, args.workers)),
+            }
+            plan = build_plan(
+                skills, batch_sizes=(choice['pack_size'],),
+                control_ids=[], development_ids=[], holdout_ids=[],
+                caps=caps, fee_policy=args.cost_policy, benchmark=False,
+                label_pack={
+                    'pack_size': choice['pack_size'], 'packs_formed': choice['packs_formed'],
+                    'packs_of_16': choice['packs_of_16'], 'active_labels': choice['active_labels'],
+                    'exhausted_labels': choice['exhausted_labels'], 'packs': choice['packs'],
+                    'excluded_ids_selected': choice['excluded_ids_selected'],
+                    'yield_floors_unchanged': True,
+                },
+            )
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            print(json.dumps({
+                'calls_model': False, 'production_publish': False, 'sealed_plan': True,
+                'ready_to_execute': True, 'out': str(args.out), 'sha256': plan['sha256'],
+                'pack_size': choice['pack_size'], 'packs_formed': choice['packs_formed'],
+                'packs_of_16': choice['packs_of_16'], 'selected': len(choice['selected']),
+                'exhausted_labels': choice['exhausted_labels'], 'yield_floors_unchanged': True,
+            }, ensure_ascii=False, indent=2))
+            return 0
         if args.action == 'plan':
             if args.benchmark or args.dev_manifest or args.heldout_manifest or args.control_manifest:
                 if not (args.dev_manifest and args.heldout_manifest and args.control_manifest and args.database):

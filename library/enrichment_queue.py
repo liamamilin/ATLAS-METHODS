@@ -9,12 +9,16 @@ from pathlib import Path
 import re
 import time
 
+from taxonomy import CATEGORIES
+
 from enrichment import (
     RULE_VERSION, TOOL_ROLES, TOOL_TAGS, axis_vocabulary_clause, catalog_lines,
     dedupe_identical_facts, digest, fact, finalize, independent_review, map_record,
     parse_conditions, program_evidence, source_digest, supplied_text, tool_role_from_text,
     value_catalog,
 )
+
+OFFICIAL_LABELS = tuple(key for key, _label, _group, _vocabulary in CATEGORIES)
 
 QUEUE_SCHEMA = 'atlas-enrichment-queue/v0.2'
 PARENT_BASELINE = 'fcc3c7c8f6436cafebed2d49c0749fa2a0aad418'
@@ -725,7 +729,61 @@ def fit_budget(dev_costs, heldout_costs, control_requests, cap):
     }
 
 
-def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids, caps, fee_policy, benchmark):
+def plan_label_packs(records, *, excluded=(), will_not_retry=(), max_packs=None, record_cap=HARD_MAX_RECORDS):
+    """One eligible record from each label that still has one. No placeholder for a missing label.
+
+    Sixteen labels with eligibles still make packs of 16. A label with none left drops out of
+    the pack, and the pack width becomes the number of labels that remain. Excluded ids and
+    will_not_retry ids are not eligible. Yield floors are not decided here.
+    """
+    blocked = set(excluded or ()) | set(will_not_retry or ())
+    buckets = {label: [] for label in OFFICIAL_LABELS}
+    seen = set()
+    for row in records or []:
+        if not isinstance(row, dict):
+            continue
+        record_id = row.get('id')
+        if not isinstance(record_id, str) or not record_id or record_id in seen:
+            continue
+        seen.add(record_id)
+        if record_id in blocked:
+            continue
+        label = row.get('category')
+        if label not in buckets:
+            continue
+        buckets[label].append(record_id)
+    for label in OFFICIAL_LABELS:
+        buckets[label].sort()
+    active = [label for label in OFFICIAL_LABELS if buckets[label]]
+    exhausted = [label for label in OFFICIAL_LABELS if label not in active]
+    width = len(active)
+    available = min((len(buckets[label]) for label in active), default=0)
+    if max_packs is not None:
+        available = min(available, max(0, int(max_packs)))
+    if record_cap is not None and width:
+        available = min(available, max(0, int(record_cap)) // width)
+    packs = []
+    for index in range(available):
+        packs.append([buckets[label][index] for label in active])
+    selected = [record_id for pack in packs for record_id in pack]
+    ready = bool(packs)
+    return {
+        'ready_to_execute': ready,
+        'failure': None if ready else 'no_complete_packs',
+        'packs': packs,
+        'selected': selected,
+        'pack_size': width if ready else 0,
+        'packs_formed': len(packs),
+        'packs_of_16': len(packs) if width == len(OFFICIAL_LABELS) and ready else 0,
+        'active_labels': active if ready else [],
+        'exhausted_labels': exhausted,
+        'excluded_ids_selected': [record_id for record_id in selected if record_id in blocked],
+        'pack_omits_exhausted_labels': True,
+        'yield_floors_unchanged': True,
+    }
+
+
+def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids, caps, fee_policy, benchmark, label_pack=None):
     ids = [skill['id'] for skill in skills]
     by_id = {skill['id']: skill for skill in skills}
     if benchmark:
@@ -758,7 +816,7 @@ def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids
         'token_estimate': TOKEN_ESTIMATE,
         'bytes_are_not_tokens': True,
         'manifest_count_is_not_request_count': True,
-        'grouping': 'manifest_order_not_embedding',
+        'grouping': 'one_eligible_per_active_label' if label_pack else 'manifest_order_not_embedding',
         'fee_policy': fee_policy,
         'caps': sealed_caps,
         'ids': ids,
@@ -774,6 +832,8 @@ def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids
         'old_run_is_not_continued': True,
         'preparation_file_is_not_executable': True,
     }
+    if label_pack:
+        payload['label_pack'] = label_pack
     payload['sha256'] = digest({key: value for key, value in payload.items() if key != 'sha256'})
     return payload
 
