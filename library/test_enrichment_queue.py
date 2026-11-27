@@ -845,6 +845,109 @@ class QueueTests(unittest.TestCase):
         attach_pack_fidelity(graded, uniform)
         self.assertEqual(graded['quality']['grade'], 'U')
 
+    def test_stream_drop_closer_does_not_discard_a_complete_pack(self):
+        from enrichment_queue import close_open_brackets, parse_model_json
+        ids = tuple(f'{index:032x}' for index in range(16))
+        body = {'records': [{
+            'record_id': record_id,
+            'source_hash': 'ab' * 32,
+            'axes': {'source_fidelity': 'limited'},
+            'fact_decisions': [{'decision': 'reject', 'quote': '样例}括号'}],
+        } for record_id in ids]}
+        full = json.dumps(body, ensure_ascii=False, indent=2)
+        chars = list(full)
+        removed = 0
+        while chars and removed < 5:
+            if chars[-1] in ' \n\r\t':
+                chars.pop()
+                continue
+            if chars[-1] in '}]':
+                chars.pop()
+                removed += 1
+                continue
+            break
+        prefix = ''.join(chars)
+        closer = '}\n    ]\n  }\n}'.rjust(19)
+        self.assertEqual(len(closer), 19)
+        self.assertEqual(removed, 5)
+        stitched = prefix + closer
+        with self.assertRaises(json.JSONDecodeError):
+            json.loads(stitched)
+        closed = close_open_brackets(prefix)
+        self.assertIsNotNone(closed)
+        self.assertEqual(json.loads(closed)['records'].__len__(), 16)
+        usage = {'turns': [
+            {'finish': 'error', 'error_type': 'provider.invalid-output'},
+            {'finish': 'stop', 'cost': 0, 'cost_known': True},
+        ]}
+        events = [
+            {'type': 'step_start'},
+            {'type': 'text', 'part': {'text': prefix}},
+            {'type': 'error', 'error': {
+                'type': 'provider.invalid-output',
+                'message': 'OpenAI Chat stream ended without finish_reason'}},
+            {'type': 'step_start'},
+            {'type': 'text', 'part': {'text': closer}},
+        ]
+        note = {}
+        payload, failure = parse_model_json(
+            stitched, usage, events=events, expected_ids=ids, phase='review', note=note)
+        self.assertIsNone(failure)
+        self.assertEqual([row['record_id'] for row in payload['records']], list(ids))
+        self.assertTrue(all(isinstance(row.get('axes'), dict) and isinstance(row.get('fact_decisions'), list)
+                            for row in payload['records']))
+        self.assertTrue(note['closer_continuation_ignored'])
+        self.assertEqual(note['json_recovered_from'], 'first_turn_bracket_close')
+        via_texts = {}
+        payload_texts, failure_texts = parse_model_json(
+            stitched, {**usage, 'turn_texts': [prefix, closer]}, expected_ids=ids, phase='review', note=via_texts)
+        self.assertIsNone(failure_texts)
+        self.assertEqual(payload_texts, payload)
+        peeled = {}
+        payload_peel, failure_peel = parse_model_json(
+            stitched, usage, expected_ids=ids, phase='review', note=peeled)
+        self.assertIsNone(failure_peel)
+        self.assertEqual([row['record_id'] for row in payload_peel['records']], list(ids))
+        self.assertTrue(peeled['closer_continuation_ignored'])
+        incomplete = dict(body)
+        incomplete['records'] = body['records'][:-1]
+        incomplete_text = json.dumps(incomplete, ensure_ascii=False)
+        open_incomplete = incomplete_text[:-1]
+        bad_note = {}
+        bad_payload, bad_failure = parse_model_json(
+            open_incomplete + closer,
+            {**usage, 'turn_texts': [open_incomplete, closer]},
+            expected_ids=ids, phase='review', note=bad_note)
+        self.assertIsNone(bad_payload)
+        self.assertEqual(bad_failure, 'stream_stitch_invalid')
+        self.assertNotEqual(bad_failure, 'truncated_output')
+        self.assertFalse(bad_note)
+        unclosed = '{"records":[{"record_id":"%s","axes":{},"fact_decisions":[{"quote":"未闭合' % ids[0]
+        self.assertEqual(parse_model_json(
+            unclosed + closer, {**usage, 'turn_texts': [unclosed, closer]},
+            expected_ids=ids[:1], phase='review')[1], 'stream_stitch_invalid')
+        self.assertEqual(parse_model_json(
+            stitched, {'turns': [{'finish': 'length'}, {'finish': 'stop'}]},
+            events=events, expected_ids=ids, phase='review')[1], 'truncated_output')
+        self.assertEqual(parse_model_json('{"records":[', {'turns': []})[1], 'truncated_output')
+        self.assertEqual(parse_model_json('{"nope": 1}', {'turns': [{'finish': 'stop'}]})[1], 'provider_invalid_output')
+        partial = {'records': [body['records'][0]]}
+        parsed, kind = parse_model_json(json.dumps(partial), {'turns': [{'finish': 'stop'}]}, expected_ids=ids, phase='review')
+        self.assertIsNone(kind)
+        self.assertEqual(len(parsed['records']), 1)
+        text = json.dumps({'records': body['records'][:2]}, ensure_ascii=False)
+        cut = text.index('"fact_decisions"')
+        head, tail = text[:cut], text[cut:]
+        self.assertGreater(len(tail), 64)
+        sibling = {}
+        sibling_payload, sibling_failure = parse_model_json(
+            head + tail,
+            {'turns': usage['turns'], 'turn_texts': [head, tail]},
+            expected_ids=ids[:2], phase='review', note=sibling)
+        self.assertIsNone(sibling_failure)
+        self.assertEqual(len(sibling_payload['records']), 2)
+        self.assertFalse(sibling.get('closer_continuation_ignored', False))
+
 
 if __name__ == '__main__':
     unittest.main()

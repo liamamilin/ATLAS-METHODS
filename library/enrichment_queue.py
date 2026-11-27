@@ -215,21 +215,260 @@ def batch_review_prompt(rows):
     )
 
 
-def parse_model_json(text, usage):
+CLOSER_CONTINUATION_MAX_CHARS = 64
+_CLOSER_CHARS = set(' \t\r\n[]{}')
+
+
+def _strip_json_fence(text):
     raw = (text or '').strip()
     if raw.startswith('```'):
         raw = re.sub(r'^```(?:json)?\s*', '', raw)
         raw = re.sub(r'\s*```$', '', raw)
-    for turn in (usage or {}).get('turns') or []:
-        if isinstance(turn, dict) and turn.get('finish') == 'length':
-            return None, 'truncated_output'
+    return raw
+
+
+def _closer_only(text):
+    """A short continuation made only of brackets and whitespace. Not a new answer."""
+    if not isinstance(text, str) or text == '' or len(text) > CLOSER_CONTINUATION_MAX_CHARS:
+        return False
+    return all(ch in _CLOSER_CHARS for ch in text)
+
+
+def _stream_drop(turn):
+    """Provider stream ended without finish_reason. This is not finish=length."""
+    if not isinstance(turn, dict) or turn.get('finish') == 'length':
+        return False
+    error_type = str(turn.get('error_type') or '')
+    message = str(turn.get('error_message') or turn.get('message') or '')
+    if error_type == 'provider.invalid-output' or 'invalid-output' in error_type:
+        return True
+    return 'stream ended without finish_reason' in message
+
+
+def _usage_turns(usage):
+    return [turn for turn in (usage or {}).get('turns') or [] if isinstance(turn, dict)]
+
+
+def texts_from_events(events):
+    """Split streamed text on step and error boundaries. Deltas inside one turn stay together."""
+    groups = []
+    buf = []
+    seen = False
+
+    def flush():
+        nonlocal buf, seen
+        if seen:
+            groups.append(''.join(buf))
+        buf = []
+        seen = False
+
+    for event in events or []:
+        if not isinstance(event, dict):
+            continue
+        kind = event.get('type')
+        if kind in ('step_start', 'step-start'):
+            if seen:
+                flush()
+            seen = True
+            continue
+        if kind == 'text' and isinstance(event.get('part'), dict):
+            seen = True
+            buf.append(str(event['part'].get('text') or ''))
+            continue
+        if kind == 'error' and seen:
+            flush()
+    if seen:
+        flush()
+    return groups
+
+
+def close_open_brackets(text):
+    """Append closers for brackets still open outside strings. None if that is unsafe.
+
+    An unclosed string, a mismatched closer, or a text that is already balanced
+    returns None. The caller must not treat None as permission to invent content.
+    """
+    stack = []
+    in_string = False
+    escape = False
+    for ch in text or '':
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+            continue
+        if ch == '{':
+            stack.append('}')
+        elif ch == '[':
+            stack.append(']')
+        elif ch in '}]':
+            if not stack or stack[-1] != ch:
+                return None
+            stack.pop()
+    if in_string or escape or not stack:
+        return None
+    return text + ''.join(reversed(stack))
+
+
+def _loads_records(raw):
     try:
         payload = json.loads(raw)
     except json.JSONDecodeError:
-        return None, 'truncated_output'
+        return None
     if not isinstance(payload, dict) or not isinstance(payload.get('records'), list):
-        return None, 'provider_invalid_output'
-    return payload, None
+        return None
+    return payload
+
+
+def _row_complete(row, phase):
+    if not isinstance(row, dict) or not isinstance(row.get('record_id'), str) or not row['record_id']:
+        return False
+    if phase == 'generate':
+        return isinstance(row.get('facts'), list)
+    return isinstance(row.get('axes'), dict) and isinstance(row.get('fact_decisions'), list)
+
+
+def pack_payload_complete(payload, expected_ids, phase):
+    """True only when the payload covers this pack. A partial list is not success."""
+    if not expected_ids or not isinstance(payload, dict):
+        return False
+    records = payload.get('records')
+    if not isinstance(records, list):
+        return False
+    found = []
+    for row in records:
+        if not _row_complete(row, phase):
+            return False
+        found.append(row['record_id'])
+    expected = [record_id for record_id in expected_ids if record_id]
+    return len(found) == len(set(found)) == len(expected) and set(found) == set(expected)
+
+
+def _aligned_turn_texts(usage, events):
+    turns = _usage_turns(usage)
+    supplied = (usage or {}).get('turn_texts')
+    if isinstance(supplied, list) and supplied and all(isinstance(item, str) for item in supplied) and len(supplied) == len(turns):
+        return turns, list(supplied)
+    texts = texts_from_events(events)
+    if texts and turns and len(texts) == len(turns):
+        return turns, texts
+    return turns, None
+
+
+def _trailing_closer_limit(text):
+    limit = 0
+    for ch in reversed(text or ''):
+        if ch not in _CLOSER_CHARS:
+            break
+        limit += 1
+        if limit >= CLOSER_CONTINUATION_MAX_CHARS:
+            break
+    return limit
+
+
+def _unique_closed_payloads(prefixes, expected_ids, phase):
+    found = []
+    seen = set()
+    for prefix in prefixes:
+        closed = close_open_brackets(prefix)
+        payload = _loads_records(closed) if closed else _loads_records(prefix)
+        if not payload or not pack_payload_complete(payload, expected_ids, phase):
+            continue
+        key = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+        if key in seen:
+            continue
+        seen.add(key)
+        found.append(payload)
+    return found
+
+
+def _recover_stream_stitch(text, usage, events, expected_ids, phase):
+    """Recover a complete pack from a stream drop. None means use the stitched text as-is.
+
+    A later short closer-only turn is not treated as completing the dropped turn.
+    Ambiguous or incomplete repairs fail instead of returning a partial pack.
+    """
+    turns, texts = _aligned_turn_texts(usage, events)
+    if not any(_stream_drop(turn) for turn in turns):
+        return None, None
+    ignored_closer = False
+    if texts is not None:
+        kept = []
+        drop_seen = False
+        for turn, piece in zip(turns, texts):
+            if _stream_drop(turn):
+                drop_seen = True
+                kept.append(piece)
+                continue
+            if drop_seen and turn.get('finish') == 'stop' and _closer_only(piece):
+                ignored_closer = True
+                continue
+            kept.append(piece)
+        if not ignored_closer:
+            return None, None
+        prefixes = [_strip_json_fence(''.join(kept))]
+        source = 'first_turn_text'
+    else:
+        later_stop = any(turn.get('finish') == 'stop' for turn in turns)
+        if not later_stop:
+            return None, 'fail'
+        raw = _strip_json_fence(text)
+        if _loads_records(raw) is not None:
+            return None, None
+        limit = _trailing_closer_limit(raw)
+        if limit == 0:
+            return None, 'fail'
+        prefixes = [raw[:-k] for k in range(1, limit + 1)]
+        source = 'first_turn_bracket_close'
+        ignored_closer = True
+    payloads = _unique_closed_payloads(prefixes, expected_ids, phase)
+    if len(payloads) != 1:
+        return None, 'fail'
+    closed = close_open_brackets(prefixes[0]) if texts is not None else None
+    if texts is not None and closed and _loads_records(prefixes[0]) is None:
+        source = 'first_turn_bracket_close'
+    note = {
+        'closer_continuation_ignored': True,
+        'json_recovered_from': source,
+    }
+    if not ignored_closer:
+        return None, None
+    return payloads[0], note
+
+
+def parse_model_json(text, usage, events=None, expected_ids=None, phase=None, note=None):
+    """Parse a queue response. finish=length stays truncated_output.
+
+    JSON that fails after a provider stream drop is stream_stitch_invalid unless a
+    conservative bracket close recovers the whole pack. Parseable JSON that omits
+    ids is still returned, so the caller can mark missing_from_response.
+    """
+    raw = _strip_json_fence(text)
+    if any(turn.get('finish') == 'length' for turn in _usage_turns(usage)):
+        return None, 'truncated_output'
+    payload, status = _recover_stream_stitch(raw, usage, events, expected_ids, phase)
+    if isinstance(status, dict):
+        if isinstance(note, dict):
+            note.update(status)
+        return payload, None
+    if status == 'fail':
+        return None, 'stream_stitch_invalid'
+    parsed = _loads_records(raw)
+    if parsed is None:
+        try:
+            body = json.loads(raw)
+        except json.JSONDecodeError:
+            return None, 'truncated_output'
+        if not isinstance(body, dict) or not isinstance(body.get('records'), list):
+            return None, 'provider_invalid_output'
+        return None, 'truncated_output'
+    return parsed, None
 
 
 def _foreign_quotes(skill, pack_skills, quote):
@@ -953,7 +1192,9 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
             session_id = reply.get('session_id')
             if not text and not session_id:
                 return
-            payload, failure = parse_model_json(text, usage)
+            repair_note = {}
+            payload, failure = parse_model_json(
+                text, usage, events=reply.get('events'), expected_ids=group, phase=phase, note=repair_note)
             context = digest(prompt)
             def finish_all(kind):
                 def mutate(state):
@@ -1032,6 +1273,8 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                     'phase': phase, 'arm': arm['id'], 'ids': group, 'outcome': 'saved',
                     'cost_accounting': accounting,
                 }
+                if repair_note:
+                    event.update(repair_note)
                 if fidelity_note:
                     event['pack_fidelity_uniform'] = fidelity_note['pack_fidelity_uniform']
                     if fidelity_note['pack_fidelity_uniform']:
