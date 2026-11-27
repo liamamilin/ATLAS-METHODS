@@ -948,6 +948,29 @@ class QueueTests(unittest.TestCase):
         self.assertEqual(len(sibling_payload['records']), 2)
         self.assertFalse(sibling.get('closer_continuation_ignored', False))
 
+    def test_apply_generation_rebinds_a_summary_quote_before_review(self):
+        from enrichment import map_record
+        from enrichment_queue import apply_generation
+        summary = '公开样例的产出是一份说明。'
+        skill = {
+            'id': 'a' * 32,
+            'summary': summary,
+            'tasks': [{'position': 1, 'goal': '完成第一项任务。', 'applicability': '', 'outputs': ''}],
+        }
+        annotation = map_record(skill, skill['tasks'], source_hash='h')
+        reason = apply_generation(skill, annotation, {
+            'record_id': skill['id'],
+            'facts': [{
+                'dimension': 'kind', 'value_id': 'execution_workflow', 'role': 'mentioned',
+                'quote': summary, 'task_position': 1,
+            }],
+        }, [skill])
+        self.assertIsNone(reason)
+        item = next(row for row in annotation['facts'] if row.get('method') == 'model_generation')
+        self.assertEqual(item['scope'], {'level': 'skill'})
+        self.assertTrue(item['program_evidence'])
+        self.assertFalse(item['accepted'])
+
 
 if __name__ == '__main__':
     unittest.main()

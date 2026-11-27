@@ -959,6 +959,27 @@ def scope_supports(skill, quote, task_position):
     return task_position in positions
 
 
+def unique_quote_scope(skill, quote):
+    """One official scope for this quote, or None when it is absent or split across tasks.
+
+    A quote in the summary binds to the skill, including when tasks repeat it.
+    A quote in exactly one task and not the summary binds to that task.
+    A quote in several tasks and not the summary is not a choice this function makes.
+    """
+    if not quote or not isinstance(skill, dict):
+        return None
+    positions = []
+    for position in quote_positions(skill, quote):
+        if position not in positions:
+            positions.append(position)
+    in_summary = quote in (skill.get('summary') or '')
+    if in_summary:
+        return ('skill', None)
+    if len(positions) == 1:
+        return ('task', positions[0])
+    return None
+
+
 def program_evidence(skill, dimension, value_id, quote, task_position):
     text = supplied_text(skill)
     if not quote or quote not in text or value_id not in (value_catalog().get(dimension) or []):
@@ -1032,6 +1053,12 @@ def absorb_facts(annotation, payload, skill):
                 role = detected
                 role_status = 'corrected_from_quote'
         task_position = raw.get('task_position')
+        scope_status = 'model'
+        if value and quote_ok and not scope_supports(skill_row, quote, task_position):
+            located = unique_quote_scope(skill_row, quote)
+            if located is not None:
+                _level, task_position = located
+                scope_status = 'rebound_to_unique_location'
         evidenced = program_evidence(skill_row, dimension, value, quote, task_position) if value else False
         item = fact(
             annotation['record_id'],
@@ -1043,6 +1070,8 @@ def absorb_facts(annotation, payload, skill):
         item['value_status'] = value_status
         item['role_received'] = received_role
         item['role_status'] = role_status
+        item['scope_received'] = raw.get('task_position')
+        item['scope_status'] = scope_status
         item['proposed_value'] = proposed or None
         item['model_fact_id'] = raw.get('fact_id')
         item['program_evidence'] = evidenced

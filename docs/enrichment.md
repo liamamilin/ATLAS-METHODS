@@ -169,7 +169,7 @@ python3 library/enrichment.py rollback \
 
 字符数乘 2 是保守的估算 token，不是官方分词器，也不是字节数。共享词表只写一次。单条超长记录不截断正文：放不进预算就整条不送，记 `over_budget`。模型输出不是完整 JSON，或回合 `finish` 为 `length` 时，这一请求里的记录全部不接受。
 
-规则和封闭短语只产生候选。审核接受之前，检索看不到它们。`reject`、`unknown`、缺决定、冲突、跨记录引用都不接受。否定句上的 required 会按原文改成 prohibited，不能借 required 通过。完全相同的事实仍合并。同一 `fact_id` 而角色或作用域不同则冲突，不接受。`source_fidelity` 在摘要加任务的供给上不能保持 pass。等级 R 的 `recommend` 为 false。
+规则和封闭短语只产生候选。审核接受之前，检索看不到它们。`reject`、`unknown`、缺决定、冲突、跨记录引用都不接受。否定句上的 required 会按原文改成 prohibited，不能借 required 通过。完全相同的事实仍合并。同一 `fact_id` 而角色或作用域不同则冲突，不接受。`source_fidelity` 在摘要加任务的供给上不能保持 pass。等级 R 的 `recommend` 为 false。模型写的 `task_position` 若对不上 quote，而这句话只在摘要里、或只在一个任务里，吸收时把作用域改到那个位置，再重算 `program_evidence`。摘要里也有、任务里也有，则收到技能级。一句话落在多个任务且不在摘要里时不挑选，证据保持 false。已经对得上的作用域不改。`task_action`、`tools`、`requirements`、`side_effects` 仍要 quote 提到该值。没有审核 `accept` 不会因此被接受。`deterministic_role_phrase` 不因此多一条接受路径。生成提示不改，产量门槛不降，也不自动重跑生成。
 
 合批审核和单条审核共用同一段轴约束。轴值只有 `unknown`、`pass`、`limited`、`fail`、`not_applicable`。供给始终是摘要加任务：能核对候选就写 `limited`，只有这段供给也判断不了忠实度才写 `unknown`。供给不是全文，本身不是 `unknown`。`pass` 仍由 `finalize` 改成 `limited`。`derive_grade` 不变：在 `source_scope=summary_and_tasks` 且没有轴为 `fail` 时，只有精确的 `source_fidelity=unknown` 得到 U，其它正式非 fail 值得到 D1。缺轴仍是 D1，不改成 U。`summary_only`、`partial`、`insufficient_evidence` 以及其它未列出的词从正式 `axes` 移到 `unofficial_axes`。若被移走的是 `source_fidelity`，且没有其它轴为正式 `fail`，则不调用定级：`grade` 为 null，不是 D1 也不是 U，`model_review` 为 `axis_vocabulary_invalid`，`recommend` 为 false。现有发布只收 `model_review=completed`，因此这种审核不会进 sidecar。已有正式 `fail` 时等级仍是 R。已经落盘的生产和暂存记录不自动重判。费用、身份、halt、重试和发布条件不变。同一审核响应里至少两条记录的原始 `source_fidelity` 完全相同时，该次 ledger 事件和已审注解带上 `pack_fidelity_uniform`。这个标记不改等级。
 

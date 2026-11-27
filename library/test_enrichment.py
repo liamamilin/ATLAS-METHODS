@@ -139,6 +139,158 @@ class EnrichmentAcceptanceTests(unittest.TestCase):
         self.assertNotEqual(mapped['quality']['grade'], 'R')
 
 
+    def test_unique_quote_scope_rebinds_then_review_accept_promotes(self):
+        from enrichment import absorb_facts, finalize, quote_mentions
+        summary = '公开样例的产出是一份说明。'
+        only_task = '完成第二项任务。'
+        both = '两边任务都写了同一句。'
+        sample = {
+            'id': 'c' * 32,
+            'summary': summary,
+            'tasks': [
+                {'position': 1, 'goal': '完成第一项任务。', 'applicability': '', 'outputs': ''},
+                {'position': 2, 'goal': only_task, 'applicability': '', 'outputs': ''},
+            ],
+        }
+
+        def absorbed(raw, skill=None):
+            row = skill or sample
+            annotation = map_record(row, row['tasks'], source_hash='h')
+            absorb_facts(annotation, {'facts': [raw]}, row)
+            found = [item for item in annotation['facts'] if item.get('method') == 'model_generation']
+            self.assertEqual(len(found), 1)
+            return annotation, found[0]
+
+        def decide(annotation, item, decision):
+            payload = {'axes': {'source_fidelity': 'limited'}, 'fact_decisions': []}
+            if decision is not None:
+                payload['fact_decisions'] = [{
+                    'fact_id': item['fact_id'], 'dimension': item['dimension'],
+                    'value_id': item['value_id'], 'role': item['role'], 'quote': item['quote'],
+                    'decision': decision,
+                }]
+            finalize(annotation, payload, sample)
+            return item
+
+        annotation, item = absorbed({
+            'dimension': 'kind', 'value_id': 'execution_workflow', 'role': 'mentioned',
+            'quote': summary, 'task_position': 1,
+        })
+        self.assertEqual(item['scope'], {'level': 'skill'})
+        self.assertEqual(item['scope_status'], 'rebound_to_unique_location')
+        self.assertEqual(item['scope_received'], 1)
+        self.assertTrue(item['program_evidence'])
+        self.assertFalse(item['accepted'])
+        decide(annotation, item, 'accept')
+        self.assertTrue(item['accepted'])
+        self.assertEqual(item['review_decision'], 'accept')
+
+        rejected, rejected_item = absorbed({
+            'dimension': 'output_kind', 'value_id': 'report', 'role': 'mentioned',
+            'quote': summary, 'task_position': 9,
+        })
+        self.assertTrue(rejected_item['program_evidence'])
+        decide(rejected, rejected_item, 'reject')
+        self.assertFalse(rejected_item['accepted'])
+        self.assertEqual(rejected_item['review_decision'], 'reject')
+        unknown, unknown_item = absorbed({
+            'dimension': 'output_kind', 'value_id': 'report', 'role': 'mentioned',
+            'quote': summary, 'task_position': 9,
+        })
+        decide(unknown, unknown_item, 'unknown')
+        self.assertFalse(unknown_item['accepted'])
+        missing, missing_item = absorbed({
+            'dimension': 'kind', 'value_id': 'reference_guide', 'role': 'mentioned',
+            'quote': summary, 'task_position': 1,
+        })
+        decide(missing, missing_item, None)
+        self.assertFalse(missing_item['accepted'])
+        self.assertEqual(missing_item['review_decision'], 'unspecified')
+
+        _kept, located = absorbed({
+            'dimension': 'output_kind', 'value_id': 'document', 'role': 'mentioned',
+            'quote': only_task, 'task_position': 1,
+        })
+        self.assertEqual(located['scope'], {'level': 'task', 'task_position': 2})
+        self.assertTrue(located['program_evidence'])
+        self.assertEqual(located['scope_status'], 'rebound_to_unique_location')
+
+        shared = {
+            'id': 'd' * 32,
+            'summary': '摘要没有这句。',
+            'tasks': [
+                {'position': 1, 'goal': both, 'applicability': '', 'outputs': ''},
+                {'position': 2, 'goal': both, 'applicability': '', 'outputs': ''},
+            ],
+        }
+        _split, split = absorbed({
+            'dimension': 'kind', 'value_id': 'scaffold', 'role': 'mentioned',
+            'quote': both, 'task_position': 9,
+        }, shared)
+        self.assertEqual(split['scope'], {'level': 'task', 'task_position': 9})
+        self.assertEqual(split['scope_status'], 'model')
+        self.assertFalse(split['program_evidence'])
+
+        also = {
+            'id': 'e' * 32,
+            'summary': only_task,
+            'tasks': sample['tasks'],
+        }
+        _skill, skill_scope = absorbed({
+            'dimension': 'input_kind', 'value_id': 'text', 'role': 'mentioned',
+            'quote': only_task, 'task_position': 1,
+        }, also)
+        self.assertEqual(skill_scope['scope'], {'level': 'skill'})
+        self.assertTrue(skill_scope['program_evidence'])
+        _same, already = absorbed({
+            'dimension': 'output_kind', 'value_id': 'report', 'role': 'mentioned',
+            'quote': only_task, 'task_position': 2,
+        }, also)
+        self.assertEqual(already['scope'], {'level': 'task', 'task_position': 2})
+        self.assertEqual(already['scope_status'], 'model')
+        self.assertTrue(already['program_evidence'])
+
+        self.assertFalse(quote_mentions('task_action', 'debug', summary))
+        _action, action = absorbed({
+            'dimension': 'task_action', 'value_id': 'debug', 'role': 'required',
+            'quote': summary, 'task_position': 2,
+        })
+        self.assertEqual(action['scope'], {'level': 'skill'})
+        self.assertFalse(action['program_evidence'])
+        decide(_action, action, 'accept')
+        self.assertFalse(action['accepted'])
+
+        denied = '不要把说明只写在摘要。'
+        negative = dict(sample, summary=denied)
+        _neg, neg = absorbed({
+            'dimension': 'kind', 'value_id': 'placeholder', 'role': 'mentioned',
+            'quote': denied, 'task_position': 1,
+        }, negative)
+        self.assertEqual(neg['scope'], {'level': 'skill'})
+        self.assertFalse(neg['program_evidence'])
+
+        _invented, invented = absorbed({
+            'dimension': 'kind', 'value_id': 'not-a-real-kind', 'role': 'mentioned',
+            'quote': summary, 'task_position': 1,
+        })
+        self.assertIsNone(invented['value_id'])
+        self.assertEqual(invented['scope'], {'level': 'task', 'task_position': 1})
+        self.assertFalse(invented['program_evidence'])
+
+        seeded = map_record(sample, sample['tasks'], source_hash='h')
+        phrase = {
+            'fact_id': 'role-phrase', 'method': 'deterministic_role_phrase', 'dimension': 'tools',
+            'value_id': 'python', 'role': 'mentioned', 'quote': only_task, 'support': 'direct_explicit',
+            'scope': {'level': 'task', 'task_position': 2}, 'accepted': False, 'candidate': True,
+        }
+        seeded['facts'].append(phrase)
+        absorb_facts(seeded, {'facts': []}, sample)
+        kept_phrase = [row for row in seeded['facts'] if row.get('fact_id') == 'role-phrase']
+        self.assertEqual(kept_phrase, [phrase])
+        self.assertNotIn('program_evidence', phrase)
+        self.assertFalse(phrase['accepted'])
+
+
 class ClosedLoopTests(unittest.TestCase):
     def test_runtime_snapshot_keeps_extra_legal_topics(self):
         from enrichment import merge_runtime_allowlist
