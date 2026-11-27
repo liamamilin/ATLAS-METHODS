@@ -9,11 +9,16 @@ from pathlib import Path
 import re
 import time
 
+from taxonomy import CATEGORIES
+
 from enrichment import (
-    AXES, RULE_VERSION, TOOL_ROLES, TOOL_TAGS, catalog_lines, dedupe_identical_facts,
-    digest, fact, finalize, independent_review, map_record, parse_conditions, program_evidence,
-    source_digest, supplied_text, tool_role_from_text, value_catalog,
+    RULE_VERSION, TOOL_ROLES, TOOL_TAGS, axis_vocabulary_clause, catalog_lines,
+    dedupe_identical_facts, digest, fact, finalize, independent_review, map_record,
+    parse_conditions, program_evidence, source_digest, supplied_text, tool_role_from_text,
+    value_catalog,
 )
+
+OFFICIAL_LABELS = tuple(key for key, _label, _group, _vocabulary in CATEGORIES)
 
 QUEUE_SCHEMA = 'atlas-enrichment-queue/v0.2'
 PARENT_BASELINE = 'fcc3c7c8f6436cafebed2d49c0749fa2a0aad418'
@@ -209,26 +214,265 @@ def batch_review_prompt(rows):
         '缺 decision、unknown、reject 都不是 accept。不要把一条 record 的 quote 或 fact_id 用到另一条上。'
         '返回 JSON：records 数组，每项含 record_id、source_hash、axes、fact_decisions。'
         'fact_decisions 含 record_id、fact_id、dimension、value_id、role、quote、task_position、decision。'
-        'axes 的键是 ' + ', '.join(AXES) + '。\n'
+        + axis_vocabulary_clause() + '\n'
         + ''.join(blocks)
     )
 
 
-def parse_model_json(text, usage):
+CLOSER_CONTINUATION_MAX_CHARS = 64
+_CLOSER_CHARS = set(' \t\r\n[]{}')
+
+
+def _strip_json_fence(text):
     raw = (text or '').strip()
     if raw.startswith('```'):
         raw = re.sub(r'^```(?:json)?\s*', '', raw)
         raw = re.sub(r'\s*```$', '', raw)
-    for turn in (usage or {}).get('turns') or []:
-        if isinstance(turn, dict) and turn.get('finish') == 'length':
-            return None, 'truncated_output'
+    return raw
+
+
+def _closer_only(text):
+    """A short continuation made only of brackets and whitespace. Not a new answer."""
+    if not isinstance(text, str) or text == '' or len(text) > CLOSER_CONTINUATION_MAX_CHARS:
+        return False
+    return all(ch in _CLOSER_CHARS for ch in text)
+
+
+def _stream_drop(turn):
+    """Provider stream ended without finish_reason. This is not finish=length."""
+    if not isinstance(turn, dict) or turn.get('finish') == 'length':
+        return False
+    error_type = str(turn.get('error_type') or '')
+    message = str(turn.get('error_message') or turn.get('message') or '')
+    if error_type == 'provider.invalid-output' or 'invalid-output' in error_type:
+        return True
+    return 'stream ended without finish_reason' in message
+
+
+def _usage_turns(usage):
+    return [turn for turn in (usage or {}).get('turns') or [] if isinstance(turn, dict)]
+
+
+def texts_from_events(events):
+    """Split streamed text on step and error boundaries. Deltas inside one turn stay together."""
+    groups = []
+    buf = []
+    seen = False
+
+    def flush():
+        nonlocal buf, seen
+        if seen:
+            groups.append(''.join(buf))
+        buf = []
+        seen = False
+
+    for event in events or []:
+        if not isinstance(event, dict):
+            continue
+        kind = event.get('type')
+        if kind in ('step_start', 'step-start'):
+            if seen:
+                flush()
+            seen = True
+            continue
+        if kind == 'text' and isinstance(event.get('part'), dict):
+            seen = True
+            buf.append(str(event['part'].get('text') or ''))
+            continue
+        if kind == 'error' and seen:
+            flush()
+    if seen:
+        flush()
+    return groups
+
+
+def close_open_brackets(text):
+    """Append closers for brackets still open outside strings. None if that is unsafe.
+
+    An unclosed string, a mismatched closer, or a text that is already balanced
+    returns None. The caller must not treat None as permission to invent content.
+    """
+    stack = []
+    in_string = False
+    escape = False
+    for ch in text or '':
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+            continue
+        if ch == '{':
+            stack.append('}')
+        elif ch == '[':
+            stack.append(']')
+        elif ch in '}]':
+            if not stack or stack[-1] != ch:
+                return None
+            stack.pop()
+    if in_string or escape or not stack:
+        return None
+    return text + ''.join(reversed(stack))
+
+
+def _loads_records(raw):
     try:
         payload = json.loads(raw)
     except json.JSONDecodeError:
-        return None, 'truncated_output'
+        return None
     if not isinstance(payload, dict) or not isinstance(payload.get('records'), list):
-        return None, 'provider_invalid_output'
-    return payload, None
+        return None
+    return payload
+
+
+def _row_complete(row, phase):
+    if not isinstance(row, dict) or not isinstance(row.get('record_id'), str) or not row['record_id']:
+        return False
+    if phase == 'generate':
+        return isinstance(row.get('facts'), list)
+    return isinstance(row.get('axes'), dict) and isinstance(row.get('fact_decisions'), list)
+
+
+def pack_payload_complete(payload, expected_ids, phase):
+    """True only when the payload covers this pack. A partial list is not success."""
+    if not expected_ids or not isinstance(payload, dict):
+        return False
+    records = payload.get('records')
+    if not isinstance(records, list):
+        return False
+    found = []
+    for row in records:
+        if not _row_complete(row, phase):
+            return False
+        found.append(row['record_id'])
+    expected = [record_id for record_id in expected_ids if record_id]
+    return len(found) == len(set(found)) == len(expected) and set(found) == set(expected)
+
+
+def _aligned_turn_texts(usage, events):
+    turns = _usage_turns(usage)
+    supplied = (usage or {}).get('turn_texts')
+    if isinstance(supplied, list) and supplied and all(isinstance(item, str) for item in supplied) and len(supplied) == len(turns):
+        return turns, list(supplied)
+    texts = texts_from_events(events)
+    if texts and turns and len(texts) == len(turns):
+        return turns, texts
+    return turns, None
+
+
+def _trailing_closer_limit(text):
+    limit = 0
+    for ch in reversed(text or ''):
+        if ch not in _CLOSER_CHARS:
+            break
+        limit += 1
+        if limit >= CLOSER_CONTINUATION_MAX_CHARS:
+            break
+    return limit
+
+
+def _unique_closed_payloads(prefixes, expected_ids, phase):
+    found = []
+    seen = set()
+    for prefix in prefixes:
+        closed = close_open_brackets(prefix)
+        payload = _loads_records(closed) if closed else _loads_records(prefix)
+        if not payload or not pack_payload_complete(payload, expected_ids, phase):
+            continue
+        key = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+        if key in seen:
+            continue
+        seen.add(key)
+        found.append(payload)
+    return found
+
+
+def _recover_stream_stitch(text, usage, events, expected_ids, phase):
+    """Recover a complete pack from a stream drop. None means use the stitched text as-is.
+
+    A later short closer-only turn is not treated as completing the dropped turn.
+    Ambiguous or incomplete repairs fail instead of returning a partial pack.
+    """
+    turns, texts = _aligned_turn_texts(usage, events)
+    if not any(_stream_drop(turn) for turn in turns):
+        return None, None
+    ignored_closer = False
+    if texts is not None:
+        kept = []
+        drop_seen = False
+        for turn, piece in zip(turns, texts):
+            if _stream_drop(turn):
+                drop_seen = True
+                kept.append(piece)
+                continue
+            if drop_seen and turn.get('finish') == 'stop' and _closer_only(piece):
+                ignored_closer = True
+                continue
+            kept.append(piece)
+        if not ignored_closer:
+            return None, None
+        prefixes = [_strip_json_fence(''.join(kept))]
+        source = 'first_turn_text'
+    else:
+        later_stop = any(turn.get('finish') == 'stop' for turn in turns)
+        if not later_stop:
+            return None, 'fail'
+        raw = _strip_json_fence(text)
+        if _loads_records(raw) is not None:
+            return None, None
+        limit = _trailing_closer_limit(raw)
+        if limit == 0:
+            return None, 'fail'
+        prefixes = [raw[:-k] for k in range(1, limit + 1)]
+        source = 'first_turn_bracket_close'
+        ignored_closer = True
+    payloads = _unique_closed_payloads(prefixes, expected_ids, phase)
+    if len(payloads) != 1:
+        return None, 'fail'
+    closed = close_open_brackets(prefixes[0]) if texts is not None else None
+    if texts is not None and closed and _loads_records(prefixes[0]) is None:
+        source = 'first_turn_bracket_close'
+    note = {
+        'closer_continuation_ignored': True,
+        'json_recovered_from': source,
+    }
+    if not ignored_closer:
+        return None, None
+    return payloads[0], note
+
+
+def parse_model_json(text, usage, events=None, expected_ids=None, phase=None, note=None):
+    """Parse a queue response. finish=length stays truncated_output.
+
+    JSON that fails after a provider stream drop is stream_stitch_invalid unless a
+    conservative bracket close recovers the whole pack. Parseable JSON that omits
+    ids is still returned, so the caller can mark missing_from_response.
+    """
+    raw = _strip_json_fence(text)
+    if any(turn.get('finish') == 'length' for turn in _usage_turns(usage)):
+        return None, 'truncated_output'
+    payload, status = _recover_stream_stitch(raw, usage, events, expected_ids, phase)
+    if isinstance(status, dict):
+        if isinstance(note, dict):
+            note.update(status)
+        return payload, None
+    if status == 'fail':
+        return None, 'stream_stitch_invalid'
+    parsed = _loads_records(raw)
+    if parsed is None:
+        try:
+            body = json.loads(raw)
+        except json.JSONDecodeError:
+            return None, 'truncated_output'
+        if not isinstance(body, dict) or not isinstance(body.get('records'), list):
+            return None, 'provider_invalid_output'
+        return None, 'truncated_output'
+    return parsed, None
 
 
 def _foreign_quotes(skill, pack_skills, quote):
@@ -287,6 +531,49 @@ def apply_generation(skill, annotation, element, pack_skills):
     return None
 
 
+def pack_fidelity_note(values):
+    """Whether every member of a review pack carried the same raw source_fidelity.
+
+    Items are ('present', token), ('missing',), or ('absent',). Fewer than two
+    members is not a pack signal. This note is not a grade.
+    """
+    if len(values) < 2 or any(not item or item[0] not in ('present', 'missing', 'absent') for item in values):
+        return {'pack_fidelity_uniform': False}
+    uniform = all(item == values[0] for item in values)
+    note = {'pack_fidelity_uniform': uniform}
+    if uniform:
+        note['pack_fidelity_value'] = values[0][1] if values[0][0] == 'present' else None
+    return note
+
+
+def review_pack_fidelity_note(record_ids, by_record):
+    values = []
+    for record_id in record_ids:
+        element = by_record.get(record_id)
+        if not isinstance(element, dict):
+            values.append(('absent',))
+            continue
+        axes = element.get('axes') if isinstance(element.get('axes'), dict) else {}
+        if 'source_fidelity' in axes:
+            values.append(('present', axes.get('source_fidelity')))
+        else:
+            values.append(('missing',))
+    return pack_fidelity_note(values)
+
+
+def attach_pack_fidelity(annotation, note):
+    """Copy a pack fidelity flag onto an annotation. Grade is left as it is."""
+    if not isinstance(annotation, dict) or not isinstance(note, dict):
+        return annotation
+    quality = annotation.setdefault('quality', {})
+    quality['pack_fidelity_uniform'] = bool(note.get('pack_fidelity_uniform'))
+    if note.get('pack_fidelity_uniform'):
+        quality['pack_fidelity_value'] = note.get('pack_fidelity_value')
+    else:
+        quality.pop('pack_fidelity_value', None)
+    return annotation
+
+
 def apply_review(skill, annotation, element, generation_session, review_session, review_context):
     if not isinstance(element, dict):
         return annotation, 'provider_invalid_output'
@@ -320,7 +607,10 @@ def apply_review(skill, annotation, element, generation_session, review_session,
         decisions.append(row)
     finalize(annotation, {'axes': element.get('axes') or {}, 'fact_decisions': decisions}, skill)
     grade = (annotation.get('quality') or {}).get('grade')
-    annotation['quality']['recommend'] = grade != 'R'
+    if annotation['quality'].get('model_review') != 'completed':
+        annotation['quality']['recommend'] = False
+    else:
+        annotation['quality']['recommend'] = grade != 'R'
     annotation['quality']['review_session_id'] = review_session
     annotation['quality']['generation_session_id'] = generation_session.get('session_id')
     for item in annotation.get('facts') or []:
@@ -439,7 +729,61 @@ def fit_budget(dev_costs, heldout_costs, control_requests, cap):
     }
 
 
-def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids, caps, fee_policy, benchmark):
+def plan_label_packs(records, *, excluded=(), will_not_retry=(), max_packs=None, record_cap=HARD_MAX_RECORDS):
+    """One eligible record from each label that still has one. No placeholder for a missing label.
+
+    Sixteen labels with eligibles still make packs of 16. A label with none left drops out of
+    the pack, and the pack width becomes the number of labels that remain. Excluded ids and
+    will_not_retry ids are not eligible. Yield floors are not decided here.
+    """
+    blocked = set(excluded or ()) | set(will_not_retry or ())
+    buckets = {label: [] for label in OFFICIAL_LABELS}
+    seen = set()
+    for row in records or []:
+        if not isinstance(row, dict):
+            continue
+        record_id = row.get('id')
+        if not isinstance(record_id, str) or not record_id or record_id in seen:
+            continue
+        seen.add(record_id)
+        if record_id in blocked:
+            continue
+        label = row.get('category')
+        if label not in buckets:
+            continue
+        buckets[label].append(record_id)
+    for label in OFFICIAL_LABELS:
+        buckets[label].sort()
+    active = [label for label in OFFICIAL_LABELS if buckets[label]]
+    exhausted = [label for label in OFFICIAL_LABELS if label not in active]
+    width = len(active)
+    available = min((len(buckets[label]) for label in active), default=0)
+    if max_packs is not None:
+        available = min(available, max(0, int(max_packs)))
+    if record_cap is not None and width:
+        available = min(available, max(0, int(record_cap)) // width)
+    packs = []
+    for index in range(available):
+        packs.append([buckets[label][index] for label in active])
+    selected = [record_id for pack in packs for record_id in pack]
+    ready = bool(packs)
+    return {
+        'ready_to_execute': ready,
+        'failure': None if ready else 'no_complete_packs',
+        'packs': packs,
+        'selected': selected,
+        'pack_size': width if ready else 0,
+        'packs_formed': len(packs),
+        'packs_of_16': len(packs) if width == len(OFFICIAL_LABELS) and ready else 0,
+        'active_labels': active if ready else [],
+        'exhausted_labels': exhausted,
+        'excluded_ids_selected': [record_id for record_id in selected if record_id in blocked],
+        'pack_omits_exhausted_labels': True,
+        'yield_floors_unchanged': True,
+    }
+
+
+def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids, caps, fee_policy, benchmark, label_pack=None):
     ids = [skill['id'] for skill in skills]
     by_id = {skill['id']: skill for skill in skills}
     if benchmark:
@@ -472,7 +816,7 @@ def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids
         'token_estimate': TOKEN_ESTIMATE,
         'bytes_are_not_tokens': True,
         'manifest_count_is_not_request_count': True,
-        'grouping': 'manifest_order_not_embedding',
+        'grouping': 'one_eligible_per_active_label' if label_pack else 'manifest_order_not_embedding',
         'fee_policy': fee_policy,
         'caps': sealed_caps,
         'ids': ids,
@@ -488,6 +832,8 @@ def build_plan(skills, *, batch_sizes, control_ids, development_ids, holdout_ids
         'old_run_is_not_continued': True,
         'preparation_file_is_not_executable': True,
     }
+    if label_pack:
+        payload['label_pack'] = label_pack
     payload['sha256'] = digest({key: value for key, value in payload.items() if key != 'sha256'})
     return payload
 
@@ -906,7 +1252,9 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
             session_id = reply.get('session_id')
             if not text and not session_id:
                 return
-            payload, failure = parse_model_json(text, usage)
+            repair_note = {}
+            payload, failure = parse_model_json(
+                text, usage, events=reply.get('events'), expected_ids=group, phase=phase, note=repair_note)
             context = digest(prompt)
             def finish_all(kind):
                 def mutate(state):
@@ -928,6 +1276,7 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
             for element in payload.get('records') or []:
                 if isinstance(element, dict) and element.get('record_id'):
                     by_record.setdefault(element['record_id'], element)
+            fidelity_note = review_pack_fidelity_note(group, by_record) if phase == 'review' else None
             def mutate(state):
                 for skill in pack:
                     element = by_record.get(skill['id'])
@@ -971,6 +1320,8 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                                 'turns': turns, 'cost_accounting': accounting,
                             })
                             continue
+                        if fidelity_note:
+                            attach_pack_fidelity(reviewed, fidelity_note)
                         _put(state, plan, arm, skill, {
                             'phase': 'reviewed', 'will_not_retry': False, 'source_hash': source_digest(skill),
                             'arm': arm['id'], 'annotation': reviewed, 'session_id': session_id,
@@ -978,10 +1329,17 @@ def execute_queue(client, plan, skills, ledger, out, *, resume=False, workers=No
                             'cost_accounting': accounting, 'fee_proven': accounting == 'verified_zero',
                             'turns': turns,
                         })
-                state.setdefault('events', []).append({
+                event = {
                     'phase': phase, 'arm': arm['id'], 'ids': group, 'outcome': 'saved',
                     'cost_accounting': accounting,
-                })
+                }
+                if repair_note:
+                    event.update(repair_note)
+                if fidelity_note:
+                    event['pack_fidelity_uniform'] = fidelity_note['pack_fidelity_uniform']
+                    if fidelity_note['pack_fidelity_uniform']:
+                        event['pack_fidelity_value'] = fidelity_note.get('pack_fidelity_value')
+                state.setdefault('events', []).append(event)
                 return None
             ledger.update(mutate)
 

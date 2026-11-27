@@ -30,6 +30,7 @@ AXES = (
     'source_fidelity', 'structural_completeness', 'actionability',
     'limitations_and_risks', 'classification_and_tag_fit',
 )
+AXIS_VALUES = ('unknown', 'pass', 'limited', 'fail', 'not_applicable')
 STRONG_ROLES = {'required', 'conditional'}
 ALIASES = {
     'postgres': 'postgresql', 'postgresql': 'postgresql', 'google sheets': 'gsheets',
@@ -958,6 +959,27 @@ def scope_supports(skill, quote, task_position):
     return task_position in positions
 
 
+def unique_quote_scope(skill, quote):
+    """One official scope for this quote, or None when it is absent or split across tasks.
+
+    A quote in the summary binds to the skill, including when tasks repeat it.
+    A quote in exactly one task and not the summary binds to that task.
+    A quote in several tasks and not the summary is not a choice this function makes.
+    """
+    if not quote or not isinstance(skill, dict):
+        return None
+    positions = []
+    for position in quote_positions(skill, quote):
+        if position not in positions:
+            positions.append(position)
+    in_summary = quote in (skill.get('summary') or '')
+    if in_summary:
+        return ('skill', None)
+    if len(positions) == 1:
+        return ('task', positions[0])
+    return None
+
+
 def program_evidence(skill, dimension, value_id, quote, task_position):
     text = supplied_text(skill)
     if not quote or quote not in text or value_id not in (value_catalog().get(dimension) or []):
@@ -1031,6 +1053,12 @@ def absorb_facts(annotation, payload, skill):
                 role = detected
                 role_status = 'corrected_from_quote'
         task_position = raw.get('task_position')
+        scope_status = 'model'
+        if value and quote_ok and not scope_supports(skill_row, quote, task_position):
+            located = unique_quote_scope(skill_row, quote)
+            if located is not None:
+                _level, task_position = located
+                scope_status = 'rebound_to_unique_location'
         evidenced = program_evidence(skill_row, dimension, value, quote, task_position) if value else False
         item = fact(
             annotation['record_id'],
@@ -1042,6 +1070,8 @@ def absorb_facts(annotation, payload, skill):
         item['value_status'] = value_status
         item['role_received'] = received_role
         item['role_status'] = role_status
+        item['scope_received'] = raw.get('task_position')
+        item['scope_status'] = scope_status
         item['proposed_value'] = proposed or None
         item['model_fact_id'] = raw.get('fact_id')
         item['program_evidence'] = evidenced
@@ -1248,6 +1278,38 @@ def enforce_acceptance_invariant(annotation):
     return annotation
 
 
+def partition_review_axes(axes):
+    """Keep official axis tokens. Any other value on an axis key is unofficial.
+
+    Side fields such as source_fidelity_reason stay with the official dict.
+    A missing axis key is not unofficial; only a present non-token is.
+    """
+    official = {}
+    unofficial = {}
+    for key, value in axes.items():
+        if key not in AXES or value in AXIS_VALUES:
+            official[key] = value
+        else:
+            unofficial[key] = value
+    return official, unofficial
+
+
+def axis_vocabulary_clause():
+    """Legal axis values, shared by the single-record and batch review prompts.
+
+    Summary-plus-tasks is the whole supply. That scope is limited, not unknown.
+    """
+    return (
+        'axes 的键是 ' + ', '.join(AXES)
+        + '，值只能是 unknown、pass、limited、fail、not_applicable。'
+        '不要写 summary_only、partial、insufficient_evidence，或其它没有列出的词。'
+        '供给始终是 summary 和 tasks，所以 source_fidelity 不能写 pass。'
+        '能用这段摘要和任务核对候选时，source_fidelity 写 limited：限制来自供给只有摘要和任务，判断本身做得到。'
+        '只有这段摘要和任务也不足以判断忠实度时，source_fidelity 才写 unknown，例如引用对不上供给，或主张含糊到无法比较。'
+        '不要因为供给不是全文，就把 source_fidelity 写成 unknown。'
+    )
+
+
 def finalize(annotation, payload, skill):
     """The only place a model fact becomes accepted. Mapping a value is not acceptance."""
     dedupe_identical_facts(annotation)
@@ -1299,14 +1361,31 @@ def finalize(annotation, payload, skill):
             item['candidate'] = True
             item.pop('accepted_by', None)
     enforce_acceptance_invariant(annotation)
-    grade = derive_grade({
-        'independent': True, 'source_scope': 'summary_and_tasks', 'axes': axes,
-        'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+    official_axes, unofficial_axes = partition_review_axes(axes)
+    official_fail = any(official_axes.get(axis) == 'fail' for axis in AXES)
+    fidelity_unofficial = 'source_fidelity' in unofficial_axes
+    # derive_grade still maps exact source_fidelity unknown to U and every other
+    # non-fail fidelity token to D1. Unofficial fidelity never reaches that branch,
+    # unless an official fail already decides R.
+    if fidelity_unofficial and not official_fail:
+        grade = {'grade': None}
+        model_review = 'axis_vocabulary_invalid'
+    else:
+        grade = derive_grade({
+            'independent': True, 'source_scope': 'summary_and_tasks', 'axes': official_axes,
+            'na_evidence': {}, 'diversity': 'same_model_new_session'}, [])
+        model_review = 'completed'
     annotation['quality'] = {
-        'grade': grade['grade'], 'model_review': 'completed', 'execution': 'not_run',
+        'grade': grade['grade'], 'model_review': model_review, 'execution': 'not_run',
         'diversity': 'same_model_new_session', 'source_scope': 'summary_and_tasks',
-        'rule_version': RULE_VERSION, 'axes': axes,
+        'rule_version': RULE_VERSION, 'axes': official_axes,
     }
+    if unofficial_axes:
+        annotation['quality']['unofficial_axes'] = unofficial_axes
+        annotation['quality']['axis_vocabulary'] = 'unofficial'
+    if fidelity_unofficial and not official_fail:
+        annotation['quality']['grade_withheld_reason'] = 'unofficial_source_fidelity'
+        annotation['quality']['recommend'] = False
     annotation['fingerprint'] = digest({
         'record_id': annotation['record_id'], 'rule_version': RULE_VERSION,
         'accepted': [item['fact_id'] for item in annotation['facts'] if item.get('accepted')],
@@ -1709,9 +1788,9 @@ def review_prompt(skill, annotation):
         '独立审核这些候选。只看下面的摘要、任务和候选的 value_id、role、scope、quote。'
         '不要沿用生成会话，不要看生成者的推理。供给只有 summary 和 tasks，source_fidelity 不能写成 pass。'
         '无 quote、引用不在供给里、value_id 不在词表、引用属于另一个任务，或把否定句当成 required 的，decision 写 reject。'
-        '证据不够就写 unknown，不要因为其它轴通过就接受全部候选。'
-        '返回 JSON：axes 的键是 ' + ', '.join(AXES) + '，值只能是 unknown、pass、limited、fail、not_applicable。'
-        'fact_decisions 的每一项含 fact_id、dimension、value_id、role、quote、task_position、decision。'
+        '某一条候选证据不够时，这条 fact 的 decision 写 unknown，不要因为其它轴通过就接受全部候选。'
+        '返回 JSON：' + axis_vocabulary_clause()
+        + 'fact_decisions 的每一项含 fact_id、dimension、value_id、role、quote、task_position、decision。'
         'decision 只能是 accept、reject、unknown。只有 decision 为 accept 的那一条会进入可筛选值；unknown 保持候选。\n'
         + json.dumps({
             'source_scope': 'summary_and_tasks', 'source': supplied_text(skill), 'candidates': visible,
@@ -2001,7 +2080,11 @@ def run(argv=None):
     parser.add_argument('--manifest', type=Path, help='Manifest file written by the manifest command. run selects these ids in input order and checks source_hash before any model call')
     parser.add_argument('--ids', help='Comma-separated record ids in the order to keep, 1 to 48. Used by manifest and pilot. run does not accept this')
     parser.add_argument('--run', action='append', default=[], help='Finished run directory. Repeat once per slice. Used by publish')
-    parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out. The source run directory is not modified')
+    parser.add_argument('--exclude', default='', help='Comma-separated record ids publish must leave out, and label-pack planning must not select. The source run directory is not modified')
+    parser.add_argument('--exclude-file', type=Path, help='More record ids label-pack planning must not select, comma or newline separated')
+    parser.add_argument('--will-not-retry-file', type=Path, help='Record ids already marked will_not_retry. Label-pack planning does not select them and does not retry them')
+    parser.add_argument('--by-label', action='store_true', help='queue plan only. One eligible record from each official label that still has one. A missing label is omitted, not filled')
+    parser.add_argument('--max-packs', type=int, default=None, help='queue plan --by-label only. Cap the number of complete label packs')
     parser.add_argument('--resume-provider-invalid', action='store_true', help='Clear a provider invalid-output stop after saved turns pass the tool, identity, and nonzero checks. Error rows are not retried')
     parser.add_argument('--action', choices=('plan', 'validate', 'execute', 'resume', 'status', 'preview', 'select'),
                         help='queue only. plan seals 8/16/32 packing. validate checks it. execute and resume share one ledger across arms and phases. status reads it. preview writes 0. Hard caps: 80 model-run requests, 100 assistant turns, 2700 seconds, 10 in flight. Characters times 2 are estimated tokens, not a tokenizer and not bytes.')
@@ -2129,10 +2212,68 @@ def run(argv=None):
     if args.command == 'queue':
         from enrichment_queue import (
             HARD_MAX_RECORDS, Ledger, build_benchmark_plan, build_plan, execute_queue, load_plan,
-            load_queue_ids, parse_id_list, project_run_dir, queue_status, select_benchmark, validate_plan,
+            load_queue_ids, parse_id_list, plan_label_packs, project_run_dir, queue_status,
+            select_benchmark, validate_plan,
         )
         if args.action is None:
             raise SystemExit('queue needs --action plan, validate, execute, resume, status, preview, or select')
+        if args.action == 'plan' and args.by_label:
+            if args.ids or args.ids_file or args.benchmark or args.dev_manifest:
+                raise SystemExit('label packs do not take explicit ids or a benchmark manifest')
+            if not args.database:
+                raise SystemExit('label packs need --database')
+            connection = connect_readonly(args.database)
+            try:
+                rows = [{'id': row['id'], 'category': row['category']} for row in connection.execute('SELECT id, category FROM skills')]
+            finally:
+                connection.close()
+            excluded = parse_id_list(args.exclude)
+            if args.exclude_file:
+                excluded.extend(parse_id_list(args.exclude_file.read_text(encoding='utf-8')))
+            withheld = []
+            if args.will_not_retry_file:
+                withheld.extend(parse_id_list(args.will_not_retry_file.read_text(encoding='utf-8')))
+            choice = plan_label_packs(rows, excluded=excluded, will_not_retry=withheld, max_packs=args.max_packs)
+            if not choice['ready_to_execute']:
+                report = {
+                    'calls_model': False, 'production_publish': False, 'sealed_plan': False,
+                    'ready_to_execute': False, 'failure': choice['failure'],
+                    'selected': [], 'packs': [], 'exhausted_labels': choice['exhausted_labels'],
+                    'yield_floors_unchanged': True,
+                }
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                print(json.dumps(report, ensure_ascii=False, indent=2))
+                return 2
+            skills = load_queue_ids(args.database, choice['selected'])
+            caps = {
+                'cli_requests': args.max_requests if args.max_requests is not None else 80,
+                'actual_turns': args.max_turns if args.max_turns is not None else 100,
+                'runtime_seconds': args.max_runtime_seconds if args.max_runtime_seconds is not None else 2700,
+                'in_flight': min(10, max(1, args.workers)),
+            }
+            plan = build_plan(
+                skills, batch_sizes=(choice['pack_size'],),
+                control_ids=[], development_ids=[], holdout_ids=[],
+                caps=caps, fee_policy=args.cost_policy, benchmark=False,
+                label_pack={
+                    'pack_size': choice['pack_size'], 'packs_formed': choice['packs_formed'],
+                    'packs_of_16': choice['packs_of_16'], 'active_labels': choice['active_labels'],
+                    'exhausted_labels': choice['exhausted_labels'], 'packs': choice['packs'],
+                    'excluded_ids_selected': choice['excluded_ids_selected'],
+                    'yield_floors_unchanged': True,
+                },
+            )
+            args.out.parent.mkdir(parents=True, exist_ok=True)
+            args.out.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+            print(json.dumps({
+                'calls_model': False, 'production_publish': False, 'sealed_plan': True,
+                'ready_to_execute': True, 'out': str(args.out), 'sha256': plan['sha256'],
+                'pack_size': choice['pack_size'], 'packs_formed': choice['packs_formed'],
+                'packs_of_16': choice['packs_of_16'], 'selected': len(choice['selected']),
+                'exhausted_labels': choice['exhausted_labels'], 'yield_floors_unchanged': True,
+            }, ensure_ascii=False, indent=2))
+            return 0
         if args.action == 'plan':
             if args.benchmark or args.dev_manifest or args.heldout_manifest or args.control_manifest:
                 if not (args.dev_manifest and args.heldout_manifest and args.control_manifest and args.database):

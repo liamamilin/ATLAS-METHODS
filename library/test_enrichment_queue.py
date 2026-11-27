@@ -783,6 +783,308 @@ class QueueTests(unittest.TestCase):
             self.assertEqual(stopped.calls, 1)
             self.assertEqual(stopped.price_checks, 1)
 
+    def test_batch_prompt_lists_axis_values_and_pack_flag_is_not_a_grade(self):
+        from enrichment import AXIS_VALUES, axis_vocabulary_clause, review_prompt
+        from enrichment_queue import (
+            apply_review, attach_pack_fidelity, batch_review_prompt, pack_fidelity_note,
+            review_pack_fidelity_note,
+        )
+        clause = axis_vocabulary_clause()
+        self.assertIn('unknown、pass、limited、fail、not_applicable', clause)
+        self.assertIn('summary_only', clause)
+        self.assertIn('partial', clause)
+        self.assertIn('insufficient_evidence', clause)
+        self.assertIn('写 limited', clause)
+        self.assertIn('才写 unknown', clause)
+        self.assertIn('不要因为供给不是全文', clause)
+        for value in AXIS_VALUES:
+            self.assertIn(value, clause)
+        sample = {
+            'id': 'a' * 32, 'summary': '公开样例摘要。',
+            'tasks': [{'position': 1, 'goal': '完成这项公开样例。', 'applicability': '', 'outputs': ''}],
+        }
+        other = {
+            'id': 'b' * 32, 'summary': '另一条公开样例。',
+            'tasks': [{'position': 1, 'goal': '完成另一项公开样例。', 'applicability': '', 'outputs': ''}],
+        }
+        batch = batch_review_prompt([(sample, {'facts': []}), (other, {'facts': []})])
+        single = review_prompt(sample, {'facts': []})
+        self.assertIn(clause, batch)
+        self.assertIn(clause, single)
+        self.assertIn('不能写 pass', batch)
+        uniform = pack_fidelity_note([('present', 'unknown'), ('present', 'unknown')])
+        self.assertTrue(uniform['pack_fidelity_uniform'])
+        self.assertEqual(uniform['pack_fidelity_value'], 'unknown')
+        self.assertFalse(pack_fidelity_note([('present', 'unknown'), ('present', 'limited')])['pack_fidelity_uniform'])
+        self.assertFalse(pack_fidelity_note([('present', 'limited')])['pack_fidelity_uniform'])
+        self.assertFalse(pack_fidelity_note([('present', 'unknown'), ('absent',)])['pack_fidelity_uniform'])
+        packed = review_pack_fidelity_note([sample['id'], other['id']], {
+            sample['id']: {'axes': {'source_fidelity': 'summary_only'}},
+            other['id']: {'axes': {'source_fidelity': 'summary_only'}},
+        })
+        self.assertEqual(packed['pack_fidelity_value'], 'summary_only')
+        stamped = {'quality': {'grade': 'D1', 'axes': {'source_fidelity': 'limited'}}}
+        attach_pack_fidelity(stamped, uniform)
+        self.assertEqual(stamped['quality']['grade'], 'D1')
+        self.assertEqual(stamped['quality']['axes']['source_fidelity'], 'limited')
+        self.assertTrue(stamped['quality']['pack_fidelity_uniform'])
+        self.assertEqual(stamped['quality']['pack_fidelity_value'], 'unknown')
+        reviewed, reason = apply_review(
+            sample, {'facts': [], 'record_id': sample['id'], 'source_hash': 'h'},
+            {'record_id': sample['id'], 'axes': {'source_fidelity': 'insufficient_evidence'}, 'fact_decisions': []},
+            {'session_id': 'generation-session', 'context_hash': 'generation-context'},
+            'review-session', 'review-context')
+        self.assertIsNone(reason)
+        self.assertIsNone(reviewed['quality']['grade'])
+        self.assertNotEqual(reviewed['quality']['grade'], 'D1')
+        self.assertNotEqual(reviewed['quality']['grade'], 'U')
+        self.assertEqual(reviewed['quality']['model_review'], 'axis_vocabulary_invalid')
+        self.assertFalse(reviewed['quality']['recommend'])
+        self.assertEqual(reviewed['quality']['unofficial_axes']['source_fidelity'], 'insufficient_evidence')
+        graded = {'quality': {'grade': 'U', 'model_review': 'completed', 'axes': {'source_fidelity': 'unknown'}}}
+        attach_pack_fidelity(graded, uniform)
+        self.assertEqual(graded['quality']['grade'], 'U')
+
+    def test_stream_drop_closer_does_not_discard_a_complete_pack(self):
+        from enrichment_queue import close_open_brackets, parse_model_json
+        ids = tuple(f'{index:032x}' for index in range(16))
+        body = {'records': [{
+            'record_id': record_id,
+            'source_hash': 'ab' * 32,
+            'axes': {'source_fidelity': 'limited'},
+            'fact_decisions': [{'decision': 'reject', 'quote': '样例}括号'}],
+        } for record_id in ids]}
+        full = json.dumps(body, ensure_ascii=False, indent=2)
+        chars = list(full)
+        removed = 0
+        while chars and removed < 5:
+            if chars[-1] in ' \n\r\t':
+                chars.pop()
+                continue
+            if chars[-1] in '}]':
+                chars.pop()
+                removed += 1
+                continue
+            break
+        prefix = ''.join(chars)
+        closer = '}\n    ]\n  }\n}'.rjust(19)
+        self.assertEqual(len(closer), 19)
+        self.assertEqual(removed, 5)
+        stitched = prefix + closer
+        with self.assertRaises(json.JSONDecodeError):
+            json.loads(stitched)
+        closed = close_open_brackets(prefix)
+        self.assertIsNotNone(closed)
+        self.assertEqual(json.loads(closed)['records'].__len__(), 16)
+        usage = {'turns': [
+            {'finish': 'error', 'error_type': 'provider.invalid-output'},
+            {'finish': 'stop', 'cost': 0, 'cost_known': True},
+        ]}
+        events = [
+            {'type': 'step_start'},
+            {'type': 'text', 'part': {'text': prefix}},
+            {'type': 'error', 'error': {
+                'type': 'provider.invalid-output',
+                'message': 'OpenAI Chat stream ended without finish_reason'}},
+            {'type': 'step_start'},
+            {'type': 'text', 'part': {'text': closer}},
+        ]
+        note = {}
+        payload, failure = parse_model_json(
+            stitched, usage, events=events, expected_ids=ids, phase='review', note=note)
+        self.assertIsNone(failure)
+        self.assertEqual([row['record_id'] for row in payload['records']], list(ids))
+        self.assertTrue(all(isinstance(row.get('axes'), dict) and isinstance(row.get('fact_decisions'), list)
+                            for row in payload['records']))
+        self.assertTrue(note['closer_continuation_ignored'])
+        self.assertEqual(note['json_recovered_from'], 'first_turn_bracket_close')
+        via_texts = {}
+        payload_texts, failure_texts = parse_model_json(
+            stitched, {**usage, 'turn_texts': [prefix, closer]}, expected_ids=ids, phase='review', note=via_texts)
+        self.assertIsNone(failure_texts)
+        self.assertEqual(payload_texts, payload)
+        peeled = {}
+        payload_peel, failure_peel = parse_model_json(
+            stitched, usage, expected_ids=ids, phase='review', note=peeled)
+        self.assertIsNone(failure_peel)
+        self.assertEqual([row['record_id'] for row in payload_peel['records']], list(ids))
+        self.assertTrue(peeled['closer_continuation_ignored'])
+        incomplete = dict(body)
+        incomplete['records'] = body['records'][:-1]
+        incomplete_text = json.dumps(incomplete, ensure_ascii=False)
+        open_incomplete = incomplete_text[:-1]
+        bad_note = {}
+        bad_payload, bad_failure = parse_model_json(
+            open_incomplete + closer,
+            {**usage, 'turn_texts': [open_incomplete, closer]},
+            expected_ids=ids, phase='review', note=bad_note)
+        self.assertIsNone(bad_payload)
+        self.assertEqual(bad_failure, 'stream_stitch_invalid')
+        self.assertNotEqual(bad_failure, 'truncated_output')
+        self.assertFalse(bad_note)
+        unclosed = '{"records":[{"record_id":"%s","axes":{},"fact_decisions":[{"quote":"未闭合' % ids[0]
+        self.assertEqual(parse_model_json(
+            unclosed + closer, {**usage, 'turn_texts': [unclosed, closer]},
+            expected_ids=ids[:1], phase='review')[1], 'stream_stitch_invalid')
+        self.assertEqual(parse_model_json(
+            stitched, {'turns': [{'finish': 'length'}, {'finish': 'stop'}]},
+            events=events, expected_ids=ids, phase='review')[1], 'truncated_output')
+        self.assertEqual(parse_model_json('{"records":[', {'turns': []})[1], 'truncated_output')
+        self.assertEqual(parse_model_json('{"nope": 1}', {'turns': [{'finish': 'stop'}]})[1], 'provider_invalid_output')
+        partial = {'records': [body['records'][0]]}
+        parsed, kind = parse_model_json(json.dumps(partial), {'turns': [{'finish': 'stop'}]}, expected_ids=ids, phase='review')
+        self.assertIsNone(kind)
+        self.assertEqual(len(parsed['records']), 1)
+        text = json.dumps({'records': body['records'][:2]}, ensure_ascii=False)
+        cut = text.index('"fact_decisions"')
+        head, tail = text[:cut], text[cut:]
+        self.assertGreater(len(tail), 64)
+        sibling = {}
+        sibling_payload, sibling_failure = parse_model_json(
+            head + tail,
+            {'turns': usage['turns'], 'turn_texts': [head, tail]},
+            expected_ids=ids[:2], phase='review', note=sibling)
+        self.assertIsNone(sibling_failure)
+        self.assertEqual(len(sibling_payload['records']), 2)
+        self.assertFalse(sibling.get('closer_continuation_ignored', False))
+
+    def test_apply_generation_rebinds_a_summary_quote_before_review(self):
+        from enrichment import map_record
+        from enrichment_queue import apply_generation
+        summary = '公开样例的产出是一份说明。'
+        skill = {
+            'id': 'a' * 32,
+            'summary': summary,
+            'tasks': [{'position': 1, 'goal': '完成第一项任务。', 'applicability': '', 'outputs': ''}],
+        }
+        annotation = map_record(skill, skill['tasks'], source_hash='h')
+        reason = apply_generation(skill, annotation, {
+            'record_id': skill['id'],
+            'facts': [{
+                'dimension': 'kind', 'value_id': 'execution_workflow', 'role': 'mentioned',
+                'quote': summary, 'task_position': 1,
+            }],
+        }, [skill])
+        self.assertIsNone(reason)
+        item = next(row for row in annotation['facts'] if row.get('method') == 'model_generation')
+        self.assertEqual(item['scope'], {'level': 'skill'})
+        self.assertTrue(item['program_evidence'])
+        self.assertFalse(item['accepted'])
+
+    def test_label_packs_skip_exhausted_labels_and_keep_exclusions_out(self):
+        from enrichment_queue import OFFICIAL_LABELS, plan_label_packs
+        self.assertEqual(len(OFFICIAL_LABELS), 16)
+        rows = []
+        number = 1
+        for label in OFFICIAL_LABELS:
+            for _ in range(2):
+                rows.append({'id': f'{number:032x}', 'category': label})
+                number += 1
+        by_id = {row['id']: row['category'] for row in rows}
+        full = plan_label_packs(rows)
+        self.assertTrue(full['ready_to_execute'])
+        self.assertIsNone(full['failure'])
+        self.assertEqual(full['pack_size'], 16)
+        self.assertEqual(full['packs_formed'], 2)
+        self.assertEqual(full['packs_of_16'], 2)
+        self.assertEqual(full['exhausted_labels'], [])
+        for pack in full['packs']:
+            self.assertEqual([by_id[record_id] for record_id in pack], list(OFFICIAL_LABELS))
+        engineering = [row['id'] for row in rows if row['category'] == 'engineering']
+        narrowed = plan_label_packs(rows, excluded=engineering)
+        self.assertTrue(narrowed['ready_to_execute'])
+        self.assertEqual(narrowed['pack_size'], 15)
+        self.assertEqual(narrowed['packs_of_16'], 0)
+        self.assertEqual(narrowed['packs_formed'], 2)
+        self.assertEqual(narrowed['exhausted_labels'], ['engineering'])
+        self.assertNotIn('engineering', narrowed['active_labels'])
+        self.assertEqual(narrowed['excluded_ids_selected'], [])
+        for pack in narrowed['packs']:
+            self.assertEqual(len(pack), 15)
+            self.assertTrue(all(record_id not in engineering for record_id in pack))
+            self.assertNotIn('engineering', [by_id[record_id] for record_id in pack])
+        code_ids = [row['id'] for row in rows if row['category'] == 'code']
+        legal_ids = [row['id'] for row in rows if row['category'] == 'legal']
+        held = plan_label_packs(rows, excluded=[code_ids[0]], will_not_retry=[legal_ids[0]], max_packs=1)
+        self.assertEqual(held['packs_formed'], 1)
+        self.assertNotIn(code_ids[0], held['selected'])
+        self.assertNotIn(legal_ids[0], held['selected'])
+        self.assertIn(code_ids[1], held['selected'])
+        self.assertIn(legal_ids[1], held['selected'])
+        blocked = plan_label_packs(rows, excluded=[row['id'] for row in rows[:8]], will_not_retry=[row['id'] for row in rows[8:]])
+        self.assertFalse(blocked['ready_to_execute'])
+        self.assertEqual(blocked['failure'], 'no_complete_packs')
+        self.assertEqual(blocked['selected'], [])
+        self.assertEqual(blocked['packs'], [])
+        self.assertEqual(blocked['exhausted_labels'], list(OFFICIAL_LABELS))
+        self.assertEqual(plan_label_packs([])['failure'], 'no_complete_packs')
+        stranger = {'id': f'{number:032x}', 'category': 'not-a-label'}
+        with_stranger = plan_label_packs(rows + [stranger], max_packs=1)
+        self.assertEqual(with_stranger['pack_size'], 16)
+        self.assertNotIn(stranger['id'], with_stranger['selected'])
+
+    def test_cli_label_plan_omits_an_exhausted_label(self):
+        from enrichment_queue import OFFICIAL_LABELS, load_plan
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            database = root / 'catalog.sqlite3'
+            connection = sqlite3.connect(database)
+            connection.executescript(SCHEMA)
+            ids = {}
+            for index, label in enumerate(OFFICIAL_LABELS, start=1):
+                record_id = f'{index:032x}'
+                ids[label] = record_id
+                connection.execute('INSERT INTO skills VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', (
+                    record_id, '标题', '目录', label, 'catalogue', '后端与 API', 'unreviewed',
+                    '2026-11-01T00:00:00+00:00', 'owner/example', '', 1, record_id, '目录'))
+                connection.execute(
+                    'INSERT INTO catalog_tasks(skill, position, goal, applicability, outputs, tags) VALUES (?,?,?,?,?,?)',
+                    (record_id, 1, '完成这项公开样例。', '', '[]', '{"action": [], "tool": []}'))
+            connection.commit()
+            connection.close()
+            log = root / 'calls.log'
+            common = [
+                '--database', str(database), '--cost-policy', 'allow-missing-cost', '--workers', '1',
+                '--max-requests', '8', '--max-turns', '20', '--max-runtime-seconds', '600',
+                '--max-packs', '1', '--by-label',
+            ]
+            made = self._cli(['queue', '--action', 'plan', '--out', str(root / 'full.json'), *common], log=log)
+            self.assertEqual(made.returncode, 0, made.stderr + made.stdout)
+            report = json.loads(made.stdout)
+            self.assertTrue(report['ready_to_execute'])
+            self.assertEqual(report['pack_size'], 16)
+            self.assertEqual(report['packs_of_16'], 1)
+            sealed = load_plan(root / 'full.json')
+            self.assertEqual(sealed['ids'], [ids[label] for label in OFFICIAL_LABELS])
+            self.assertEqual(sealed['label_pack']['exhausted_labels'], [])
+            self.assertEqual(len(self._runs(log)), 0)
+            (root / 'skip.txt').write_text(ids['engineering'] + '\n', encoding='utf-8')
+            narrowed = self._cli([
+                'queue', '--action', 'plan', '--out', str(root / 'narrow.json'),
+                '--exclude-file', str(root / 'skip.txt'), *common,
+            ], log=log)
+            self.assertEqual(narrowed.returncode, 0, narrowed.stderr + narrowed.stdout)
+            narrow_report = json.loads(narrowed.stdout)
+            self.assertEqual(narrow_report['pack_size'], 15)
+            self.assertEqual(narrow_report['exhausted_labels'], ['engineering'])
+            narrow_plan = load_plan(root / 'narrow.json')
+            self.assertNotIn(ids['engineering'], narrow_plan['ids'])
+            self.assertEqual(len(narrow_plan['ids']), 15)
+            self.assertEqual(narrow_plan['arms'][0]['batch_size'], 15)
+            (root / 'all.txt').write_text('\n'.join(ids.values()) + '\n', encoding='utf-8')
+            (root / 'retry.txt').write_text(ids['code'] + '\n', encoding='utf-8')
+            stopped = self._cli([
+                'queue', '--action', 'plan', '--out', str(root / 'none.json'),
+                '--exclude-file', str(root / 'all.txt'),
+                '--will-not-retry-file', str(root / 'retry.txt'), *common,
+            ], log=log)
+            self.assertEqual(stopped.returncode, 2, stopped.stderr + stopped.stdout)
+            refusal = json.loads((root / 'none.json').read_text(encoding='utf-8'))
+            self.assertFalse(refusal['ready_to_execute'])
+            self.assertEqual(refusal['failure'], 'no_complete_packs')
+            self.assertFalse(refusal['sealed_plan'])
+            self.assertEqual(len(self._runs(log)), 0)
+
 
 if __name__ == '__main__':
     unittest.main()
